@@ -2984,7 +2984,7 @@
         }
       ]
     },
-    "nuclei": null,
+    "nuclei": [],
     "lhr": [
       {
         "requestedUrl": "https://www.fabrique.social.gouv.fr/",
@@ -3144,7 +3144,6 @@
     "stats": null,
     "github_repository": null,
     "budget_page": null,
-    "trivy": null,
     "declaration-a11y": {
       "mention": "Accessibilité : non conforme",
       "declarationUrl": "https://www.fabrique.social.gouv.fr/declaration-accessibilite"
@@ -3177,7 +3176,7 @@
       "nmapOpenPortsGrade": "A",
       "dependabotGrade": "E",
       "dependabotCount": 26,
-      "testsslExpireSoon": false,
+      "testsslExpireSoon": true,
       "testsslExpireDate": "2023-07-13T00:27:00.000Z",
       "testsslGrade": "A+",
       "cookiesGrade": "B",
@@ -6296,7 +6295,7 @@
         }
       ]
     },
-    "nuclei": null,
+    "nuclei": [],
     "lhr": [
       {
         "requestedUrl": "https://beta.gouv.fr/",
@@ -6456,7 +6455,6 @@
     "stats": null,
     "github_repository": null,
     "budget_page": null,
-    "trivy": null,
     "declaration-a11y": {
       "mention": "Accessibilité : non conforme",
       "declarationUrl": "https://beta.gouv.fr/accessibilite/"
@@ -6487,7 +6485,7 @@
       "nmapGrade": "A",
       "nmapOpenPortsCount": 2,
       "nmapOpenPortsGrade": "A",
-      "testsslExpireSoon": false,
+      "testsslExpireSoon": true,
       "testsslExpireDate": "2023-06-23T07:23:00.000Z",
       "testsslGrade": "A+",
       "cookiesGrade": "B",
