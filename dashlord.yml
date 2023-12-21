@@ -4,21 +4,21 @@ entity: Ministères sociaux
 footer: Powered by SocialGouv
 marianne: false
 tools:
-  404: false
-  screenshot: false
+  404: true
+  screenshot: true
   nmap: true
-  zap: false
-  wappalyzer: false
-  http: false
-  testssl: false
-  lighthouse: false
-  thirdparties: false
-  nuclei: false
+  zap: true
+  wappalyzer: true
+  http: true
+  testssl: true
+  lighthouse: true
+  thirdparties: true
+  nuclei: true
   updownio: false
-  dependabot: false
-  codescan: false
+  dependabot: true
+  codescan: true
   stats: false
-  declaration-a11y: false
-  ecoindex: false
+  declaration-a11y: true
+  ecoindex: true
 urls:
-  - url: https://www.gouvernement.fr
+  - url: https://www.fabrique.social.gouv.fr
