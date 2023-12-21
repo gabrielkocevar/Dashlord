@@ -4,21 +4,21 @@ entity: Ministères sociaux
 footer: Powered by SocialGouv
 marianne: false
 tools:
-  404: true
-  screenshot: true
+  404: false
+  screenshot: false
   nmap: true
-  zap: true
-  wappalyzer: true
-  http: true
-  testssl: true
-  lighthouse: true
-  thirdparties: true
-  nuclei: true
+  zap: false
+  wappalyzer: false
+  http: false
+  testssl: false
+  lighthouse: false
+  thirdparties: false
+  nuclei: false
   updownio: false
-  dependabot: true
-  codescan: true
+  dependabot: false
+  codescan: false
   stats: false
-  declaration-a11y: true
-  ecoindex: true
+  declaration-a11y: false
+  ecoindex: false
 urls:
   - url: https://www.gouvernement.fr
