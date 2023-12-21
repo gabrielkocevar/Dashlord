@@ -599,7 +599,7 @@
         "ip": "www.fabrique.social.gouv.fr/57.128.91.43",
         "port": "443",
         "severity": "INFO",
-        "finding": "supported"
+        "finding": "not supported"
       },
       {
         "id": "TLS_timestamp",
@@ -739,7 +739,7 @@
         "ip": "www.fabrique.social.gouv.fr/57.128.91.43",
         "port": "443",
         "severity": "OK",
-        "finding": "38 >= 30 days"
+        "finding": "37 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -942,7 +942,7 @@
         "ip": "www.fabrique.social.gouv.fr/57.128.91.43",
         "port": "443",
         "severity": "INFO",
-        "finding": "1703156645"
+        "finding": "1703181848"
       },
       {
         "id": "HSTS_time",
@@ -1526,7 +1526,7 @@
         "ip": "www.fabrique.social.gouv.fr/57.128.91.43",
         "port": "443",
         "severity": "INFO",
-        "finding": "55"
+        "finding": "100"
       }
     ],
     "thirdparties": {
@@ -1537,7 +1537,7 @@
           "value": "1",
           "domain": "www.fabrique.social.gouv.fr",
           "path": "/",
-          "expires": 1703158223,
+          "expires": 1703183359,
           "size": 15,
           "httpOnly": false,
           "secure": false,
@@ -1549,10 +1549,10 @@
         },
         {
           "name": "_pk_id.2.6321",
-          "value": "45ac0998f541350e.1703156423.",
+          "value": "887c2674c2fa17ba.1703181559.",
           "domain": "www.fabrique.social.gouv.fr",
           "path": "/",
-          "expires": 1737111623,
+          "expires": 1737136759,
           "size": 41,
           "httpOnly": false,
           "secure": false,
@@ -1567,7 +1567,7 @@
         "content-encoding": "gzip",
         "content-security-policy": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; img-src 'self'; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'",
         "content-type": "text/html; charset=utf-8",
-        "date": "Thu, 21 Dec 2023 11:00:21 GMT",
+        "date": "Thu, 21 Dec 2023 17:59:16 GMT",
         "etag": "W/\"64f0f48d-7385\"",
         "last-modified": "Thu, 31 Aug 2023 20:14:05 GMT",
         "strict-transport-security": "max-age=15724800; includeSubDomains",
@@ -1872,7 +1872,7 @@
     "zap": {
       "@programName": "ZAP",
       "@version": "2.14.0",
-      "@generated": "Thu, 21 Dec 2023 11:03:11",
+      "@generated": "Thu, 21 Dec 2023 18:02:37",
       "site": [
         {
           "@name": "https://www.fabrique.social.gouv.fr",
@@ -2015,7 +2015,7 @@
         "type": "dns",
         "host": "www.fabrique.social.gouv.fr.",
         "matched-at": "www.fabrique.social.gouv.fr",
-        "timestamp": "2023-12-21T11:04:49.965518325Z",
+        "timestamp": "2023-12-21T18:05:06.502404658Z",
         "matcher-status": true
       },
       {
@@ -2055,7 +2055,7 @@
           "1; mode=block"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:05.052246679Z",
+        "timestamp": "2023-12-21T18:05:26.167224842Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2082,155 +2082,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:37.266016647Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-permitted-cross-domain-policies",
-        "type": "http",
-        "host": "https://www.fabrique.social.gouv.fr",
-        "matched-at": "https://www.fabrique.social.gouv.fr",
-        "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:50.385099116Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "referrer-policy",
-        "type": "http",
-        "host": "https://www.fabrique.social.gouv.fr",
-        "matched-at": "https://www.fabrique.social.gouv.fr",
-        "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:50.385148388Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "clear-site-data",
-        "type": "http",
-        "host": "https://www.fabrique.social.gouv.fr",
-        "matched-at": "https://www.fabrique.social.gouv.fr",
-        "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:50.385166982Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-embedder-policy",
-        "type": "http",
-        "host": "https://www.fabrique.social.gouv.fr",
-        "matched-at": "https://www.fabrique.social.gouv.fr",
-        "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:50.385185817Z",
+        "timestamp": "2023-12-21T18:06:06.923992913Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2267,7 +2119,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:50.385199603Z",
+        "timestamp": "2023-12-21T18:06:20.637182041Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2304,7 +2156,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:50.38521404Z",
+        "timestamp": "2023-12-21T18:06:20.637243897Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2341,7 +2193,155 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:05:50.385229699Z",
+        "timestamp": "2023-12-21T18:06:20.637265347Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "x-permitted-cross-domain-policies",
+        "type": "http",
+        "host": "https://www.fabrique.social.gouv.fr",
+        "matched-at": "https://www.fabrique.social.gouv.fr",
+        "ip": "57.128.91.43",
+        "timestamp": "2023-12-21T18:06:20.637283491Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "referrer-policy",
+        "type": "http",
+        "host": "https://www.fabrique.social.gouv.fr",
+        "matched-at": "https://www.fabrique.social.gouv.fr",
+        "ip": "57.128.91.43",
+        "timestamp": "2023-12-21T18:06:20.637300322Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "clear-site-data",
+        "type": "http",
+        "host": "https://www.fabrique.social.gouv.fr",
+        "matched-at": "https://www.fabrique.social.gouv.fr",
+        "ip": "57.128.91.43",
+        "timestamp": "2023-12-21T18:06:20.637317133Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "cross-origin-embedder-policy",
+        "type": "http",
+        "host": "https://www.fabrique.social.gouv.fr",
+        "matched-at": "https://www.fabrique.social.gouv.fr",
+        "ip": "57.128.91.43",
+        "timestamp": "2023-12-21T18:06:20.637332492Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2381,7 +2381,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr/",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:06:20.346989442Z",
+        "timestamp": "2023-12-21T18:06:59.467781723Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.fabrique.social.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr/'",
         "matcher-status": true
       },
@@ -2411,7 +2411,7 @@
           "Let's Encrypt"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:06:47.840584649Z",
+        "timestamp": "2023-12-21T18:07:35.884053432Z",
         "matcher-status": true
       },
       {
@@ -2440,7 +2440,7 @@
           "www.fabrique.social.gouv.fr"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:06:47.840693371Z",
+        "timestamp": "2023-12-21T18:07:35.884177313Z",
         "matcher-status": true
       },
       {
@@ -2470,7 +2470,7 @@
           "tls12"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:06:49.311888506Z",
+        "timestamp": "2023-12-21T18:07:38.244363741Z",
         "matcher-status": true
       },
       {
@@ -2500,7 +2500,7 @@
           "tls13"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T11:06:49.511767369Z",
+        "timestamp": "2023-12-21T18:07:38.565155114Z",
         "matcher-status": true
       }
     ],
@@ -2508,7 +2508,7 @@
       {
         "requestedUrl": "https://www.fabrique.social.gouv.fr/",
         "finalUrl": "https://www.fabrique.social.gouv.fr/",
-        "fetchTime": "2023-12-21T11:03:25.133Z",
+        "fetchTime": "2023-12-21T18:02:52.148Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -2571,53 +2571,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 4686,
+            "numericValue": 4786,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 1441,
-                  "firstMeaningfulPaint": 1441,
-                  "largestContentfulPaint": 3691,
-                  "interactive": 4686,
-                  "speedIndex": 2265,
-                  "totalBlockingTime": 70,
-                  "maxPotentialFID": 149,
+                  "firstContentfulPaint": 1687,
+                  "firstMeaningfulPaint": 1687,
+                  "largestContentfulPaint": 3875,
+                  "interactive": 4786,
+                  "speedIndex": 2897,
+                  "totalBlockingTime": 85,
+                  "maxPotentialFID": 131,
                   "cumulativeLayoutShift": 0.000828776741532922,
                   "cumulativeLayoutShiftMainFrame": 0.000828776741532922,
                   "totalCumulativeLayoutShift": 0.000828776741532922,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 440749005,
+                  "observedTimeOriginTs": 452362179,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 440749005,
-                  "observedFirstPaint": 452,
-                  "observedFirstPaintTs": 441200613,
-                  "observedFirstContentfulPaint": 452,
-                  "observedFirstContentfulPaintTs": 441200613,
-                  "observedFirstContentfulPaintAllFrames": 452,
-                  "observedFirstContentfulPaintAllFramesTs": 441200613,
-                  "observedFirstMeaningfulPaint": 914,
-                  "observedFirstMeaningfulPaintTs": 441663195,
-                  "observedLargestContentfulPaint": 1197,
-                  "observedLargestContentfulPaintTs": 441946330,
-                  "observedLargestContentfulPaintAllFrames": 1197,
-                  "observedLargestContentfulPaintAllFramesTs": 441946330,
-                  "observedTraceEnd": 4630,
-                  "observedTraceEndTs": 445379261,
-                  "observedLoad": 2322,
-                  "observedLoadTs": 443070740,
-                  "observedDomContentLoaded": 1949,
-                  "observedDomContentLoadedTs": 442698256,
+                  "observedNavigationStartTs": 452362179,
+                  "observedFirstPaint": 784,
+                  "observedFirstPaintTs": 453146482,
+                  "observedFirstContentfulPaint": 784,
+                  "observedFirstContentfulPaintTs": 453146482,
+                  "observedFirstContentfulPaintAllFrames": 784,
+                  "observedFirstContentfulPaintAllFramesTs": 453146482,
+                  "observedFirstMeaningfulPaint": 1631,
+                  "observedFirstMeaningfulPaintTs": 453993475,
+                  "observedLargestContentfulPaint": 1485,
+                  "observedLargestContentfulPaintTs": 453846784,
+                  "observedLargestContentfulPaintAllFrames": 1485,
+                  "observedLargestContentfulPaintAllFramesTs": 453846784,
+                  "observedTraceEnd": 4878,
+                  "observedTraceEndTs": 457239951,
+                  "observedLoad": 2569,
+                  "observedLoadTs": 454930818,
+                  "observedDomContentLoaded": 1835,
+                  "observedDomContentLoadedTs": 454197552,
                   "observedCumulativeLayoutShift": 0.000828776741532922,
                   "observedCumulativeLayoutShiftMainFrame": 0.000828776741532922,
                   "observedTotalCumulativeLayoutShift": 0.000828776741532922,
-                  "observedFirstVisualChange": 450,
-                  "observedFirstVisualChangeTs": 441199005,
-                  "observedLastVisualChange": 3966,
-                  "observedLastVisualChangeTs": 444715005,
-                  "observedSpeedIndex": 1127,
-                  "observedSpeedIndexTs": 441876324
+                  "observedFirstVisualChange": 719,
+                  "observedFirstVisualChangeTs": 453081179,
+                  "observedLastVisualChange": 3852,
+                  "observedLastVisualChangeTs": 456214179,
+                  "observedSpeedIndex": 1465,
+                  "observedSpeedIndexTs": 453827013
                 },
                 {
                   "lcpInvalidated": false
@@ -2639,18 +2639,18 @@
                   "numScripts": 14,
                   "numStylesheets": 1,
                   "numFonts": 3,
-                  "numTasks": 1360,
+                  "numTasks": 1182,
                   "numTasksOver10ms": 5,
-                  "numTasksOver25ms": 1,
+                  "numTasksOver25ms": 2,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 84.29100000000001,
-                  "throughput": 58569277.37039274,
-                  "maxRtt": 84.724,
-                  "maxServerLatency": 391.393,
-                  "totalByteWeight": 7913134,
-                  "totalTaskTime": 382.2349999999995,
+                  "rtt": 148.26999999999998,
+                  "throughput": 49121908.294468395,
+                  "maxRtt": 154.613,
+                  "maxServerLatency": 604.8240000000001,
+                  "totalByteWeight": 7912864,
+                  "totalTaskTime": 374.32799999999946,
                   "mainDocumentTransferSize": 8492
                 }
               ]
@@ -2660,7 +2660,11 @@
       }
     ],
     "screenshot": true,
-    "stats": null,
+    "stats": {
+      "grade": "F",
+      "url": "https://www.fabrique.social.gouv.fr",
+      "uri": "stats"
+    },
     "github_repository": null,
     "budget_page": null,
     "declaration-a11y": {
@@ -2674,7 +2678,7 @@
         "width": 1920,
         "height": 1080,
         "url": "https://www.fabrique.social.gouv.fr",
-        "size": 7993.336,
+        "size": 7993.683,
         "nodes": 481,
         "requests": 62,
         "grade": "D",
@@ -2682,7 +2686,7 @@
         "ges": 1.98,
         "water": 2.97,
         "ecoindex_version": "5.4.2",
-        "date": "2023-12-21 11:01:19.267080",
+        "date": "2023-12-21 18:00:21.028999",
         "page_type": null
       }
     ],
@@ -2707,6 +2711,7 @@
       "lighthouse_seoGrade": "A",
       "lighthouse_pwa": 0.3,
       "lighthouse_pwaGrade": "E",
+      "statsGrade": "F",
       "declaration-a11y": "C",
       "ecoindexGrade": "D"
     }
