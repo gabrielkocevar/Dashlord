@@ -113,9 +113,9 @@
               "id"           : "cipherlist_OBSOLETED",
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "INFO",
               "cwe"          : "CWE-310",
-              "finding"      : "offered"
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "cipherlist_STRONG_NOFS",
@@ -164,7 +164,7 @@
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -178,7 +178,7 @@
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'encrypt-then-mac/#22' 'extended master secret/#23'"
+              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'extended master secret/#23'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -269,7 +269,7 @@
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "03F9EACD423A6A7678DD5C3586AA20939309"
+              "finding"      : "04837742C442B0DFA6DAD20D84B1AF1C5AE4"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -283,21 +283,21 @@
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "7339456075B75BBA20552893B6AE3DB4ED3840F9"
+              "finding"      : "3960E02579B68AC3C7B3375AEC26BB1FBD200DFF"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "A4BE96AEF877EA4AEE5E279D3B827B658D294EC4C8DB13A998ACF3403F2A18B2"
+              "finding"      : "7AA17BE2B699772FBF090E977969354723AB311183FCB14AF0A7C6A619E91370"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFHjCCBAagAwIBAgISA/nqzUI6anZ43Vw1hqogk5MJMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzAzMjUwNzIzMDlaFw0yMzA2MjMwNzIzMDhaMBcxFTATBgNVBAMTDGJldGEuZ291di5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALwj808fBFngPDlq0mgH9VNuTnW9Cb6C/EASvi0d5+B7T8T2iiaWs/cYJaZnmnUV0zQUHvCSZZekN2AhqvikT7C+LKfv/hSdqSjZwdeyOdF2+XpDrTd9Sms0Tj4si+vt3/TffFmmOk6TOxQ9KWakaUW8RmxIzXk1Zl9WtgXV0CNxOFrhW5ZNV4XKyMThLwIbsgzkQ7C0PgtuW+0/1OjK7N3P0Es8mApWgYrY0O7reu7ysrI9DWgl7mpQzeG7p94mUfjshDSzkx9MJvqFjdMWAPYi7R9QJNu4iMVlReHL9i6+mmUvIn2Au4iNFz62hIks62ab37PR43LzDPqiHhvAnGcCAwEAAaOCAkcwggJDMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUnrYzhiNn5u1YBMnQFuBLyl6+uAEwHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMYmV0YS5nb3V2LmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHUAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGHF91EiQAABAMARjBEAiBinPS/ikH3+2AEMZ1Pcq45yzVPybbL9xN87/rDt1jZswIgfu+pz+UqEDMX1vaSfCN7D52Mvq6SJWC6t60qZgvibnEAdwDoPtDaPvUGNTLnVyi8iWvJA9PL0RFr7Otp4Xd9bQa9bgAAAYcX3URyAAAEAwBIMEYCIQChxfAZiM1GCPoRuco3z6IIYYR7It128NhApEcNTemEEwIhAKqCIT+x868WOu5DATfS4vtpzY/CM6JAGG91+n23Ja7jMA0GCSqGSIb3DQEBCwUAA4IBAQBaw/IoZaPbYW2kU15tBgidUricP0ReHz31H9H7fG6r8pGGLdHUQKmKcKwqyOjvTFogMITogvs+zEmeN0r+cmQh5p9tk032KV0/Fme2et5/h+t3XYYIKtSr3kzSV+KUKIndH7dgvjD/50/d87e/RiTeG7ps9NpiPLC6c8iSNIDlqvDBrq98yHoVet5RzJfhFaQFGi96WpaTtS/djK71LeYPNPyaIZBdOZI41JyWuFc6F1Egk88T/iEDMAmielfpsXhZaXO6jfKW3ARJgJi2ieKj2Bw9p8JX1q2BrXfRlMEYSmnbVyv13MxQgr1dsKExP6uPSF2mYv7G2hl7msGzcq/Q\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIE5TCCA82gAwIBAgISBIN3QsRCsN+m2tINhLGvHFrkMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzExMjAwNzI3MTJaFw0yNDAyMTgwNzI3MTFaMBcxFTATBgNVBAMTDGJldGEuZ291di5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ/ewe6HFsVfheHw+pz07SVnh5mG9OAmWhVbtA/sZhyiRFustc5XqfOMBceLJj5nM/9ru37oMdpvCIBrBl+z8bDvEoR85td3PfgAE4Dzvv03ZZF3ZADko7oEX+hVZoH265EmTpcplEReTiPgoHWebOmevvF7EcBdzqriDV0QyslvVrUzwrL9OTGr8lGq6szyU1rdIiD+vgbWXJV5frqQNYXwnq0uioVWIbAmiD+VBCrLSFazgEYdeiYzndmqWe4vXmOCXyZ188w9LKJEIXYA2THun8xFYO9gVD24PjiBgt20P4ztFxmcozh1h49WRi6tKFlbEnq3SNU+dAdq9XRjfU8CAwEAAaOCAg4wggIKMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUhH9O4t0Ps8z9HzJWVK7ipvUqUPswHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMYmV0YS5nb3V2LmZyMBMGA1UdIAQMMAowCAYGZ4EMAQIBMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHcASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGL69c5AwAABAMASDBGAiEA8lQud27kphlaAMo3bLjRJ2nqX1z++ApywMs0nhEFa4YCIQDub5PlwNKZdtmtVbIMjtxjrlaPh5PQ3hkTKqVPMOwARgB1ADtTd3U+LbmAToswWwb+QDtn2E/D9Me9AA0tcm/h+tQXAAABi+vXORAAAAQDAEYwRAIgHsRYF00shWPMvxKBM9xZwVYsDznYPFhj2g1CDV6OG2cCIG1X3Gk46UvjPYvhfimbbPfrsAnUaZoUAxrw/t860VdGMA0GCSqGSIb3DQEBCwUAA4IBAQBZHFrL3NRsdujyIbUVji0R9tmsMhVz33ZujAB42tywi701dIwh/jMqRNxZBS/QQ3DdpOx2HtGncKClgrLzXGUXV/FYYznErOSss9eQpX7LKloOvSSg+zWEIM3k77MqWDggzN4+uDGR9AZB8sXDt4YyedylPZkZ2nFQFBudew3vWikSTHFrKmueAGNEKS88dck94JCabYorqHqDfWD/dnL2Z6oZ6bp+8qYo6Tb5BUxdx5nmm6UEKhXIcyiv6WXreOyBND3jWN1/fGzcfxDsMSZDFI7YXyN6VSGAb2FmKt0BvqjyjqUgL6N3ad0ki/TkioAiQrsv6tZKUxjKzdwnPW4M\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -346,21 +346,21 @@
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "68 >= 30 days"
+              "finding"      : "58 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2023-03-25 07:23"
+              "finding"      : "2023-11-20 07:27"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2023-06-23 07:23"
+              "finding"      : "2024-02-18 07:27"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -549,7 +549,7 @@
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1681607387"
+              "finding"      : "1703157500"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -736,7 +736,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=A4BE96AEF877EA4AEE5E279D3B827B658D294EC4C8DB13A998ACF3403F2A18B2"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=7AA17BE2B699772FBF090E977969354723AB311183FCB14AF0A7C6A619E91370"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -769,10 +769,10 @@
               "id"           : "LUCKY13",
               "ip"           : "beta.gouv.fr/109.232.236.90",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-0169",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+              "finding"      : "not vulnerable"
           }
 ,         {
               "id"           : "winshock",
@@ -1221,9 +1221,9 @@
               "id"           : "cipherlist_OBSOLETED",
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "INFO",
               "cwe"          : "CWE-310",
-              "finding"      : "offered"
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "cipherlist_STRONG_NOFS",
@@ -1272,7 +1272,7 @@
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -1286,7 +1286,7 @@
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'encrypt-then-mac/#22' 'extended master secret/#23'"
+              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'extended master secret/#23'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -1377,7 +1377,7 @@
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "03F9EACD423A6A7678DD5C3586AA20939309"
+              "finding"      : "04837742C442B0DFA6DAD20D84B1AF1C5AE4"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -1391,21 +1391,21 @@
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "7339456075B75BBA20552893B6AE3DB4ED3840F9"
+              "finding"      : "3960E02579B68AC3C7B3375AEC26BB1FBD200DFF"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "A4BE96AEF877EA4AEE5E279D3B827B658D294EC4C8DB13A998ACF3403F2A18B2"
+              "finding"      : "7AA17BE2B699772FBF090E977969354723AB311183FCB14AF0A7C6A619E91370"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFHjCCBAagAwIBAgISA/nqzUI6anZ43Vw1hqogk5MJMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzAzMjUwNzIzMDlaFw0yMzA2MjMwNzIzMDhaMBcxFTATBgNVBAMTDGJldGEuZ291di5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALwj808fBFngPDlq0mgH9VNuTnW9Cb6C/EASvi0d5+B7T8T2iiaWs/cYJaZnmnUV0zQUHvCSZZekN2AhqvikT7C+LKfv/hSdqSjZwdeyOdF2+XpDrTd9Sms0Tj4si+vt3/TffFmmOk6TOxQ9KWakaUW8RmxIzXk1Zl9WtgXV0CNxOFrhW5ZNV4XKyMThLwIbsgzkQ7C0PgtuW+0/1OjK7N3P0Es8mApWgYrY0O7reu7ysrI9DWgl7mpQzeG7p94mUfjshDSzkx9MJvqFjdMWAPYi7R9QJNu4iMVlReHL9i6+mmUvIn2Au4iNFz62hIks62ab37PR43LzDPqiHhvAnGcCAwEAAaOCAkcwggJDMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUnrYzhiNn5u1YBMnQFuBLyl6+uAEwHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMYmV0YS5nb3V2LmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHUAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGHF91EiQAABAMARjBEAiBinPS/ikH3+2AEMZ1Pcq45yzVPybbL9xN87/rDt1jZswIgfu+pz+UqEDMX1vaSfCN7D52Mvq6SJWC6t60qZgvibnEAdwDoPtDaPvUGNTLnVyi8iWvJA9PL0RFr7Otp4Xd9bQa9bgAAAYcX3URyAAAEAwBIMEYCIQChxfAZiM1GCPoRuco3z6IIYYR7It128NhApEcNTemEEwIhAKqCIT+x868WOu5DATfS4vtpzY/CM6JAGG91+n23Ja7jMA0GCSqGSIb3DQEBCwUAA4IBAQBaw/IoZaPbYW2kU15tBgidUricP0ReHz31H9H7fG6r8pGGLdHUQKmKcKwqyOjvTFogMITogvs+zEmeN0r+cmQh5p9tk032KV0/Fme2et5/h+t3XYYIKtSr3kzSV+KUKIndH7dgvjD/50/d87e/RiTeG7ps9NpiPLC6c8iSNIDlqvDBrq98yHoVet5RzJfhFaQFGi96WpaTtS/djK71LeYPNPyaIZBdOZI41JyWuFc6F1Egk88T/iEDMAmielfpsXhZaXO6jfKW3ARJgJi2ieKj2Bw9p8JX1q2BrXfRlMEYSmnbVyv13MxQgr1dsKExP6uPSF2mYv7G2hl7msGzcq/Q\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIE5TCCA82gAwIBAgISBIN3QsRCsN+m2tINhLGvHFrkMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzExMjAwNzI3MTJaFw0yNDAyMTgwNzI3MTFaMBcxFTATBgNVBAMTDGJldGEuZ291di5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ/ewe6HFsVfheHw+pz07SVnh5mG9OAmWhVbtA/sZhyiRFustc5XqfOMBceLJj5nM/9ru37oMdpvCIBrBl+z8bDvEoR85td3PfgAE4Dzvv03ZZF3ZADko7oEX+hVZoH265EmTpcplEReTiPgoHWebOmevvF7EcBdzqriDV0QyslvVrUzwrL9OTGr8lGq6szyU1rdIiD+vgbWXJV5frqQNYXwnq0uioVWIbAmiD+VBCrLSFazgEYdeiYzndmqWe4vXmOCXyZ188w9LKJEIXYA2THun8xFYO9gVD24PjiBgt20P4ztFxmcozh1h49WRi6tKFlbEnq3SNU+dAdq9XRjfU8CAwEAAaOCAg4wggIKMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUhH9O4t0Ps8z9HzJWVK7ipvUqUPswHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMYmV0YS5nb3V2LmZyMBMGA1UdIAQMMAowCAYGZ4EMAQIBMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHcASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGL69c5AwAABAMASDBGAiEA8lQud27kphlaAMo3bLjRJ2nqX1z++ApywMs0nhEFa4YCIQDub5PlwNKZdtmtVbIMjtxjrlaPh5PQ3hkTKqVPMOwARgB1ADtTd3U+LbmAToswWwb+QDtn2E/D9Me9AA0tcm/h+tQXAAABi+vXORAAAAQDAEYwRAIgHsRYF00shWPMvxKBM9xZwVYsDznYPFhj2g1CDV6OG2cCIG1X3Gk46UvjPYvhfimbbPfrsAnUaZoUAxrw/t860VdGMA0GCSqGSIb3DQEBCwUAA4IBAQBZHFrL3NRsdujyIbUVji0R9tmsMhVz33ZujAB42tywi701dIwh/jMqRNxZBS/QQ3DdpOx2HtGncKClgrLzXGUXV/FYYznErOSss9eQpX7LKloOvSSg+zWEIM3k77MqWDggzN4+uDGR9AZB8sXDt4YyedylPZkZ2nFQFBudew3vWikSTHFrKmueAGNEKS88dck94JCabYorqHqDfWD/dnL2Z6oZ6bp+8qYo6Tb5BUxdx5nmm6UEKhXIcyiv6WXreOyBND3jWN1/fGzcfxDsMSZDFI7YXyN6VSGAb2FmKt0BvqjyjqUgL6N3ad0ki/TkioAiQrsv6tZKUxjKzdwnPW4M\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -1454,21 +1454,21 @@
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "68 >= 30 days"
+              "finding"      : "58 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2023-03-25 07:23"
+              "finding"      : "2023-11-20 07:27"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2023-06-23 07:23"
+              "finding"      : "2024-02-18 07:27"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -1657,7 +1657,7 @@
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1681607443"
+              "finding"      : "1703157560"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1844,7 +1844,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=A4BE96AEF877EA4AEE5E279D3B827B658D294EC4C8DB13A998ACF3403F2A18B2"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=7AA17BE2B699772FBF090E977969354723AB311183FCB14AF0A7C6A619E91370"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -1877,10 +1877,10 @@
               "id"           : "LUCKY13",
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-0169",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+              "finding"      : "not vulnerable"
           }
 ,         {
               "id"           : "winshock",
@@ -2220,6 +2220,6 @@
               "ip"           : "beta.gouv.fr/5.104.101.30",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "115"
+              "finding"      : "120"
           }
 ]

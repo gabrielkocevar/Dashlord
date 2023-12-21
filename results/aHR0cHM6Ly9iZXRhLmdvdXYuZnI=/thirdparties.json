@@ -2,11 +2,26 @@
   "trackers": [],
   "cookies": [
     {
+      "name": "_pk_id.1.968e",
+      "value": "c9f09da191fd2910.1703156420.",
+      "domain": "beta.gouv.fr",
+      "path": "/",
+      "expires": 1737111620,
+      "size": 41,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
       "name": "_pk_ses.1.968e",
       "value": "1",
       "domain": "beta.gouv.fr",
       "path": "/",
-      "expires": 1681609150,
+      "expires": 1703158219,
       "size": 15,
       "httpOnly": false,
       "secure": false,
@@ -17,12 +32,27 @@
       "sourcePort": 443
     },
     {
-      "name": "_pk_id.1.968e",
-      "value": "4fa393b2b3a1300d.1681607351.",
+      "name": "_pk_ses.21.968e",
+      "value": "1",
       "domain": "beta.gouv.fr",
       "path": "/",
-      "expires": 1715562551,
-      "size": 41,
+      "expires": 1703158219,
+      "size": 16,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "_pk_id.21.968e",
+      "value": "96f7391c9d296de6.1703156420.",
+      "domain": "beta.gouv.fr",
+      "path": "/",
+      "expires": 1737111620,
+      "size": 42,
       "httpOnly": false,
       "secure": false,
       "session": false,
@@ -35,11 +65,11 @@
   "headers": {
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 16 Apr 2023 01:09:09 GMT",
-    "etag": "W/\"643aa875-97b2\"",
-    "last-modified": "Sat, 15 Apr 2023 13:36:53 GMT",
+    "date": "Thu, 21 Dec 2023 11:00:18 GMT",
+    "etag": "W/\"6584181e-9afb\"",
+    "last-modified": "Thu, 21 Dec 2023 10:49:02 GMT",
     "strict-transport-security": "max-age=31536000",
-    "x-request-id": "164065fd-822d-43a0-a58d-7cba81df072b"
+    "x-request-id": "74a39db3-2fb5-4a38-8b80-cc681854c584"
   },
   "endpoints": [
     {
