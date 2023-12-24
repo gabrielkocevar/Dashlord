@@ -158,7 +158,7 @@
     "http": {
       "url": "https://www.fabrique.social.gouv.fr",
       "algorithm_version": 2,
-      "end_time": "Thu, 21 Dec 2023 10:51:35 GMT",
+      "end_time": "Sun, 24 Dec 2023 00:24:59 GMT",
       "grade": "A+",
       "hidden": false,
       "likelihood_indicator": "LOW",
@@ -167,7 +167,7 @@
         "Content-Encoding": "gzip",
         "Content-Security-Policy": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; img-src 'self'; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'",
         "Content-Type": "text/html; charset=utf-8",
-        "Date": "Thu, 21 Dec 2023 10:51:32 GMT",
+        "Date": "Sun, 24 Dec 2023 00:24:57 GMT",
         "ETag": "W/\"64f0f48d-7385\"",
         "Last-Modified": "Thu, 31 Aug 2023 20:14:05 GMT",
         "Strict-Transport-Security": "max-age=15724800; includeSubDomains",
@@ -177,9 +177,9 @@
         "X-Frame-Options": "deny",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 45682363,
+      "scan_id": 45750373,
       "score": 100,
-      "start_time": "Thu, 21 Dec 2023 10:46:14 GMT",
+      "start_time": "Sun, 24 Dec 2023 00:24:55 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 0,
@@ -739,7 +739,7 @@
         "ip": "www.fabrique.social.gouv.fr/57.128.91.43",
         "port": "443",
         "severity": "OK",
-        "finding": "37 >= 30 days"
+        "finding": "35 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -942,7 +942,7 @@
         "ip": "www.fabrique.social.gouv.fr/57.128.91.43",
         "port": "443",
         "severity": "INFO",
-        "finding": "1703181848"
+        "finding": "1703378664"
       },
       {
         "id": "HSTS_time",
@@ -1526,7 +1526,7 @@
         "ip": "www.fabrique.social.gouv.fr/57.128.91.43",
         "port": "443",
         "severity": "INFO",
-        "finding": "100"
+        "finding": "56"
       }
     ],
     "thirdparties": {
@@ -1537,7 +1537,7 @@
           "value": "1",
           "domain": "www.fabrique.social.gouv.fr",
           "path": "/",
-          "expires": 1703183359,
+          "expires": 1703380213,
           "size": 15,
           "httpOnly": false,
           "secure": false,
@@ -1549,10 +1549,10 @@
         },
         {
           "name": "_pk_id.2.6321",
-          "value": "887c2674c2fa17ba.1703181559.",
+          "value": "6acbbbdf94b771f1.1703378413.",
           "domain": "www.fabrique.social.gouv.fr",
           "path": "/",
-          "expires": 1737136759,
+          "expires": 1737333613,
           "size": 41,
           "httpOnly": false,
           "secure": false,
@@ -1567,7 +1567,7 @@
         "content-encoding": "gzip",
         "content-security-policy": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; img-src 'self'; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'",
         "content-type": "text/html; charset=utf-8",
-        "date": "Thu, 21 Dec 2023 17:59:16 GMT",
+        "date": "Sun, 24 Dec 2023 00:40:11 GMT",
         "etag": "W/\"64f0f48d-7385\"",
         "last-modified": "Thu, 31 Aug 2023 20:14:05 GMT",
         "strict-transport-security": "max-age=15724800; includeSubDomains",
@@ -1872,7 +1872,7 @@
     "zap": {
       "@programName": "ZAP",
       "@version": "2.14.0",
-      "@generated": "Thu, 21 Dec 2023 18:02:37",
+      "@generated": "Sun, 24 Dec 2023 00:43:27",
       "site": [
         {
           "@name": "https://www.fabrique.social.gouv.fr",
@@ -2015,7 +2015,7 @@
         "type": "dns",
         "host": "www.fabrique.social.gouv.fr.",
         "matched-at": "www.fabrique.social.gouv.fr",
-        "timestamp": "2023-12-21T18:05:06.502404658Z",
+        "timestamp": "2023-12-24T00:45:09.255006268Z",
         "matcher-status": true
       },
       {
@@ -2055,7 +2055,7 @@
           "1; mode=block"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:05:26.167224842Z",
+        "timestamp": "2023-12-24T00:45:26.24085581Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2082,44 +2082,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:06.923992913Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-opener-policy",
-        "type": "http",
-        "host": "https://www.fabrique.social.gouv.fr",
-        "matched-at": "https://www.fabrique.social.gouv.fr",
-        "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:20.637182041Z",
+        "timestamp": "2023-12-24T00:46:00.821987796Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2156,7 +2119,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:20.637243897Z",
+        "timestamp": "2023-12-24T00:46:07.98224722Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2193,7 +2156,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:20.637265347Z",
+        "timestamp": "2023-12-24T00:46:07.982292063Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2230,7 +2193,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:20.637283491Z",
+        "timestamp": "2023-12-24T00:46:07.982307953Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2267,7 +2230,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:20.637300322Z",
+        "timestamp": "2023-12-24T00:46:07.982320897Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2304,7 +2267,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:20.637317133Z",
+        "timestamp": "2023-12-24T00:46:07.982332959Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2341,7 +2304,44 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:20.637332492Z",
+        "timestamp": "2023-12-24T00:46:07.982344491Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "cross-origin-opener-policy",
+        "type": "http",
+        "host": "https://www.fabrique.social.gouv.fr",
+        "matched-at": "https://www.fabrique.social.gouv.fr",
+        "ip": "57.128.91.43",
+        "timestamp": "2023-12-24T00:46:07.982358016Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr'",
         "matcher-status": true
       },
@@ -2381,7 +2381,7 @@
         "host": "https://www.fabrique.social.gouv.fr",
         "matched-at": "https://www.fabrique.social.gouv.fr/",
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:06:59.467781723Z",
+        "timestamp": "2023-12-24T00:46:30.816179399Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.fabrique.social.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.fabrique.social.gouv.fr/'",
         "matcher-status": true
       },
@@ -2396,7 +2396,8 @@
             "lingtren"
           ],
           "tags": [
-            "ssl"
+            "ssl",
+            "tls"
           ],
           "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
           "severity": "info",
@@ -2411,7 +2412,7 @@
           "Let's Encrypt"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:07:35.884053432Z",
+        "timestamp": "2023-12-24T00:46:53.200772171Z",
         "matcher-status": true
       },
       {
@@ -2425,7 +2426,8 @@
             "pdteam"
           ],
           "tags": [
-            "ssl"
+            "ssl",
+            "tls"
           ],
           "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
           "severity": "info",
@@ -2440,7 +2442,7 @@
           "www.fabrique.social.gouv.fr"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:07:35.884177313Z",
+        "timestamp": "2023-12-24T00:46:53.200868279Z",
         "matcher-status": true
       },
       {
@@ -2455,7 +2457,8 @@
             "pussycat0x"
           ],
           "tags": [
-            "ssl"
+            "ssl",
+            "tls"
           ],
           "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
           "severity": "info",
@@ -2470,7 +2473,7 @@
           "tls12"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:07:38.244363741Z",
+        "timestamp": "2023-12-24T00:46:54.588961816Z",
         "matcher-status": true
       },
       {
@@ -2485,7 +2488,8 @@
             "pussycat0x"
           ],
           "tags": [
-            "ssl"
+            "ssl",
+            "tls"
           ],
           "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
           "severity": "info",
@@ -2500,7 +2504,7 @@
           "tls13"
         ],
         "ip": "57.128.91.43",
-        "timestamp": "2023-12-21T18:07:38.565155114Z",
+        "timestamp": "2023-12-24T00:46:54.792819036Z",
         "matcher-status": true
       }
     ],
@@ -2508,7 +2512,7 @@
       {
         "requestedUrl": "https://www.fabrique.social.gouv.fr/",
         "finalUrl": "https://www.fabrique.social.gouv.fr/",
-        "fetchTime": "2023-12-21T18:02:52.148Z",
+        "fetchTime": "2023-12-24T00:43:41.465Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -2571,53 +2575,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 4786,
+            "numericValue": 5235,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 1687,
-                  "firstMeaningfulPaint": 1687,
-                  "largestContentfulPaint": 3875,
-                  "interactive": 4786,
-                  "speedIndex": 2897,
-                  "totalBlockingTime": 85,
-                  "maxPotentialFID": 131,
+                  "firstContentfulPaint": 1329,
+                  "firstMeaningfulPaint": 1586,
+                  "largestContentfulPaint": 3640,
+                  "interactive": 5235,
+                  "speedIndex": 2107,
+                  "totalBlockingTime": 432,
+                  "maxPotentialFID": 373,
                   "cumulativeLayoutShift": 0.000828776741532922,
                   "cumulativeLayoutShiftMainFrame": 0.000828776741532922,
                   "totalCumulativeLayoutShift": 0.000828776741532922,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 452362179,
+                  "observedTimeOriginTs": 638058011,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 452362179,
-                  "observedFirstPaint": 784,
-                  "observedFirstPaintTs": 453146482,
-                  "observedFirstContentfulPaint": 784,
-                  "observedFirstContentfulPaintTs": 453146482,
-                  "observedFirstContentfulPaintAllFrames": 784,
-                  "observedFirstContentfulPaintAllFramesTs": 453146482,
-                  "observedFirstMeaningfulPaint": 1631,
-                  "observedFirstMeaningfulPaintTs": 453993475,
-                  "observedLargestContentfulPaint": 1485,
-                  "observedLargestContentfulPaintTs": 453846784,
-                  "observedLargestContentfulPaintAllFrames": 1485,
-                  "observedLargestContentfulPaintAllFramesTs": 453846784,
-                  "observedTraceEnd": 4878,
-                  "observedTraceEndTs": 457239951,
-                  "observedLoad": 2569,
-                  "observedLoadTs": 454930818,
-                  "observedDomContentLoaded": 1835,
-                  "observedDomContentLoadedTs": 454197552,
+                  "observedNavigationStartTs": 638058011,
+                  "observedFirstPaint": 471,
+                  "observedFirstPaintTs": 638529477,
+                  "observedFirstContentfulPaint": 471,
+                  "observedFirstContentfulPaintTs": 638529477,
+                  "observedFirstContentfulPaintAllFrames": 471,
+                  "observedFirstContentfulPaintAllFramesTs": 638529477,
+                  "observedFirstMeaningfulPaint": 959,
+                  "observedFirstMeaningfulPaintTs": 639016729,
+                  "observedLargestContentfulPaint": 1121,
+                  "observedLargestContentfulPaintTs": 639178524,
+                  "observedLargestContentfulPaintAllFrames": 1121,
+                  "observedLargestContentfulPaintAllFramesTs": 639178524,
+                  "observedTraceEnd": 4202,
+                  "observedTraceEndTs": 642260173,
+                  "observedLoad": 1893,
+                  "observedLoadTs": 639951501,
+                  "observedDomContentLoaded": 1237,
+                  "observedDomContentLoadedTs": 639294577,
                   "observedCumulativeLayoutShift": 0.000828776741532922,
                   "observedCumulativeLayoutShiftMainFrame": 0.000828776741532922,
                   "observedTotalCumulativeLayoutShift": 0.000828776741532922,
-                  "observedFirstVisualChange": 719,
-                  "observedFirstVisualChangeTs": 453081179,
-                  "observedLastVisualChange": 3852,
-                  "observedLastVisualChangeTs": 456214179,
-                  "observedSpeedIndex": 1465,
-                  "observedSpeedIndexTs": 453827013
+                  "observedFirstVisualChange": 449,
+                  "observedFirstVisualChangeTs": 638507011,
+                  "observedLastVisualChange": 3266,
+                  "observedLastVisualChangeTs": 641324011,
+                  "observedSpeedIndex": 1028,
+                  "observedSpeedIndexTs": 639085602
                 },
                 {
                   "lcpInvalidated": false
@@ -2639,18 +2643,18 @@
                   "numScripts": 14,
                   "numStylesheets": 1,
                   "numFonts": 3,
-                  "numTasks": 1182,
-                  "numTasksOver10ms": 5,
-                  "numTasksOver25ms": 2,
-                  "numTasksOver50ms": 0,
+                  "numTasks": 1186,
+                  "numTasksOver10ms": 7,
+                  "numTasksOver25ms": 5,
+                  "numTasksOver50ms": 3,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 148.26999999999998,
-                  "throughput": 49121908.294468395,
-                  "maxRtt": 154.613,
-                  "maxServerLatency": 604.8240000000001,
-                  "totalByteWeight": 7912864,
-                  "totalTaskTime": 374.32799999999946,
+                  "rtt": 82.583,
+                  "throughput": 60402856.802083634,
+                  "maxRtt": 86.83500000000001,
+                  "maxServerLatency": 340.328,
+                  "totalByteWeight": 7912963,
+                  "totalTaskTime": 592.0400000000006,
                   "mainDocumentTransferSize": 8492
                 }
               ]
@@ -2678,7 +2682,7 @@
         "width": 1920,
         "height": 1080,
         "url": "https://www.fabrique.social.gouv.fr",
-        "size": 7993.683,
+        "size": 7993.417,
         "nodes": 481,
         "requests": 62,
         "grade": "D",
@@ -2686,7 +2690,7 @@
         "ges": 1.98,
         "water": 2.97,
         "ecoindex_version": "5.4.2",
-        "date": "2023-12-21 18:00:21.028999",
+        "date": "2023-12-24 00:41:11.350441",
         "page_type": null
       }
     ],
