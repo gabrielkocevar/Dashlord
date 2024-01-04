@@ -1,0 +1,199 @@
+[
+  [
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.esante.gouv.fr.",
+      "matched-at": "www.esante.gouv.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 37837\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.esante.gouv.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 37837\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.esante.gouv.fr.\tIN\t CAA\n\n;; AUTHORITY SECTION:\nesante.gouv.fr.\t1800\tIN\tSOA\tns1.gandi.net. hostmaster.gandi.net. 1704326400 10800 3600 604800 10800\n",
+      "timestamp": "2024-01-04T21:13:25.001973683Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.esante.gouv.fr",
+      "matched-at": "www.esante.gouv.fr:443",
+      "extracted-results": [
+        "DigiCert Inc"
+      ],
+      "ip": "37.59.26.43",
+      "timestamp": "2024-01-04T21:17:28.191844464Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.esante.gouv.fr",
+      "matched-at": "www.esante.gouv.fr:443",
+      "extracted-results": [
+        "*.esante.gouv.fr",
+        "esante.gouv.fr"
+      ],
+      "ip": "37.59.26.43",
+      "timestamp": "2024-01-04T21:17:28.191978445Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/wildcard-tls.yaml",
+      "template-url": "https://templates.nuclei.sh/public/wildcard-tls",
+      "template-id": "wildcard-tls",
+      "template-path": "/home/runner/nuclei-templates/ssl/wildcard-tls.yaml",
+      "info": {
+        "name": "Wildcard TLS Certificate",
+        "author": [
+          "lucky0x0d"
+        ],
+        "tags": [
+          "ssl",
+          "wildcard",
+          "tls"
+        ],
+        "description": "Checks a sites certificate to see if there are wildcard CN or SAN entries.\n",
+        "reference": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/transport_layer_protection_cheat_sheet.html#carefully-consider-the-use-of-wildcard-certificates"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.esante.gouv.fr",
+      "matched-at": "www.esante.gouv.fr:443",
+      "extracted-results": [
+        "CN: *.esante.gouv.fr",
+        " SAN: [*.esante.gouv.fr esante.gouv.fr]"
+      ],
+      "ip": "37.59.26.43",
+      "timestamp": "2024-01-04T21:17:28.192026775Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.esante.gouv.fr",
+      "matched-at": "www.esante.gouv.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "37.59.26.43",
+      "timestamp": "2024-01-04T21:17:30.458339074Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.esante.gouv.fr",
+      "matched-at": "www.esante.gouv.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "37.59.26.43",
+      "timestamp": "2024-01-04T21:17:30.780926813Z",
+      "matcher-status": true
+    }
+  ]
+]
