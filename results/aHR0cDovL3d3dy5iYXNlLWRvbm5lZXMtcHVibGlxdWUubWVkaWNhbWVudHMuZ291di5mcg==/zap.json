@@ -1,0 +1,2272 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Thu, 4 Jan 2024 20:58:55",
+	"site":[ 
+		{
+			"@name": "http://www.base-donnees-publique.medicaments.gouv.fr",
+			"@host": "www.base-donnees-publique.medicaments.gouv.fr",
+			"@port": "80",
+			"@ssl": "false",
+			"alerts": [ 
+				{
+					"pluginid": "10062",
+					"alertRef": "10062",
+					"alert": "PII Disclosure",
+					"name": "PII Disclosure",
+					"riskcode": "3",
+					"confidence": "2",
+					"riskdesc": "High (Medium)",
+					"desc": "<p>The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67400119\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67407010\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67412121\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "63048930\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 630489\nBrand: LASER\nCategory: \nIssuer: IRISH PERMANENT"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "63903475\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 639034\nBrand: MAESTRO\nCategory: \nIssuer: EUROPAY FRANCE SAS"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "63904374\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 639043\nBrand: MAESTRO\nCategory: \nIssuer: EUROPAY FRANCE SAS"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67000580\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 670005\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: VISA AUSTRIA"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67025516\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 670255\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: VISA AUSTRIA"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67027289\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 670272\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: VISA AUSTRIA"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67056159\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 670561\nBrand: MAESTRO\nCategory: \nIssuer: ZHELDORBANK JSB"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67095030\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 670950\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67095518\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 670955\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67111869\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671118\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67120341\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671203\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67131754\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671317\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67136370\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671363\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67140828\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671408\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67145743\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671457\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67165233\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671652\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67174271\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671742\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67174289\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671742\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67175074\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671750\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67177933\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 671779\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67210778\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 672107\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: WUESTENROT BANK AG PFANDBRIEBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67219535\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 672195\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: WUESTENROT BANK AG PFANDBRIEBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67222606\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 672226\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: WUESTENROT BANK AG PFANDBRIEBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67224404\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 672244\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: WUESTENROT BANK AG PFANDBRIEBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67235735\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 672357\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: WUESTENROT BANK AG PFANDBRIEBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67266556\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 672665\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: WUESTENROT BANK AG PFANDBRIEBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67267195\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 672671\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: WUESTENROT BANK AG PFANDBRIEBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67298504\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 672985\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: WUESTENROT BANK AG PFANDBRIEBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67326875\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 673268\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67357066\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 673570\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: ING"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67368493\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 673684\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67386032\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 673860\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67443608\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674436\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67445776\t2021",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674457\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67447909\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674479\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67454800\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674548\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67458001\t2021",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674580\nBrand: MAESTRO\nCategory: STANDARD\nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67461741\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674617\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67465857\t2021",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674658\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67467071\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674670\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67470459\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674704\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67495373\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 674953\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67510932\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675109\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67517898\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675178\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67522144\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675221\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67522169\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675221\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67524202\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675242\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67536172\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675361\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67540950\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675409\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67547090\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675470\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67553353\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675533\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67554633\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675546\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67565882\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675658\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67582262\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675822\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67587238\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675872\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67588728\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675887\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67594656\t2021",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 675946\nBrand: MAESTRO\nCategory: \nIssuer: ALLOCATED TO SWITCH"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67613380\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 676133\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67619006\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 676190\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67644301\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 676443\nBrand: MAESTRO\nCategory: \nIssuer: EVROFINANCE MOSNARBANK"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67655493\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 676554\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67660704\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 676607\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67675161\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 676751\nBrand: SOLO\nCategory: \nIssuer: NATWEST"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67684580\t2021",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 676845\nBrand: MAESTRO\nCategory: \nIssuer: VTB24"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67685458\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 676854\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67703810\t2021",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677038\nBrand: MAESTRO\nCategory: \nIssuer: VINCENTO PAYMENT SOLUTIONS, LTD."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67707794\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677077\nBrand: MAESTRO\nCategory: \nIssuer: VENETO BANKA SH.A."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67711999\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677119\nBrand: LASER\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67722294\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677222\nBrand: MAESTRO\nCategory: \nIssuer: ZHELDORBANK JSB"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67733515\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677335\nBrand: MAESTRO\nCategory: \nIssuer: ZHELDORBANK JSB"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67755020\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677550\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67764254\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677642\nBrand: MAESTRO\nCategory: \nIssuer: PRVA BANKA CG A.D. - FOUNDED IN 1901"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67767535\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677675\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67786496\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677864\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67791835\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 677918\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67805530\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678055\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67806600\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678066\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67829684\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678296\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67832958\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678329\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67834902\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678349\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67846776\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678467\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67853564\t2022",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678535\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67863626\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678636\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67866017\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678660\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67874551\t2023",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678745\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67877234\t2021",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678772\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67884200\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678842\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67888330\t2021",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678883\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67898029\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 678980\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67940243\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 679402\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67941726\t2020",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 679417\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67943809\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 679438\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67954855\t2018",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 679548\nBrand: MAESTRO\nCategory: \nIssuer: "
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "67973656\t2019",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 679736\nBrand: MAESTRO\nCategory: \nIssuer: "
+						}
+					],
+					"count": "97",
+					"solution": "<p>Check the response for the potential presence of personally identifiable information (PII), ensure nothing sensitive is leaked by the application.</p>",
+					"otherinfo": "<p>Credit Card Type detected: Maestro</p>",
+					"reference": "",
+					"cweid": "359",
+					"wascid": "13",
+					"sourceid": "339"
+				},
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php?isAlphabet=1&radLibelle=2&txtCaracteres=A",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php?isAlphabet=1&radLibelle=2&txtCaracteres=B",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php?isAlphabet=1&radLibelle=2&txtCaracteres=C",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php?isAlphabet=1&radLibelle=2&txtCaracteres=D",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php?isAlphabet=1&radLibelle=2&txtCaracteres=E",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php?isAlphabet=1&radLibelle=2&txtCaracteres=F",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"formRecherche\" name=\"formRecherche\" method=\"post\"  action=\"index.php#result\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ]."
+						}
+					],
+					"count": "10",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"affliste\" \"affNumero\" \"btnMedic\" \"btnPatho\" \"btnSubst\" \"choixRecherche\" \"inClauseSubst\" \"isAlphabet\" \"nomSubstances\" \"page\" \"paginationUsed\" \"radLibelle1\" \"radLibelle2\" \"radLibellePath1\" \"radLibellePath2\" \"radLibelleSub1\" \"radLibelleSub2\" \"txtCaracteres\" \"txtCaracteresPath\" \"txtCaracteresSub\" \"typeRecherche\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/accessibilite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/contact.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/DeclarationConfidentialite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/glossaire.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/plan.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/accessibilite.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/contact.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/DeclarationConfidentialite.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/glossaire.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/plan.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "8"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href='https://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet' type='text/css' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" href=\"http://m.base-donnees-publique.medicaments.gouv.fr/\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href='https://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet' type='text/css' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" href=\"http://m.base-donnees-publique.medicaments.gouv.fr/#!aide\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href='https://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet' type='text/css' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" href=\"http://m.base-donnees-publique.medicaments.gouv.fr/#!accueil\">",
+							"otherinfo": ""
+						}
+					],
+					"count": "9",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "8"
+				},
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library jquery-ui, version 1.12.1 is vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery-ui.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/*! jQuery UI - v1.12.1",
+							"otherinfo": "CVE-2021-41184\nCVE-2021-41183\nCVE-2021-41182\nCVE-2022-31160\n"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "* jQuery JavaScript Library v1.12.4",
+							"otherinfo": "CVE-2020-11023\nCVE-2020-11022\nCVE-2015-9251\nCVE-2019-11358\n"
+						}
+					],
+					"count": "2",
+					"solution": "<p>Please upgrade to the latest version of jquery-ui.</p>",
+					"otherinfo": "<p>CVE-2021-41184</p><p>CVE-2021-41183</p><p>CVE-2021-41182</p><p>CVE-2022-31160</p><p></p>",
+					"reference": "<p>https://github.com/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://bugs.jqueryui.com/ticket/15284</p><p>https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p>https://github.com/jquery/jquery-ui/issues/2101</p><p></p>",
+					"cweid": "829",
+					"wascid": "-1",
+					"sourceid": "191"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "204"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/accessibilite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/contact.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/DeclarationConfidentialite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/glossaire.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/plan.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/autocomplete.js?v=2.2.3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/accessibilite.php",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/contact.php",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/glossaire.php",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/img/recherche.jpg",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/plan.php",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "8"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/accessibilite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "docs/RT_ATTES_REPORTING_20130925",
+							"otherinfo": "v\uFFFD,\uFFFD\\x0014\uFFFD\\x00014\uFFFDK\uFFFDD<\uFFFDS \u047F\uFFFDMw\uFFFD\u0779"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/docs/Contenu_et_format_des_fichiers_telechargeables_dans_la_BDM_v2.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/Times",
+							"otherinfo": "\uFFFD<\uFFFD{\uFFFDh\uFFFD\uFFFD\u04B9\uFFFDr\uFFFD\uFFFD\u04EE\uFFFD\u0297\uFFFD5\uFFFD\uFFFD\uFFFD]\\x0005\uFFFD\\x001e\\x0016\uFFFD\uFFFD\uFFFD8\uFFFDz"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/docs/licence_bdpm.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "25742/Subtype/XML/Type/Metadata",
+							"otherinfo": "\u06DE\uFFFD\uFFFD\uFFFD\uFFFDn\u0729{\uFFFD\uFFFD/\uFFFD\uFFFD\uFFFD\uFFFDz\u059Dj\uFFFD"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/docs/RT_ATTES_REPORTING_20130925.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/Type/OutputIntent/S/GTS_PDFA1/OutputConditionIdentifier",
+							"otherinfo": "\uFFFD<\uFFFD{\uDB7B\uDD9B\uFFFD\"{^\uFFFD\uFFFD\uFFFD\uFFFDd\uFFFD\uFFFD\uFFFD\uFFFD\\x0003_\u03BA\uFFFDn\uFFFD*'v+b\uFFFDr\\x001dz{b~'\uFFFD"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/img/Logo_Ministere.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/9j/4AAQSkZJRgABAgEAlgCWAAD/7QAsUGhvdG9zaG9wIDMuMAA4QklNA+0AAAAAABAAlgAAAAEA",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD\uFFFD\\x0000\\x0010JFIF\\x0000\\x0001\\x0002\\x0001\\x0000\uFFFD\\x0000\uFFFD\\x0000\\x0000\uFFFD\uFFFD\\x0000,Photoshop 3.0\\x00008BIM\\x0003\uFFFD\\x0000\\x0000\\x0000\\x0000\\x0000\\x0010\\x0000\uFFFD\\x0000\\x0000\\x0000\\x0001\\x0000"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "org/TR/2011/REC-css3-selectors-20110929/",
+							"otherinfo": "\uFFFD\uFFFD?M\\x001f\uFFFD\uFFFD]D@\uFFFDr\uFFFD7\uFFFD\u01E5y\uFFFDh\uFFFD\u03F6\uFFFD]t\uFFFDo"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "docs/Contenu_et_format_des_fichiers_telechargeables_dans_la_BDM_v2",
+							"otherinfo": "v\uFFFD,\uFFFD*'\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD~\uFFFD\uFFFDj\uFFFD\uFFFDz\uFFFD\u07C9\uFFFDbz\uFFFD?\uFFFD\uFFFD^r\\x0016\uFFFD\uFFFD\u66D5\uFFFD?u\uFFFD\uFFFD\uFFFDV\uFFFD\\x00043?\uFFFD"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_InfoImportantes.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "CIS_InfoImportantes_20240104215751_bdpm",
+							"otherinfo": "\\x0008\uFFFD\uFFFD\"w\uFFFD\"jh\uFFFD\u05A7\uFFFD\uFFFD?\uFFFDM\uFFFD\uFFFD]8\uFFFD^{\uFFFD_\uFFFDv\uFFFD"
+						}
+					],
+					"count": "8",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>v\uFFFD,\uFFFD\\x0014\uFFFD\\x00014\uFFFDK\uFFFDD<\uFFFDS \u047F\uFFFDMw\uFFFD\u0779</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "47"
+				},
+				{
+					"pluginid": "90011",
+					"alertRef": "90011",
+					"alert": "Charset Mismatch (Header Versus Meta Content-Type Charset)",
+					"name": "Charset Mismatch (Header Versus Meta Content-Type Charset)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check identifies responses where the HTTP Content-Type header declares a charset different from the charset defined by the body of the HTML or XML. When there's a charset mismatch between the HTTP header and content body Web browsers can be forced into an undesirable content-sniffing mode to determine the content's correct character set.</p><p></p><p>An attacker could manipulate content on the page to be interpreted in an encoding of their choice. For example, if an attacker can control content at the beginning of the page, they could inject script using UTF-7 encoded text and manipulate some browsers into interpreting that text.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/accessibilite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/contact.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/DeclarationConfidentialite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/glossaire.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/plan.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Force UTF-8 for all text content in both the HTTP header and meta tags in HTML or encoding declarations in XML.</p>",
+					"otherinfo": "<p>There was a charset mismatch between the HTTP Header and the META content-type encoding declarations: [iso-8859-1] and [windows-1252] do not match.</p>",
+					"reference": "<p>http://code.google.com/p/browsersec/wiki/Part2#Character_set_handling_and_detection</p>",
+					"cweid": "436",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"<script language=\"javascript\" type=\"text/javascript\">\r\n\tdocument.body.onload = function(){\r\n        \r\n        var cacheMedic = {\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"<script language=\"javascript\" type=\"text/javascript\">\r\n\tdocument.body.onload = function(){\r\n        \r\n        var cacheMedic = {\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"<script language=\"javascript\" type=\"text/javascript\">\r\n\tdocument.body.onload = function(){\r\n        \r\n        var cacheMedic = {\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/autocomplete.js?v=2.2.3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 3 times, the first in the element starting with: \"        _inputField.select()\r\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery-ui.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"(function(t){\"function\"==typeof define&&define.amd?define([\"jquery\"],t):t(jQuery)})(function(t){t.ui=t.ui||{},t.ui.version=\"1.12\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 9 times, the first in the element starting with: \"\t// We allow this because of a bug in IE8/9 that throws an error\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs",
+							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected 4 times, the first in the element starting with: \"\t// See http://bugs.jquery.com/ticket/13378\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 60 times, the first in the element starting with: \"\t\t\t// Return just the one element from the set\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later",
+							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected 9 times, the first in the element starting with: \"\t\t\t// IE8 throws error here and will not see later tests\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"// key/values into a query string\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 21 times, the first in the element starting with: \"\tselect,\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO",
+							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 2 times, the first in the element starting with: \"\t\t\t\t\t\t\t// TODO: identify versions\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 7 times, the first in the element starting with: \"\t// Can be adjusted by the user\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "username",
+							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected 2 times, the first in the element starting with: \"\t\tusername: null,\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/jquery.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "where",
+							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected 10 times, the first in the element starting with: \"\t\t// For CommonJS and CommonJS-like environments where a proper `window`\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/scripts/utils.js?v=2.2.3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "debug",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected 2 times, the first in the element starting with: \"// ** pour debug le code avec des alertes mettre Debug=true\r\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"<script language=\"javascript\" type=\"text/javascript\">\r\n\tdocument.body.onload = function(){\r\n        \r\n        var cacheMedic = {\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "17",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"<script language=\"javascript\" type=\"text/javascript\"></p><p>\tdocument.body.onload = function(){</p><p>        </p><p>        var cacheMedic = {\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/accessibilite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/contact.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/DeclarationConfidentialite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/glossaire.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/plan.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/telechargement.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "<a name=\"HautDePage\" />\r\n<div id=\"bandeauhaut\">\r\n\t",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "11",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "8"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "8"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "8"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "8"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/accessibilite.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/aide.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/contact.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/glossaire.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/img/recherche.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/plan.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10031",
+					"alertRef": "10031",
+					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
+					"name": "User Controllable HTML Element Attribute (Potential XSS)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
+					"instances":[ 
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "btnMedic",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttp://www.base-donnees-publique.medicaments.gouv.fr/index.php\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nbtnMedic=Rechercher\r\n\r\nThe user-controlled value was:\r\nrechercher"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "txtCaracteres",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttp://www.base-donnees-publique.medicaments.gouv.fr/index.php\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\ntxtCaracteres=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "txtCaracteresPath",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttp://www.base-donnees-publique.medicaments.gouv.fr/index.php\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\ntxtCaracteresPath=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "http://www.base-donnees-publique.medicaments.gouv.fr/index.php",
+							"method": "POST",
+							"param": "txtCaracteresSub",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttp://www.base-donnees-publique.medicaments.gouv.fr/index.php\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\ntxtCaracteresSub=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						}
+					],
+					"count": "4",
+					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>http://www.base-donnees-publique.medicaments.gouv.fr/index.php</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [input] tag [value] attribute </p><p></p><p>The user input found was:</p><p>btnMedic=Rechercher</p><p></p><p>The user-controlled value was:</p><p>rechercher</p>",
+					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
+					"cweid": "20",
+					"wascid": "20",
+					"sourceid": "196"
+				}
+			]
+		}
+	]
+}
