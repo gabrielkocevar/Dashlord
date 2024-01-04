@@ -1,0 +1,895 @@
+[
+  [
+    {
+      "template": "dns/dns-saas-service-detection.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+      "template-id": "dns-saas-service-detection",
+      "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+      "info": {
+        "name": "DNS SaaS Service Detection",
+        "author": [
+          "noah @thesubtlety",
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "service"
+        ],
+        "description": "A CNAME DNS record was discovered",
+        "reference": [
+          "https://ns1.com/resources/cname",
+          "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+          "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "maison-des-blesses.defense.gouv.fr.",
+      "matched-at": "maison-des-blesses.defense.gouv.fr",
+      "extracted-results": [
+        "o5rmmgm.impervadns.net."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 40059\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;maison-des-blesses.defense.gouv.fr.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 40059\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;maison-des-blesses.defense.gouv.fr.\tIN\t CNAME\n\n;; ANSWER SECTION:\nmaison-des-blesses.defense.gouv.fr.\t3600\tIN\tCNAME\to5rmmgm.impervadns.net.\n",
+      "timestamp": "2024-01-04T17:19:40.178912714Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "maison-des-blesses.defense.gouv.fr.",
+      "matched-at": "maison-des-blesses.defense.gouv.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 14538\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;maison-des-blesses.defense.gouv.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 14538\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;maison-des-blesses.defense.gouv.fr.\tIN\t CAA\n\n;; ANSWER SECTION:\nmaison-des-blesses.defense.gouv.fr.\t3600\tIN\tCNAME\to5rmmgm.impervadns.net.\n\n;; AUTHORITY SECTION:\nimpervadns.net.\t900\tIN\tSOA\tns1.impervadns.net. hostmaster.incapsula.com. 3001 86400 7200 3600000 600\n",
+      "timestamp": "2024-01-04T17:19:40.537947993Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/httponly-cookie-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/httponly-cookie-detect",
+      "template-id": "httponly-cookie-detect",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/httponly-cookie-detect.yaml",
+      "info": {
+        "name": "HttpOnly Cookie - Detect",
+        "author": [
+          "mr. bobo hp"
+        ],
+        "tags": [
+          "misconfig",
+          "http",
+          "cookie",
+          "generic"
+        ],
+        "description": "Checks whether cookies in the HTTP response contain the HttpOnly attribute. If the HttpOnly flag is set, it means that the cookie is HTTP-only\n",
+        "reference": [
+          "https://stackoverflow.com/questions/4316539/how-do-i-test-httponly-cookie-flag"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": null,
+          "cvss-metrics": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 302 Found\r\nConnection: close\r\nContent-Length: 122\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nLocation: http://maison-des-blesses.defense.gouv.fr/\r\nSet-Cookie: visid_incap_2891871=BNKGHuTfQ1SvjWANAUbNEbLolmUAAAAAQUIPAAAAAAAPJhDJeU3O1Svdio4xArP5; expires=Fri, 03 Jan 2025 09:09:01 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_170_2891871=wndnVf5JIjdpFXFNOvZbArLolmUAAAAAJBM9NtoQ8mk7shTuxj6baw==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 3-110629280-0 0NNN RT(1704388786494 0) q(0 -1 -1 -1) r(0 -1) B13(3,30037,0) U24\r\n\r\n\r\n<HTML><HEAD><TITLE>Loading</TITLE></HEAD><BODY bgcolor=\"#ffffff\"><H3 style=\"color: #ffffff\">Loading</H3></BODY></HTML>\r\n",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:19:47.202813215Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/tech-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tech-detect",
+      "template-id": "tech-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/tech-detect.yaml",
+      "info": {
+        "name": "Wappalyzer Technology Detection",
+        "author": [
+          "hakluke"
+        ],
+        "tags": [
+          "tech"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "Imperva",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=gNuEYmypR9ODZ8V7PYCbHMTolmUAAAAAQUIPAAAAAABqfQN3sjqeEUx+lkMeNx9B; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=lyRwOXPqyx66r8Ta5/E5DMTolmUAAAAAEiAXE0pQLTiHTZplGoSSCg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928531-0 0NNN RT(1704388804383 1) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928531-0%200NNN%20RT%281704388804383%201%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302054879502867846&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302054879502867846</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:05.140774271Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "strict-transport-security",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.142788859Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "content-security-policy",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.143642389Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-frame-options",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.144370095Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-content-type-options",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.14501095Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.145643388Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.146272331Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.146892226Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-permitted-cross-domain-policies",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.147478419Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.148116889Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "clear-site-data",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.148811563Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 859\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=6CiM38rPRjCoLEFyfwnJPsnolmUAAAAAQUIPAAAAAABtqE9qfW9Uh5ksAgN6SKvy; expires=Fri, 03 Jan 2025 06:27:27 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_881_2891871=QAhEAmhcO07ItcTa5/E5DMnolmUAAAAAy+nxcMFF4yuzpe1qnJV8eg==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 6-54928854-0 0NNN RT(1704388809453 0) q(0 -1 -1 -1) r(0 -1) B15(4,200,0) U24\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=1&xinfo=6-54928854-0%200NNN%20RT%281704388809453%200%29%20q%280%20-1%20-1%20-1%29%20r%280%20-1%29%20B15%284%2c200%2c0%29%20U24&incident_id=881001180237702706-302056438575996294&edet=15&cinfo=04000000&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 881001180237702706-302056438575996294</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:10.149471433Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/external-service-interaction.yaml",
+      "template-url": "https://templates.nuclei.sh/public/external-service-interaction",
+      "template-id": "external-service-interaction",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/external-service-interaction.yaml",
+      "info": {
+        "name": "External Service Interaction",
+        "author": [
+          "andreluna"
+        ],
+        "tags": [
+          "http",
+          "misc",
+          "oast"
+        ],
+        "description": "External Service interaction via Host Header Injection.",
+        "reference": [
+          "https://portswigger.net/kb/issues/00300210_external-service-interaction-http",
+          "https://success.qualys.com/support/s/article/000006843",
+          "https://owasp.org/www-project-web-security-testing-guide/latest/4-web_application_security_testing/07-input_validation_testing/17-testing_for_host_header_injection"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-918",
+            "cwe-406"
+          ]
+        }
+      },
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: cmbehbec4pgv7eu28qc0inwf9ajujk3mr.oast.live\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 503 Service Unavailable\r\nConnection: close\r\nContent-Length: 691\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nX-Iinfo: 1012-95263660-0 0NNN RT(1704388815983 1) q(0 -1 -1 -1) r(47 -1)\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=5&xinfo=1012-95263660-0%200NNN%20RT%281704388815983%201%29%20q%280%20-1%20-1%20-1%29%20r%2847%20-1%29&incident_id=0-532033262758993292&edet=22&cinfo=ffffffff&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 0-532033262758993292</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:21.373006506Z",
+      "interaction": {
+        "protocol": "dns",
+        "unique-id": "cmbehbec4pgv7eu28qc0inwf9ajujk3mr",
+        "full-id": "cmbehbec4pgv7eu28qc0inwf9ajujk3mr",
+        "q-type": "CNAME",
+        "raw-request": ";; opcode: QUERY, status: NOERROR, id: 50953\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;cmbehbec4pgv7eu28qc0inwf9ajujk3mr.oast.live.\tIN\t CNAME\n",
+        "raw-response": ";; opcode: QUERY, status: NOERROR, id: 50953\n;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 2\n\n;; QUESTION SECTION:\n;cmbehbec4pgv7eu28qc0inwf9ajujk3mr.oast.live.\tIN\t CNAME\n\n;; ANSWER SECTION:\ncmbehbec4pgv7eu28qc0inwf9ajujk3mr.oast.live.\t3600\tIN\tA\t178.128.210.172\n\n;; AUTHORITY SECTION:\ncmbehbec4pgv7eu28qc0inwf9ajujk3mr.oast.live.\t3600\tIN\tNS\tns1.oast.live.\ncmbehbec4pgv7eu28qc0inwf9ajujk3mr.oast.live.\t3600\tIN\tNS\tns2.oast.live.\n\n;; ADDITIONAL SECTION:\nns1.oast.live.\t3600\tIN\tA\t178.128.210.172\nns2.oast.live.\t3600\tIN\tA\t178.128.210.172\n",
+        "remote-address": "198.143.33.19",
+        "timestamp": "2024-01-04T17:20:16.810290122Z"
+      },
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'Host: cmbehbec4pgv7eu28qc0inwf9ajujk3mr.oast.live' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/waf-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/waf-detect",
+      "template-id": "waf-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
+      "info": {
+        "name": "WAF Detection",
+        "author": [
+          "dwisiswant0",
+          "lu4nx"
+        ],
+        "tags": [
+          "waf",
+          "tech",
+          "misc"
+        ],
+        "description": "A web application firewall was detected.",
+        "reference": [
+          "https://github.com/ekultek/whatwaf"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "incapsula",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr/",
+      "request": "POST / HTTP/1.1\r\nHost: maison-des-blesses.defense.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 212\r\nCache-Control: no-cache, no-store\r\nContent-Type: text/html\r\nSet-Cookie: visid_incap_2891871=QLeIYM+CQYCLPdBSMwxXstjolmUAAAAAQUIPAAAAAAAu+jXAcBD51fXy5COZgF6S; expires=Fri, 03 Jan 2025 09:09:03 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr\r\nSet-Cookie: incap_ses_170_2891871=TBJbU7CF50NvtXFNOvZbAtjolmUAAAAAPC573WI0hgWhzs7VurbFDw==; path=/; Domain=.defense.gouv.fr\r\nX-Iinfo: 52-111521925-0 0NNN RT(1704388824338 1) q(0 -1 -1 -1) r(0 -1) B10(8,881065,0) U24\r\n\r\n<html>\r\n<head>\r\n<META NAME=\"robots\" CONTENT=\"noindex,nofollow\">\r\n<script src=\"/_Incapsula_Resource?SWJIYLWA=5074a744e2e3d891814e9a2dace20bd4,719d34d31c8e3a6e6fffd425f7e032f3\">\r\n</script>\r\n<body>\r\n</body></html>\r\n",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:25.046549816Z",
+      "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: maison-des-blesses.defense.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://maison-des-blesses.defense.gouv.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/vulnerabilities/generic/request-based-interaction.yaml",
+      "template-url": "https://templates.nuclei.sh/public/request-based-interaction",
+      "template-id": "request-based-interaction",
+      "template-path": "/home/runner/nuclei-templates/http/vulnerabilities/generic/request-based-interaction.yaml",
+      "info": {
+        "name": "OOB Request Based Interaction",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "oast",
+          "ssrf",
+          "generic"
+        ],
+        "description": "The remote server fetched a spoofed DNS Name from the request.",
+        "reference": [
+          "https://portswigger.net/research/cracking-the-lens-targeting-https-hidden-attack-surface"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 5
+        }
+      },
+      "matcher-name": "dns",
+      "type": "http",
+      "host": "http://maison-des-blesses.defense.gouv.fr",
+      "matched-at": "http://maison-des-blesses.defense.gouv.fr/",
+      "request": "GET / HTTP/1.1\r\nHost: cmbehbec4pgv7eu28qc0c6ye8ddkw3wpw.oast.live\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nCache-Control: no-transform\r\nAccept: */*\r\n\r\n",
+      "response": "HTTP/1.1 503 Service Unavailable\r\nContent-Length: 689\r\nCache-Control: no-cache, no-store\r\nConnection: close\r\nContent-Type: text/html\r\nX-Iinfo: 1000-10952084-0 0NNN RT(1704388827356 0) q(0 -1 -1 -1) r(48 -1)\r\n\r\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=5&xinfo=1000-10952084-0%200NNN%20RT%281704388827356%200%29%20q%280%20-1%20-1%20-1%29%20r%2848%20-1%29&incident_id=0-59616486883401088&edet=22&cinfo=ffffffff&rpinfo=0&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 0-59616486883401088</iframe></body></html>",
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:20:32.834321605Z",
+      "interaction": {
+        "protocol": "dns",
+        "unique-id": "cmbehbec4pgv7eu28qc0c6ye8ddkw3wpw",
+        "full-id": "cmbehbec4pgv7eu28qc0c6ye8ddkw3wpw",
+        "q-type": "CNAME",
+        "raw-request": ";; opcode: QUERY, status: NOERROR, id: 10324\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;cmbehbec4pgv7eu28qc0c6ye8ddkw3wpw.oast.live.\tIN\t CNAME\n",
+        "raw-response": ";; opcode: QUERY, status: NOERROR, id: 10324\n;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 2\n\n;; QUESTION SECTION:\n;cmbehbec4pgv7eu28qc0c6ye8ddkw3wpw.oast.live.\tIN\t CNAME\n\n;; ANSWER SECTION:\ncmbehbec4pgv7eu28qc0c6ye8ddkw3wpw.oast.live.\t3600\tIN\tA\t178.128.210.172\n\n;; AUTHORITY SECTION:\ncmbehbec4pgv7eu28qc0c6ye8ddkw3wpw.oast.live.\t3600\tIN\tNS\tns1.oast.live.\ncmbehbec4pgv7eu28qc0c6ye8ddkw3wpw.oast.live.\t3600\tIN\tNS\tns2.oast.live.\n\n;; ADDITIONAL SECTION:\nns1.oast.live.\t3600\tIN\tA\t178.128.210.172\nns2.oast.live.\t3600\tIN\tA\t178.128.210.172\n",
+        "remote-address": "198.143.33.19",
+        "timestamp": "2024-01-04T17:20:28.182110057Z"
+      },
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "maison-des-blesses.defense.gouv.fr",
+      "matched-at": "maison-des-blesses.defense.gouv.fr:443",
+      "extracted-results": [
+        "GlobalSign nv-sa"
+      ],
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:22:38.046305919Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "maison-des-blesses.defense.gouv.fr",
+      "matched-at": "maison-des-blesses.defense.gouv.fr:443",
+      "extracted-results": [
+        "*.drsd.defense.gouv.fr",
+        "*.memoiredeshommes.sga.defense.gouv.fr",
+        "*.cerpair-questionnaires.defense.gouv.fr",
+        "*.visualdrone.dsae.defense.gouv.fr",
+        "imperva.com",
+        "*.cheminsdememoire.gouv.fr",
+        "*.colsbleus.fr",
+        "cheminsdememoire.gouv.fr",
+        "*.defense.gouv.fr",
+        "*.archives.defense.gouv.fr",
+        "*.cabcom-multimedia.ema.defense.gouv.fr",
+        "*.contrib-dircam.dsae.defense.gouv.fr",
+        "*.sophia-industrie.drsd.defense.gouv.fr",
+        "*.sga.defense.gouv.fr",
+        "*.commissairesdanslesarmees.defense.gouv.fr",
+        "colsbleus.fr",
+        "*.cnsd.defense.gouv.fr",
+        "*.cnmosis.dirisi.defense.gouv.fr",
+        "*.dicod.defense.gouv.fr",
+        "*.dircam.dsae.defense.gouv.fr",
+        "*.sailor.defense.gouv.fr",
+        "*.cerpa.air.defense.gouv.fr",
+        "*.marine.defense.gouv.fr"
+      ],
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:22:38.046458964Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/wildcard-tls.yaml",
+      "template-url": "https://templates.nuclei.sh/public/wildcard-tls",
+      "template-id": "wildcard-tls",
+      "template-path": "/home/runner/nuclei-templates/ssl/wildcard-tls.yaml",
+      "info": {
+        "name": "Wildcard TLS Certificate",
+        "author": [
+          "lucky0x0d"
+        ],
+        "tags": [
+          "ssl",
+          "wildcard",
+          "tls"
+        ],
+        "description": "Checks a sites certificate to see if there are wildcard CN or SAN entries.\n",
+        "reference": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/transport_layer_protection_cheat_sheet.html#carefully-consider-the-use-of-wildcard-certificates"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "maison-des-blesses.defense.gouv.fr",
+      "matched-at": "maison-des-blesses.defense.gouv.fr:443",
+      "extracted-results": [
+        "CN: imperva.com",
+        " SAN: [*.cheminsdememoire.gouv.fr *.marine.defense.gouv.fr *.cnmosis.dirisi.defense.gouv.fr *.dicod.defense.gouv.fr *.cnsd.defense.gouv.fr *.dircam.dsae.defense.gouv.fr *.archives.defense.gouv.fr *.cabcom-multimedia.ema.defense.gouv.fr *.colsbleus.fr *.contrib-dircam.dsae.defense.gouv.fr *.sailor.defense.gouv.fr *.drsd.defense.gouv.fr cheminsdememoire.gouv.fr *.sophia-industrie.drsd.defense.gouv.fr *.memoiredeshommes.sga.defense.gouv.fr *.cerpair-questionnaires.defense.gouv.fr *.sga.defense.gouv.fr *.commissairesdanslesarmees.defense.gouv.fr *.cerpa.air.defense.gouv.fr *.visualdrone.dsae.defense.gouv.fr colsbleus.fr imperva.com *.defense.gouv.fr]"
+      ],
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:22:38.04652629Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "maison-des-blesses.defense.gouv.fr",
+      "matched-at": "maison-des-blesses.defense.gouv.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:22:38.411131996Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "maison-des-blesses.defense.gouv.fr",
+      "matched-at": "maison-des-blesses.defense.gouv.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "45.60.12.211",
+      "timestamp": "2024-01-04T17:22:38.4739995Z",
+      "matcher-status": true
+    }
+  ]
+]

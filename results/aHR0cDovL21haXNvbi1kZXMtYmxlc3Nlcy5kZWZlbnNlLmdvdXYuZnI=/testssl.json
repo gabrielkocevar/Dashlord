@@ -1,0 +1,1089 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered with final"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cwe"          : "CWE-310",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1 secp384r1 secp521r1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'status request/#5' 'next protocol/#13172' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'max fragment length/#1' 'encrypt-then-mac/#22' 'extended master secret/#23'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 7200 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "certificate_compression",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA256 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "01F9498D65EDFB3294209002EEC606C8"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "16"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "407A74F173FD22124110EC3DE68C0856FFF47802"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "35E7839420E9421C4FE7CAA9E712E29B7A744558961A66DC7A948BEB5CC262B7"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIII8TCCB9mgAwIBAgIQAflJjWXt+zKUIJAC7sYGyDANBgkqhkiG9w0BAQsFADBYMQswCQYDVQQGEwJCRTEZMBcGA1UEChMQR2xvYmFsU2lnbiBudi1zYTEuMCwGA1UEAxMlR2xvYmFsU2lnbiBBdGxhcyBSMyBEViBUTFMgQ0EgMjAyMyBRNDAeFw0yMzEyMjkyMTIwMDVaFw0yNDA2MjYyMTIwMDVaMBYxFDASBgNVBAMMC2ltcGVydmEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsgZuwh7cI6XInodYlbMVTRlgT2Y+yIeW2ASTNMTucfqcpVie2J+K6VyODA+BMFWuzTwcfqjbpZZ9WQN4ocR4yW3NMUFmNFo6y4kbi/IdWXLLOiuDDlPa7C37pl1h7UbSCzrNHThEWiV8mNAd9H1BFvzywq40vS2txZyWoDEO97l1u0mXlRpCOBSs9M/2QHRbpuqyZhfkl3jV4oQMgLET0cWGIJ2P78iR4tvwHms/NASFpb5l1K+uLoZ0aZfNC2vzrTpmOm7Kn7aG/XIJDkEK2w8dF35r26BWn+yb3YqoRiOibGx2piSx66r6wLPCF304XToe2mXqZz8vG3Xo1mKkmQIDAQABo4IF9zCCBfMwggKrBgNVHREEggKiMIICnoIaKi5jaGVtaW5zZGVtZW1vaXJlLmdvdXYuZnKCGCoubWFyaW5lLmRlZmVuc2UuZ291di5mcoIgKi5jbm1vc2lzLmRpcmlzaS5kZWZlbnNlLmdvdXYuZnKCFyouZGljb2QuZGVmZW5zZS5nb3V2LmZyghYqLmNuc2QuZGVmZW5zZS5nb3V2LmZygh0qLmRpcmNhbS5kc2FlLmRlZmVuc2UuZ291di5mcoIaKi5hcmNoaXZlcy5kZWZlbnNlLmdvdXYuZnKCJyouY2FiY29tLW11bHRpbWVkaWEuZW1hLmRlZmVuc2UuZ291di5mcoIOKi5jb2xzYmxldXMuZnKCJSouY29udHJpYi1kaXJjYW0uZHNhZS5kZWZlbnNlLmdvdXYuZnKCGCouc2FpbG9yLmRlZmVuc2UuZ291di5mcoIWKi5kcnNkLmRlZmVuc2UuZ291di5mcoIYY2hlbWluc2RlbWVtb2lyZS5nb3V2LmZygicqLnNvcGhpYS1pbmR1c3RyaWUuZHJzZC5kZWZlbnNlLmdvdXYuZnKCJioubWVtb2lyZWRlc2hvbW1lcy5zZ2EuZGVmZW5zZS5nb3V2LmZygigqLmNlcnBhaXItcXVlc3Rpb25uYWlyZXMuZGVmZW5zZS5nb3V2LmZyghUqLnNnYS5kZWZlbnNlLmdvdXYuZnKCKyouY29tbWlzc2FpcmVzZGFuc2xlc2FybWVlcy5kZWZlbnNlLmdvdXYuZnKCGyouY2VycGEuYWlyLmRlZmVuc2UuZ291di5mcoIiKi52aXN1YWxkcm9uZS5kc2FlLmRlZmVuc2UuZ291di5mcoIMY29sc2JsZXVzLmZyggtpbXBlcnZhLmNvbYIRKi5kZWZlbnNlLmdvdXYuZnIwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAdBgNVHQ4EFgQUqjnfTiK4a9+TXgdnQ4Hjp/YonHIwVwYDVR0gBFAwTjAIBgZngQwBAgEwQgYKKwYBBAGgMgoBAzA0MDIGCCsGAQUFBwIBFiZodHRwczovL3d3dy5nbG9iYWxzaWduLmNvbS9yZXBvc2l0b3J5LzAMBgNVHRMBAf8EAjAAMIGeBggrBgEFBQcBAQSBkTCBjjBABggrBgEFBQcwAYY0aHR0cDovL29jc3AuZ2xvYmFsc2lnbi5jb20vY2EvZ3NhdGxhc3IzZHZ0bHNjYTIwMjNxNDBKBggrBgEFBQcwAoY+aHR0cDovL3NlY3VyZS5nbG9iYWxzaWduLmNvbS9jYWNlcnQvZ3NhdGxhc3IzZHZ0bHNjYTIwMjNxNC5jcnQwHwYDVR0jBBgwFoAUqhFxj5XEWJiLsW4PO1BoJLy4GbwwSAYDVR0fBEEwPzA9oDugOYY3aHR0cDovL2NybC5nbG9iYWxzaWduLmNvbS9jYS9nc2F0bGFzcjNkdnRsc2NhMjAyM3E0LmNybDCCAX8GCisGAQQB1nkCBAIEggFvBIIBawFpAHUAPxdLT9ciR1iUHWUchL4NEu2QN38fhWrrwb8ohez4ZG4AAAGMt3LZ2gAABAMARjBEAiBjkZOEUB3KCHjNcyMRIsA3ZsNoc9xm76m6P2tHtcGghQIgNVew0rnT9QHbtgBTFwN9o2MwSHy+jdikqS9v6rFUNb4AdwDuzdBk1dsazsVct520zROiModGfLzs3sNRSFlGcR+1mwAAAYy3ctneAAAEAwBIMEYCIQCXI3bknnXB2WpfWWqQwfMhPiN/r0qtTt1Y0eq5NoBF6QIhAOYTJsJzdmZscUQciMAGEZUmYSbmYEH2bUQk4vG7cXmZAHcA2ra/az+1tiKfm8K7XGvocJFxbLtRhIU0vaQ9MEjX+6sAAAGMt3LapgAABAMASDBGAiEA7hs/DpZxUbqDI2/qZJ5Ye6fd+h7O3GCztMkA2w65YhgCIQDgF75Nu79+A66ZvqNWqFkqxdjyg0AeWzdiAZoXWBqcljANBgkqhkiG9w0BAQsFAAOCAQEAMakehzII5WAGBseDViv/EfuOmKR4Q0PWh2+tFmzND9k5K34UulaAHw7kP2ceiWZDkFjaKd4mepNiGo6nG5TZdIo3alJ5GnvRnBWpBuBgNY14SJFLaIRf0v49F4UdrVdgSJjaLuQWyoC3ViSLcspmeHeUPVVP+10zSY08xGsrwGu2JeHoHs6bf3Z4ypIfZcTNS51guRLyqLE2dj5CB43bs5X4OaZpjnj2aQoIH7Qf8uzYb6xKRp6ftfX46ck38f45u+SVolArt3YQjaNlUo1CZAu8lN3hNXlcX640+rtHXviWP9Vi3ypZ9ZNdFD7XJ6waHqaFMBWdf/45qWJdWmhodw==\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "imperva.com"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "imperva.com"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "*.cheminsdememoire.gouv.fr *.marine.defense.gouv.fr *.cnmosis.dirisi.defense.gouv.fr *.dicod.defense.gouv.fr *.cnsd.defense.gouv.fr *.dircam.dsae.defense.gouv.fr *.archives.defense.gouv.fr *.cabcom-multimedia.ema.defense.gouv.fr *.colsbleus.fr *.contrib-dircam.dsae.defense.gouv.fr *.sailor.defense.gouv.fr *.drsd.defense.gouv.fr cheminsdememoire.gouv.fr *.sophia-industrie.drsd.defense.gouv.fr *.memoiredeshommes.sga.defense.gouv.fr *.cerpair-questionnaires.defense.gouv.fr *.sga.defense.gouv.fr *.commissairesdanslesarmees.defense.gouv.fr *.cerpa.air.defense.gouv.fr *.visualdrone.dsae.defense.gouv.fr colsbleus.fr imperva.com *.defense.gouv.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN wildcard (same w/o SNI)"
+          }
+,         {
+              "id"           : "cert_trust_wildcard",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "trust is via wildcard"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "174 >= 60 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-12-29 21:20"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-06-26 21:20"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://crl.globalsign.com/ca/gsatlasr3dvtlsca2023q4.crl"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://ocsp.globalsign.com/ca/gsatlasr3dvtlsca2023q4"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "GlobalSign Atlas R3 DV TLS CA 2023 Q4 (GlobalSign nv-sa from BE)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIEjzCCA3egAwIBAgIQfx8sScYPx1YvWJnWzWAZszANBgkqhkiG9w0BAQsFADBMMSAwHgYDVQQLExdHbG9iYWxTaWduIFJvb3QgQ0EgLSBSMzETMBEGA1UEChMKR2xvYmFsU2lnbjETMBEGA1UEAxMKR2xvYmFsU2lnbjAeFw0yMzA3MTkwMzQyMjlaFw0yNTA3MTkwMDAwMDBaMFgxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMS4wLAYDVQQDEyVHbG9iYWxTaWduIEF0bGFzIFIzIERWIFRMUyBDQSAyMDIzIFE0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArn7MODS0pNF1+r3pMVMb8tjOcHZEzqIqk+OU738JzxqkKKO6o4eMdPQn3wuKPHQKmJFEiMwYRYlPzFqL5SJVfmDg2t47QPtrL5kPr/bU08qL0N3LDeuv4d7c5FmY535/3AqlZqcnp9EFSHngn4ISG6EXp6s/LPdyObu6so4vApJbmm2xHHc1pgAeorBNsDRr9IgcODwI1U5o3UtBP0F4oZFmIopTl1dbFKGYPr+xap3hAw+z5MnspBaDRkSiU3xfy0LngS73Vs52eYdp11AEWlZzTyDYwc8zm/tRArLZzfqygl86AyydLvZ9tg8OzPx+Tzl5xLx5LtwiKsxglnv2ewIDAQABo4IBXzCCAVswDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBSqEXGPlcRYmIuxbg87UGgkvLgZvDAfBgNVHSMEGDAWgBSP8Et/qC5FJK5NUPpjmove4t0bvDB7BggrBgEFBQcBAQRvMG0wLgYIKwYBBQUHMAGGImh0dHA6Ly9vY3NwMi5nbG9iYWxzaWduLmNvbS9yb290cjMwOwYIKwYBBQUHMAKGL2h0dHA6Ly9zZWN1cmUuZ2xvYmFsc2lnbi5jb20vY2FjZXJ0L3Jvb3QtcjMuY3J0MDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9jcmwuZ2xvYmFsc2lnbi5jb20vcm9vdC1yMy5jcmwwIQYDVR0gBBowGDAIBgZngQwBAgEwDAYKKwYBBAGgMgoBAzANBgkqhkiG9w0BAQsFAAOCAQEAiLoUIGIiKDNmQ8cWRZv5BX3ChPqWie23uWZ1YaP/59gYVvM48TbQu7lA8ZeEFieIUFE+B68wGtU4mxKamfkWhORTAl1OcQ2C2tfJ0t4v6TbtEgzS2CC7oDkr4+W5QDuBbGgNIzBB7xbL9Uy/PJ602MFt46a8WYvr0Mp+Qn2buHQ8WaTi2PXiv8Z62YZ0zz3yEpWzh7sVUS/4t6CdvccPnYq6c0wMIO4Dn+fO5HEy3M00y9BIXhG4WeMWhmIkes+tp6LilOYT/ZV2WPebhvmi66VnDzRPwk98aWrMYzkV3pgkwLQIqzfp1N3gNAHeZCnzaCq5VstgX6g9l2vw5Qycag==\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "BB32B9044163D739E82233AEBC7EF3A23565B748242EFE0973098748287D9E76"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-07-19 03:42"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2025-07-19 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "GlobalSign Atlas R3 DV TLS CA 2023 Q4 <-- GlobalSign"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Got no HTTP time, maybe try different URL?"
+          }
+,         {
+              "id"           : "HSTS",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "3 at '/'"
+          }
+,         {
+              "id"           : "cookie_secure",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/3 at '/' marked as secure"
+          }
+,         {
+              "id"           : "cookie_httponly",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/3 at '/' marked as HttpOnly"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no-cache"
+          }
+,         {
+              "id"           : "Pragma",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no-cache"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "no protocol below TLS 1.2 offered"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=35E7839420E9421C4FE7CAA9E712E29B7A744558961A66DC7A948BEB5CC262B7"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "no DH key with <= TLS 1.2"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "not vulnerable, no SSL3 or TLS1"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "27"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "81"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "A"
+          }
+,         {
+              "id"           : "grade_cap_reason_1",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to A. HSTS is not offered"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "maison-des-blesses.defense.gouv.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "59"
+          }
+]

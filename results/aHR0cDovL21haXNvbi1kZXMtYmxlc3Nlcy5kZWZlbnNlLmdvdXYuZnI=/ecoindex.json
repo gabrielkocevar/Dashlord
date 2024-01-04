@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "http://maison-des-blesses.defense.gouv.fr",
+        "size": 2419.345,
+        "nodes": 657,
+        "requests": 44,
+        "grade": "D",
+        "score": 53.0,
+        "ges": 1.94,
+        "water": 2.91,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 17:14:41.081932",
+        "page_type": "homepage"
+    }
+]
