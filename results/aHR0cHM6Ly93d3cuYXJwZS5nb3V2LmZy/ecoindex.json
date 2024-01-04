@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.arpe.gouv.fr",
+        "size": 1830.345,
+        "nodes": 566,
+        "requests": 56,
+        "grade": "D",
+        "score": 55.0,
+        "ges": 1.9,
+        "water": 2.85,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 20:41:33.480883",
+        "page_type": "website"
+    }
+]
