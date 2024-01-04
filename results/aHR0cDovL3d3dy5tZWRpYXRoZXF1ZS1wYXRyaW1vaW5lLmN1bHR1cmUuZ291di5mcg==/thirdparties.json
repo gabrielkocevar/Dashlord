@@ -1,0 +1,194 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://matomo.labrmngp.fr/matomo.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://matomo.labrmngp.fr/matomo.php?action_name=Page%20d%27accueil%20%7C%20M%C3%A9diath%C3%A8que%20du%20patrimoine%20et%20de%20la%20photographie&idsite=24&rec=1&r=759351&h=20&m=0&s=34&url=https%3A%2F%2Fmediatheque-patrimoine.culture.gouv.fr%2F&_id=d9056cbd9e73b0cb&_idn=1&send_image=0&_refts=0&cookie=1&res=800x600&pv_id=OzUAHU&pf_net=451&pf_srv=319&pf_tfr=140&pf_dm1=1077&uadata=%7B%22fullVersionList%22%3A%5B%5D%2C%22mobile%22%3Afalse%2C%22model%22%3A%22%22%2C%22platform%22%3A%22%22%2C%22platformVersion%22%3A%22%22%7D"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "_pk_ses.24.0331",
+      "value": "1",
+      "domain": "mediatheque-patrimoine.culture.gouv.fr",
+      "path": "/",
+      "expires": 1704400234,
+      "size": 16,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "tarteaucitron",
+      "value": "!hiddenanalytics=wait!affluences=wait!kuula=wait!other=wait!sketchfab=wait!youtubeCustom=wait",
+      "domain": "mediatheque-patrimoine.culture.gouv.fr",
+      "path": "/",
+      "expires": 1719950434,
+      "size": 106,
+      "httpOnly": false,
+      "secure": true,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "_pk_id.24.0331",
+      "value": "d9056cbd9e73b0cb.1704398435.",
+      "domain": "mediatheque-patrimoine.culture.gouv.fr",
+      "path": "/",
+      "expires": 1738353635,
+      "size": 42,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "content-encoding": "gzip",
+    "content-language": "fr",
+    "content-length": "13388",
+    "content-security-policy": "script-src 'self' 'unsafe-inline' *.labrmngp.fr *.googletagmanager.com *.affluences.com *.affluences.media *.youtube.com *.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://matomo.labrmngp.fr/; script-src-elem 'self' 'unsafe-inline' *.labrmngp.fr *.googletagmanager.com *.affluences.com *.affluences.media *.youtube.com *.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' *.affluences.media https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src-attr 'self' 'unsafe-inline'; report-uri https://mediatheque-patrimoine.culture.gouv.fr/report-uri/enforce",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Thu, 04 Jan 2024 20:00:33 GMT",
+    "etag": "\"1704398433-gzip\"",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "last-modified": "Thu, 04 Jan 2024 20:00:33 GMT",
+    "server": "nginx",
+    "strict-transport-security": "max-age=15768000; includeSubDomains",
+    "vary": "Cookie,Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-drupal-dynamic-cache": "HIT",
+    "x-frame-options": "SAMEORIGIN",
+    "x-generator": "Drupal 9 (https://www.drupal.org)",
+    "x-powered-by": "PHP/8.2.14\nPleskLin",
+    "x-ua-compatible": "IE=edge"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.mediatheque-patrimoine.culture.gouv.fr",
+      "ip": "87.252.7.122",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "matomo.labrmngp.fr",
+      "ip": "87.252.7.122",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}

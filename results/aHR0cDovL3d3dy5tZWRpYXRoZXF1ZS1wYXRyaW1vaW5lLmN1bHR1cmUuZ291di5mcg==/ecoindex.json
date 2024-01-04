@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "http://www.mediatheque-patrimoine.culture.gouv.fr",
+        "size": 2308.677,
+        "nodes": 1117,
+        "requests": 25,
+        "grade": "D",
+        "score": 46.0,
+        "ges": 2.08,
+        "water": 3.12,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 20:01:34.870099",
+        "page_type": null
+    }
+]

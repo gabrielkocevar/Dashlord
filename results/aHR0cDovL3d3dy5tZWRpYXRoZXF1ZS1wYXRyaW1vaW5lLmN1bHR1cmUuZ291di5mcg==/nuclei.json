@@ -1,0 +1,386 @@
+[
+  [
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr.",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 49354\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.mediatheque-patrimoine.culture.gouv.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 49354\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.mediatheque-patrimoine.culture.gouv.fr.\tIN\t CAA\n\n;; AUTHORITY SECTION:\nculture.gouv.fr.\t600\tIN\tSOA\tmnemosyne.culture.fr. hostmaster.culture.gouv.fr. 2018077596 30 3600 1209600 3600\n",
+      "timestamp": "2024-01-04T20:05:38.441265482Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/tech-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tech-detect",
+      "template-id": "tech-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/tech-detect.yaml",
+      "info": {
+        "name": "Wappalyzer Technology Detection",
+        "author": [
+          "hakluke"
+        ],
+        "tags": [
+          "tech"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "nginx",
+      "type": "http",
+      "host": "http://www.mediatheque-patrimoine.culture.gouv.fr",
+      "matched-at": "http://www.mediatheque-patrimoine.culture.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.mediatheque-patrimoine.culture.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 301 Moved Permanently\r\nConnection: close\r\nContent-Length: 162\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 20:06:16 GMT\r\nLocation: https://mediatheque-patrimoine.culture.gouv.fr/\r\nServer: nginx\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:06:16.838498257Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.mediatheque-patrimoine.culture.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/waf-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/waf-detect",
+      "template-id": "waf-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
+      "info": {
+        "name": "WAF Detection",
+        "author": [
+          "dwisiswant0",
+          "lu4nx"
+        ],
+        "tags": [
+          "waf",
+          "tech",
+          "misc"
+        ],
+        "description": "A web application firewall was detected.",
+        "reference": [
+          "https://github.com/ekultek/whatwaf"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "nginxgeneric",
+      "type": "http",
+      "host": "http://www.mediatheque-patrimoine.culture.gouv.fr",
+      "matched-at": "http://www.mediatheque-patrimoine.culture.gouv.fr/",
+      "request": "POST / HTTP/1.1\r\nHost: www.mediatheque-patrimoine.culture.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+      "response": "HTTP/1.1 301 Moved Permanently\r\nConnection: close\r\nContent-Length: 162\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 20:06:51 GMT\r\nLocation: https://mediatheque-patrimoine.culture.gouv.fr/\r\nServer: nginx\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:06:51.857083194Z",
+      "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.mediatheque-patrimoine.culture.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.mediatheque-patrimoine.culture.gouv.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "network/detection/esmtp-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/esmtp-detect",
+      "template-id": "esmtp-detect",
+      "template-path": "/home/runner/nuclei-templates/network/detection/esmtp-detect.yaml",
+      "info": {
+        "name": "ESMTP - Detect",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "network",
+          "detect",
+          "smtp",
+          "mail"
+        ],
+        "description": "ESMTP was detected.\n",
+        "reference": [
+          "https://nmap.org/nsedoc/scripts/smtp-open-relay.html"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "shodan-query": "ESMTP",
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "type": "tcp",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr:25",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr:25",
+      "request": "\n",
+      "response": "220 rmn-scn-01.oxyd.net ESMTP Postfix (Debian/GNU)\r\n",
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:07:33.174157972Z",
+      "matcher-status": true
+    },
+    {
+      "template": "network/detection/pop3-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/pop3-detect",
+      "template-id": "pop3-detect",
+      "template-path": "/home/runner/nuclei-templates/network/detection/pop3-detect.yaml",
+      "info": {
+        "name": "POP3 Protocol - Detect",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "network",
+          "detect",
+          "pop3",
+          "mail"
+        ],
+        "description": "POP3 protocol was detected.\n",
+        "reference": [
+          "https://nmap.org/nsedoc/scripts/pop3-ntlm-info.html"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "shodan-query": "pop3 port:110",
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "type": "tcp",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr:110",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr:110",
+      "request": "\n",
+      "response": "+OK Dovecot ready. <1859a4.3.6597100a.Ae6jKXdFj/DWg0/Ncp8zhQ==@rmn-scn-01>\r\n-ERR Unknown command.\r\n",
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:07:38.954356032Z",
+      "matcher-status": true
+    },
+    {
+      "template": "network/detection/smtp-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/smtp-service-detect",
+      "template-id": "smtp-service-detect",
+      "template-path": "/home/runner/nuclei-templates/network/detection/smtp-detect.yaml",
+      "info": {
+        "name": "SMTP Service Detection",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "network",
+          "service",
+          "smtp",
+          "detect",
+          "mail"
+        ],
+        "description": "SMTP is part of the application layer of the TCP/IP protocol. Using a process called “store and forward,” SMTP moves your email on and across networks.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "tcp",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr:25",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr:25",
+      "request": "\r\n",
+      "response": "220 rmn-scn-01.oxyd.net ESMTP Postfix (Debian/GNU)\r\n",
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:07:52.932148765Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr:443",
+      "extracted-results": [
+        "Let's Encrypt"
+      ],
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:08:28.785968526Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/mismatched-ssl-certificate.yaml",
+      "template-url": "https://templates.nuclei.sh/public/mismatched-ssl-certificate",
+      "template-id": "mismatched-ssl-certificate",
+      "template-path": "/home/runner/nuclei-templates/ssl/mismatched-ssl-certificate.yaml",
+      "info": {
+        "name": "Mismatched SSL Certificate",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "mismatched",
+          "tls"
+        ],
+        "description": "Mismatched certificates occur when there is inconsistency between the common name to which the certificate was issued and the domain name in the URL. This issue impacts the trust value of the affected website.\n",
+        "reference": [
+          "https://www.invicti.com/web-vulnerability-scanner/vulnerabilities/ssl-certificate-name-hostname-mismatch/"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr:443",
+      "extracted-results": [
+        "CN: mediatheque-patrimoine.culture.gouv.fr"
+      ],
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:08:28.786046902Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr:443",
+      "extracted-results": [
+        "mediatheque-patrimoine.culture.gouv.fr"
+      ],
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:08:28.786107525Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:08:35.309872704Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.mediatheque-patrimoine.culture.gouv.fr",
+      "matched-at": "www.mediatheque-patrimoine.culture.gouv.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "87.252.7.122",
+      "timestamp": "2024-01-04T20:08:35.715611678Z",
+      "matcher-status": true
+    }
+  ]
+]
