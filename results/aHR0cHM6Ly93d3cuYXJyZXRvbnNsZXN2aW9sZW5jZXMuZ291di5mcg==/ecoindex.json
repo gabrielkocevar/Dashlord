@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.arretonslesviolences.gouv.fr",
+        "size": 10917.209,
+        "nodes": 688,
+        "requests": 32,
+        "grade": "D",
+        "score": 50.0,
+        "ges": 2.0,
+        "water": 3.0,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 20:44:12.255795",
+        "page_type": null
+    }
+]

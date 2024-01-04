@@ -1,0 +1,97 @@
+{
+  "trackers": [],
+  "cookies": [
+    {
+      "name": "TSd5bc9349027",
+      "value": "087dc22938ab20008247cd98bc28706be302101d2d50b36dfe0f279df0f735f31c76f20c6fc600ab081894c52f11300088c61034e9dc7649f8badbcb490f3b7b4258266b61d6f124202e251baa8311a39aeb8f0c9946f945c97c95d7f747bd7d",
+      "domain": "www.arretonslesviolences.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 205,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "TS1389b4c4029",
+      "value": "087dc22938ab2800b83f0d66da2b0bf08053f66c1dd62a2d39aa7c9c0eb7b16e9b2723014d80ec282e3f7542e3c9331b",
+      "domain": "www.arretonslesviolences.gouv.fr",
+      "path": "/",
+      "expires": 1704401020.362776,
+      "size": 109,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "cache-control": "no-store, must-revalidate, no-cache, max-age=0",
+    "content-length": "6213",
+    "content-type": "text/html",
+    "set-cookie": "TS1389b4c4029=087dc22938ab2800aef9a78709eb175ccc7f73a86e325636d87cbc4512b90623896987ae384fc2053cb3972811038c67; Max-Age=30; Path=/\nTS1389b4c4029=087dc22938ab2800b83f0d66da2b0bf08053f66c1dd62a2d39aa7c9c0eb7b16e9b2723014d80ec282e3f7542e3c9331b; Max-Age=30; Path=/\nTSd5bc9349027=087dc22938ab20008247cd98bc28706be302101d2d50b36dfe0f279df0f735f31c76f20c6fc600ab081894c52f11300088c61034e9dc7649f8badbcb490f3b7b4258266b61d6f124202e251baa8311a39aeb8f0c9946f945c97c95d7f747bd7d; Path=/"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.arretonslesviolences.gouv.fr",
+      "ip": "185.194.82.16",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
