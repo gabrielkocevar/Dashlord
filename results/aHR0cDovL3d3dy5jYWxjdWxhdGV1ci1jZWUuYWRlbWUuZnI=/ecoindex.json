@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "http://www.calculateur-cee.ademe.fr",
+        "size": 468.671,
+        "nodes": 86,
+        "requests": 19,
+        "grade": "A",
+        "score": 87.0,
+        "ges": 1.26,
+        "water": 1.89,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 22:57:50.735760",
+        "page_type": null
+    }
+]

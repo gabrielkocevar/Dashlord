@@ -1,0 +1,319 @@
+[
+  [
+    {
+      "template": "dns/dns-saas-service-detection.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+      "template-id": "dns-saas-service-detection",
+      "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+      "info": {
+        "name": "DNS SaaS Service Detection",
+        "author": [
+          "noah @thesubtlety",
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "service"
+        ],
+        "description": "A CNAME DNS record was discovered",
+        "reference": [
+          "https://ns1.com/resources/cname",
+          "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+          "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "www.calculateur-cee.ademe.fr.",
+      "matched-at": "www.calculateur-cee.ademe.fr",
+      "extracted-results": [
+        "prod-calculateur-cee.ademe-dri.fr."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 4024\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.calculateur-cee.ademe.fr.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 4024\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.calculateur-cee.ademe.fr.\tIN\t CNAME\n\n;; ANSWER SECTION:\nwww.calculateur-cee.ademe.fr.\t10800\tIN\tCNAME\tprod-calculateur-cee.ademe-dri.fr.\n",
+      "timestamp": "2024-01-04T23:01:08.794478951Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.calculateur-cee.ademe.fr.",
+      "matched-at": "www.calculateur-cee.ademe.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 23326\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.calculateur-cee.ademe.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 23326\n;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.calculateur-cee.ademe.fr.\tIN\t CAA\n\n;; ANSWER SECTION:\nwww.calculateur-cee.ademe.fr.\t10800\tIN\tCNAME\tprod-calculateur-cee.ademe-dri.fr.\nprod-calculateur-cee.ademe-dri.fr.\t3600\tIN\tCNAME\tprod-dvs-19.ademe-dri.fr.\n\n;; AUTHORITY SECTION:\nademe-dri.fr.\t1800\tIN\tSOA\tns1.produhost.net. hostmaster.dri.fr. 2024010401 21600 3600 2419200 86400\n",
+      "timestamp": "2024-01-04T23:01:09.049531852Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/options-method.yaml",
+      "template-url": "https://templates.nuclei.sh/public/options-method",
+      "template-id": "options-method",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/options-method.yaml",
+      "info": {
+        "name": "Allowed Options Method",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "misc",
+          "generic"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "http://www.calculateur-cee.ademe.fr",
+      "matched-at": "http://www.calculateur-cee.ademe.fr",
+      "extracted-results": [
+        "GET,POST,OPTIONS,HEAD"
+      ],
+      "request": "OPTIONS / HTTP/1.1\r\nHost: www.calculateur-cee.ademe.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAllow: GET,POST,OPTIONS,HEAD\r\nContent-Language: fr\r\nDate: Thu, 04 Jan 2024 23:01:14 GMT\r\nServer: Apache\r\nContent-Length: 0\r\n\r\n",
+      "ip": "185.86.179.67",
+      "timestamp": "2024-01-04T23:01:14.065330715Z",
+      "curl-command": "curl -X 'OPTIONS' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.calculateur-cee.ademe.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/missing-sri.yaml",
+      "template-url": "https://templates.nuclei.sh/public/missing-sri",
+      "template-id": "missing-sri",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/missing-sri.yaml",
+      "info": {
+        "name": "Missing Subresource Integrity",
+        "author": [
+          "lucky0x0d",
+          "pulsesecurity.co.nz"
+        ],
+        "tags": [
+          "compliance",
+          "js",
+          "sri",
+          "misconfig"
+        ],
+        "description": "Checks if script tags within the HTML response have Subresource Integrity implemented via the integrity attribute\n",
+        "reference": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/third_party_javascript_management_cheat_sheet.html#subresource-integrity"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "http://www.calculateur-cee.ademe.fr",
+      "matched-at": "https://www.dri.fr/hosted-by",
+      "extracted-results": [
+        "https://kit.fontawesome.com/7a889419be.js"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.calculateur-cee.ademe.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-cache, private\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Thu, 04 Jan 2024 23:01:52 GMT\r\nServer: Apache\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n    <head>\n\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <link rel=\"icon\" type=\"image/png\" href=\"/web/favicon.png\">\n        \n                \n                \n        <link href=\"/assets/bootstrap/css/bootstrap.min.css?version=1\" rel=\"stylesheet\" />\n        <link href=\"/assets/site/css/main.css?version=1\" rel=\"stylesheet\" />\n        <link href=\"/assets/site/css/main.css?version=1\" rel=\"stylesheet\" media=\"print\">\n    \n    </head>\n    <body>\n    \n        \n<div class=\"container\">\n    <div class=\"row hostedby\">\n        <div class=\"col-sm-6\">\n            <img src=\"/web/img/logo-medium.jpg\">\n        </div>\n        <div class=\"col-sm-6 text\">\n            <br><br><b>Hébergé par DRI</b><br><br>\n            Le site demandé est introuvable...<br>\n            Le site est peut être en maintenance ou en construction merci de revenir un peu plus tard.\n        </div>\n    </div>\n    <div class=\"row footerlinks\">\n\t<div class=\"col-xl-3 col-lg-6 nopadding\">\n\t\t<div class=\"list\">\n\t\t\t<div class=\"title\">\n\t\t\t\t<h4 class=\"h2-footer\"><img src=\"/web/img/feuille.webp\" alt=\"feuille DRI\"/>\n\t\t\t\t\tA propos\n\t\t\t\t</h4>\n\t\t\t</div>\n\t\t\t<div id=\"footer-apropos\" class=\"footer-content\">\n\t\t\t\tDRI propose son expertise depuis plus de 20 ans en tant qu'hébergeur et infogéreur web français responsable.<br><br>\n\n\t\t\t\tC’est aussi une société qui s’est construite autour de passions communes telles que l’Open source, l’empreinte environnementale & les nouvelles technologies.<br>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>\n\t<div class=\"col-xl-3 col-lg-6 nopadding\">\n\t\t<div class=\"list\" id=\"footer-pratique\">\n\t\t\t<div class=\"title\">\n\t\t\t\t<h4 class=\"h2-footer\"><img src=\"/web/img/feuille.webp\" alt=\"feuille DRI\"/>\n\t\t\t\t\tPratique</h4>\n\t\t\t</div>\n\t\t\t<div class=\"padding-left-footer\">\n\t\t\t\t\t\t\t\t<a title=\"Contactez nous\" href=\"/infos-et-contact/contactez-nous\">\n\t\t\t\t\tContactez nous\n\t\t\t\t</a>\n\t\t\t\t<br>\n\t\t\t\t\t\t\t\t<a title=\"Agence web, bureau d&#039;étude : travaillons à gagner des affaires ensemble.\" href=\"/partenaires/devenez-partenaire-commercial-de-dri\">\n\t\t\t\t\tDevenez partenaire commercial de DRI\n\t\t\t\t</a>\n\t\t\t\t<br>\n\t\t\t\t\t\t\t\t<a title=\"Cette page décrit les mentions légales qui s’appliquent à tout internaute visitant ce site.\" href=\"/qui-est-dri/informations-legales\">\n\t\t\t\t\tInformations légales\n\t\t\t\t</a>\n\t\t\t\t<br>\n\t\t\t\t\t\t\t\t<a title=\"Plan du site\" href=\"/infos-et-contact/plan-du-site\">\n\t\t\t\t\tPlan du site\n\t\t\t\t</a>\n\t\t\t\t<br>\n\t\t\t\t\t\t\t\t<a title=\"Nous recrutons un avant-vente pour conseiller nos clients\" href=\"https://www.welcometothejungle.com/fr/companies/dri\">\n\t\t\t\t\tDRI recrute\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"col-xl-3 col-lg-6 nopadding\">\n\t\t<div class=\"list\" id=\"footer-noustrouver\">\n\t\t\t<div class=\"title\">\n\t\t\t\t<h4 class=\"h2-footer\"><img src=\"/web/img/feuille.webp\" alt=\"feuille DRI\"/>\n\t\t\t\t\tNous trouver</h4>\n\t\t\t</div>\n\t\t\t<div class=\"padding-left-footer\">\n\t\t\t\t<div class=\"bg-gps\"></div>\n\t\t\t\tCuba Coworking<br>\n\t\t\t\t<div class=\"footer-margin-left\">\n\t\t\t\t\t9 rue du petit chatelier<br>\n\t\t\t\t\tNantes<br>\n\t\t\t\t\t44300\n\t\t\t\t</div><br>\n\t\t\t\t<div class=\"bg-mail\"></div>\n\t\t\t\t<a href=\"tel:+33290920550\">+33 2 90 92 05 50</a>\n\n\t\t\t\t<br><br>\n\t\t\t\t<div class=\"bg-tel\"></div>\n\t\t\t\t<a title=\"Lien vers notre adresse mail\" href=\"mailto:contact@dri.fr\">contact@dri.fr</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"col-xl-3 col-lg-6\">\n\t\t<div class=\"list\">\n\t\t\t<div class=\"title\">\n\t\t\t\t<h4 class=\"h2-footer\"><img src=\"/web/img/feuille.webp\" alt=\"feuille DRI\"/>\n\t\t\t\t\tSuivez-nous</h4>\n\t\t\t</div>\n\t\t\t<div class=\"padding-left-footer\">\n\t\t\t\t\n\t\t\t\t<a href=\"/informations-dri\" title=\"Voir nos actualités\">\n\t\t\t\t\tNos actualités\n\t\t\t\t</a>\n\t\t\t\t<br>\n\t\t\t\t<a href=\"https://www.welcometothejungle.com/fr/companies/dri\" title=\"Notre lien Welcome to the Jungle\">\n\t\t\t\t\tWelcome to the Jungle\n\t\t\t\t</a>\n\t\t\t\t<br>\n\t\t\t\t<a href=\"https://www.linkedin.com/company/dri.fr/\" title=\"Linkedin\">\n\t\t\t\t\tLinkedin\n\t\t\t\t</a>\n\t\t\t</div>\n\n\t\t</div>\n\n\n\t</div>\n\n\n</div>\n\n</div>\n\n        <script src=\"/assets/bootstrap/js/popper.js?version=1\"></script>\n        <script src=\"/assets/site/js/jquery-3.6.4.min.js?version=1\"></script>\n        <script src=\"/assets/bootstrap/js/bootstrap.min.js?version=1\"></script>\n        <script src=\"/assets/site/js/main.js?version=1\"></script>\n        <script src=\"https://kit.fontawesome.com/7a889419be.js\" crossorigin=\"anonymous\"></script>\n        \n                        \n                            <script src=\"/assets/site/js/24x7rum.js?version=1\"></script>\n                \n            \n    </body>\n</html>",
+      "ip": "185.86.179.67",
+      "timestamp": "2024-01-04T23:01:53.012530265Z",
+      "curl-command": "curl -X 'GET' -d '' -H 'Host: www.calculateur-cee.ademe.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.calculateur-cee.ademe.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/waf-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/waf-detect",
+      "template-id": "waf-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
+      "info": {
+        "name": "WAF Detection",
+        "author": [
+          "dwisiswant0",
+          "lu4nx"
+        ],
+        "tags": [
+          "waf",
+          "tech",
+          "misc"
+        ],
+        "description": "A web application firewall was detected.",
+        "reference": [
+          "https://github.com/ekultek/whatwaf"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "apachegeneric",
+      "type": "http",
+      "host": "http://www.calculateur-cee.ademe.fr",
+      "matched-at": "http://www.calculateur-cee.ademe.fr/",
+      "request": "POST / HTTP/1.1\r\nHost: www.calculateur-cee.ademe.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+      "response": "HTTP/1.1 302 Found\r\nConnection: close\r\nContent-Length: 218\r\nContent-Type: text/html; charset=iso-8859-1\r\nDate: Thu, 04 Jan 2024 23:01:56 GMT\r\nLocation: http://dri-services.com/hosted-by/\r\nServer: Apache\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>302 Found</title>\n</head><body>\n<h1>Found</h1>\n<p>The document has moved <a href=\"http://dri-services.com/hosted-by/\">here</a>.</p>\n</body></html>\n",
+      "ip": "185.86.179.67",
+      "timestamp": "2024-01-04T23:01:57.014967352Z",
+      "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.calculateur-cee.ademe.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.calculateur-cee.ademe.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.calculateur-cee.ademe.fr",
+      "matched-at": "www.calculateur-cee.ademe.fr:443",
+      "extracted-results": [
+        "DRI"
+      ],
+      "ip": "185.86.179.67",
+      "timestamp": "2024-01-04T23:05:10.591658377Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/mismatched-ssl-certificate.yaml",
+      "template-url": "https://templates.nuclei.sh/public/mismatched-ssl-certificate",
+      "template-id": "mismatched-ssl-certificate",
+      "template-path": "/home/runner/nuclei-templates/ssl/mismatched-ssl-certificate.yaml",
+      "info": {
+        "name": "Mismatched SSL Certificate",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "mismatched",
+          "tls"
+        ],
+        "description": "Mismatched certificates occur when there is inconsistency between the common name to which the certificate was issued and the domain name in the URL. This issue impacts the trust value of the affected website.\n",
+        "reference": [
+          "https://www.invicti.com/web-vulnerability-scanner/vulnerabilities/ssl-certificate-name-hostname-mismatch/"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.calculateur-cee.ademe.fr",
+      "matched-at": "www.calculateur-cee.ademe.fr:443",
+      "extracted-results": [
+        "CN: default.produhost.net"
+      ],
+      "ip": "185.86.179.67",
+      "timestamp": "2024-01-04T23:05:10.591751853Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/self-signed-ssl.yaml",
+      "template-url": "https://templates.nuclei.sh/public/self-signed-ssl",
+      "template-id": "self-signed-ssl",
+      "template-path": "/home/runner/nuclei-templates/ssl/self-signed-ssl.yaml",
+      "info": {
+        "name": "Self Signed SSL Certificate",
+        "author": [
+          "righettod",
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls",
+          "self-signed"
+        ],
+        "description": "self-signed certificates are public key certificates that are not issued by a certificate authority. These self-signed\ncertificates are easy to make and do not cost money. However, they do not provide any trust value.\n",
+        "reference": [
+          "https://www.rapid7.com/db/vulnerabilities/ssl-self-signed-certificate/"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 1
+        },
+        "remediation": "Purchase or generate a proper SSL certificate for this service.\n"
+      },
+      "type": "ssl",
+      "host": "www.calculateur-cee.ademe.fr",
+      "matched-at": "www.calculateur-cee.ademe.fr:443",
+      "ip": "185.86.179.67",
+      "timestamp": "2024-01-04T23:05:10.591781048Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.calculateur-cee.ademe.fr",
+      "matched-at": "www.calculateur-cee.ademe.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "185.86.179.67",
+      "timestamp": "2024-01-04T23:05:12.818925849Z",
+      "matcher-status": true
+    }
+  ]
+]
