@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.bilans-climat-simplifies.ademe.fr",
+        "size": 1159.189,
+        "nodes": 142,
+        "requests": 16,
+        "grade": "A",
+        "score": 83.0,
+        "ges": 1.34,
+        "water": 2.01,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 22:51:22.677604",
+        "page_type": null
+    }
+]
