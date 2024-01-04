@@ -1,0 +1,341 @@
+{
+  "trackers": [
+    {
+      "type": "youtube",
+      "url": "https://youtu.be/tW0F1K194yQ",
+      "details": {
+        "id": "youtube",
+        "message": "Dont embed youtube scripts, use peertube"
+      }
+    },
+    {
+      "type": "youtube",
+      "url": "https://youtu.be/b97RAtkcAe4",
+      "details": {
+        "id": "youtube",
+        "message": "Dont embed youtube scripts, use peertube"
+      }
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=b97RAtkcAe4&feature=youtu.be",
+      "details": {
+        "id": "youtube",
+        "message": "Dont embed youtube scripts, use peertube"
+      }
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=tW0F1K194yQ&feature=youtu.be",
+      "details": {
+        "id": "youtube",
+        "message": "Dont embed youtube scripts, use peertube"
+      }
+    }
+  ],
+  "cookies": [
+    {
+      "name": "incap_ses_875_3039988",
+      "value": "IacRdulJ/FHk1RSayKAkDJYBl2UAAAAAwK4s4jwQkcz3/qiurvS4JA==",
+      "domain": ".parcoursup.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_471_3039988",
+      "value": "JnJoMFyWKD6nV3g0cVWJBpcBl2UAAAAAKVbyMcWNHAnc0AIs/BM4eQ==",
+      "domain": ".parcoursup.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_246_3039988",
+      "value": "QRTyEhc1nVN8kP/gwvhpA5YBl2UAAAAAPWR7gSg4wK9cYyj5xZi+/w==",
+      "domain": ".parcoursup.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_259_3039988",
+      "value": "V5oiJmwHzmhmnrf0ZiiYA5UBl2UAAAAAwugV+Am3XvMPAjPepoIUIg==",
+      "domain": ".parcoursup.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_727_3039988",
+      "value": "kBP0aoEDaD64RWY4u9MWCpYBl2UAAAAAo05aj+T2OnYH7ZTwkOgCpQ==",
+      "domain": ".parcoursup.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "___utmvc",
+      "value": "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",
+      "domain": "www.parcoursup.gouv.fr",
+      "path": "/",
+      "expires": 1704395179,
+      "size": 2992,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "visid_incap_3039988",
+      "value": "CE1fj/MRTp6kFVYzbSwyO5UBl2UAAAAAQUIPAAAAAACO4+Cfsnf34y7U/ytRHvg1",
+      "domain": ".parcoursup.gouv.fr",
+      "path": "/",
+      "expires": 1735856674.546129,
+      "size": 83,
+      "httpOnly": true,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "nlbi_3039988",
+      "value": "uYQ/BuHU1gOlHa3jVtIO/gAAAADquoXOCD4dh5AkBtJrw4ZX",
+      "domain": ".parcoursup.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 60,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "accept-ranges": "bytes",
+    "cache-control": "max-age=0, must-revalidate, no-store",
+    "cache-control-origin": "max-age=31536000, public",
+    "cache-tags": "HIT",
+    "content-encoding": "gzip",
+    "content-language": "fr",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Thu, 04 Jan 2024 19:05:58 GMT",
+    "etag": "W/\"1704379263\"",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "last-modified": "Thu, 04 Jan 2024 14:41:03 GMT",
+    "server": "nginx",
+    "set-cookie": "nlbi_3039988=uYQ/BuHU1gOlHa3jVtIO/gAAAADquoXOCD4dh5AkBtJrw4ZX; path=/; Domain=.parcoursup.gouv.fr\nvisid_incap_3039988=CE1fj/MRTp6kFVYzbSwyO5UBl2UAAAAAQUIPAAAAAACO4+Cfsnf34y7U/ytRHvg1; expires=Thu, 02 Jan 2025 22:24:34 GMT; HttpOnly; path=/; Domain=.parcoursup.gouv.fr\nincap_ses_259_3039988=V5oiJmwHzmhmnrf0ZiiYA5UBl2UAAAAAwugV+Am3XvMPAjPepoIUIg==; path=/; Domain=.parcoursup.gouv.fr",
+    "strict-transport-security": "max-age=63072000; includeSubdomains",
+    "vary": "Accept-Encoding",
+    "x-cache": "HIT",
+    "x-cache-age": "15890",
+    "x-cache-hits": "14232",
+    "x-cache-ttl": "31536000.000",
+    "x-cacheable": "YES",
+    "x-cdn": "Imperva",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-iinfo": "7-184594731-184541197 pNNy RT(1704395157793 167) q(0 0 0 0) r(0 0) U24",
+    "x-ua-compatible": "IE=edge"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.parcoursup.gouv.fr",
+      "ip": "117.18.238.144",
+      "geoip": {
+        "continent": {
+          "code": "OC",
+          "geoname_id": 6255151,
+          "names": {
+            "de": "Ozeanien",
+            "en": "Oceania",
+            "es": "Oceanía",
+            "fr": "Océanie",
+            "ja": "オセアニア",
+            "pt-BR": "Oceania",
+            "ru": "Океания",
+            "zh-CN": "大洋洲"
+          }
+        },
+        "country": {
+          "geoname_id": 2077456,
+          "iso_code": "AU",
+          "names": {
+            "de": "Australien",
+            "en": "Australia",
+            "es": "Australia",
+            "fr": "Australie",
+            "ja": "オーストラリア",
+            "pt-BR": "Austrália",
+            "ru": "Австралия",
+            "zh-CN": "澳大利亚"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": -33.494,
+          "longitude": 143.2104,
+          "time_zone": "Australia/Sydney"
+        },
+        "registered_country": {
+          "geoname_id": 2077456,
+          "iso_code": "AU",
+          "names": {
+            "de": "Australien",
+            "en": "Australia",
+            "es": "Australia",
+            "fr": "Australie",
+            "ja": "オーストラリア",
+            "pt-BR": "Austrália",
+            "ru": "Австралия",
+            "zh-CN": "澳大利亚"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "youtu.be",
+      "ip": "172.217.12.110",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "www.youtube.com",
+      "ip": "142.251.46.174",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    }
+  ]
+}
