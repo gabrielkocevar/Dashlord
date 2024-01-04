@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "http://www.agence-cohesion-territoires.gouv.fr",
+        "size": 3921.422,
+        "nodes": 1088,
+        "requests": 85,
+        "grade": "E",
+        "score": 30.0,
+        "ges": 2.4,
+        "water": 3.6,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 22:32:26.410848",
+        "page_type": null
+    }
+]
