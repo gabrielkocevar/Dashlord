@@ -1,0 +1,81 @@
+{
+  "links": [
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.archeologie.culture.gouv.fr",
+        "port": null,
+        "hostname": "www.archeologie.culture.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/",
+        "path": "/",
+        "href": "http://www.archeologie.culture.gouv.fr/"
+      },
+      "link": "http://www.archeologie.culture.gouv.fr/",
+      "line": "--2024-01-04 19:17:29--  http://www.archeologie.culture.gouv.fr/",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.culturecommunication.gouv.fr",
+        "port": null,
+        "hostname": "www.culturecommunication.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/Politiques-ministerielles/Archeologie",
+        "path": "/Politiques-ministerielles/Archeologie",
+        "href": "http://www.culturecommunication.gouv.fr/Politiques-ministerielles/Archeologie"
+      },
+      "link": "http://www.culturecommunication.gouv.fr/Politiques-ministerielles/Archeologie",
+      "line": "--2024-01-04 19:17:29--  http://www.culturecommunication.gouv.fr/Politiques-ministerielles/Archeologie",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.culture.gouv.fr",
+        "port": null,
+        "hostname": "www.culture.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/Politiques-ministerielles/Archeologie",
+        "path": "/Politiques-ministerielles/Archeologie",
+        "href": "https://www.culture.gouv.fr/Politiques-ministerielles/Archeologie"
+      },
+      "link": "https://www.culture.gouv.fr/Politiques-ministerielles/Archeologie",
+      "line": "--2024-01-04 19:17:30--  https://www.culture.gouv.fr/Politiques-ministerielles/Archeologie",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.culture.gouv.fr",
+        "port": null,
+        "hostname": "www.culture.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/Thematiques/Archeologie",
+        "path": "/Thematiques/Archeologie",
+        "href": "https://www.culture.gouv.fr/Thematiques/Archeologie"
+      },
+      "link": "https://www.culture.gouv.fr/Thematiques/Archeologie",
+      "line": "--2024-01-04 19:17:30--  https://www.culture.gouv.fr/Thematiques/Archeologie",
+      "broken": false
+    }
+  ],
+  "broken": []
+}
