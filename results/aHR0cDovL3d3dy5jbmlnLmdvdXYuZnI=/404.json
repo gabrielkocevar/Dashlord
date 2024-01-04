@@ -1,0 +1,62 @@
+{
+  "links": [
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.cnig.gouv.fr",
+        "port": null,
+        "hostname": "www.cnig.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/",
+        "path": "/",
+        "href": "http://www.cnig.gouv.fr/"
+      },
+      "link": "http://www.cnig.gouv.fr/",
+      "line": "--2024-01-04 23:15:18--  http://www.cnig.gouv.fr/",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.cnig.gouv.fr",
+        "port": null,
+        "hostname": "www.cnig.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/robots.txt",
+        "path": "/robots.txt",
+        "href": "http://www.cnig.gouv.fr/robots.txt"
+      },
+      "link": "http://www.cnig.gouv.fr/robots.txt",
+      "line": "--2024-01-04 23:15:19--  http://www.cnig.gouv.fr/robots.txt",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.cnig.gouv.fr",
+        "port": null,
+        "hostname": "www.cnig.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/maintenance-marianne.png",
+        "path": "/maintenance-marianne.png",
+        "href": "http://www.cnig.gouv.fr/maintenance-marianne.png"
+      },
+      "link": "http://www.cnig.gouv.fr/maintenance-marianne.png",
+      "line": "--2024-01-04 23:15:19--  http://www.cnig.gouv.fr/maintenance-marianne.png",
+      "broken": false
+    }
+  ],
+  "broken": []
+}

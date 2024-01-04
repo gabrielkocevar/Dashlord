@@ -1,0 +1,930 @@
+[
+  [
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.cnig.gouv.fr.",
+      "matched-at": "www.cnig.gouv.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 16741\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 16741\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t CAA\n\n;; ANSWER SECTION:\nwww.cnig.gouv.fr.\t60\tIN\tCNAME\tcnig.gouv.fr.\n\n;; AUTHORITY SECTION:\ncnig.gouv.fr.\t3600\tIN\tSOA\ta.ns.developpement-durable.gouv.fr. gestiondns.equipement.gouv.fr. 2023122604 14400 3600 3000000 3600\n",
+      "timestamp": "2024-01-04T23:18:34.862007705Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/mx-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/mx-fingerprint",
+      "template-id": "mx-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/mx-fingerprint.yaml",
+      "info": {
+        "name": "MX Record Detection",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "mx"
+        ],
+        "description": "An MX record was detected. MX records direct emails to a mail exchange server.",
+        "reference": [
+          "https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/",
+          "https://mxtoolbox.com/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.cnig.gouv.fr.",
+      "matched-at": "www.cnig.gouv.fr",
+      "extracted-results": [
+        "5 relternet-02.developpement-durable.gouv.fr.",
+        "5 relternet-01.developpement-durable.gouv.fr."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 59513\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t MX\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 59513\n;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t MX\n\n;; ANSWER SECTION:\nwww.cnig.gouv.fr.\t60\tIN\tCNAME\tcnig.gouv.fr.\ncnig.gouv.fr.\t3600\tIN\tMX\t5 relternet-02.developpement-durable.gouv.fr.\ncnig.gouv.fr.\t3600\tIN\tMX\t5 relternet-01.developpement-durable.gouv.fr.\n",
+      "timestamp": "2024-01-04T23:18:34.932871661Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/dns-saas-service-detection.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+      "template-id": "dns-saas-service-detection",
+      "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+      "info": {
+        "name": "DNS SaaS Service Detection",
+        "author": [
+          "noah @thesubtlety",
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "service"
+        ],
+        "description": "A CNAME DNS record was discovered",
+        "reference": [
+          "https://ns1.com/resources/cname",
+          "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+          "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "www.cnig.gouv.fr.",
+      "matched-at": "www.cnig.gouv.fr",
+      "extracted-results": [
+        "cnig.gouv.fr."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 61959\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 61959\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t CNAME\n\n;; ANSWER SECTION:\nwww.cnig.gouv.fr.\t60\tIN\tCNAME\tcnig.gouv.fr.\n",
+      "timestamp": "2024-01-04T23:18:34.95512041Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/nameserver-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/nameserver-fingerprint",
+      "template-id": "nameserver-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/nameserver-fingerprint.yaml",
+      "info": {
+        "name": "NS Record Detection",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "ns"
+        ],
+        "description": "An NS record was detected. An NS record delegates a subdomain to a set of name servers.",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.cnig.gouv.fr.",
+      "matched-at": "www.cnig.gouv.fr",
+      "extracted-results": [
+        "a.ns.developpement-durable.gouv.fr.",
+        "nsb.perf1.com.",
+        "nsc.perf1.com.",
+        "nsa.perf1.fr.",
+        "b.ns.developpement-durable.gouv.fr."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 50436\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t NS\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 50436\n;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t NS\n\n;; ANSWER SECTION:\nwww.cnig.gouv.fr.\t59\tIN\tCNAME\tcnig.gouv.fr.\ncnig.gouv.fr.\t21600\tIN\tNS\tnsb.perf1.com.\ncnig.gouv.fr.\t21600\tIN\tNS\tnsc.perf1.com.\ncnig.gouv.fr.\t21600\tIN\tNS\tnsa.perf1.fr.\ncnig.gouv.fr.\t21600\tIN\tNS\tb.ns.developpement-durable.gouv.fr.\ncnig.gouv.fr.\t21600\tIN\tNS\ta.ns.developpement-durable.gouv.fr.\n",
+      "timestamp": "2024-01-04T23:18:35.833102649Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/txt-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/txt-fingerprint",
+      "template-id": "txt-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/txt-fingerprint.yaml",
+      "info": {
+        "name": "DNS TXT Record Detected",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "txt"
+        ],
+        "description": "A DNS TXT record was detected. The TXT record lets a domain admin leave notes on a DNS server.",
+        "reference": [
+          "https://www.netspi.com/blog/technical/network-penetration-testing/analyzing-dns-txt-records-to-fingerprint-service-providers/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.cnig.gouv.fr.",
+      "matched-at": "www.cnig.gouv.fr",
+      "extracted-results": [
+        "\"v=spf1 mx include:_spf.developpement-durable.gouv.fr -all\""
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 33407\n;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t TXT\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 33407\n;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.cnig.gouv.fr.\tIN\t TXT\n\n;; ANSWER SECTION:\nwww.cnig.gouv.fr.\t60\tIN\tCNAME\tcnig.gouv.fr.\ncnig.gouv.fr.\t3600\tIN\tTXT\t\"v=spf1 mx include:_spf.developpement-durable.gouv.fr -all\"\n",
+      "timestamp": "2024-01-04T23:18:35.845663035Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/options-method.yaml",
+      "template-url": "https://templates.nuclei.sh/public/options-method",
+      "template-id": "options-method",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/options-method.yaml",
+      "info": {
+        "name": "Allowed Options Method",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "misc",
+          "generic"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "extracted-results": [
+        "GET,POST,OPTIONS,HEAD"
+      ],
+      "request": "OPTIONS / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAllow: GET,POST,OPTIONS,HEAD\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:18:42 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nContent-Length: 0\r\n\r\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:18:42.642620919Z",
+      "curl-command": "curl -X 'OPTIONS' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/apache/apache-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/apache-detect",
+      "template-id": "apache-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/apache/apache-detect.yaml",
+      "info": {
+        "name": "Apache Detection",
+        "author": [
+          "philippedelteil"
+        ],
+        "tags": [
+          "tech",
+          "apache"
+        ],
+        "description": "Some Apache servers have the version on the response header. The OpenSSL version can be also obtained",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "extracted-results": [
+        "Apache"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:18:46 GMT\r\nEtag: \"3ec-5fbc9321c3012-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:51 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-03.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:18:46.200489016Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/switch-protocol.yaml",
+      "template-url": "https://templates.nuclei.sh/public/switch-protocol",
+      "template-id": "switch-protocol",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/switch-protocol.yaml",
+      "info": {
+        "name": "Switching Protocol Detection",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "protocol",
+          "switching",
+          "tech",
+          "websocket",
+          "h2c"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "shodan-query": "\"connection: upgrade\"",
+          "verified": true
+        }
+      },
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "extracted-results": [
+        "h2,h2c"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:18:46 GMT\r\nEtag: \"3ec-5fbc9321c3012-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:51 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-03.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:18:46.202935147Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.23992541Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "strict-transport-security",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.23997845Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "content-security-policy",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.239998668Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.240011943Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-content-type-options",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.240026059Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-permitted-cross-domain-policies",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.240041087Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.240053441Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-frame-options",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.240065633Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.240078858Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "clear-site-data",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.24009041Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:13 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:13.24010666Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/waf-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/waf-detect",
+      "template-id": "waf-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
+      "info": {
+        "name": "WAF Detection",
+        "author": [
+          "dwisiswant0",
+          "lu4nx"
+        ],
+        "tags": [
+          "waf",
+          "tech",
+          "misc"
+        ],
+        "description": "A web application firewall was detected.",
+        "reference": [
+          "https://github.com/ekultek/whatwaf"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "apachegeneric",
+      "type": "http",
+      "host": "http://www.cnig.gouv.fr",
+      "matched-at": "http://www.cnig.gouv.fr/",
+      "request": "POST / HTTP/1.1\r\nHost: www.cnig.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nDate: Thu, 04 Jan 2024 23:19:31 GMT\r\nEtag: \"3ec-5fbc92fe67cd4-gzip\"\r\nLast-Modified: Tue, 16 May 2023 05:53:14 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<head>\n  <title>DNUM - Application indisponible</title>\n  <meta charset=\"utf-8\">\n  <style media=\"screen\">\n    /* Feuille de styles interne */\n    body{background:#eee;}\n    div {text-align:center; margin:auto *;}\n    #container {background-color:#fff; width:850px; margin:50px auto; padding:30px 50px; box-shadow:0 0 10px #aaa;}\n    #maintenance {padding:120px 120px 10px; color:#374; font-size:250%;font-weight:bold;background:url('maintenance-marianne.png') no-repeat top center;}\n    #more {font-size:65%;}\n    #contact {margin-top:50px; color:#aaa;}\n  </style>\n</head>\n<body>\n  <div id=\"container\">\n    <article id=\"maintenance\">\n      <p>Site en maintenance.</p>\n    </article>\n    <footer id=\"contact\">\n.\n    </footer>\n  </div>\n</body>\n</html>\n<!-- Status possibles: incident, maintenance ou nonconfigure - ID_CS 33 ou 92 -->\n<!-- STATUS_PSIN: incident -->\n<!-- ID_CS: 92 -->\n<!-- Serveur : v-wacs-rp-inter-std-01.edcs.fr -->\n\n",
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:19:31.30350565Z",
+      "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.cnig.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'http://www.cnig.gouv.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.cnig.gouv.fr",
+      "matched-at": "www.cnig.gouv.fr:443",
+      "extracted-results": [
+        "Let's Encrypt"
+      ],
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:22:03.417741368Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/mismatched-ssl-certificate.yaml",
+      "template-url": "https://templates.nuclei.sh/public/mismatched-ssl-certificate",
+      "template-id": "mismatched-ssl-certificate",
+      "template-path": "/home/runner/nuclei-templates/ssl/mismatched-ssl-certificate.yaml",
+      "info": {
+        "name": "Mismatched SSL Certificate",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "mismatched",
+          "tls"
+        ],
+        "description": "Mismatched certificates occur when there is inconsistency between the common name to which the certificate was issued and the domain name in the URL. This issue impacts the trust value of the affected website.\n",
+        "reference": [
+          "https://www.invicti.com/web-vulnerability-scanner/vulnerabilities/ssl-certificate-name-hostname-mismatch/"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.cnig.gouv.fr",
+      "matched-at": "www.cnig.gouv.fr:443",
+      "extracted-results": [
+        "CN: nowhere.din.developpement-durable.gouv.fr"
+      ],
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:22:03.417828071Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.cnig.gouv.fr",
+      "matched-at": "www.cnig.gouv.fr:443",
+      "extracted-results": [
+        "nowhere.din.developpement-durable.gouv.fr"
+      ],
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:22:03.417892692Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.cnig.gouv.fr",
+      "matched-at": "www.cnig.gouv.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:22:07.527596179Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.cnig.gouv.fr",
+      "matched-at": "www.cnig.gouv.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "194.5.170.186",
+      "timestamp": "2024-01-04T23:22:07.788336437Z",
+      "matcher-status": true
+    }
+  ]
+]
