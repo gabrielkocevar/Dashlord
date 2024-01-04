@@ -1,0 +1,165 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/load.js?domain=52histoires2021.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "ra_ademe_2021_session",
+      "value": "eyJpdiI6Ijc0RjBmajQzci9sWEJkTFMxY0Fxc3c9PSIsInZhbHVlIjoiYlVNakU0VjRKVklDWENmS0dVeTdzK0NyRTR0M1htems2UFFPWGFtNjhrb0VBQkpsc0gxa0R0R1poRTZic1NSMkkvUW05YW92Y3pSNk5yZUxObEdqNUhJeFR5UmhXODdIN2V0K2VUc3crWHNTQkc3cHhFSzVxNG9xbXMyWkQwYS8iLCJtYWMiOiIzYWQxYzJiMTE1MjcwZTVmNzMzY2I1NzFlODc3NzBhZmFmNDMyNjc3ODgzMTY2NGE3Y2EyOTkwMGJhYzgwMWEzIiwidGFnIjoiIn0%3D",
+      "domain": "www.52histoires2021.ademe.fr",
+      "path": "/",
+      "expires": 1704413659.842916,
+      "size": 363,
+      "httpOnly": true,
+      "secure": false,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "XSRF-TOKEN",
+      "value": "eyJpdiI6ImZhRWdjMlZzV0tiWGN3bFVqOXdTRWc9PSIsInZhbHVlIjoiVkNLWmRleXNVQUpDSjhYeTRnODRPaTlJVUVWV29RREZmeTVobnpqR0JnVkNHT01CKzlhQWQzdFhyenQvV0RXaWZzaFZaZFJjRktVb0JUUGdUNzFIc3pRbEpSYkxRV2JqK0tKSFZxQTcyOEp1eWFFTis1L2kwRS9McFVwb1FUS3ciLCJtYWMiOiJlMTFkNTBkMzhkMjQzZDRiNzkzZWQzZjE2NzQ3NWFiNjg3OTRjNGFlYjI0Zjg1ZGMxMzk4ZWMzYTI3YjhkOTdlIiwidGFnIjoiIn0%3D",
+      "domain": "www.52histoires2021.ademe.fr",
+      "path": "/",
+      "expires": 1704413659.842797,
+      "size": 352,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "cache-control": "no-cache, private",
+    "connection": "Keep-Alive",
+    "content-encoding": "gzip",
+    "content-length": "1936",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Thu, 04 Jan 2024 22:08:36 GMT",
+    "keep-alive": "timeout=3, max=1000",
+    "server": "Apache/2.4.25 (Debian)",
+    "set-cookie": "XSRF-TOKEN=eyJpdiI6ImZhRWdjMlZzV0tiWGN3bFVqOXdTRWc9PSIsInZhbHVlIjoiVkNLWmRleXNVQUpDSjhYeTRnODRPaTlJVUVWV29RREZmeTVobnpqR0JnVkNHT01CKzlhQWQzdFhyenQvV0RXaWZzaFZaZFJjRktVb0JUUGdUNzFIc3pRbEpSYkxRV2JqK0tKSFZxQTcyOEp1eWFFTis1L2kwRS9McFVwb1FUS3ciLCJtYWMiOiJlMTFkNTBkMzhkMjQzZDRiNzkzZWQzZjE2NzQ3NWFiNjg3OTRjNGFlYjI0Zjg1ZGMxMzk4ZWMzYTI3YjhkOTdlIiwidGFnIjoiIn0%3D; expires=Fri, 05-Jan-2024 00:08:36 GMT; Max-Age=7200; path=/; samesite=lax\nra_ademe_2021_session=eyJpdiI6Ijc0RjBmajQzci9sWEJkTFMxY0Fxc3c9PSIsInZhbHVlIjoiYlVNakU0VjRKVklDWENmS0dVeTdzK0NyRTR0M1htems2UFFPWGFtNjhrb0VBQkpsc0gxa0R0R1poRTZic1NSMkkvUW05YW92Y3pSNk5yZUxObEdqNUhJeFR5UmhXODdIN2V0K2VUc3crWHNTQkc3cHhFSzVxNG9xbXMyWkQwYS8iLCJtYWMiOiIzYWQxYzJiMTE1MjcwZTVmNzMzY2I1NzFlODc3NzBhZmFmNDMyNjc3ODgzMTY2NGE3Y2EyOTkwMGJhYzgwMWEzIiwidGFnIjoiIn0%3D; expires=Fri, 05-Jan-2024 00:08:36 GMT; Max-Age=7200; path=/; httponly; samesite=lax",
+    "vary": "Accept-Encoding"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.52histoires2021.ademe.fr",
+      "ip": "163.172.102.35",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 200,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 2635167,
+          "iso_code": "GB",
+          "names": {
+            "de": "Vereinigtes Königreich",
+            "en": "United Kingdom",
+            "es": "Reino Unido",
+            "fr": "Royaume Uni",
+            "ja": "英国",
+            "pt-BR": "Reino Unido",
+            "ru": "Британия",
+            "zh-CN": "英国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "tarteaucitron.io",
+      "ip": "51.68.111.231",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
