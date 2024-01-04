@@ -1,0 +1,480 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "http://code.cdn.mozilla.net/fonts/fira.css"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/fira.css"
+    },
+    {
+      "type": "google tag manager",
+      "url": "https://www.googletagmanager.com/gtag/js?id=UA-110311563-3",
+      "details": {
+        "id": "google tag manager",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "http://fyil.mediateurdulivre.fr/irI438.js?2"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/woff/FiraSans-Bold.woff"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/woff/FiraSans-Regular.woff"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/woff/FiraSans-Light.woff"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/woff/FiraSans-LightItalic.woff"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/woff/FiraSans-Bold.woff"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/woff/FiraSans-Regular.woff"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/woff/FiraSans-Light.woff"
+    },
+    {
+      "type": "unknown",
+      "url": "https://code.cdn.mozilla.net/fonts/woff/FiraSans-LightItalic.woff"
+    },
+    {
+      "type": "google tag manager",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-BZXVXTY3DF&l=dataLayer&cx=c",
+      "details": {
+        "id": "google tag manager",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "google analytics",
+      "url": "https://www.google-analytics.com/analytics.js",
+      "details": {
+        "id": "google analytics",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "google analytics",
+      "url": "https://www.google-analytics.com/j/collect?v=1&_v=j101&a=1276256275&t=pageview&_s=1&dl=http%3A%2F%2Fwww.cppap.fr%2F&ul=en-us&de=UTF-8&dt=CPPAP&sd=24-bit&sr=800x600&vp=800x600&je=0&_u=YEBAAUABAAAAACAAI~&jid=1848923409&gjid=183808850&cid=1652957409.1704386492&tid=UA-110311563-3&_gid=658425802.1704386492&_r=1&gtm=457e4130&gcd=11l1l1l1l1&dma=0&jsscut=1&z=1415318705",
+      "details": {
+        "id": "google analytics",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "google analytics",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-BZXVXTY3DF&gtm=45je4130v9111252691&_p=1704386491995&gcd=11l1l1l1l1&dma=0&cid=1652957409.1704386492&ul=en-us&sr=800x600&ir=1&_eu=EAAI&_s=1&sid=1704386492&sct=1&seg=0&dl=http%3A%2F%2Fwww.cppap.fr%2F&dt=CPPAP&en=page_view&_fv=1&_ss=1&tfd=1967",
+      "details": {
+        "id": "google analytics",
+        "message": "Use hosted Matomo instance"
+      }
+    }
+  ],
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.1.1652957409.1704386492",
+      "domain": ".cppap.fr",
+      "path": "/",
+      "expires": 1767458492,
+      "size": 30,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "NonSecure",
+      "sourcePort": 80
+    },
+    {
+      "name": "_ga_BZXVXTY3DF",
+      "value": "GS1.1.1704386492.1.0.1704386492.0.0.0",
+      "domain": ".cppap.fr",
+      "path": "/",
+      "expires": 1767458492,
+      "size": 51,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "NonSecure",
+      "sourcePort": 80
+    },
+    {
+      "name": "_gat_gtag_UA_110311563_3",
+      "value": "1",
+      "domain": ".cppap.fr",
+      "path": "/",
+      "expires": 1704386552,
+      "size": 25,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "NonSecure",
+      "sourcePort": 80
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.658425802.1704386492",
+      "domain": ".cppap.fr",
+      "path": "/",
+      "expires": 1704472892,
+      "size": 30,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "NonSecure",
+      "sourcePort": 80
+    }
+  ],
+  "headers": {
+    "connection": "Keep-Alive",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Thu, 04 Jan 2024 16:41:30 GMT",
+    "keep-alive": "timeout=5, max=100",
+    "link": "<http://www.cppap.fr/wp-json/>; rel=\"https://api.w.org/\"\n<http://www.cppap.fr/wp-json/wp/v2/pages/1084>; rel=\"alternate\"; type=\"application/json\"\n<http://www.cppap.fr/>; rel=shortlink",
+    "server": "Apache",
+    "transfer-encoding": "chunked",
+    "x-frame-options": "SAMEORIGIN",
+    "x-powered-by": "PHP/7.4.33"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.cppap.fr",
+      "ip": "143.126.211.105",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "code.cdn.mozilla.net",
+      "ip": "34.36.212.39",
+      "geoip": {
+        "city": {
+          "geoname_id": 4393217,
+          "names": {
+            "de": "Kansas City",
+            "en": "Kansas City",
+            "es": "Kansas City",
+            "fr": "Kansas City",
+            "ja": "カンザスシティ",
+            "pt-BR": "Kansas City",
+            "ru": "Канзас-Сити"
+          }
+        },
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 39.1027,
+          "longitude": -94.5778,
+          "metro_code": 616,
+          "time_zone": "America/Chicago"
+        },
+        "postal": {
+          "code": "64184"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 4398678,
+            "iso_code": "MO",
+            "names": {
+              "en": "Missouri",
+              "es": "Missouri",
+              "fr": "Missouri",
+              "ja": "ミズーリ州",
+              "pt-BR": "Missúri",
+              "ru": "Миссури",
+              "zh-CN": "密苏里州"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "www.googletagmanager.com",
+      "ip": "142.251.32.40",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "fyil.mediateurdulivre.fr",
+      "ip": "91.134.109.31",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "www.google-analytics.com",
+      "ip": "216.239.38.178",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 34.0544,
+          "longitude": -118.244,
+          "time_zone": "America/Los_Angeles"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 5332921,
+            "iso_code": "CA",
+            "names": {
+              "de": "Kalifornien",
+              "en": "California",
+              "es": "California",
+              "fr": "Californie",
+              "ja": "カリフォルニア州",
+              "pt-BR": "Califórnia",
+              "ru": "Калифорния",
+              "zh-CN": "加州"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
