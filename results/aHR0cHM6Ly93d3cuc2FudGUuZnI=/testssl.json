@@ -1,0 +1,1166 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered with final"
+          }
+,         {
+              "id"           : "ALPN_HTTP2",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "h2"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server -- TLS 1.3 client determined"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-CHACHA20-POLY1305-OLD"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1 secp384r1 secp521r1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'status request/#5' 'next protocol/#13172' 'signed certificate timestamps/#18' 'key share/#51' 'supported versions/#43' 'extended master secret/#23' 'application layer protocol negotiation/#16' 'compress_certificate/#27'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 64800 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "certificate_compression",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0002/Brotli"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA256 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "350B3EA53E9CA0F73889311A2C1D5B5F"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "16"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "5E1269E818F1D9A713EA0FD0F712032D8D8D3890"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "F296B38E5AC9D4912D2C14F5C164A7EB88FFA2DA83C4CB54E6F87C1F475F0D29"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "www.sante.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "request w/o SNI didn't succeed"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "www.sante.fr lelab.sante.fr lelab.xn--sant-epa.fr sante.fr sas.sante.fr sas.xn--sant-epa.fr seconnecter.sante.fr www.xn--sant-epa.fr xn--sant-epa.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN and CN (SNI mandatory)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "101 >= 60 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-03-15 00:00"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-04-14 23:59"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://crl.sectigo.com/SectigoRSAOrganizationValidationSecureServerCA.crl"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://ocsp.sectigo.com"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "3"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Sectigo RSA Organization Validation Secure Server CA (Sectigo Limited from GB)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "72A34AC2B424AED3F6B0B04755B88CC027DCCC806FDDB22B4CD7C47773973EC0"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2018-11-02 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2030-12-31 23:59"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Sectigo RSA Organization Validation Secure Server CA <-- USERTrust RSA Certification Authority"
+          }
+,         {
+              "id"           : "intermediate_cert <#2>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFgTCCBGmgAwIBAgIQOXJEOvkit1HX02wQ3TE1lTANBgkqhkiG9w0BAQwFADB7MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEhMB8GA1UEAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTE5MDMxMjAwMDAwMFoXDTI4MTIzMTIzNTk1OVowgYgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpOZXcgSmVyc2V5MRQwEgYDVQQHEwtKZXJzZXkgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMS4wLAYDVQQDEyVVU0VSVHJ1c3QgUlNBIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAgBJlFzYOw9sIs9CsVw127c0n00ytUINh4qogTQktZAnczomfzD2p7PbPwdzx07HWezcoEStH2jnGvDoZtF+mvX2do2NCtnbyqTsrkfjib9DsFiCQCT7i6HTJGLSR1GJk23+jBvGIGGqQIjy8/hPwhxR79uQfjtTkUcYRZ0YIUcuGFFQ/vDP+fmyc/xadGL1RjjWmp2bIcmfbIWax1Jt4A8BQOujM8Ny8nkz+rwWWNR9XWrf/zvk9tyy29lTdyOcSOk2uTIq3XJq0tyA9yn8iNK5+O2hmAUTnAU5GU5szYPeUvlM3kHND8zLDU+/bqv50TmnHa4xgk97Exwzf4TKuzJM7UXiVZ4vuPVb+DNBpDxsP8yUmazNt925H+nND5X4OpWaxKXwyhGNVicQNwZNUMBkTrNN9N6frXTpsNVzbQdcS2qlJC9/YgIoJk2KOtWbPJYjNhLixP6Q5D9kCnusSTJV882sFqV4Wg8y4Z+LoE53MW4LTTLPtW//e5XOsIzstAL81VXQJSdhJWBp/kjbmUZIO8yZ9HE0XvMnsQybQv0FfQKlERPSZ51eHnlAfV1SoPv10Yy+xUGUJ5lhCLkMaTLTwJUdZ+gQek9QmRkpQgbLevni3/GcV4clXhB4PY9bpYrrWX1Uu6lzGKAgEJTm4Diup8kyXHAc/DVL17e8vgg8CAwEAAaOB8jCB7zAfBgNVHSMEGDAWgBSgEQojPpbxB+zirynvgqV/0DCktDAdBgNVHQ4EFgQUU3m/WqorSs9UgOHYm8Cd8rIDZsswDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wEQYDVR0gBAowCDAGBgRVHSAAMEMGA1UdHwQ8MDowOKA2oDSGMmh0dHA6Ly9jcmwuY29tb2RvY2EuY29tL0FBQUNlcnRpZmljYXRlU2VydmljZXMuY3JsMDQGCCsGAQUFBwEBBCgwJjAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMA0GCSqGSIb3DQEBDAUAA4IBAQAYh1HcdCE9nIrgJ7cz0C7M7PDmy14R3iJvm3WOnnL+5Nb+qh+cli3vA0p+rvSNb3I8QzvAP+u431yqqcau8vzY7qN7Q/aGNnwU4M309z/+3ri0ivCRlv79Q2R+/czSAaF9ffgZGclCKxO/WIu6pKJmBHaIkU4MiRTOok3JMrO66BQavHHxW/BBC5gACiIDEOUMsfnNkjcZ7Tvx5Dq2+UUTJnWvu6rvP3t3O9LEApE9GQDTF1w52z97GA1FzZOFli9d31kWTz9RvdVFGD/tSo7oBmF0Ixa1DVBzJ0RHfxBdiSprhTEUxOipakyAvGp4z7h/jnZymQyd/teRCBaho1+V\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#2>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "68B9C761219A5B1F0131784474665DB61BBDB109E00F05CA9F74244EE5F5F52B"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#2>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2019-03-12 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#2>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2028-12-31 23:59"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#2>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#2>",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "USERTrust RSA Certification Authority <-- AAA Certificate Services"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "+3416 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1704404318"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "3416 seconds"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "only for this domain"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "cloudflare"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "default-src 'self' sante.fr *.sante.fr *.gouv.fr *.dmcdn.net *.synapse-medicine.com *.twitter.com *.twimg.com *.data.gouv *.rogervoice.com *.googleapis.com *.mapbox.com *.cloudflareinsights.com *.cloudflare.com googletagmanager.com *.googletagmanager.com api-adresse.data.gouv.fr *.google.com vitemadose.gitlab.io *.dailymotion.com *.youtube.com *.soundcloud.com *.c-napps.com gstatic.com *.gstatic.com *.adform.net *.facebook.net *.facebook.com *.snapchat.com *.criteo.com unpkg.com *.fontawesome.com *.newrelic.com *.atlasante.fr bam.eu01.nr-data.net; script-src 'self' sante.fr *.sante.fr *.gouv.fr *.dmcdn.net *.synapse-medicine.com *.twitter.com *.twimg.com *.data.gouv *.rogervoice.com *.googleapis.com *.mapbox.com *.cloudflareinsights.com *.cloudflare.com googletagmanager.com *.googletagmanager.com api-adresse.data.gouv.fr *.google.com vitemadose.gitlab.io *.dailymotion.com *.youtube.com *.soundcloud.com *.c-napps.com gstatic.com *.gstatic.com *.adform.net *.facebook.net *.snapchat.com sc-static.net secure.adnxs.com ads-engagement.presage.io *.criteo.com unpkg.com *.fontawesome.com *.newrelic.com *.atlasante.fr bam.eu01.nr-data.net 'unsafe-inline' 'unsafe-eval'; style-src 'self' sante.fr *.sante.fr *.gouv.fr *.dmcdn.net *.synapse-medicine.com *.twitter.com *.twimg.com *.data.gouv *.rogervoice.com *.googleapis.com *.mapbox.com *.cloudflareinsights.com *.cloudflare.com googletagmanager.com *.googletagmanager.com api-adresse.data.gouv.fr *.google.com vitemadose.gitlab.io *.dailymotion.com *.youtube.com *.soundcloud.com *.c-napps.com gstatic.com *.gstatic.com *.adform.net *.facebook.net unpkg.com *.fontawesome.com *.newrelic.com *.atlasante.fr bam.eu01.nr-data.net 'unsafe-inline'; img-src * data:; media-src *; frame-src *; frame-ancestors *; child-src *; font-src * data:; report-uri /report-csp-violation"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1; mode=block"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "public, max-age=3600"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "x-cache: HITx-cache-hits: 1x-cache-ttl-remaining: 3580.280"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable, no RSA key transport cipher"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "no protocol below TLS 1.2 offered"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=F296B38E5AC9D4912D2C14F5C164A7EB88FFA2DA83C4CB54E6F87C1F475F0D29"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "no DH key with <= TLS 1.2"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "not vulnerable, no SSL3 or TLS1"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "27"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "81"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "A+"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "www.sante.fr/172.65.210.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "130"
+          }
+]

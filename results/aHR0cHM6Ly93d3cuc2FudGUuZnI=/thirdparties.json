@@ -1,0 +1,318 @@
+{
+  "trackers": [
+    {
+      "type": "FontAwesome",
+      "url": "https://use.fontawesome.com/releases/v6.1.0/css/all.css",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+    },
+    {
+      "type": "unknown",
+      "url": "https://js-agent.newrelic.com/nr-spa-1.249.0.min.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://bam.eu01.nr-data.net/1/NRJS-4112af8fdacfecafe40?a=521247939&v=1.249.0&to=MhBSZQoZVhEHBxJeWAtacVIMEVcMSSAUQkcEGWxyFwpdPiALFFprIxpCXDoNUQ4CARQaCRcQXlUdCmgOBwcDX1gJEVVDPhdKDycHEl5YCw%3D%3D&rst=1666&ck=0&s=0564c00bc97958b0&ref=https://www.sante.fr/&af=err,xhr,stn,ins,spa&ap=89&be=662&fe=968&dc=940&at=HldRE0IDRR8%3D&fsh=1&perf=%7B%22timing%22:%7B%22of%22:1704403219805,%22n%22:0,%22f%22:0,%22dn%22:12,%22dne%22:215,%22c%22:215,%22s%22:217,%22ce%22:540,%22rq%22:540,%22rp%22:663,%22rpe%22:690,%22di%22:1294,%22ds%22:1568,%22de%22:1602,%22dc%22:1624,%22l%22:1625,%22le%22:1630%7D,%22navigation%22:%7B%7D%7D&fp=1062&fcp=1062"
+    },
+    {
+      "type": "unknown",
+      "url": "https://bam.eu01.nr-data.net/events/1/NRJS-4112af8fdacfecafe40?a=521247939&v=1.249.0&to=MhBSZQoZVhEHBxJeWAtacVIMEVcMSSAUQkcEGWxyFwpdPiALFFprIxpCXDoNUQ4CARQaCRcQXlUdCmgOBwcDX1gJEVVDPhdKDycHEl5YCw%3D%3D&rst=2158&ck=0&s=0564c00bc97958b0&ref=https://www.sante.fr/"
+    }
+  ],
+  "cookies": [],
+  "headers": {
+    "age": "1589",
+    "cache-control": "public, max-age=3600",
+    "cf-cache-status": "HIT",
+    "cf-ray": "8406865f6b0c3c83-CDG",
+    "content-encoding": "gzip",
+    "content-language": "fr",
+    "content-security-policy": "default-src 'self' sante.fr *.sante.fr *.gouv.fr *.dmcdn.net *.synapse-medicine.com *.twitter.com *.twimg.com *.data.gouv *.rogervoice.com *.googleapis.com *.mapbox.com *.cloudflareinsights.com *.cloudflare.com googletagmanager.com *.googletagmanager.com api-adresse.data.gouv.fr *.google.com vitemadose.gitlab.io *.dailymotion.com *.youtube.com *.soundcloud.com *.c-napps.com gstatic.com *.gstatic.com *.adform.net *.facebook.net *.facebook.com *.snapchat.com *.criteo.com unpkg.com *.fontawesome.com *.newrelic.com *.atlasante.fr bam.eu01.nr-data.net; script-src 'self' sante.fr *.sante.fr *.gouv.fr *.dmcdn.net *.synapse-medicine.com *.twitter.com *.twimg.com *.data.gouv *.rogervoice.com *.googleapis.com *.mapbox.com *.cloudflareinsights.com *.cloudflare.com googletagmanager.com *.googletagmanager.com api-adresse.data.gouv.fr *.google.com vitemadose.gitlab.io *.dailymotion.com *.youtube.com *.soundcloud.com *.c-napps.com gstatic.com *.gstatic.com *.adform.net *.facebook.net *.snapchat.com sc-static.net secure.adnxs.com ads-engagement.presage.io *.criteo.com unpkg.com *.fontawesome.com *.newrelic.com *.atlasante.fr bam.eu01.nr-data.net 'unsafe-inline' 'unsafe-eval'; style-src 'self' sante.fr *.sante.fr *.gouv.fr *.dmcdn.net *.synapse-medicine.com *.twitter.com *.twimg.com *.data.gouv *.rogervoice.com *.googleapis.com *.mapbox.com *.cloudflareinsights.com *.cloudflare.com googletagmanager.com *.googletagmanager.com api-adresse.data.gouv.fr *.google.com vitemadose.gitlab.io *.dailymotion.com *.youtube.com *.soundcloud.com *.c-napps.com gstatic.com *.gstatic.com *.adform.net *.facebook.net unpkg.com *.fontawesome.com *.newrelic.com *.atlasante.fr bam.eu01.nr-data.net 'unsafe-inline'; img-src * data:; media-src *; frame-src *; frame-ancestors *; child-src *; font-src * data:; report-uri /report-csp-violation",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Thu, 04 Jan 2024 21:20:20 GMT",
+    "last-modified": "Thu, 04 Jan 2024 20:41:22 GMT",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000",
+    "vary": "Accept-Encoding, Cookie, Accept-Encoding",
+    "x-cache": "HIT",
+    "x-cache-hits": "10",
+    "x-cache-ttl-remaining": "2851.306",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-ua-compatible": "IE=edge",
+    "x-xss-protection": "1; mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.sante.fr",
+      "ip": "172.65.210.14",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "use.fontawesome.com",
+      "ip": "172.64.140.13",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "static.cloudflareinsights.com",
+      "ip": "104.16.57.101",
+      "geoip": {
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "js-agent.newrelic.com",
+      "ip": "146.75.38.137",
+      "geoip": {
+        "city": {
+          "geoname_id": 4781530,
+          "names": {
+            "de": "Reston",
+            "en": "Reston",
+            "ja": "レストン",
+            "ru": "Рестон"
+          }
+        },
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 20,
+          "latitude": 38.9609,
+          "longitude": -77.3429,
+          "metro_code": 511,
+          "time_zone": "America/New_York"
+        },
+        "postal": {
+          "code": "20190"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 6254928,
+            "iso_code": "VA",
+            "names": {
+              "en": "Virginia",
+              "fr": "Virginie",
+              "ja": "バージニア州",
+              "pt-BR": "Virgínia",
+              "ru": "Вирджиния",
+              "zh-CN": "弗吉尼亚州"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "bam.eu01.nr-data.net",
+      "ip": "185.221.85.3",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 2963597,
+          "is_in_european_union": true,
+          "iso_code": "IE",
+          "names": {
+            "de": "Irland",
+            "en": "Ireland",
+            "es": "Irlanda",
+            "fr": "Irlande",
+            "ja": "アイルランド",
+            "pt-BR": "Irlanda",
+            "ru": "Ирландия",
+            "zh-CN": "爱尔兰"
+          }
+        },
+        "location": {
+          "accuracy_radius": 200,
+          "latitude": 53.3471,
+          "longitude": -6.2447,
+          "time_zone": "Europe/Dublin"
+        },
+        "registered_country": {
+          "geoname_id": 2963597,
+          "is_in_european_union": true,
+          "iso_code": "IE",
+          "names": {
+            "de": "Irland",
+            "en": "Ireland",
+            "es": "Irlanda",
+            "fr": "Irlande",
+            "ja": "アイルランド",
+            "pt-BR": "Irlanda",
+            "ru": "Ирландия",
+            "zh-CN": "爱尔兰"
+          }
+        }
+      }
+    }
+  ]
+}
