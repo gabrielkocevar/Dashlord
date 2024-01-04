@@ -1,0 +1,214 @@
+{
+  "links": [
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/",
+        "path": "/",
+        "href": "http://www.etats-generaux-information.fr/"
+      },
+      "link": "http://www.etats-generaux-information.fr/",
+      "line": "--2024-01-04 19:50:06--  http://www.etats-generaux-information.fr/",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/robots.txt",
+        "path": "/robots.txt",
+        "href": "http://www.etats-generaux-information.fr/robots.txt"
+      },
+      "link": "http://www.etats-generaux-information.fr/robots.txt",
+      "line": "--2024-01-04 19:50:06--  http://www.etats-generaux-information.fr/robots.txt",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/main-78844350.css",
+        "path": "/main-78844350.css",
+        "href": "http://www.etats-generaux-information.fr/main-78844350.css"
+      },
+      "link": "http://www.etats-generaux-information.fr/main-78844350.css",
+      "line": "--2024-01-04 19:50:07--  http://www.etats-generaux-information.fr/main-78844350.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/favicon.ico",
+        "path": "/favicon.ico",
+        "href": "http://www.etats-generaux-information.fr/favicon.ico"
+      },
+      "link": "http://www.etats-generaux-information.fr/favicon.ico",
+      "line": "--2024-01-04 19:50:07--  http://www.etats-generaux-information.fr/favicon.ico",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/fonts/Montserrat-Regular.woff2",
+        "path": "/fonts/Montserrat-Regular.woff2",
+        "href": "http://www.etats-generaux-information.fr/fonts/Montserrat-Regular.woff2"
+      },
+      "link": "http://www.etats-generaux-information.fr/fonts/Montserrat-Regular.woff2",
+      "line": "--2024-01-04 19:50:08--  http://www.etats-generaux-information.fr/fonts/Montserrat-Regular.woff2",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/fonts/Montserrat-SemiBold.woff2",
+        "path": "/fonts/Montserrat-SemiBold.woff2",
+        "href": "http://www.etats-generaux-information.fr/fonts/Montserrat-SemiBold.woff2"
+      },
+      "link": "http://www.etats-generaux-information.fr/fonts/Montserrat-SemiBold.woff2",
+      "line": "--2024-01-04 19:50:08--  http://www.etats-generaux-information.fr/fonts/Montserrat-SemiBold.woff2",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/fonts/Montserrat-Regular.woff",
+        "path": "/fonts/Montserrat-Regular.woff",
+        "href": "http://www.etats-generaux-information.fr/fonts/Montserrat-Regular.woff"
+      },
+      "link": "http://www.etats-generaux-information.fr/fonts/Montserrat-Regular.woff",
+      "line": "--2024-01-04 19:50:09--  http://www.etats-generaux-information.fr/fonts/Montserrat-Regular.woff",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/fonts/Montserrat-SemiBold.woff",
+        "path": "/fonts/Montserrat-SemiBold.woff",
+        "href": "http://www.etats-generaux-information.fr/fonts/Montserrat-SemiBold.woff"
+      },
+      "link": "http://www.etats-generaux-information.fr/fonts/Montserrat-SemiBold.woff",
+      "line": "--2024-01-04 19:50:09--  http://www.etats-generaux-information.fr/fonts/Montserrat-SemiBold.woff",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/fonts/Montserrat-Bold.woff2",
+        "path": "/fonts/Montserrat-Bold.woff2",
+        "href": "http://www.etats-generaux-information.fr/fonts/Montserrat-Bold.woff2"
+      },
+      "link": "http://www.etats-generaux-information.fr/fonts/Montserrat-Bold.woff2",
+      "line": "--2024-01-04 19:50:10--  http://www.etats-generaux-information.fr/fonts/Montserrat-Bold.woff2",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/fonts/Montserrat-Bold.woff",
+        "path": "/fonts/Montserrat-Bold.woff",
+        "href": "http://www.etats-generaux-information.fr/fonts/Montserrat-Bold.woff"
+      },
+      "link": "http://www.etats-generaux-information.fr/fonts/Montserrat-Bold.woff",
+      "line": "--2024-01-04 19:50:10--  http://www.etats-generaux-information.fr/fonts/Montserrat-Bold.woff",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.etats-generaux-information.fr",
+        "port": null,
+        "hostname": "www.etats-generaux-information.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/img/Parking.jpg",
+        "path": "/img/Parking.jpg",
+        "href": "http://www.etats-generaux-information.fr/img/Parking.jpg"
+      },
+      "link": "http://www.etats-generaux-information.fr/img/Parking.jpg",
+      "line": "--2024-01-04 19:50:11--  http://www.etats-generaux-information.fr/img/Parking.jpg",
+      "broken": false
+    }
+  ],
+  "broken": []
+}
