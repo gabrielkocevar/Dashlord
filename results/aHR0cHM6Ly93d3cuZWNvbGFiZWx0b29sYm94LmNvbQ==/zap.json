@@ -1,0 +1,2312 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Thu, 4 Jan 2024 23:35:31",
+	"site":[ 
+		{
+			"@name": "https://www.ecolabeltoolbox.com",
+			"@host": "www.ecolabeltoolbox.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form name=\"information_notices_form\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"information_notices_form__token\" \"information_notices_form_statistics\" \"information_notices_form_treatments\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"contact\" action=\"/fr/contact\" method=\"post\" class=\"form-horizontal\" role=\"form\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 3: \"contact_email\" \"contact_subject\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form name=\"information_notices_form\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"information_notices_form__token\" \"information_notices_form_statistics\" \"information_notices_form_treatments\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"contact\" action=\"/fr/contact\" method=\"post\" class=\"form-horizontal\" role=\"form\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 3: \"contact_email\" \"contact_subject\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form name=\"information_notices_form\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"information_notices_form__token\" \"information_notices_form_statistics\" \"information_notices_form_treatments\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form name=\"registration_form\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 3: \"registration_form__token\" \"registration_form_adresse\" \"registration_form_codepostal\" \"registration_form_email\" \"registration_form_firstname\" \"registration_form_fonction\" \"registration_form_information_notices_statistics\" \"registration_form_information_notices_treatments\" \"registration_form_isAcceptCGU\" \"registration_form_name\" \"registration_form_plainPassword_first\" \"registration_form_plainPassword_second\" \"registration_form_society\" \"registration_form_telephone\" \"registration_form_ville\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"contact\" action=\"/fr/contact\" method=\"post\" class=\"form-horizontal\" role=\"form\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 4: \"contact_email\" \"contact_subject\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form name=\"information_notices_form\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"information_notices_form__token\" \"information_notices_form_statistics\" \"information_notices_form_treatments\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"contact\" action=\"/fr/contact\" method=\"post\" class=\"form-horizontal\" role=\"form\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 3: \"contact_email\" \"contact_subject\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form name=\"information_notices_form\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"information_notices_form__token\" \"information_notices_form_statistics\" \"information_notices_form_treatments\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"contact\" action=\"/fr/contact\" method=\"post\" class=\"form-horizontal\" role=\"form\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 3: \"contact_email\" \"contact_subject\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form name=\"information_notices_form\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"information_notices_form__token\" \"information_notices_form_statistics\" \"information_notices_form_treatments\" ]."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"contact\" action=\"/sitemap.xml/contact\" method=\"post\" class=\"form-horizontal\" role=\"form\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 3: \"contact_email\" \"contact_subject\" ]."
+						}
+					],
+					"count": "13",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"information_notices_form__token\" \"information_notices_form_statistics\" \"information_notices_form_treatments\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/faq",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/partenaires",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/politique-accessibilite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "13",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/mentions-legales",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/partenaires",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/politique-accessibilite",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "13",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10099",
+					"alertRef": "10099",
+					"alert": "Source Code Disclosure - Python",
+					"name": "Source Code Disclosure - Python",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Application Source Code was disclosed by the web server - Python</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/building-insulation-57",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/effective-and-efficient-solutions-for-active-air-conditioning-69",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/efficient-ventilation-systems-70",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/energy-efficient-electrical-devices-64",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/energy-efficient-heating-ventilation-and-air-conditioning-hvac-65",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/energy-efficient-light-bulbs-63",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/heating-and-air-conditioning-controls-66",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/high-efficiency-boilers-67",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/key-card-systems-that-switch-off-electricity-in-rooms-61",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/monitoring-energy-consumption-data-71",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/outside-grounds-work-to-improve-comfort-in-summer-60",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/prevention-of-draughts-and-unwanted-intake-of-outside-air-58",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/sunshades-59",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques/thermal-insulation-of-boilers-circuits-and-hot-water-heaters-68",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": " for electricity in France:",
+							"otherinfo": ""
+						}
+					],
+					"count": "14",
+					"solution": "<p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://www.wsj.com/articles/BL-CIOB-2999</p>",
+					"cweid": "540",
+					"wascid": "13",
+					"sourceid": "1546"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=registerCallback&render=explicit'></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "13",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library bootstrap, version 3.1.1 is vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/plugins/bootstrap.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "* Bootstrap v3.1.1",
+							"otherinfo": "CVE-2018-14041\nCVE-2019-8331\nCVE-2018-20677\nCVE-2018-20676\nCVE-2018-14042\nCVE-2016-10735\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/plugins/jquery.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/*! jQuery v1.10.2",
+							"otherinfo": "CVE-2020-11023\nCVE-2020-11022\nCVE-2015-9251\nCVE-2019-11358\n"
+						}
+					],
+					"count": "2",
+					"solution": "<p>Please upgrade to the latest version of bootstrap.</p>",
+					"otherinfo": "<p>CVE-2018-14041</p><p>CVE-2019-8331</p><p>CVE-2018-20677</p><p>CVE-2018-20676</p><p>CVE-2018-14042</p><p>CVE-2016-10735</p><p></p>",
+					"reference": "<p>https://github.com/twbs/bootstrap/issues/28236</p><p>https://github.com/advisories/GHSA-pj7m-g53m-7638</p><p>https://github.com/twbs/bootstrap/issues/20184</p><p>https://github.com/advisories/GHSA-ph58-4vrj-w6hr</p><p>https://github.com/twbs/bootstrap/issues/20631</p><p>https://github.com/advisories/GHSA-4p24-vmcr-4gqj</p><p>https://github.com/advisories/GHSA-9v3m-8fp8-mj99</p><p>https://nvd.nist.gov/vuln/detail/CVE-2018-20676</p><p></p>",
+					"cweid": "829",
+					"wascid": "-1",
+					"sourceid": "302"
+				},
+				{
+					"pluginid": "90022",
+					"alertRef": "90022",
+					"alert": "Application Error Disclosure",
+					"name": "Application Error Disclosure",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.1 500 Internal Server Error",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.1 500 Internal Server Error",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "322"
+				},
+				{
+					"pluginid": "10044",
+					"alertRef": "10044",
+					"alert": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"name": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The server has responded with a redirect that seems to provide a large response. This may indicate that although the server sent a redirect it also responded with body content (which may include sensitive details, PII, etc.).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 35 [https://www.ecolabeltoolbox.com/fr/].\nPredicted response size: 335.\nResponse Body Length: 386."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 35 [https://www.ecolabeltoolbox.com/fr/].\nPredicted response size: 335.\nResponse Body Length: 386."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/44-type_de_produit-format_electronique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 71 [https://www.ecolabeltoolbox.com/44-type_de_produit-format_electronique/].\nPredicted response size: 371.\nResponse Body Length: 530."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 62 [https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur].\nPredicted response size: 362.\nResponse Body Length: 494."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 62 [https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur].\nPredicted response size: 362.\nResponse Body Length: 494."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/m2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 35 [https://www.ecolabeltoolbox.com/m2/].\nPredicted response size: 335.\nResponse Body Length: 386."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/partenaires",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 44 [https://www.ecolabeltoolbox.com/partenaires/].\nPredicted response size: 344.\nResponse Body Length: 422."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 44 [https://www.ecolabeltoolbox.com/sitemap.xml/].\nPredicted response size: 344.\nResponse Body Length: 422."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 27 [/reset-password/check-email].\nPredicted response size: 327.\nResponse Body Length: 354."
+						}
+					],
+					"count": "9",
+					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
+					"otherinfo": "<p>Location header URI length: 35 [https://www.ecolabeltoolbox.com/fr/].</p><p>Predicted response size: 335.</p><p>Response Body Length: 386.</p>",
+					"reference": "",
+					"cweid": "201",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "https://www.google.com/recaptcha/api.js?onload=registerCallback&render=explicit",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=registerCallback&render=explicit'></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=www.ecolabeltoolbox.com%2Ffr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit",
+							"attack": "",
+							"evidence": "<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "13",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/plugins/jquery.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "308"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/faq",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/partenaires",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10040",
+					"alertRef": "10040",
+					"alert": "Secure Pages Include Mixed Content",
+					"name": "Secure Pages Include Mixed Content",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes mixed content, that is content accessed via HTTP instead of HTTPS.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/marketing/ShMILe_Marketing_guide_EN.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/marketing/ShMILe_Marketing_guide_EN.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_5_-_LHotel_Negresco_de_Nice_se_met_au_vert_2013_EN.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_7_-_EU_Ecolabel__ONG_Mare_Nostrum_EN_substitle.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Inscription.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Inscription.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Video.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Referentiel_Ecolabel_Europeen.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Referentiel_Ecolabel_Europeen.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen?search_critere%5B_token%5D=9ba27615a004.a3wrGwe7yk5z5CRUsOEiL968K0N84csdtWnR81IHaiI.XRVCT2-KhDo-hlEn-ZZuTbrxEgQzhJ5l9iqOpTc-EGc7O2BZa-qhCzm8Sw&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Inscription.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Inscription.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Video.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Referentiel_Ecolabel_Europeen.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Referentiel_Ecolabel_Europeen.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Sauvegarder.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Sauvegarder.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Sauvegarder.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/marketing/Video_1_-_AFNOR_ADEME_Ecolabel_Europeen_Tourisme_suivez_la_fleur_012016.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_1_-_AFNOR_ADEME_Ecolabel_Europeen_Tourisme_suivez_la_fleur_012016.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/France_2_JT13h_300_hotels_francais_possedent_lEcolabel_24082015.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/France_2_JT13h_La_France_compte_71_campings_ecolos_11082015.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/LEcolabel_Europeen_chez_Best_Western_2014.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_7_-_Palm__amp__Iloha_Hotels_Grand_prix_management_et_initiatives_pour_le_DD_2015.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/Guide_environnement_CCI_Languedoc-Roussillon.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/partenaires",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/pages/Partenaires/ADEMERVB.jpg",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/pages/Partenaires/ADEMERVB.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Partenaires/Contacts_AFNOR.png\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/logo_shmile2.png\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Partenaires/Logo_ENPI_CBCMED_EN.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/CCI-Nice-Cote-d-Azur.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/logo-nca-actu.480.322.s.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Regione%20Autonoma%20della%20Sardegna.gif\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Centro%20Servizi%20per%20le%20imprese.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Unit__reg__R__reg_gionale_Halkidiki___a_rogner_.png\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Halkidiki.gif\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/CITET.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Innorpi.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Ministry%20tourism%20Jordan.png\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Cedare.gif\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/outils-marketing",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/marketing/ShMILe_Marketing_guide_EN.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/marketing/ShMILe_Marketing_guide_EN.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_5_-_LHotel_Negresco_de_Nice_se_met_au_vert_2013_EN.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_7_-_EU_Ecolabel__ONG_Mare_Nostrum_EN_substitle.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Inscription.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Inscription.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Video.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Referentiel_Ecolabel_Europeen.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Referentiel_Ecolabel_Europeen.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Sauvegarder.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Sauvegarder.png\ntag=img src=http://www.ecolabeltoolbox.com/files/Ecolabel_Europeen/Sauvegarder.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/marketing/Video_1_-_AFNOR_ADEME_Ecolabel_Europeen_Tourisme_suivez_la_fleur_012016.png",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_1_-_AFNOR_ADEME_Ecolabel_Europeen_Tourisme_suivez_la_fleur_012016.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/France_2_JT13h_300_hotels_francais_possedent_lEcolabel_24082015.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/France_2_JT13h_La_France_compte_71_campings_ecolos_11082015.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/LEcolabel_Europeen_chez_Best_Western_2014.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_7_-_Palm__amp__Iloha_Hotels_Grand_prix_management_et_initiatives_pour_le_DD_2015.png\ntag=img src=http://www.ecolabeltoolbox.com/files/marketing/Guide_environnement_CCI_Languedoc-Roussillon.png\n"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/partenaires",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ecolabeltoolbox.com/files/pages/Partenaires/ADEMERVB.jpg",
+							"otherinfo": "tag=img src=http://www.ecolabeltoolbox.com/files/pages/Partenaires/ADEMERVB.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Partenaires/Contacts_AFNOR.png\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/logo_shmile2.png\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Partenaires/Logo_ENPI_CBCMED_EN.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/CCI-Nice-Cote-d-Azur.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/logo-nca-actu.480.322.s.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Regione%20Autonoma%20della%20Sardegna.gif\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Centro%20Servizi%20per%20le%20imprese.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Unit__reg__R__reg_gionale_Halkidiki___a_rogner_.png\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Halkidiki.gif\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/CITET.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Innorpi.jpg\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Ministry%20tourism%20Jordan.png\ntag=img src=http://www.ecolabeltoolbox.com/files/pages/Cedare.gif\n"
+						}
+					],
+					"count": "11",
+					"solution": "<p>A page that is available over SSL/TLS must be comprised completely of content which is transmitted over SSL/TLS.</p><p>The page must not contain any content that is transmitted over unencrypted HTTP.</p><p> This includes content from third party sites.</p>",
+					"otherinfo": "<p>tag=img src=http://www.ecolabeltoolbox.com/files/marketing/ShMILe_Marketing_guide_EN.png</p><p>tag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_5_-_LHotel_Negresco_de_Nice_se_met_au_vert_2013_EN.png</p><p>tag=img src=http://www.ecolabeltoolbox.com/files/marketing/Video_7_-_EU_Ecolabel__ONG_Mare_Nostrum_EN_substitle.png</p><p></p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
+					"cweid": "311",
+					"wascid": "4",
+					"sourceid": "453"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/partenaires",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/robots.txt",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10111",
+					"alertRef": "10111",
+					"alert": "Authentication Request Identified",
+					"name": "Authentication Request Identified",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The given request has been identified as an authentication request. The 'Other Info' field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to \"Auto-Detect\" then this rule will change the authentication to match the request identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[email]",
+							"attack": "",
+							"evidence": "registration_form[plainPassword][first]",
+							"otherinfo": "userParam=registration_form[email]\nuserValue=foo-bar@example.com\npasswordParam=registration_form[plainPassword][first]\nreferer=https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur\ncsrfToken=registration_form__token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "POST",
+							"param": "reset_password_request_form[email]",
+							"attack": "",
+							"evidence": "reset_password_request_form[_token]",
+							"otherinfo": "userParam=reset_password_request_form[email]\nuserValue=foo-bar@example.com\npasswordParam=reset_password_request_form[_token]\nreferer=https://www.ecolabeltoolbox.com/reset-password\ncsrfToken=reset_password_request_form__token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/en/\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/fr/\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/fr/ecolabel-europeen\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/fr/espace-de-travail\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/fr/outils-marketing\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/fr/partenaires\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/fr/solutions-techniques\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/reset-password\ncsrfToken=_csrf_token"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/login",
+							"method": "POST",
+							"param": "email",
+							"attack": "",
+							"evidence": "password",
+							"otherinfo": "userParam=email\nuserValue=zaproxy@example.com\npasswordParam=password\nreferer=https://www.ecolabeltoolbox.com/sitemap.xml/\ncsrfToken=_csrf_token"
+						}
+					],
+					"count": "12",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p>userParam=registration_form[email]</p><p>userValue=foo-bar@example.com</p><p>passwordParam=registration_form[plainPassword][first]</p><p>referer=https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur</p><p>csrfToken=registration_form__token</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "475"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TrdsXG5hjdErNwAsYsc1a-_Fletn4TaeZZtFKFFNoVk",
+							"otherinfo": "N\uFFFDl\\na\uFFFD\uFFFD+7\\x0000,b\uFFFD5k\uFFFD\u0155\uFFFDg\uFFFD6\uFFFDe\uFFFDE(QM\uFFFDY"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "6TaKhWBMa1za0vFM7xAFEN706TOZFRBxouQK_RgAYjg",
+							"otherinfo": "\uFFFD6\uFFFD\uFFFD`Lk\\\uFFFD\uFFFD\uFFFDL\uFFFD\\x0010\\x0005\\x0010\uFFFD\uFFFD\uFFFD3\uFFFD\\x0015\\x0010q\uFFFD\uFFFD\n\uFFFD\\x0018\\x0000b8"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nIClEAVyTBqqFciJ6EgDfZPRNE4pbXTWTykbqq7ZcUc",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD\\x0010\\x0005rL\\x001a\uFFFD\\x0015\u0209\uFFFDH\\x0003}\uFFFD\uFFFD4N)mt\uFFFDO)\\x001b\uFFFD\uFFFD\uFFFDqG"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Z8kdD_BfRp4xH4G2l1DB3RRc7z_M6Ss99faypy2c47Q",
+							"otherinfo": "g\uFFFD\\x001d\\x000f\uFFFD_F\uFFFD1\\x001f\uFFFD\uFFFD\uFFFDP\uFFFD\uFFFD\\x0014\\\uFFFD?\uFFFD\uFFFD+=\uFFFD\uFFFD\uFFFD\uFFFD-\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "J2gpHmYnl2OVyD081EX-EUw-u3bI6hnelk_886Cp5fA",
+							"otherinfo": "'h)\\x001ef'\uFFFDc\uFFFD\uFFFD=<\uFFFDE\uFFFD\\x0011L>\uFFFDv\uFFFD\uFFFD\\x0019\u0796O\uFFFD\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "rXoPUe-CqApGkpXfEeYQ1HVrD8eWmjY6tK9tSwwd7iY",
+							"otherinfo": "\uFFFDz\\x000fQ\uF0A8\nF\uFFFD\uFFFD\uFFFD\\x0011\uFFFD\\x0010\uFFFDuk\\x000f\u01D6\uFFFD6:\uFFFD\uFFFDmK\\x000c\\x001d\uFFFD&"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/mentions-legales",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "LyTRsAwCC8ETcR1cWKxuPYExZgbVXx4UNLGO6VNMuWI",
+							"otherinfo": "/$\u0470\\x000c\\x0002\\x000b\uFFFD\\x0013q\\x001d\\X\uFFFDn=\uFFFD1f\\x0006\uFFFD_\\x001e\\x00144\uFFFD\uFFFD\uFFFDSL\uFFFDb"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "_55MGpve4IRec7HLeb6Mczg1laBBmlEFTPLiwHefbTQ",
+							"otherinfo": "\uFFFD\uFFFDL\\x001a\uFFFD\uFFFD\uFFFD\uFFFD^s\uFFFD\uFFFDy\uFFFD\uFFFDs85\uFFFD\uFFFDA\uFFFDQ\\x0005L\uFFFD\uFFFD\uFFFDw\uFFFDm4"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/partenaires",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x6GOMzlu6Rf_Vk6AVESE_nXLHqH_ArXO6IeggLYBDQQ",
+							"otherinfo": "\u01E1\uFFFD39n\uFFFD\\x0017\uFFFDVN\uFFFDTD\uFFFD\uFFFDu\uFFFD\\x001e\uFFFD\uFFFD\\x0002\uFFFD\uFFFD\u81E0\uFFFD\uFFFD\\x0001\r\\x0004"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/politique-accessibilite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "U0zav20ZZO3cEUG91KzVZQWK_hlHWNsjedORvHdRxWs",
+							"otherinfo": "SL\u06BFm\\x0019d\uFFFD\uFFFD\\x0011A\uFFFD\u052C\uFFFDe\\x0005\uFFFD\uFFFD\\x0019GX\uFFFD#y\u04D1\uFFFDwQ\uFFFDk"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "_k454jjooj1WSOvWoY8n_DQsIYHk4gyp8FYmHOa6Ueo",
+							"otherinfo": "\uFFFDN9\uFFFD8\uFFFD=VH\uFFFD\u05A1\uFFFD'\uFFFD4,!\uFFFD\uFFFD\uFFFD\\x000c\uFFFD\uFFFDV&\\x001c\uFFFDQ\uFFFD"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "m8PCGKjrPHOz2m0Dbz_4LSf1fbaF6hszlqLsssVmlcU",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD\\x0018\uFFFD\uFFFD<s\uFFFD\uFFFDm\\x0003o?\uFFFD-'\uFFFD}\uFFFD\uFFFD\uFFFD\\x001b3\uFFFD\uFFFD\uFFFD\uFFFDf\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ymjY6_NSBOQkcgOpZ3xjbExW-o65UsH0d0gmy9tlhEk",
+							"otherinfo": "\uFFFDh\uFFFD\uFFFD\uFFFDR\\x0004\uFFFD$r\\x0003\uFFFDg|clLV\uFFFD\uFFFD\uFFFDR\uFFFD\uFFFDwH&\uFFFD\uFFFDe\uFFFDI"
+						}
+					],
+					"count": "13",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>N\uFFFDl\\na\uFFFD\uFFFD+7\\x0000,b\uFFFD5k\uFFFD\u0155\uFFFDg\uFFFD6\uFFFDe\uFFFDE(QM\uFFFDY</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10024",
+					"alertRef": "10024",
+					"alert": "Information Disclosure - Sensitive Information in URL",
+					"name": "Information Disclosure - Sensitive Information in URL",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/ecolabel-europeen?search_critere%5B_token%5D=1b3a97c511a419ef41dcb8df0e.OW-SZicSgiURGQ2Cqf7v9FM3EByUm7UnILMi6i9BskU.Dwb7Mk8jzFFce3jx4Imjljd6KVvb_uBfY_B9vEp4yABpKNkkS0PpYFtBYg&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1",
+							"method": "GET",
+							"param": "search_critere[_token]",
+							"attack": "",
+							"evidence": "search_critere[_token]",
+							"otherinfo": "The URL contains potentially sensitive information. The following string was found via the pattern: token\nsearch_critere[_token]"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/solutions-techniques?search_solution%5B_token%5D=30a758a25d38fd4312.cf43dYcwtg-6FjOccOxDh1RWg6u_2od452vIYxvEycQ.HKpUDNJj00DDJkCoIIgBwQNi0-jZn_0ogSD5Wi2v-Y49zGhE9GTGe8x_UA&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP",
+							"method": "GET",
+							"param": "search_solution[_token]",
+							"attack": "",
+							"evidence": "search_solution[_token]",
+							"otherinfo": "The URL contains potentially sensitive information. The following string was found via the pattern: token\nsearch_solution[_token]"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen?search_critere%5B_token%5D=9ba27615a004.a3wrGwe7yk5z5CRUsOEiL968K0N84csdtWnR81IHaiI.XRVCT2-KhDo-hlEn-ZZuTbrxEgQzhJ5l9iqOpTc-EGc7O2BZa-qhCzm8Sw&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1",
+							"method": "GET",
+							"param": "search_critere[_token]",
+							"attack": "",
+							"evidence": "search_critere[_token]",
+							"otherinfo": "The URL contains potentially sensitive information. The following string was found via the pattern: token\nsearch_critere[_token]"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques?search_solution%5B_token%5D=25e8a0f4188f.K0wRY7Lja5NmaeDmgqBZt7grm4XH3HBWgHjPfXFXsIo.RhhyGuewDtwfWZPS0sQb8e8fy8ahmQoG5jP-REc8gMBnfk5Swbcb5xAAgw&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP",
+							"method": "GET",
+							"param": "search_solution[_token]",
+							"attack": "",
+							"evidence": "search_solution[_token]",
+							"otherinfo": "The URL contains potentially sensitive information. The following string was found via the pattern: token\nsearch_solution[_token]"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/ecolabel-europeen?search_critere%5B_token%5D=c.IIRUl-YZw5AyFtTQQ3-I-mzs8QjoTx8ksApCxJLPevk.Fu09w44ojeR_dKGjCgjEmAihyE-nKkpc80kdkvf2ALxwwx_Vikio1XhOuw&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1",
+							"method": "GET",
+							"param": "search_critere[_token]",
+							"attack": "",
+							"evidence": "search_critere[_token]",
+							"otherinfo": "The URL contains potentially sensitive information. The following string was found via the pattern: token\nsearch_critere[_token]"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/solutions-techniques?search_solution%5B_token%5D=d3c5a2f8d4.qVXAro8s68OuUAUVmR2omC9DXBjr30KMIZBSNw73lsw.xAGj19p_jozXYHYhyXnq3nh3DFuNmjjcR9tjDjicpoblZ5-f_Hibt9g5Zg&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP",
+							"method": "GET",
+							"param": "search_solution[_token]",
+							"attack": "",
+							"evidence": "search_solution[_token]",
+							"otherinfo": "The URL contains potentially sensitive information. The following string was found via the pattern: token\nsearch_solution[_token]"
+						}
+					],
+					"count": "6",
+					"solution": "<p>Do not pass sensitive information in URIs.</p>",
+					"otherinfo": "<p>The URL contains potentially sensitive information. The following string was found via the pattern: token</p><p>search_critere[_token]</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1952"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/js/html5shiv.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"                                     No route found for &quot;GET https://www.ecolabeltoolbox.com/fr/js/html5shiv.js&quot; (from\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/js/respond.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"                                     No route found for &quot;GET https://www.ecolabeltoolbox.com/fr/js/respond.min.js&quot; (fr\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/js/eltb_main.js?2.3.0",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"// Sprite - inpired from https://github.com/leaflet-extras/leaflet.sprite\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/js/eltb_site.js?2.3.0",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "username",
+							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected in the element starting with: \"        $('#username').focus();\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/js/html5shiv.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"c=d.insertBefore(c.lastChild,d.firstChild);b.hasCSS=!!c}g||t(a,b);return a}var k=l.html5||{},s=/^<|^(?:button|map|select|textare\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/js/respond.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected 2 times, the first in the element starting with: \"/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Za\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/plugins/jquery.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 2 times, the first in the element starting with: \"(function(e,t){var n,r,i=typeof t,o=e.location,a=e.document,s=a.documentElement,l=e.jQuery,u=e.$,c={},p=[],f=\"1.10.2\",d=p.concat\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/plugins/jquery.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "username",
+							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected in the element starting with: \"u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(l):n[l]=null,p.push(o))}},_evalUrl:function(e){r\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/plugins/lightbox/js/lightbox-2.6.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"(function(){var b,d,c;b=jQuery;c=(function(){function b(){this.fadeDuration=500;this.fitImagesInViewport=true;this.resizeDuratio\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/js/html5shiv.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"                                     No route found for &quot;GET https://www.ecolabeltoolbox.com/sitemap.xml/js/html5shiv.js&qu\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/js/respond.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Db",
+							"otherinfo": "The following pattern was used: \\bDB\\b and was detected in the element starting with: \"                                        <input type=\"hidden\" name=\"_csrf_token\" value=\"ef1d8ef68d056c3d.T4yxxDNJ1fNtIq7uXV8-Zj58\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/js/respond.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"                                     No route found for &quot;GET https://www.ecolabeltoolbox.com/sitemap.xml/js/respond.min.js&\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"                                     No route found for &quot;GET https://www.ecolabeltoolbox.com/fr/js/html5shiv.js&quot; (from\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "287"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Change language\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/mentions-legales",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/partenaires",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"fa fa-flag\"  title=\"Changer de langue\"></span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "12",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/creation-compte-utilisateur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/espace-de-travail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/outils-marketing",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/reset-password",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						}
+					],
+					"count": "10",
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/robots.txt",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=29030400, public",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "2mohcf854f8rtggf98tsemve5n",
+							"otherinfo": "\ncookie:PHPSESSID"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "f22j3dmesu3vk0kn2nip86ksve",
+							"otherinfo": "\ncookie:PHPSESSID"
+						}
+					],
+					"count": "2",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p></p><p>cookie:PHPSESSID</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=29030400",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10031",
+					"alertRef": "10031",
+					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
+					"name": "User Controllable HTML Element Attribute (Potential XSS)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/ecolabel-europeen?search_critere%5B_token%5D=9ba27615a004.a3wrGwe7yk5z5CRUsOEiL968K0N84csdtWnR81IHaiI.XRVCT2-KhDo-hlEn-ZZuTbrxEgQzhJ5l9iqOpTc-EGc7O2BZa-qhCzm8Sw&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1",
+							"method": "GET",
+							"param": "search_critere[libelle]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/fr/ecolabel-europeen?search_critere%5B_token%5D=9ba27615a004.a3wrGwe7yk5z5CRUsOEiL968K0N84csdtWnR81IHaiI.XRVCT2-KhDo-hlEn-ZZuTbrxEgQzhJ5l9iqOpTc-EGc7O2BZa-qhCzm8Sw&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nsearch_critere[libelle]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques?search_solution%5B_token%5D=25e8a0f4188f.K0wRY7Lja5NmaeDmgqBZt7grm4XH3HBWgHjPfXFXsIo.RhhyGuewDtwfWZPS0sQb8e8fy8ahmQoG5jP-REc8gMBnfk5Swbcb5xAAgw&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP",
+							"method": "GET",
+							"param": "search_solution[criteres]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/fr/solutions-techniques?search_solution%5B_token%5D=25e8a0f4188f.K0wRY7Lja5NmaeDmgqBZt7grm4XH3HBWgHjPfXFXsIo.RhhyGuewDtwfWZPS0sQb8e8fy8ahmQoG5jP-REc8gMBnfk5Swbcb5xAAgw&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nsearch_solution[criteres]=188\r\n\r\nThe user-controlled value was:\r\n188"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/fr/solutions-techniques?search_solution%5B_token%5D=25e8a0f4188f.K0wRY7Lja5NmaeDmgqBZt7grm4XH3HBWgHjPfXFXsIo.RhhyGuewDtwfWZPS0sQb8e8fy8ahmQoG5jP-REc8gMBnfk5Swbcb5xAAgw&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP",
+							"method": "GET",
+							"param": "search_solution[libelle]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/fr/solutions-techniques?search_solution%5B_token%5D=25e8a0f4188f.K0wRY7Lja5NmaeDmgqBZt7grm4XH3HBWgHjPfXFXsIo.RhhyGuewDtwfWZPS0sQb8e8fy8ahmQoG5jP-REc8gMBnfk5Swbcb5xAAgw&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nsearch_solution[libelle]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/ecolabel-europeen?search_critere%5B_token%5D=c.IIRUl-YZw5AyFtTQQ3-I-mzs8QjoTx8ksApCxJLPevk.Fu09w44ojeR_dKGjCgjEmAihyE-nKkpc80kdkvf2ALxwwx_Vikio1XhOuw&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1",
+							"method": "GET",
+							"param": "search_critere[libelle]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/sitemap.xml/ecolabel-europeen?search_critere%5B_token%5D=c.IIRUl-YZw5AyFtTQQ3-I-mzs8QjoTx8ksApCxJLPevk.Fu09w44ojeR_dKGjCgjEmAihyE-nKkpc80kdkvf2ALxwwx_Vikio1XhOuw&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nsearch_critere[libelle]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/solutions-techniques?search_solution%5B_token%5D=d3c5a2f8d4.qVXAro8s68OuUAUVmR2omC9DXBjr30KMIZBSNw73lsw.xAGj19p_jozXYHYhyXnq3nh3DFuNmjjcR9tjDjicpoblZ5-f_Hibt9g5Zg&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP",
+							"method": "GET",
+							"param": "search_solution[criteres]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/sitemap.xml/solutions-techniques?search_solution%5B_token%5D=d3c5a2f8d4.qVXAro8s68OuUAUVmR2omC9DXBjr30KMIZBSNw73lsw.xAGj19p_jozXYHYhyXnq3nh3DFuNmjjcR9tjDjicpoblZ5-f_Hibt9g5Zg&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nsearch_solution[criteres]=188\r\n\r\nThe user-controlled value was:\r\n188"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/sitemap.xml/solutions-techniques?search_solution%5B_token%5D=d3c5a2f8d4.qVXAro8s68OuUAUVmR2omC9DXBjr30KMIZBSNw73lsw.xAGj19p_jozXYHYhyXnq3nh3DFuNmjjcR9tjDjicpoblZ5-f_Hibt9g5Zg&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP",
+							"method": "GET",
+							"param": "search_solution[libelle]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/sitemap.xml/solutions-techniques?search_solution%5B_token%5D=d3c5a2f8d4.qVXAro8s68OuUAUVmR2omC9DXBjr30KMIZBSNw73lsw.xAGj19p_jozXYHYhyXnq3nh3DFuNmjjcR9tjDjicpoblZ5-f_Hibt9g5Zg&search_solution%5Bcategorie%5D=1&search_solution%5Bcriteres%5D=188&search_solution%5Blibelle%5D=ZAP\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nsearch_solution[libelle]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[adresse]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[adresse]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[codepostal]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[codepostal]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[email]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[email]=foo-bar@example.com\r\n\r\nThe user-controlled value was:\r\nfoo-bar@example.com"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[firstname]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[firstname]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[fonction]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[fonction]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[name]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[name]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[pays]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[pays]=AT\r\n\r\nThe user-controlled value was:\r\nat"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[plainPassword][first]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[plainPassword][first]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[plainPassword][second]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[plainPassword][second]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[society]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[society]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[telephone]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[telephone]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecolabeltoolbox.com/en/creation-compte-utilisateur",
+							"method": "POST",
+							"param": "registration_form[ville]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecolabeltoolbox.com/en/creation-compte-utilisateur\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nregistration_form[ville]=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						}
+					],
+					"count": "18",
+					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.ecolabeltoolbox.com/fr/ecolabel-europeen?search_critere%5B_token%5D=9ba27615a004.a3wrGwe7yk5z5CRUsOEiL968K0N84csdtWnR81IHaiI.XRVCT2-KhDo-hlEn-ZZuTbrxEgQzhJ5l9iqOpTc-EGc7O2BZa-qhCzm8Sw&search_critere%5Bcategorie%5D=1&search_critere%5Blibelle%5D=ZAP&search_critere%5Bstatut%5D=0&search_critere%5Btype%5D=1</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [input] tag [value] attribute </p><p></p><p>The user input found was:</p><p>search_critere[libelle]=ZAP</p><p></p><p>The user-controlled value was:</p><p>zap</p>",
+					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
+					"cweid": "20",
+					"wascid": "20",
+					"sourceid": "1135"
+				}
+			]
+		}
+	]
+}
