@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.ademe-investissement.fr",
+        "size": 2875.1,
+        "nodes": 385,
+        "requests": 29,
+        "grade": "C",
+        "score": 66.0,
+        "ges": 1.68,
+        "water": 2.52,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 22:27:02.134742",
+        "page_type": "website"
+    }
+]
