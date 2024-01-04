@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.agirpourlatransition.ademe.fr",
+        "size": 1404.555,
+        "nodes": 468,
+        "requests": 43,
+        "grade": "C",
+        "score": 64.0,
+        "ges": 1.72,
+        "water": 2.58,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 22:43:34.769463",
+        "page_type": null
+    }
+]

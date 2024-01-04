@@ -1,0 +1,1103 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered + downgraded to weaker protocol"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
+          }
+,         {
+              "id"           : "cipher-tls1_2_xc030",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH 521   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipher-tls1_2_x9f",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   x9f     DHE-RSA-AES256-GCM-SHA384         DH 2048    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipher-tls1_2_xc02f",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH 521   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_2_x9e",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   x9e     DHE-RSA-AES128-GCM-SHA256         DH 2048    AESGCM      128      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "supportedciphers_TLSv1_2",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "secp256k1 prime256v1 secp384r1 secp521r1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'status request/#5' 'heartbeat/#15' 'application layer protocol negotiation/#16'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 300 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "cert_compression",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "N/A"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA384 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "91C93B13BC088F83941B4F328424C9E3"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "16"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1DA968E2262A808A9D6591ED98EC52A87421892F"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "4FD3CBA32C9D548B4B52EEF310B55F4365A8CD012293A3C7D6D917385165B871"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prod-pns.ademe-dri.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "default.produhost.net"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "prod-pns.ademe-dri.fr agirpourlatransition.ademe.fr collectivites.ademe.fr entreprises.ademe.fr particuliers.ademe.fr services.ademe.fr www.agirpourlatransition.ademe.fr www.collectivites.ademe.fr www.entreprises.ademe.fr www.particuliers.ademe.fr www.services.ademe.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN (SNI mandatory)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "292 >= 60 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-10-10 00:00"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-10-22 23:59"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://ocsp.sectigo.com"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Gandi RSA Domain Validation Secure Server CA 3 (Gandi from FR)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "F0104FF17274608F1A18A1E1EABF8E68A51F500A87E2EFA22ECB622763FEF4CF"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-08-02 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2033-08-01 23:59"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Gandi RSA Domain Validation Secure Server CA 3 <-- USERTrust RSA Certification Authority"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "301 Moved Permanently ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-1 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1704408401"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "only for this domain"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Apache"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "security_headers",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable , timed out"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable, no RSA key transport cipher"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "no protocol below TLS 1.2 offered"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=4FD3CBA32C9D548B4B52EEF310B55F4365A8CD012293A3C7D6D917385165B871"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "RFC3526/Oakley Group 14"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "not vulnerable, no SSL3 or TLS1"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 DHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 DHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "27"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "36"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "93"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "A+"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "www.agirpourlatransition.ademe.fr/185.86.179.42",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "108"
+          }
+]

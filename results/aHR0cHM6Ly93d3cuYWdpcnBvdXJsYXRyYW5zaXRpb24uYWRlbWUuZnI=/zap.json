@@ -1,0 +1,697 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Thu, 4 Jan 2024 22:44:58",
+	"site":[ 
+		{
+			"@name": "https://www.agirpourlatransition.ademe.fr",
+			"@host": "www.agirpourlatransition.ademe.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-4",
+					"alert": "CSP: Wildcard Directive",
+					"name": "CSP: Wildcard Directive",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.ademe.fr data: blob: *.contentsquare.net; child-src 'self' blob:; connect-src 'self' *.contentsquare.net *.nr-data.net *.ademe.fr *.google-analytics.com *.xiti.com https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html; frame-src 'self' https://csxd.agirpourlatransition.ademe.fr *.google.com/ https://www.youtube-nocookie.com *.youtube.com *.openstreetmap.fr blob: *.ademe.fr https://player.octopus.saooti.com/ https://impactco2.fr/ https://www.academie-nr.org/ https://www.linfodurable.fr/ https://nosgestesclimat.fr/ data: https://*.fls.doubleclick.net https://impactco2.fr https://monimpacttransport.fr https://netlify.app fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://www.monecowatt.fr https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://c1.adform.net/ https://server.seadform.net https://server.adform.net; img-src 'self' *.contentsquare.net *.w3.org https://i.ytimg.com https://*.tarteaucitron.io *.xiti.com https://coql.agirpourlatransition.ademe.fr data: https://prod-r2da-api.ademe-dri.fr https://tarteaucitron.io https://www.googletagmanager.com/ https://www.facebook.com https://server.seadform.net; object-src 'none'; script-src 'self' 'unsafe-inline' t.contentsquare.net https://contentsquare.com/ https://www.gstatic.com/ *.ademe.fr https://www.googletagmanager.com *.googleapis.com *.google-analytics.com https://stats.g.doubleclick.net *.hotjar.com *.newrelic.com *.aticdn.net *.nr-data.net app.contentsquare.com https://monimpacttransport.fr/ https://impactco2.fr/ fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://*.tarteaucitron.io https://vertvolt.netlify.app/ https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://infographies-interactives-agir.ademe.fr/decarbonation_industrie/index.html/ https://server.adform.net/ https://s2.adform.net/banners/scripts/st/trackpoint-async.js/ https://s2.adform.net/ *.adform.net https://c1.adform.net/ https://connect.facebook.net/en_US/fbevents.js https://coql.agirpourlatransition.ademe.fr cdn.rawgit.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tarteaucitron.io https://unpkg.com https://www.google.com platform.twitter.com; script-src-elem 'self' 'unsafe-inline' t.contentsquare.net https://contentsquare.com/ https://www.gstatic.com/ *.ademe.fr https://www.googletagmanager.com *.googleapis.com *.google-analytics.com https://stats.g.doubleclick.net *.hotjar.com *.newrelic.com *.aticdn.net *.nr-data.net app.contentsquare.com https://impactco2.fr/ https://www.youtube.com/ fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://*.tarteaucitron.io https://vertvolt.netlify.app/ https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://infographies-interactives-agir.ademe.fr/decarbonation_industrie/index.html/ https://server.adform.net/ https://s2.adform.net/banners/scripts/st/trackpoint-async.js/ https://s2.adform.net/ *.adform.net https://c1.adform.net/ https://connect.facebook.net/en_US/fbevents.js https://connect.facebook.net cdn.rawgit.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tarteaucitron.io https://unpkg.com https://www.google.com platform.twitter.com; style-src 'self' 'unsafe-inline' https://tarteaucitron.io https://*.tarteaucitron.io cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src-attr 'self' 'unsafe-inline'; worker-src * blob:; frame-ancestors 'self'; report-uri https://agirpourlatransition.ademe.fr/report-uri/enforce",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: \nworker-src, form-action\n\nThe directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </p><p>worker-src, form-action</p><p></p><p>The directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-5",
+					"alert": "CSP: script-src unsafe-inline",
+					"name": "CSP: script-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.ademe.fr data: blob: *.contentsquare.net; child-src 'self' blob:; connect-src 'self' *.contentsquare.net *.nr-data.net *.ademe.fr *.google-analytics.com *.xiti.com https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html; frame-src 'self' https://csxd.agirpourlatransition.ademe.fr *.google.com/ https://www.youtube-nocookie.com *.youtube.com *.openstreetmap.fr blob: *.ademe.fr https://player.octopus.saooti.com/ https://impactco2.fr/ https://www.academie-nr.org/ https://www.linfodurable.fr/ https://nosgestesclimat.fr/ data: https://*.fls.doubleclick.net https://impactco2.fr https://monimpacttransport.fr https://netlify.app fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://www.monecowatt.fr https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://c1.adform.net/ https://server.seadform.net https://server.adform.net; img-src 'self' *.contentsquare.net *.w3.org https://i.ytimg.com https://*.tarteaucitron.io *.xiti.com https://coql.agirpourlatransition.ademe.fr data: https://prod-r2da-api.ademe-dri.fr https://tarteaucitron.io https://www.googletagmanager.com/ https://www.facebook.com https://server.seadform.net; object-src 'none'; script-src 'self' 'unsafe-inline' t.contentsquare.net https://contentsquare.com/ https://www.gstatic.com/ *.ademe.fr https://www.googletagmanager.com *.googleapis.com *.google-analytics.com https://stats.g.doubleclick.net *.hotjar.com *.newrelic.com *.aticdn.net *.nr-data.net app.contentsquare.com https://monimpacttransport.fr/ https://impactco2.fr/ fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://*.tarteaucitron.io https://vertvolt.netlify.app/ https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://infographies-interactives-agir.ademe.fr/decarbonation_industrie/index.html/ https://server.adform.net/ https://s2.adform.net/banners/scripts/st/trackpoint-async.js/ https://s2.adform.net/ *.adform.net https://c1.adform.net/ https://connect.facebook.net/en_US/fbevents.js https://coql.agirpourlatransition.ademe.fr cdn.rawgit.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tarteaucitron.io https://unpkg.com https://www.google.com platform.twitter.com; script-src-elem 'self' 'unsafe-inline' t.contentsquare.net https://contentsquare.com/ https://www.gstatic.com/ *.ademe.fr https://www.googletagmanager.com *.googleapis.com *.google-analytics.com https://stats.g.doubleclick.net *.hotjar.com *.newrelic.com *.aticdn.net *.nr-data.net app.contentsquare.com https://impactco2.fr/ https://www.youtube.com/ fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://*.tarteaucitron.io https://vertvolt.netlify.app/ https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://infographies-interactives-agir.ademe.fr/decarbonation_industrie/index.html/ https://server.adform.net/ https://s2.adform.net/banners/scripts/st/trackpoint-async.js/ https://s2.adform.net/ *.adform.net https://c1.adform.net/ https://connect.facebook.net/en_US/fbevents.js https://connect.facebook.net cdn.rawgit.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tarteaucitron.io https://unpkg.com https://www.google.com platform.twitter.com; style-src 'self' 'unsafe-inline' https://tarteaucitron.io https://*.tarteaucitron.io cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src-attr 'self' 'unsafe-inline'; worker-src * blob:; frame-ancestors 'self'; report-uri https://agirpourlatransition.ademe.fr/report-uri/enforce",
+							"otherinfo": "script-src includes unsafe-inline."
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>script-src includes unsafe-inline.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-6",
+					"alert": "CSP: style-src unsafe-inline",
+					"name": "CSP: style-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.ademe.fr data: blob: *.contentsquare.net; child-src 'self' blob:; connect-src 'self' *.contentsquare.net *.nr-data.net *.ademe.fr *.google-analytics.com *.xiti.com https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html; frame-src 'self' https://csxd.agirpourlatransition.ademe.fr *.google.com/ https://www.youtube-nocookie.com *.youtube.com *.openstreetmap.fr blob: *.ademe.fr https://player.octopus.saooti.com/ https://impactco2.fr/ https://www.academie-nr.org/ https://www.linfodurable.fr/ https://nosgestesclimat.fr/ data: https://*.fls.doubleclick.net https://impactco2.fr https://monimpacttransport.fr https://netlify.app fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://www.monecowatt.fr https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://c1.adform.net/ https://server.seadform.net https://server.adform.net; img-src 'self' *.contentsquare.net *.w3.org https://i.ytimg.com https://*.tarteaucitron.io *.xiti.com https://coql.agirpourlatransition.ademe.fr data: https://prod-r2da-api.ademe-dri.fr https://tarteaucitron.io https://www.googletagmanager.com/ https://www.facebook.com https://server.seadform.net; object-src 'none'; script-src 'self' 'unsafe-inline' t.contentsquare.net https://contentsquare.com/ https://www.gstatic.com/ *.ademe.fr https://www.googletagmanager.com *.googleapis.com *.google-analytics.com https://stats.g.doubleclick.net *.hotjar.com *.newrelic.com *.aticdn.net *.nr-data.net app.contentsquare.com https://monimpacttransport.fr/ https://impactco2.fr/ fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://*.tarteaucitron.io https://vertvolt.netlify.app/ https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://infographies-interactives-agir.ademe.fr/decarbonation_industrie/index.html/ https://server.adform.net/ https://s2.adform.net/banners/scripts/st/trackpoint-async.js/ https://s2.adform.net/ *.adform.net https://c1.adform.net/ https://connect.facebook.net/en_US/fbevents.js https://coql.agirpourlatransition.ademe.fr cdn.rawgit.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tarteaucitron.io https://unpkg.com https://www.google.com platform.twitter.com; script-src-elem 'self' 'unsafe-inline' t.contentsquare.net https://contentsquare.com/ https://www.gstatic.com/ *.ademe.fr https://www.googletagmanager.com *.googleapis.com *.google-analytics.com https://stats.g.doubleclick.net *.hotjar.com *.newrelic.com *.aticdn.net *.nr-data.net app.contentsquare.com https://impactco2.fr/ https://www.youtube.com/ fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://*.tarteaucitron.io https://vertvolt.netlify.app/ https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://infographies-interactives-agir.ademe.fr/decarbonation_industrie/index.html/ https://server.adform.net/ https://s2.adform.net/banners/scripts/st/trackpoint-async.js/ https://s2.adform.net/ *.adform.net https://c1.adform.net/ https://connect.facebook.net/en_US/fbevents.js https://connect.facebook.net cdn.rawgit.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tarteaucitron.io https://unpkg.com https://www.google.com platform.twitter.com; style-src 'self' 'unsafe-inline' https://tarteaucitron.io https://*.tarteaucitron.io cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src-attr 'self' 'unsafe-inline'; worker-src * blob:; frame-ancestors 'self'; report-uri https://agirpourlatransition.ademe.fr/report-uri/enforce",
+							"otherinfo": "style-src includes unsafe-inline."
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10099",
+					"alertRef": "10099",
+					"alert": "Source Code Disclosure - Java",
+					"name": "Source Code Disclosure - Java",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Application Source Code was disclosed by the web server - Java</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "class a{constructor(e){try{if(\"object\"!=typeof e)return(0,n.Z)(\"shared context requires an object as input\");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)(\"An error occured while setting SharedContext\",e)}}}},8e3:(e,t,r)=>{\"use strict\";r.d(t,{L:()=>d,R:()=>c});var n=r(8325),i=r(1284),a=r(4322),o=r(3325);const s={};function c(e,t){const r={staged:!1,priority:o.p[t]||0};u(e),s[e].get(t)||s[e].set(t,r)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:\"\",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:\"feature\";if(u(e),!e||!s[e].get(t))return o(t);s[e].get(t).staged=!0;const r=[...s[e]];function o(t){const r=e?n.ee.get(e):n.ee,o=a.X.handlers;if(r.backlog&&o){var s=r.backlog[t],c=o[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete o[t],r.backlog[t]=null,r.emit(\"drain-\"+t,[])}}r.every((e=>{let[t,r]=e;return r.staged}))&&(r.sort(((e,t)=>e[1].priority-t[1].priority)),r.forEach((t=>{let[r]=t;s[e].delete(r),o(r)})))}function l(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],a=e[3],o=e[2];i.apply(a,o)}}))}},8325:(e,t,r)=>{\"use strict\";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),a=r(234);class o{constructor(e){this.contextId=e}}var s=r(3117);const c=\"nr@context:\".concat(s.a),u=function e(t,r){var n={},s={},d={},f=!1;try{f=16===r.length&&(0,a.OP)(r).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(u.aborted&&!i)return;t&&a&&t.emit(e,r,n);for(var o=p(n),c=v(e),d=c.length,l=0;l<d;l++)c[l].apply(o,r);var f=b()[s[e]];f&&f.push([g,e,r,o]);return o},get:m,listeners:v,context:p,buffer:function(e,t){const r=b();if(t=t||\"feature\",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:r,backlog:f?{}:t&&\"object\"==typeof t.backlog?t.backlog:{}};return g;function p(e){return e&&e instanceof o?e:e?(0,i.X)(e,c,(()=>new o(c))):new o(c)}function h(e,t){n[e]=v(e).concat(t)}function v(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(g,t)}function b(){return g.backlog}}(void 0,\"globalEE\"),d=(0,n.fP)();function l(){u.aborted=!0,u.backlog={}}d.ee||(d.ee=u)},5546:(e,t,r)=>{\"use strict\";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get(\"handle\");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{\"use strict\";r.d(t,{X:()=>a});var n=r(5546);a.on=o;var i=a.handlers={};function a(e,t,r,a){o(a||n.E,i,e,t,r)}function o(e,t,r,i,a){a||(a=\"feature\"),e||(e=n.E);var o=t[a]=t[a]||{};(o[r]=o[r]||[]).push([e,i])}},3239:(e,t,r)=>{\"use strict\";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>o});var n=r(385);let i=!1,a=!1;try{const e={get passive(){return i=!0,!1},get signal(){return a=!0,!1}};n._A.addEventListener(\"test\",null,e),n._A.removeEventListener(\"test\",null,e)}catch(e){}function o(e,t){return i||a?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,o(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,o(r,n))}},3117:(e,t,r)=>{\"use strict\";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{\"use strict\";r.d(t,{Rl:()=>o,ky:()=>s});var n=r(385);const i=\"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx\";function a(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split(\"\").map((e=>\"x\"===e?a(t,r++).toString(16):\"y\"===e?(3&a()|8).toString(16):e)).join(\"\")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var s=0;s<e;s++)o.push(a(r,++i).toString(16));return o.join(\"\")}},7056:(e,t,r)=>{\"use strict\";r.d(t,{Bq:()=>n,Hb:()=>a,oD:()=>i});const n=\"NRBA\",i=144e5,a=18e5},7894:(e,t,r)=>{\"use strict\";function n(){return Math.round(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{\"use strict\";function n(e,t){\"function\"==typeof console.warn&&(console.warn(\"New Relic: \".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{\"use strict\";r.d(t,{N:()=>d,T:()=>l});var n=r(8325),i=r(5546),a=r(3325),o=r(385);const s=\"newrelic\";const c={stn:[a.D.sessionTrace],err:[a.D.jserrors,a.D.metrics],ins:[a.D.pageAction],spa:[a.D.spa],sr:[a.D.sessionReplay,a.D.sessionTrace]},u=new Set;function d(e,t){const r=n.ee.get(t);e&&\"object\"==typeof e&&(u.has(t)||(Object.entries(e).forEach((e=>{let[t,n]=e;c[t]?c[t].forEach((e=>{n?(0,i.p)(\"feat-\"+t,[],void 0,e,r):(0,i.p)(\"block-\"+t,[],void 0,e,r),(0,i.p)(\"rumresp-\"+t,[Boolean(n)],void 0,e,r)})):n&&(0,i.p)(\"feat-\"+t,[],void 0,void 0,r),l[t]=Boolean(n)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)(\"rumresp-\"+e,[!1],void 0,t,r))),l[e]=!1)})),u.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{o._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,r)=>{\"use strict\";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,r)=>{\"use strict\";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{\"use strict\";r.d(t,{P:()=>a});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if(\"object\"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function a(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit(\"internal-error\",[e])}catch(e){}}}},3960:(e,t,r)=>{\"use strict\";r.d(t,{KB:()=>o,b2:()=>a});var n=r(3239);function i(){return\"undefined\"==typeof document||\"complete\"===document.readyState}function a(e,t){if(i())return e();(0,n.bP)(\"load\",e,t)}function o(e){if(i())return e();(0,n.iz)(\"DOMContentLoaded\",e)}},8632:(e,t,r)=>{\"use strict\";r.d(t,{EZ:()=>d,ce:()=>a,ek:()=>u,fP:()=>o,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(7894),i=r(385);const a={beacon:\"bam.nr-data.net\",errorBeacon:\"bam.nr-data.net\"};function o(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=o();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let r=o();r.initializedAgents??={},t.initializedAt={ms:(0,n.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=o();return t.initializedAgents?.[e]}function d(e,t){o()[e]=t}function l(){return function(){let e=o();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=o();const t=e.init||{};e.init={...t}}(),s(),function(){let e=o();const t=e.loader_config||{};e.loader_config={...t}}(),o()}},7956:(e,t,r)=>{\"use strict\";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)(\"visibilitychange\",(function(){if(t)return void(\"hidden\"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{\"use strict\";r.d(t,{gF:()=>a,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>o});const n=r(3325).D.metrics,i=\"sm\",a=\"cm\",o=\"storeSupportabilityMetrics\",s=\"storeEventMetrics\"},7633:(e,t,r)=>{\"use strict\";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{\"use strict\";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},5938:(e,t,r)=>{\"use strict\";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7530:(e,t,r)=>{\"use strict\";r.d(t,{j:()=>b});var n=r(3325),i=r(234),a=r(5546),o=r(8325),s=r(7894),c=r(8e3),u=r(3960),d=r(385),l=r(50),f=r(3081),g=r(8632);function p(){const e=(0,g.gG)();[\"setErrorHandler\",\"finished\",\"addToTrace\",\"addRelease\",\"addPageAction\",\"setCurrentRouteName\",\"setPageViewName\",\"setCustomAttribute\",\"interaction\",\"noticeError\",\"setUserId\",\"setApplicationVersion\",\"start\",\"recordReplay\",\"pauseReplay\"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let a=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&a.push(e.api[t](...n))})),a.length>1?a:a[0]}(t,...n)}}))}var h=r(2825);const v=e=>{const t=e.startsWith(\"http\");e+=\"/\",r.p=t?e:\"https://\"+e};let m=!1;function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,y=arguments.length>3?arguments[3]:void 0,{init:w,info:A,loader_config:_,runtime:x={loaderType:b},exposed:D=!0}=t;const k=(0,g.gG)();A||(w=k.init,A=k.info,_=k.loader_config),(0,i.Dg)(e.agentIdentifier,w||{}),(0,i.GE)(e.agentIdentifier,_||{}),A.jsAttributes??={},d.v6&&(A.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,A);const E=(0,i.P_)(e.agentIdentifier),j=[A.beacon,A.errorBeacon];m||(E.proxy.assets&&(v(E.proxy.assets),j.push(E.proxy.assets)),E.proxy.beacon&&j.push(E.proxy.beacon),p(),(0,g.EZ)(\"activatedFeatures\",h.T)),x.denyList=[...E.ajax.deny_list||[],...E.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,x),void 0===e.api&&(e.api=function(e,t){t||(0,c.R)(e,\"api\");const g={};var p=o.ee.get(e),h=p.get(\"tracer\"),v=\"api-\",m=v+\"ixn-\";function b(t,r,n,a){const o=(0,i.C5)(e);return null===r?delete o.jsAttributes[t]:(0,i.CX)(e,{...o,jsAttributes:{...o.jsAttributes,[t]:r}}),A(v,n,!0,a||null===r?\"session\":void 0)(t,r)}function y(){}[\"setErrorHandler\",\"finished\",\"addToTrace\",\"addRelease\"].forEach((e=>{g[e]=A(v,e,!0,\"api\")})),g.addPageAction=A(v,\"addPageAction\",!0,n.D.pageAction),g.setCurrentRouteName=A(v,\"routeName\",!0,n.D.spa),g.setPageViewName=function(t,r){if(\"string\"==typeof t)return\"/\"!==t.charAt(0)&&(t=\"/\"+t),(0,i.OP)(e).customTransaction=(r||\"http://custom.transaction\")+t,A(v,\"setPageViewName\",!0)()},g.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(\"string\"==typeof e){if([\"string\",\"number\",\"boolean\"].includes(typeof t)||null===t)return b(e,t,\"setCustomAttribute\",r);(0,l.Z)(\"Failed to execute setCustomAttribute.\\nNon-null value must be a string, number or boolean type, but a type of <\".concat(typeof t,\"> was provided.\"))}else(0,l.Z)(\"Failed to execute setCustomAttribute.\\nName must be a string type, but a type of <\".concat(typeof e,\"> was provided.\"))},g.setUserId=function(e){if(\"string\"==typeof e||null===e)return b(\"enduser.id\",e,\"setUserId\",!0);(0,l.Z)(\"Failed to execute setUserId.\\nNon-null value must be a string type, but a type of <\".concat(typeof e,\"> was provided.\"))},g.setApplicationVersion=function(e){if(\"string\"==typeof e||null===e)return b(\"application.version\",e,\"setApplicationVersion\",!1);(0,l.Z)(\"Failed to execute setApplicationVersion. Expected <String | null>, but got <\".concat(typeof e,\">.\"))},g.start=e=>{try{const t=e?\"defined\":\"undefined\";(0,a.p)(f.xS,[\"API/start/\".concat(t,\"/called\")],void 0,n.D.metrics,p);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,l.Z)(\"Invalid feature name supplied. Acceptable feature names are: \".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{p.emit(\"\".concat(e,\"-opt-in\"))}))}catch(e){(0,l.Z)(\"An unexpected issue occurred\",e)}},g.recordReplay=function(){(0,a.p)(f.xS,[\"API/recordReplay/called\"],void 0,n.D.metrics,p),(0,a.p)(\"recordReplay\",[],void 0,n.D.sessionReplay,p)},g.pauseReplay=function(){(0,a.p)(f.xS,[\"API/pauseReplay/called\"],void 0,n.D.metrics,p),(0,a.p)(\"pauseReplay\",[],void 0,n.D.sessionReplay,p)},g.interaction=function(){return(new y).get()};var w=y.prototype={createTracer:function(e,t){var r={},i=this,o=\"function\"==typeof t;return(0,a.p)(f.xS,[\"API/createTracer/called\"],void 0,n.D.metrics,p),(0,a.p)(m+\"tracer\",[(0,s.z)(),e,r],i,n.D.spa,p),function(){if(h.emit((o?\"\":\"no-\")+\"fn-start\",[(0,s.z)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){throw h.emit(\"fn-err\",[arguments,this,e],r),e}finally{h.emit(\"fn-end\",[(0,s.z)()],r)}}}};function A(e,t,r,i){return function(){return(0,a.p)(f.xS,[\"API/\"+t+\"/called\"],void 0,n.D.metrics,p),i&&(0,a.p)(e+t,[(0,s.z)(),...arguments],r?null:this,i,p),r?void 0:this}}function _(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,c.L)(e,\"api\")})).catch((()=>(0,l.Z)(\"Downloading runtime APIs failed...\")))}return[\"actionText\",\"setName\",\"setAttribute\",\"save\",\"ignore\",\"onEnd\",\"getContext\",\"end\",\"get\"].forEach((e=>{w[e]=A(m,e,void 0,n.D.spa)})),g.noticeError=function(e,t){\"string\"==typeof e&&(e=new Error(e)),(0,a.p)(f.xS,[\"API/noticeError/called\"],void 0,n.D.metrics,p),(0,a.p)(\"err\",[e,(0,s.z)(),!1,t],void 0,n.D.jserrors,p)},d.il?(0,u.b2)((()=>_()),!0):_(),g}(e.agentIdentifier,y)),void 0===e.exposed&&(e.exposed=D),m=!0}},1926:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return\"\"})()},3325:(e,t,r)=>{\"use strict\";r.d(t,{D:()=>n,p:()=>i});const n={ajax:\"ajax\",jserrors:\"jserrors\",metrics:\"metrics\",pageAction:\"page_action\",pageViewEvent:\"page_view_event\",pageViewTiming:\"page_view_timing\",sessionReplay:\"session_replay\",sessionTrace:\"session_trace\",spa:\"spa\"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.sessionReplay]:9}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>\"nr-rum-1.249.0.min.js\",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t=\"NRBA-1.249.0.PROD:\",i.l=(r,n,a,o)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==a)for(var u=document.getElementsByTagName(\"script\"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute(\"src\")==r||l.getAttribute(\"data-webpack\")==t+a){s=l;break}}if(!s){c=!0;var f={75:\"sha512-HcXyAuaRbdfES7GuZJPwimpBfHQYAggUt+9f7v0xmtqSP1pSPK/chshT+kmNNfPfvD1QbPyikVNC4frs8IQYkw==\"};(s=document.createElement(\"script\")).charset=\"utf-8\",s.timeout=120,i.nc&&s.setAttribute(\"nonce\",i.nc),s.setAttribute(\"data-webpack\",t+a),s.src=r,0!==s.src.indexOf(window.location.origin+\"/\")&&(s.crossOrigin=\"anonymous\"),f[o]&&(s.integrity=f[o])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:\"timeout\",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},i.p=\"https://js-agent.newrelic.com/\",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&(\"load\"===r.type?\"missing\":r.type),o=r&&r.target&&r.target.src;s.message=\"Loading chunk \"+t+\" failed.\\n(\"+a+\": \"+o+\")\",s.name=\"ChunkLoadError\",s.type=a,s.request=o,n[1](s)}}),\"chunk-\"+t,t)}};var t=(t,r)=>{var n,a,[o,s,c]=r,u=0;if(o.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<o.length;u++)a=o[u],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self[\"webpackChunk:NRBA-1.249.0.PROD\"]=self[\"webpackChunk:NRBA-1.249.0.PROD\"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{\"use strict\";i(1926);var e=i(50);class t{#e(e){return\"Call to agent api \".concat(e,\" failed. The agent is not currently initialized.\")}addPageAction(t,r){(0,e.Z)(this.#e(\"addPageAction\"))}setPageViewName(t,r){(0,e.Z)(this.#e(\"setPageViewName\"))}setCustomAttribute(t,r,n){(0,e.Z)(this.#e(\"setCustomAttribute\"))}noticeError(t,r){(0,e.Z)(this.#e(\"noticeError\"))}setUserId(t){(0,e.Z)(this.#e(\"setUserId\"))}setApplicationVersion(t){(0,e.Z)(this.#e(\"setApplicationVersion\"))}setErrorHandler(t){(0,e.Z)(this.#e(\"setErrorHandler\"))}finished(t){(0,e.Z)(this.#e(\"finished\"))}addRelease(t,r){(0,e.Z)(this.#e(\"addRelease\"))}start(t){(0,e.Z)(this.#e(\"start\"))}recordReplay(){(0,e.Z)(this.#e(\"recordReplay\"))}pauseReplay(){(0,e.Z)(this.#e(\"pauseReplay\"))}}var r=i(3325),n=i(234);const a=Object.values(r.D);function o(e){const t={};return a.forEach((r=>{t[r]=function(e,t){return!1!==(0,n.Mt)(t,\"\".concat(e,\".enabled\"))}(r,e)})),t}var s=i(7530);var c=i(8e3),u=i(5938),d=i(3960),l=i(385);class f extends u.W{constructor(e,t,r){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,n.Mt)(this.agentIdentifier,\"\".concat(this.featureName,\".autoStart\"))&&(this.auto=!1),this.auto&&(0,c.R)(e,r)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on(\"\".concat(this.featureName,\"-opt-in\"),(()=>{(0,c.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const r=l.il&&!0===(0,n.Mt)(this.agentIdentifier,\"privacy.cookies_enabled\");let a;this.onAggregateImported=new Promise((e=>{a=e}));const o=async()=>{let n;try{if(r){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,3228));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)(\"A problem occurred when starting up session manager. This page will not start or extend any session.\",t)}try{if(!this.shouldImportAgg(this.featureName,n))return(0,c.L)(this.agentIdentifier,this.featureName),void a(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:r}=await e(this.featureName,\"aggregate\");this.featAggregate=new r(this.agentIdentifier,this.aggregator,t),a(!0)}catch(t){(0,e.Z)(\"Downloading and initializing \".concat(this.featureName,\" failed...\"),t),this.abortHandler?.(),(0,c.L)(this.agentIdentifier,this.featureName),a(!1)}};l.il?(0,d.b2)((()=>o()),!0):o()}shouldImportAgg(e,t){return e!==r.D.sessionReplay||!!n.Yu.MO&&(!1!==(0,n.Mt)(this.agentIdentifier,\"session_trace.enabled\")&&(!!t?.isNew||!!t?.state.sessionReplayMode))}}var g=i(7633);class p extends f{static featureName=g.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,g.t,r),this.importAggregator()}}var h=i(1117),v=i(1284);class m extends h.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var a=this.getBucket(e,t,r,i);return a.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,v.D)(e,(function(e,r){t[e]=b(r,t[e])})),t}(n,a.metrics),a}merge(e,t,r,n,i){var a=this.getBucket(e,t,n,i);if(a.metrics){var o=a.metrics;o.count+=r.count,(0,v.D)(r,(function(e,t){if(\"count\"!==e){var n=o[e],i=r[e];i&&!i.c?o[e]=b(i.t,n):o[e]=function(e,t){if(!t)return e;t.c||(t=y(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,o[e])}}))}else a.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=b(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r=\"\",n=!1,i=0;i<e.length;i++)t[r=e[i]]=w(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function b(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=y(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function y(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function w(e){return\"object\"!=typeof e?[]:(0,v.D)(e,A)}function A(e,t){return t}var _=i(8632),x=i(4402),D=i(4351);var k=i(5546),E=i(7956),j=i(3239),S=i(7894),R=i(9251);class T extends f{static featureName=R.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,R.t,r),l.il&&((0,E.N)((()=>(0,k.p)(\"docHidden\",[(0,S.z)()],void 0,R.t,this.ee)),!0),(0,j.bP)(\"pagehide\",(()=>(0,k.p)(\"winPagehide\",[(0,S.z)()],void 0,R.t,this.ee))),this.importAggregator())}}var I=i(3081);class N extends f{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends t{constructor(t){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,x.ky)(16);super(),l._A?(this.agentIdentifier=r,this.sharedAggregator=new m({agentIdentifier:this.agentIdentifier}),this.features={},(0,_.h5)(r,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(p),(0,s.j)(this,t,t.loaderType||\"agent\"),this.run()):(0,e.Z)(\"Failed to initial the agent. Could not determine the runtime environment.\")}get config(){return{info:(0,n.C5)(this.agentIdentifier),init:(0,n.P_)(this.agentIdentifier),loader_config:(0,n.DL)(this.agentIdentifier),runtime:(0,n.OP)(this.agentIdentifier)}}run(){try{const t=o(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>r.p[e.featureName]-r.p[t.featureName])),n.forEach((n=>{if(t[n.featureName]||n.featureName===r.D.pageViewEvent){const i=function(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.sessionReplay:return[r.D.sessionTrace];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}(n.featureName);i.every((e=>t[e]))||(0,e.Z)(\"\".concat(n.featureName,\" is enabled but one or more dependent features has been disabled (\").concat((0,D.P)(i),\"). This may cause unintended consequences or missing data...\")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}}))}catch(t){(0,e.Z)(\"Failed to initialize all enabled instrument classes (agent aborted) -\",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,_.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}addToTrace(t){(0,e.Z)(\"Call to agent api addToTrace failed. The session trace feature is not currently initialized.\")}setCurrentRouteName(t){(0,e.Z)(\"Call to agent api setCurrentRouteName failed. The spa feature is not currently initialized.\")}interaction(){(0,e.Z)(\"Call to agent api interaction failed. The spa feature is not currently initialized.\")}}({features:[p,T,N],loaderType:\"lite\"})})()})();</script>\n<meta name=\"description\" content=\"Mobilisons-nous pour rendre possible la transition \u00E9cologique vers une soci\u00E9t\u00E9 plus sobre et solidaire. Particuliers, entreprises, collectivit\u00E9s, agissons.\" />\n<link rel=\"canonical\" href=\"https://agirpourlatransition.ademe.fr/\" />\n<link rel=\"shortlink\" href=\"https://agirpourlatransition.ademe.fr/\" />\n<meta name=\"Generator\" content=\"Drupal 9 (https://www.drupal.org)\" />\n<meta name=\"MobileOptimized\" content=\"width\" />\n<meta name=\"HandheldFriendly\" content=\"true\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<link rel=\"icon\" href=\"/themes/custom/aw_theme_master/favicon.ico\" type=\"image/vnd.microsoft.icon\" />\n\n    <title>L&#039;Agence de la transition \u00E9cologique | Agir pour la transition \u00E9cologique | ADEME</title>\n    <link rel=\"stylesheet\" media=\"all\" href=\"/sites/default/files/css/css_iSyB7q1BYTCwlZ-CsBbjFKNqtm-xN4g8L7RKmfIC65M.css\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/sites/default/files/css/css_quLFxvH0MRhbUO396a58frpgCHMkjS57-v4Gm144w0A.css\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/sites/default/files/css/css_5DgP4AM5BcZWYO4yQVR1yuj54nppwNzkRYU2nu7KQRc.css\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/sites/default/files/css/css_UHJRpOONWGFFcGf-godFUe5M01uecgaFv1QK08KR1DY.css\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/sites/default/files/css/css_C9ei_1WxIeieEe8N-ylEaadfjITwLE2TomxgxmzA3jg.css\" />\n\n\n          <!-- Google Tag Manager -->\n      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n        })(window,document,'script','dataLayer','GTM-TD7VDPP');</script>\n      <!-- End Google Tag Manager -->\n    \n    <script src=\"/sites/default/files/js/js_migc5oY1Jcdq6Q7ipMRK6LL0S4qzcPSzyfseY-Lu9jY.js\"></script>\n<script src=\"/sites/default/files/js/js_4f3AXjfyS8B-4dz73LB9uuqm6f-BjgYuJgR9rL6bmu8.js\"></script>\n<script src=\"/sites/default/files/js/js_oRc47_vQACT5A3zIFVC5KafIKHOmfGpkHPLEBlpAvv8.js\"></script>\n\n  </head>\n  <body class=\"path-frontpage page-node-type-homepage\">\n          <!-- Google Tag Manager (noscript) -->\n      <noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-TD7VDPP\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n      <!-- End Google Tag Manager (noscript) -->\n    \n        <ul class=\"nav-skip\">\n            <li><a href=\"#main\">Aller au contenu</a></li>\n          </ul>\n\n    \n      <div class=\"dialog-off-canvas-main-canvas\" data-off-canvas-main-canvas>\n    \n<div class=\"body-wrapper home home-sas domain-services page-homepage\" id=\"top\">\n          <div class=\"region-top\">\n    \n    <div class=\"header--container\">\n        <header class=\"header header--principal\" role=\"banner\">\n                                    <div class=\"header--principal__top\">\n                <div class=\"container header--principal__top-inner\">\n                        \n        <div class=\"m-social\">\n        <ul class=\"m-social-list\">\n                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-twitter\" href=\"https://twitter.com/ademe\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Twitter\" data-social-name=\"twitter\">\n                        </a>\n                    </li>\n                                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-linkedin\" href=\"https://www.linkedin.com/company/ademe\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Linkedin\" data-social-name=\"linkedin\">\n                        </a>\n                    </li>\n                                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-youtube\" href=\"https://www.youtube.com/user/ademe\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Youtube\" data-social-name=\"youtube\">\n                        </a>\n                    </li>\n                                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-instagram\" href=\"https://www.instagram.com/ademeofficiel/?hl=fr\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Instagram\" data-social-name=\"instagram\">\n                        </a>\n                    </li>\n                                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-rss\" href=\"/flux-rss-agir\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Rss\" data-social-name=\"rss\">\n                        </a>\n                    </li>\n                                    </ul>\n    </div>\n\n\n\n                </div>\n            </div>\n                                    <div class=\"container header--principal-inner\">\n                                        \n    \n    \n    <div class=\"logo-wrapper\">\n    <a class=\"logo-link\" href=\"/\" title=\"Accueil Ademe - Agir pour la transition \u00E9cologique\">\n        <div class=\"logo--01\">\n            <img src=\"/themes/custom/aw_theme_master/img/logo-republique-francaise.svg\" alt=\"R\u00E9publique Fran\u00E7aise - Libert\u00E9 Egalit\u00E9 Fraternit\u00E9\">\n        </div>\n        <div class=\"logo--02\">\n            <img src=\"/themes/custom/aw_theme_master/img/logo-ademe.svg\" alt=\"Ademe - Agence de la transition \u00E9cologique\">\n        </div>\n                    <div class=\"logo--04\">\n                <img src=\"/themes/custom/aw_theme_master/img/Logo-Agir-RVB.svg\" alt=\"Agir pour la transition \u00E9cologique\">\n            </div>\n            </a>\n\n    </div>\n\n\n      <div class=\"header-baseline\">\n    <p class=\"header-baseline-title\">Comprendre, s&#039;inspirer, agir</p>\n      </div>\n\n\n\n                                <div class=\"d-lg-none header--secondary\">\n                    \n                                    </div>\n            </div>\n        </header>\n        <div class=\"header-nav-container\">\n            <div class=\"header-nav-sticky\">\n                <div class=\"container\">\n                                            <nav class=\"header-nav navbar navbar-light\" role=\"navigation\"\n                            aria-label=\"Menu principal\"\n                            tabindex=\"-1\" id=\"menu\">\n                            <button class=\"navbar-toggler\" type=\"button\" data-target=\"#navbarPrimary\" aria-controls=\"navbarPrimary\" aria-expanded=\"false\" aria-label=\"Menu\">\n                                <span class=\"navbar-toggler-text\">Menu</span>\n                                <span class=\"icon-burger\" aria-hidden=\"true\"></span>\n                            </button>\n                            <div class=\"navbar-collapse\" id=\"navbarPrimary\">\n                                <button type=\"button\" class=\"close\" data-target=\"#navbarPrimary\" aria-controls=\"navbarPrimary\" aria-expanded=\"true\">\n                                    <span class=\"sr-only\">Fermer le menu</span>\n                                    <span class=\"icon-close\" aria-hidden=\"true\"></span>\n                                </button>\n                                                                \n    \n        \n    <ul  class=\"navbar-nav nav-lvl--1\">\n                                <li  class=\"nav-item\">\n                <a href=\"https://agirpourlatransition.ademe.fr/\" class=\"nav-link\">Services</a>\n\n                                                                \n        \n    <ul  class=\"navbar-nav nav-lvl--2\">\n                                <li  class=\"nav-item\">\n                <a href=\"https://agirpourlatransition.ademe.fr/qui-sommes-nous\" class=\"nav-link\">Qui sommes-nous\u00A0?</a>\n\n                            </li>\n            </ul>\n\n                                                </li>\n                                <li  class=\"menu-item--expanded nav-item\">\n                <a href=\"https://agirpourlatransition.ademe.fr/\" class=\"nav-link\">Accueil AGIR</a>\n\n                                                            <button class=\"btn nav-btn-collapse\" type=\"button\" data-toggle=\"collapse\" data-target=\"#nav-collapse-submenu-1-2\" aria-controls=\"nav-collapse-submenu-1-2\" aria-expanded=\"false\" data-is-opened-text=\"Fermer\" data-is-closed-text=\"D\u00E9plier\">\n                            <span class=\"sr-only\"><span class=\"nav-btn-collapse-action\">D\u00E9plier</span> la rubrique Accueil AGIR</span>\n                        </button>\n\n                        <div class=\"collapse nav-collapse\" id=\"nav-collapse-submenu-1-2\">\n                            <div class=\"nav-collapse-inner\">\n                                    \n        \n    <ul  class=\"navbar-nav nav-lvl--2\">\n                                <li  class=\"nav-item\">\n                <a href=\"https://agirpourlatransition.ademe.fr/particuliers/\" class=\"nav-link\">Particuliers</a>\n\n                            </li>\n                                <li  class=\"menu-item--collapsed nav-item\">\n                <a href=\"https://agirpourlatransition.ademe.fr/entreprises/\" class=\"nav-link\">Entreprises</a>\n\n                            </li>\n                                <li  class=\"nav-item\">\n                <a href=\"https://agirpourlatransition.ademe.fr/collectivites/\" class=\"nav-link\">Collectivit\u00E9s</a>\n\n                            </li>\n                                <li  class=\"nav-item\">\n                <a href=\"https://agirpourlatransition.ademe.fr/acteurs-education/\" class=\"nav-link\">Acteurs de l&#039;\u00E9ducation </a>\n\n                            </li>\n            </ul>\n\n                            </div>\n                        </div>\n                                                </li>\n                                <li  class=\"nav-item\">\n                <a href=\"https://infos.ademe.fr/\" class=\"external nav-link\" target=\"_blank\">Ademe infos</a>\n\n                            </li>\n                                <li  class=\"nav-item\">\n                <a href=\"https://www.ademe.fr\" class=\"external nav-link\" target=\"_blank\">Ademe.fr</a>\n\n                            </li>\n                                <li  class=\"nav-item\">\n                <a href=\"https://librairie.ademe.fr/\" class=\"external nav-link\" target=\"_blank\">La librairie</a>\n\n                            </li>\n            </ul>\n\n\n\n                                <div class=\"header-mobile d-lg-none\">\n                                    \n                                    \n        <div class=\"m-social\">\n        <ul class=\"m-social-list\">\n                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-twitter\" href=\"https://twitter.com/ademe\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Twitter\" data-social-name=\"twitter\">\n                        </a>\n                    </li>\n                                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-linkedin\" href=\"https://www.linkedin.com/company/ademe\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Linkedin\" data-social-name=\"linkedin\">\n                        </a>\n                    </li>\n                                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-youtube\" href=\"https://www.youtube.com/user/ademe\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Youtube\" data-social-name=\"youtube\">\n                        </a>\n                    </li>\n                                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-instagram\" href=\"https://www.instagram.com/ademeofficiel/?hl=fr\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Instagram\" data-social-name=\"instagram\">\n                        </a>\n                    </li>\n                                                                <li class=\"m-social-item\">\n                        <a class=\"m-social-button icon-rss\" href=\"/flux-rss-agir\" target=\"_blank\" rel=\"noopener\"\n                           title=\"Rss\" data-social-name=\"rss\">\n                        </a>\n                    </li>\n                                    </ul>\n    </div>\n\n\n                                </div>\n                            </div>\n                            <div class=\"navbar-desktop d-none d-lg-block\">\n                                                                                            </div>\n                        </nav>\n                                    </div>\n            </div>\n        </div>\n            </div>\n</div>\n                    <main id=\"main\" class=\"main\" role=\"main\">\n                        \n                        \n                        \n                                            <div data-drupal-messages-fallback class=\"hidden\"></div><h1 class=\"sr-only\">Mobilisons-nous pour rendre possible la transition \u00E9cologique vers une soci\u00E9t\u00E9 plus sobre et solidaire</h1>\n    \n\n<div data-history-node-id=\"4\" role=\"article\" about=\"/services/accueil\" class=\"node node--type-homepage node--view-mode-full\">\n  <div class=\"paragraph--type--homepage-target__parent\">\n          <div class=\"paragraph paragraph--type--homepage-target paragraph--view-mode--default\">\n          <a class=\"paragraph--type--homepage-target__link cover\" href=\"/particuliers/accueil-particuliers\">\n        <h2 class=\"paragraph--type--homepage-target__title\">\n          <span class=\"paragraph--type--homepage-target__title-inner h1\">    Particuliers\n</span>\n          <span class=\"paragraph--type--homepage-target__desc\">    Adoptez un quotidien plus \u00E9cologique : d\u00E9couvrez nos conseils et nos solutions pour vous accompagner \u00E0 chaque moment de votre vie.\n</span>\n        </h2>\n        <span class=\"btn btn-brand-3\">Votre espace <span class=\"sr-only\">    Particuliers\n</span></span>\n        <div class=\"paragraph--type--homepage-target__img\">          <img src=\"/sites/default/files/styles/950x610/public/2021-01/cible-particuliers.jpg?itok=p_GC9Iyb\" width=\"950\" height=\"610\" alt=\"Particuliers\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"image-style-_50x610\" />\n\n\n\n\n\n</div>\n      </a>\n      </div>\n\n      <div class=\"paragraph paragraph--type--homepage-target paragraph--view-mode--default\">\n          <a class=\"paragraph--type--homepage-target__link cover\" href=\"/entreprises\">\n        <h2 class=\"paragraph--type--homepage-target__title\">\n          <span class=\"paragraph--type--homepage-target__title-inner h1\">    Entreprises\n</span>\n          <span class=\"paragraph--type--homepage-target__desc\">    Entreprise, association, organisme de recherche ou doctorant : d\u00E9couvrez si votre projet est \u00E9ligible, ainsi que l\u2019ensemble des aides et appuis financiers dont vous pouvez b\u00E9n\u00E9ficier.\n</span>\n        </h2>\n        <span class=\"btn btn-brand-3\">Votre espace <span class=\"sr-only\">    Entreprises\n</span></span>\n        <div class=\"paragraph--type--homepage-target__img\">          <img src=\"/sites/default/files/styles/950x610/public/2023-08/image-parcours-entreprise.jpg?itok=sPL0vFoN\" width=\"950\" height=\"610\" alt=\"\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"image-style-_50x610\" />\n\n\n\n\n\n</div>\n      </a>\n      </div>\n\n      <div class=\"paragraph paragraph--type--homepage-target paragraph--view-mode--default\">\n          <a class=\"paragraph--type--homepage-target__link cover\" href=\"/collectivites\">\n        <h2 class=\"paragraph--type--homepage-target__title\">\n          <span class=\"paragraph--type--homepage-target__title-inner h1\">    Collectivit\u00E9s\n</span>\n          <span class=\"paragraph--type--homepage-target__desc\">    Vous souhaitez participer \u00E0 la mise en \u0153uvre de la transition \u00E9cologique et \u00E9nerg\u00E9tique : d\u00E9couvrez si votre projet est \u00E9ligible, ainsi que l\u2019ensemble des aides et appuis financiers dont vous pouvez b\u00E9n\u00E9ficier.\n</span>\n        </h2>\n        <span class=\"btn btn-brand-3\">Votre espace <span class=\"sr-only\">    Collectivit\u00E9s\n</span></span>\n        <div class=\"paragraph--type--homepage-target__img\">          <img src=\"/sites/default/files/styles/950x610/public/2020-06/cible-collectivite_0.jpg?itok=UVqe1RXb\" width=\"950\" height=\"610\" alt=\"Collectivit\u00E9s\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"image-style-_50x610\" />\n\n\n\n\n\n</div>\n      </a>\n      </div>\n\n      <div class=\"paragraph paragraph--type--homepage-target paragraph--view-mode--default\">\n          <a class=\"paragraph--type--homepage-target__link cover\" href=\"https://agirpourlatransition.ademe.fr/acteurs-education/\">\n        <h2 class=\"paragraph--type--homepage-target__title\">\n          <span class=\"paragraph--type--homepage-target__title-inner h1\">    Acteurs de l&#039;\u00C9ducation \n</span>\n          <span class=\"paragraph--type--homepage-target__desc\">    Enseignants, r\u00E9f\u00E9rents EDD, cadres de l\u2019\u00E9ducation, animateurs socio-\u00E9ducatifs : d\u00E9couvrez notre s\u00E9lection de formations et de ressources sur le d\u00E9veloppement durable.\n</span>\n        </h2>\n        <span class=\"btn btn-brand-3\">Votre espace <span class=\"sr-only\">    Acteurs de l&#039;\u00C9ducation \n</span></span>\n        <div class=\"paragraph--type--homepage-target__img\">          <img src=\"/sites/default/files/styles/950x610/public/2022-12/enseigner.jpg?itok=j7sCiCAs\" width=\"950\" height=\"610\" alt=\"\" loading=\"lazy\" typeof=\"foaf:Image\" class=\"image-style-_50x610\" />\n\n\n\n\n\n</div>\n      </a>\n      </div>\n\n\n  </div>\n</div>\n\n\n\n                    </main>\n    \n        <footer role=\"contentinfo\" class=\"footer--principal\">\n                  \n      <div class=\"footer__pre\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-3\">\n                      <h2>D\u00E9couvrez</h2>\n                  </div>\n                            <div class=\"col-sm-4 col-md-3 wysiwyg\">\n                        <img src='https://agirpourlatransition.ademe.fr/sites/default/files/2022-12/ADEME.FR_.png' loading=\"lazy\">\n                        <p>\n              <a href=\"https://www.ademe.fr/\" class=\"link--angle-right\" target=\"_blank\">\n                Notre site institutionnel\n              </a>\n            </p>\n          </div>\n                                      <div class=\"col-sm-4 col-md-3 wysiwyg\">\n                        <img src='https://agirpourlatransition.ademe.fr/sites/default/files/2022-12/LIBRAIRIE.png' loading=\"lazy\">\n                        <p>\n              <a href=\"https://librairie.ademe.fr/\" class=\"link--angle-right\" target=\"_blank\">\n                Nos publications et expertises\n              </a>\n            </p>\n          </div>\n                                      <div class=\"col-sm-4 col-md-3 wysiwyg\">\n                        <img src='https://agirpourlatransition.ademe.fr/sites/default/files/2022-12/ADEMEINFO.png' loading=\"lazy\">\n                        <p>\n              <a href=\"https://infos.ademe.fr/\" class=\"link--angle-right\" target=\"_blank\">\n                Nos magazines et newsletters\n              </a>\n            </p>\n          </div>\n                        </div>\n    </div>\n  </div>\n\n\n\n                    <div class=\"footer__top\">\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-md\">\n                                                        \n    \n    \n    <div class=\"logo-wrapper\">\n    <a class=\"logo-link\" href=\"/\" title=\"Accueil Ademe - Agir pour la transition \u00E9cologique\">\n        <div class=\"logo--01\">\n            <img src=\"/themes/custom/aw_theme_master/img/logo-republique-francaise.svg\" alt=\"R\u00E9publique Fran\u00E7aise - Libert\u00E9 Egalit\u00E9 Fraternit\u00E9\">\n        </div>\n        <div class=\"logo--02\">\n            <img src=\"/themes/custom/aw_theme_master/img/logo-ademe.svg\" alt=\"Ademe - Agence de la transition \u00E9cologique\">\n        </div>\n            </a>\n\n        <div class=\"logo--03\">\n        <img src=\"/themes/custom/aw_theme_master/img/logo-france2030.svg\" alt=\"France 2030\" width=\"72\" height=\"70\" loading=\"lazy\">\n    </div>\n  </div>\n\n<div id=\"block-ecoconceptiondusite\" class=\"block block-block-content block-block-content1d9a8a34-d3d7-42b7-9569-00073bd1bf26\">\n  \n    \n      <div class=\"wysiwyg\">\n            <p style=\"font-size:1.2rem\">Ce site internet est pens\u00E9 et d\u00E9velopp\u00E9 avec un objectif d\u2019\u00E9coconception.<br /><a href=\"https://agirpourlatransition.ademe.fr/agirpourlatransition-site-web-ecoconcu\">En savoir plus sur l\u2019\u00E9coconception du site</a></p>\n\n    </div>\n  </div>\n\n     <p class=\"footer__copyright\" title=\"9.8.10\">\u00A9 2023 ADEME - Tous droits r\u00E9serv\u00E9s</p>\n\n\n\n                                            </div>\n                    <div class=\"col-md-6 col-lg-4 footer__nav\">\n                                                          <div class=\"row\">\n      <div class=\"col-sm\">\n      <h2>Suivez-nous</h2>\n      <ul class=\"footer__list\">\n                  <li class=\"footer__list-item\"><a href=\"https://twitter.com/ademe\" target=\"_blank\">Twitter</a></li>\n                  <li class=\"footer__list-item\"><a href=\"https://www.linkedin.com/company/ademe\" target=\"_blank\">Linkedin</a></li>\n                  <li class=\"footer__list-item\"><a href=\"https://www.youtube.com/user/ademe\" target=\"_blank\">Youtube</a></li>\n                  <li class=\"footer__list-item\"><a href=\"https://www.instagram.com/ademeofficiel/?hl=fr\" target=\"_blank\">Instagram</a></li>\n                  <li class=\"footer__list-item\"><a href=\"https://agirpourlatransition.ademe.fr/flux-rss-agir\" target=\"_blank\">RSS</a></li>\n              </ul>\n    </div>\n  \n                  <div class=\"col-sm\">\n        <h2>Liens utiles</h2>\n        <ul  block=\"liensutiles\" class=\"footer__list\">\n                                  <li class=\"menu-item menu-footer-item footer__list-item\">\n              <a href=\"https://agirpourlatransition.ademe.fr/qui-sommes-nous\" data-drupal-link-system-path=\"node/52642\">Qui sommes-nous\u00A0?</a>\n                          </li>\n                                  <li class=\"menu-item menu-footer-item footer__list-item\">\n              <a href=\"https://agirpourlatransition.ademe.fr/questions-frequentes\" data-drupal-link-system-path=\"node/52136\">Foire aux questions</a>\n                          </li>\n                                  <li class=\"menu-item menu-footer-item footer__list-item\">\n              <a href=\"/form/contact\" target=\"_self\" data-drupal-link-system-path=\"webform/contact\">Contacter l&#039;ADEME</a>\n                          </li>\n                                  <li class=\"menu-item menu-footer-item footer__list-item\">\n              <a href=\"https://presse.ademe.fr/\" target=\"_blank\">Presse</a>\n                          </li>\n                                  <li class=\"menu-item menu-footer-item footer__list-item\">\n              <a href=\"https://ademe.signalement.net/entreprises\" target=\"_blank\">Portail de signalement</a>\n                          </li>\n                  </ul>\n      </div>\n      \n  </div>\n\n\n\n                                            </div>\n                </div>\n            </div>\n        </div>\n                    <div class=\"footer__bottom\">\n            <div class=\"container\">\n                                        <ul  block=\"pieddepage\" class=\"footer__list footer__list--inline\">\n                                  <li class=\"menu-item footer__list-item\">\n              <a href=\"/plan-site\" data-drupal-link-system-path=\"plan-site\">Plan du site</a>\n                          </li>\n                                  <li class=\"menu-item footer__list-item\">\n              <a href=\"/mentions-legales\" data-drupal-link-system-path=\"node/6\">Mentions l\u00E9gales</a>\n                          </li>\n                                  <li class=\"menu-item footer__list-item\">\n              <a href=\"/conditions-generales-dutilisation\" data-drupal-link-system-path=\"node/5\">CGU</a>\n                          </li>\n                                  <li class=\"menu-item footer__list-item\">\n              <a href=\"/politique-cookies\" data-drupal-link-system-path=\"node/49577\">Politique des cookies</a>\n                          </li>\n                                  <li class=\"menu-item footer__list-item\">\n              <a href=\"/politique-protection-donnees-a-caractere-personnel\" data-drupal-link-system-path=\"node/7\">Donn\u00E9es personnelles</a>\n                          </li>\n                                  <li class=\"menu-item footer__list-item\">\n              <a href=\"/accessibilite\" data-drupal-link-system-path=\"node/10181\">Accessibilit\u00E9\u00A0: non conforme</a>\n                          </li>\n                                  <li class=\"menu-item footer__list-item\">\n              <a href=\"#tarteaucitron\" target=\"_self\">Pr\u00E9f\u00E9rences Cookies</a>\n                          </li>\n                  </ul>\n      \n  \n\n\n            </div>\n        </div>\n          </footer>\n</div>\n\n  </div>\n\n    \n\n    \n    <div class=\"modal fade modal--teaser-video\" id=\"modalVideoTeaser\" role=\"dialog\" aria-labelledby=\"modalVideoLabelTeaser\"\n     aria-hidden=\"true\" tabindex=\"-1\">\n    <div class=\"modal-dialog modal-xl modal-dialog-centered\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h1 class=\"modal-title sr-only\" id=\"modalVideoLabelTeaser\">Video</h1>\n\n                <button type=\"button\" class=\"close btn-icon-left\" data-dismiss=\"modal\">\n                    <span class=\"icon-close\" aria-hidden=\"true\"></span>\n                    <span class=\"sr-only\">Fermer la modale</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <div class=\"embed-responsive embed-responsive-16by9\" id=\"o-teaser__iframe\"></div>\n            </div>\n        </div>\n    </div>\n</div>\n\n    \n    <div class=\"modal fade\" id=\"modalConnexion\" role=\"dialog\" aria-labelledby=\"modalConnexionLabel\" aria-hidden=\"true\" tabindex=\"-1\">\n    <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n          </div>\n</div>\n\n\n\n\n    <script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefix\":\"\",\"currentPath\":\"node\\/4\",\"currentPathIsAdmin\":false,\"isFront\":true,\"currentLanguage\":\"fr\"},\"pluralDelimiter\":\"\\u0003\",\"suppressDeprecationErrors\":true,\"ajaxPageState\":{\"libraries\":\"aw_entity_browser\\/override-admin,aw_theme_master\\/dependencies-scripts,aw_theme_master\\/global-scripts,aw_theme_master\\/global-styling,ckeditor_readmore\\/ckeditor_readmore,classy\\/base,classy\\/messages,classy\\/node,cool_message\\/cool_message.library,core\\/normalize,paragraphs\\/drupal.paragraphs.unpublished,pns_form\\/pns_form,pns_gtm\\/datalayers.content,pns_gtm\\/datalayers.global,pns_gtm\\/datalayers.home,pns_pedi\\/search.ressources,pns_region\\/regions,pns_system\\/pns_system,pns_system\\/tarteaucitron_prod,social_media_links\\/social_media_links.theme,system\\/base\",\"theme\":\"aw_theme_master\",\"theme_token\":null},\"ajaxTrustedUrl\":[],\"coll_message\":{\"timeout\":0},\"currentSite\":\"services\",\"user\":{\"status\":\"non_connecte\",\"uid\":0,\"permissionsHash\":\"590fbd2e20ec92e1d6cc3eeb5447c5cec960d7e0e4337c817f2fc34156867bfe\"},\"pageTitle\":\"homepage\",\"chapters\":{\"chapter1\":\"services\"},\"search\":{\"facets\":{\"aide_financement\":null,\"application\":null,\"evenements_passes\":null,\"financement\":null,\"format\":null,\"localisation\":null,\"modalite\":null,\"thematique\":null,\"niveau_expertise\":null,\"niveau_expertise_rex\":null,\"niveau_scolaire\":null,\"odd\":null,\"secteur_activite\":null,\"sous_secteur_activite\":null,\"taille_entreprise\":null,\"theme\":null,\"type_besoin\":null,\"type_formation\":null,\"type_energie\":null,\"type\":null,\"type_ressource\":null,\"types\":null,\"vous_cherchez\":null,\"vous_etes\":null}},\"contentType\":\"homepage\",\"radioactivity\":{\"type\":\"default\",\"endpoint\":\"https:\\/\\/agirpourlatransition.ademe.fr\\/radioactivity\\/emit\"}}</script>\n<script src=\"/sites/default/files/js/js_oE3WBkYceWKQH7Lp0eIS3ZVCnn2z0YSbsWma7NPbrzw.js\"></script>\n<script src=\"/sites/default/files/js/js_e64Wdnd92cgdzOo6eyJ9QV6bjUYomnX4OfgYIza9Lvg.js\"></script>\n<script src=\"/sites/default/files/js/js_xelWA0GFD4J_bp2Ny8NkHhwJ7ADLfkB1XtxrTt_XKSA.js\"></script>\n<script src=\"/sites/default/files/js/js_LjxD4zW580N4X41WAkg_pvg1YeGZhKPLk-whP-iroyE.js\"></script>\n<script src=\"//tarteaucitron.io/load.js?domain=agirpourlatransition.ademe.fr&amp;uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>\n<script src=\"/sites/default/files/js/js_nH2DHWpdzG6ZXy6VXQ3Nuw0G1eGUtQh0RqzKP6aDyNs.js\"></script>\n\n  <script type=\"text/javascript\">window.NREUM||(NREUM={});NREUM.info={\"beacon\":\"bam.nr-data.net\",\"licenseKey\":\"762c6260b9\",\"applicationID\":\"392310830\",\"transactionName\":\"ZQFaYkAFDUAFUUBQXVxLeVVGDQxdS0JVXldtB1lVWgE=\",\"queueTime\":0,\"applicationTime\":24,\"atts\":\"SUZZFAgfHk4=\",\"errorBeacon\":\"bam.nr-data.net\",\"agent\":\"\"}",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://www.wsj.com/articles/BL-CIOB-2999</p>",
+					"cweid": "540",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"shortlink\" href=\"https://agirpourlatransition.ademe.fr/\" />",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-3",
+					"alert": "CSP: Notices",
+					"name": "CSP: Notices",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.ademe.fr data: blob: *.contentsquare.net; child-src 'self' blob:; connect-src 'self' *.contentsquare.net *.nr-data.net *.ademe.fr *.google-analytics.com *.xiti.com https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html; frame-src 'self' https://csxd.agirpourlatransition.ademe.fr *.google.com/ https://www.youtube-nocookie.com *.youtube.com *.openstreetmap.fr blob: *.ademe.fr https://player.octopus.saooti.com/ https://impactco2.fr/ https://www.academie-nr.org/ https://www.linfodurable.fr/ https://nosgestesclimat.fr/ data: https://*.fls.doubleclick.net https://impactco2.fr https://monimpacttransport.fr https://netlify.app fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://www.monecowatt.fr https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://c1.adform.net/ https://server.seadform.net https://server.adform.net; img-src 'self' *.contentsquare.net *.w3.org https://i.ytimg.com https://*.tarteaucitron.io *.xiti.com https://coql.agirpourlatransition.ademe.fr data: https://prod-r2da-api.ademe-dri.fr https://tarteaucitron.io https://www.googletagmanager.com/ https://www.facebook.com https://server.seadform.net; object-src 'none'; script-src 'self' 'unsafe-inline' t.contentsquare.net https://contentsquare.com/ https://www.gstatic.com/ *.ademe.fr https://www.googletagmanager.com *.googleapis.com *.google-analytics.com https://stats.g.doubleclick.net *.hotjar.com *.newrelic.com *.aticdn.net *.nr-data.net app.contentsquare.com https://monimpacttransport.fr/ https://impactco2.fr/ fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://*.tarteaucitron.io https://vertvolt.netlify.app/ https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://infographies-interactives-agir.ademe.fr/decarbonation_industrie/index.html/ https://server.adform.net/ https://s2.adform.net/banners/scripts/st/trackpoint-async.js/ https://s2.adform.net/ *.adform.net https://c1.adform.net/ https://connect.facebook.net/en_US/fbevents.js https://coql.agirpourlatransition.ademe.fr cdn.rawgit.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tarteaucitron.io https://unpkg.com https://www.google.com platform.twitter.com; script-src-elem 'self' 'unsafe-inline' t.contentsquare.net https://contentsquare.com/ https://www.gstatic.com/ *.ademe.fr https://www.googletagmanager.com *.googleapis.com *.google-analytics.com https://stats.g.doubleclick.net *.hotjar.com *.newrelic.com *.aticdn.net *.nr-data.net app.contentsquare.com https://impactco2.fr/ https://www.youtube.com/ fls.doubleclick.net https://mesfruitsetlegumesdesaison.fr/ https://teletravail.monimpacttransport.fr/ https://player.ausha.co/ https://*.tarteaucitron.io https://vertvolt.netlify.app/ https://infographies-interactives-agir.ademe.fr/parcours-tpe-pme/index.html https://infographies-interactives-agir.ademe.fr/decarbonation_industrie/index.html/ https://server.adform.net/ https://s2.adform.net/banners/scripts/st/trackpoint-async.js/ https://s2.adform.net/ *.adform.net https://c1.adform.net/ https://connect.facebook.net/en_US/fbevents.js https://connect.facebook.net cdn.rawgit.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tarteaucitron.io https://unpkg.com https://www.google.com platform.twitter.com; style-src 'self' 'unsafe-inline' https://tarteaucitron.io https://*.tarteaucitron.io cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src-attr 'self' 'unsafe-inline'; worker-src * blob:; frame-ancestors 'self'; report-uri https://agirpourlatransition.ademe.fr/report-uri/enforce",
+							"otherinfo": "Warnings:\nThe report-uri directive has been deprecated in favor of the new report-to directive\n"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>Warnings:</p><p>The report-uri directive has been deprecated in favor of the new report-to directive</p><p></p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10054",
+					"alertRef": "10054",
+					"alert": "Cookie without SameSite Attribute",
+					"name": "Cookie without SameSite Attribute",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "_f09ea",
+							"attack": "",
+							"evidence": "Set-Cookie: _f09ea",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
+					"cweid": "1275",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "//tarteaucitron.io/load.js?domain=agirpourlatransition.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+							"attack": "",
+							"evidence": "<script src=\"//tarteaucitron.io/load.js?domain=agirpourlatransition.ademe.fr&amp;uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Multiple Header Entries (Non-compliant with Spec)",
+					"name": "Strict-Transport-Security Multiple Header Entries (Non-compliant with Spec)",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) headers were found, a response with multiple HSTS header entries is not compliant with the specification (RFC 6797) and only the first HSTS header will be processed others will be ignored by user agents or the HSTS policy may be incorrectly applied.</p><p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that only one component in your stack: code, web server, application server, load balancer, etc. is configured to set or add a HTTP Strict-Transport-Security (HSTS) header.</p>",
+					"otherinfo": "",
+					"reference": "<p>http://tools.ietf.org/html/rfc6797#section-8.1</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/default/files/css/css_iSyB7q1BYTCwlZ-CsBbjFKNqtm-xN4g8L7RKmfIC65M",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD$\uFFFD\\x0007\uFFFD\uFFFD\\x0005\uFFFD\uFFFD\uFFFDV~\n\uFFFD[\uFFFDR\uFFFD\uFFFD\u067E\uFFFD\uFFFD \uFFFD\uFFFD*g\uFFFD\\x000b\uFFFDL"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD$\uFFFD\\x0007\uFFFD\uFFFD\\x0005\uFFFD\uFFFD\uFFFDV~</p><p>\uFFFD[\uFFFDR\uFFFD\uFFFD\u067E\uFFFD\uFFFD \uFFFD\uFFFD*g\uFFFD\\x000b\uFFFDL</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"text/javascript\">(window.NREUM||(NREUM={})).init={ajax:{deny_list:[\"bam.nr-data.net\"]}};(window.NREUM||(NREUM={}))\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/form/contact\" target=\"_self\" data-drupal-link-system-path=\"webform/contact\">Contacter l&#039;ADEME</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						}
+					],
+					"count": "1",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "must-revalidate, no-cache, private",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						}
+					],
+					"count": "1",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "<p>The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use.</p>",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "_f09ea",
+							"attack": "",
+							"evidence": "252d540c343c5165",
+							"otherinfo": "\ncookie:_f09ea"
+						}
+					],
+					"count": "1",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p></p><p>cookie:_f09ea</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.agirpourlatransition.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "8"
+				}
+			]
+		}
+	]
+}
