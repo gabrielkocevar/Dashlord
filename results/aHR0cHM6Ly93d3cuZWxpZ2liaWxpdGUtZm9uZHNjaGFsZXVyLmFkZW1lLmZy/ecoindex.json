@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.eligibilite-fondschaleur.ademe.fr",
+        "size": 1872.52,
+        "nodes": 294,
+        "requests": 61,
+        "grade": "C",
+        "score": 65.0,
+        "ges": 1.7,
+        "water": 2.55,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 23:37:18.449428",
+        "page_type": null
+    }
+]
