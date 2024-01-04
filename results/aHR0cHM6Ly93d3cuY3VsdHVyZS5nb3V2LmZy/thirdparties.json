@@ -1,0 +1,1146 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://infolettres.duministeredelaculture.fr/preferences/assets/css/mbExtension.min.css"
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/load.js?domain=culture.gouv.fr&uuid=cb6c31eaf0d65c6f8768c5734dd1a8df6bfd7780"
+    },
+    {
+      "type": "unknown",
+      "url": "https://api.dmcdn.net/all.js"
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/widgets.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/widgets/widget_iframe.2f70fb173b9000da126c79afe2098f02.html?origin=https%3A%2F%2Fwww.culture.gouv.fr",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/settings?session_id=be369f4143f370992673b27ad04f88f14cf3efbe",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/js/tweet.d7aeb21a88e025d2ea5f5431a103f586.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/Tweet.html?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideCard=false&hideThread=false&id=1742227247388299524&lang=fr&origin=https%3A%2F%2Fwww.culture.gouv.fr%2F&sessionId=be369f4143f370992673b27ad04f88f14cf3efbe&siteScreenName=MinistereCC&theme=light&widgetsVersion=2615f7e52b7e0%3A1702314776716&width=550px",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/Tweet.html?dnt=false&embedId=twitter-widget-1&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideCard=false&hideThread=false&id=1742837420926664732&lang=fr&origin=https%3A%2F%2Fwww.culture.gouv.fr%2F&sessionId=be369f4143f370992673b27ad04f88f14cf3efbe&siteScreenName=MinistereCC&theme=light&widgetsVersion=2615f7e52b7e0%3A1702314776716&width=550px",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/Tweet.html?dnt=false&embedId=twitter-widget-2&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideCard=false&hideThread=false&id=1741194896533320085&lang=fr&origin=https%3A%2F%2Fwww.culture.gouv.fr%2F&sessionId=be369f4143f370992673b27ad04f88f14cf3efbe&siteScreenName=MinistereCC&theme=light&widgetsVersion=2615f7e52b7e0%3A1702314776716&width=550px",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.runtime.30e39e232aef74d6b314.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.9449.143d97ea3ade6f4824dc.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.Tweet.61c9a11318b778002223.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.runtime.30e39e232aef74d6b314.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.9449.143d97ea3ade6f4824dc.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.runtime.30e39e232aef74d6b314.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.9449.143d97ea3ade6f4824dc.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.Tweet.61c9a11318b778002223.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.Tweet.61c9a11318b778002223.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.749.467388cca0b3fe9c3291.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.i18n.fr-js.5f978eb0eb74beba794d.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.horizon-web.i18n.fr-js.9d35cf0ad9d16371806d.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.749.467388cca0b3fe9c3291.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.i18n.fr-js.5f978eb0eb74beba794d.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.horizon-web.i18n.fr-js.9d35cf0ad9d16371806d.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.749.467388cca0b3fe9c3291.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.i18n.fr-js.5f978eb0eb74beba794d.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.horizon-web.i18n.fr-js.9d35cf0ad9d16371806d.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.9203.97b040640e3b329435c9.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.Tweet.af3480c242f6c21a47e5.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.9203.97b040640e3b329435c9.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.Tweet.af3480c242f6c21a47e5.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.9203.97b040640e3b329435c9.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.Tweet.af3480c242f6c21a47e5.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://cdn.syndication.twimg.com/tweet-result?features=tfw_timeline_list%3A%3Btfw_follower_count_sunset%3Atrue%3Btfw_tweet_edit_backend%3Aon%3Btfw_refsrc_session%3Aon%3Btfw_fosnr_soft_interventions_enabled%3Aon%3Btfw_mixed_media_15897%3Atreatment%3Btfw_experiments_cookie_expiration%3A1209600%3Btfw_show_birdwatch_pivots_enabled%3Aon%3Btfw_duplicate_scribes_to_settings%3Aon%3Btfw_use_profile_image_shape_enabled%3Aon%3Btfw_video_hls_dynamic_manifests_15082%3Atrue_bitrate%3Btfw_legacy_timeline_sunset%3Atrue%3Btfw_tweet_edit_frontend%3Aon&id=1742227247388299524&lang=fr&token=481d9ceba7e&jyjzrg=bufwm8p740y&w8r7ms=15162q18wn5l&5sekds=3t4f7f854gj&iucjaf=ca64l8c4eq8j&h64h1r=1jc184vm1u4o&kvgagr=3k7p849qz0g8&006d2v=189fvh380tmc&0791i1=2ldywz8iru9y",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://cdn.syndication.twimg.com/tweet-result?features=tfw_timeline_list%3A%3Btfw_follower_count_sunset%3Atrue%3Btfw_tweet_edit_backend%3Aon%3Btfw_refsrc_session%3Aon%3Btfw_fosnr_soft_interventions_enabled%3Aon%3Btfw_mixed_media_15897%3Atreatment%3Btfw_experiments_cookie_expiration%3A1209600%3Btfw_show_birdwatch_pivots_enabled%3Aon%3Btfw_duplicate_scribes_to_settings%3Aon%3Btfw_use_profile_image_shape_enabled%3Aon%3Btfw_video_hls_dynamic_manifests_15082%3Atrue_bitrate%3Btfw_legacy_timeline_sunset%3Atrue%3Btfw_tweet_edit_frontend%3Aon&id=1742837420926664732&lang=fr&token=483a9o2a6ez&03lnma=lzwg8wv21yh&rr094l=1b4378jek5ni&huzx4t=4nrv8wsbhwnn&my4qg2=zt1um381nx6&izghlk=crl4l84jhaqe",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://cdn.syndication.twimg.com/tweet-result?features=tfw_timeline_list%3A%3Btfw_follower_count_sunset%3Atrue%3Btfw_tweet_edit_backend%3Aon%3Btfw_refsrc_session%3Aon%3Btfw_fosnr_soft_interventions_enabled%3Aon%3Btfw_mixed_media_15897%3Atreatment%3Btfw_experiments_cookie_expiration%3A1209600%3Btfw_show_birdwatch_pivots_enabled%3Aon%3Btfw_duplicate_scribes_to_settings%3Aon%3Btfw_use_profile_image_shape_enabled%3Aon%3Btfw_video_hls_dynamic_manifests_15082%3Atrue_bitrate%3Btfw_legacy_timeline_sunset%3Atrue%3Btfw_tweet_edit_frontend%3Aon&id=1741194896533320085&lang=fr&token=47y4i4g9iaq&jv75ke=1gm3h8e5r46r&srmm7h=11vx383ilv5h&tst4wx=4v8xg881hj4g&jzxkax=9zs8sbbg1h8g&31ajvw=ggc8cr8o3pxd&syg86d=dnu80kzmfxtg&r1yteo=cyjn7f58ujn&8djj45=h9nafo85iswe",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.886.2f72edca4e14266f8bf0.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.5731.21a38d427c079d171432.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.9935.551987f9e1d82df07124.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.4384.d9a8a6060e32d36ce97a.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.2796.08a444204f993a582441.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.ondemand.TweetVideo.06a8f385c489c4e0aaf2.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://abs-0.twimg.com/emoji/v2/svg/1f1eb-1f1f7.svg",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://abs-0.twimg.com/emoji/v2/svg/1f389.svg",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564073%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22results%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-1%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742837420926664732%22%5D%2C%22item_details%22%3A%7B%221742837420926664732%22%3A%7B%22item_type%22%3A0%7D%7D%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564123%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22results%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742227247388299524%22%5D%2C%22item_details%22%3A%7B%221742227247388299524%22%3A%7B%22item_type%22%3A0%7D%7D%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564178%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22results%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-2%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221741194896533320085%22%5D%2C%22item_details%22%3A%7B%221741194896533320085%22%3A%7B%22item_type%22%3A0%7D%7D%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/profile_images/1527718132973985794/StkHthjb_normal.jpg",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/media/GC2icRcW4AAnLcd?format=jpg&name=360x360",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/profile_images/1336969860832776192/kEH5JOzr_normal.jpg",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/profile_images/1527718132973985794/StkHthjb_normal.jpg",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/media/GCn3fwPWwAAaSGG?format=jpg&name=240x240",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/media/GCn3gmeXEAATwgw?format=jpg&name=240x240",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/media/GCn3hQSWkAA6R0u?format=jpg&name=240x240",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/media/GCn3h4fXoAAXUKq?format=jpg&name=240x240",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://platform.twitter.com/embed/embed.loaders.video.VideoPlayerDefaultUI.1f5db80c88a5d23aa7a7.js",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://pbs.twimg.com/tweet_video_thumb/GC_NSP-WIAAAXSB.jpg",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://video.twimg.com/tweet_video/GC_NSP-WIAAAXSB.mp4",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/cache/lang/tarteaucitron.en.min.js?v=20230203"
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564375%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22playback_startup_error%22%2C%22section%22%3A%22main%22%2C%22component%22%3A%22video%22%2C%22element%22%3A%22gif_player%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-1%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742837420926664732%22%5D%2C%22item_details%22%3A%7B%221742837420926664732%22%3A%7B%22item_type%22%3A0%7D%7D%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564376%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22error%22%2C%22section%22%3A%22main%22%2C%22component%22%3A%22video%22%2C%22element%22%3A%22gif_player%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-1%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742837420926664732%22%5D%2C%22item_details%22%3A%7B%221742837420926664732%22%3A%7B%22item_type%22%3A0%7D%7D%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564419%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22FCP%22%2C%22component%22%3A%22performance%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742227247388299524%22%5D%2C%22item_details%22%3A%7B%221742227247388299524%22%3A%7B%22item_type%22%3A0%7D%7D%2C%22duration_ms%22%3A830.6000000000058%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564419%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22FCP%22%2C%22component%22%3A%22performance%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-2%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221741194896533320085%22%5D%2C%22item_details%22%3A%7B%221741194896533320085%22%3A%7B%22item_type%22%3A0%7D%7D%2C%22duration_ms%22%3A828.2000000000116%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564431%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22error%22%2C%22section%22%3A%22main%22%2C%22component%22%3A%22video%22%2C%22element%22%3A%22gif_player%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-1%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742837420926664732%22%5D%2C%22item_details%22%3A%7B%221742837420926664732%22%3A%7B%22item_type%22%3A0%7D%7D%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396564479%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22FCP%22%2C%22component%22%3A%22performance%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-1%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742837420926664732%22%5D%2C%22item_details%22%3A%7B%221742837420926664732%22%3A%7B%22item_type%22%3A0%7D%7D%2C%22duration_ms%22%3A915.5%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/cache/tarteaucitron.services.min.js?v=20230203"
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396565454%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22error%22%2C%22section%22%3A%22main%22%2C%22component%22%3A%22video%22%2C%22element%22%3A%22gif_player%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-1%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742837420926664732%22%5D%2C%22item_details%22%3A%7B%221742837420926664732%22%3A%7B%22item_type%22%3A0%7D%7D%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/log/?account=cb6c31eaf0d65c6f8768c5734dd1a8df6bfd7780&domain=culture.gouv.fr&status=!facebookpixel%3Dfalse!mc_analytics%3Dfalse!siteimproveanalytics%3Dfalse!addthis%3Dfalse!facebook%3Dfalse!instagramembed%3Dfalse!twitterembed%3Dfalse&_time=1704396565739"
+    },
+    {
+      "type": "twitter",
+      "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1704396567471%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22tweet%22%2C%22action%22%3A%22error%22%2C%22section%22%3A%22main%22%2C%22component%22%3A%22video%22%2C%22element%22%3A%22gif_player%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-1%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fwww.culture.gouv.fr%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22MinistereCC%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%222423e1d6feef8%3A1696717678980%22%2C%22item_ids%22%3A%5B%221742837420926664732%22%5D%2C%22item_details%22%3A%7B%221742837420926664732%22%3A%7B%22item_type%22%3A0%7D%7D%7D",
+      "details": {
+        "id": "twitter",
+        "message": "Dont embed twitter scripts, use your own tweet embed"
+      }
+    }
+  ],
+  "cookies": [],
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "472",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-security-policy": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Thu, 04 Jan 2024 19:29:21 GMT",
+    "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+    "server": "nginx",
+    "strict-transport-security": "max-age=2592000; includeSubDomains",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding,X-Editorial-Mode",
+    "x-backend": "front1",
+    "x-content-security-policy": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+    "x-content-type-options": "nosniff",
+    "x-debug-ttl": "3600.000",
+    "x-frame-options": "SAMEORIGIN",
+    "x-varnish": "84593561 50322983",
+    "x-xss-protection": "1; mode=block; report=/nelmio/xss/report",
+    "cache-control": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+    "x-storage": "default",
+    "xkey": "ez-all c268839 ct182 l66 pl220 p1 p2 p220 p66 r268838 r272196 r274142 r339375 r340021 r339657 r339748 r339573 r93980 r340063 r339943 r339676 r0 r333956 r313047 r298791 r300717 r307938 r339065 r339064 r287051 r287079 r287064 r273340 r268845 r311206 r173569 r285253 r285261 r268856 r284 r286 r285 r361"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.culture.gouv.fr",
+      "ip": "143.126.211.160",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "infolettres.duministeredelaculture.fr",
+      "ip": "54.38.64.29",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "tarteaucitron.io",
+      "ip": "51.68.111.231",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "api.dmcdn.net",
+      "ip": "208.111.152.2",
+      "geoip": {
+        "city": {
+          "geoname_id": 5378538,
+          "names": {
+            "de": "Oakland",
+            "en": "Oakland",
+            "es": "Oakland",
+            "fr": "Oakland",
+            "ja": "オークランド",
+            "pt-BR": "Oakland",
+            "ru": "Окленд",
+            "zh-CN": "奥克兰"
+          }
+        },
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 20,
+          "latitude": 37.8075,
+          "longitude": -122.2644,
+          "metro_code": 807,
+          "time_zone": "America/Los_Angeles"
+        },
+        "postal": {
+          "code": "94612"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 5332921,
+            "iso_code": "CA",
+            "names": {
+              "de": "Kalifornien",
+              "en": "California",
+              "es": "California",
+              "fr": "Californie",
+              "ja": "カリフォルニア州",
+              "pt-BR": "Califórnia",
+              "ru": "Калифорния",
+              "zh-CN": "加州"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "platform.twitter.com",
+      "ip": "72.21.91.66",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "syndication.twitter.com",
+      "ip": "104.244.42.200",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "cdn.syndication.twimg.com",
+      "ip": "72.21.91.70",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "abs-0.twimg.com",
+      "ip": "104.244.43.131",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "pbs.twimg.com",
+      "ip": "72.21.91.70",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "video.twimg.com",
+      "ip": "93.184.215.217",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    }
+  ]
+}

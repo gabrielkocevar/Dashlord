@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.culture.gouv.fr",
+        "size": 3778.32,
+        "nodes": 1672,
+        "requests": 52,
+        "grade": "E",
+        "score": 31.0,
+        "ges": 2.38,
+        "water": 3.57,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 19:30:34.206601",
+        "page_type": null
+    }
+]

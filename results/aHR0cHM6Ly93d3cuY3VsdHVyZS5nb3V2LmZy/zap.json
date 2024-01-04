@@ -1,0 +1,2019 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Thu, 4 Jan 2024 19:43:50",
+	"site":[ 
+		{
+			"@name": "https://www.culture.gouv.fr",
+			"@host": "www.culture.gouv.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"form-doc-filter\" class=\"filter-theme\" enctype=\"multipart/form-data\" method=\"get\"\n          action=\"https://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires#content\" role=\"form\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"announced\" \"closed\" \"in_progress\" \"query-field\" ]."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Espace-documentation",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form id=\"form-doc-filter\" class=\"espace-form filter-theme\" enctype=\"multipart/form-data\" method=\"get\"\n              action=\"https://www.culture.gouv.fr/Espace-documentation#content\" role=\"form\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"query-field\" ]."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Presse/Agenda-ministre",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form name=\"mcc_culture_gouv_agenda_search\" method=\"post\" class=\"filter-theme\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"dp1\" \"dp2\" ]."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"announced\" \"closed\" \"in_progress\" \"query-field\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1253"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-4",
+					"alert": "CSP: Wildcard Directive",
+					"name": "CSP: Wildcard Directive",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: \nframe-ancestors, form-action\n\nThe directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: \nframe-ancestors, form-action\n\nThe directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </p><p>frame-ancestors, form-action</p><p></p><p>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-10",
+					"alert": "CSP: script-src unsafe-eval",
+					"name": "CSP: script-src unsafe-eval",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "script-src includes unsafe-eval."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "script-src includes unsafe-eval."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>script-src includes unsafe-eval.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-6",
+					"alert": "CSP: style-src unsafe-inline",
+					"name": "CSP: style-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "style-src includes unsafe-inline."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"stylesheet\" href=\"https://infolettres.duministeredelaculture.fr/preferences/assets/css/mbExtension.min.css\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://api.dmcdn.net/all.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://tarteaucitron.io/load.js?domain=culture.gouv.fr&amp;uuid=cb6c31eaf0d65c6f8768c5734dd1a8df6bfd7780\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10044",
+					"alertRef": "10044",
+					"alert": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"name": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The server has responded with a redirect that seems to provide a large response. This may indicate that although the server sent a redirect it also responded with body content (which may include sensitive details, PII, etc.).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 47 [/Aides-demarches/Aides-demarches-et-subventions].\nPredicted response size: 347.\nResponse Body Length: 434."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Dispositifs-specifiques/Soutien-Culture-Ukraine-le-ministere-de-la-Culture-se-mobilise-en-faveur-des-artistes-et-professionnels-de-la-culture-ukrainiens",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 134 [/Aides-demarches/Aides-demarches-et-subventions/Dispositifs-specifiques/Soutien-Culture-Ukraine-le-ministere-de-la-Culture-se-mobilise].\nPredicted response size: 434.\nResponse Body Length: 782."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/content/search?refinementList%5Btheme_tag_keywords%5D%5B0%5D=%C3%89tudes%20et%20statistiques",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 84 [/Recherche?refinementList%5Btheme_tag_keywords%5D%5B0%5D=%C3%89tudes+et+statistiques].\nPredicted response size: 384.\nResponse Body Length: 582."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/content/search?refinementList%5Btheme_tag_keywords%5D%5B0%5D=Conservation-restauration",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 82 [/Recherche?refinementList%5Btheme_tag_keywords%5D%5B0%5D=Conservation-restauration].\nPredicted response size: 382.\nResponse Body Length: 574."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/content/search?refinementList%5Btheme_tag_keywords%5D%5B0%5D=M%C3%A9dias",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 68 [/Recherche?refinementList%5Btheme_tag_keywords%5D%5B0%5D=M%C3%A9dias].\nPredicted response size: 368.\nResponse Body Length: 518."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/content/search?refinementList%5Btheme_tag_keywords%5D%5B0%5D=Mus%C3%A9es%2C%20lieux%20d%27exposition",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 92 [/Recherche?refinementList%5Btheme_tag_keywords%5D%5B0%5D=Mus%C3%A9es%2C+lieux+d%27exposition].\nPredicted response size: 392.\nResponse Body Length: 614."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/content/search?refinementList%5Btheme_tag_keywords%5D%5B0%5D=Pratiques%2C%20consommations%20et%20usages%20culturels",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 103 [/Recherche?refinementList%5Btheme_tag_keywords%5D%5B0%5D=Pratiques%2C+consommations+et+usages+culturels].\nPredicted response size: 403.\nResponse Body Length: 658."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/content/search?refinementList%5Btheme_tag_keywords%5D%5B0%5D=Transition%20%C3%A9cologique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 83 [/Recherche?refinementList%5Btheme_tag_keywords%5D%5B0%5D=Transition+%C3%A9cologique].\nPredicted response size: 383.\nResponse Body Length: 578."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/fr/Actualites/Dossiers/Le-budget-du-ministere-de-la-Culture",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 61 [/fr/Actualites2/Dossiers/Le-budget-du-ministere-de-la-Culture].\nPredicted response size: 361.\nResponse Body Length: 490."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/France-Relance",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 120 [/Aides-demarches/Aides-demarches-et-subventions/Dispositifs-specifiques/France-Relance-Redynamiser-notre-modele-culturel].\nPredicted response size: 420.\nResponse Body Length: 726."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/mondesnouveaux",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 56 [/Aides-demarches/Dispositifs-specifiques/Mondes-nouveaux].\nPredicted response size: 356.\nResponse Body Length: 470."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Olympiade-culturelle",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 58 [/L-Olympiade-Culturelle-un-dialogue-entre-culture-et-sport].\nPredicted response size: 358.\nResponse Body Length: 478."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
+					"otherinfo": "<p>Location header URI length: 47 [/Aides-demarches/Aides-demarches-et-subventions].</p><p>Predicted response size: 347.</p><p>Response Body Length: 434.</p>",
+					"reference": "",
+					"cweid": "201",
+					"wascid": "13",
+					"sourceid": "933"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-3",
+					"alert": "CSP: Notices",
+					"name": "CSP: Notices",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "Warnings:\nThe report-uri directive has been deprecated in favor of the new report-to directive\n"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "Warnings:\nThe report-uri directive has been deprecated in favor of the new report-to directive\n"
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>Warnings:</p><p>The report-uri directive has been deprecated in favor of the new report-to directive</p><p></p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "https://api.dmcdn.net/all.js",
+							"attack": "",
+							"evidence": "<script src=\"https://api.dmcdn.net/all.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "https://platform.twitter.com/widgets.js",
+							"attack": "",
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?domain=culture.gouv.fr&uuid=cb6c31eaf0d65c6f8768c5734dd1a8df6bfd7780",
+							"attack": "",
+							"evidence": "<script src=\"https://tarteaucitron.io/load.js?domain=culture.gouv.fr&amp;uuid=cb6c31eaf0d65c6f8768c5734dd1a8df6bfd7780\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "https://api.dmcdn.net/all.js",
+							"attack": "",
+							"evidence": "<script src=\"https://api.dmcdn.net/all.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "https://platform.twitter.com/widgets.js",
+							"attack": "",
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?domain=culture.gouv.fr&uuid=cb6c31eaf0d65c6f8768c5734dd1a8df6bfd7780",
+							"attack": "",
+							"evidence": "<script src=\"https://tarteaucitron.io/load.js?domain=culture.gouv.fr&amp;uuid=cb6c31eaf0d65c6f8768c5734dd1a8df6bfd7780\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "6",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/2.e58a00370ca33ff77bbd.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "4873"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Etats-generaux-des-festivals-un-modele-a-reinventer",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/France-Relance-Redynamiser-notre-modele-culturel",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Le-budget-du-ministere-de-la-Culture",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Aides-demarches-et-subventions/Dispositifs-specifiques/Soutien-Culture-Ukraine-le-ministere-de-la-Culture-se-mobilise",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Fils-d-actualite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/L-Olympiade-Culturelle-un-dialogue-entre-culture-et-sport",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Industries-culturelles-et-creatives/Strategie-d-acceleration-des-industries-culturelles-et-creatives",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Livre-et-lecture/Ma-bibliotheque-le-monde-a-portee-de-main",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Aides-demarches-et-subventions/Dispositifs-specifiques/Mondes-nouveaux/264-projets-artistiques-pour-des-Mondes-nouveaux2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/0.5209bbd6784d635139e8.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/3.e3f977618cbbf01db401.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/css/main.8003db3076a0f4d03ca9.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/images/loader_logo.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/images/touch-icon-ipad.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/images/touch-icon-iphone.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/js/main.110fc67af843a9c2dfef.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/js/tarteaucitron.066f77cb8929faec671e.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/runtime.c4fdf05c9325d43b7d0f.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/bundles/bazingajstranslation/js/translator.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "4231"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704396089",
+							"otherinfo": "1704396089, which evaluates to: 2024-01-04 19:21:29"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704396104",
+							"otherinfo": "1704396104, which evaluates to: 2024-01-04 19:21:44"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704396089",
+							"otherinfo": "1704396089, which evaluates to: 2024-01-04 19:21:29"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/ar",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704395318",
+							"otherinfo": "1704395318, which evaluates to: 2024-01-04 19:08:38"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/de",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704396654",
+							"otherinfo": "1704396654, which evaluates to: 2024-01-04 19:30:54"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/en",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704396475",
+							"otherinfo": "1704396475, which evaluates to: 2024-01-04 19:27:55"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/es",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704394019",
+							"otherinfo": "1704394019, which evaluates to: 2024-01-04 18:46:59"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704392964",
+							"otherinfo": "1704392964, which evaluates to: 2024-01-04 18:29:24"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/L-Olympiade-Culturelle-un-dialogue-entre-culture-et-sport",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704393682",
+							"otherinfo": "1704393682, which evaluates to: 2024-01-04 18:41:22"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/zh",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704395363",
+							"otherinfo": "1704395363, which evaluates to: 2024-01-04 19:09:23"
+						}
+					],
+					"count": "10",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1704396089, which evaluates to: 2024-01-04 19:21:29</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "8"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/0.5209bbd6784d635139e8.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/2.e58a00370ca33ff77bbd.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/3.e3f977618cbbf01db401.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/css/main.8003db3076a0f4d03ca9.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/images/loader_logo.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/images/touch-icon-ipad.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/images/touch-icon-iphone.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/js/main.110fc67af843a9c2dfef.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/js/tarteaucitron.066f77cb8929faec671e.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/runtime.c4fdf05c9325d43b7d0f.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/bundles/bazingajstranslation/js/translator.min.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "4874"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/1/6/6/7/3167661-1-fre-FR/Education-artistique-culturelle",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD^\uFFFD\uFFFD~\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFDGnq\uFFFDb\uFFFD\uFFFD\uFFFD\u062C\uFFFD*\uFFFD{\uFFFD.\uFFFD\u06EBzY^"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/1/6/6/7/3167661-1-fre-FR/Education-artistique-culturelle",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD^\uFFFD\uFFFD~\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFDGnq\uFFFDb\uFFFD\uFFFD\uFFFD\u062C\uFFFD*\uFFFD{\uFFFD.\uFFFD\u06EBzY^"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ=",
+							"otherinfo": "ThisEzPlatformTokenIsNotSoSecret_PleaseChangeIt"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Etats-generaux-des-festivals-un-modele-a-reinventer",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/9/2/8/2/3432829-1-fre-FR/marseille-jazz-festival-cinq-continents_love-spots-1280x768",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u07CD\uFFFD\uFFFDo~\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFDf\uFFFD\uFFFD\u8955\uFFFDk<\uFFFD}\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFD\u0227\uFFFD\uFFFD(\uFFFD\u0627z{l\uFFFDZ/{\uFFFD)\uFFFD\uFFFD>\uFFFDo4\u01FE\uFFFD"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/France-Relance-Redynamiser-notre-modele-culturel",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/0/8/1/4/3194180-1-fre-FR/France-relance-banner",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD?\uFFFD\uFFFD?\uFFFD_x\uFFFD\uFFFD>\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFDZ\u069D\u01FE\uFFFD\uFFFDZ\uFFFD\u01FEm\uFFFD\uFFFDz"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Le-budget-du-ministere-de-la-Culture",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/7/6/6/6/3776667-1-fre-FR/070801ff27e7-CJ5R5433-2",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u07FE\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFDN\uFFFD\uFFFDM_n\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001ex\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Aides-demarches-et-subventions/Dispositifs-specifiques/Soutien-Culture-Ukraine-le-ministere-de-la-Culture-se-mobilise",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ=",
+							"otherinfo": "ThisEzPlatformTokenIsNotSoSecret_PleaseChangeIt"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Fils-d-actualite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/4/6/7/7/2997764-1-fre-FR/ministere-culture-palais-royal",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD{\uFFFD>\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFDh\uFFFD\uFFFD\uFFFD^\uFFFD\uF73A[n\uFFFD\uFFFDjV\uFFFD\uFFFD\uFFFD\uFFFD\u0269"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/L-Olympiade-Culturelle-un-dialogue-entre-culture-et-sport",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/6/7/2/0/3740276-1-fre-FR/ba70a569f0b1-Traverse-Mont-Saint-Michel-2",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD?\u07FE4\u06FE\uFFFD\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFD\uFFFD\uFFFD\u046Ez\uFFFD\uFFFD\\x001b\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uF322{~I\uFFFD\uFFFD\uFFFD\uFFFD\"r\\x0017\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Industries-culturelles-et-creatives/Strategie-d-acceleration-des-industries-culturelles-et-creatives",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/9/8/4/4/3374489-1-fre-FR/ICC",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD?\uFFFD\uFFFD?\uFFFD~\uFFFD\uFFFD\uFFFD~\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Livre-et-lecture/Ma-bibliotheque-le-monde-a-portee-de-main",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/var/culture/storage/images/_aliases/metadata/0/6/4/2/5982460-1-fre-FR/3ef22246309c-visuel",
+							"otherinfo": "~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD6\uFFFD>\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFDw\uFFFD\uFFFDm\uFFFD\uFFFD}=s\uFFFD\uFFFD\uFFFD"
+						}
+					],
+					"count": "11",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>~\uFFFD\uFFFDj\uFFFD\u073A[n\uFFFD\uFFFD\uCD8A\u0681\uFFFD\u2668\\x001e\uFFFD\uFFFD\u0696&\uFFFDz\uFFFD\uFFFDz\u059Dj\u05BF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD^\uFFFD\uFFFD~\uFFFD\uFFFD\uFFFD{\uFFFDQ\uFFFDGnq\uFFFDb\uFFFD\uFFFD\uFFFD\u062C\uFFFD*\uFFFD{\uFFFD.\uFFFD\u06EBzY^</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-1",
+					"alert": "CSP: X-Content-Security-Policy",
+					"name": "CSP: X-Content-Security-Policy",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "X-Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "The header X-Content-Security-Policy was found on this response. While it is a good sign that CSP is implemented to some degree the policy specified in this header has not been analyzed by ZAP. To ensure full support by modern browsers ensure that the Content-Security-Policy header is defined and attached to responses."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "X-Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src *.addthis.com *.adform.net *.algolia.com *.algolia.net *.algolianet.com *.algolianet.net *.calameo.com *.culture.fr *.doubleclick.net *.facebook.com *.facebook.net *.g.doubleclick.net *.getwemap.com *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.ingest.sentry.io *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com http://apis.syllabs.com http://infolettres-internes.culture.gouv.fr http://infolettres-ministere.culture.gouv.fr http://www.culture.fr http://www.culture.gouv.fr https://api.mapbox.com https://m.addthis.com https://s7.addthis.com https://semaphore.culture.gouv.fr https://semrecf2.culture.fr https://sesame.culture.fr https://stats.g.doubleclick.net https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' wss://genii-messages.tolk.ai; block-all-mixed-content; font-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: https://fonts.googleapis.com https://fonts.gstatic.com https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://maxcdn.bootstrapcdn.com inline 'self' 'unsafe-inline'; frame-src *.adform.net *.calameo.com *.culture.gouv.fr *.dailymotion.com *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.fr *.googleapis.com *.gouv.fr *.instagram.com *.openstreetmap.fr *.pop.culture.gouv.fr *.readspeaker.com *.soundcloud.com *.tolk.ai *.twitter.com *.vimeo.com http://platform.twitter.com http://s7.addthis.com http://www.instagram.com https://data.culturecommunication.gouv.fr https://livemap.getwemap.com https://www.facebook.com https://www.youtube.com inline 'self' 'unsafe-inline'; img-src *.adform.net *.culture.fr *.culture.gouv.fr *.doubleclick.net *.et-gv.fr *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com data: http://www.culture.fr http://www.culture.gouv.fr https://ad.doubleclick.net https://analytics.getwemap.com https://api.getwemap.com https://iecs.culture.gouv.fr https://livemap.getwemap.com https://logs4.xiti.com https://semrecf2.culture.fr https://sesame.culture.fr https://sf1-eu.readspeaker.com https://tarteaucitron.io https://www.culture.fr https://www.culture.gouv.fr https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com inline 'self' 'unsafe-inline'; script-src *.addthis.com *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com addthid blob: http://connect.facebook.net http://platform.twitter.com http://s7.addthis.com http://siteimproveanalytics.com http://tag.aticdn.net http://www.instagram.com https://ajax.googleapis.com https://api.dmcdn.net https://api.mapbox.com https://app.readspeaker.com https://gva.et-gv.fr https://iecs.culture.gouv.fr https://infolettres.duministeredelaculture.fr https://livemap.getwemap.com https://logp5.xiti.com https://logs152.xiti.com https://m.addthis.com https://sf1-eu.readspeaker.com https://tarteaucitron.io https://v1.addthisedge.com https://www.google-analytics.com https://www.googletagmanager.com https://www.gouvernement.fr https://z.moatads.com inline moz-extension 'self' 'unsafe-eval' 'unsafe-inline' 'nonce-VGhpc0V6UGxhdGZvcm1Ub2tlbklzTm90U29TZWNyZXRfUGxlYXNlQ2hhbmdlSXQ='; style-src *.adform.net *.doubleclick.net *.facebook.net *.g.doubleclick.net *.getwemap.workers.dev *.google-analytics.com *.google.com *.googleapis.com *.instagram.com *.readspeaker.com *.tolk.ai *.twitter.com https://fonts.googleapis.com https://infolettres.duministeredelaculture.fr https://sf1-eu.readspeaker.com inline 'self' 'unsafe-inline'; report-uri /nelmio/csp/report",
+							"otherinfo": "The header X-Content-Security-Policy was found on this response. While it is a good sign that CSP is implemented to some degree the policy specified in this header has not been analyzed by ZAP. To ensure full support by modern browsers ensure that the Content-Security-Policy header is defined and attached to responses."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>The header X-Content-Security-Policy was found on this response. While it is a good sign that CSP is implemented to some degree the policy specified in this header has not been analyzed by ZAP. To ensure full support by modern browsers ensure that the Content-Security-Policy header is defined and attached to responses.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10024",
+					"alertRef": "10024",
+					"alert": "Information Disclosure - Sensitive Information in URL",
+					"name": "Information Disclosure - Sensitive Information in URL",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress",
+							"method": "GET",
+							"param": "content_edit[_token]",
+							"attack": "",
+							"evidence": "content_edit[_token]",
+							"otherinfo": "The URL contains potentially sensitive information. The following string was found via the pattern: token\ncontent_edit[_token]"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Do not pass sensitive information in URIs.</p>",
+					"otherinfo": "<p>The URL contains potentially sensitive information. The following string was found via the pattern: token</p><p>content_edit[_token]</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1253"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/0.5209bbd6784d635139e8.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{\"+wdc\":function(e,t,n){\"use strict\";var r,l,i,a,o;if(\"undefined\"==typeo\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/2.e58a00370ca33ff77bbd.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "XXX",
+							"otherinfo": "The following pattern was used: \\bXXX\\b and was detected in the element starting with: \"(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{\"+CWT\":function(e,t,n){\"use strict\";n.d(t,\"a\",(function(){return i})),n\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/js/main.110fc67af843a9c2dfef.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(window.webpackJsonp=window.webpackJsonp||[]).push([[\"js/main\"],{0:function(e,t){},\"22pW\":function(e,t){$(\".pucoming-events .sli\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/assets/themes/gouv/js/tarteaucitron.066f77cb8929faec671e.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"(window.webpackJsonp=window.webpackJsonp||[]).push([[\"js/tarteaucitron\"],{cpg3:function(e,t,a){\"use strict\";a.r(t);var n=a(\"xS3D\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/global.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"tarteaucitron.user.siteimproveId = '6059165';\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/translations?locales=fr%2Cen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected 5 times, the first in the element starting with: \"t.add(\"oAuth admin\", \"oAuth admin\", \"messages\", \"fr\");\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/translations?locales=fr%2Cen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "administrator",
+							"otherinfo": "The following pattern was used: \\bADMINISTRATOR\\b and was detected 4 times, the first in the element starting with: \"t.add(\"Please contact the system administrator\", \"Votre inscription n'a pas pu \\u00eatre prise en compte. Veuillez essayer \\u00e\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/translations?locales=fr%2Cen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 12 times, the first in the element starting with: \"t.add(\"Date from\", \"P\\u00e9riode \\u00e0 partir de\", \"messages\", \"fr\");\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/translations?locales=fr%2Cen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 3 times, the first in the element starting with: \"t.add(\"trash_asset_single.modal.message_main\", \"'%content_name%' has 1 or more asset Field(s). You have an option to send only t\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/translations?locales=fr%2Cen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 7 times, the first in the element starting with: \"t.add(\"If you are a valid newsletter user, an e-mail has been sent to you with all information required!\", \"Si le message ne vou\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/translations?locales=fr%2Cen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Username",
+							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected 6 times, the first in the element starting with: \"t.add(\"Username:\", \"Nom d'utilisateur :\", \"messages\", \"fr\");\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{\"+wdc\":function(e,t,n){\"use strict\";var r,l,i,a,o;if(\"undefined\"==typeo\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "4874"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"addthis_button_facebook\"\n                       aria-label=\"Partager sur Facebook\"\n                       data-mc-analytics=\"&#x7B;&quot;type&quot;&#x3A;&quot;button&quot;,&quot;name&quot;&#x3A;&quot;clic_cta_partager__facebook&quot;,&quot;params&quot;&#x3A;&#x7B;&quot;label&quot;&#x3A;&quot;facebook&quot;&#x7D;&#x7D;\"\n                    >\n                        <i class=\"mcicon mcicon-facebook2\" aria-hidden=\"true\"></i>\n                        <span class=\"sr-only\">Partager sur Facebook</span>\n                    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/France-Relance-Redynamiser-notre-modele-culturel",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"https://www.culture.gouv.fr/Actualites/Infographie-redynamiser-le-modele-culturel-francais\" target=\"_self\" class=\"btn btn-mc\">\n        Voir l&#039;infographie\n        <span class=\"mcicon mcicon-arrow-right\" aria-hidden=\"true\"></span>\n    </a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Le-budget-du-ministere-de-la-Culture",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"https://www.culture.gouv.fr/Presse/Dossiers-de-presse/Presentation-du-budget-2024-projet-de-loi-de-finances\" target=\"_self\" class=\"btn btn-mc\">\n        T&eacute;l&eacute;chargez le dossier\n        <span class=\"mcicon mcicon-arrow-right\" aria-hidden=\"true\"></span>\n    </a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Aides-demarches-et-subventions/Dispositifs-specifiques/Soutien-Culture-Ukraine-le-ministere-de-la-Culture-se-mobilise",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"addthis_button_facebook\"\n                       aria-label=\"Partager sur Facebook\"\n                       data-mc-analytics=\"&#x7B;&quot;type&quot;&#x3A;&quot;button&quot;,&quot;name&quot;&#x3A;&quot;clic_cta_partager__facebook&quot;,&quot;params&quot;&#x3A;&#x7B;&quot;label&quot;&#x3A;&quot;facebook&quot;&#x7D;&#x7D;\"\n                    >\n                        <i class=\"mcicon mcicon-facebook2\" aria-hidden=\"true\"></i>\n                        <span class=\"sr-only\">Partager sur Facebook</span>\n                    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Fils-d-actualite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"addthis_button_facebook\"\n                       aria-label=\"Partager sur Facebook\"\n                       data-mc-analytics=\"&#x7B;&quot;type&quot;&#x3A;&quot;button&quot;,&quot;name&quot;&#x3A;&quot;clic_cta_partager__facebook&quot;,&quot;params&quot;&#x3A;&#x7B;&quot;label&quot;&#x3A;&quot;facebook&quot;&#x7D;&#x7D;\"\n                    >\n                        <i class=\"mcicon mcicon-facebook2\" aria-hidden=\"true\"></i>\n                        <span class=\"sr-only\">Partager sur Facebook</span>\n                    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Nous-connaitre",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"addthis_button_facebook\"\n                       aria-label=\"Partager sur Facebook\"\n                       data-mc-analytics=\"&#x7B;&quot;type&quot;&#x3A;&quot;button&quot;,&quot;name&quot;&#x3A;&quot;clic_cta_partager__facebook&quot;,&quot;params&quot;&#x3A;&#x7B;&quot;label&quot;&#x3A;&quot;facebook&quot;&#x7D;&#x7D;\"\n                    >\n                        <i class=\"mcicon mcicon-facebook2\" aria-hidden=\"true\"></i>\n                        <span class=\"sr-only\">Partager sur Facebook</span>\n                    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Nous-connaitre/Decouvrir-le-ministere",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"addthis_button_facebook\"\n                       aria-label=\"Partager sur Facebook\"\n                       data-mc-analytics=\"&#x7B;&quot;type&quot;&#x3A;&quot;button&quot;,&quot;name&quot;&#x3A;&quot;clic_cta_partager__facebook&quot;,&quot;params&quot;&#x3A;&#x7B;&quot;label&quot;&#x3A;&quot;facebook&quot;&#x7D;&#x7D;\"\n                    >\n                        <i class=\"mcicon mcicon-facebook2\" aria-hidden=\"true\"></i>\n                        <span class=\"sr-only\">Partager sur Facebook</span>\n                    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Nous-connaitre/Organisation-du-ministere",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"addthis_button_facebook\"\n                       aria-label=\"Partager sur Facebook\"\n                       data-mc-analytics=\"&#x7B;&quot;type&quot;&#x3A;&quot;button&quot;,&quot;name&quot;&#x3A;&quot;clic_cta_partager__facebook&quot;,&quot;params&quot;&#x3A;&#x7B;&quot;label&quot;&#x3A;&quot;facebook&quot;&#x7D;&#x7D;\"\n                    >\n                        <i class=\"mcicon mcicon-facebook2\" aria-hidden=\"true\"></i>\n                        <span class=\"sr-only\">Partager sur Facebook</span>\n                    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Nous-connaitre/Organisation-du-ministere/Le-cabinet-de-la-Ministre",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"addthis_button_facebook\"\n                       aria-label=\"Partager sur Facebook\"\n                       data-mc-analytics=\"&#x7B;&quot;type&quot;&#x3A;&quot;button&quot;,&quot;name&quot;&#x3A;&quot;clic_cta_partager__facebook&quot;,&quot;params&quot;&#x3A;&#x7B;&quot;label&quot;&#x3A;&quot;facebook&quot;&#x7D;&#x7D;\"\n                    >\n                        <i class=\"mcicon mcicon-facebook2\" aria-hidden=\"true\"></i>\n                        <span class=\"sr-only\">Partager sur Facebook</span>\n                    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Nous-connaitre/Organisation-du-ministere/Rima-Abdul-Malak-ministre-de-la-Culture",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"addthis_button_facebook\"\n                       aria-label=\"Partager sur Facebook\"\n                       data-mc-analytics=\"&#x7B;&quot;type&quot;&#x3A;&quot;button&quot;,&quot;name&quot;&#x3A;&quot;clic_cta_partager__facebook&quot;,&quot;params&quot;&#x3A;&#x7B;&quot;label&quot;&#x3A;&quot;facebook&quot;&#x7D;&#x7D;\"\n                    >\n                        <i class=\"mcicon mcicon-facebook2\" aria-hidden=\"true\"></i>\n                        <span class=\"sr-only\">Partager sur Facebook</span>\n                    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Industries-culturelles-et-creatives/Strategie-d-acceleration-des-industries-culturelles-et-creatives",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"\">Pour les professionnels</a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Livre-et-lecture/Ma-bibliotheque-le-monde-a-portee-de-main",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"\">Le livre et la lecture en France</a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "12",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "224"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/ara-SA",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/chi-CN",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/eng-GB",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/esl-ES",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/fre-FR",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/ger-DE",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						}
+					],
+					"count": "7",
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "221"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-2",
+					"alert": "Obsolete Content Security Policy (CSP) Header Found",
+					"name": "Obsolete Content Security Policy (CSP) Header Found",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>The \"X-Content-Security-Policy\" and \"X-WebKit-CSP\" headers are no longer recommended.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Etats-generaux-des-festivals-un-modele-a-reinventer",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/France-Relance-Redynamiser-notre-modele-culturel",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Le-budget-du-ministere-de-la-Culture",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Aides-demarches-et-subventions/Dispositifs-specifiques/Soutien-Culture-Ukraine-le-ministere-de-la-Culture-se-mobilise",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Fils-d-actualite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/L-Olympiade-Culturelle-un-dialogue-entre-culture-et-sport",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Industries-culturelles-et-creatives/Strategie-d-acceleration-des-industries-culturelles-et-creatives",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Livre-et-lecture/Ma-bibliotheque-le-monde-a-portee-de-main",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Etats-generaux-des-festivals-un-modele-a-reinventer",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites2/Dossiers/Le-budget-du-ministere-de-la-Culture",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Aides-demarches-et-subventions/Dispositifs-specifiques/Soutien-Culture-Ukraine-le-ministere-de-la-Culture-se-mobilise",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Fils-d-actualite",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/L-Olympiade-Culturelle-un-dialogue-entre-culture-et-sport",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "no-cache, private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Thematiques/Livre-et-lecture/Ma-bibliotheque-le-monde-a-portee-de-main",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 1228",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 1246",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 1247",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Fils-d-actualite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 823",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/ara-SA",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/chi-CN",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/eng-GB",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/esl-ES",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/fre-FR",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/ger-DE",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 170",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "<p>The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use.</p>",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/eng-GB",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "206"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/eng-GB",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "206"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/eng-GB",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "206"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/languageSwitch/eng-GB",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "206"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "s-maxage=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "s-maxage=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Fils-d-actualite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "s-maxage=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "4",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10031",
+					"alertRef": "10031",
+					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
+					"name": "User Controllable HTML Element Attribute (Potential XSS)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites?limit=10",
+							"method": "GET",
+							"param": "limit",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Actualites?limit=10\r\n\r\nappears to include user input in: \r\n\r\na(n) [a] tag [title] attribute \r\n\r\nThe user input found was:\r\nlimit=10\r\n\r\nThe user-controlled value was:\r\n10 r\u00E9sultats par page"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites?limit=10",
+							"method": "GET",
+							"param": "limit",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Actualites?limit=10\r\n\r\nappears to include user input in: \r\n\r\na(n) [button] tag [title] attribute \r\n\r\nThe user input found was:\r\nlimit=10\r\n\r\nThe user-controlled value was:\r\n10 r\u00E9sultats par page"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites?limit=10",
+							"method": "GET",
+							"param": "limit",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Actualites?limit=10\r\n\r\nappears to include user input in: \r\n\r\na(n) [li] tag [data-location] attribute \r\n\r\nThe user input found was:\r\nlimit=10\r\n\r\nThe user-controlled value was:\r\n100"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites?limit=30",
+							"method": "GET",
+							"param": "limit",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Actualites?limit=30\r\n\r\nappears to include user input in: \r\n\r\na(n) [a] tag [title] attribute \r\n\r\nThe user input found was:\r\nlimit=30\r\n\r\nThe user-controlled value was:\r\n30 r\u00E9sultats par page"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites?limit=30",
+							"method": "GET",
+							"param": "limit",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Actualites?limit=30\r\n\r\nappears to include user input in: \r\n\r\na(n) [button] tag [title] attribute \r\n\r\nThe user input found was:\r\nlimit=30\r\n\r\nThe user-controlled value was:\r\n30 r\u00E9sultats par page"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Actualites?limit=30",
+							"method": "GET",
+							"param": "limit",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Actualites?limit=30\r\n\r\nappears to include user input in: \r\n\r\na(n) [li] tag [data-location] attribute \r\n\r\nThe user input found was:\r\nlimit=30\r\n\r\nThe user-controlled value was:\r\n303578"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress",
+							"method": "GET",
+							"param": "content_edit[language]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress\r\n\r\nappears to include user input in: \r\n\r\na(n) [a] tag [lang] attribute \r\n\r\nThe user input found was:\r\ncontent_edit[language]=fre-FR\r\n\r\nThe user-controlled value was:\r\nfre-fr"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress",
+							"method": "GET",
+							"param": "content_edit[version_info][version_no]",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress\r\n\r\nappears to include user input in: \r\n\r\na(n) [li] tag [data-location] attribute \r\n\r\nThe user input found was:\r\ncontent_edit[version_info][version_no]=21\r\n\r\nThe user-controlled value was:\r\n21018"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress",
+							"method": "GET",
+							"param": "status",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [id] attribute \r\n\r\nThe user input found was:\r\nstatus=in_progress\r\n\r\nThe user-controlled value was:\r\nin_progress"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress",
+							"method": "GET",
+							"param": "status",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nstatus=in_progress\r\n\r\nThe user-controlled value was:\r\nin_progress"
+						},
+						{
+							"uri": "https://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress",
+							"method": "GET",
+							"param": "status",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.culture.gouv.fr/Aides-demarches/Appels-a-projets-partenaires?content_edit%5B_token%5D=ZpKL2HWwuobN7aLxheeo-K_mCw9_Iv_LPCRvC8k-cTM&content_edit%5Bcontent_info%5D=211361&content_edit%5Blanguage%5D=fre-FR&content_edit%5Blocation%5D=215051&content_edit%5Bversion_info%5D%5Bcontent_info%5D=211361&content_edit%5Bversion_info%5D%5Bversion_no%5D=21&search&status=in_progress\r\n\r\nappears to include user input in: \r\n\r\na(n) [label] tag [for] attribute \r\n\r\nThe user input found was:\r\nstatus=in_progress\r\n\r\nThe user-controlled value was:\r\nin_progress"
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.culture.gouv.fr/Actualites?limit=10</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [a] tag [title] attribute </p><p></p><p>The user input found was:</p><p>limit=10</p><p></p><p>The user-controlled value was:</p><p>10 r\u00E9sultats par page</p>",
+					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
+					"cweid": "20",
+					"wascid": "20",
+					"sourceid": "5306"
+				}
+			]
+		}
+	]
+}
