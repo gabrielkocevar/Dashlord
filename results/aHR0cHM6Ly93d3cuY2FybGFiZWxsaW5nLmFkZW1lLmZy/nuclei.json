@@ -1,0 +1,239 @@
+[
+  [
+    {
+      "template": "dns/dns-saas-service-detection.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+      "template-id": "dns-saas-service-detection",
+      "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+      "info": {
+        "name": "DNS SaaS Service Detection",
+        "author": [
+          "noah @thesubtlety",
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "service"
+        ],
+        "description": "A CNAME DNS record was discovered",
+        "reference": [
+          "https://ns1.com/resources/cname",
+          "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+          "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "www.carlabelling.ademe.fr.",
+      "matched-at": "www.carlabelling.ademe.fr",
+      "extracted-results": [
+        "webredir.gandi.net."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 7953\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.carlabelling.ademe.fr.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 7953\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.carlabelling.ademe.fr.\tIN\t CNAME\n\n;; ANSWER SECTION:\nwww.carlabelling.ademe.fr.\t1677\tIN\tCNAME\twebredir.gandi.net.\n",
+      "timestamp": "2024-01-04T23:08:43.552505127Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.carlabelling.ademe.fr.",
+      "matched-at": "www.carlabelling.ademe.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 34657\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.carlabelling.ademe.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 34657\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;www.carlabelling.ademe.fr.\tIN\t CAA\n\n;; ANSWER SECTION:\nwww.carlabelling.ademe.fr.\t10800\tIN\tCNAME\twebredir.gandi.net.\n\n;; AUTHORITY SECTION:\ngandi.net.\t1200\tIN\tSOA\tdns0.gandi.net. hostmaster.gandi.net. 2023121400 900 900 1209600 1200\n",
+      "timestamp": "2024-01-04T23:08:43.845188372Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/missing-sri.yaml",
+      "template-url": "https://templates.nuclei.sh/public/missing-sri",
+      "template-id": "missing-sri",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/missing-sri.yaml",
+      "info": {
+        "name": "Missing Subresource Integrity",
+        "author": [
+          "lucky0x0d",
+          "pulsesecurity.co.nz"
+        ],
+        "tags": [
+          "compliance",
+          "js",
+          "sri",
+          "misconfig"
+        ],
+        "description": "Checks if script tags within the HTML response have Subresource Integrity implemented via the integrity attribute\n",
+        "reference": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/third_party_javascript_management_cheat_sheet.html#subresource-integrity"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://www.carlabelling.ademe.fr",
+      "matched-at": "https://carlabelling.ademe.fr/",
+      "extracted-results": [
+        "https://tarteaucitron.io/load.js?domain=carlabelling.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.carlabelling.ademe.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: max-age=0, must-revalidate, private\r\nContent-Language: fr\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Thu, 04 Jan 2024 23:10:25 GMT\r\nExpires: Thu, 04 Jan 2024 23:10:25 GMT\r\nServer: Apache\r\n\r\n<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-FR\" itemscope itemtype=\"http://schema.org/Review\">\n<head>\n    <script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?domain=carlabelling.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>\n    <meta http-equiv=\"x-ua-compatible\" content=\"IE=10\"/>\n    <meta charset=\"UTF-8\" />\n    <meta http-equiv=\"content-language\" content=\"fr-FR\"/>\n    <meta name=\"language\" content=\"fr-FR\"/>\n    <title>Car Labelling Ademe : Comparateur des véhicules neufs (énergie, CO2, polluants ...)</title>\n    <meta name=\"keywords\" content=\"comparateur véhicule, carburants, polluants, tvv\"/>\n    <meta name=\"description\" content=\"Comparateur des véhicules neufs (énergie, CO2, polluants ...)\"/>\n        <meta property=\"og:title\" content=\"\"/>\n    <meta property=\"og:site_name\" content=\"ADEME\"/>\n    <meta property=\"og:url\" content=\"https://carlabelling.ademe.fr/\"/>\n    <meta property=\"og:description\" content=\"\"/>\n    <meta property=\"og:image\" content=\"/build/images/chartebleu/Ademe/Banniere/retour_accueil.jpeg\"/>\n    <meta property=\"og:type\" content=\"website\"/>\n    <meta itemprop=\"name\" content=\"\"/>\n    <meta itemprop=\"image\" content=\"https://carlabelling.ademe.fr/build/images/chartebleu/Ademe/Banniere/retour_accueil.jpeg\"/>\n    <link rel=\"canonical\" href=\"https://carlabelling.ademe.fr/\"/>\n    <link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n            <link rel=\"stylesheet\" href=\"/build/bootstrap.fa893e87.css\">\n        <link rel=\"stylesheet\" href=\"/build/global.aacec579.css\">\n                <!--[if IE 8]>\n            <link rel=\"stylesheet\" href=\"/build/ie8.ddbaca1d.css\">\n        <![endif]-->\n        <link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\" />\n            <!--[if lt IE 9]>\n        <script src=\"/bower_components/html5shiv/src/html5shiv.js\" media=\"screen\" type=\"text/javascript\"></script>\n        <script src=\"/bower_components/html5shiv/dist/html5shiv-printshiv.js\" media=\"print\"></script>\n        <script src=\"http://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n        <![endif]-->\n        <style>\n        .chromeframe {\n            display: none;\n        }\n\n        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {\n            .chromeframe {\n                display:block;\n                background-color: lightpink;\n                padding:5px;\n                text-align: center;\n            }\n        }\n        <!--[if IE]>\n                   .chromeframe {\n                       display:block;\n                       background-color: lightpink;\n                       padding:5px;\n                       text-align: center;\n                   }\n        <![endif]-->\n\n    </style>\n</head>\n<body>\n<div id=\"global\">\n    <!--[if lt IE 8]>\n    <div class='msg-error'>La version de votre navigateur est ancienne et peut provoquer des problèmes d'affichage. Avec Internet Explorer, si ce site ne s'affiche pas correctement, appuyer sur la touche <strong>F12</strong> de votre clavier puis cliquer sur <strong>Mode de navigation</strong> et sélectionner: <strong>Internet Explorer 9</strong>. Merci de votre compréhension. </div>\n    .<![endif]-->\n    <noscript>\n        <div class='msg-error'>Veuillez activer le javascript pour profiter pleinement du site.</div>\n    </noscript>\n    <div class=\"chromeframe\">Certaines fonctionnalités du site ne sont pas compatibles avec le navigateur Internet Explorer. Pour profiter d’une expérience optimale nous vous invitons à utiliser un autre navigateur (Chrome, Firefox, Microsoft Edge).</div>\n    <header id=\"header\" role=\"banner\">\n        <div class=\"inner\">\n            <div class=\"logo\">\n                <img class=\"no-border logo_marianne\" src=\"/build/images/chartebleu/Ademe/Banniere/Republique-Francaise.png\" alt=\"Logo République Française, lien vers www.ademe.fr\"/>\n                <a href=\"http://www.ademe.fr\" target=\"_blank\">\n                    <img class=\"no-border logo_ademe\" src=\"/build/images/chartebleu/Ademe/Banniere/logo-ademe.png\"  alt=\"Logo ADEME, lien vers www.ademe.fr\"/>\n                </a>\n            </div>\n            <a href=\"https://carlabelling.ademe.fr\" class=\"title\">\n                <h1>\n                    <img class=\"no-border hidden-sm hidden-xs logo_ademe logo_ademe_carlabelling\" id=\"img-logo\" alt=\"Logo Car Labelling\" src=\"/build/images/logo_image.svg\">\n                    <img class=\"no-border hidden-sm hidden-xs logo_ademe logo_ademe_carlabelling\" id=\"img-logo\" alt=\"Car Labelling, Véhicules particuliers neufs\" src=\"/build/images/logo_text.svg\">\n                </h1>\n            </a>\n            <a href=\"https://carlabelling.ademe.fr\" style=\"text-decoration: none;color:black;\">\n                <h3 class=\"no-border text-header-first-sm\">Car Labelling ADEME</h3>\n                <p class=\"no-border text-header-second-sm\">Véhicules particuliers neufs</p>\n            </a>\n        </div>\n        <nav class=\"navbar navbar-default header-top-max\" role=\"navigation\">\n            <a href=\"https://carlabelling.ademe.fr\" style=\"text-decoration: none; color:black;\">\n                <h3 class=\"no-border text-header-first-xs\">Car Labelling ADEME</h3>\n                <p class=\"no-border text-header-second-xs\">Véhicules particuliers neufs</p>\n            </a>\n\n                            <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#carlabelling-navbar\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n    </button>\n</div>\n\n<!-- Collect the nav links, forms, and other content for toggling -->\n<div class=\"collapse navbar-collapse\" id=\"carlabelling-navbar\">\n    <ul class=\"nav navbar-nav\">\n            <li class=\" \">\n            <a href=\"https://carlabelling.ademe.fr/index/\" class=\"active topLinks\" ><span>Accueil</span></a>\n                    </li>\n            <li class=\" \">\n            <a href=\"https://carlabelling.ademe.fr/index/contextesenjeux\" class=\" topLinks\" ><span>Contexte et Enjeux</span></a>\n                    </li>\n            <li class=\"dropdown \">\n            <a href=\"/chiffrescles/\" class=\" topLinks\"  data-toggle=\"dropdown\"><span>Chiffres-clés</span></a>\n                            <ul class=\"dropdown-menu customHeigh\">\n                                            <li class=\"access-level alone\">\n                        \t<a href=\"https://carlabelling.ademe.fr/chiffrescles/\" >\n                                    <span>Chiffres-clés</span>\n                        \t</a>\n                                                </li>\n                                            <li class=\"access-level\">\n                        \t<a href=\"/chiffrescles/#anchor_repartitionventes\" >\n                                    <span>Répartition des ventes</span>\n                        \t</a>\n                                                \t<ul class=\"dropdown-menu sub-level hidden-xs\">\n\t                        \t                                            <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/venteParTypeEnergie\" ><span>Par type d'énergie</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/repartitionVenteClasseCo2\" ><span>Par classe CO<sub>2</sub></span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionRepartitionVenteClasseCo2Motorisation\" ><span>Par classe CO<sub>2</sub> et type d'énergie</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/repartitionVenteDiesel\" ><span>De véhicules Diesel et classe CO<sub>2</sub></span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/repartitionVenteEssence\" ><span>De véhicules essence et classe CO<sub>2</sub></span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionRepartitionVenteClasseCo2Carrosserie\" ><span>Par classe CO<sub>2</sub> et carrosserie</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rt/bestClasseA\" ><span>Les 10 meilleures ventes des véhicules classés A</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/venteParBonusMalus\" ><span>Par classe de bonus / malus</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/venteParTypeCarrosserie\" ><span>Par type de carrosserie</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/venteParGamme\" ><span>Par gamme</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/venteParPuissFiscale\" ><span>Par puissance fiscale</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/venteParGroupeConstructeur\" ><span>Par groupe de constructeurs</span></a></li>\n\t\t                        \t                       \t</ul>\n                                                </li>\n                                            <li class=\"access-level\">\n                        \t<a href=\"/chiffrescles/#anchor_evolutionventes\" >\n                                    <span>Evolution des ventes</span>\n                        \t</a>\n                                                \t<ul class=\"dropdown-menu sub-level hidden-xs\">\n\t                        \t                                            <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionImmat\" ><span>Tous véhicules</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/vehiculePropre\" ><span>Véhicules environnementalement performants</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionDiesel\" ><span>Taux de Dieselisation</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionRepartitionVenteClasseCo2\" ><span>Par classe CO<sub>2</sub></span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/marketPartConstructeurParClasseCO2\" ><span>Parts de marché des constructeurs français</span></a></li>\n\t\t                        \t                       \t</ul>\n                                                </li>\n                                            <li class=\"access-level\">\n                        \t<a href=\"/chiffrescles/#anchor_emissionsconsommations\" >\n                                    <span>Emissions de CO<sub>2</sub> et consommations</span>\n                        \t</a>\n                                                \t<ul class=\"dropdown-menu sub-level hidden-xs\">\n\t                        \t                                            <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionTauxCo2\" ><span>Evolution du taux moyen d'émissions</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/emissionParGroupeConstructeur\" ><span>Taux moyens d'émissions par groupe de constructeurs</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/moyenneCo2TypeCarrosserie\" ><span>Taux moyens d'émissions par carrosserie</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/moyenneEmissionCo2Gamme\" ><span>Taux moyens d'émissions par gamme</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionConsoMoyenne\" ><span>Évolution de la consommation moyenne</span></a></li>\n\t\t                        \t                       \t</ul>\n                                                </li>\n                                            <li class=\"access-level\">\n                        \t<a href=\"/chiffrescles/#anchor_classements\" >\n                                    <span>Les classements CO<sub>2</sub> ADEME</span>\n                        \t</a>\n                                                \t<ul class=\"dropdown-menu sub-level hidden-xs\">\n\t                        \t                                            <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rp/palmaresEssence\" ><span>Palmarès véhicules Essence</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rp/palmaresDiesel\" ><span>Palmarès véhicules Diesel</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rp/palmaresHybrideNonRechargeable\" ><span>Palmarès véhicules Hybrides non rechargeables</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rt/hybrideAndElectriqueBonus\" ><span>Palmarès des véhicules électriques et hybrides rechargeables</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rp/palmaresFlopEssence\" ><span>Moins bons véhicules essence</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rp/palmaresFlopDiesel\" ><span>Moins bons véhicules Diesel</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rc/classementVehiculeGamme\" ><span>Par gamme</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/rc/classementVehiculeCarrosserie\" ><span>Par carrosserie</span></a></li>\n\t\t                        \t                       \t</ul>\n                                                </li>\n                                            <li class=\"access-level\">\n                        \t<a href=\"/chiffrescles/#anchor_evolutiontechniques\" >\n                                    <span>Evolution des caractéristiques techniques</span>\n                        \t</a>\n                                                \t<ul class=\"dropdown-menu sub-level hidden-xs\">\n\t                        \t                                            <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionPuissanceMoyenne\" ><span>Puissance</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionMasseMoyenne\" ><span>Masse</span></a></li>\n\t\t                                                                    <li class=\"\"><a href=\"https://carlabelling.ademe.fr/chiffrescles/r/evolutionMasseMassiqueMoyenne\" ><span>Puissance massique</span></a></li>\n\t\t                        \t                       \t</ul>\n                                                </li>\n                                            <li class=\"access-level alone\">\n                        \t<a href=\"https://carlabelling.ademe.fr/chiffrescles/referenceseuils\" >\n                                    <span>Seuils d'attribution de Malus et de Bonus</span>\n                        \t</a>\n                                                </li>\n                                            <li class=\"access-level alone\">\n                        \t<a href=\"https://carlabelling.ademe.fr/chiffrescles/referenceconstructeurs\" >\n                                    <span>Liste des constructeurs par groupe</span>\n                        \t</a>\n                                                </li>\n                                    </ul>\n                    </li>\n            <li class=\"dropdown \">\n            <a href=\"#\" class=\" topLinks\"  data-toggle=\"dropdown\"><span>Palmarès ADEME</span></a>\n                            <ul class=\"dropdown-menu customHeigh\">\n                                            <li class=\" alone\">\n                        \t<a href=\"/chiffrescles/rt/hybrideAndElectriqueBonus\" >\n                                    <span>Palmarès des véhicules électriques et hybrides rechargeables</span>\n                        \t</a>\n                                                </li>\n                                            <li class=\" alone\">\n                        \t<a href=\"/chiffrescles/rp/palmaresHybrideNonRechargeable\" >\n                                    <span>Palmarès des véhicules hybrides non rechargeables</span>\n                        \t</a>\n                                                </li>\n                                            <li class=\" alone\">\n                        \t<a href=\"/chiffrescles/rp/palmaresEssence\" >\n                                    <span>Palmarès des véhicules essence</span>\n                        \t</a>\n                                                </li>\n                                            <li class=\" alone\">\n                        \t<a href=\"/chiffrescles/rp/palmaresDiesel\" >\n                                    <span>Palmarès des véhicules Diesel</span>\n                        \t</a>\n                                                </li>\n                                    </ul>\n                    </li>\n            <li class=\" \">\n            <a href=\"https://carlabelling.ademe.fr/index/glossaire\" class=\" topLinks\" ><span>Glossaire</span></a>\n                    </li>\n            <li class=\" \">\n            <a href=\"https://carlabelling.ademe.fr/index/faq\" class=\" topLinks\" ><span>FAQ</span></a>\n                    </li>\n        </ul>\n</div>\n                    </nav>\n\n    </header>\n    <div class=\"content\">\n        <div class=\"inner-content\">\n            <!-- <header> -->\n                                            <div class=\"large-header-box\">\n\t<span class='chemin hidden-print' id='fil-arianne' xmlns:v='http://rdf.data-vocabulary.org/#'></span>\t    <div class='share-tools tools hidden-xs hidden-sm'>\n\t    \t<div class=\"ademe-tooltip-visible ademe-tooltip-icons\">   \n\t    \t\t<div class=\"sharing-buttons-popup\">\n\t      \t\t\t<a href=\"http://www.facebook.com/sharer.php?u=https%3A%2F%2Fcarlabelling.ademe.fr%2F&amp;t=\" title=\"Visit ademe on Facebook\" target=\"_blank\" class=\"ua-processed-processed\" id=\"shareFb\">\n\t      \t\t\t<img src=\"/build/images/facebook.png\" alt=\"Facebook icon\">\n\t      \t\t\t</a>\n\t      \t\t\t<a href=\"http://twitter.com/share?url=https%3A%2F%2Fcarlabelling.ademe.fr%2F&amp;text=&amp;via=Ademe&amp;hashtags=carlabelling\" title=\"Tweet this\" target=\"_blank\" class=\"ua-processed-processed\" id=\"shareTwitter\">\n\t      \t\t\t<img src=\"/build/images/twitter.png\" alt=\"Twitter icon\">\n\t      \t\t\t</a>\n\t      \t\t\t<a href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fcarlabelling.ademe.fr%2F&amp;title=\" title=\"Share on LinkedIn\" target=\"_blank\" class=\"ua-processed-processed\" id=\"shareLinkedin\">\n\t      \t\t\t<img src=\"/build/images/linkedin.png\" alt=\"LinkedIn icon\">\n\t      \t\t\t</a>\n\t      \t\t\t<a href=\"http://plus.google.com/share?url=https%3A%2F%2Fcarlabelling.ademe.fr%2F&amp;title=\" title=\"Bookmark on Google\" target=\"_blank\" class=\"ua-processed-processed\" id=\"shareGoogle\">\n\t      \t\t\t<img src=\"/build/images/google.png\" alt=\"Google icon\">\n\t      \t\t\t</a>    \n\t      \t\t</div>\n\t  \t\t</div>\n\t  \t\t<ul>\n\t\t  \t\t<li>\n\t\t    \t\t<a class=\"share-icon\" title=\"Partager la page\"></a>\n\t\t    \t</li>\n\t\t    \t<li>\n\t\t        \t<a href='javascript:window.print()' id=\"printaction\" title=\"Imprimer la page\" class=\"print-icon\">\n\t\t        \t\t<span class=\"sr-only\">Imprimer</span>\n\t\t        \t</a>\n\t\t        </li>\n\t\t        <li class=\"pdf-show-icon\">\n                            <a href=\"javascript:void(0);\" class=\"pdf-icon\" title=\"Télécharger au format PDF\" id=\"pdfaction\"></a>\n\t\t        </li>\n\t        </ul>\n\t    </div>\n</div>\n<h1 class=\"sr-only\">Comparateur des véhicules neufs (énergie, CO2, polluants ...)</h1>\n\n                        <!-- </header> -->\n            <div id=\"main\" class=\"index-index\">\n                    <div class=\"row\">\n        <div class=\"col-xs-9 block-index\">\n\n            <div class=\"row\">\n                <div class=\"col-xs-12\">\n\n                    <div class=\"well home-search-v3 hidden-print\">\n                        <fieldset class=\"home-search-form-container\">\n                            <form method=\"get\" action=\"/recherche/index\" class=\"small-search\" name=\"smallSearch\">\n                            <input type=\"text\" id=\"searchString\" name=\"searchString\" title=\"recherche\" placeholder=\"Peugeot, Laguna, Cnit n° XXXXXX\" class=\"form-control\" />\n                            <button type=\"submit\" class=\"research-text\" name=\"RechercherS\" value=\"OK\">Rechercher</button>\n                            <a class=\"multi-criteria-search intern\" href=\"/recherche/index\">Recherche<br>multicritères</a>                                 </form>\n                        </fieldset>\n                        <div class=\"context\">\n                            <p>Le site « <a href=\"/\">Car Labelling ADEME</a> » permet de consulter les fiches de 7 245 véhicules neufs en comparant les informations du bonus écologique, des consommations d’énergie, des rejets de CO<sub>2</sub> et des polluants réglementés....</p>\n                            <a href=\"/index/contextesenjeux\" title=\"Contextes et Enjeux : link\">Lire la suite</a>\n                        </div>\n                    </div>\n                    \n                    \n                    <div class=\"car-container\">\n                        <ul class=\"car-list\">\n                            <li class=\"car-item col-md-4 col-lg-2 col-xs-6\"><a href=\"/recherche/index?category=berline&amp;RechercherL=Rechercher&amp;orderby[]=co2_co_high asc&amp;orderby[]=libMrq asc&amp;orderby[]=libMod asc\" rel=\"berline\" class=\"berline\"><span>Berlines</span></a></li>\n                            <li class=\"car-item col-md-4 col-lg-2 col-xs-6\"><a href=\"/recherche/index?category=break&amp;RechercherL=Rechercher&amp;orderby[]=co2_co_high asc&amp;orderby[]=libMrq asc&amp;orderby[]=libMod asc\" rel=\"break\" class=\"break\"><span>Breaks</span></a></li>\n                            <li class=\"car-item col-md-4 col-lg-2 col-xs-6\"><a href=\"/recherche/index?category=tout-terrains&amp;RechercherL=Rechercher&amp;orderby[]=co2_co_high asc&amp;orderby[]=libMrq asc&amp;orderby[]=libMod asc\" rel=\"tout-terrains\" class=\"tout-terrains\"><span>Tout-terrains</span></a></li>\n                            <li class=\"car-item col-md-4 col-lg-2 col-xs-6\"><a href=\"/recherche/index?category=cabriolet&amp;RechercherL=Rechercher&amp;orderby[]=co2_co_high asc&amp;orderby[]=libMrq asc&amp;orderby[]=libMod asc\" rel=\"cabriolet\" class=\"cabriolet\"><span>Coupés<br>Cabriolets</span></a></li>\n                            <li class=\"car-item col-md-4 col-lg-2 col-xs-6\"><a href=\"/recherche/index?category=monospace&amp;RechercherL=Rechercher&amp;orderby[]=co2_co_high asc&amp;orderby[]=libMrq asc&amp;orderby[]=libMod asc\" rel=\"monospace\" class=\"monospace\"><span>Monospaces</span></a></li>\n                            <li class=\"car-item col-md-4 col-lg-2 col-xs-6\"><a href=\"/recherche/index?category=minibus&amp;RechercherL=Rechercher&amp;orderby[]=co2_co_high asc&amp;orderby[]=libMrq asc&amp;orderby[]=libMod asc\" rel=\"minibus\" class=\"minibus\"><span>Minibus</span></a></li>\n                        </ul>\n                    </div>    \n\n\n                </div>\n            </div>\n\n\n            <div class=\"row same-height-blocks same-height-blocks-2\">\n                                            <div class=\"col-xs-12 col-md-6\">\n                            <div class=\"well message-block\">\n                                    <p class=\"message-main\">Avec 202 928 immatriculations neuves en France en 2022, soit 25% de plus qu&#039;en 2021, le véhicule électrique gagne des parts de marché</p>\n\n                                                                    <a href=\"\" target=\"_blank\"><p class=\"message-link\"></p></a>\n                                                            </div>\n                        </div>\n                                        <div class=\"col-xs-12 col-md-6\">\n                        <div class=\"well well-blue palmares-block\">\n\n                            <p class=\"palmares-intro\">\n                                <span>Palmarès des rejets<br>de CO<sub>2</sub></span>\n                            </p>\n\n                            <ul class=\"same-height-blocks same-height-blocks-3\">\n                                <li><a href=\"https://carlabelling.ademe.fr/chiffrescles/rp/palmaresHybrideNonRechargeable\">Véhicules<br> Hybrides non<br> rechargeables</a></li>\n                                <li><a href=\"https://carlabelling.ademe.fr/chiffrescles/rp/palmaresEssence\">Véhicules<br> Essence</a></li>\n                                <li><a href=\"https://carlabelling.ademe.fr/chiffrescles/rp/palmaresDiesel\">Véhicules<br> Diesel</a></li>\n                            </ul>\n\n                        </div>\n                    </div>\n            </div>        \n\n        </div>    \n\n\n        <div class=\"col-xs-3 right-element-index\">\n\n            <div class=\"row\">\n\n                                                        <div class=\"asidenumber-container\">\n                            <p class=\"asidenumber-number\">13.3 % de véhicules électriques</p>\n                            <p class=\"asidenumber-text\">(immatriculations neuves France 2022)</p>\n                        </div>\n                                                    <div class=\"block-video-and-link-container col-sm-12\">\n                    <div class=\"asidelinks\">\n                        <h6>Vidéo</h6>\n                        <div class=\"video-and-link-container\">\n                            <a class=\"extern displayVideoLink hidden-xs\" data-href=\"http://www.dailymotion.com/video/x3xy54s\" data-mobile=\"0\">\n                                <img src='/build/images/video-presentation.png' width='100%' alt=\"vidéo\"/>\n                            </a>\n                            <a class=\"extern displayVideoLink visible-xs-block\" data-href=\"http://www.dailymotion.com/video/x3xy54s\" data-mobile=\"1\">\n                                <img src='/build/images/video-presentation.png' width='100%' alt=\"vidéo\"/>\n                            </a>\n                            <ul>\n                                <li class=\"hidden-xs\">\n                                    <a class=\"extern displayVideoLink\" data-href=\"http://www.dailymotion.com/video/x3xy54s\" data-mobile=\"0\">Voir la vidéo de présentation</a>\n                                </li>\n                                <li class=\"visible-xs-block\">\n                                    <a class=\"extern displayVideoLink\" data-href=\"http://www.dailymotion.com/video/x3xy54s\" data-mobile=\"1\">Voir la vidéo de présentation</a>\n                                </li>\n                            </ul>\n                        </div>\n                    </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" id=\"modalLink\">\n            <div class=\"modal-dialog\" role=\"document\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-header\">\n                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n                        <h4 class=\"modal-title\">Vidéo de présentation</h4>\n                    </div>\n                    <div class=\"modal-body\">\n                        <iframe id=\"dailyMotionVideo\" frameborder=\"0\" width=\"560\" height=\"315\" src=\"//www.dailymotion.com/embed/video/x3xy54s\" allowfullscreen></iframe>\n                        <br />\n                        <a href=\"http://www.dailymotion.com/video/x3xy54s_carlabelling-ademe-fr_tech\" target=\"_blank\">Carlabelling.ademe.fr</a>\n                        <i>par <a href=\"http://www.dailymotion.com/ADEME\" target=\"_blank\">ADEME</a></i>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n    </div>\n<!--</div>-->\n            </div>\n                                                </div>\n    </div>\n    <footer>\n        <div class=\"inner\">\n            <div class=\"hidden-xs\">\n                <div class=\"center-block footerPlacement\">\n        <span class=\"customLink \">\n                    </span>\n            <ul >\n                                                <li><a href=\"https://carlabelling.ademe.fr/index/datemaj\">Dates de mises à jour</a>\n                                                                <li><a href=\"https://carlabelling.ademe.fr/index/plan\">Plan du site</a>\n                                                                <li><a href=\"https://carlabelling.ademe.fr/index/mentionslegales\">Mentions légales</a>\n                                                                <li><a href=\"https://carlabelling.ademe.fr/index/credits\">Crédits</a>\n                                                                <li><a href=\"http://www.ademe.fr/content/contacter\" target='_blank'>Contact</a>\n                                        <li><a href=\"/index/cookie\">Cookies</a>            <li><a href=\"/index/ppdp\">Politique de protection des données à caractère personnel</a>            <li><a href=\"/index/accessibilite\">Accessibilité : non conforme</a>        </ul>\n    </div>\n<span title=3.1.0>&copy; 2024, ADEME — Agence de la transition écologique</span>\n    <span id=\"footerVersion\">v3.1.0</span>\n<a id=\"haut_de_page\" href=\"#\">Haut de page</a>\n\n            </div>\n            <div class=\"visible-xs-block\">\n                <div class=\"mobileDisplay\">\n                    <div>\n                        <div class=\"center-block footerPlacement\">\n        <span class=\"customLink mob\">\n                    </span>\n            <div class=\"linkMobileFooter\">\n                                                <a href=\"https://carlabelling.ademe.fr/index/datemaj\">Dates de mises à jour</a>\n                                                                <a href=\"https://carlabelling.ademe.fr/index/plan\">Plan du site</a>\n                                                                <a href=\"https://carlabelling.ademe.fr/index/mentionslegales\">Mentions légales</a>\n                                                                <a href=\"https://carlabelling.ademe.fr/index/credits\">Crédits</a>\n                                                                <a href=\"http://www.ademe.fr/content/contacter\" target='_blank'>Contact</a>\n                                        <a href=\"/index/cookie\">Cookies</a>            <a href=\"/index/ppdp\">Politique de protection des données à caractère personnel</a>            <a href=\"/index/accessibilite\">Accessibilité : non conforme</a>        </div>\n    </div>\n<a id=\"haut_de_page\" href=\"#\">Haut de page</a>\n\n                    </div>\n                    <p title=3.1.0>&copy; 2024, ADEME<br/>Agence de la transition écologique</p><br>\n                    <p>v3.1.0</p>\n                </div>\n            </div>\n        </div>\n    </footer>\n</div>\n\n        <script type=\"text/javascript\" src=\"/bower_components/jquery/dist/jquery.min.js\"></script>\n\n    <script src=\"/build/runtime.7576e7bf.js\" defer></script><script src=\"/build/dropdown.694b4fc1.js\" defer></script>\n    <script src=\"/build/collapse.27258836.js\" defer></script>\n    <script src=\"/build/tooltip.9228cc90.js\" defer></script>\n    <script src=\"/build/popover.1928b42a.js\" defer></script>\n    <script src=\"/build/modal.a2f4e123.js\" defer></script>\n    <script src=\"/build/button.a5f30e36.js\" defer></script>\n    <script src=\"/build/0.a39b9893.js\" defer></script><script src=\"/build/jqueryPlaceholder.f80b1a89.js\" defer></script>\n    <script src=\"/build/jqueryScrollUp.102c449e.js\" defer></script>\n    <script src=\"/build/jqueryCookie.c633b7ff.js\" defer></script>\n    <script src=\"/build/mainJs.ea9e8f9f.js\" defer></script>\n\n\n    <script type=\"text/javascript\">\n        $(document).ready(function () {\n            $(\".access-level\").hover(function () {\n                if ($(this).find('.sub-level').height() < $(\".customHeigh\").height())\n                    $(this).find('.sub-level').height($(\".customHeigh\").height());\n                else\n                    $(\".customHeigh\").height($(this).find('.sub-level').height());\n            }, function () {\n                $(\".customHeigh\").height('auto');\n            });\n\n            $(\".sub-level\").mouseenter(function () {\n                $(this).parent().css({\n                    'backgroundImage': \"url(/build/images/simple-arrow-black.png)\",\n                    'backgroundRepeat': 'no-repead',\n                    'backgroundPosition': 'right 6px',\n                    'backgroundColor': '#f5f5f5'\n                });\n            }).mouseleave(function () {\n                $(this).parent().css({\n                    'backgroundImage': \"url(/build/images/simple-arrow-black.png)\",\n                    'backgroundRepeat': 'no-repead',\n                    'backgroundPosition': 'right 6px',\n                    'backgroundColor': 'transparent'\n                });\n            });\n\n            $(\"a.share-icon\").click(function () {\n                if ($('.ademe-tooltip-icons').is(':visible')) {\n                    $(\".ademe-tooltip-icons\").fadeOut();\n                } else {\n                    $(\".ademe-tooltip-icons\").fadeIn();\n                }\n            });\n        });\n    </script>\n\n\n    <script type=\"text/javascript\" src=\"/bower_components/bootstrap/js/modal.js\"></script>\n\n\n    <script type=\"text/javascript\">\n        $(document).ready(function () {\n            var url = $(\"#dailyMotionVideo\").attr('src');\n\n            // Add video link openning\n            $(\".displayVideoLink\").on('click', function (e) {\n                e.preventDefault();\n                var isMobile = $(this).data('mobile');\n\n                if (isMobile === 0) { // open in modal\n                    $(\"#modalLink\").modal('show');\n                } else {\n                    var href = $(this).data('href');\n                    window.open(href, '_blank');\n                }\n            });\n\n            $(\"#modalLink\").on('hide.bs.modal', function () {\n                $(\"#dailyMotionVideo\").attr('src', '');\n            });\n\n            $(\"#modalLink\").on('show.bs.modal', function () {\n                $(\"#dailyMotionVideo\").attr('src', url);\n            });\n        });\n    </script>\n</body>\n</html>\n",
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-04T23:10:25.955463479Z",
+      "curl-command": "curl -X 'GET' -d '' -H 'Host: www.carlabelling.ademe.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.carlabelling.ademe.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.carlabelling.ademe.fr",
+      "matched-at": "www.carlabelling.ademe.fr:443",
+      "extracted-results": [
+        "Gandi"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-04T23:12:28.130709295Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.carlabelling.ademe.fr",
+      "matched-at": "www.carlabelling.ademe.fr:443",
+      "extracted-results": [
+        "www.carlabelling.ademe.fr"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-04T23:12:28.130828668Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.carlabelling.ademe.fr",
+      "matched-at": "www.carlabelling.ademe.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-04T23:12:30.416490721Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.carlabelling.ademe.fr",
+      "matched-at": "www.carlabelling.ademe.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-04T23:12:30.748493751Z",
+      "matcher-status": true
+    }
+  ]
+]
