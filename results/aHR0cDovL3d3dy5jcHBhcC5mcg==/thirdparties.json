@@ -18,7 +18,7 @@
     },
     {
       "type": "unknown",
-      "url": "http://fyil.mediateurdulivre.fr/irI438.js?2"
+      "url": "http://fyil.mediateurdulivre.fr/jqJ439.js?2"
     },
     {
       "type": "unknown",
@@ -70,7 +70,7 @@
     },
     {
       "type": "google analytics",
-      "url": "https://www.google-analytics.com/j/collect?v=1&_v=j101&a=1276256275&t=pageview&_s=1&dl=http%3A%2F%2Fwww.cppap.fr%2F&ul=en-us&de=UTF-8&dt=CPPAP&sd=24-bit&sr=800x600&vp=800x600&je=0&_u=YEBAAUABAAAAACAAI~&jid=1848923409&gjid=183808850&cid=1652957409.1704386492&tid=UA-110311563-3&_gid=658425802.1704386492&_r=1&gtm=457e4130&gcd=11l1l1l1l1&dma=0&jsscut=1&z=1415318705",
+      "url": "https://www.google-analytics.com/j/collect?v=1&_v=j101&a=912861172&t=pageview&_s=1&dl=http%3A%2F%2Fwww.cppap.fr%2F&ul=en-us&de=UTF-8&dt=CPPAP&sd=24-bit&sr=800x600&vp=800x600&je=0&_u=YEBAAUABAAAAACAAI~&jid=401319855&gjid=1338484700&cid=906714824.1704396483&tid=UA-110311563-3&_gid=2047500479.1704396483&_r=1&gtm=457e4130&gcd=11l1l1l1l1&dma=0&jsscut=1&z=490238285",
       "details": {
         "id": "google analytics",
         "message": "Use hosted Matomo instance"
@@ -78,7 +78,7 @@
     },
     {
       "type": "google analytics",
-      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-BZXVXTY3DF&gtm=45je4130v9111252691&_p=1704386491995&gcd=11l1l1l1l1&dma=0&cid=1652957409.1704386492&ul=en-us&sr=800x600&ir=1&_eu=EAAI&_s=1&sid=1704386492&sct=1&seg=0&dl=http%3A%2F%2Fwww.cppap.fr%2F&dt=CPPAP&en=page_view&_fv=1&_ss=1&tfd=1967",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-BZXVXTY3DF&gtm=45je4130v9111252691&_p=1704396482611&gcd=11l1l1l1l1&dma=0&cid=906714824.1704396483&ul=en-us&sr=800x600&ir=1&_eu=EAAI&ngs=1&_s=1&sid=1704396482&sct=1&seg=0&dl=http%3A%2F%2Fwww.cppap.fr%2F&dt=CPPAP&en=page_view&_fv=1&_ss=1&tfd=2114",
       "details": {
         "id": "google analytics",
         "message": "Use hosted Matomo instance"
@@ -88,11 +88,11 @@
   "cookies": [
     {
       "name": "_ga",
-      "value": "GA1.1.1652957409.1704386492",
+      "value": "GA1.1.906714824.1704396483",
       "domain": ".cppap.fr",
       "path": "/",
-      "expires": 1767458492,
-      "size": 30,
+      "expires": 1767468482,
+      "size": 29,
       "httpOnly": false,
       "secure": false,
       "session": false,
@@ -102,10 +102,10 @@
     },
     {
       "name": "_ga_BZXVXTY3DF",
-      "value": "GS1.1.1704386492.1.0.1704386492.0.0.0",
+      "value": "GS1.1.1704396482.1.0.1704396482.0.0.0",
       "domain": ".cppap.fr",
       "path": "/",
-      "expires": 1767458492,
+      "expires": 1767468482,
       "size": 51,
       "httpOnly": false,
       "secure": false,
@@ -119,7 +119,7 @@
       "value": "1",
       "domain": ".cppap.fr",
       "path": "/",
-      "expires": 1704386552,
+      "expires": 1704396542,
       "size": 25,
       "httpOnly": false,
       "secure": false,
@@ -130,11 +130,11 @@
     },
     {
       "name": "_gid",
-      "value": "GA1.2.658425802.1704386492",
+      "value": "GA1.2.2047500479.1704396483",
       "domain": ".cppap.fr",
       "path": "/",
-      "expires": 1704472892,
-      "size": 30,
+      "expires": 1704482882,
+      "size": 31,
       "httpOnly": false,
       "secure": false,
       "session": false,
@@ -146,7 +146,7 @@
   "headers": {
     "connection": "Keep-Alive",
     "content-type": "text/html; charset=UTF-8",
-    "date": "Thu, 04 Jan 2024 16:41:30 GMT",
+    "date": "Thu, 04 Jan 2024 19:28:00 GMT",
     "keep-alive": "timeout=5, max=100",
     "link": "<http://www.cppap.fr/wp-json/>; rel=\"https://api.w.org/\"\n<http://www.cppap.fr/wp-json/wp/v2/pages/1084>; rel=\"alternate\"; type=\"application/json\"\n<http://www.cppap.fr/>; rel=shortlink",
     "server": "Apache",
@@ -298,8 +298,15 @@
     },
     {
       "hostname": "www.googletagmanager.com",
-      "ip": "142.251.32.40",
+      "ip": "142.250.31.97",
       "geoip": {
+        "city": {
+          "geoname_id": 4364745,
+          "names": {
+            "en": "Oxford",
+            "ru": "Оксфорд"
+          }
+        },
         "continent": {
           "code": "NA",
           "geoname_id": 6255149,
@@ -329,10 +336,14 @@
           }
         },
         "location": {
-          "accuracy_radius": 1000,
-          "latitude": 37.751,
-          "longitude": -97.822,
-          "time_zone": "America/Chicago"
+          "accuracy_radius": 50,
+          "latitude": 38.6828,
+          "longitude": -76.1563,
+          "metro_code": 512,
+          "time_zone": "America/New_York"
+        },
+        "postal": {
+          "code": "21654"
         },
         "registered_country": {
           "geoname_id": 6252001,
@@ -347,7 +358,23 @@
             "ru": "США",
             "zh-CN": "美国"
           }
-        }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 4361885,
+            "iso_code": "MD",
+            "names": {
+              "de": "Maryland",
+              "en": "Maryland",
+              "es": "Maryland",
+              "fr": "Maryland",
+              "ja": "メリーランド州",
+              "pt-BR": "Maryland",
+              "ru": "Мэриленд",
+              "zh-CN": "马里兰州"
+            }
+          }
+        ]
       }
     },
     {
@@ -408,7 +435,7 @@
     },
     {
       "hostname": "www.google-analytics.com",
-      "ip": "216.239.38.178",
+      "ip": "142.251.16.113",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -440,9 +467,9 @@
         },
         "location": {
           "accuracy_radius": 1000,
-          "latitude": 34.0544,
-          "longitude": -118.244,
-          "time_zone": "America/Los_Angeles"
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
         },
         "registered_country": {
           "geoname_id": 6252001,
@@ -457,23 +484,7 @@
             "ru": "США",
             "zh-CN": "美国"
           }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 5332921,
-            "iso_code": "CA",
-            "names": {
-              "de": "Kalifornien",
-              "en": "California",
-              "es": "California",
-              "fr": "Californie",
-              "ja": "カリフォルニア州",
-              "pt-BR": "Califórnia",
-              "ru": "Калифорния",
-              "zh-CN": "加州"
-            }
-          }
-        ]
+        }
       }
     }
   ]

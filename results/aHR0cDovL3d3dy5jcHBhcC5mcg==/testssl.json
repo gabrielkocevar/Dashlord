@@ -612,7 +612,7 @@
               "ip"           : "www.cppap.fr/143.126.211.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1704387222"
+              "finding"      : "1704397026"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1233,6 +1233,6 @@
               "ip"           : "www.cppap.fr/143.126.211.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "162"
+              "finding"      : "91"
           }
 ]

@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Thu, 4 Jan 2024 16:51:31",
+	"@generated": "Thu, 4 Jan 2024 19:36:11",
 	"site":[ 
 		{
 			"@name": "http://www.cppap.fr",
@@ -74,7 +74,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p><p>http://openwall.info/wiki/john/sample-hashes</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "646"
+					"sourceid": "619"
 				},
 				{
 					"pluginid": "10202",
@@ -135,7 +135,7 @@
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
 						},
 						{
-							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
+							"uri": "http://www.cppap.fr/foire-aux-questions/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -143,7 +143,7 @@
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
 						},
 						{
-							"uri": "http://www.cppap.fr/procedure-de-reconnaissance-spel/",
+							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -234,7 +234,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
+							"uri": "http://www.cppap.fr/foire-aux-questions/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -242,7 +242,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/procedure-de-reconnaissance-spel/",
+							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -315,7 +315,7 @@
 					"reference": "<p>https://www.wsj.com/articles/BL-CIOB-2999</p>",
 					"cweid": "540",
 					"wascid": "13",
-					"sourceid": "778"
+					"sourceid": "770"
 				},
 				{
 					"pluginid": "90003",
@@ -376,7 +376,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
+							"uri": "http://www.cppap.fr/foire-aux-questions-publications/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -384,7 +384,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
+							"uri": "http://www.cppap.fr/foire-aux-questions-publications/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -475,7 +475,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
+							"uri": "http://www.cppap.fr/foire-aux-questions/",
 							"method": "GET",
 							"param": "https://www.googletagmanager.com/gtag/js?id=UA-110311563-3",
 							"attack": "",
@@ -483,7 +483,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/procedure-de-reconnaissance-spel/",
+							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
 							"method": "GET",
 							"param": "https://www.googletagmanager.com/gtag/js?id=UA-110311563-3",
 							"attack": "",
@@ -521,7 +521,7 @@
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "12"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10110",
@@ -548,7 +548,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "317"
+					"sourceid": "305"
 				},
 				{
 					"pluginid": "10063",
@@ -601,7 +601,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
+							"uri": "http://www.cppap.fr/foire-aux-questions/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -609,7 +609,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/procedure-de-reconnaissance-spel/",
+							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -692,7 +692,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
+							"uri": "http://www.cppap.fr/foire-aux-questions-publications/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -762,7 +762,7 @@
 					"reference": "<p>http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</p><p>http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "12"
 				},
 				{
 					"pluginid": "10096",
@@ -774,6 +774,14 @@
 					"riskdesc": "Low (Low)",
 					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
 					"instances":[ 
+						{
+							"uri": "http://www.cppap.fr/849-2/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1991511839",
+							"otherinfo": "1991511839, which evaluates to: 2033-02-08 21:43:59"
+						},
 						{
 							"uri": "http://www.cppap.fr/caractere-assimilable-a-une-publication-periodique-thematicite-lien-avec-lactualite/",
 							"method": "GET",
@@ -855,6 +863,22 @@
 							"otherinfo": "2008589024, which evaluates to: 2033-08-25 13:23:44"
 						},
 						{
+							"uri": "http://www.cppap.fr/le-regime-derogatoire/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1511793190",
+							"otherinfo": "1511793190, which evaluates to: 2017-11-27 14:33:10"
+						},
+						{
+							"uri": "http://www.cppap.fr/le-regime-derogatoire/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1542942277",
+							"otherinfo": "1542942277, which evaluates to: 2018-11-23 03:04:37"
+						},
+						{
 							"uri": "http://www.cppap.fr/lexigence-dinteret-general/",
 							"method": "GET",
 							"param": "",
@@ -879,13 +903,13 @@
 							"otherinfo": "1808564268, which evaluates to: 2027-04-24 10:57:48"
 						}
 					],
-					"count": "13",
+					"count": "16",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1513969080, which evaluates to: 2017-12-22 18:58:00</p>",
+					"otherinfo": "<p>1991511839, which evaluates to: 2033-02-08 21:43:59</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "381"
+					"sourceid": "373"
 				},
 				{
 					"pluginid": "10021",
@@ -922,7 +946,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "http://www.cppap.fr/criteres-de-reconnaissance-2/",
+							"uri": "http://www.cppap.fr/foire-aux-questions-publications/",
 							"method": "GET",
 							"param": "x-content-type-options",
 							"attack": "",
@@ -930,7 +954,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "http://www.cppap.fr/foire-aux-questions-publications/",
+							"uri": "http://www.cppap.fr/foire-aux-questions/",
 							"method": "GET",
 							"param": "x-content-type-options",
 							"attack": "",
@@ -962,14 +986,6 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "http://www.cppap.fr/robots.txt",
-							"method": "GET",
-							"param": "x-content-type-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						},
-						{
 							"uri": "http://www.cppap.fr/services-de-presse-en-ligne/",
 							"method": "GET",
 							"param": "x-content-type-options",
@@ -986,13 +1002,13 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						}
 					],
-					"count": "11",
+					"count": "10",
 					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
 					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "12"
 				},
 				{
 					"pluginid": "10094",
@@ -1029,6 +1045,14 @@
 							"otherinfo": "~\uFFFD\uFFFD\uFFFD(\uFFFD\u05E7\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u05FE\\x0008\uFFFD\uFFFD?\uFFFD zw\\x001e\uFFFD\uFFFD^\uFFFD\uFFFD\u07B2\u01FE\uFFFD{\\x001c\uFFFD+^\uFFFD\uFFFD^q\u96ED\uFFFD\uFFFDm"
 						},
 						{
+							"uri": "http://www.cppap.fr/contact-2/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/wp-content/uploads/sites/7/2020/03/plan-BE-",
+							"otherinfo": "~\uFFFD\uFFFD\uFFFD(\uFFFD\u05E7\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFDO\uFFFD\uFFFD\uFFFDej\uFFFD\\x0013"
+						},
+						{
 							"uri": "http://www.cppap.fr/criteres-de-reconnaissance-2/",
 							"method": "GET",
 							"param": "",
@@ -1043,14 +1067,6 @@
 							"attack": "",
 							"evidence": "2Ffoire-aux-questions-publications",
 							"otherinfo": "\uFFFDW\u82B7\uFFFDj\uFFFD~\uFFFD\u7B36*'\uFFFD\uFFFDnnX\uFFFDj\u0628\uFFFD"
-						},
-						{
-							"uri": "http://www.cppap.fr/formulaires/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "fr/wp-content/uploads/sites/7/2021/10/formulaire-publications-de-presse-AJL",
-							"otherinfo": "~\uFFFD\uFFFD\uFFFD(\uFFFD\u05E7\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFDk\uFFFDj*\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD'\\x001a\uFFFD*'\uFFFD\uFFFD^\uFFFD\uFFFD\u07B2\u01FE\\x0000\uFFFD"
 						},
 						{
 							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
@@ -1160,14 +1176,6 @@
 							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
 						},
 						{
-							"uri": "http://www.cppap.fr/wp-json/oembed/1.0/embed?format=xml&url=http%3A%2F%2Fwww.cppap.fr%2Fformulaires%2F",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
-						},
-						{
 							"uri": "http://www.cppap.fr/wp-json/oembed/1.0/embed?format=xml&url=http%3A%2F%2Fwww.cppap.fr%2Fpresentation-de-la-cppap%2F",
 							"method": "GET",
 							"param": "",
@@ -1200,6 +1208,14 @@
 							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
 						},
 						{
+							"uri": "http://www.cppap.fr/wp-json/oembed/1.0/embed?format=xml&url=http%3A%2F%2Fwww.cppap.fr%2Frapports-dactivite%2F",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
 							"uri": "http://www.cppap.fr/wp-json/oembed/1.0/embed?format=xml&url=http%3A%2F%2Fwww.cppap.fr%2Fservices-de-presse-en-ligne%2F",
 							"method": "GET",
 							"param": "",
@@ -1214,7 +1230,7 @@
 					"reference": "<p>http://code.google.com/p/browsersec/wiki/Part2#Character_set_handling_and_detection</p>",
 					"cweid": "436",
 					"wascid": "15",
-					"sourceid": "308"
+					"sourceid": "306"
 				},
 				{
 					"pluginid": "10027",
@@ -1329,7 +1345,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1080"
+					"sourceid": "1093"
 				},
 				{
 					"pluginid": "10049",
@@ -1356,7 +1372,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "7"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "90005",
@@ -1399,7 +1415,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "90005",
@@ -1442,7 +1458,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "90005",
@@ -1485,7 +1501,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "90005",
@@ -1528,7 +1544,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "10049",
@@ -1565,7 +1581,7 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						},
 						{
-							"uri": "http://www.cppap.fr/presentation-de-la-cppap/",
+							"uri": "http://www.cppap.fr/foire-aux-questions-publications/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1646,7 +1662,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "67"
+					"sourceid": "70"
 				}
 			]
 		}
