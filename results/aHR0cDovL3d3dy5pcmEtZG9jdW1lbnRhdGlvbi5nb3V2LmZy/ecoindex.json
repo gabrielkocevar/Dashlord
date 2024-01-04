@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "http://www.ira-documentation.gouv.fr",
+        "size": 591.587,
+        "nodes": 427,
+        "requests": 25,
+        "grade": "B",
+        "score": 73.0,
+        "ges": 1.54,
+        "water": 2.31,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 21:50:23.885720",
+        "page_type": null
+    }
+]

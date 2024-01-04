@@ -1,0 +1,124 @@
+{
+  "trackers": [],
+  "cookies": [
+    {
+      "name": "JSESSIONID",
+      "value": "673b4fb840609a59e5491301f596",
+      "domain": "ira-documentation.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 38,
+      "httpOnly": false,
+      "secure": true,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "connection": "keep-alive",
+    "content-type": "text/html;charset=UTF-8",
+    "date": "Thu, 04 Jan 2024 21:49:20 GMT",
+    "server": "nginx/1.21.6",
+    "set-cookie": "JSESSIONID=673b4fb840609a59e5491301f596; Path=/; Secure",
+    "strict-transport-security": "max-age=31536000 includeSubDomains",
+    "transfer-encoding": "chunked",
+    "x-powered-by": "JSP/2.1\nJSF/1.2"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.ira-documentation.gouv.fr",
+      "ip": "79.137.30.176",
+      "geoip": {
+        "city": {
+          "geoname_id": 3017910,
+          "names": {
+            "de": "Fontenay-sous-Bois",
+            "en": "Fontenay-sous-Bois",
+            "fr": "Fontenay-sous-Bois",
+            "ja": "フォントネー＝スー＝ボワ",
+            "ru": "Фонтене-су-Буа",
+            "zh-CN": "林畔丰特奈"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.855,
+          "longitude": 2.4836,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "94120"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 2971090,
+            "iso_code": "94",
+            "names": {
+              "de": "Val-de-Marne",
+              "en": "Val-de-Marne",
+              "es": "Valle de Marne",
+              "fr": "Val-de-Marne"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
