@@ -1,0 +1,1232 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "offered (deprecated)"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "offered (deprecated)"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered + downgraded to weaker protocol"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cwe"          : "CWE-310",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "cipher_order-tls1_1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA DHE-RSA-CAMELLIA128-SHA DHE-RSA-CAMELLIA256-SHA ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1 secp384r1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'extended master secret/#23'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no -- no lifetime advertised"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "cert_compression",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "N/A"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA256 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "F577128134C16F9ED38DECA71D68C4E9"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "16"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "5944EFD6648D3572A338F0932A397F22976BF491"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "CAFE44B1518911FF69C9DDD4C0F4D17974B90F56334EF5FBB6D6A25A168743FC"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "www.cours-appel.justice.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "localhost.localdomain"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "www.tribunal-de-paris.justice.fr www.cours-appel.justice.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN and CN (SNI mandatory)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "279 >= 60 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-10-10 22:00"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-10-09 21:59"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://crl.certigna.fr/servicesca.crl http://crl.dhimyotis.com/servicesca.crl"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://servicesca.ocsp.dhimyotis.com http://servicesca.ocsp.certigna.fr"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "3"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2015-11-25 11:33"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2025-11-22 11:33"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Certigna Services CA <-- Certigna"
+          }
+,         {
+              "id"           : "intermediate_cert <#2>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIDqDCCApCgAwIBAgIJAP7c4wEPyUj/MA0GCSqGSIb3DQEBBQUAMDQxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlEaGlteW90aXMxETAPBgNVBAMMCENlcnRpZ25hMB4XDTA3MDYyOTE1MTMwNVoXDTI3MDYyOTE1MTMwNVowNDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURoaW15b3RpczERMA8GA1UEAwwIQ2VydGlnbmEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDIaPHJ1tazNHUmgh7stL7qXOEm7RFHYeGifBZ4QCHkYJ5ayGPhxLGWkv8YbWkj4Sti993iNi+RB7lIzw7sebYs5zRLcAglozyHGxnygQcPOJAZ0xH+hrTy0V4eHpbNgGzOOzGTtvKg0KmVEn2lmsxryIRWijOp5yIVUxbwzBfsV1/pogqYCd7jX5xv3EjjhQsVWqa6n6xI4wmy9/Qy3l40vhx4XUJbzg4ij02Q130yGLMLLGq/jj8UEYkgDncUtT2UCIf3JR7VsmAA7G8qKCVuKj4YYxclPz5EIBb2JsglrgVKtOdjLPOMFlN+XPsRGgjBRmKfIrjxwo1p3Po6WAbfAgMBAAGjgbwwgbkwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUGu3+QTmQtCRZvgHyUtVF9lo53BEwZAYDVR0jBF0wW4AUGu3+QTmQtCRZvgHyUtVF9lo53BGhOKQ2MDQxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlEaGlteW90aXMxETAPBgNVBAMMCENlcnRpZ25hggkA/tzjAQ/JSP8wDgYDVR0PAQH/BAQDAgEGMBEGCWCGSAGG+EIBAQQEAwIABzANBgkqhkiG9w0BAQUFAAOCAQEAhQMeknH2Qq/ho2Ge6/PAD/Kl1NqV5ta+aDY9fm4fTIrv0Q8hbV6lUmPOEvjvKtpv6zf+EwLHyzs+ImvaYS5/1HI93TDhHkxAGYwP15zRgzB7mFncfca5DClMoTOi62c6ZYTTluLtdkVwj7Ur3vkj1kluPBS1xp81HlDQwY9qcEQCYsuuHWhBp6pX6FOqB9IG9tUUBguRA3UsbHK1YZWaDYu5Def131TN3ubY1gkIl2PlwS6wt0QmwCbAr1UwnjvVNioZBPRcHv/PLLf/0P2HQBHVESO7SMAhqaQoLf0V+LBOK/QwWyH8EZE0vkHve52Xdf+XlcCWWC/qu0bXu+TZLg==\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#2>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "E3B6A2DB2ED7CE48842F7AC53241C7B71D54144BFB40C11F3F1D0B42F5EEA12D"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#2>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2007-06-29 15:13"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#2>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2027-06-29 15:13"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#2>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#2>",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Certigna <-- Certigna"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "insecure_redirect",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "HIGH",
+              "finding"      : "Redirect to insecure URL: 'http://www.cours-appel.justice.fr/accueil'"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "301 Moved Permanently ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1704398916"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "628 seconds"
+          }
+,         {
+              "id"           : "HSTS",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2 at '/' (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "cookie_secure",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/2 at '/' marked as secure"
+          }
+,         {
+              "id"           : "cookie_httponly",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/2 at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "cookie_bigip_f5",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cwe"          : "CWE-212",
+              "finding"      : "Information leakage: F5 cookie BIGipServerPOOL_cours-appel.justice.fr_TCP_8080 369889452.36895.0000 is default IPv4 pool member 172.16.12.22:8080"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options_multiple",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple X-Content-Type-Options headers. Using first header: nosniff"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=0"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "X-Varnish: 36136943 10907766Via: 1.1 varnish-v4"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "no session ticket extension"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, mitigated"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Probably oK"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "received non-RFC-compliant 'handshake failure' instead of 'inappropriate fallback'"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=CAFE44B1518911FF69C9DDD4C0F4D17974B90F56334EF5FBB6D6A25A168743FC"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "no DH EXPORT ciphers, no common prime but Unknown DH group has only 1024 bits,"
+          }
+,         {
+              "id"           : "BEAST_CBC_TLS1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA CAMELLIA128-SHA CAMELLIA256-SHA DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA DHE-RSA-CAMELLIA128-SHA DHE-RSA-CAMELLIA256-SHA"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "VULNERABLE -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "95"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "28"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "80"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "76"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "B"
+          }
+,         {
+              "id"           : "grade_cap_reason_1",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to B. Using a weak public key and/or ephemeral key"
+          }
+,         {
+              "id"           : "grade_cap_reason_2",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to B. TLS 1.1 offered"
+          }
+,         {
+              "id"           : "grade_cap_reason_3",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to B. TLS 1.0 offered"
+          }
+,         {
+              "id"           : "grade_cap_reason_4",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to A. HSTS is not offered"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "www.cours-appel.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "122"
+          }
+]
