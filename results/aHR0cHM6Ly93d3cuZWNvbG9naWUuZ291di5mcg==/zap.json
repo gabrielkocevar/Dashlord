@@ -1,0 +1,2465 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Thu, 4 Jan 2024 23:40:11",
+	"site":[ 
+		{
+			"@name": "https://www.ecologie.gouv.fr",
+			"@host": "www.ecologie.gouv.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/admin/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/filter/tips",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/media/oembed",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/node/add/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-api-page-block-form-recherche search-api-page-block-form search-form search-block-form container-inline\" data-drupal-selector=\"search-api-page-block-form-recherche\" action=\"/recherche\" method=\"get\" id=\"search-api-page-block-form-recherche\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ]."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keys\" \"edit-url\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=19",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=23",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_mot=8",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_mot=9",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=10",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=3",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=4",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=5",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=7",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=8",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=9",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "12",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "385"
+				},
+				{
+					"pluginid": "10099",
+					"alertRef": "10099",
+					"alert": "Source Code Disclosure - PHP",
+					"name": "Source Code Disclosure - PHP",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Application Source Code was disclosed by the web server - PHP</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/Rapport_evaluation_article_58_loi_AGEC.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<?=\u00D5\\x0013S\u00E3w\u00D3\u00C0O3\u00F5YOh\u00D5\u00B9\u009E\\x0014j|y\u00A1.\u00CFf\u00EA\u00CA\\x0019C\\x000b\u00A6\\x001a\u00E2\\x001d\u009F\u009F\u009D\u009A\u00CF\u00D4t~\u00A1\u00C1\\x00178ez\u00E9\u00CD\u00CC/f\u00FA_\u00CB\u00BF\u00FA`\u00F7C\u00B4\\x001c\u00E2\\x0013\u00E1_\u00B6ef\u00EBJ5\u0085\u00C9\u009AVm\u00D6\u00A3\u00A8{\\x000c\u00DF\\x0007=)K\u009B\u00D5e\u00D9\u00F6\u00A2v\\x001c\u00E6\u00F1\u00D9\u00F1\u00A9698\u00FAO\u00ED0\u00A0\u0099\u00FA0\u0083\u00D8\\x001b\u0087^]Yk\u00E7\u009F>\u00EB\u00DA\u00F9\u00F8\u00C0}x^\u00AA\\x000fz\u00E20\u00C8K\u00F5a\u00BE\u0080\u0088\\x001b\u008C\u00D7\u0080\u0099\u00C5|9?Q\\x000b\\x0008\\x001b\\x0003\u00AAp\u00CD\u00B1ZP\u00D0\u00CB\\x000b\u00FA\u00B8$\\\u00C4\u0090`\u00E4!\u00AC)\\x0011\u00E7g`\u00DF\u00D4\u00DE\\x0003\u00C4\u00EF\u00FC\u00E4\u00E4b\u0086\u00A7\u00A6\u00CB\u00DF\u009F\\x0006\u00A8(\u00E5D+aU\u00E10\u00F5p\\x001e\\x0011\u00D8*\u00C4\u00A7)\u00AD*\u00F323m\u00E5Q\\x0000KxL\u00A6'UV\u00AA\u00B1\u00D5\\x0006=\u00CE\\x0014\u00D9=Z<\u00AE\u00EE\u00DF\u00BE=:\u00BE\u00DE=\u00AFn\u0097\u00EB\\x001f\u00BB\u00B7'\u00B3\u0093\u0093<\u00CF\u00EBw\u00EF\u00DE\u00A9\u00F7\\x001f\u00A6j\\x0004\u00EB\u00AB\ny\u00F6u4VD\u00D2O\u00F0v\u00F9g0~\t\u00C0f\\x0010\u00F0\\x0019\u00C6\\x0002V!\nM\\x000f\u009F5\u00F0\\x001b\u00FEO\\x000c\u00F3\u0084^^\\x0010\u00FEK\u0082%\u00D9\u00D9\u00E0\u00E7\\\u00DB\\x0002\u00B3\u00F0\\x001b2\t\u00E1\u0081\u00AC\u00A2I\u00FF\u00C4\\x0004\u00C3\\x0018\u00FEN\u0089\u009Ai\u00E6\u00EA)\u0090\\x001b\u00DF\u00F6\u008E\u00B6\\x0014\u00B6_\u00F4\t=,\u00E2\u00F73m1_He$\u00AB\u00A6B\u00F0Naf\u00ADC\u009B3I\u00D2\\x0002\\x0012l\u00F1\\x0005{x\u00A1m\u0099U\u00B8\u00C1\u00E2\u00C7\\x0014\u00A8\u00D2\\x000f\u00EC\\x0002+\\x0008\u00B7\u00E3f\n\u00A1\u00C2`\u0080\u008A\\x0006\\x0018\u00F0'\u00DD\u00A2\\x0017\\x0014\u0092sl\u0083O\u0094(\u00CEt\u009D G\u00DE\u00D7\u0084\\x0012\\x0019\u009F\u00E9\t\u00ED\u00E7$R\\x000b@f\\x0014\u008D\\x0002\u00C0-f\u00EA\u00CB\\x0018\\x0018\u00D9\u00E2\u009E\u00F3)>0\u00C49\u0093\\x001c#\n\\x0011\u00AA\u0099.)2E;\u009Ap\u00A8_\u00E1\\x000f\u00FD\u00A0]\u00EB\u008B\u00C4\u00BF\u00E3(\u00B1\u00D0\n\u008D\u00FC\\x000b!#\u00FC%~\\x0016\u008Er\u0097;\\x0017\\x000fz\\x0005\u00E8\\x001e\u00F2\u00AA\\x0003y\u00F9:\u00C89cW.\u00CF\\x0015\u00BB+hN1\u00F6\\x001a\\x0017N\u00A0\u00F3Q0\u00AEA\u00A3\\x001f\u00D1B\u00CD\u00F9\\x00012U\u0084Z\u00E8x\u00A7\u00822\u00FEq\u009F\u00FF\u00B804r\u00A0\\x0018\u00A9\\x0008[\u00FA\u00AD\u0085^\u0095\\x0015\u00B6jTQ\u00E7I\tB\u00CE\u00D1\u00A35T\\x0003em\u00AB\u00B6\\x0000\\x0000\u00A1\u00B5\u00D3E\\x0006\\x0011l\u00A0\u00EA1\u0082gh3\u00F8y\r\\x000eR{\u00DA=c\\x0017\u00827\u009Bd\u00F7W\\\\x0005^\u00AF\u00D5-\u00BCl\u0090\u00D6\u00D8D\u00B4\u00AB\u00F1\u00ED\u0095+\u008D\u00D0\\x0003\u00CC\u0080\u008D\\x0007\u00AC|8\u00E4\\x001e\u00B7U\u00F2\\x001d\u00F6\u00DC\u0081\\x0013\u00F8y#\u008Dn\u008DnU\u00B2\u00C28\u00F1\u0083\u00D0\u00BE\u00D1`x\u0085_`\u00DD-v\u00FF\n\u00D7\u00AF\u00F1\t\u00BDLw\u0092\\x0013\u00B7:\u00C7\u00A5\u00DE\u00F4W@\u00A0 \\x000b\\x0006_\\x001a\u00C4z\u00B3V\u00D132\u00BCS\u00EC{\u00CD\u00B84\\x001c\u008B\u00BA\\x0015\u009B\t\\x0002\u008FzR\u00E2Fo\u00DF\u0087t/!\u00DD\u00CBA\u00FC+X\u00C9qA\u0084\u00B1\\x0011\\x0018\u00A9\u00F2\u009E\u00D5&\u00C1l-+\u00EF$%\u008F!\"x\u00CFhRfn\u0092\u00E8\u00D3\u0084\\x0010\u00A7W\u00DEd\u0089&!\u0087-\u0087Dh\u00E7\\x000c\u00A2\\x0007\u00C8b [\\\n\u00A7\u00AD\u00C2\u00AA^`\u00C9i\u008F4\u008B6\u009A\"}\u00F0\\x001d@\u0094\\x0000\u008C\u00C2\u00D2\\x001a\u00E9\u00D6\\x0013\u00EC\u00D6adLJ\u00E0Z\u008B\\x001d\u00A2,+\u00EE\\x0011\u008F>\u00D1>*\u009FG\u008F\u00C2\u00BDvx\u00A4g\u00A1\u00A7P\\x000c\\x0014\u00FD'o0k\u00DF\\x0004\u00A3\u00B5\u0082'C\\x001d\u00D2/\u00B8C\\x000b\u00FC\u00C90'\u00A0=\u008A\u009C\\x0008!\u0089S\u0094\u00A0\u009A\u00F0\u00EB\u0080\u00B5\u00A3\u00EAq\u00A1\\x0014\u008A\u0094\u00BB\u00EB}\u00EE\\x0017\u00D1\u00F1x\u00E8]\u0087\u008C\u00F7\u00EAI\\x0010\\x0008\u0087\u00A9\u00B87\u00B0\\x0013TT\u00C8\u00F0\u00CF\u0092\u00B2@\\x0008\u009F\u00CA\\x0001\u00B4(\u00C2\u0082HDkh\\x0005\u00A7\u00DD\\x0012\\x0007'\u00F0\u0090#>\u00DF=\\x0011b\u00B1\u00F9\\x001d87\u00A8\u00E6$3-\u00ADnbA\\x0005\u00F8b-$e\u009F\\x0010\u009B,\\x0005;\\x001c\u009D\\x0000\u00F3\u00CA\"M{`f\u00C2T*H\u00A7d\r\u00F4Ct\t&\\x0001\u0091\\x000f$X\u00E5\\x0005\\x0010F\u00CD\u00D39\u00A3\u00E9Q!\\x0016\\x000b\u00A5\u00F3n\u00E1S\u00E2\u00B1=\u00C8/>\u009D\u00D27\u00D0\\x001a\u00A4\u00C5\\x0019v\u008A3\u00DBi\\x0005k\u00DC\\x0008?>",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://www.wsj.com/articles/BL-CIOB-2999</p>",
+					"cweid": "540",
+					"wascid": "13",
+					"sourceid": "2686"
+				},
+				{
+					"pluginid": "10099",
+					"alertRef": "10099",
+					"alert": "Source Code Disclosure - Perl",
+					"name": "Source Code Disclosure - Perl",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Application Source Code was disclosed by the web server - Perl</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/22014_Guide%20pratique_RenovationEnergetique_web.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "$#zaNM0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/Th%C3%A9ma%20-%20L%27alimentation%20un%20nouvel%20enjeu%20de%20d%C3%A9veloppement%20durable%20pour%20les%20territoires.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "$#tj43",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://www.wsj.com/articles/BL-CIOB-2999</p>",
+					"cweid": "540",
+					"wascid": "13",
+					"sourceid": "1408"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Minist\u00E8res \u00C9cologie \u00C9nergie Territoires - Actualit\u00E9s\" href=\"https://www.ecologique-solidaire.gouv.fr/rss_actualites.xml\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Minist\u00E8res \u00C9cologie \u00C9nergie Territoires - presse\" href=\"https://www.ecologique-solidaire.gouv.fr/rss_presse.xml\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Minist\u00E8res \u00C9cologie \u00C9nergie Territoires - Actualit\u00E9s\" href=\"https://www.ecologique-solidaire.gouv.fr/rss_actualites.xml\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Minist\u00E8res \u00C9cologie \u00C9nergie Territoires - presse\" href=\"https://www.ecologique-solidaire.gouv.fr/rss_presse.xml\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Minist\u00E8res \u00C9cologie \u00C9nergie Territoires - Actualit\u00E9s\" href=\"https://www.ecologique-solidaire.gouv.fr/rss_actualites.xml\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Minist\u00E8res \u00C9cologie \u00C9nergie Territoires - presse\" href=\"https://www.ecologique-solidaire.gouv.fr/rss_presse.xml\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Minist\u00E8res \u00C9cologie \u00C9nergie Territoires - Actualit\u00E9s\" href=\"https://www.ecologique-solidaire.gouv.fr/rss_actualites.xml\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Minist\u00E8res \u00C9cologie \u00C9nergie Territoires - presse\" href=\"https://www.ecologique-solidaire.gouv.fr/rss_presse.xml\" />",
+							"otherinfo": ""
+						}
+					],
+					"count": "9",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "56"
+				},
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library jquery, version 3.2.1 is vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/prive/javascript/jquery.js?1674205509",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "* jQuery JavaScript Library v3.2.1",
+							"otherinfo": "CVE-2020-11023\nCVE-2020-11022\nCVE-2019-11358\n"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Please upgrade to the latest version of jquery.</p>",
+					"otherinfo": "<p>CVE-2020-11023</p><p>CVE-2020-11022</p><p>CVE-2019-11358</p><p></p>",
+					"reference": "<p>https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/</p><p>https://nvd.nist.gov/vuln/detail/CVE-2019-11358</p><p>https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b</p><p>https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/</p><p></p>",
+					"cweid": "829",
+					"wascid": "-1",
+					"sourceid": "2201"
+				},
+				{
+					"pluginid": "10044",
+					"alertRef": "10044",
+					"alert": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"name": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The server has responded with a redirect that seems to provide a large response. This may indicate that although the server sent a redirect it also responded with body content (which may include sensitive details, PII, etc.).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/index.php/filter/tips",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 40 [https://www.ecologie.gouv.fr/filter/tips].\nPredicted response size: 340.\nResponse Body Length: 406."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/index.php/media/oembed",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 41 [https://www.ecologie.gouv.fr/media/oembed].\nPredicted response size: 341.\nResponse Body Length: 410."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/index.php/user/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 39 [https://www.ecologie.gouv.fr/user/login].\nPredicted response size: 339.\nResponse Body Length: 402."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/index.php/user/password",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 42 [https://www.ecologie.gouv.fr/user/password].\nPredicted response size: 342.\nResponse Body Length: 414."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/node/5819",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 59 [https://www.ecologie.gouv.fr/inscription-nouvelles-ecologie].\nPredicted response size: 359.\nResponse Body Length: 482."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/node/8346",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 48 [https://www.ecologie.gouv.fr/pluie-et-inondation].\nPredicted response size: 348.\nResponse Body Length: 438."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/node/9389",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 104 [https://www.ecologie.gouv.fr/hausse-des-prix-lenergie-toutes-mesures-soutien-mises-en-place-gouvernement].\nPredicted response size: 404.\nResponse Body Length: 662."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/node/9399",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 39 [https://www.ecologie.gouv.fr/fonds-vert].\nPredicted response size: 339.\nResponse Body Length: 402."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/user/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 148 [https://authentification.din.developpement-durable.gouv.fr/cas/3/login?service=https%3A//www.ecologie.gouv.fr/casservice%3Fdestination%3D/user/login].\nPredicted response size: 448.\nResponse Body Length: 838."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/user/logout",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 29 [https://www.ecologie.gouv.fr/].\nPredicted response size: 329.\nResponse Body Length: 362."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/user/password",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 151 [https://authentification.din.developpement-durable.gouv.fr/cas/3/login?service=https%3A//www.ecologie.gouv.fr/casservice%3Fdestination%3D/user/password].\nPredicted response size: 451.\nResponse Body Length: 850."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/user/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 180 [https://authentification.din.developpement-durable.gouv.fr/cas/3/login?service=https%3A//www.ecologie.gouv.fr/casservice%3Freturnto%3Dhttps%253A//www.ecologie.gouv.fr/user/register].\nPredicted response size: 480.\nResponse Body Length: 966."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
+					"otherinfo": "<p>Location header URI length: 40 [https://www.ecologie.gouv.fr/filter/tips].</p><p>Predicted response size: 340.</p><p>Response Body Length: 406.</p>",
+					"reference": "",
+					"cweid": "201",
+					"wascid": "13",
+					"sourceid": "189"
+				},
+				{
+					"pluginid": "10010",
+					"alertRef": "10010",
+					"alert": "Cookie No HttpOnly Flag",
+					"name": "Cookie No HttpOnly Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "Set-Cookie: PHPSESSID",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
+					"cweid": "1004",
+					"wascid": "13",
+					"sourceid": "385"
+				},
+				{
+					"pluginid": "10011",
+					"alertRef": "10011",
+					"alert": "Cookie Without Secure Flag",
+					"name": "Cookie Without Secure Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "Set-Cookie: PHPSESSID",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=3",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=5",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=7",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=8",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=9",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						}
+					],
+					"count": "7",
+					"solution": "<p>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</p>",
+					"cweid": "614",
+					"wascid": "13",
+					"sourceid": "385"
+				},
+				{
+					"pluginid": "10054",
+					"alertRef": "10054",
+					"alert": "Cookie without SameSite Attribute",
+					"name": "Cookie without SameSite Attribute",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "Set-Cookie: PHPSESSID",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=3",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=5",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=7",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=8",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=9",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "Set-Cookie: spip_session",
+							"otherinfo": ""
+						}
+					],
+					"count": "7",
+					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
+					"cweid": "1275",
+					"wascid": "13",
+					"sourceid": "385"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/a-la-une",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/a-la-une",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/clement-beaune",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/flux-rss-du-ministere-transition-ecologique",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/patrice-vergriete",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/politiques-publiques",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/presse",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/presse",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sobriete-energetique-apres-continue",
+							"method": "GET",
+							"param": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/js/js_aBtBCfF7s3HUHneMSBdCJ7W2U42aIEvvHRPV32YjoAE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/js/js_GPcVdkwZNUXrGIUO3NhrqEHAOWJEoiV1jP2nJ-7UNCE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/js/js_mHgIkoEMXWA45u-oBXnyc8GZxdwa7RPrzxakhW0DXsk.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/js/js_OsUBvvJNWqZO8b6MHlbxXF8-BEoYd_3jZca6moooYps.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/js/js_R-3FC2WseV0EOl5TDNrpEQzRg0GowQ8CwQj_46xBy-o.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/js/js_ryqVBXznmO3Bzcf3ZJ8SxLMTPOuPgJQSKAzdGZdsdxI.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sites/default/files/js/js_YyspkYMh1otjZTy5_LY6S_TeRaexmrR1yIXDMeVMlQI.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/local/cache-js/jsdyn-javascript_porte_plume_start_js-e085c218.js?1699886968",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/plugins-dist/dsfr/dse/js/tarteaucitron/tarteaucitron.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/plugins-dist/spip/porte_plume/javascript/jquery.markitup_pour_spip.js?1674205508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/prive/javascript/ajaxCallback.js?1674205509",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/prive/javascript/jquery.form.js?1674205509",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/prive/javascript/jquery.js?1674205509",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "13",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "688"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1670244828",
+							"otherinfo": "1670244828, which evaluates to: 2022-12-05 12:53:48"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1674205505",
+							"otherinfo": "1674205505, which evaluates to: 2023-01-20 09:05:05"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1674205507",
+							"otherinfo": "1674205507, which evaluates to: 2023-01-20 09:05:07"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1674205508",
+							"otherinfo": "1674205508, which evaluates to: 2023-01-20 09:05:08"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1674205509",
+							"otherinfo": "1674205509, which evaluates to: 2023-01-20 09:05:09"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1694178891",
+							"otherinfo": "1694178891, which evaluates to: 2023-09-08 13:14:51"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1695656630",
+							"otherinfo": "1695656630, which evaluates to: 2023-09-25 15:43:50"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1695656631",
+							"otherinfo": "1695656631, which evaluates to: 2023-09-25 15:43:51"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1699886968",
+							"otherinfo": "1699886968, which evaluates to: 2023-11-13 14:49:28"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1700826870",
+							"otherinfo": "1700826870, which evaluates to: 2023-11-24 11:54:30"
+						}
+					],
+					"count": "10",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1670244828, which evaluates to: 2022-12-05 12:53:48</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "385"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=19",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_mot=8",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_mot=9",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=10",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=3",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=4",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=5",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=7",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=8",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=9",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/IMG/svg/synthese-aout2022.svg",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "385"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/admin/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/filter/tips",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/media/oembed",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/node/add/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "zgQcCBnafU0iVW8z9_b6lL6cS2-a0ODqLPDxyFqU3Ig",
+							"otherinfo": "\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708"
+						}
+					],
+					"count": "11",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\\x0004\\x001c\\x0008\\x0019\uFFFD}M\"Uo3\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDKo\uFFFD\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFDZ\uFFFD\u0708</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "56"
+				},
+				{
+					"pluginid": "10019",
+					"alertRef": "10019",
+					"alert": "Content-Type Header Missing",
+					"name": "Content-Type Header Missing",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The Content-Type header was either missing or empty.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/plugins-dist/dsfr/dse/dsfr/favicon/manifest.webmanifest",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure each page is setting the specific and appropriate content-type value for the content being delivered.</p>",
+					"otherinfo": "",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p>",
+					"cweid": "345",
+					"wascid": "12",
+					"sourceid": "2157"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/admin/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/filter/tips",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/media/oembed",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/node/add/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/boite-outils-elus-transition-ecologique\" target=\"_self\" title=\"Bo\u00EEte \u00E0 outils des \u00E9lus\">Bo\u00EEte \u00E0 outils des \u00E9lus</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/boite-outils-elus-transition-ecologique\" target=\"_self\" title=\"Bo\u00EEte \u00E0 outils des \u00E9lus\">Bo\u00EEte \u00E0 outils des \u00E9lus</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/concours-technicien-superieur-du-developpement-durable-tsdd",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a data-action=\"share\" target=\"_self\" href=\"\" class=\"svg-link\" title=\" Imprimer : Imprimer (Ouvrir dans une nouvelle fen\u00EAtre)\"> <span>Imprimer</span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/energie-et-climat-changements-au-1er-janvier-2024",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a data-action=\"share\" target=\"_self\" href=\"\" class=\"svg-link\" title=\" Imprimer : Imprimer (Ouvrir dans une nouvelle fen\u00EAtre)\"> <span>Imprimer</span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/flux-rss-du-ministere-transition-ecologique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a data-action=\"share\" target=\"_self\" href=\"\" class=\"svg-link\" title=\" Imprimer : Imprimer (Ouvrir dans une nouvelle fen\u00EAtre)\"> <span>Imprimer</span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/loi-anti-gaspillage-economie-circulaire",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a data-action=\"share\" target=\"_self\" href=\"\" class=\"svg-link\" title=\" Imprimer : Imprimer (Ouvrir dans une nouvelle fen\u00EAtre)\"> <span>Imprimer</span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/presse",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"\">&hellip;</a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sobriete-energetique-apres-continue",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a data-action=\"share\" target=\"_self\" href=\"\" class=\"svg-link\" title=\" Imprimer : Imprimer (Ouvrir dans une nouvelle fen\u00EAtre)\"> <span>Imprimer</span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"fr-sidemenu__link fr-p-1v fr-text--light\" target=\"_self\" href=\"./?id_rubrique=3#affiner\">Consommer \r\n                                           <span class=\"\t\r\n\t\t\t\t\t\t\tfr-text--xs fr-ml-1w\">(14)</span></a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/trains-nuit-inauguration-des-liaisons-paris-aurillac-et-paris-berlin",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a data-action=\"share\" target=\"_self\" href=\"\" class=\"svg-link\" title=\" Imprimer : Imprimer (Ouvrir dans une nouvelle fen\u00EAtre)\"> <span>Imprimer</span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/transition-ecologique-changements-au-1er-janvier-2024",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a data-action=\"share\" target=\"_self\" href=\"\" class=\"svg-link\" title=\" Imprimer : Imprimer (Ouvrir dans une nouvelle fen\u00EAtre)\"> <span>Imprimer</span></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "11",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/a-la-une",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/clement-beaune",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/filter/tips",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/flux-rss-du-ministere-transition-ecologique",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/patrice-vergriete",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/politiques-publiques",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/presse",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sobriete-energetique-apres-continue",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						}
+					],
+					"count": "12",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.gif",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "54"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "54"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "54"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "54"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "f8mivj3el7b88p5n2rhtc0n6e0",
+							"otherinfo": "\ncookie:PHPSESSID\ncookie:spip_session"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_rubrique=7",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "0_1d10ddc070ea978203114b895a7a7411",
+							"otherinfo": "\ncookie:spip_session"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/",
+							"method": "GET",
+							"param": "PHPSESSID",
+							"attack": "",
+							"evidence": "f8mivj3el7b88p5n2rhtc0n6e0",
+							"otherinfo": "\ncookie:PHPSESSID"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=20",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "0_1d10ddc070ea978203114b895a7a7411",
+							"otherinfo": "\ncookie:spip_session"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=23",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "0_1d10ddc070ea978203114b895a7a7411",
+							"otherinfo": "\ncookie:spip_session"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_mot=9",
+							"method": "GET",
+							"param": "spip_session",
+							"attack": "",
+							"evidence": "0_1d10ddc070ea978203114b895a7a7411",
+							"otherinfo": "\ncookie:spip_session"
+						}
+					],
+					"count": "6",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p></p><p>cookie:PHPSESSID</p><p>cookie:spip_session</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "385"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=3600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=3600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.gif",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=3600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=3600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=3600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/core/*.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=3600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/profiles/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=3600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=600",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10031",
+					"alertRef": "10031",
+					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
+					"name": "User Controllable HTML Element Attribute (Potential XSS)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ecologie.gouv.fr/presse?ministre=Christophe%2520B%C3%A9chu&type=Agenda",
+							"method": "GET",
+							"param": "type",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecologie.gouv.fr/presse?ministre=Christophe%2520B%C3%A9chu&type=Agenda\r\n\r\nappears to include user input in: \r\n\r\na(n) [a] tag [title] attribute \r\n\r\nThe user input found was:\r\ntype=Agenda\r\n\r\nThe user-controlled value was:\r\nagenda d'agn\u00E8s pannier-runacher"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/presse?ministre=Christophe%2520B%C3%A9chu&type=Agenda",
+							"method": "GET",
+							"param": "type",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecologie.gouv.fr/presse?ministre=Christophe%2520B%C3%A9chu&type=Agenda\r\n\r\nappears to include user input in: \r\n\r\na(n) [a] tag [title] attribute \r\n\r\nThe user input found was:\r\ntype=Agenda\r\n\r\nThe user-controlled value was:\r\nagenda de christophe b\u00E9chu"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/presse?order=desc&sort=search_api_relevance",
+							"method": "GET",
+							"param": "order",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecologie.gouv.fr/presse?order=desc&sort=search_api_relevance\r\n\r\nappears to include user input in: \r\n\r\na(n) [div] tag [class] attribute \r\n\r\nThe user input found was:\r\norder=desc\r\n\r\nThe user-controlled value was:\r\ndescriptif"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/presse?order=desc&sort=search_api_relevance",
+							"method": "GET",
+							"param": "order",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecologie.gouv.fr/presse?order=desc&sort=search_api_relevance\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [name] attribute \r\n\r\nThe user input found was:\r\norder=desc\r\n\r\nThe user-controlled value was:\r\ndescription"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/recherche?keys=ZAP&url=https%3A%2F%2Fzap.example.com",
+							"method": "GET",
+							"param": "keys",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecologie.gouv.fr/recherche?keys=ZAP&url=https%3A%2F%2Fzap.example.com\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nkeys=ZAP\r\n\r\nThe user-controlled value was:\r\nzap"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=20",
+							"method": "GET",
+							"param": "id_auteur",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=20\r\n\r\nappears to include user input in: \r\n\r\na(n) [img] tag [width] attribute \r\n\r\nThe user input found was:\r\nid_auteur=20\r\n\r\nThe user-controlled value was:\r\n200"
+						},
+						{
+							"uri": "https://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=20",
+							"method": "GET",
+							"param": "id_auteur",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.ecologie.gouv.fr/suivi-convention-citoyenne-climat/?id_auteur=20\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [content] attribute \r\n\r\nThe user input found was:\r\nid_auteur=20\r\n\r\nThe user-controlled value was:\r\n2024-01-05"
+						}
+					],
+					"count": "7",
+					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.ecologie.gouv.fr/presse?ministre=Christophe%2520B%C3%A9chu&type=Agenda</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [a] tag [title] attribute </p><p></p><p>The user input found was:</p><p>type=Agenda</p><p></p><p>The user-controlled value was:</p><p>agenda d'agn\u00E8s pannier-runacher</p>",
+					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
+					"cweid": "20",
+					"wascid": "20",
+					"sourceid": "1221"
+				}
+			]
+		}
+	]
+}
