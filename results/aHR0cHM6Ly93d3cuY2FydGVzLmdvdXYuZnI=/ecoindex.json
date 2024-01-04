@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.cartes.gouv.fr",
+        "size": 1440.144,
+        "nodes": 295,
+        "requests": 51,
+        "grade": "C",
+        "score": 69.0,
+        "ges": 1.62,
+        "water": 2.43,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 23:06:37.534513",
+        "page_type": null
+    }
+]
