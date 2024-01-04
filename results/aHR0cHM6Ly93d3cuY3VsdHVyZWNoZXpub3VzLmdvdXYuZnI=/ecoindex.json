@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.culturecheznous.gouv.fr",
+        "size": 5625.32,
+        "nodes": 1716,
+        "requests": 237,
+        "grade": "G",
+        "score": 10.0,
+        "ges": 2.8,
+        "water": 4.2,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-04 19:42:43.553461",
+        "page_type": null
+    }
+]
