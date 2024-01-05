@@ -51,7 +51,7 @@
     "content-language": "fr",
     "content-length": "16086",
     "content-type": "text/html; charset=UTF-8",
-    "date": "Fri, 05 Jan 2024 16:33:51 GMT",
+    "date": "Fri, 05 Jan 2024 16:49:17 GMT",
     "etag": "W/\"1704468517\"",
     "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
     "last-modified": "Fri, 05 Jan 2024 15:28:37 GMT",
@@ -59,8 +59,8 @@
     "server": "nginx",
     "strict-transport-security": "max-age=31536000; includeSubdomains",
     "x-cache": "HIT",
-    "x-cache-age": "150",
-    "x-cache-hits": "15",
+    "x-cache-age": "174",
+    "x-cache-hits": "9",
     "x-cache-ttl": "900.000",
     "x-cacheable": "YES",
     "x-content-type-options": "nosniff",
@@ -213,7 +213,7 @@
     },
     {
       "hostname": "cdnjs.cloudflare.com",
-      "ip": "104.17.25.14",
+      "ip": "104.17.24.14",
       "geoip": {
         "registered_country": {
           "geoname_id": 6252001,
