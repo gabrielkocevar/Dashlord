@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.servicesalapersonne.gouv.fr",
+        "size": 1320.579,
+        "nodes": 914,
+        "requests": 199,
+        "grade": "E",
+        "score": 28.0,
+        "ges": 2.44,
+        "water": 3.66,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 07:46:03.725431",
+        "page_type": null
+    }
+]
