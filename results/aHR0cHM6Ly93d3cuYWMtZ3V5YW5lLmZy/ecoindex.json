@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.ac-guyane.fr",
+        "size": 3713.879,
+        "nodes": 1601,
+        "requests": 67,
+        "grade": "E",
+        "score": 28.0,
+        "ges": 2.44,
+        "water": 3.66,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 09:57:02.930569",
+        "page_type": null
+    }
+]
