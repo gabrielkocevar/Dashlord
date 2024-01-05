@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "http://www.choisirleservicepublic.gouv.fr",
+        "size": 4564.266,
+        "nodes": 2644,
+        "requests": 83,
+        "grade": "F",
+        "score": 20.0,
+        "ges": 2.6,
+        "water": 3.9,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 05:28:36.425441",
+        "page_type": ""
+    }
+]
