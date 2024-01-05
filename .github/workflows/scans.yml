@@ -122,6 +122,7 @@ jobs:
           output: scans/declaration-rgpd.json
           
       - name: nmap vulnerabilities scan
+        if: ${{ matrix.sites.tools.nmap }}
         continue-on-error: true
         timeout-minutes: 10
         uses: "MTES-MCT/nmap-action@main"
