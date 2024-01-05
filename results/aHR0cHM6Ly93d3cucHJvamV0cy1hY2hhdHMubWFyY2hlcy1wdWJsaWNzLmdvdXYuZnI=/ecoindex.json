@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.projets-achats.marches-publics.gouv.fr",
+        "size": 12223.97,
+        "nodes": 537,
+        "requests": 59,
+        "grade": "D",
+        "score": 49.0,
+        "ges": 2.02,
+        "water": 3.03,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 07:26:29.596792",
+        "page_type": null
+    }
+]
