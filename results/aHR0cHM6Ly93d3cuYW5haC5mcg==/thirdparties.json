@@ -1,0 +1,178 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://gva.et-gv.fr/mnM442.js?2"
+    }
+  ],
+  "cookies": [],
+  "headers": {
+    "cache-control": "max-age=86400, public",
+    "content-encoding": "gzip",
+    "content-language": "fr",
+    "content-security-policy": "font-src 'self' themes.googleusercontent.com data:; frame-src 'self' https://player.vimeo.com/ https://www.dailymotion.com/ https://youtu.be/ https://www.youtube.com/ https://simulaides.ademe.fr/ https://bo-ris.ademe.fr/ https://preprod-simulaidesv2.ademe-dri.fr/ http://preprod-ris.ademe.fr/ https://prod-ris.ademe-dri.fr/ https://www3.ademe.fr/ https://experience.arcgis.com/ https://geo.dailymotion.com/; img-src 'self' data: https://logs1412.xiti.com https://vocalcom01.teleperformance.fr http://gva.et-gv.fr; manifest-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://player.vimeo.com/api/ wss://widget-mediator.zopim.com https://static.zdassets.com; script-src-attr 'self' 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' https://static.zdassets.com http://gva.et-gv.fr; style-src 'self' 'unsafe-inline' https://vocalcom01.teleperformance.fr; style-src-attr 'self' 'unsafe-inline'",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Fri, 05 Jan 2024 03:43:41 GMT",
+    "etag": "\"1704378057-gzip\"",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "last-modified": "Thu, 04 Jan 2024 14:20:57 GMT",
+    "referrer-policy": "no-referrer-when-downgrade",
+    "server": "Apache",
+    "strict-transport-security": "max-age=16000000;includeSubDomains;",
+    "vary": "Cookie,Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-drupal-cache": "HIT",
+    "x-drupal-dynamic-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-generator": "Drupal 10 (https://www.drupal.org)",
+    "x-xss-protection": "1 ;mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.anah.fr",
+      "ip": "178.237.108.157",
+      "geoip": {
+        "city": {
+          "geoname_id": 3020495,
+          "names": {
+            "en": "Échirolles",
+            "fr": "Échirolles",
+            "ja": "エシロル",
+            "pt-BR": "Échirolles",
+            "ru": "Эшироль",
+            "zh-CN": "埃希罗莱"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 45.1463,
+          "longitude": 5.6886,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "38130"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 11071625,
+            "iso_code": "ARA",
+            "names": {
+              "en": "Auvergne-Rhone-Alpes",
+              "fr": "Auvergne-Rhône-Alpes"
+            }
+          },
+          {
+            "geoname_id": 3012715,
+            "iso_code": "38",
+            "names": {
+              "de": "Isère",
+              "en": "Isère",
+              "es": "Isere",
+              "fr": "Isère"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "gva.et-gv.fr",
+      "ip": "91.134.109.31",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
