@@ -114,7 +114,7 @@ jobs:
       - name: Déclaration RGPD
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/declaration-rgpd@v1
-        if: ${{ matrix.sites.tools['declaration-rgpd'] }}
+        # if: ${{ matrix.sites.tools['declaration-rgpd'] }}
         with:
           thirdparties: ${{ steps.thirdparties.outputs.json }}
           url: ${{ matrix.sites.url }}
