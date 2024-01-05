@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.ac-dijon.fr",
+        "size": 6474.842,
+        "nodes": 1674,
+        "requests": 56,
+        "grade": "E",
+        "score": 29.0,
+        "ges": 2.42,
+        "water": 3.63,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 09:35:52.551154",
+        "page_type": null
+    }
+]
