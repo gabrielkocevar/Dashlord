@@ -1,0 +1,62 @@
+{
+  "links": [
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.rappel.conso.gouv.fr",
+        "port": null,
+        "hostname": "www.rappel.conso.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/",
+        "path": "/",
+        "href": "http://www.rappel.conso.gouv.fr/"
+      },
+      "link": "http://www.rappel.conso.gouv.fr/",
+      "line": "--2024-01-05 07:32:39--  http://www.rappel.conso.gouv.fr/",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "http:",
+        "slashes": true,
+        "auth": null,
+        "host": "rappel.conso.gouv.fr",
+        "port": null,
+        "hostname": "rappel.conso.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/",
+        "path": "/",
+        "href": "http://rappel.conso.gouv.fr/"
+      },
+      "link": "http://rappel.conso.gouv.fr/",
+      "line": "--2024-01-05 07:32:39--  http://rappel.conso.gouv.fr/",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "rappel.conso.gouv.fr",
+        "port": null,
+        "hostname": "rappel.conso.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/",
+        "path": "/",
+        "href": "https://rappel.conso.gouv.fr/"
+      },
+      "link": "https://rappel.conso.gouv.fr/",
+      "line": "--2024-01-05 07:32:40--  https://rappel.conso.gouv.fr/",
+      "broken": false
+    }
+  ],
+  "broken": []
+}

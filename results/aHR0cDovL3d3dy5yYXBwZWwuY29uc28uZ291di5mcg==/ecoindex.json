@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "http://www.rappel.conso.gouv.fr",
+        "size": 547.031,
+        "nodes": 763,
+        "requests": 20,
+        "grade": "C",
+        "score": 62.0,
+        "ges": 1.76,
+        "water": 2.64,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 07:32:38.721478",
+        "page_type": null
+    }
+]
