@@ -22,5 +22,5 @@ tools:
   ecoindex: false
 urls:
   - url: https://www.enseignementsup-recherche.gouv.fr
-  # - url: https://www.archives-nationales.culture.gouv.fr
-  # - url: https://www.gouvernement.fr
+  - url: https://www.archives-nationales.culture.gouv.fr
+  - url: https://www.gouvernement.fr
