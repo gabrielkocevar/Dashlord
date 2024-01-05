@@ -1,0 +1,232 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://tag.aticdn.net/piano-analytics.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://tag.aticdn.net/piano-analytics.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://log.xiti.com/event?s=489214&idclient=lr08jcc7o5le4vaw"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "pa_privacy",
+      "value": "%22optin%22",
+      "domain": "www.fonction-publique.gouv.fr",
+      "path": "/",
+      "expires": 1738562908,
+      "size": 21,
+      "httpOnly": false,
+      "secure": true,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-headers": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Content-Length,Content-Range",
+    "allow": "GET, POST, HEAD",
+    "cache-control": "max-age=600",
+    "content-encoding": "br",
+    "content-language": "fr",
+    "content-length": "10577",
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:;frame-ancestors 'self' https://*.safire.fonction-publique.gouv.fr;",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Fri, 05 Jan 2024 05:59:21 GMT",
+    "etag": "W/\"1704379402\"",
+    "expires": "Fri, 05 Jan 2024 06:09:21 GMT",
+    "last-modified": "Thu, 04 Jan 2024 14:43:22 GMT",
+    "referrer-policy": "same-origin",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "upgrade-insecure-requests": "1",
+    "vary": "Cookie,Accept-Encoding",
+    "x-cacheable": "Matched cache",
+    "x-cdn-pop": "bhs",
+    "x-cdn-pop-ip": "137.74.122.0/26",
+    "x-content-type-options": "nosniff",
+    "x-drupal-cache": "MISS",
+    "x-drupal-dynamic-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-proxy-cache": "HIT",
+    "x-request-id": "636880406",
+    "x-ua-compatible": "IE=edge",
+    "x-xss-protection": "1;mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.fonction-publique.gouv.fr",
+      "ip": "46.105.198.39",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "tag.aticdn.net",
+      "ip": "65.8.161.63",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "log.xiti.com",
+      "ip": "18.238.193.55",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    }
+  ]
+}

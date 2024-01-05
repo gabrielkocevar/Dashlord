@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.fonction-publique.gouv.fr",
+        "size": 4239.299,
+        "nodes": 777,
+        "requests": 62,
+        "grade": "D",
+        "score": 42.0,
+        "ges": 2.16,
+        "water": 3.24,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 06:09:31.639771",
+        "page_type": "Accueil"
+    }
+]
