@@ -1,0 +1,861 @@
+{
+  "trackers": [
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/css/main.a421f34e94d8.css",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/images/logo.0265438b0c8d.png",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/images/components/wave-aquamarine.6dfaa1db6e13.svg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/fonts/DIN-2014_Demi.80072d0fd9f8.woff2",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/fonts/DIN-2014_Demi.80072d0fd9f8.woff2",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/88/49/8849a480-e0bb-4260-a129-136109044efa/asset-v1_aienvironnementai_environnement_c101typeassetblockvignettepetiteplus.png__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/e5/d7/e5d7f601-3d87-4d29-bff8-60c73ebb85e5/ai_env-v.jpg__800x450_q85_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/9c/37/9c37a6ec-2b7d-4560-b73c-ae6eb5b99687/mooc-renov-performante.png__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/98/2f/982fc23a-fe72-4da2-8619-d13133416eb5/asset-v1_oidwild2021session01typeassetblockvignette_master_fr.jpg__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/9b/1e/9b1eadf4-b830-4a32-bea9-50ca58ca7b02/asset-v1_oidwildoidwildmooc02session03typeassetblockvignette_master_en_a.jpg__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/3b/47/3b4789a1-a527-4126-8acf-b01df568beee/logo-oid.png__800x450_q85_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/5a/ee/5aeeca40-acf6-47b3-bb00-d3acf9393ea1/img_principale_1920-633.png__1920x633_crop-%2C0_subsampling-2.png",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/fonts/Gotham-Bold_Web.003e90cf8cb3.woff2",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/fonts/DIN-2014_Bold.8978a71da98e.woff2",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/55/65/55659c3b-6349-4672-9caa-d8bfa36c23c7/mooc_creba-sans_texte.png__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/a6/63/a663d7e8-17f9-41e6-aa4e-d7e4208d4c46/logo_cerema2.png__800x450_q85_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/d3/9f/d39fb1e2-5080-4def-ab98-101b2376f8dc/mooc_rc_-_1.png__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/89/1f/891fc35c-8d5a-4c7d-9d01-6137a000e7c8/vignette_mooc_aqc_v2_2.png__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/5d/49/5d49a081-21bb-4a44-ad80-664d95f12382/aqc-logo-quadrichromie.jpg__800x450_q85_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/58/0d/580d3ad1-18ce-49bc-a762-cdac7004c82a/mooc_rp_risques_-_1.png__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/57/b9/57b9d3f1-26ad-4b88-a060-a064e98ee603/re2020-acc_-_copie.png__800x457_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/3c/dd/3cdd70f3-0b63-455e-918c-3add20abaefa/cstbformatinspetit.png__200x113_q85_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/f2/7e/f27eaaf6-59cc-45f3-9b99-d4780c379edd/renov.png__200x200_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/71/13/7113652b-05a1-4734-8d37-fc3224cab882/perf.png__200x200_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/7a/36/7a36542e-67cc-4bf9-9df7-bc04deaf3525/fonda.png__200x200_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/media/filer_public_thumbnails/filer_public/64/49/644903cb-152c-480b-bc02-73f47c5ee3d2/tert.png__200x200_q85_crop_replace_alpha-%23FFFFFF_subsampling-2_upscale.jpg",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/images/logo-alt.bd7ebb0ee20f.png",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/js/build/index.6c1ee7f51438.js",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/load.js?domain=www.mooc-batiment-durable.fr&uuid=2df1000bf385655312abede8e30421664e7d594e&locale=fr"
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/fonts/Gotham-Medium_Web.68ce85d44fef.woff2",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/fonts/Gotham-Bold_Web.003e90cf8cb3.woff2",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/fonts/DIN-2014_Bold.8978a71da98e.woff2",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "cloudfront",
+      "url": "https://d29h3glynt8k6a.cloudfront.net/static/richie/fonts/Gotham-Medium_Web.68ce85d44fef.woff2",
+      "details": {
+        "id": "cloudfront",
+        "message": "Host files locally"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://o149987.ingest.sentry.io/api/5919792/envelope/?sentry_key=b362d4695ebf49baad1706b22401e444&sentry_version=7&sentry_client=sentry.javascript.browser%2F7.60.0"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn.tarteaucitron.io/css/tarteaucitron.min.css?v=20230203"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn.tarteaucitron.io/lang/tarteaucitron.fr.min.js?v=20230203"
+    },
+    {
+      "type": "unknown",
+      "url": "https://lms.mooc-batiment-durable.fr/api/mobile/v0.5/my_user_info"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn.tarteaucitron.io/tarteaucitron.services.min.js?v=20230203"
+    },
+    {
+      "type": "unknown",
+      "url": "https://agirpourlatransition.ademe.fr/sites/default/files/2023-03/gestion-cookies.jpg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/log/?account=2df1000bf385655312abede8e30421664e7d594e&domain=www.mooc-batiment-durable.fr&status=!eulerian%3Dfalse&_time=1704417907924"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "django_language",
+      "value": "fr",
+      "domain": "www.mooc-batiment-durable.fr",
+      "path": "/",
+      "expires": 1735953905.282826,
+      "size": 17,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "csrftoken",
+      "value": "Mo6fG86pvMCV0j41bOYxh9oum6OgJWGui1cXGu4Z1oYpBuy4DkgXoiD001whP90n",
+      "domain": "www.mooc-batiment-durable.fr",
+      "path": "/",
+      "expires": 1735867505.036209,
+      "size": 73,
+      "httpOnly": false,
+      "secure": true,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "cache-control": "max-age=600",
+    "content-language": "fr",
+    "content-length": "79370",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Fri, 05 Jan 2024 01:25:05 GMT",
+    "expires": "Fri, 05 Jan 2024 01:35:05 GMT",
+    "referrer-policy": "same-origin",
+    "set-cookie": "django_language=fr; expires=Sat, 04 Jan 2025 01:25:05 GMT; Max-Age=31536000; Path=/",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "vary": ", Cookie",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.mooc-batiment-durable.fr",
+      "ip": "51.255.9.27",
+      "geoip": {
+        "city": {
+          "geoname_id": 3030787,
+          "names": {
+            "en": "Boussy-Saint-Antoine",
+            "zh-CN": "布西圣昂图瓦恩"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 20,
+          "latitude": 48.6936,
+          "longitude": 2.5282,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "91800"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 3019599,
+            "iso_code": "91",
+            "names": {
+              "de": "Essonne",
+              "en": "Essonne",
+              "es": "Essonne",
+              "fr": "Essonne"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "d29h3glynt8k6a.cloudfront.net",
+      "ip": "99.84.178.98",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "tarteaucitron.io",
+      "ip": "51.68.111.231",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "o149987.ingest.sentry.io",
+      "ip": "34.120.195.249",
+      "geoip": {
+        "city": {
+          "geoname_id": 4393217,
+          "names": {
+            "de": "Kansas City",
+            "en": "Kansas City",
+            "es": "Kansas City",
+            "fr": "Kansas City",
+            "ja": "カンザスシティ",
+            "pt-BR": "Kansas City",
+            "ru": "Канзас-Сити"
+          }
+        },
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 39.1027,
+          "longitude": -94.5778,
+          "metro_code": 616,
+          "time_zone": "America/Chicago"
+        },
+        "postal": {
+          "code": "64184"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 4398678,
+            "iso_code": "MO",
+            "names": {
+              "en": "Missouri",
+              "es": "Missouri",
+              "fr": "Missouri",
+              "ja": "ミズーリ州",
+              "pt-BR": "Missúri",
+              "ru": "Миссури",
+              "zh-CN": "密苏里州"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "cdn.tarteaucitron.io",
+      "ip": "51.68.111.234",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "lms.mooc-batiment-durable.fr",
+      "ip": "51.255.9.27",
+      "geoip": {
+        "city": {
+          "geoname_id": 3030787,
+          "names": {
+            "en": "Boussy-Saint-Antoine",
+            "zh-CN": "布西圣昂图瓦恩"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 20,
+          "latitude": 48.6936,
+          "longitude": 2.5282,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "91800"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 3019599,
+            "iso_code": "91",
+            "names": {
+              "de": "Essonne",
+              "en": "Essonne",
+              "es": "Essonne",
+              "fr": "Essonne"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "agirpourlatransition.ademe.fr",
+      "ip": "185.86.179.42",
+      "geoip": {
+        "city": {
+          "geoname_id": 3035403,
+          "names": {
+            "de": "Bagnolet",
+            "en": "Bagnolet",
+            "fr": "Bagnolet",
+            "ja": "バニョレ",
+            "ru": "Баньоле",
+            "zh-CN": "巴尼奥雷"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 10,
+          "latitude": 48.8673,
+          "longitude": 2.421,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "93170"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 2975246,
+            "iso_code": "93",
+            "names": {
+              "de": "Seine-Saint-Denis",
+              "en": "Seine-Saint-Denis",
+              "es": "Sena Saint Denis",
+              "fr": "Seine-Saint-Denis"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
