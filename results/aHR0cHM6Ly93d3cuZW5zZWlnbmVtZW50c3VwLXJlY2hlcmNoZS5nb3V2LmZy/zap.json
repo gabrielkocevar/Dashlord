@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Fri, 5 Jan 2024 11:02:50",
+	"@generated": "Fri, 5 Jan 2024 14:24:47",
 	"site":[ 
 		{
 			"@name": "https://www.enseignementsup-recherche.gouv.fr",
@@ -84,20 +84,12 @@
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keywords-search-block-keyword-form\" \"edit-submit--2\" \"edit-submit-apply\" \"form_build_id\" \"form_id\" ]."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<form action=\"/profiles/*.css$\" method=\"post\" id=\"search-block-keyword-form\" accept-charset=\"UTF-8\">",
+							"evidence": "<form action=\"/index.php/node/add/\" method=\"post\" id=\"search-block-keyword-form\" accept-charset=\"UTF-8\">",
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keywords-search-block-keyword-form\" \"edit-submit--2\" \"edit-submit-apply\" \"form_build_id\" \"form_id\" ]."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"search-block-keyword-form\" data-drupal-selector=\"search-block-keyword-form\" action=\"/profiles/*.css$\" method=\"post\" id=\"search-block-keyword-form\" accept-charset=\"UTF-8\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"edit-keywords-search-block-keyword-form\" \"edit-submit\" \"edit-submit-apply\" \"form_build_id\" \"form_id\" ]."
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.js$",
@@ -114,9 +106,25 @@
 							"attack": "",
 							"evidence": "<form class=\"search-block-keyword-form\" data-drupal-selector=\"search-block-keyword-form\" action=\"/profiles/*.js$\" method=\"post\" id=\"search-block-keyword-form\" accept-charset=\"UTF-8\">",
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"edit-keywords-search-block-keyword-form\" \"edit-submit\" \"edit-submit-apply\" \"form_build_id\" \"form_id\" ]."
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form action=\"/profiles/*.svg\" method=\"post\" id=\"search-block-keyword-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keywords-search-block-keyword-form\" \"edit-submit--2\" \"edit-submit-apply\" \"form_build_id\" \"form_id\" ]."
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"search-block-keyword-form\" data-drupal-selector=\"search-block-keyword-form\" action=\"/profiles/*.svg\" method=\"post\" id=\"search-block-keyword-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"edit-keywords-search-block-keyword-form\" \"edit-submit\" \"edit-submit-apply\" \"form_build_id\" \"form_id\" ]."
 						}
 					],
-					"count": "12",
+					"count": "13",
 					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
 					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-keywords-search-block-keyword-form\" \"edit-submit--2\" \"edit-submit-apply\" \"form_build_id\" \"form_id\" ].</p>",
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
@@ -144,14 +152,6 @@
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -191,7 +191,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.png",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -199,7 +199,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -215,7 +215,15 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.gif",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -240,6 +248,33 @@
 					"sourceid": "1"
 				},
 				{
+					"pluginid": "90022",
+					"alertRef": "90022",
+					"alert": "Application Error Disclosure",
+					"name": "Application Error Disclosure",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/%25252A.svg",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.1 500 500 Service unavailable (with message)",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "605"
+				},
+				{
 					"pluginid": "10044",
 					"alertRef": "10044",
 					"alert": "Big Redirect Detected (Potential Sensitive Information Leak)",
@@ -258,44 +293,12 @@
 							"otherinfo": "Location header URI length: 48 [https://www.enseignementsup-recherche.gouv.fr/fr].\nPredicted response size: 348.\nResponse Body Length: 438."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/filter/tips",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/index.php/fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "",
-							"otherinfo": "Location header URI length: 60 [https://www.enseignementsup-recherche.gouv.fr/fr/filter/tips].\nPredicted response size: 360.\nResponse Body Length: 486."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/historique-et-patrimoine-50327",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 77 [https://www.enseignementsup-recherche.gouv.fr/fr/histoire-et-patrimoine-50327].\nPredicted response size: 377.\nResponse Body Length: 554."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/personnel-enseignant-du-superieur-et-chercheurs-50075",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 91 [https://www.enseignementsup-recherche.gouv.fr/fr/chercheurs-et-enseignants-chercheurs-50075].\nPredicted response size: 391.\nResponse Body Length: 610."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/index.php/filter/tips",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 60 [https://www.enseignementsup-recherche.gouv.fr/fr/filter/tips].\nPredicted response size: 360.\nResponse Body Length: 486."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/index.php/user/logout/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 58 [https://www.enseignementsup-recherche.gouv.fr/index.php/fr].\nPredicted response size: 358.\nResponse Body Length: 478."
+							"otherinfo": "Location header URI length: 48 [https://www.enseignementsup-recherche.gouv.fr/fr].\nPredicted response size: 348.\nResponse Body Length: 438."
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css$",
@@ -306,7 +309,7 @@
 							"otherinfo": "Location header URI length: 72 [https://www.enseignementsup-recherche.gouv.fr/fr/rechercher?keywords=ZAP].\nPredicted response size: 372.\nResponse Body Length: 534."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.js$",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.svg",
 							"method": "POST",
 							"param": "",
 							"attack": "",
@@ -314,7 +317,15 @@
 							"otherinfo": "Location header URI length: 72 [https://www.enseignementsup-recherche.gouv.fr/fr/rechercher?keywords=ZAP].\nPredicted response size: 372.\nResponse Body Length: 534."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/%2A.svg",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 72 [https://www.enseignementsup-recherche.gouv.fr/fr/rechercher?keywords=ZAP].\nPredicted response size: 372.\nResponse Body Length: 534."
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg",
 							"method": "POST",
 							"param": "",
 							"attack": "",
@@ -322,7 +333,7 @@
 							"otherinfo": "Location header URI length: 72 [https://www.enseignementsup-recherche.gouv.fr/fr/rechercher?keywords=ZAP].\nPredicted response size: 372.\nResponse Body Length: 534."
 						}
 					],
-					"count": "9",
+					"count": "6",
 					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
 					"otherinfo": "<p>Location header URI length: 48 [https://www.enseignementsup-recherche.gouv.fr/fr].</p><p>Predicted response size: 348.</p><p>Response Body Length: 438.</p>",
 					"reference": "",
@@ -462,15 +473,23 @@
 							"attack": "",
 							"evidence": "Eval",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_xRoJFRV-CbRb1izu8A9bn2aRKHdd0fY4lz4v_GWBNa4.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
 						}
 					],
-					"count": "1",
+					"count": "2",
 					"solution": "<p>See the references for security advice on the use of these functions.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "642"
+					"sourceid": "338"
 				},
 				{
 					"pluginid": "10063",
@@ -482,14 +501,6 @@
 					"riskdesc": "Low (Medium)",
 					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
 					"instances":[ 
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7",
 							"method": "GET",
@@ -523,14 +534,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_DlpI5Noni4ne9KGIuhhELrnVgf5aFWv-uw7-QlQlSmE.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_dR4YTMKXZ6TH_8A4VMIJGRL_I2wh47pzw_yy_-HK4rI.js",
 							"method": "GET",
 							"param": "",
@@ -547,7 +550,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_tei1fCJ-o5SNgSz3Q6IRUzCh0sa4bk6E_kwf0HdK9Wg.js",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_xRoJFRV-CbRb1izu8A9bn2aRKHdd0fY4lz4v_GWBNa4.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -563,21 +566,21 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/web.config",
-							"method": "GET",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/%25252A.svg",
+							"method": "POST",
 							"param": "",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
+					"count": "9",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "159"
+					"sourceid": "297"
 				},
 				{
 					"pluginid": "10035",
@@ -591,14 +594,6 @@
 					"instances":[ 
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -638,7 +633,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.png",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -684,6 +679,14 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
 						}
 					],
 					"count": "12",
@@ -692,7 +695,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "128"
+					"sourceid": "101"
 				},
 				{
 					"pluginid": "10096",
@@ -719,7 +722,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "642"
+					"sourceid": "338"
 				},
 				{
 					"pluginid": "10094",
@@ -738,14 +741,6 @@
 							"attack": "",
 							"evidence": "/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o",
 							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD5\uFFFD\\x0019KC\uFFFD\uFFFD\uFFFD\uFFFD\\x0004\uFFFDe\uFFFD\uFFFD}\uFFFD\\x0004\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x0013\uFFFD\uFFFD\uFFFD"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/admin/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE",
-							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD\uFFFD\u05F91\uFFFD\\x0006\uFFFD\uFFFD#J\uFFFDH\uFFFD_\uFFFD\uFFFD)\uFFFD\uFFFD\\x0005\uFFFD\uFFFD\uFFFD\t}\uFFFD%\uFFFDr\\x0004"
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css$",
@@ -780,7 +775,7 @@
 							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD5\uFFFD\\x0019KC\uFFFD\uFFFD\uFFFD\uFFFD\\x0004\uFFFDe\uFFFD\uFFFD}\uFFFD\\x0004\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x0013\uFFFD\uFFFD\uFFFD"
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/node/add/",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -788,7 +783,15 @@
 							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD\uFFFD\u05F91\uFFFD\\x0006\uFFFD\uFFFD#J\uFFFDH\uFFFD_\uFFFD\uFFFD)\uFFFD\uFFFD\\x0005\uFFFD\uFFFD\uFFFD\t}\uFFFD%\uFFFDr\\x0004"
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD5\uFFFD\\x0019KC\uFFFD\uFFFD\uFFFD\uFFFD\\x0004\uFFFDe\uFFFD\uFFFD}\uFFFD\\x0004\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x0013\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -812,20 +815,20 @@
 							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD\uFFFD\u05F91\uFFFD\\x0006\uFFFD\uFFFD#J\uFFFDH\uFFFD_\uFFFD\uFFFD)\uFFFD\uFFFD\\x0005\uFFFD\uFFFD\uFFFD\t}\uFFFD%\uFFFDr\\x0004"
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/user/password/",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE",
-							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD\uFFFD\u05F91\uFFFD\\x0006\uFFFD\uFFFD#J\uFFFDH\uFFFD_\uFFFD\uFFFD)\uFFFD\uFFFD\\x0005\uFFFD\uFFFD\uFFFD\t}\uFFFD%\uFFFDr\\x0004"
+							"evidence": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+							"otherinfo": "GIF89a\\x0001\\x0000\\x0001\\x0000\uFFFD\\x0000\\x0000\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD!\uFFFD\\x0004\\x0001\\x0000\\x0000\\x0000\\x0000,\\x0000\\x0000\\x0000\\x0000\\x0001\\x0000\\x0001\\x0000\\x0000\\x0002\\x0001D\\x0000;"
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/user/register/",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE",
-							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD\uFFFD\u05F91\uFFFD\\x0006\uFFFD\uFFFD#J\uFFFDH\uFFFD_\uFFFD\uFFFD)\uFFFD\uFFFD\\x0005\uFFFD\uFFFD\uFFFD\t}\uFFFD%\uFFFDr\\x0004"
+							"evidence": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+							"otherinfo": "GIF89a\\x0001\\x0000\\x0001\\x0000\uFFFD\\x0000\\x0000\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD!\uFFFD\\x0004\\x0001\\x0000\\x0000\\x0000\\x0000,\\x0000\\x0000\\x0000\\x0000\\x0001\\x0000\\x0001\\x0000\\x0000\\x0002\\x0001D\\x0000;"
 						}
 					],
 					"count": "12",
@@ -879,36 +882,20 @@
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.js$",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "select",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"<script src=\"//cdnjs.cloudflare.com/ajax/libs/jcf/1.2.3/js/jcf.select.js\"></script>\", see evidence field for the suspicious comment/snippet."
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"    message: 'The touchevents property of Modernizr has been deprecated in drupal:9.4.0 and is removed from drupal:10.0.0. There\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.js$",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "select",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"<script src=\"//cdnjs.cloudflare.com/ajax/libs/jcf/1.2.3/js/jcf.select.js\"></script>\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected 2 times, the first in the element starting with: \"      var query = ['@media (', Modernizr._prefixes.join('touch-enabled),('), 'heartz', ')', '{#modernizr{top:9px;position:absolu\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr",
@@ -936,6 +923,22 @@
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"<script src=\"//cdnjs.cloudflare.com/ajax/libs/jcf/1.2.3/js/jcf.select.js\"></script>\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -970,12 +973,12 @@
 							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/admin/",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/%2A.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a href=\"#\" class=\"scroll-top\">\n      <span class=\"sr-only\">Haut de page</span>\n    </a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+							"evidence": "<a href=\"/fr\" target=\"_self\" title=\"Front page\">l'accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css$",
@@ -1010,7 +1013,7 @@
 							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/node/add/",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1018,7 +1021,23 @@
 							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/fr/notes-information-sies\" target=\"_self\">Voir tous les num\u00E9ros de la revue</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"scroll-top\">\n      <span class=\"sr-only\">Haut de page</span>\n    </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/%2A.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1040,22 +1059,6 @@
 							"attack": "",
 							"evidence": "<a href=\"/fr\" target=\"_self\" title=\"Front page\">l'accueil</a>",
 							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/user/password/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a href=\"#\" class=\"scroll-top\">\n      <span class=\"sr-only\">Haut de page</span>\n    </a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/user/register/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a href=\"#\" class=\"scroll-top\">\n      <span class=\"sr-only\">Haut de page</span>\n    </a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
 						}
 					],
 					"count": "12",
@@ -1086,14 +1089,6 @@
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "no-store",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1133,15 +1128,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "no-store",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1157,7 +1144,31 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/README.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1171,9 +1182,17 @@
 							"attack": "",
 							"evidence": "no-store",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
 						}
 					],
-					"count": "12",
+					"count": "14",
 					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
 					"otherinfo": "",
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
@@ -1208,7 +1227,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/agenda-ministre",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/cartographie-des-initiatives-peps-2018-45657",
 							"method": "GET",
 							"param": "cache-control",
 							"attack": "",
@@ -1216,7 +1235,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/enseignement-superieur-50387",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/donnees",
 							"method": "GET",
 							"param": "cache-control",
 							"attack": "",
@@ -1224,7 +1243,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/espace-presse-50621",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134",
 							"method": "GET",
 							"param": "cache-control",
 							"attack": "",
@@ -1232,7 +1251,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/evenements-50354",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/les-poles-de-competitivite-en-pays-de-loire-46056",
 							"method": "GET",
 							"param": "cache-control",
 							"attack": "",
@@ -1240,7 +1259,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/la-ministre-50324",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/pays-de-la-loire",
 							"method": "GET",
 							"param": "cache-control",
 							"attack": "",
@@ -1248,7 +1267,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/priorites-ministerielles-50357",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/reperes-et-references-statistiques-sur-les-enseignements-la-formation-et-la-recherche-2021-49781",
 							"method": "GET",
 							"param": "cache-control",
 							"attack": "",
@@ -1257,14 +1276,6 @@
 						},
 						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=0, must-revalidate, no-store",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/toutes-les-thematiques-50156",
 							"method": "GET",
 							"param": "cache-control",
 							"attack": "",
@@ -1285,6 +1296,14 @@
 							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=0, must-revalidate, no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "must-revalidate, no-cache, private",
 							"otherinfo": ""
 						}
 					],
@@ -1315,6 +1334,22 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr",
 							"method": "GET",
 							"param": "",
@@ -1323,63 +1358,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/agenda-ministre",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/enseignement-superieur-50387",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/evenements-50354",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/historique-et-patrimoine-50327",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/la-ministre-50324",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/personnel-enseignant-du-superieur-et-chercheurs-50075",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/priorites-ministerielles-50357",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/toutes-les-thematiques-50156",
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1393,9 +1372,57 @@
 							"attack": "",
 							"evidence": "HIT",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2022-05/1_MESR_RVB.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/site_logo/2022-05/1_MESR_RVB.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/styles/full_width/public/mesri-logo-etudiant-gouv-home-3-jpg-10790.jpg?itok=h536KoEu",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/styles/news_frieze_list_block_auto_x_250/public/2022-05/mesri-publication-bulletin-officiel---minist-re-de-l-enseignement-sup-rieur-de-la-recherche-et-de-l-innovation-9770.png?itok=S9Gx926h",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/themes/custom/heu_esr_theme/favicon.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
@@ -1430,7 +1457,47 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.gif",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.js",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -1438,7 +1505,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "8",
 					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
@@ -1473,7 +1540,47 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.gif",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.js",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -1481,7 +1588,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "8",
 					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
@@ -1516,7 +1623,47 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.gif",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.js",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -1524,7 +1671,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "8",
 					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
@@ -1559,7 +1706,47 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.gif",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/core/*.jpg",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/profiles/*.js",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.enseignementsup-recherche.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.enseignementsup-recherche.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
 							"attack": "",
@@ -1567,128 +1754,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "8",
 					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
 					"sourceid": "6"
-				},
-				{
-					"pluginid": "10031",
-					"alertRef": "10031",
-					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
-					"name": "User Controllable HTML Element Attribute (Potential XSS)",
-					"riskcode": "0",
-					"confidence": "1",
-					"riskdesc": "Informational (Low)",
-					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&id=50570&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "event_id",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&id=50570&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nevent_id=94077\r\n\r\nThe user-controlled value was:\r\n94077"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&id=50570&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "provider",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&id=50570&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nprovider=contact_press\r\n\r\nThe user-controlled value was:\r\ncontact_press"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&id=50570&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "type",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&id=50570&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\ntype=contact_press\r\n\r\nThe user-controlled value was:\r\ncontact_press"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=50573&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "event_id",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=50573&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nevent_id=94128\r\n\r\nThe user-controlled value was:\r\n94128"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=50573&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "provider",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=50573&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nprovider=contact_press\r\n\r\nThe user-controlled value was:\r\ncontact_press"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=50573&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "type",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=50573&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\ntype=contact_press\r\n\r\nThe user-controlled value was:\r\ncontact_press"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=81577&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "event_id",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=81577&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nevent_id=94128\r\n\r\nThe user-controlled value was:\r\n94128"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=81577&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "provider",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=81577&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nprovider=contact_press\r\n\r\nThe user-controlled value was:\r\ncontact_press"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=81577&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "type",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=81577&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\ntype=contact_press\r\n\r\nThe user-controlled value was:\r\ncontact_press"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=88111&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "event_id",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=88111&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nevent_id=94128\r\n\r\nThe user-controlled value was:\r\n94128"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=88111&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "provider",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=88111&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nprovider=contact_press\r\n\r\nThe user-controlled value was:\r\ncontact_press"
-						},
-						{
-							"uri": "https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=88111&provider=contact_press&type=contact_press",
-							"method": "GET",
-							"param": "type",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&id=88111&provider=contact_press&type=contact_press\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\ntype=contact_press\r\n\r\nThe user-controlled value was:\r\ncontact_press"
-						}
-					],
-					"count": "12",
-					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
-					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&id=50570&provider=contact_press&type=contact_press</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [option] tag [value] attribute </p><p></p><p>The user input found was:</p><p>event_id=94077</p><p></p><p>The user-controlled value was:</p><p>94077</p>",
-					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
-					"cweid": "20",
-					"wascid": "20",
-					"sourceid": "1710"
 				}
 			]
 		}

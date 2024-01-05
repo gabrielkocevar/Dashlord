@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Fri, 5 Jan 2024 11:02:50
+		Generated on Fri, 5 Jan 2024 14:24:46
 	</h3>
 
 	<h3>
@@ -164,7 +164,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>7</div>
 				</td>
 			</tr>
 			<tr>
@@ -172,7 +172,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>11</div>
+					<div>10</div>
 				</td>
 			</tr>
 			<tr>
@@ -200,7 +200,7 @@ td {
 			<tr>
 				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">12</td>
+				<td align="center">13</td>
 			</tr>
 			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
@@ -208,9 +208,14 @@ td {
 				<td align="center">12</td>
 			</tr>
 			<tr>
+				<td><a href="#90022">Application Error Disclosure</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
 				<td><a href="#10044">Big Redirect Detected (Potential Sensitive Information Leak)</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">9</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#10017">Cross-Domain JavaScript Source File Inclusion</a></td>
@@ -220,12 +225,12 @@ td {
 			<tr>
 				<td><a href="#10110">Dangerous JS Functions</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">1</td>
+				<td align="center">2</td>
 			</tr>
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
+				<td align="center">9</td>
 			</tr>
 			<tr>
 				<td><a href="#10035">Strict-Transport-Security Header Not Set</a></td>
@@ -255,7 +260,7 @@ td {
 			<tr>
 				<td><a href="#10049">Non-Storable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">12</td>
+				<td align="center">14</td>
 			</tr>
 			<tr>
 				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
@@ -265,32 +270,27 @@ td {
 			<tr>
 				<td><a href="#10050">Retrieved from Cache</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">11</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Dest Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">8</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Mode Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">8</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Site Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">8</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-User Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
-			</tr>
-			<tr>
-				<td><a href="#10031">User Controllable HTML Element Attribute (Potential XSS)</a></td>
-				<td align="center" class="risk-0">Informational</td>
-				<td align="center">12</td>
+				<td align="center">8</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -586,7 +586,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$">https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/">https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -606,43 +606,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/profiles/*.css$&quot; method=&quot;post&quot; id=&quot;search-block-keyword-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
+						<td width="80%">&lt;form action=&quot;/index.php/node/add/&quot; method=&quot;post&quot; id=&quot;search-block-keyword-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
 						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;edit-keywords-search-block-keyword-form&quot; &quot;edit-submit--2&quot; &quot;edit-submit-apply&quot; &quot;form_build_id&quot; &quot;form_id&quot; ].</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$">https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;search-block-keyword-form&quot; data-drupal-selector=&quot;search-block-keyword-form&quot; action=&quot;/profiles/*.css$&quot; method=&quot;post&quot; id=&quot;search-block-keyword-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: &quot;edit-keywords-search-block-keyword-form&quot; &quot;edit-submit&quot; &quot;edit-submit-apply&quot; &quot;form_build_id&quot; &quot;form_id&quot; ].</td>
 					</tr>
 				
 					<tr>
@@ -707,9 +676,71 @@ td {
 						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: &quot;edit-keywords-search-block-keyword-form&quot; &quot;edit-submit&quot; &quot;edit-submit-apply&quot; &quot;form_build_id&quot; &quot;form_id&quot; ].</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/profiles/*.svg&quot; method=&quot;post&quot; id=&quot;search-block-keyword-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;edit-keywords-search-block-keyword-form&quot; &quot;edit-submit--2&quot; &quot;edit-submit-apply&quot; &quot;form_build_id&quot; &quot;form_id&quot; ].</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;search-block-keyword-form&quot; data-drupal-selector=&quot;search-block-keyword-form&quot; action=&quot;/profiles/*.svg&quot; method=&quot;post&quot; id=&quot;search-block-keyword-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: &quot;edit-keywords-search-block-keyword-form&quot; &quot;edit-submit&quot; &quot;edit-submit-apply&quot; &quot;form_build_id&quot; &quot;form_id&quot; ].</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">13</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -870,37 +901,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.css$">https://www.enseignementsup-recherche.gouv.fr/core/*.css$</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.gif">https://www.enseignementsup-recherche.gouv.fr/core/*.gif</a></td>
 					</tr>
 					<tr>
@@ -1025,7 +1025,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.png">https://www.enseignementsup-recherche.gouv.fr/core/*.png</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr">https://www.enseignementsup-recherche.gouv.fr/fr</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1056,7 +1056,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr">https://www.enseignementsup-recherche.gouv.fr/fr</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/">https://www.enseignementsup-recherche.gouv.fr/profiles/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1118,7 +1118,38 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.gif">https://www.enseignementsup-recherche.gouv.fr/profiles/*.gif</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpeg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpeg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1233,6 +1264,87 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
+						id="90022"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Application Error Disclosure</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/%25252A.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/%25252A.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">POST</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HTTP/1.1 500 500 Service unavailable (with message)</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90022/">90022</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
 						id="10044"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Big Redirect Detected (Potential Sensitive Information Leak)</th>
@@ -1284,7 +1396,7 @@ Response Body Length: 438.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/filter/tips">https://www.enseignementsup-recherche.gouv.fr/filter/tips</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/index.php/fr">https://www.enseignementsup-recherche.gouv.fr/index.php/fr</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1309,141 +1421,9 @@ Response Body Length: 438.</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">Location header URI length: 60 [https://www.enseignementsup-recherche.gouv.fr/fr/filter/tips].
-Predicted response size: 360.
-Response Body Length: 486.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/historique-et-patrimoine-50327">https://www.enseignementsup-recherche.gouv.fr/fr/historique-et-patrimoine-50327</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Location header URI length: 77 [https://www.enseignementsup-recherche.gouv.fr/fr/histoire-et-patrimoine-50327].
-Predicted response size: 377.
-Response Body Length: 554.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/personnel-enseignant-du-superieur-et-chercheurs-50075">https://www.enseignementsup-recherche.gouv.fr/fr/personnel-enseignant-du-superieur-et-chercheurs-50075</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Location header URI length: 91 [https://www.enseignementsup-recherche.gouv.fr/fr/chercheurs-et-enseignants-chercheurs-50075].
-Predicted response size: 391.
-Response Body Length: 610.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/index.php/filter/tips">https://www.enseignementsup-recherche.gouv.fr/index.php/filter/tips</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Location header URI length: 60 [https://www.enseignementsup-recherche.gouv.fr/fr/filter/tips].
-Predicted response size: 360.
-Response Body Length: 486.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/index.php/user/logout/">https://www.enseignementsup-recherche.gouv.fr/index.php/user/logout/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Location header URI length: 58 [https://www.enseignementsup-recherche.gouv.fr/index.php/fr].
-Predicted response size: 358.
-Response Body Length: 478.</td>
+						<td width="80%">Location header URI length: 48 [https://www.enseignementsup-recherche.gouv.fr/fr].
+Predicted response size: 348.
+Response Body Length: 438.</td>
 					</tr>
 				
 					<tr>
@@ -1482,7 +1462,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.js$">https://www.enseignementsup-recherche.gouv.fr/core/*.js$</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.svg">https://www.enseignementsup-recherche.gouv.fr/core/*.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1515,7 +1495,40 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr">https://www.enseignementsup-recherche.gouv.fr/fr</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/%2A.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/%2A.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">POST</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Location header URI length: 72 [https://www.enseignementsup-recherche.gouv.fr/fr/rechercher?keywords=ZAP].
+Predicted response size: 372.
+Response Body Length: 534.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1547,7 +1560,7 @@ Response Body Length: 534.</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2048,9 +2061,40 @@ Response Body Length: 534.</td>
 						<td width="80%"></td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_xRoJFRV-CbRb1izu8A9bn2aRKHdd0fY4lz4v_GWBNa4.js">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_xRoJFRV-CbRb1izu8A9bn2aRKHdd0fY4lz4v_GWBNa4.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">eval</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">1</td>
+					<td width="80%">2</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2100,37 +2144,6 @@ Response Body Length: 534.</td>
 				<TR vAlign="top">
 					<TD colspan="2"></TD>
 				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/">https://www.enseignementsup-recherche.gouv.fr/core/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2259,37 +2272,6 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_DlpI5Noni4ne9KGIuhhELrnVgf5aFWv-uw7-QlQlSmE.js">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_DlpI5Noni4ne9KGIuhhELrnVgf5aFWv-uw7-QlQlSmE.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_dR4YTMKXZ6TH_8A4VMIJGRL_I2wh47pzw_yy_-HK4rI.js">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_dR4YTMKXZ6TH_8A4VMIJGRL_I2wh47pzw_yy_-HK4rI.js</a></td>
 					</tr>
 					<tr>
@@ -2352,7 +2334,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_tei1fCJ-o5SNgSz3Q6IRUzCh0sa4bk6E_kwf0HdK9Wg.js">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_tei1fCJ-o5SNgSz3Q6IRUzCh0sa4bk6E_kwf0HdK9Wg.js</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_xRoJFRV-CbRb1izu8A9bn2aRKHdd0fY4lz4v_GWBNa4.js">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/js/js_xRoJFRV-CbRb1izu8A9bn2aRKHdd0fY4lz4v_GWBNa4.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2414,12 +2396,12 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/web.config">https://www.enseignementsup-recherche.gouv.fr/web.config</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/%25252A.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/%25252A.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Method</td>
-						<td width="80%">GET</td>
+						<td width="80%">POST</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2444,7 +2426,7 @@ Response Body Length: 534.</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">9</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2511,37 +2493,6 @@ Response Body Length: 534.</td>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.css">https://www.enseignementsup-recherche.gouv.fr/core/*.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.css$">https://www.enseignementsup-recherche.gouv.fr/core/*.css$</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2696,7 +2647,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.png">https://www.enseignementsup-recherche.gouv.fr/core/*.png</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/">https://www.enseignementsup-recherche.gouv.fr/profiles/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2852,6 +2803,37 @@ Response Body Length: 534.</td>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.js">https://www.enseignementsup-recherche.gouv.fr/profiles/*.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.png">https://www.enseignementsup-recherche.gouv.fr/profiles/*.png</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3062,37 +3044,6 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/admin/">https://www.enseignementsup-recherche.gouv.fr/admin/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">�ȭz��y����ߊW���,��,��׹1���#J�H�_��)�����	}�%�r</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.css$">https://www.enseignementsup-recherche.gouv.fr/core/*.css$</a></td>
 					</tr>
 					<tr>
@@ -3217,7 +3168,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/node/add/">https://www.enseignementsup-recherche.gouv.fr/node/add/</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134">https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3248,7 +3199,38 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$">https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213">https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�ȭz��y����ߊW���,��,����|�5�KC�����e��}���������</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/">https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3341,7 +3323,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/user/password/">https://www.enseignementsup-recherche.gouv.fr/user/password/</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o.css">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3361,18 +3343,18 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE</td>
+						<td width="80%">R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">�ȭz��y����ߊW���,��,��׹1���#J�H�_��)�����	}�%�r</td>
+						<td width="80%">GIF89a  �     ���!�    ,       D ;</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/user/register/">https://www.enseignementsup-recherche.gouv.fr/user/register/</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE.css">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3392,12 +3374,12 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">/sites/default/files/css/css_c7XuTHptQaQ6yNKvUjIX-2s-ynh1QWIuuYJfZol_3IE</td>
+						<td width="80%">R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">�ȭz��y����ߊW���,��,��׹1���#J�H�_��)�����	}�%�r</td>
+						<td width="80%">GIF89a  �     ���!�    ,       D ;</td>
 					</tr>
 				
 				<tr>
@@ -3580,7 +3562,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.js$">https://www.enseignementsup-recherche.gouv.fr/core/*.js$</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7">https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3600,18 +3582,18 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">select</td>
+						<td width="80%">from</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jcf/1.2.3/js/jcf.select.js&quot;&gt;&lt;/script&gt;&quot;, see evidence field for the suspicious comment/snippet.</td>
+						<td width="80%">The following pattern was used: \bFROM\b and was detected in the element starting with: &quot;    message: &#39;The touchevents property of Modernizr has been deprecated in drupal:9.4.0 and is removed from drupal:10.0.0. There&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.js$">https://www.enseignementsup-recherche.gouv.fr/core/*.js$</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7">https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3631,74 +3613,12 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">user</td>
+						<td width="80%">query</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.svg">https://www.enseignementsup-recherche.gouv.fr/core/*.svg</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">select</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jcf/1.2.3/js/jcf.select.js&quot;&gt;&lt;/script&gt;&quot;, see evidence field for the suspicious comment/snippet.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.svg">https://www.enseignementsup-recherche.gouv.fr/core/*.svg</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">user</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+						<td width="80%">The following pattern was used: \bQUERY\b and was detected 2 times, the first in the element starting with: &quot;      var query = [&#39;@media (&#39;, Modernizr._prefixes.join(&#39;touch-enabled),(&#39;), &#39;heartz&#39;, &#39;)&#39;, &#39;{#modernizr{top:9px;position:absolu&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
@@ -3798,6 +3718,68 @@ Response Body Length: 534.</td>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.js$">https://www.enseignementsup-recherche.gouv.fr/profiles/*.js$</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">select</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jcf/1.2.3/js/jcf.select.js&quot;&gt;&lt;/script&gt;&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3909,7 +3891,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/admin/">https://www.enseignementsup-recherche.gouv.fr/admin/</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/%2A.svg">https://www.enseignementsup-recherche.gouv.fr/core/%2A.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3929,14 +3911,12 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;#&quot; class=&quot;scroll-top&quot;&gt;
-      &lt;span class=&quot;sr-only&quot;&gt;Haut de page&lt;/span&gt;
-    &lt;/a&gt;</td>
+						<td width="80%">&lt;a href=&quot;/fr&quot; target=&quot;_self&quot; title=&quot;Front page&quot;&gt;l&#39;accueil&lt;/a&gt;</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+						<td width="80%">Links have been found with a target of &#39;_self&#39; - this is often used by modern frameworks to force a full page reload.</td>
 					</tr>
 				
 					<tr>
@@ -4066,7 +4046,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/node/add/">https://www.enseignementsup-recherche.gouv.fr/node/add/</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134">https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4099,7 +4079,71 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$">https://www.enseignementsup-recherche.gouv.fr/profiles/*.css$</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213">https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a href=&quot;/fr/notes-information-sies&quot; target=&quot;_self&quot;&gt;Voir tous les numéros de la revue&lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found with a target of &#39;_self&#39; - this is often used by modern frameworks to force a full page reload.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/">https://www.enseignementsup-recherche.gouv.fr/index.php/node/add/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a href=&quot;#&quot; class=&quot;scroll-top&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Haut de page&lt;/span&gt;
+    &lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/%2A.svg">https://www.enseignementsup-recherche.gouv.fr/profiles/%2A.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4189,72 +4233,6 @@ Response Body Length: 534.</td>
 						<td width="80%">Links have been found with a target of &#39;_self&#39; - this is often used by modern frameworks to force a full page reload.</td>
 					</tr>
 				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/user/password/">https://www.enseignementsup-recherche.gouv.fr/user/password/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;#&quot; class=&quot;scroll-top&quot;&gt;
-      &lt;span class=&quot;sr-only&quot;&gt;Haut de page&lt;/span&gt;
-    &lt;/a&gt;</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/user/register/">https://www.enseignementsup-recherche.gouv.fr/user/register/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;#&quot; class=&quot;scroll-top&quot;&gt;
-      &lt;span class=&quot;sr-only&quot;&gt;Haut de page&lt;/span&gt;
-    &lt;/a&gt;</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
-					</tr>
-				
 				<tr>
 					<td width="20%">Instances</td>
 					<td width="80%">12</td>
@@ -4339,37 +4317,6 @@ Response Body Length: 534.</td>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.css">https://www.enseignementsup-recherche.gouv.fr/core/*.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-store</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.css$">https://www.enseignementsup-recherche.gouv.fr/core/*.css$</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4524,38 +4471,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.png">https://www.enseignementsup-recherche.gouv.fr/core/*.png</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-store</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr">https://www.enseignementsup-recherche.gouv.fr/fr</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/">https://www.enseignementsup-recherche.gouv.fr/profiles/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4617,7 +4533,100 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpeg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpeg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-store</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpg">https://www.enseignementsup-recherche.gouv.fr/profiles/*.jpg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-store</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.js">https://www.enseignementsup-recherche.gouv.fr/profiles/*.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-store</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/README.txt">https://www.enseignementsup-recherche.gouv.fr/README.txt</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4676,9 +4685,40 @@ Response Body Length: 534.</td>
 						<td width="80%"></td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sitemap.xml">https://www.enseignementsup-recherche.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">private</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">14</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4833,7 +4873,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/agenda-ministre">https://www.enseignementsup-recherche.gouv.fr/fr/agenda-ministre</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/cartographie-des-initiatives-peps-2018-45657">https://www.enseignementsup-recherche.gouv.fr/fr/cartographie-des-initiatives-peps-2018-45657</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4864,7 +4904,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/enseignement-superieur-50387">https://www.enseignementsup-recherche.gouv.fr/fr/enseignement-superieur-50387</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/donnees">https://www.enseignementsup-recherche.gouv.fr/fr/donnees</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4895,7 +4935,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/espace-presse-50621">https://www.enseignementsup-recherche.gouv.fr/fr/espace-presse-50621</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134">https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4926,7 +4966,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/evenements-50354">https://www.enseignementsup-recherche.gouv.fr/fr/evenements-50354</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/les-poles-de-competitivite-en-pays-de-loire-46056">https://www.enseignementsup-recherche.gouv.fr/fr/les-poles-de-competitivite-en-pays-de-loire-46056</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4957,7 +4997,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-ministre-50324">https://www.enseignementsup-recherche.gouv.fr/fr/la-ministre-50324</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/pays-de-la-loire">https://www.enseignementsup-recherche.gouv.fr/fr/pays-de-la-loire</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4988,7 +5028,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/priorites-ministerielles-50357">https://www.enseignementsup-recherche.gouv.fr/fr/priorites-ministerielles-50357</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/reperes-et-references-statistiques-sur-les-enseignements-la-formation-et-la-recherche-2021-49781">https://www.enseignementsup-recherche.gouv.fr/fr/reperes-et-references-statistiques-sur-les-enseignements-la-formation-et-la-recherche-2021-49781</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5020,37 +5060,6 @@ Response Body Length: 534.</td>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213">https://www.enseignementsup-recherche.gouv.fr/fr/statistiques-et-analyses-50213</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">cache-control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0, must-revalidate, no-store</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/toutes-les-thematiques-50156">https://www.enseignementsup-recherche.gouv.fr/fr/toutes-les-thematiques-50156</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5133,6 +5142,37 @@ Response Body Length: 534.</td>
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=0, must-revalidate, no-store</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sitemap.xml">https://www.enseignementsup-recherche.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">cache-control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">must-revalidate, no-cache, private</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5233,6 +5273,68 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7">https://www.enseignementsup-recherche.gouv.fr/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7">https://www.enseignementsup-recherche.gouv.fr/core/misc/modernizr-additional-tests.js?v=3.11.7</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr">https://www.enseignementsup-recherche.gouv.fr/fr</a></td>
 					</tr>
 					<tr>
@@ -5264,224 +5366,7 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/agenda-ministre">https://www.enseignementsup-recherche.gouv.fr/fr/agenda-ministre</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/enseignement-superieur-50387">https://www.enseignementsup-recherche.gouv.fr/fr/enseignement-superieur-50387</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/evenements-50354">https://www.enseignementsup-recherche.gouv.fr/fr/evenements-50354</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/historique-et-patrimoine-50327">https://www.enseignementsup-recherche.gouv.fr/fr/historique-et-patrimoine-50327</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-ministre-50324">https://www.enseignementsup-recherche.gouv.fr/fr/la-ministre-50324</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/personnel-enseignant-du-superieur-et-chercheurs-50075">https://www.enseignementsup-recherche.gouv.fr/fr/personnel-enseignant-du-superieur-et-chercheurs-50075</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/priorites-ministerielles-50357">https://www.enseignementsup-recherche.gouv.fr/fr/priorites-ministerielles-50357</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/toutes-les-thematiques-50156">https://www.enseignementsup-recherche.gouv.fr/fr/toutes-les-thematiques-50156</a></td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134">https://www.enseignementsup-recherche.gouv.fr/fr/le-gouvernement-renforce-l-accompagnement-des-etudiants-en-situation-de-mal-etre-grace-la-plateforme-94134</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5540,9 +5425,195 @@ Response Body Length: 534.</td>
 						<td width="80%"></td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2022-05/1_MESR_RVB.png">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2022-05/1_MESR_RVB.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o.css">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/css/css_5SupXz1NfUZS0OIp7fZBOBl3eR9mgSjrrax57gT3c_o.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/site_logo/2022-05/1_MESR_RVB.svg">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/site_logo/2022-05/1_MESR_RVB.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/styles/full_width/public/mesri-logo-etudiant-gouv-home-3-jpg-10790.jpg?itok=h536KoEu">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/styles/full_width/public/mesri-logo-etudiant-gouv-home-3-jpg-10790.jpg?itok=h536KoEu</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/styles/news_frieze_list_block_auto_x_250/public/2022-05/mesri-publication-bulletin-officiel---minist-re-de-l-enseignement-sup-rieur-de-la-recherche-et-de-l-innovation-9770.png?itok=S9Gx926h">https://www.enseignementsup-recherche.gouv.fr/sites/default/files/styles/news_frieze_list_block_auto_x_250/public/2022-05/mesri-publication-bulletin-officiel---minist-re-de-l-enseignement-sup-rieur-de-la-recherche-et-de-l-innovation-9770.png?itok=S9Gx926h</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/themes/custom/heu_esr_theme/favicon.png">https://www.enseignementsup-recherche.gouv.fr/themes/custom/heu_esr_theme/favicon.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5675,7 +5746,162 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.gif">https://www.enseignementsup-recherche.gouv.fr/core/*.gif</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.jpg">https://www.enseignementsup-recherche.gouv.fr/core/*.jpg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/">https://www.enseignementsup-recherche.gouv.fr/profiles/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.js">https://www.enseignementsup-recherche.gouv.fr/profiles/*.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/robots.txt">https://www.enseignementsup-recherche.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sitemap.xml">https://www.enseignementsup-recherche.gouv.fr/sitemap.xml</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5705,7 +5931,7 @@ Response Body Length: 534.</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">8</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5821,7 +6047,162 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.gif">https://www.enseignementsup-recherche.gouv.fr/core/*.gif</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.jpg">https://www.enseignementsup-recherche.gouv.fr/core/*.jpg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/">https://www.enseignementsup-recherche.gouv.fr/profiles/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.js">https://www.enseignementsup-recherche.gouv.fr/profiles/*.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/robots.txt">https://www.enseignementsup-recherche.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sitemap.xml">https://www.enseignementsup-recherche.gouv.fr/sitemap.xml</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5851,7 +6232,7 @@ Response Body Length: 534.</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">8</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5967,7 +6348,162 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.gif">https://www.enseignementsup-recherche.gouv.fr/core/*.gif</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.jpg">https://www.enseignementsup-recherche.gouv.fr/core/*.jpg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/">https://www.enseignementsup-recherche.gouv.fr/profiles/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.js">https://www.enseignementsup-recherche.gouv.fr/profiles/*.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/robots.txt">https://www.enseignementsup-recherche.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sitemap.xml">https://www.enseignementsup-recherche.gouv.fr/sitemap.xml</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5997,7 +6533,7 @@ Response Body Length: 534.</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">8</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6113,7 +6649,162 @@ Response Body Length: 534.</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.gif">https://www.enseignementsup-recherche.gouv.fr/core/*.gif</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/core/*.jpg">https://www.enseignementsup-recherche.gouv.fr/core/*.jpg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/">https://www.enseignementsup-recherche.gouv.fr/profiles/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/profiles/*.js">https://www.enseignementsup-recherche.gouv.fr/profiles/*.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/robots.txt">https://www.enseignementsup-recherche.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/sitemap.xml">https://www.enseignementsup-recherche.gouv.fr/sitemap.xml</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6143,7 +6834,7 @@ Response Body Length: 534.</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">8</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6172,575 +6863,6 @@ Response Body Length: 534.</td>
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/90005/">90005</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-0"><a
-						id="10031"></a>
-						<div>Informational</div></th>
-					<th class="risk-0">User Controllable HTML Element Attribute (Potential XSS)</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">event_id</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [option] tag [value] attribute 
-
-The user input found was:
-event_id=94077
-
-The user-controlled value was:
-94077</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">provider</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [input] tag [value] attribute 
-
-The user input found was:
-provider=contact_press
-
-The user-controlled value was:
-contact_press</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">type</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94077&amp;id=50570&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [input] tag [value] attribute 
-
-The user input found was:
-type=contact_press
-
-The user-controlled value was:
-contact_press</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">event_id</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [option] tag [value] attribute 
-
-The user input found was:
-event_id=94128
-
-The user-controlled value was:
-94128</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">provider</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [input] tag [value] attribute 
-
-The user input found was:
-provider=contact_press
-
-The user-controlled value was:
-contact_press</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">type</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=50573&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [input] tag [value] attribute 
-
-The user input found was:
-type=contact_press
-
-The user-controlled value was:
-contact_press</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">event_id</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [option] tag [value] attribute 
-
-The user input found was:
-event_id=94128
-
-The user-controlled value was:
-94128</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">provider</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [input] tag [value] attribute 
-
-The user input found was:
-provider=contact_press
-
-The user-controlled value was:
-contact_press</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">type</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=81577&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [input] tag [value] attribute 
-
-The user input found was:
-type=contact_press
-
-The user-controlled value was:
-contact_press</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">event_id</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [option] tag [value] attribute 
-
-The user input found was:
-event_id=94128
-
-The user-controlled value was:
-94128</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">provider</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [input] tag [value] attribute 
-
-The user input found was:
-provider=contact_press
-
-The user-controlled value was:
-contact_press</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press">https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">type</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
-
-https://www.enseignementsup-recherche.gouv.fr/fr/demande-de-contact-presse?event_id=94128&amp;id=88111&amp;provider=contact_press&amp;type=contact_press
-
-appears to include user input in: 
-
-a(n) [input] tag [value] attribute 
-
-The user input found was:
-type=contact_press
-
-The user-controlled value was:
-contact_press</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">12</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Validate all input and sanitize output it before writing to any HTML attributes.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute">http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/20.html">20</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">20</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10031/">10031</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>

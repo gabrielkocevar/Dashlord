@@ -49,18 +49,19 @@
     "cache-tags": "HIT",
     "content-encoding": "gzip",
     "content-language": "fr",
-    "content-length": "16098",
+    "content-length": "16096",
     "content-type": "text/html; charset=UTF-8",
-    "date": "Fri, 05 Jan 2024 10:49:16 GMT",
-    "etag": "W/\"1704448520\"",
+    "date": "Fri, 05 Jan 2024 14:12:46 GMT",
+    "etag": "W/\"1704463692\"",
     "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-    "last-modified": "Fri, 05 Jan 2024 09:55:20 GMT",
+    "last-modified": "Fri, 05 Jan 2024 14:08:12 GMT",
     "permissions-policy": "interest-cohort=()",
     "server": "nginx",
     "strict-transport-security": "max-age=31536000; includeSubdomains",
+    "vary": "Accept-Encoding",
     "x-cache": "HIT",
-    "x-cache-age": "652",
-    "x-cache-hits": "113",
+    "x-cache-age": "272",
+    "x-cache-hits": "56",
     "x-cache-ttl": "900.000",
     "x-cacheable": "YES",
     "x-content-type-options": "nosniff",
@@ -159,17 +160,8 @@
     },
     {
       "hostname": "cdn.jsdelivr.net",
-      "ip": "146.75.37.229",
+      "ip": "151.101.129.229",
       "geoip": {
-        "city": {
-          "geoname_id": 4781530,
-          "names": {
-            "de": "Reston",
-            "en": "Reston",
-            "ja": "レストン",
-            "ru": "Рестон"
-          }
-        },
         "continent": {
           "code": "NA",
           "geoname_id": 6255149,
@@ -199,14 +191,10 @@
           }
         },
         "location": {
-          "accuracy_radius": 20,
-          "latitude": 38.9609,
-          "longitude": -77.3429,
-          "metro_code": 511,
-          "time_zone": "America/New_York"
-        },
-        "postal": {
-          "code": "20190"
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
         },
         "registered_country": {
           "geoname_id": 6252001,
@@ -221,26 +209,12 @@
             "ru": "США",
             "zh-CN": "美国"
           }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 6254928,
-            "iso_code": "VA",
-            "names": {
-              "en": "Virginia",
-              "fr": "Virginie",
-              "ja": "バージニア州",
-              "pt-BR": "Virgínia",
-              "ru": "Вирджиния",
-              "zh-CN": "弗吉尼亚州"
-            }
-          }
-        ]
+        }
       }
     },
     {
       "hostname": "cdnjs.cloudflare.com",
-      "ip": "104.17.25.14",
+      "ip": "104.17.24.14",
       "geoip": {
         "registered_country": {
           "geoname_id": 6252001,
