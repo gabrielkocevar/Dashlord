@@ -1,0 +1,43 @@
+{
+  "links": [
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.fr.label2020.eu",
+        "port": null,
+        "hostname": "www.fr.label2020.eu",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/",
+        "path": "/",
+        "href": "https://www.fr.label2020.eu/"
+      },
+      "link": "https://www.fr.label2020.eu/",
+      "line": "--2024-01-05 00:29:59--  https://www.fr.label2020.eu/",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "fr.label2020.eu",
+        "port": null,
+        "hostname": "fr.label2020.eu",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/",
+        "path": "/",
+        "href": "https://fr.label2020.eu/"
+      },
+      "link": "https://fr.label2020.eu/",
+      "line": "--2024-01-05 00:29:59--  https://fr.label2020.eu/",
+      "broken": false
+    }
+  ],
+  "broken": []
+}

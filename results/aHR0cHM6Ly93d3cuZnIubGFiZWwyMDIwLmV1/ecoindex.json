@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.fr.label2020.eu",
+        "size": 1200.903,
+        "nodes": 577,
+        "requests": 43,
+        "grade": "C",
+        "score": 60.0,
+        "ges": 1.8,
+        "water": 2.7,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 00:29:58.061649",
+        "page_type": null
+    }
+]
