@@ -584,7 +584,7 @@
               "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1704468897"
+              "finding"      : "1704470035"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -676,7 +676,7 @@
               "port"         : "443",
               "severity"     : "INFO",
               "cwe"          : "CWE-200",
-              "finding"      : "X-Cacheable: YESX-Cache-TTL: 120.000X-Cache: HITX-Cache-Age: 41X-Cache-Hits: 8"
+              "finding"      : "X-Cacheable: YESX-Cache-TTL: 120.000X-Cache: HITX-Cache-Age: 23X-Cache-Hits: 3"
           }
 ,         {
               "id"           : "heartbleed",
@@ -1175,6 +1175,6 @@
               "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "110"
+              "finding"      : "46"
           }
 ]

@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Jan  5 15:52:59 2024 as: nmap -sT -oA /data/nmapvuln true
+Failed to resolve "true".
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Fri Jan  5 15:52:59 2024 -- 0 IP addresses (0 hosts up) scanned in 0.06 seconds
