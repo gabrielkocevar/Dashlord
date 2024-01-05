@@ -1,0 +1,131 @@
+{
+  "trackers": [],
+  "cookies": [
+    {
+      "name": "tarteaucitron",
+      "value": "!doubleclick=wait!eulerian-analytics=wait!gajs=wait!instagram=wait!twitterembed=wait!dailymotion=wait!vimeo=wait!youtube=wait",
+      "domain": "www.mer.gouv.fr",
+      "path": "/",
+      "expires": 1719969804,
+      "size": 138,
+      "httpOnly": false,
+      "secure": true,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "4429",
+    "cache-control": "max-age=3600, public",
+    "content-encoding": "gzip",
+    "content-language": "fr",
+    "content-length": "8871",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Fri, 05 Jan 2024 01:23:22 GMT",
+    "etag": "\"1704377909-gzip\"",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "last-modified": "Thu, 04 Jan 2024 14:18:29 GMT",
+    "server": "nginx",
+    "vary": "Cookie,Accept-Encoding",
+    "x-cache": "HIT",
+    "x-content-type-options": "nosniff",
+    "x-drupal-cache": "HIT",
+    "x-drupal-dynamic-cache": "UNCACHEABLE",
+    "x-frame-options": "SAMEORIGIN",
+    "x-generator": "Drupal 9 (https://www.drupal.org)",
+    "x-ua-compatible": "IE=edge"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.mer.gouv.fr",
+      "ip": "37.235.89.97",
+      "geoip": {
+        "city": {
+          "geoname_id": 2971887,
+          "names": {
+            "en": "Trélon",
+            "ru": "Трелон",
+            "zh-CN": "特雷隆"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 200,
+          "latitude": 50.0608,
+          "longitude": 4.1065,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "59132"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 11071624,
+            "iso_code": "HDF",
+            "names": {
+              "en": "Hauts-de-France",
+              "fr": "Hauts-de-France"
+            }
+          },
+          {
+            "geoname_id": 2990129,
+            "iso_code": "59",
+            "names": {
+              "de": "Nord",
+              "en": "North",
+              "es": "Norte",
+              "fr": "Nord"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
