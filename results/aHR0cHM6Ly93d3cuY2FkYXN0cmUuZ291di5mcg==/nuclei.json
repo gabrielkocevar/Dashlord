@@ -1,0 +1,642 @@
+[
+  [
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.cadastre.gouv.fr.",
+      "matched-at": "www.cadastre.gouv.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 21966\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.cadastre.gouv.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 21966\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.cadastre.gouv.fr.\tIN\t CAA\n\n;; AUTHORITY SECTION:\ncadastre.gouv.fr.\t1800\tIN\tSOA\tdns0.dgfip.finances.gouv.fr. hostmaster.dgfip.finances.gouv.fr. 2023110300 14400 3600 2419200 3600\n",
+      "timestamp": "2024-01-05T05:18:31.052208994Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/options-method.yaml",
+      "template-url": "https://templates.nuclei.sh/public/options-method",
+      "template-id": "options-method",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/options-method.yaml",
+      "info": {
+        "name": "Allowed Options Method",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "misc",
+          "generic"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "extracted-results": [
+        "GET,HEAD,POST,OPTIONS"
+      ],
+      "request": "OPTIONS / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAllow: GET,HEAD,POST,OPTIONS\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:18:46 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:18:46.121820556Z",
+      "curl-command": "curl -X 'OPTIONS' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/xss-deprecated-header.yaml",
+      "template-url": "https://templates.nuclei.sh/public/xss-deprecated-header",
+      "template-id": "xss-deprecated-header",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/xss-deprecated-header.yaml",
+      "info": {
+        "name": "XSS-Protection Header - Cross-Site Scripting",
+        "author": [
+          "joshlarsen"
+        ],
+        "tags": [
+          "xss",
+          "misconfig",
+          "generic"
+        ],
+        "description": "Setting the XSS-Protection header is deprecated. Setting the header to anything other than `0` can actually introduce an XSS vulnerability.",
+        "reference": [
+          "https://developer.mozilla.org/en-us/docs/web/http/headers/x-xss-protection",
+          "https://owasp.org/www-project-secure-headers/#x-xss-protection"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": null,
+          "cvss-metrics": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "extracted-results": [
+        "1;mode=block"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:18:56 GMT\r\nEtag: \"1806d3-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:18:56.983414095Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/apache/apache-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/apache-detect",
+      "template-id": "apache-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/apache/apache-detect.yaml",
+      "info": {
+        "name": "Apache Detection",
+        "author": [
+          "philippedelteil"
+        ],
+        "tags": [
+          "tech",
+          "apache"
+        ],
+        "description": "Some Apache servers have the version on the response header. The OpenSSL version can be also obtained",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "extracted-results": [
+        "Apache"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:18:56 GMT\r\nEtag: \"1806d3-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:18:56.984625752Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:06 GMT\r\nEtag: \"18071a-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:06.596131462Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:06 GMT\r\nEtag: \"18071a-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:06.596190843Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "content-security-policy",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:06 GMT\r\nEtag: \"18071a-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:06.596203406Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:06 GMT\r\nEtag: \"18071a-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:06.596215759Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-permitted-cross-domain-policies",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:06 GMT\r\nEtag: \"18071a-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:06.596235155Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:06 GMT\r\nEtag: \"18071a-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:06.596254231Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "clear-site-data",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:06 GMT\r\nEtag: \"18071a-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:06.596271202Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:06 GMT\r\nEtag: \"18071a-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:06.596287323Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/exposures/apis/wadl-api.yaml",
+      "template-url": "https://templates.nuclei.sh/public/wadl-api",
+      "template-id": "wadl-api",
+      "template-path": "/home/runner/nuclei-templates/http/exposures/apis/wadl-api.yaml",
+      "info": {
+        "name": "WADL API - Detect",
+        "author": [
+          "0xrudra",
+          "manuelbua"
+        ],
+        "tags": [
+          "exposure",
+          "api"
+        ],
+        "description": "WADL API was detected.",
+        "reference": [
+          "https://github.com/dwisiswant0/wadl-dumper",
+          "https://www.nopsec.com/leveraging-exposed-wadl-xml-in-burp-suite/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 8
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "matcher-name": "http-get",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr/api/application.wadl",
+      "request": "GET /api/application.wadl HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccess-Control-Allow-Credentials: true\r\nAccess-Control-Allow-Headers: Authorization\r\nAccess-Control-Allow-Methods: GET\r\nAccess-Control-Allow-Methods: OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: private\r\nCache-Control: max-age=86400\r\nContent-Type: application/vnd.sun.wadl+xml\r\nDate: Fri, 05 Jan 2024 05:20:10 GMT\r\nLast-Modified: Thu, 01 Jan 1970 00:00:00 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<application xmlns=\"http://wadl.dev.java.net/2009/02\">\n    <doc xmlns:jersey=\"http://jersey.java.net/\" jersey:generatedBy=\"Jersey: 2.25 2016-12-08 12:54:48\"/>\n    <doc xmlns:jersey=\"http://jersey.java.net/\" jersey:hint=\"This is simplified WADL with user and core resources only. To get full WADL with extended resources use the query parameter detail. Link: https://www.cadastre.gouv.fr/api/application.wadl?detail=true\"/>\n    <grammars>\n        <include href=\"application.wadl/xsd0.xsd\">\n            <doc title=\"Generated\" xml:lang=\"en\"/>\n        </include>\n    </grammars>\n    <resources base=\"https://www.cadastre.gouv.fr/api/\">\n        <resource path=\"/cadastreService/v1\">\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/voies/{voie : [A-Z0-9.+'/)(-]+}/numeros/{numero : \\d+[BTQ]?}\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"voie\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"numero\" style=\"template\" type=\"xs:string\"/>\n                <method id=\"getAdresse\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/departements/{code : \\d{2}[0-9AB]}\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"code\" style=\"template\" type=\"xs:string\"/>\n                <method id=\"getDepartement\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <method id=\"getCommune\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/sections/{section : \\d{3}[A-Z0-9]{1,2}}\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"section\" style=\"template\" type=\"xs:string\"/>\n                <method id=\"getSection\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/sections\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <method id=\"getSections\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/sections/{section : \\d{3}[A-Z0-9]{1,2}}/numeros/{numero : \\d+}\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"section\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"numero\" style=\"template\" type=\"xs:int\"/>\n                <method id=\"getParcelle\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/epsg\">\n                <method id=\"getEpsg\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes\">\n                <method id=\"getCommunes\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/departements\">\n                <method id=\"getDepartements\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/departements/{code : \\d{2}[0-9AB]}/geometries\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"code\" style=\"template\" type=\"xs:string\"/>\n                <method id=\"getGeomCommunesParDepartement\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/sections/geometries\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <method id=\"getGeomSectionsParCommune\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/voies\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <method id=\"getVoies\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/voies/{voie : [A-Z0-9.+'/)(-]+}\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"voie\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <method id=\"getVoie\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/voies/{voie : [A-Z0-9.+'/)(-]+}/numeros\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"voie\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <method id=\"getNumerosVoie\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/recherche\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"identifiants\" style=\"matrix\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"sections\" style=\"matrix\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"bbox\" style=\"matrix\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <method id=\"getRecherche\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/recherche/numeros\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"bbox\" style=\"matrix\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <method id=\"getRechercheNumeros\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/sections/{section : \\d{3}[A-Z0-9]{1,2}}/numeros\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"section\" style=\"template\" type=\"xs:string\"/>\n                <method id=\"getParcelles\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n            <resource path=\"/communes/{insee : \\d[0-9AB]\\d{3}}/sections/{section : \\d{3}[A-Z0-9]{1,2}}/numeros/geometries\">\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"insee\" style=\"template\" type=\"xs:string\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"EPSG\" style=\"matrix\" type=\"xs:int\"/>\n                <param xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"section\" style=\"template\" type=\"xs:string\"/>\n                <method id=\"getGeomParcellesParSection\" name=\"GET\">\n                    <response>\n                        <representation mediaType=\"application/vnd.cadastre.v1.0+json\"/>\n                    </response>\n                </method>\n            </resource>\n        </resource>\n    </resources>\n</application>\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:10.20034017Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr/api/application.wadl'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/waf-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/waf-detect",
+      "template-id": "waf-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
+      "info": {
+        "name": "WAF Detection",
+        "author": [
+          "dwisiswant0",
+          "lu4nx"
+        ],
+        "tags": [
+          "waf",
+          "tech",
+          "misc"
+        ],
+        "description": "A web application firewall was detected.",
+        "reference": [
+          "https://github.com/ekultek/whatwaf"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "apachegeneric",
+      "type": "http",
+      "host": "https://www.cadastre.gouv.fr",
+      "matched-at": "https://www.cadastre.gouv.fr/",
+      "request": "POST / HTTP/1.1\r\nHost: www.cadastre.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Fri, 05 Jan 2024 05:20:57 GMT\r\nEtag: \"1806d3-3ed-5efc627920f80\"\r\nLast-Modified: Wed, 14 Dec 2022 09:13:50 GMT\r\nServer: Apache\r\nStrict-Transport-Security: max-age=34560000; preload\r\nVary: Accept-Encoding,User-Agent\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Ua-Compatible: IE=edge\r\nX-Xss-Protection: 1;mode=block\r\n\r\n<HTML>\r\n<HEAD>\r\n<TITLE>www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.</TITLE>\r\n<META NAME=\"description\" content=\"Cadastre\">\r\n<META NAME=\"keywords\" content=\"Cadastre\">\r\n<META http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />\r\n<META http-equiv=\"Pragma\" content=\"no-cache\" />\r\n<META http-equiv=\"Expires\" content=\"0\" />\r\n<META NAME=\"robots\" content=\"ALL\">\r\n<META NAME=\"resource-type\" content=\"document\">\r\n<META NAME=\"revisit-after\" content=\"15 days\">\r\n<META NAME=\"dc.description\" content=\"Cadastre\">\r\n<META NAME=\"dc.keywords\" content=\"Cadastre\">\r\n<META NAME=\"author\" content=\"cadastre.gouv.fr\">\r\n<META NAME=\"dc.subject\" content=\"www.cadastre.gouv.fr un site du minist&egrave;re de l'Economie des finances et de l'industrie.\">\r\n<META http-equiv=\"Content-Type\" content=\"text/html, charset=iso-8859-1\">\r\n<META http-equiv=\"refresh\" content=\"0;URL=/scpc/accueil.do\">\r\n</HEAD>\r\n<!-- Cadastre -->\r\n<BODY BGCOLOR=\"#FFFFFF\">\r\n</BODY>\r\n</HTML>\r\n",
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:20:57.650432978Z",
+      "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.cadastre.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.cadastre.gouv.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.cadastre.gouv.fr",
+      "matched-at": "www.cadastre.gouv.fr:443",
+      "extracted-results": [
+        "DHIMYOTIS"
+      ],
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:23:15.832695995Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.cadastre.gouv.fr",
+      "matched-at": "www.cadastre.gouv.fr:443",
+      "extracted-results": [
+        "inspire.cadastre.gouv.fr",
+        "rpcu.cadastre.gouv.fr",
+        "api.cadastre.gouv.fr",
+        "cadastre.gouv.fr",
+        "www.cadastre.gouv.fr",
+        "www.rpcu.cadastre.gouv.fr"
+      ],
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:23:15.832830686Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.cadastre.gouv.fr",
+      "matched-at": "www.cadastre.gouv.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "145.242.11.58",
+      "timestamp": "2024-01-05T05:23:16.414076932Z",
+      "matcher-status": true
+    }
+  ]
+]

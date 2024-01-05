@@ -1,0 +1,80 @@
+{
+  "trackers": [],
+  "cookies": [],
+  "headers": {
+    "accept-ranges": "bytes",
+    "connection": "Keep-Alive",
+    "content-encoding": "gzip",
+    "content-length": "414",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Fri, 05 Jan 2024 05:12:24 GMT",
+    "etag": "\"1806d3-3ed-5efc627920f80\"",
+    "keep-alive": "timeout=15, max=100",
+    "last-modified": "Wed, 14 Dec 2022 09:13:50 GMT",
+    "server": "Apache",
+    "strict-transport-security": "max-age=34560000; preload",
+    "vary": "Accept-Encoding,User-Agent",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-ua-compatible": "IE=edge",
+    "x-xss-protection": "1;mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.cadastre.gouv.fr",
+      "ip": "145.242.11.58",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
