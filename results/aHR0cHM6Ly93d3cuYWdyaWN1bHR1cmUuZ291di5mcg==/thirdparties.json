@@ -1,0 +1,88 @@
+{
+  "trackers": [],
+  "cookies": [],
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "84",
+    "cache-control": "max-age=300",
+    "cache-tags": "config:block_list config:block.block.agrigouv_account_menu config:block.block.agrigouv_branding config:block.block.agrigouv_powered config:block.block.agrigouv_tools config:block.block.agrigouv_breadcrumbs config:block.block.agrigouv_messages config:block.block.alerterouge config:block.block.blocheaderpourespacepresseetendu config:block.block.formulaireexposerechercher_presse_etenduepage_1 config:block.block.formulaireexposerechercher_principalpage_1 config:block.block.agrigouv_content config:block.block.agrigouv_help config:block.block.agrigouv_local_actions node:101855 config:block.block.agrigouv_local_tasks config:block.block.agrigouv_page_title config:block.block.agrigouv_views_block__carrefour_related_items_block_1 config:block.block.portraitministre config:block.block.agrigouv_footer config:block.block.contactpresse config:block.block.facetdateblock config:block.block.facetdatepresseblock config:block.block.facetresetblock config:block.block.facetresetpresseblock config:block.block.parthematiquepresse config:block.block.rubrique config:block.block.thematique config:block.block.typedecontenu config:block.block.typepresse config:block.block.dernieresactus config:block.block.lastatistiqueagricole config:block.block.toutesnosinfographies config:block.block.navigationprincipale block_content:2 config:block.block.pieddepagepresentation config:block.block.pieddepagereseau config:block.block.trackinggarealarage config:block.block.trackingpesteporcineafricaine config:block.block.trackingplantesendanger block_view config:system.menu.footer node:86702 node:86622 node:86621 node:62837 node:87159 config:system.menu.reseau block_content_view config:core.entity_view_display.block_content.basic.default config:system.menu.reseaux-sociaux node_view paragraph_view paragraph:260 config:paragraphs.settings paragraph:249 paragraph:267 paragraph:266 paragraph:265 paragraph:264 paragraph:263 paragraph:262 paragraph:261 paragraph:248 paragraph:259 paragraph:258 paragraph:257 paragraph:256 paragraph:255 paragraph:2795 paragraph:254 paragraph:253 paragraph:252 paragraph:251 paragraph:250 block_content:9 config:toc_api.toc_type.dsfr config:filter.format.full_html node:104385 user:1024 node:105707 paragraph:247 node:64673 user:0 node:101148 node:104418 user:6194 paragraph:246 paragraph:245 paragraph:244 paragraph:243 paragraph:242 node:105419 user:6197 node:105573 node:91295 paragraph:241 node:101760 node:102491 node:95168 paragraph:1829 paragraph:240 paragraph:239 paragraph:238 paragraph:237 paragraph:236 paragraph:235 paragraph:234 paragraph:233 node:105740 node:105944 node:103454 paragraph:232 node:103442 node:103193 node:102614 paragraph:231 paragraph:230 paragraph:229 paragraph:228 paragraph:3050 paragraph:227 node:105776 node:105758 node:105854 paragraph:226 config:core.entity_view_display.paragraph.actualites.default node:105389 user:2305 node:105761 node:105956 paragraph:225 config:core.entity_view_display.paragraph.une.default node:105845 user:1 config:system.menu.main node:86644 node:86646 node:87392 node:86645 node:86633 node:86643 node:86648 node:86631 node:90331 node:86655 node:86638 node:86637 node:86659 node:100573 node:86650 node:86654 node:86627 node:86626 node:93847 node:86625 node:86630 node:86674 node:86628 node:85203 node:86685 node:87849 node:86671 node:86686 node:86687 node:86684 node:87627 node:98645 config:system.menu.menu-header rendered config:cas.settings http_response config:user.role.anonymous",
+    "connection": "keep-alive",
+    "content-length": "66808",
+    "content-type": "text/html; charset=UTF-8",
+    "content-language": "fr",
+    "date": "Fri, 05 Jan 2024 04:17:45 GMT",
+    "etag": "\"1704405696\"",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "from-origin": "same",
+    "last-modified": "Thu, 04 Jan 2024 22:01:36 GMT",
+    "link": "<https://agriculture.gouv.fr/>; rel=\"canonical\", <https://agriculture.gouv.fr/>; rel=\"shortlink\"",
+    "permissions-policy": "interest-cohort=()",
+    "server": "nginx",
+    "strict-transport-security": "max-age=2592000;",
+    "surrogate-control": "no-store, content=\"BigPipe/1.0\"",
+    "vary": "Cookie",
+    "x-cache": "HIT",
+    "x-content-type-options": "nosniff",
+    "x-drupal-dynamic-cache": "MISS",
+    "x-host": "AGRIGOUV-HTTP11",
+    "x-ua-compatible": "IE=edge"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.agriculture.gouv.fr",
+      "ip": "185.161.46.228",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
