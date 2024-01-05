@@ -1,0 +1,208 @@
+{
+  "trackers": [],
+  "cookies": [
+    {
+      "name": "_pk_ses.1492.6b6a",
+      "value": "*",
+      "domain": "www.notre-environnement.gouv.fr",
+      "path": "/",
+      "expires": 1704421208,
+      "size": 18,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "_pk_id.1492.6b6a",
+      "value": "f222e0dc90adb6d1.1704419408.1.1704419408.1704419408.",
+      "domain": "www.notre-environnement.gouv.fr",
+      "path": "/",
+      "expires": 1738374608,
+      "size": 68,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "tarteaucitron",
+      "value": "!matomo=true!youtube=false!dailymotion=false",
+      "domain": "www.notre-environnement.gouv.fr",
+      "path": "/",
+      "expires": 1735955407,
+      "size": 57,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "langue-site",
+      "value": "fr",
+      "domain": "www.notre-environnement.gouv.fr",
+      "path": "/",
+      "expires": 1707011407,
+      "size": 13,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "spip_session",
+      "value": "0_bafcbf9afeb56709fd0f28aaf83b92aa",
+      "domain": "www.notre-environnement.gouv.fr",
+      "path": "/",
+      "expires": 1704505806.224017,
+      "size": 46,
+      "httpOnly": true,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "Cookie_EF",
+      "value": "355655690.20480.0000",
+      "domain": "www.notre-environnement.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 29,
+      "httpOnly": true,
+      "secure": true,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "PHPSESSID",
+      "value": "5hbne81teefcuig9pdg4aggeuu",
+      "domain": "www.notre-environnement.gouv.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 35,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "cache-control": "no-store, no-cache, must-revalidate",
+    "composed-by": "SPIP 3.2.19 @ www.spip.net + http://www.notre-environnement.gouv.fr/local/config.txt",
+    "connection": "Keep-Alive",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Fri, 05 Jan 2024 01:50:06 GMT",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "keep-alive": "timeout=5, max=78",
+    "last-modified": "Fri, 05 Jan 2024 01:50:06 GMT",
+    "pragma": "no-cache",
+    "server": "Apache/2.4.38 (Debian)",
+    "set-cookie": "PHPSESSID=5hbne81teefcuig9pdg4aggeuu; path=/\nspip_session=0_bafcbf9afeb56709fd0f28aaf83b92aa; expires=Sat, 06-Jan-2024 01:50:06 GMT; Max-Age=86400; path=/; HttpOnly\nspip_admin=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/\nCookie_EF=355655690.20480.0000; path=/; Httponly; Secure",
+    "transfer-encoding": "chunked",
+    "vary": "Cookie,Accept-Encoding",
+    "x-spip-cache": "86400"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.notre-environnement.gouv.fr",
+      "ip": "92.175.135.130",
+      "geoip": {
+        "city": {
+          "geoname_id": 2967467,
+          "names": {
+            "en": "Wardrecques",
+            "zh-CN": "瓦尔德雷克"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 200,
+          "latitude": 50.7087,
+          "longitude": 2.3487,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "62120"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 11071624,
+            "iso_code": "HDF",
+            "names": {
+              "en": "Hauts-de-France",
+              "fr": "Hauts-de-France"
+            }
+          },
+          {
+            "geoname_id": 2988430,
+            "iso_code": "62",
+            "names": {
+              "de": "Pas-de-Calais",
+              "en": "Pas-de-Calais",
+              "es": "Paso de Calais",
+              "fr": "Pas-de-Calais"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
