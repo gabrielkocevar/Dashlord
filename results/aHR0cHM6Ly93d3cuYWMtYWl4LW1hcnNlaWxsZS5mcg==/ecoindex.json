@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.ac-aix-marseille.fr",
+        "size": 2885.13,
+        "nodes": 1355,
+        "requests": 64,
+        "grade": "E",
+        "score": 33.0,
+        "ges": 2.34,
+        "water": 3.51,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 08:34:53.018464",
+        "page_type": null
+    }
+]
