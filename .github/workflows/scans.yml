@@ -140,7 +140,7 @@ jobs:
           output: scans/404.json
 
       - name: Betagouv API scan
-        if: ${{ matrix.sites.tools.betagouv }}
+        # if: ${{ matrix.sites.tools.betagouv }}
         continue-on-error: true
         timeout-minutes: 10
         id: betagouv
