@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.semaine-industrie.gouv.fr",
+        "size": 2985.83,
+        "nodes": 832,
+        "requests": 199,
+        "grade": "F",
+        "score": 25.0,
+        "ges": 2.5,
+        "water": 3.75,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 07:43:03.534199",
+        "page_type": null
+    }
+]
