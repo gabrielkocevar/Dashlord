@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.sinoe.org",
+        "size": 2029.226,
+        "nodes": 854,
+        "requests": 67,
+        "grade": "D",
+        "score": 42.0,
+        "ges": 2.16,
+        "water": 3.24,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 02:55:57.228926",
+        "page_type": null
+    }
+]
