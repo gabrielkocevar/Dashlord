@@ -812,7 +812,7 @@
         "ip": "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
         "port": "443",
         "severity": "INFO",
-        "finding": "1704470035"
+        "finding": "1704472545"
       },
       {
         "id": "HSTS_time",
@@ -904,7 +904,7 @@
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-200",
-        "finding": "X-Cacheable: YESX-Cache-TTL: 120.000X-Cache: HITX-Cache-Age: 23X-Cache-Hits: 3"
+        "finding": "X-Cacheable: YESX-Cache-TTL: 120.000X-Cache: HITX-Cache-Age: 113X-Cache-Hits: 12"
       },
       {
         "id": "heartbleed",
@@ -1403,7 +1403,7 @@
         "ip": "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
         "port": "443",
         "severity": "INFO",
-        "finding": "46"
+        "finding": "50"
       }
     ],
     "thirdparties": {
@@ -1459,7 +1459,7 @@
         "content-language": "fr",
         "content-length": "16086",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Fri, 05 Jan 2024 15:52:00 GMT",
+        "date": "Fri, 05 Jan 2024 16:33:51 GMT",
         "etag": "W/\"1704468517\"",
         "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
         "last-modified": "Fri, 05 Jan 2024 15:28:37 GMT",
@@ -1467,8 +1467,8 @@
         "server": "nginx",
         "strict-transport-security": "max-age=31536000; includeSubdomains",
         "x-cache": "HIT",
-        "x-cache-age": "359",
-        "x-cache-hits": "31",
+        "x-cache-age": "150",
+        "x-cache-hits": "15",
         "x-cache-ttl": "900.000",
         "x-cacheable": "YES",
         "x-content-type-options": "nosniff",
@@ -1567,7 +1567,7 @@
         },
         {
           "hostname": "cdn.jsdelivr.net",
-          "ip": "151.101.65.229",
+          "ip": "151.101.193.229",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1941,7 +1941,7 @@
       {
         "requestedUrl": "https://www.enseignementsup-recherche.gouv.fr/",
         "finalUrl": "https://www.enseignementsup-recherche.gouv.fr/fr",
-        "fetchTime": "2024-01-05T15:53:23.169Z",
+        "fetchTime": "2024-01-05T16:35:13.228Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://www.enseignementsup-recherche.gouv.fr/) was redirected to https://www.enseignementsup-recherche.gouv.fr/fr. Try testing the second URL directly."
         ],
@@ -1954,7 +1954,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.640079116821289
+            "score": 0.6400779724121094
           },
           "accessibility": {
             "title": "Accessibility",
@@ -2006,53 +2006,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 10401,
+            "numericValue": 10560,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2856,
-                  "firstMeaningfulPaint": 2856,
-                  "largestContentfulPaint": 12523,
-                  "interactive": 10401,
-                  "speedIndex": 4480,
-                  "totalBlockingTime": 74,
-                  "maxPotentialFID": 147,
+                  "firstContentfulPaint": 2859,
+                  "firstMeaningfulPaint": 2859,
+                  "largestContentfulPaint": 12451,
+                  "interactive": 10560,
+                  "speedIndex": 4581,
+                  "totalBlockingTime": 85,
+                  "maxPotentialFID": 154,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftMainFrame": 0,
                   "totalCumulativeLayoutShift": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 6474346157,
+                  "observedTimeOriginTs": 8984399120,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 6474346157,
-                  "observedFirstPaint": 396,
-                  "observedFirstPaintTs": 6474742176,
-                  "observedFirstContentfulPaint": 396,
-                  "observedFirstContentfulPaintTs": 6474742176,
-                  "observedFirstContentfulPaintAllFrames": 396,
-                  "observedFirstContentfulPaintAllFramesTs": 6474742176,
-                  "observedFirstMeaningfulPaint": 396,
-                  "observedFirstMeaningfulPaintTs": 6474742176,
-                  "observedLargestContentfulPaint": 818,
-                  "observedLargestContentfulPaintTs": 6475163995,
-                  "observedLargestContentfulPaintAllFrames": 818,
-                  "observedLargestContentfulPaintAllFramesTs": 6475163995,
-                  "observedTraceEnd": 2873,
-                  "observedTraceEndTs": 6477218935,
-                  "observedLoad": 536,
-                  "observedLoadTs": 6474881980,
-                  "observedDomContentLoaded": 525,
-                  "observedDomContentLoadedTs": 6474870672,
+                  "observedNavigationStartTs": 8984399120,
+                  "observedFirstPaint": 408,
+                  "observedFirstPaintTs": 8984806628,
+                  "observedFirstContentfulPaint": 408,
+                  "observedFirstContentfulPaintTs": 8984806628,
+                  "observedFirstContentfulPaintAllFrames": 408,
+                  "observedFirstContentfulPaintAllFramesTs": 8984806628,
+                  "observedFirstMeaningfulPaint": 408,
+                  "observedFirstMeaningfulPaintTs": 8984806628,
+                  "observedLargestContentfulPaint": 831,
+                  "observedLargestContentfulPaintTs": 8985229779,
+                  "observedLargestContentfulPaintAllFrames": 831,
+                  "observedLargestContentfulPaintAllFramesTs": 8985229779,
+                  "observedTraceEnd": 2864,
+                  "observedTraceEndTs": 8987263464,
+                  "observedLoad": 542,
+                  "observedLoadTs": 8984941362,
+                  "observedDomContentLoaded": 528,
+                  "observedDomContentLoadedTs": 8984926646,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftMainFrame": 0,
                   "observedTotalCumulativeLayoutShift": 0,
-                  "observedFirstVisualChange": 394,
-                  "observedFirstVisualChangeTs": 6474740157,
-                  "observedLastVisualChange": 828,
-                  "observedLastVisualChangeTs": 6475174157,
-                  "observedSpeedIndex": 679,
-                  "observedSpeedIndexTs": 6475024989
+                  "observedFirstVisualChange": 408,
+                  "observedFirstVisualChangeTs": 8984807120,
+                  "observedLastVisualChange": 841,
+                  "observedLastVisualChangeTs": 8985240120,
+                  "observedSpeedIndex": 685,
+                  "observedSpeedIndexTs": 8985084582
                 },
                 {
                   "lcpInvalidated": false
@@ -2074,18 +2074,18 @@
                   "numScripts": 12,
                   "numStylesheets": 4,
                   "numFonts": 4,
-                  "numTasks": 584,
+                  "numTasks": 600,
                   "numTasksOver10ms": 9,
                   "numTasksOver25ms": 4,
                   "numTasksOver50ms": 2,
                   "numTasksOver100ms": 1,
                   "numTasksOver500ms": 0,
-                  "rtt": 9.101000000000003,
-                  "throughput": 212951707.25373647,
-                  "maxRtt": 15.925,
-                  "maxServerLatency": 17.659999999999993,
-                  "totalByteWeight": 2935598,
-                  "totalTaskTime": 470.15599999999927,
+                  "rtt": 8.794,
+                  "throughput": 207077826.66430965,
+                  "maxRtt": 17.090999999999994,
+                  "maxServerLatency": 14.966000000000012,
+                  "totalByteWeight": 2935604,
+                  "totalTaskTime": 460.09499999999963,
                   "mainDocumentTransferSize": 16627
                 }
               ]
@@ -2141,7 +2141,7 @@
       "cookiesCount": 0,
       "trackersGrade": "C",
       "trackersCount": 5,
-      "lighthouse_performance": 0.640079116821289,
+      "lighthouse_performance": 0.6400779724121094,
       "lighthouse_performanceGrade": "C",
       "lighthouse_accessibility": 0.93,
       "lighthouse_accessibilityGrade": "A",
