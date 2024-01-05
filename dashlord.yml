@@ -8,19 +8,19 @@ tools:
   screenshot: false
   nmap: true
   zap: false
-  wappalyzer: true
-  http: true
-  testssl: true
-  lighthouse: true
-  thirdparties: true
+  wappalyzer: false
+  http: false
+  testssl: false
+  lighthouse: false
+  thirdparties: false
   nuclei: false
   updownio: false
-  dependabot: true
-  codescan: true
-  stats: true
-  declaration-a11y: true
+  dependabot: false
+  codescan: false
+  stats: false
+  declaration-a11y: false
   ecoindex: false
 urls:
   - url: https://www.enseignementsup-recherche.gouv.fr
-  - url: https://www.archives-nationales.culture.gouv.fr
-  - url: https://www.gouvernement.fr
+  #- url: https://www.archives-nationales.culture.gouv.fr
+  #- url: https://www.gouvernement.fr
