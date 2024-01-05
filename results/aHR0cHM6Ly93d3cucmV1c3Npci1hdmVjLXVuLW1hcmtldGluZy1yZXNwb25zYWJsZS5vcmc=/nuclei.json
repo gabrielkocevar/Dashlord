@@ -1,0 +1,247 @@
+[
+  [
+    {
+      "template": "dns/dns-saas-service-detection.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+      "template-id": "dns-saas-service-detection",
+      "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+      "info": {
+        "name": "DNS SaaS Service Detection",
+        "author": [
+          "noah @thesubtlety",
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "service"
+        ],
+        "description": "A CNAME DNS record was discovered",
+        "reference": [
+          "https://ns1.com/resources/cname",
+          "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+          "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "www.reussir-avec-un-marketing-responsable.org.",
+      "matched-at": "www.reussir-avec-un-marketing-responsable.org",
+      "extracted-results": [
+        "webredir.gandi.net."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 53573\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.reussir-avec-un-marketing-responsable.org.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 53573\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.reussir-avec-un-marketing-responsable.org.\tIN\t CNAME\n\n;; ANSWER SECTION:\nwww.reussir-avec-un-marketing-responsable.org.\t10800\tIN\tCNAME\twebredir.gandi.net.\n",
+      "timestamp": "2024-01-05T02:50:51.521866472Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.reussir-avec-un-marketing-responsable.org.",
+      "matched-at": "www.reussir-avec-un-marketing-responsable.org",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 30900\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.reussir-avec-un-marketing-responsable.org.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 30900\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;www.reussir-avec-un-marketing-responsable.org.\tIN\t CAA\n\n;; ANSWER SECTION:\nwww.reussir-avec-un-marketing-responsable.org.\t10800\tIN\tCNAME\twebredir.gandi.net.\n\n;; AUTHORITY SECTION:\ngandi.net.\t1200\tIN\tSOA\tdns0.gandi.net. hostmaster.gandi.net. 2023121400 900 900 1209600 1200\n",
+      "timestamp": "2024-01-05T02:50:51.762239167Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/missing-sri.yaml",
+      "template-url": "https://templates.nuclei.sh/public/missing-sri",
+      "template-id": "missing-sri",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/missing-sri.yaml",
+      "info": {
+        "name": "Missing Subresource Integrity",
+        "author": [
+          "lucky0x0d",
+          "pulsesecurity.co.nz"
+        ],
+        "tags": [
+          "compliance",
+          "js",
+          "sri",
+          "misconfig"
+        ],
+        "description": "Checks if script tags within the HTML response have Subresource Integrity implemented via the integrity attribute\n",
+        "reference": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/third_party_javascript_management_cheat_sheet.html#subresource-integrity"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://www.reussir-avec-un-marketing-responsable.org",
+      "matched-at": "https://reussir-avec-un-marketing-responsable.org/",
+      "extracted-results": [
+        "https://tarteaucitron.io/load.js?domain=reussir-avec-un-marketing-responsable.org&uuid=2df1000bf385655312abede8e30421664e7d594e",
+        "https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_F9R1vYgfA741j5MPvGf9tmcVM7_GIcnt4-8AciZ5fAA.js",
+        "https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_zsU7pE_En9PuEzx00IjN_iCxIwgABAiEwJNkh1iTG9k.js",
+        "https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_BpSO5gfph9zmDQdUmf0Wc_s4S2OX6hHuLE3I2EFTGT4.js",
+        "https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_s5koNMBdK4BqfHyHNPWCXIL2zD0jFcPyejDZsryApj0.js",
+        "https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_-VrId4YEEjYUzPNOUC3LdzlIfW5IG4xXHwTlqTEagh0.js",
+        "https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_nLQs9HnP54WzatyeVYuEJxH3jgEpLhvGUvs6Od05gDU.js",
+        "https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_czY47PLocnGY5hqJZEutt1GYKsI0ApjH2rdqOrhL6cU.js",
+        "https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_NodbbxNhrdLLTMyKBPWHmbS8HKl4seEqbm19lhiJKmI.js"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.reussir-avec-un-marketing-responsable.org\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: public, max-age=86400\r\nContent-Language: fr\r\nContent-Type: text/html; charset=utf-8\r\nDate: Fri, 05 Jan 2024 02:51:49 GMT\r\nEtag: \"1704414379-1\"\r\nExpires: Sun, 19 Nov 1978 05:00:00 GMT\r\nLast-Modified: Fri, 05 Jan 2024 00:26:19 GMT\r\nLink: <https://reussir-avec-un-marketing-responsable.org/>; rel=\"canonical\",<https://reussir-avec-un-marketing-responsable.org/>; rel=\"shortlink\"\r\nPermissions-Policy: geolocation=(self), microphone=(), camera=(), fullscreen=*\r\nSet-Cookie: BNIS_vid=b0KW+XniqvraOC1Bg9LqFGIVOAsn1DczJwp4/Gic08Bktq0MAYHMltyL0KlpHHQaMWteILuzlkUq35EfYHtlKf9bxzwNhs6w5IYqoENWCdFEuXRYwMTeEb/ou4Z+CgxdfuBXmvtg4hioelxzeyumQvdiY2nQ72Uxjpw6NXQQcDU=; Path=/\r\nSet-Cookie: BNIS___utm_is1=leV6nThUCeK6Zqu7uqpew48uplhLa+ynclYFdj06GNImEyrX4tobGD8xwNjxGM81UYRgrNlIquhkTLczAC0ovyENL6vAQrcLtvQvMT6q2lI733C6x7fWgQ==; Max-Age=31536000; Path=/\r\nSet-Cookie: BNIS___utm_is2=UWJbkUkeVanERBbQdas/qtrqzRdY02k5nmdhmnucyFl6oYGcHNGgghw4GqNqzeEqw9WlegT3RsI=; Max-Age=10800; Path=/\r\nSet-Cookie: BNIS___utm_is3=Vet05Y9grgpuzq2M0gt+c1AENhkj3eH8xPV2xCYzBdqFHCWAwPKppLwS5gTfRRNq3emOyz8ygkEyt4TfoSsWNZK3bDka3n1D+Mx00l7fKEk=;  Path=/\r\nStrict-Transport-Security: max-age=16070400; includeSubDomains; preload\r\nVary: Cookie,Accept-Encoding\r\nX-Content-Type-Options: nosniff\r\nX-Drupal-Cache: HIT\r\nX-Frame-Options: SAMEORIGIN\r\nX-Frame-Options: SAMEORIGIN\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n\n<head>\n  <!-- tarte au citron (script)-->\r\n<script src=\"https://tarteaucitron.io/load.js?domain=reussir-avec-un-marketing-responsable.org&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>\r\n<!-- End tarte au citron (script)-->  <!--[if IE]><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><![endif]-->\n  <meta charset=\"utf-8\" />\n<link rel=\"shortcut icon\" href=\"https://reussir-avec-un-marketing-responsable.org/sites/all/themes/custom/ademe_pad/favicon.ico\" type=\"image/vnd.microsoft.icon\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<meta name=\"format-detection\" content=\"telephone=no\" />\n<link rel=\"canonical\" href=\"https://reussir-avec-un-marketing-responsable.org/\" />\n<link rel=\"shortlink\" href=\"https://reussir-avec-un-marketing-responsable.org/\" />\n\n  <title>Réussir avec un marketing responsable | Agence de la transition écologique</title>\n\n  <link type=\"text/css\" rel=\"stylesheet\" href=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/css/css_rEI_5cK_B9hB4So2yZUtr5weuEV3heuAllCDE6XsIkI.css\" media=\"all\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/css/css_8FAI09faHCfwqyhNTDWkSYDCVcjRXElAT3TckZPfyzs.css\" media=\"all\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/css/css_v5uqAjyYQL5t-NedMO5WiVadxZBNegIrLK6Tw2vbVhw.css\" media=\"all\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/css/css_e16gAgiSKohDDFwPTltqZQD3sfKb7utSlBTo586KjSI.css\" media=\"all\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/css/css_MeyTZMQo7uZH2lTyn15zIPyZRVN4bWbVo4Kb6ys--SM.css\" media=\"all\" />\n\n  <script type=\"text/javascript\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_F9R1vYgfA741j5MPvGf9tmcVM7_GIcnt4-8AciZ5fAA.js\"></script>\n<script type=\"text/javascript\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_s5koNMBdK4BqfHyHNPWCXIL2zD0jFcPyejDZsryApj0.js\"></script>\n<script type=\"text/javascript\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_-VrId4YEEjYUzPNOUC3LdzlIfW5IG4xXHwTlqTEagh0.js\"></script>\n<script type=\"text/javascript\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_nLQs9HnP54WzatyeVYuEJxH3jgEpLhvGUvs6Od05gDU.js\"></script>\n<script type=\"text/javascript\">\n<!--//--><![CDATA[//><!--\njQuery(document).ready(function(){jQuery(\"#ademe-popin\").dialog({ modal: true, closeOnEscape: true, width: \"80%\", closeText: \"Fermer\"});});\n//--><!]]>\n</script>\n<script type=\"text/javascript\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_czY47PLocnGY5hqJZEutt1GYKsI0ApjH2rdqOrhL6cU.js\"></script>\n<script type=\"text/javascript\">\n<!--//--><![CDATA[//><!--\njQuery.extend(Drupal.settings, { \"pathToTheme\": \"sites/all/themes/custom/ademe_pad\" });\n//--><!]]>\n</script>\n<script type=\"text/javascript\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_zsU7pE_En9PuEzx00IjN_iCxIwgABAiEwJNkh1iTG9k.js\"></script>\n<script type=\"text/javascript\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_NodbbxNhrdLLTMyKBPWHmbS8HKl4seEqbm19lhiJKmI.js\"></script>\n<script type=\"text/javascript\">\n<!--//--><![CDATA[//><!--\njQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"ademe_pad\",\"theme_token\":\"PuAFbrtJha_iJVwVSjs5sIqZn6AN5xKtZw9pK9Zlq-c\",\"jquery_version\":\"1.10\",\"js\":{\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/contrib\\/jquery.colorbox-min.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.equalize.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.dropDownNav.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.popPanel.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.togglePanel.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.init.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.responsive.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.ui.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.ui.utils.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.domready.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/lib\\/modernizr.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/jquery\\/1.10\\/jquery.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.core.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.widget.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/external\\/jquery.cookie.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/misc\\/jquery.form.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.button.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.mouse.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.draggable.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.position.min.js\":1,\"misc\\/ui\\/jquery.ui.position-1.13.0-backport.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.resizable.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.dialog.min.js\":1,\"misc\\/ui\\/jquery.ui.dialog-1.13.0-backport.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.slider.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.menu.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.autocomplete.min.js\":1,\"misc\\/ajax.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_update.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_login.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_register.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_password.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_contact.js\":1,\"public:\\/\\/languages\\/fr_cOxHaHiaNFk95BwKJyhInERe_B_7_QC7YlyBcSjQn0o.js\":1,\"misc\\/progress.js\":1,\"0\":1,\"sites\\/all\\/modules\\/contrib\\/ctools\\/js\\/modal.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_popup.js\":1,\"sites\\/all\\/modules\\/custom\\/custom\\/pad_media\\/js\\/pad_media.js\":1,\"sites\\/all\\/modules\\/custom\\/usa\\/custom\\/usa_aap\\/js\\/aap_form.js\":1,\"1\":1,\"sites\\/all\\/modules\\/contrib\\/field_group\\/field_group.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/lib\\/d3.v3.min.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/contrib\\/jquery.placeholder.min.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/contrib\\/jquery.flexslider-min.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.fixed.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.ui.polls.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/pieChart.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/masonry.pkgd.js\":1},\"css\":{\"modules\\/system\\/system.base.css\":1,\"modules\\/system\\/system.messages.css\":1,\"misc\\/ui\\/jquery.ui.core.css\":1,\"misc\\/ui\\/jquery.ui.theme.css\":1,\"misc\\/ui\\/jquery.ui.button.css\":1,\"misc\\/ui\\/jquery.ui.resizable.css\":1,\"misc\\/ui\\/jquery.ui.dialog.css\":1,\"misc\\/ui\\/jquery.ui.slider.css\":1,\"misc\\/ui\\/jquery.ui.menu.css\":1,\"misc\\/ui\\/jquery.ui.autocomplete.css\":1,\"sites\\/all\\/modules\\/contrib\\/simplenews\\/simplenews.css\":1,\"modules\\/field\\/theme\\/field.css\":1,\"modules\\/node\\/node.css\":1,\"modules\\/poll\\/poll.css\":1,\"modules\\/user\\/user.css\":1,\"sites\\/all\\/modules\\/contrib\\/views\\/css\\/views.css\":1,\"sites\\/all\\/modules\\/contrib\\/ctools\\/css\\/ctools.css\":1,\"sites\\/all\\/modules\\/contrib\\/ctools\\/css\\/modal.css\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/css\\/modal_forms_popup.css\":1,\"sites\\/all\\/modules\\/contrib\\/forward\\/forward.css\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/css\\/style.css\":1}},\"iframeScriptPath\":\"\\/sites\\/all\\/modules\\/custom\\/custom\\/ademe_popins\\/js\\/iframe.script.js\",\"mails\":{\"resource\":\"document\"},\"destination\":{\"destination\":\"node\\/400\"},\"CToolsModal\":{\"loadingText\":\"En cours de chargement...\",\"closeText\":\"Close Window\",\"closeImage\":\"\\u003Cimg src=\\u0022https:\\/\\/reussir-avec-un-marketing-responsable.org\\/sites\\/all\\/modules\\/contrib\\/ctools\\/images\\/icon-close-window.png\\u0022 alt=\\u0022Close window\\u0022 title=\\u0022Close window\\u0022 \\/\\u003E\",\"throbber\":\"\\u003Cimg src=\\u0022https:\\/\\/reussir-avec-un-marketing-responsable.org\\/sites\\/all\\/modules\\/contrib\\/ctools\\/images\\/throbber.gif\\u0022 alt=\\u0022En cours de chargement\\u0022 title=\\u0022En cours de chargement...\\u0022 \\/\\u003E\"},\"modal-popup-small\":{\"modalSize\":{\"type\":\"fixed\",\"width\":400,\"height\":350},\"modalOptions\":{\"opacity\":0.75,\"background\":\"#444\"},\"animation\":\"fadeIn\",\"modalTheme\":\"ModalFormsPopup\",\"throbber\":\"\\u003Cimg src=\\u0022https:\\/\\/reussir-avec-un-marketing-responsable.org\\/sites\\/all\\/modules\\/contrib\\/modal_forms\\/images\\/loading_animation.gif\\u0022 alt=\\u0022En cours de chargement...\\u0022 title=\\u0022En cours de chargement\\u0022 \\/\\u003E\",\"closeText\":\"Fermer\"},\"modal-popup-medium\":{\"modalSize\":{\"type\":\"fixed\",\"width\":550,\"height\":450},\"modalOptions\":{\"opacity\":0.75,\"background\":\"#444\"},\"animation\":\"fadeIn\",\"modalTheme\":\"ModalFormsPopup\",\"throbber\":\"\\u003Cimg src=\\u0022https:\\/\\/reussir-avec-un-marketing-responsable.org\\/sites\\/all\\/modules\\/contrib\\/modal_forms\\/images\\/loading_animation.gif\\u0022 alt=\\u0022En cours de chargement...\\u0022 title=\\u0022En cours de chargement\\u0022 \\/\\u003E\",\"closeText\":\"Fermer\"},\"modal-popup-large\":{\"modalSize\":{\"type\":\"scale\",\"width\":0.8,\"height\":0.8},\"modalOptions\":{\"opacity\":0.75,\"background\":\"#444\"},\"animation\":\"fadeIn\",\"modalTheme\":\"ModalFormsPopup\",\"throbber\":\"\\u003Cimg src=\\u0022https:\\/\\/reussir-avec-un-marketing-responsable.org\\/sites\\/all\\/modules\\/contrib\\/modal_forms\\/images\\/loading_animation.gif\\u0022 alt=\\u0022En cours de chargement...\\u0022 title=\\u0022En cours de chargement\\u0022 \\/\\u003E\",\"closeText\":\"Fermer\"},\"urlIsAjaxTrusted\":{\"\\/\":true},\"field_group\":{\"div\":\"full\"}});\n//--><!]]>\n</script>\n</head>\n<body class=\"html front not-logged-in no-sidebars page-node page-node- page-node-400 node-type-hp i18n-fr\" >\n\n<div class=\"outer-wrap\">\n<div class=\"wrap\" id=\"top\">\n\n    \n  <!--Skip links-->\n<nav id=\"skip-links\" class=\"skip-links\">\n  <ul>\n    <li><a href=\"#a_nav\">Aller au menu</a></li>\n    <li><a href=\"#a_content\">Aller au contenu principal</a></li>\n    <li><a href=\"#a_search\">Aller à la recherche</a></li>\n  </ul>\n</nav>\n\n\n<header class=\"main-header header-type-partner\" role=\"banner\"\n        style=\"background:#ffffff;\">\n  <div class=\"main-header__inner\">\n\n    <!--Header type Ademe-->\n    \n          <h1 class=\"main-title visually-hidden\">Ademe</h1>\n    \n          <div class=\"main-header__inner\">\n        <a class=\"logos_partenaire\" href=\"/\" >\n          <img src=\"/sites/all/themes/custom/ademe_pad/logo_partenaire.jpeg\" alt=\"Logo République Française, ADEME &amp; partenaires\" title=\"Logo République Française, ADEME &amp; partenaires\">\n        </a>\n        <div class=\"header-center visible-md hidden-sm\">\n            <div class=\"region region-header\">\n    <div id=\"block-search-form\" class=\"header__tools block block-search block-search-form\">\n      <ul>\n            <li>\n      <a href=\"#popin-search\" class=\"trigger--search\" id=\"a_search\" data-pop-panel-id=\"popin-search\"><img src=\"https://reussir-avec-un-marketing-responsable.org/sites/all/themes/custom/ademe_pad/assets/img/buttons/search.png\" title=\"Rechercher sur le site\" alt=\"Rechercher sur le site\"></a>\n      <div id=\"popin-search\" class=\"popin--search pop-panel\">\n        <form class=\"form--search_block_form\" action=\"/\" method=\"post\" id=\"search-block-form\" accept-charset=\"UTF-8\"><div><div class=\"container-inline\">\n      <h2 class=\"element-invisible\">Formulaire de recherche</h2>\n    <div class=\"form-item form-type-textfield form-item-search-block-form\">\n  <label class=\"element-invisible\" for=\"edit-search-block-form--2\">Rechercher </label>\n <input title=\"Indiquer les termes à rechercher\" placeholder=\"Rechercher...\" type=\"text\" id=\"edit-search-block-form--2\" name=\"search_block_form\" value=\"\" size=\"15\" maxlength=\"128\" class=\"form-text\" />\n</div>\n<div class=\"form-actions form-wrapper\" id=\"edit-actions\"><input type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"Rechercher\" class=\"form-submit\" /></div><input type=\"hidden\" name=\"form_build_id\" value=\"form-kP6qYlzxPFBUvrguj2N0LNzeISpyvtm-rYRjEkVv9eg\" />\n<input type=\"hidden\" name=\"form_id\" value=\"search_block_form\" />\n</div>\n</div></form>      </div>\n    </li>\n  </ul>\n</div> <!-- /.block -->\n  </div>\n        </div>\n        <button type=\"button\" class=\"nav__burger\"><span class=\"burger__icon\"></span>\n      <span class=\"burger__text\">Menu</span></button>\n      </div>\n    \n    \n   \n\n   \n  </div><!--/main-header__inner-->\n</header>\n  <div class=\"main-menu-wrap\">\n\n      <div class=\"header-small__logo-wrapper\">\n      <a class=\"logo_rf\">\n        <img src=\"/sites/all/themes/custom/ademe_pad/logo_rf.png\" alt=\"Logo République Française\" title=\"Logo République Française\">\n      </a>\n      <a class=\"logo_ademe\" href=\"/\" title=\"Accueil\" rel=\"home\">\n        <img src=\"https://reussir-avec-un-marketing-responsable.org/sites/all/themes/custom/ademe_pad/logo.png\" alt=\"Accueil\" />\n      </a>\n    </div>\n  \n  <div class=\"header-small__tools\">\n      <div class=\"region region-header\">\n    <div id=\"block-search-form--2\" class=\"header__tools block block-search block-search-form--2\">\n      <ul>\n            <li>\n      <a href=\"#popin-search\" class=\"trigger--search\" id=\"a_search\" data-pop-panel-id=\"popin-search\"><img src=\"https://reussir-avec-un-marketing-responsable.org/sites/all/themes/custom/ademe_pad/assets/img/buttons/search.png\" title=\"Rechercher sur le site\" alt=\"Rechercher sur le site\"></a>\n      <div id=\"popin-search\" class=\"popin--search pop-panel\">\n        <form class=\"form--search_block_form\" action=\"/\" method=\"post\" id=\"search-block-form\" accept-charset=\"UTF-8\"><div><div class=\"container-inline\">\n      <h2 class=\"element-invisible\">Formulaire de recherche</h2>\n    <div class=\"form-item form-type-textfield form-item-search-block-form\">\n  <label class=\"element-invisible\" for=\"edit-search-block-form--2\">Rechercher </label>\n <input title=\"Indiquer les termes à rechercher\" placeholder=\"Rechercher...\" type=\"text\" id=\"edit-search-block-form--2\" name=\"search_block_form\" value=\"\" size=\"15\" maxlength=\"128\" class=\"form-text\" />\n</div>\n<div class=\"form-actions form-wrapper\" id=\"edit-actions\"><input type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"Rechercher\" class=\"form-submit\" /></div><input type=\"hidden\" name=\"form_build_id\" value=\"form-kP6qYlzxPFBUvrguj2N0LNzeISpyvtm-rYRjEkVv9eg\" />\n<input type=\"hidden\" name=\"form_id\" value=\"search_block_form\" />\n</div>\n</div></form>      </div>\n    </li>\n  </ul>\n</div> <!-- /.block -->\n  </div>\n  </div><!--/header-small__tools-->\n\n      <div id=\"navigation\" role=\"navigation\">\n        <div class=\"region region-navigation\">\n        <nav id=\"a_nav\" class=\"main-menu\">\n    <ul class=\"menu\"><li  class=\"first leaf cible-orange-marketing logo\"><a href=\"/\" title=\"Accueil\" class=\"active\"><span><img src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/styles/menu_header/public/menuimage/home.png\" alt=\"\" title=\"\" /></span></a></li>\n<li  class=\"leaf cible-orange-marketing\"><a href=\"/la-demarche\"><span>La démarche</span></a></li>\n<li  class=\"leaf cible-orange-marketing\"><a href=\"/le-palmares-2022\" class=\"cible-bleu-numérique\"><span>Le palmarès 2022</span></a></li>\n<li  class=\"collapsed cible-orange-marketing\"><a href=\"/les-bonnes-pratiques\"><span>Les bonnes pratiques</span></a></li>\n<li  class=\"leaf cible-orange-marketing\"><a href=\"/les-bonnes-pratiques-en-podcast-et-video\"><span>Les podcasts et vidéos</span></a></li>\n<li  class=\"leaf cible-orange-marketing\"><a href=\"/le-livre-blanc\"><span>Le livre blanc</span></a></li>\n<li  class=\"last leaf cible-orange-marketing\"><a href=\"https://communication-responsable.ademe.fr/ressources\"><span>Ressources</span></a></li>\n</ul>  </nav>\n  </div>\n    </div>\n  \n</div><!--/main-menu-wrap-->\n\n  <div class=\"page\">\n\n    <main id=\"a_content\" role=\"main\">\n\n          <div id=\"page-top\">\n              </div>\n    \n    \n    <div class=\"tabs\"></div>    \n      <div id=\"content-wrapper\">\n\n        <div id=\"main-content\">\n                            <div class=\"region region-content\">\n    <div id=\"block-system-main\" class=\"block block-system block-system-main\">\n\n      \n  <div id=\"node-400\" class=\"node node-hp node-promoted viewmode-full full-width no-background\">\n\n  \n  <div class=\"editorial-display\">\n  <div class=\"field field-name-field-editorial-display field-type-list-boolean field-label-hidden\">\n    <div class=\"field-items\">\n          <div class=\"field-item even\"></div>\n      </div>\n  </div>\n<div class=\"field field-name-field-text-editorial field-type-text-long field-label-hidden\">\n    <div class=\"field-items\">\n          <div class=\"field-item even\"> <h2>L'expérience partagée</h2>\n\n<h2>pour accélerer les transformations</h2>\n\n<p> </p>\n\n<p><strong>Impactant les modes de production, de distribution et de consommation, le marketing est au cœur des enjeux durables. Le réinterroger en profondeur est une nécessité mais également une formidable opportunité à saisir. Cette conviction profonde de « changer le monde » par l’offre a été l’origine de la naissance de la plateforme « Réussir avec un Marketing Responsable » en 2013. Un espace unique par :</strong></p>\n\n<ul>\n\t<li><b>Sa mission </b>: promouvoir le marketing responsable en apportant aux marketeurs des enseignements et des méthodes qui fonctionnent par la mise à disposition des meilleures pratiques en la matière, inspirantes et singulières.</li>\n\t<li><b>Sa composition</b> <strong>:</strong> 8 organisations de professionnel.les, complémentaires et référents sur le sujet du marketing responsable, gage d’un regard pluriel et exigeant.</li>\n\t<li><b>Ses convictions : </b>\n\t\t<ul>\n\t\t\t<li>Développer un marketing responsable est gage de valeur étendue (business et sociétale) qui se mesure ;</li>\n\t\t\t<li>Faire de la concertation positive exigeante sur le sujet ; </li>\n\t\t\t<li>Promouvoir l’amélioration continue plutôt que des processus figés et un résultat immédiat ; </li>\n\t\t\t<li>Soutenir le marketing responsable revient à servir une cause d’intérêt général.</li>\n\t\t</ul>\n\t</li>\n</ul>\n\n<p><br />\n\tC’est pour cela que nous accueillons la candidature de toute organisation ou entreprise, sans restriction et gratuitement. <strong>Nous communiquons librement sur nos critères de sélection et partageons l’intégralité des bonnes pratiques en open-source. </strong>De plus en plus d’initiatives éclosent, nous ne pouvons que nous en réjouir. Pour autant, dans ce contexte de \"time to market\", les initiatives isolées ne peuvent plus suffire, l’enjeu est dorénavant de les généraliser.<br />\n\t<br />\n\tNotre rôle est d’accompagner ce mouvement nécessaire. Aussi, nous proposons d’aller encore plus loin et de :</p>\n\n<ul>\n\t<li><b>Promouvoir une autre forme de marketing et un autre rapport à la consommation </b>en les partageant au cœur de nos réseaux, de nos organisations<b>.</b></li>\n\t<li><b>Mettre à disposition, au-delà des bonnes pratiques, des contenus additionnels à forte valeur ajoutée</b> : témoignages de professionnel.les, études, éléments de contexte, etc.</li>\n\t<li><b>Faciliter les échanges et le partage d’idées nouvelles</b> en développant des rencontres avec différents acteur.rices.</li>\n</ul>\n\n<p><strong>Fort de nos différences et de nos forces, nous désirons plus que jamais faire entendre nos messages et mieux défendre un autre marketing, riche de valeurs.</strong></p>\n\n<p> </p>\n\n<p><strong>Cette année, nous célébrons les 10ans de la plateforme Réussir avec un Marketing Responsable!<br />\n\tRetour en vidéo sur 10 ans de palmarès et de création d'un écosystème fort, ambitieux et impactant:</strong></p>\n\n<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/KrPGkfzzAMM\" title=\"YouTube video player\" width=\"560\"></iframe></p>\n\n<p> </p>\n\n<p><strong>Faites partie du Palmarès 2023 et mettez en avant vos initiatives inovantes, responsables et de réussite marketing et business!</strong></p>\n </div>\n      </div>\n  </div>\n<div class=\"field field-name-field-share-link field-type-link-field field-label-hidden\">\n    <div class=\"field-items\">\n          <div class=\"field-item even\"><a href=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/rmr_feuillet_mobile_2023-04.pdf\" title=\"Acheter le guide\">L'appel à candidature 2023</a></div>\n      </div>\n  </div>\n  </div>\n    <div class=\"share\">\n          </div>\n  \n</div>\n</div>\n<div id=\"block-pad-content-guide\" class=\"block block-pad-content block-pad-content-guide\">\n\n      \n  <div id=\"guide\" class=\"guide \">\n  <div class=\"block-guide-teaser\">\n    <div class=\"block-guide-image\">\n      <img class=\"guide_illustration\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/rmr_livre_blanc_a4_2023-04-12_web_couv__1.jpg\" alt=\"Illustration du guide complet\" title=\"Illustration du guide complet\" />    </div>\n    <div class=\"block-guide-text\">\n      <h2>Le livre blanc&nbsp;« Être durable et rentable, c’est possible ! »&nbsp;- nouvelle édition</h2>\r\n\r\n<p>En 2023, Réussir avec un Marketing Responsable fête ses 10 ans. À cette occasion, fort de 10 ans d’observation, le réseau publie son livre blanc « Être durable et rentable, c’est possible ! ».</p>\r\n\r\n<p>Avec humour, cas concrets et conseils avisés, David Garbous et ses partenaires y livrent les clés pour transformer et créer de la valeur (sans perdre les siennes).&nbsp;</p>\r\n\r\n<p>Bonne lecture !</p>\r\n\r\n<p><a href=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/rmr_livre_blanc_a4_2023-04_web.pdf\" target=\"_blank\"><strong><em>Consulter le&nbsp;livre blanc</em></strong></a></p>\r\n    </div>\n  </div>\n</div>\n</div>\n  </div>\n                    </div>\n      </div>\n\n            <div id=\"page-bottom\">\n              </div>\n      \n      \n<!--Back to top button-->\n<div id=\"back-to-top\" class=\"back-to-top\">\n  <a href=\"#top\">Haut de page</a>\n</div>\n\n    </main>\n\n  </div><!--/page-->\n\n  <footer class=\"main-footer\" role=\"contentinfo\">\n    <div id=\"footer\"><div class=\"section\">\n        <div class=\"region region-footer\">\n    <div id=\"block-menu-menu-footer-logos\" class=\"block block-menu block-menu-menu-footer-logos\">\n\n      \n  <ul class=\"menu\"><li class=\"first leaf\"><a href=\"/\" class=\"active\"><img title=\"\" alt=\"\" src = \"https://reussir-avec-un-marketing-responsable.org/sites/default/files/menuimage/logo-republique-francaise.png\" /></a></li>\n<li class=\"last leaf\"><a href=\"/\" class=\"active\"><img title=\"\" alt=\"\" src = \"https://reussir-avec-un-marketing-responsable.org/sites/default/files/menuimage/logo.png\" /></a></li>\n</ul></div>\n<div id=\"block-menu-menu-menu-footer-main\" class=\"block block-menu block-menu-menu-menu-footer-main\">\n\n      \n  <ul class=\"menu\"><li class=\"first leaf\"><a href=\"/la-demarche\">La démarche</a></li>\n<li class=\"leaf\"><a href=\"/le-palmares-2022\">Le palmarès</a></li>\n<li class=\"leaf\"><a href=\"/les-bonnes-pratiques\">Les bonnes pratiques</a></li>\n<li class=\"leaf\"><a href=\"/les-bonnes-pratiques-en-podcast-et-video\">Les podcasts et vidéos</a></li>\n<li class=\"leaf\"><a href=\"/le-livre-blanc\">Le livre blanc</a></li>\n<li class=\"leaf\"><a href=\"https://communication-responsable.ademe.fr/marketing-publicite-les-ressources\">Ressources</a></li>\n<li class=\"last leaf\"><a href=\"/\" class=\"active\">Accueil</a></li>\n</ul></div>\n<div id=\"block-menu-menu-menu-footer-cgu\" class=\"block block-menu block-menu-menu-menu-footer-cgu\">\n\n      \n  <ul class=\"menu\"><li class=\"first leaf\"><a href=\"/politique-cookies\">Politique cookies</a></li>\n<li class=\"leaf\"><a href=\"/declaration-daccessibilite\">Accessibilité : non conforme</a></li>\n<li class=\"leaf\"><a href=\"/conditions-generales-dutilisation\">CGU</a></li>\n<li class=\"leaf\"><a href=\"/mentions-legales\">Mentions légles</a></li>\n<li class=\"leaf\"><a href=\"/politique-de-protection-des-donnees-caractere-personnel\">Protection des données</a></li>\n<li class=\"leaf\"><a href=\"/sitemap\">Plan du site</a></li>\n<li class=\"last leaf\"><a href=\"/rss.xml\">RSS</a></li>\n</ul></div>\n<div id=\"block-block-1\" title=\"prod-1.3.3\" class=\"footer__copyright block block-block block-block-1\">\n      <div class=\"separateur-copyright\"></div>\n   <p>© 2022 - ADEME - Tous droits réservés - Mentions légales</p>\n </div> <!-- /.block -->\n  </div>\n    </div>\n  </div> <!-- /.section, /#footer -->\n</footer>\n  <script type=\"text/javascript\" src=\"https://reussir-avec-un-marketing-responsable.org/sites/default/files/js/js_BpSO5gfph9zmDQdUmf0Wc_s4S2OX6hHuLE3I2EFTGT4.js\"></script>\n\n</div><!--/wrapper-->\n</div><!--/outer-wrap-->\n\n<script type=\"text/javascript\" src=\"/bnith__p31HpM3yzMasrU1c87EvEkYtLebPO3DWbCMIbe-t8VB2fJY0fYnD2YehmcldqFXUq3wRYdILQ0o=\"></script> <script language=\"JavaScript\" type=\"text/javascript\">const _0x35e8=['visitorId','18127kSXadA','356575NPKVMA','7306axxsAH','get','657833TzFjkt','717302TQdBjl','34lMHocq','x-bni-rncf=1704423109851;expires=Thu, 01 Jan 2037 00:00:00 UTC;path=/;','61XMWbpU','cookie',';expires=Thu, 01 Jan 2037 00:00:00 UTC;path=/;','then','651866OSUgMa','811155xdatvf','x-bni-fpc='];function _0x258e(_0x5954fe,_0x43567d){return _0x258e=function(_0x35e81f,_0x258e26){_0x35e81f=_0x35e81f-0x179;let _0x1280dc=_0x35e8[_0x35e81f];return _0x1280dc;},_0x258e(_0x5954fe,_0x43567d);}(function(_0x5674de,_0xdcf1af){const _0x512a29=_0x258e;while(!![]){try{const _0x55f636=parseInt(_0x512a29(0x17b))+-parseInt(_0x512a29(0x179))*parseInt(_0x512a29(0x17f))+-parseInt(_0x512a29(0x183))+-parseInt(_0x512a29(0x184))+parseInt(_0x512a29(0x187))*parseInt(_0x512a29(0x17d))+parseInt(_0x512a29(0x188))+parseInt(_0x512a29(0x17c));if(_0x55f636===_0xdcf1af)break;else _0x5674de['push'](_0x5674de['shift']());}catch(_0xd3a1ce){_0x5674de['push'](_0x5674de['shift']());}}}(_0x35e8,0x6b42d));function getClientIdentity(){const _0x47e86b=_0x258e,_0x448fbc=FingerprintJS['load']();_0x448fbc[_0x47e86b(0x182)](_0x4bb924=>_0x4bb924[_0x47e86b(0x17a)]())[_0x47e86b(0x182)](_0x2f8ca1=>{const _0x44872c=_0x47e86b,_0xa48f50=_0x2f8ca1[_0x44872c(0x186)];document[_0x44872c(0x180)]=_0x44872c(0x185)+_0xa48f50+_0x44872c(0x181),document[_0x44872c(0x180)]=_0x44872c(0x17e);});}getClientIdentity();</script></body>\n\n</html>\n",
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:51:50.027216563Z",
+      "curl-command": "curl -X 'GET' -d '' -H 'Host: www.reussir-avec-un-marketing-responsable.org' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.reussir-avec-un-marketing-responsable.org/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.reussir-avec-un-marketing-responsable.org",
+      "matched-at": "www.reussir-avec-un-marketing-responsable.org:443",
+      "extracted-results": [
+        "Gandi"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:53:36.460773788Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.reussir-avec-un-marketing-responsable.org",
+      "matched-at": "www.reussir-avec-un-marketing-responsable.org:443",
+      "extracted-results": [
+        "www.reussir-avec-un-marketing-responsable.org"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:53:36.460883163Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.reussir-avec-un-marketing-responsable.org",
+      "matched-at": "www.reussir-avec-un-marketing-responsable.org:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:53:38.019924457Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.reussir-avec-un-marketing-responsable.org",
+      "matched-at": "www.reussir-avec-un-marketing-responsable.org:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:53:38.223401683Z",
+      "matcher-status": true
+    }
+  ]
+]
