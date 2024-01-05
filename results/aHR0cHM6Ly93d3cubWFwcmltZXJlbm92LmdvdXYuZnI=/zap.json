@@ -1,0 +1,1328 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Fri, 5 Jan 2024 04:10:06",
+	"site":[ 
+		{
+			"@name": "https://www.maprimerenov.gouv.fr",
+			"@host": "www.maprimerenov.gouv.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-4",
+					"alert": "CSP: Wildcard Directive",
+					"name": "CSP: Wildcard Directive",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self';",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: \nscript-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, form-action\n\nThe directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self';",
+							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: \nscript-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, form-action\n\nThe directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </p><p>script-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, form-action</p><p></p><p>The directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "21"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-10",
+					"alert": "CSP: script-src unsafe-eval",
+					"name": "CSP: script-src unsafe-eval",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "base-uri 'self' https://wa.anah.fr https://tag.aticdn.net; child-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; form-action 'self' https://auth.anah.fr/ https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; frame-ancestors 'self' https://wa.anah.fr https://tag.aticdn.net; connect-src data: blob: filesystem: mediastream: 'self' https://tag.aticdn.net https://logs1409.xiti.com wss://www.maprimerenov.gouv.fr; font-src data: blob: filesystem: mediastream: 'self' https://tag.aticdn.net https://fonts.googleapis.com https://fonts.gstatic.com; frame-src data: mailto: tel: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; img-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net http://www.google-analytics.com https://ssl.google-analytics.com data: https://logs1409.xiti.com https://xiti.com https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; media-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; object-src 'self' https://wa.anah.fr https://tag.aticdn.net; script-src 'unsafe-inline' 'unsafe-eval' 'self' https://wa.anah.fr https://tag.aticdn.net http://www.google-analytics.com https://ssl.google-analytics.com https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; style-src 'unsafe-inline' 'unsafe-eval' data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net https://fonts.gstatic.com https://fonts.googleapis.com; default-src 'self';  report-uri https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"otherinfo": "script-src includes unsafe-eval."
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>script-src includes unsafe-eval.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-5",
+					"alert": "CSP: script-src unsafe-inline",
+					"name": "CSP: script-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "base-uri 'self' https://wa.anah.fr https://tag.aticdn.net; child-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; form-action 'self' https://auth.anah.fr/ https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; frame-ancestors 'self' https://wa.anah.fr https://tag.aticdn.net; connect-src data: blob: filesystem: mediastream: 'self' https://tag.aticdn.net https://logs1409.xiti.com wss://www.maprimerenov.gouv.fr; font-src data: blob: filesystem: mediastream: 'self' https://tag.aticdn.net https://fonts.googleapis.com https://fonts.gstatic.com; frame-src data: mailto: tel: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; img-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net http://www.google-analytics.com https://ssl.google-analytics.com data: https://logs1409.xiti.com https://xiti.com https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; media-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; object-src 'self' https://wa.anah.fr https://tag.aticdn.net; script-src 'unsafe-inline' 'unsafe-eval' 'self' https://wa.anah.fr https://tag.aticdn.net http://www.google-analytics.com https://ssl.google-analytics.com https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; style-src 'unsafe-inline' 'unsafe-eval' data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net https://fonts.gstatic.com https://fonts.googleapis.com; default-src 'self';  report-uri https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"otherinfo": "script-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self';",
+							"otherinfo": "script-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self';",
+							"otherinfo": "script-src includes unsafe-inline."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>script-src includes unsafe-inline.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-6",
+					"alert": "CSP: style-src unsafe-inline",
+					"name": "CSP: style-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "base-uri 'self' https://wa.anah.fr https://tag.aticdn.net; child-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; form-action 'self' https://auth.anah.fr/ https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; frame-ancestors 'self' https://wa.anah.fr https://tag.aticdn.net; connect-src data: blob: filesystem: mediastream: 'self' https://tag.aticdn.net https://logs1409.xiti.com wss://www.maprimerenov.gouv.fr; font-src data: blob: filesystem: mediastream: 'self' https://tag.aticdn.net https://fonts.googleapis.com https://fonts.gstatic.com; frame-src data: mailto: tel: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; img-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net http://www.google-analytics.com https://ssl.google-analytics.com data: https://logs1409.xiti.com https://xiti.com https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; media-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; object-src 'self' https://wa.anah.fr https://tag.aticdn.net; script-src 'unsafe-inline' 'unsafe-eval' 'self' https://wa.anah.fr https://tag.aticdn.net http://www.google-analytics.com https://ssl.google-analytics.com https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; style-src 'unsafe-inline' 'unsafe-eval' data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net https://fonts.gstatic.com https://fonts.googleapis.com; default-src 'self';  report-uri https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self';",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "frame-ancestors 'self';",
+							"otherinfo": "style-src includes unsafe-inline."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-3",
+					"alert": "CSP: Notices",
+					"name": "CSP: Notices",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "base-uri 'self' https://wa.anah.fr https://tag.aticdn.net; child-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; form-action 'self' https://auth.anah.fr/ https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; frame-ancestors 'self' https://wa.anah.fr https://tag.aticdn.net; connect-src data: blob: filesystem: mediastream: 'self' https://tag.aticdn.net https://logs1409.xiti.com wss://www.maprimerenov.gouv.fr; font-src data: blob: filesystem: mediastream: 'self' https://tag.aticdn.net https://fonts.googleapis.com https://fonts.gstatic.com; frame-src data: mailto: tel: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; img-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net http://www.google-analytics.com https://ssl.google-analytics.com data: https://logs1409.xiti.com https://xiti.com https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; media-src data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net; object-src 'self' https://wa.anah.fr https://tag.aticdn.net; script-src 'unsafe-inline' 'unsafe-eval' 'self' https://wa.anah.fr https://tag.aticdn.net http://www.google-analytics.com https://ssl.google-analytics.com https://ytvz.maprimerenov.gouv.fr https://*.infoblox.com; style-src 'unsafe-inline' 'unsafe-eval' data: blob: filesystem: mediastream: 'self' https://wa.anah.fr https://tag.aticdn.net https://fonts.gstatic.com https://fonts.googleapis.com; default-src 'self';  report-uri https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"otherinfo": "Warnings:\nDuplicate scheme data:\nThe report-uri directive has been deprecated in favor of the new report-to directive\n"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>Warnings:</p><p>Duplicate scheme data:</p><p>The report-uri directive has been deprecated in favor of the new report-to directive</p><p></p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10010",
+					"alertRef": "10010",
+					"alert": "Cookie No HttpOnly Flag",
+					"name": "Cookie No HttpOnly Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/Anonymous",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/Anonymous",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						}
+					],
+					"count": "10",
+					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
+					"cweid": "1004",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10011",
+					"alertRef": "10011",
+					"alert": "Cookie Without Secure Flag",
+					"name": "Cookie Without Secure Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/Anonymous",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						}
+					],
+					"count": "8",
+					"solution": "<p>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</p>",
+					"cweid": "614",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10054",
+					"alertRef": "10054",
+					"alert": "Cookie with SameSite Attribute None",
+					"name": "Cookie with SameSite Attribute None",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set with its SameSite attribute set to \"none\", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALBCORS",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
+					"cweid": "1275",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10054",
+					"alertRef": "10054",
+					"alert": "Cookie without SameSite Attribute",
+					"name": "Cookie without SameSite Attribute",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "JSESSIONID",
+							"attack": "",
+							"evidence": "Set-Cookie: JSESSIONID",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "JSESSIONID",
+							"attack": "",
+							"evidence": "Set-Cookie: JSESSIONID",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "AWSALB",
+							"attack": "",
+							"evidence": "Set-Cookie: AWSALB",
+							"otherinfo": ""
+						}
+					],
+					"count": "6",
+					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
+					"cweid": "1275",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "aX0yTfgsEx7VCGUNqs2KO7WG91v0rZFx3Rn6hqxkpfrAvvavcDB1E9ESOu+WlawddcA8gcHyNnu2b8acH+xQRyQnI+XN9sVJ3pLRxqOiG84WPRXJ1daJf1YYdIJk",
+							"otherinfo": "i}2M\uFFFD,\\x0013\\x001e\uFFFD\\x0008e\r\uFFFD\u034A;\uFFFD\uFFFD\uFFFD[\uFFFD\uFFFD\uFFFDq\uFFFD\\x0019\uFFFD\uFFFD\uFFFDd\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDp0u\\x0013\uFFFD\\x0012:\uF595\uFFFD\\x001du\uFFFD<\uFFFD\uFFFD\uFFFD6{\uFFFDo\u019C\\x001f\uFFFDPG$'#\uFFFD\uFFFD\uFFFD\uFFFDI\u0792\uFFFD\u01A3\uFFFD\\x001b\uFFFD\\x0016=\\x0015\uFFFD\uFFFD\u0589V\\x0018t\uFFFDd"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "6rCdljcXzwjaqWtX0whnRWVVGnUxFOTyyLjL8oqt0ummqqJFWuaBGYcm2ugxGT53qy2eajWS+PSNLm7i6r8WdlqEHmRxMl2WqUHdPNfKfNhSJ9L4k8M7gs6SdrH3",
+							"otherinfo": "\uAC1D\uFFFD7\\x0017\uFFFD\\x0008\u06A9kW\uFFFD\\x0008gEeU\\x001au1\\x0014\uFFFD\uFFFD\u0238\uFFFD\uFFFD\uFFFD\u99AA\uFFFDEZ\uFFFD\\x0019\uFFFD&\uFFFD\uFFFD1\\x0019>w\uFFFD-\uFFFDj5\uFFFD\uFFFD\uFFFD.n\uFFFD\uFFFD\\x0016vZ\uFFFD\\x001edq2]\uFFFD\uFFFDA\uFFFD<\uFFFD\uFFFD|\uFFFDR'\uFFFD\uFFFD\uFFFD\uFFFD;\uFFFD\u0392v\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "b+7rDsCFsD4p1mXI70Un4nOs1L4SohpzMUqWq6+c2MfmllNHrHoENidlVDRsVd0pce6OhyHRlAiDaH57IEboi+TztHEcdEnCtMmurFwUCEplaSuTDoxL2VyuLk2P",
+							"otherinfo": "o\uFFFD\uFFFD\\x000e\uFFFD\uFFFD\uFFFD>)\uFFFDe\uFFFD\uFFFDE'\uFFFDs\uFFFD\u053E\\x0012\uFFFD\\x001as1J\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDSG\uFFFDz\\x00046'eT4lU\uFFFD)q\uE387!\u0454\\x0008\uFFFDh~{ F\uFFFD\uFFFD\uFFFDq\\x001ctI\u00B4\u026E\uFFFD\\\\x0014\\x0008Jei+\uFFFD\\x000e\uFFFDK\uFFFD\\\uFFFD.M\uFFFD"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "boYLg54BD/o/2rjf5LsHXUuREfoo5QlPeCw+PWN9zLR06Qwu3UzyWaibOV+Gi1Utt4sknu47AGa/DKe3YeRyPCJt/4PwLPkLBxejNn4hwwByjsTnqllXn7iuBHPh",
+							"otherinfo": "n\uFFFD\\x000b\uFFFD\uFFFD\\x0001\\x000f\uFFFD?\u06B8\uFFFD\uFFFD\\x0007]K\uFFFD\\x0011\uFFFD(\uFFFD\tOx,>=c}\u0334t\uFFFD\\x000c.\uFFFDL\uFFFDY\uFFFD\uFFFD9_\uFFFD\uFFFDU-\uFFFD\uFFFD$\uFFFD\uFFFD;\\x0000f\uFFFD\\x000c\uFFFD\uFFFDa\uFFFDr<\"m\uFFFD\uFFFD\uFFFD,\uFFFD\\x000b\\x0007\\x0017\uFFFD6~!\uFFFD\\x0000r\uFFFD\uFFFD\uFFFDYW\uFFFD\uFFFD\uFFFD\\x0004s\uFFFD"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/Anonymous",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ALP2rDcSI0+iI3rEj6fdl9w785H/qLSs+MJ76upSdDHQP+BnIC3xMzonZW6uk6QvLbyopRKFUFD+H68vJ8fpgwWrkXCBeXYh70JpWowP4dPpp2MIdilZg5DBr7gR",
+							"otherinfo": "\\x0000\uFFFD\uFFFD\uFFFD7\\x0012#O\uFFFD#z\u010F\uFFFD\u0757\uFFFD;\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD{\uFFFD\uFFFDRt1\uFFFD?\uFFFDg -\uFFFD3:'en\uFFFD\uFFFD\uFFFD/-\uFFFD\uFFFD\uFFFD\\x0012\uFFFDPP\uFFFD\\x001f\uFFFD/'\uFFFD\uFFFD\\x0005\uFFFD\uFFFDp\uFFFDyv!\uFFFDBiZ\uFFFD\\x000f\uFFFD\uFFFD\uFFFDc\\x0008v)Y\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x0011"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "jcOGEAxVjT0KfXQTtgpF41Vdbz7i7XmkEKnMtJk37MdPh1orT5OndjzVHlhobCn/FRlSKLeOZmNYrsiFhmTI9icME5ueC5UvXrd6CRe7JQTihY0oQMfKGoOl61XK",
+							"otherinfo": "\uFFFD\u00C6\\x0010\\x000cU\uFFFD=\n}t\\x0013\uFFFD\nE\uFFFDU]o>\uFFFD\uFFFDy\uFFFD\\x0010\uFFFD\u0334\uFFFD7\uFFFD\uFFFDO\uFFFDZ+O\uFFFD\uFFFDv<\uFFFD\\x001eXhl)\uFFFD\\x0015\\x0019R(\uFFFD\uFFFDfcX\uFFFD\u0205\uFFFDd\uFFFD\uFFFD'\\x000c\\x0013\uFFFD\uFFFD\\x000b\uFFFD/^\uFFFDz\t\\x0017\uFFFD%\\x0004\u214D(@\uFFFD\uFFFD\\x001a\uFFFD\uFFFD\uFFFDU\uFFFD"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/kIk8xt9Bh6VBFepOwtZ/vgleG3genhrqn9V0rbgvGkFSfyIMaZTBrOLBlY8XFS3vf9VAZBzHDFJ8auA6Y2oC6k35vx6iPHa3UNVkFBxmzMM5zgT88ASOkWtSKxS",
+							"otherinfo": "\uFFFDB$\uFFFD\\x001b}\\x0006\\x001e\uFFFD\\x0004W\uFFFD;\\x000bY\uFFFD\uFFFD%xm\uFFFDzxk\uFFFDU\u04B6\uFFFDi\\x0005I\uFFFD\uFFFD1\uFFFDS\\x0006\uFFFD\uFFFD\\x0006V<\\T\uFFFD\uFFFD\uFFFDU\\x0001\uFFFDs\\x001c1I\uFFFD\u9368\\x000b\uFFFD7\uFFFD\uFFFDz\uFFFD\uFFFD\uFFFD\uFFFDCU\uFFFDPq\uFFFD3\\x000c\uFFFD8\\x0013\uFFFD\uFFFD\\x0012:E\uFFFDH\uFFFDR"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "OFuh1VcC5EgwlFt1fAVWXepJ88LVBm/bonXyFq7BnIZeujONT7/DoMqXRPPlt7Nfo5KiitI1VCYgc6yNS//aAle6UM2Ss5xNyBKemJTAnXoCUkSQfOd5BBGX2a26",
+							"otherinfo": "8[\uFFFD\uFFFDW\\x0002\uFFFDH0\uFFFD[u|\\x0005V]\uFFFDI\uFFFD\uFFFD\uFFFD\\x0006o\u06E2u\uFFFD\\x0016\uFFFD\uFFFD\uFFFD\uFFFD^\uFFFD3\uFFFDO\uFFFD\u00E0\u0297D\uFFFD\u5DF3_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD5T& s\uFFFD\uFFFDK\uFFFD\uFFFD\\x0002W\uFFFDP\u0352\uFFFD\uFFFDM\uFFFD\\x0012\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDz\\x0002RD\uFFFD|\uFFFDy\\x0004\\x0011\uFFFD\u066D\uFFFD"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "uedXu6iYSBzATXmYNpgdjG05bQkCUkFDc+ZIb3D8yEEa0+crvpCIJYf0Ljfj/RYxpiWSaGdS2sqTKvXLltrrzTZXKfZTTZcUr/bD2JvWnnaE4u8BQd5fPmpMXCan",
+							"otherinfo": "\uFFFD\uFFFDW\uFFFD\uFFFD\uFFFDH\\x001c\uFFFDMy\uFFFD6\uFFFD\\x001d\uFFFDm9m\t\\x0002RACs\uFFFDHop\uFFFD\uFFFDA\\x001a\uFFFD\uFFFD+\uFFFD\uFFFD\uFFFD%\uFFFD\uFFFD.7\uFFFD\uFFFD\\x00161\uFFFD%\uFFFDhgR\uFFFD\u0293*\uFFFD\u02D6\uFFFD\uFFFD\uFFFD6W)\uFFFDSM\uFFFD\\x0014\uFFFD\uFFFD\uFFFD\u061B\u059Ev\uFFFD\uFFFD\uFFFD\\x0001A\uFFFD_>jL\\&\uFFFD"
+						}
+					],
+					"count": "9",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>i}2M\uFFFD,\\x0013\\x001e\uFFFD\\x0008e\r\uFFFD\u034A;\uFFFD\uFFFD\uFFFD[\uFFFD\uFFFD\uFFFDq\uFFFD\\x0019\uFFFD\uFFFD\uFFFDd\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDp0u\\x0013\uFFFD\\x0012:\uF595\uFFFD\\x001du\uFFFD<\uFFFD\uFFFD\uFFFD6{\uFFFDo\u019C\\x001f\uFFFDPG$'#\uFFFD\uFFFD\uFFFD\uFFFDI\u0792\uFFFD\u01A3\uFFFD\\x001b\uFFFD\\x0016=\\x0015\uFFFD\uFFFD\u0589V\\x0018t\uFFFDd</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "BUG",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 2 times, the first in the element starting with: \"<script type=\"text/javascript\" id=\"harnessvars\"> try { /* BUG-595353 : workaround to fix IE bug */ function isIE () { if (naviga\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "debug",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected 2 times, the first in the element starting with: \"<script >  function getBrowserFingerprint() { var options = { excludes: { 'enumerateDevices': true, 'sessionStorage': true, 'col\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"<script type=\"text/javascript\" id=\"webanalyticsheader\">\n\npega.namespace(\"pega.webanalytics\");\n$.extend(pega.webanalytics, (funct\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later",
+							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected in the element starting with: \"<script> /* US-250729 : Removing the skeleton in failure cases, later can be moved to desktop exception handling */ window.onerr\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 2 times, the first in the element starting with: \"<!--Added 'user-scalable=no' to disable zoom in/out in HC/PIMC app mobile browser -->\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "5",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected 2 times, the first in the element starting with: \"<script type=\"text/javascript\" id=\"harnessvars\"> try { /* BUG-595353 : workaround to fix IE bug */ function isIE () { if (naviga\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<noscript><style>.screen-layout{display:none;} body{background:none;background-color:white}</style><div> <div id='jsDisabledHeader' style='color:blue;text-align:center;margin: 70px;'>JavaScript requis.</div> <div id='jsDisabledMessage' style='color:blue;text-align:center;margin: 70px;'>Nous sommes d\u00E9sol\u00E9s, mais Pega7 ne fonctionne pas sans JavaScript activ\u00E9. Veuillez activer et r\u00E9actualiser.</div> </div></noscript>",
+							"otherinfo": "A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not."
+						}
+					],
+					"count": "1",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/AIDES_/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/Anonymous",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/BPNVwCpLW8TKW49zoQZpAw*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/H9DF1ufnPCNDOGG8PFgaaW3tLvvaZHE9*/!STANDARD",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "6rCdljcXzwjaqWtX0whnRWVVGnUxFOTyyLjL8oqt0ummqqJFWuaBGYcm2ugxGT53qy2eajWS+PSNLm7i6r8WdlqEHmRxMl2WqUHdPNfKfNhSJ9L4k8M7gs6SdrH3",
+							"otherinfo": "\ncookie:AWSALBCORS\ncookie:JSESSIONID\ncookie:AWSALB"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "aX0yTfgsEx7VCGUNqs2KO7WG91v0rZFx3Rn6hqxkpfrAvvavcDB1E9ESOu+WlawddcA8gcHyNnu2b8acH+xQRyQnI+XN9sVJ3pLRxqOiG84WPRXJ1daJf1YYdIJk",
+							"otherinfo": "\ncookie:AWSALBCORS\ncookie:JSESSIONID\ncookie:AWSALB"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "b+7rDsCFsD4p1mXI70Un4nOs1L4SohpzMUqWq6+c2MfmllNHrHoENidlVDRsVd0pce6OhyHRlAiDaH57IEboi+TztHEcdEnCtMmurFwUCEplaSuTDoxL2VyuLk2P",
+							"otherinfo": "\ncookie:AWSALBCORS\ncookie:JSESSIONID\ncookie:AWSALB"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/app/default/Anonymous",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "ALP2rDcSI0+iI3rEj6fdl9w785H/qLSs+MJ76upSdDHQP+BnIC3xMzonZW6uk6QvLbyopRKFUFD+H68vJ8fpgwWrkXCBeXYh70JpWowP4dPpp2MIdilZg5DBr7gR",
+							"otherinfo": "\ncookie:AWSALBCORS\ncookie:Pega-RULES\ncookie:JSESSIONID\ncookie:AWSALB"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "OFuh1VcC5EgwlFt1fAVWXepJ88LVBm/bonXyFq7BnIZeujONT7/DoMqXRPPlt7Nfo5KiitI1VCYgc6yNS//aAle6UM2Ss5xNyBKemJTAnXoCUkSQfOd5BBGX2a26",
+							"otherinfo": "\ncookie:AWSALBCORS\ncookie:AWSALB"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "uedXu6iYSBzATXmYNpgdjG05bQkCUkFDc+ZIb3D8yEEa0+crvpCIJYf0Ljfj/RYxpiWSaGdS2sqTKvXLltrrzTZXKfZTTZcUr/bD2JvWnnaE4u8BQd5fPmpMXCan",
+							"otherinfo": "\ncookie:AWSALBCORS\ncookie:AWSALB"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "aX0yTfgsEx7VCGUNqs2KO7WG91v0rZFx3Rn6hqxkpfrAvvavcDB1E9ESOu+WlawddcA8gcHyNnu2b8acH+xQRyQnI+XN9sVJ3pLRxqOiG84WPRXJ1daJf1YYdIJk",
+							"otherinfo": "\ncookie:AWSALBCORS"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "JSESSIONID",
+							"attack": "",
+							"evidence": "04E673CCE97EF82B12C3663B9835DC0B",
+							"otherinfo": "\ncookie:JSESSIONID"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "b+7rDsCFsD4p1mXI70Un4nOs1L4SohpzMUqWq6+c2MfmllNHrHoENidlVDRsVd0pce6OhyHRlAiDaH57IEboi+TztHEcdEnCtMmurFwUCEplaSuTDoxL2VyuLk2P",
+							"otherinfo": "\ncookie:AWSALBCORS"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "JSESSIONID",
+							"attack": "",
+							"evidence": "C079055D2529C83701D1B65E0BBDA201",
+							"otherinfo": "\ncookie:JSESSIONID"
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "AWSALBCORS",
+							"attack": "",
+							"evidence": "OFuh1VcC5EgwlFt1fAVWXepJ88LVBm/bonXyFq7BnIZeujONT7/DoMqXRPPlt7Nfo5KiitI1VCYgc6yNS//aAle6UM2Ss5xNyBKemJTAnXoCUkSQfOd5BBGX2a26",
+							"otherinfo": "\ncookie:AWSALBCORS"
+						}
+					],
+					"count": "11",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p></p><p>cookie:AWSALBCORS</p><p>cookie:JSESSIONID</p><p>cookie:AWSALB</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable but Non-Cacheable Content",
+					"name": "Storable but Non-Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.maprimerenov.gouv.fr/prweb/PRAuth/Anonymous",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-cache",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "10"
+				}
+			]
+		}
+	]
+}
