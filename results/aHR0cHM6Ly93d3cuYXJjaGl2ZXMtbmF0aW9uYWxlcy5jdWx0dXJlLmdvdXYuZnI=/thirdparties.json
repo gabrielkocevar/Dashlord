@@ -3,7 +3,7 @@
   "cookies": [
     {
       "name": "JSESSIONID",
-      "value": "22C69D7DD57DC3EAC1934B5D78FCA36E",
+      "value": "EC0F3D202D067E8DDF6E9FC3FF5AA220",
       "domain": "www.archives-nationales.culture.gouv.fr",
       "path": "/",
       "expires": -1,
@@ -19,12 +19,12 @@
   "headers": {
     "connection": "keep-alive",
     "content-encoding": "gzip",
-    "content-length": "11411",
+    "content-length": "11409",
     "content-type": "text/html;charset=UTF-8",
-    "date": "Thu, 04 Jan 2024 19:19:46 GMT",
-    "etag": "\"47338cd5\"",
+    "date": "Fri, 05 Jan 2024 10:49:17 GMT",
+    "etag": "\"3d83a0d6\"",
     "server": "nginx",
-    "set-cookie": "JSESSIONID=22C69D7DD57DC3EAC1934B5D78FCA36E; Path=/; HttpOnly",
+    "set-cookie": "JSESSIONID=EC0F3D202D067E8DDF6E9FC3FF5AA220; Path=/; HttpOnly",
     "strict-transport-security": "max-age=63072000"
   },
   "endpoints": [
