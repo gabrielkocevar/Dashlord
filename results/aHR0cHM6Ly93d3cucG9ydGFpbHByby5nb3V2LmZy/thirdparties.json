@@ -1,0 +1,109 @@
+{
+  "trackers": [],
+  "cookies": [
+    {
+      "name": "tarteaucitron",
+      "value": "!eulerian_exemption_cnil=true!cobrowsing=true",
+      "domain": ".portailpro.gouv.fr",
+      "path": "/",
+      "expires": 1735974990,
+      "size": 58,
+      "httpOnly": false,
+      "secure": true,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "2482074",
+    "cache-control": "max-age=31536000, public",
+    "content-encoding": "gzip",
+    "content-length": "11719",
+    "content-security-policy": "default-src 'none';                                     style-src 'self' http://cdn.ac.portailpro.gouv.fr https://acl.integration.portailpro.gouv.fr https://acl.portailpro.gouv.fr https://atvm.portailpro.gouv.fr 'unsafe-inline';                                     font-src 'self' http://cdn.ac.portailpro.gouv.fr https://www.interieur.gouv.fr data:;                                     script-src 'self' https://atvm.portailpro.gouv.fr https://tag.aticdn.net http://cdn.ac.portailpro.gouv.fr https://mon-entreprise.fr https://cdn.jsdelivr.net https://acl.integration.portailpro.gouv.fr https://acl.portailpro.gouv.fr https://mon-entreprise.urssaf.fr 'unsafe-eval' 'unsafe-inline';                                     img-src 'self' https://atvm.portailpro.gouv.fr https://www.douane.gouv.fr https://www.impots.gouv.fr https://urssaf.fr http://cdn.ac.portailpro.gouv.fr media.ac.portailpro.gouv.fr https://logs1412.xiti.com https://mon-entreprise.fr https://mon-entreprise.urssaf.fr data:;                                     frame-src 'self' https://10.156.82.34:8080 *.gouv.fr *.urssaf.fr *.net-entreprises.fr *.guichet-entreprises.fr *.mon-entreprise.fr;                                     form-action 'self';                                     media-src 'self'; http://cdn.ac.portailpro.gouv.fr media.ac.portailpro.gouv.fr                                    base-uri 'none';                                     object-src 'self';                                     connect-src 'self' http://cdn.ac.portailpro.gouv.fr wss://webchat.ac.portailpro.gouv.fr *.gouv.fr *.urssaf.fr *.net-entreprises.fr *.guichet-entreprises.fr *.mon-entreprise.fr wss://acl.integration.portailpro.gouv.fr wss://acl.portailpro.gouv.fr https://logs1412.xiti.com;                                     prefetch-src 'self';",
+    "content-type": "text/html; charset=UTF-8",
+    "content-language": "fr",
+    "date": "Thu, 07 Dec 2023 13:48:33 GMT",
+    "etag": "W/\"1701956913\"",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "last-modified": "Thu, 07 Dec 2023 13:48:33 GMT",
+    "permissions-policy": "accelerometer=(),camera=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),usb=(),web-share(),interest-cohort=()",
+    "referrer-policy": "same-origin",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload\nmax-age=15768000",
+    "vary": "X-Bin, Accept-Encoding, Cookie",
+    "x-adv-varnish": "Cache-enabled",
+    "x-cache-age": "2482074",
+    "x-cache-hits": "2069",
+    "x-cache-ttl-remaining": "147671.011",
+    "x-cacheable": "YES",
+    "x-content-type-options": "nosniff\nnosniff",
+    "x-frame-options": "sameorigin",
+    "x-grace": "10",
+    "x-ttl": "2629746",
+    "x-ua-compatible": "IE=edge",
+    "x-varnish": "183397444 178763889",
+    "x-varnish-cache": "HIT",
+    "x-xss-protection": "1; mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.portailpro.gouv.fr",
+      "ip": "145.242.17.12",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}

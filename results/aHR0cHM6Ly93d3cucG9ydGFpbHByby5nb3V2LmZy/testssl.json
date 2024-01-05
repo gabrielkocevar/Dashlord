@@ -1,0 +1,1180 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered + downgraded to weaker protocol"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cwe"          : "CWE-310",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1 secp384r1 secp521r1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'max fragment length/#1' 'encrypt-then-mac/#22' 'extended master secret/#23'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 7200 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "cert_compression",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "N/A"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA256 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "C89E0B53805B11D448DB3D95FAEE268A"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "16"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "C34C01E756C1EC0BA761DBBE495FA41F16E7530D"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "804675AAA0980AC462765BC72D9C40FCF9760BF9E443537B39A8C1F0A199D033"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "portailpro.gouv.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "portailpro.gouv.fr"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "portailpro.gouv.fr www.portailpro.gouv.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN (same w/o SNI)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "228 >= 60 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-07-20 22:00"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-08-20 21:59"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://crl.dhimyotis.com/servicesca.crl http://crl.certigna.fr/servicesca.crl"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://servicesca.ocsp.certigna.fr http://servicesca.ocsp.dhimyotis.com"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "issue=certigna.fr, issue=letsencrypt.org"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "3"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIGFjCCBP6gAwIBAgIQb4L6KKzW94S7WxILqHNnrTANBgkqhkiG9w0BAQsFADA0MQswCQYDVQQGEwJGUjESMBAGA1UECgwJRGhpbXlvdGlzMREwDwYDVQQDDAhDZXJ0aWduYTAeFw0xNTExMjUxMTMzNTJaFw0yNTExMjIxMTMzNTJaMH0xCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlESElNWU9USVMxHDAaBgNVBAsMEzAwMDIgNDgxNDYzMDgxMDAwMzYxHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MR0wGwYDVQQDDBRDZXJ0aWduYSBTZXJ2aWNlcyBDQTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBALPM+7LpWBz9wFcPaTc3xnB+5g0XrnptB0EPPfrR04vO52Ykm4ky1d4ZLd10tbM1fa1RqNSOVWWg93O4pL7zCFKlz6JV74ZZVhHpEAwzBwv2oPnxvVbxtSN67xsSY66ahUYxjzs8+3FhmsiRxqwnTYvK2u70uglUvRisOKyTL/M6JnrC4y8tlmoz7OSa5BmBMVplJFQtvmON6N9aHLvYMz+EyJPCbXL6pELxeHjFT5QmIaRamsr2DOTaCjtBZKI1Wnh3X7lnbjM8MESJiV2t7E9tIQNG0Z/HI3tO4aaUMum3KysY5sC8v3vi7rryGidgzHQhrtP0ZXWW5UH/k7umLS/P/XXWnCFpc2Lxa1uDGfc2im7xibRoPP+JNZszN76euFlls6jyEXAiwnVr14tVVTewLK0OWs5SJHpEKp8PGMZRDj59EmMvokWwzL6QzNZ6vVAp00oOm05sbspNY9+MFqGKKUsKvhFGEa4XmRNxDe6KswLcjPZB+NKHZ0QWFd4ip5C5XmEK/8qIPjwVr9dah9+oiHGGO8Wx7gJAMF5DTmkvW7GhqCKj1LmHnabjzc8av6kxWVQZi/C7HCm9i/W4wio+JA2EAFLqNL3GPNbK9kau4yPhQt/c7zxzo0OHnlsV4THCG7oOCd3cfCiyfQcb3FBt6OSpaKRZxjCLBwP00r0fAgMBAAGjggHZMIIB1TASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQUrOyGj0s3HLh/FxsZ0K7oTuM0XBIwZAYDVR0jBF0wW4AUGu3+QTmQtCRZvgHyUtVF9lo53BGhOKQ2MDQxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlEaGlteW90aXMxETAPBgNVBAMMCENlcnRpZ25hggkA/tzjAQ/JSP8wSQYDVR0gBEIwQDA+BgoqgXoBgTEBAAECMDAwLgYIKwYBBQUHAgEWImh0dHBzOi8vd3d3LmNlcnRpZ25hLmZyL2F1dG9yaXRlcy8wfAYIKwYBBQUHAQEEcDBuMDQGCCsGAQUFBzAChihodHRwOi8vYXV0b3JpdGUuY2VydGlnbmEuZnIvY2VydGlnbmEuZGVyMDYGCCsGAQUFBzAChipodHRwOi8vYXV0b3JpdGUuZGhpbXlvdGlzLmNvbS9jZXJ0aWduYS5kZXIwYQYDVR0fBFowWDApoCegJYYjaHR0cDovL2NybC5jZXJ0aWduYS5mci9jZXJ0aWduYS5jcmwwK6ApoCeGJWh0dHA6Ly9jcmwuZGhpbXlvdGlzLmNvbS9jZXJ0aWduYS5jcmwwDQYJKoZIhvcNAQELBQADggEBAGLft7gIuGPZVfg0cTM+HT2xAZFPDb/2+siH06x+dH044zMKbBINbRzhKipwB1A3MW8FQjveE9tyrfyuqZE/X+o2SlGcdNV44ybYkxo4f6kcLEavV/IW+oFEnojZlhpksYcxrvQoEyqkAwshe8IS2KtZHKVACrt+XSs0lwvy7ALGmHaF7A4by6cZWItA7Lhj8XWp+8tBJDj7HocRbWtxzEODdBuyMgJzFrNjc+97J0vH/K0+3yjmkczpKshMA0tM+MF9XDMN/MuwrPmUWGO/fHiqHgUp8yqeWtl1n44ZxkkK1t9GRwhnDWLv73/xhTmdhWYQ/reo0GbgBoLiltKmIJQ=\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2015-11-25 11:33"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2025-11-22 11:33"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Certigna Services CA <-- Certigna"
+          }
+,         {
+              "id"           : "intermediate_cert <#2>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIDqDCCApCgAwIBAgIJAP7c4wEPyUj/MA0GCSqGSIb3DQEBBQUAMDQxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlEaGlteW90aXMxETAPBgNVBAMMCENlcnRpZ25hMB4XDTA3MDYyOTE1MTMwNVoXDTI3MDYyOTE1MTMwNVowNDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURoaW15b3RpczERMA8GA1UEAwwIQ2VydGlnbmEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDIaPHJ1tazNHUmgh7stL7qXOEm7RFHYeGifBZ4QCHkYJ5ayGPhxLGWkv8YbWkj4Sti993iNi+RB7lIzw7sebYs5zRLcAglozyHGxnygQcPOJAZ0xH+hrTy0V4eHpbNgGzOOzGTtvKg0KmVEn2lmsxryIRWijOp5yIVUxbwzBfsV1/pogqYCd7jX5xv3EjjhQsVWqa6n6xI4wmy9/Qy3l40vhx4XUJbzg4ij02Q130yGLMLLGq/jj8UEYkgDncUtT2UCIf3JR7VsmAA7G8qKCVuKj4YYxclPz5EIBb2JsglrgVKtOdjLPOMFlN+XPsRGgjBRmKfIrjxwo1p3Po6WAbfAgMBAAGjgbwwgbkwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUGu3+QTmQtCRZvgHyUtVF9lo53BEwZAYDVR0jBF0wW4AUGu3+QTmQtCRZvgHyUtVF9lo53BGhOKQ2MDQxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlEaGlteW90aXMxETAPBgNVBAMMCENlcnRpZ25hggkA/tzjAQ/JSP8wDgYDVR0PAQH/BAQDAgEGMBEGCWCGSAGG+EIBAQQEAwIABzANBgkqhkiG9w0BAQUFAAOCAQEAhQMeknH2Qq/ho2Ge6/PAD/Kl1NqV5ta+aDY9fm4fTIrv0Q8hbV6lUmPOEvjvKtpv6zf+EwLHyzs+ImvaYS5/1HI93TDhHkxAGYwP15zRgzB7mFncfca5DClMoTOi62c6ZYTTluLtdkVwj7Ur3vkj1kluPBS1xp81HlDQwY9qcEQCYsuuHWhBp6pX6FOqB9IG9tUUBguRA3UsbHK1YZWaDYu5Def131TN3ubY1gkIl2PlwS6wt0QmwCbAr1UwnjvVNioZBPRcHv/PLLf/0P2HQBHVESO7SMAhqaQoLf0V+LBOK/QwWyH8EZE0vkHve52Xdf+XlcCWWC/qu0bXu+TZLg==\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#2>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "E3B6A2DB2ED7CE48842F7AC53241C7B71D54144BFB40C11F3F1D0B42F5EEA12D"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#2>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2007-06-29 15:13"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#2>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2027-06-29 15:13"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#2>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#2>",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Certigna <-- Certigna"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-1 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1701959390"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2480003 seconds"
+          }
+,         {
+              "id"           : "HSTS_multiple",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple HSTS headers. Using first header: max-age=31536000; includeSubDomains; preload"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "sameorigin"
+          }
+,         {
+              "id"           : "X-Content-Type-Options_multiple",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple X-Content-Type-Options headers. Using first header: nosniff"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "default-src 'none';                                     style-src 'self' http://cdn.ac.portailpro.gouv.fr https://acl.integration.portailpro.gouv.fr https://acl.portailpro.gouv.fr https://atvm.portailpro.gouv.fr 'unsafe-inline';                                     font-src 'self' http://cdn.ac.portailpro.gouv.fr https://www.interieur.gouv.fr data:;                                     script-src 'self' https://atvm.portailpro.gouv.fr https://tag.aticdn.net http://cdn.ac.portailpro.gouv.fr https://mon-entreprise.fr https://cdn.jsdelivr.net https://acl.integration.portailpro.gouv.fr https://acl.portailpro.gouv.fr https://mon-entreprise.urssaf.fr 'unsafe-eval' 'unsafe-inline';                                     img-src 'self' https://atvm.portailpro.gouv.fr https://www.douane.gouv.fr https://www.impots.gouv.fr https://urssaf.fr http://cdn.ac.portailpro.gouv.fr media.ac.portailpro.gouv.fr https://logs1412.xiti.com https://mon-entreprise.fr https://mon-entreprise.urssaf.fr data:;                                     frame-src 'self' https://10.156.82.34:8080 *.gouv.fr *.urssaf.fr *.net-entreprises.fr *.guichet-entreprises.fr *.mon-entreprise.fr;                                     form-action 'self';                                     media-src 'self'; http://cdn.ac.portailpro.gouv.fr media.ac.portailpro.gouv.fr                                    base-uri 'none';                                     object-src 'self';                                     connect-src 'self' http://cdn.ac.portailpro.gouv.fr wss://webchat.ac.portailpro.gouv.fr *.gouv.fr *.urssaf.fr *.net-entreprises.fr *.guichet-entreprises.fr *.mon-entreprise.fr wss://acl.integration.portailpro.gouv.fr wss://acl.portailpro.gouv.fr https://logs1412.xiti.com;                                     prefetch-src 'self';"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "accelerometer=(),camera=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),usb=(),web-share(),interest-cohort=()"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1; mode=block"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=31536000, public"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "X-Cacheable: YESX-Varnish: 180547095 175909652X-Cache-TTL-Remaining: 149742.363X-Cache-Age: 2480003X-Cache-Hits: 2053"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "no protocol below TLS 1.2 offered"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=804675AAA0980AC462765BC72D9C40FCF9760BF9E443537B39A8C1F0A199D033"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "HAProxy"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "not vulnerable, no SSL3 or TLS1"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "27"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "81"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "A+"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "www.portailpro.gouv.fr/145.242.17.12",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "73"
+          }
+]

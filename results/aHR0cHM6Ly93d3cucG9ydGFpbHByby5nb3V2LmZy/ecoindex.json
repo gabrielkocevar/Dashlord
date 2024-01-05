@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.portailpro.gouv.fr",
+        "size": 6195.04,
+        "nodes": 579,
+        "requests": 61,
+        "grade": "D",
+        "score": 48.0,
+        "ges": 2.04,
+        "water": 3.06,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 07:17:27.641886",
+        "page_type": null
+    }
+]
