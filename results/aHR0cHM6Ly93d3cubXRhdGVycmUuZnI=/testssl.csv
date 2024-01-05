@@ -1,0 +1,2 @@
+"id","fqdn/ip","port","severity","finding","cve","cwe"
+"optimal_proto","www.mtaterre.fr/109.69.189.81","443","WARN","www.mtaterre.fr:443 appears to support TLS 1.3 ONLY, but /home/testssl/bin/openssl.Linux.x86_64 does not support TLS 1.3","",""
