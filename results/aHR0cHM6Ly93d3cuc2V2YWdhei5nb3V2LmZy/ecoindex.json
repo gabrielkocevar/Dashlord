@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.sevagaz.gouv.fr",
+        "size": 2766.193,
+        "nodes": 120,
+        "requests": 31,
+        "grade": "B",
+        "score": 75.0,
+        "ges": 1.5,
+        "water": 2.25,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 07:47:02.719587",
+        "page_type": null
+    }
+]

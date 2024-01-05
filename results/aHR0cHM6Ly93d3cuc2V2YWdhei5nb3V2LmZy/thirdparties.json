@@ -1,0 +1,95 @@
+{
+  "trackers": [],
+  "cookies": [
+    {
+      "name": "JSESSIONID",
+      "value": "node01rgmjvp33t2bru19ib2f2kfxz4886.node0",
+      "domain": "sevagaz.gouv.fr",
+      "path": "/sevagaz",
+      "expires": -1,
+      "size": 50,
+      "httpOnly": true,
+      "secure": true,
+      "session": true,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "cache-control": "no-cache",
+    "content-language": "en-US",
+    "content-security-policy": "default-src 'self'; object-src 'none'; base-uri 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval'; img-src 'self' data:; connect-src 'self' https://tdb.sevagaz.gouv.fr/ https://sevagaz.gouv.fr/auth; form-action 'self'; frame-ancestors 'self'; frame-src 'self' https://tdb.sevagaz.gouv.fr/ https://sevagaz.gouv.fr/auth; upgrade-insecure-requests;",
+    "content-type": "text/html;charset=utf-8",
+    "date": "Fri, 05 Jan 2024 07:46:02 GMT",
+    "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+    "permissions-policy": "camera=(), display-capture=(), geolocation=(), magnetometer=(), microphone=(), payment=(), serial=(), usb=(), web-share=(), xr-spatial-tracking=()",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "set-cookie": "JSESSIONID=node01rgmjvp33t2bru19ib2f2kfxz4886.node0; Path=/sevagaz; Secure; HttpOnly; SameSite=Lax",
+    "strict-transport-security": "max-age=63072000; includeSubDomains\nmax-age=63072000; includeSubDomains",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-robots-tag": "noindex",
+    "x-xss-protection": "1; mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.sevagaz.gouv.fr",
+      "ip": "51.254.145.84",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
