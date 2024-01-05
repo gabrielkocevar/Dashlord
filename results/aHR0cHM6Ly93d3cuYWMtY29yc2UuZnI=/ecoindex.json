@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.ac-corse.fr",
+        "size": 11074.338,
+        "nodes": 1951,
+        "requests": 58,
+        "grade": "E",
+        "score": 26.0,
+        "ges": 2.48,
+        "water": 3.72,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 09:13:38.914119",
+        "page_type": null
+    }
+]
