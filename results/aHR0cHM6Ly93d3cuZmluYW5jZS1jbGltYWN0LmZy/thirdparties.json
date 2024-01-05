@@ -1,0 +1,952 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/"
+    },
+    {
+      "type": "FontAwesome",
+      "url": "https://kit.fontawesome.com/76fc9e60e6.js",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/load.js?locale=fr&iswordpress=true&domain=finance-climact.fr&uuid=2df1000bf385655312abede8e30421664e7d594e"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-includes/css/dist/block-library/style.min.css?ver=d2e24e"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-includes/css/classic-themes.min.css?ver=1"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=899fca"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.7"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/css/template.min.css?ver=all"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/css/style-evolution.css?ver=all"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-includes/js/jquery/jquery.min.js?ver=3.6.1"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/plugins/sitepress-multilingual-cms/res/js/xdomain-data.js?ver=899fca"
+    },
+    {
+      "type": "FontAwesome",
+      "url": "https://ka-f.fontawesome.com/releases/v5.15.4/css/free.min.css?token=76fc9e60e6",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "FontAwesome",
+      "url": "https://ka-f.fontawesome.com/releases/v5.15.4/css/free-v4-shims.min.css?token=76fc9e60e6",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "FontAwesome",
+      "url": "https://ka-f.fontawesome.com/releases/v5.15.4/css/free-v4-font-face.min.css?token=76fc9e60e6",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.7"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.7"
+    },
+    {
+      "type": "google",
+      "url": "https://www.google.com/recaptcha/api.js?render=6Lf7ddIZAAAAAHCWmN9HmroFqKzKIITgLx5B2xJm&ver=3.0",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9"
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.7.7"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/js/app.min.js?ver=1"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/lang_en.png"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/lang_fr.png"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/menu-close.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/logo_life.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/logo_FinanceClimAct.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/menu.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/publication_image.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/keys_button-left.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/keys_button-right.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/verbatim_button-left.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/verbatim_button-right.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/arrow_top.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-includes/js/wp-emoji-release.min.js?ver=d2e24e"
+    },
+    {
+      "type": "google tag manager",
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-5MZRK65",
+      "details": {
+        "id": "google tag manager",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/images/ico_linkedin.svg"
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/baloochettan2/v21/vm8udRbmXEva26PK-NtuX4ynWEzv5_d6.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "FontAwesome",
+      "url": "https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-solid-900.woff2",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/aftertitle_yellow.svg"
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/baloochettan2/v21/vm8udRbmXEva26PK-NtuX4ynWEzv5_d6.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "FontAwesome",
+      "url": "https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-solid-900.woff2",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "google",
+      "url": "https://www.gstatic.com/recaptcha/releases/u-xcq3POCWFlCr3x8_IPxgPu/recaptcha__en.js",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/dist/images/icons/aftertitle_white.svg"
+    },
+    {
+      "type": "FontAwesome",
+      "url": "https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-regular-400.woff2",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "FontAwesome",
+      "url": "https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-regular-400.woff2",
+      "details": {
+        "id": "FontAwesome",
+        "message": "Host fonts directly"
+      }
+    },
+    {
+      "type": "google",
+      "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6Lf7ddIZAAAAAHCWmN9HmroFqKzKIITgLx5B2xJm&co=aHR0cHM6Ly9maW5hbmNlLWNsaW1hY3QuZnI6NDQz&hl=en&v=u-xcq3POCWFlCr3x8_IPxgPu&size=invisible&cb=rp7t9widvti3",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://nljp.finance-climact.fr/loL441.js?2"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/uploads/2020/06/money_slider-1340x600-c-default.jpg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/uploads/2020/06/money_slider-286x404-c-default.jpg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/uploads/2020/06/icon_institution.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/uploads/2020/06/icon_industriels.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/uploads/2020/06/icon_particuliers-3.svg"
+    },
+    {
+      "type": "google",
+      "url": "https://www.gstatic.com/recaptcha/releases/u-xcq3POCWFlCr3x8_IPxgPu/styles__ltr.css",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "google",
+      "url": "https://www.gstatic.com/recaptcha/releases/u-xcq3POCWFlCr3x8_IPxgPu/recaptcha__en.js",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "google",
+      "url": "https://www.google.com/js/bg/mL2Y2df9MP72hJspIKkaS_u6JtFhauYVKQ-w1rT0CAw.js",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "google",
+      "url": "https://www.gstatic.com/recaptcha/api2/logo_48.png",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "google",
+      "url": "https://www.google.com/recaptcha/api2/webworker.js?hl=en&v=u-xcq3POCWFlCr3x8_IPxgPu",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr//wp-content/themes/FinanceClimAct_2020/lib/tarteaucitronjs/lang/tarteaucitron.fr.js?v=20201110"
+    },
+    {
+      "type": "unknown",
+      "url": "https://finance-climact.fr/wp-content/themes/FinanceClimAct_2020/lib/tarteaucitronjs/lang/tarteaucitron.fr.js?v=20201110"
+    },
+    {
+      "type": "google",
+      "url": "https://www.google.com/recaptcha/api2/reload?k=6Lf7ddIZAAAAAHCWmN9HmroFqKzKIITgLx5B2xJm",
+      "details": {
+        "id": "google",
+        "message": "Use hosted Matomo instance"
+      }
+    }
+  ],
+  "cookies": [],
+  "headers": {
+    "cache-control": "max-age=0",
+    "content-encoding": "gzip",
+    "content-length": "12253",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Fri, 05 Jan 2024 00:10:51 GMT",
+    "expires": "Fri, 05 Jan 2024 00:10:51 GMT",
+    "link": "<https://finance-climact.fr/wp-json/>; rel=\"https://api.w.org/\"",
+    "server": "Apache",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.finance-climact.fr",
+      "ip": "164.132.127.165",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "finance-climact.fr",
+      "ip": "164.132.127.165",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "kit.fontawesome.com",
+      "ip": "104.18.40.68",
+      "geoip": {
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "tarteaucitron.io",
+      "ip": "51.68.111.231",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "ka-f.fontawesome.com",
+      "ip": "172.64.106.23",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "www.google.com",
+      "ip": "142.250.191.196",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "fonts.googleapis.com",
+      "ip": "142.250.190.10",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "www.googletagmanager.com",
+      "ip": "142.250.191.200",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "fonts.gstatic.com",
+      "ip": "142.250.190.35",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "www.gstatic.com",
+      "ip": "142.250.190.67",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "nljp.finance-climact.fr",
+      "ip": "91.134.109.31",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
