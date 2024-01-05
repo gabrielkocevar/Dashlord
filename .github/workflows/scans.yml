@@ -128,7 +128,7 @@ jobs:
         uses: "MTES-MCT/nmap-action@main"
         with:
           host: ${{ steps.hostname.outputs.value }}
-          outputDir: "scans" 
+          #outputDir: "scans" 
           outputFile: "nmapvuln.json"
           withVulnerabilities: true
           raw: false
