@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.territoiresentransitions.fr",
+        "size": 1204.636,
+        "nodes": 316,
+        "requests": 52,
+        "grade": "C",
+        "score": 69.0,
+        "ges": 1.62,
+        "water": 2.43,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 03:14:44.953028",
+        "page_type": "website"
+    }
+]

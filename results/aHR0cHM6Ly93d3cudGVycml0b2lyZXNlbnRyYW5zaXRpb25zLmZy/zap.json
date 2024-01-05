@@ -1,0 +1,1250 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Fri, 5 Jan 2024 03:22:13",
+	"site":[ 
+		{
+			"@name": "https://www.territoiresentransitions.fr",
+			"@host": "www.territoiresentransitions.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form>",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"email\" \"nom\" \"prenom\" ]."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact?email=zaproxy%40example.com&message=Zaproxy+alias+impedit+expedita+quisquam+pariatur+exercitationem.+Nemo+rerum+eveniet+dolores+rem+quia+dignissimos.&nom=ZAP&objet=1&prenom=ZAP",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form>",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"email\" \"nom\" \"prenom\" ]."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"email\" \"nom\" \"prenom\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "40"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-6",
+					"alert": "CSP: style-src unsafe-inline",
+					"name": "CSP: style-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-NTczZjI2ZjgtZDNhMi00NzY4LWI1OGYtMDY5NTk3ZmE0MTFl' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-YjZiYzY2M2MtNDA3Zi00NDlkLWJhM2MtZTE5YWNkYzljNmJi' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-OTAxYTZhYmEtOTU2Mi00ODYyLWJiNjYtOGVjMTQ1NGRjODVk' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/accessibilite",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-NGEwMDU5OWEtNDk2My00NjNmLWJiNDgtODU3ZWVlMzYwN2Q0' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-MWNjYjEwOTAtNjVmNS00MzlkLWEyNTctNzNkZWNmYjlmYTVh' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-ZDI0YjU1NDYtYmRkZS00ZDA3LThkYmItNWZmNTJkM2JjNGU2' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/faq",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-MmFiZTE3MzQtN2Y4ZC00OTcwLWJjOGUtZWM2ODYwOTU0NjE4' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/outil-numerique",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-MWJmYmIyNjItNjUwNi00ZjlkLWI0YWQtZDEyNmI0MDEzNmZj' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/programme",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-Y2Q3YjM5OGYtMDIwNS00ODBiLTk5N2EtYTY5Mzc4NzkwNDky' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-MzRmMDg4NGItZTI4OS00N2I1LWE2MDgtMWQ1YWZiZWVhOWZm' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-ODZhYzg3ZTYtMTljNi00YzFmLWFmN2UtMWMyMDRkNDcxODcw' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/stats",
+							"method": "GET",
+							"param": "content-security-policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-NGE0NmY1MzktMDY4Zi00MTdkLWFiYzEtNjRiYzQxNWRiNmY5' 'strict-dynamic';; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: ytimg.com https://phenomenal-trust-ee3da2c906.media.strapiapp.com; font-src 'self'; object-src 'none'; connect-src 'self' https://rlarzronkgoyvtdkltqy.supabase.co https://phenomenal-trust-ee3da2c906.strapiapp.com ws://localhost:3000; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src youtube.com www.youtube.com dailymotion.com www.dailymotion.com; block-all-mixed-content; upgrade-insecure-requests;",
+							"otherinfo": "style-src includes unsafe-inline."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
+					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "37"
+				},
+				{
+					"pluginid": "10044",
+					"alertRef": "10044",
+					"alert": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"name": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The server has responded with a redirect that seems to provide a large response. This may indicate that although the server sent a redirect it also responded with body content (which may include sensitive details, PII, etc.).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus/87",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 101 [/actus/87/pcaet-et-demarche-territoire-engage-transition-ecologique-climat-air-energie-un-duo-gagnant].\nPredicted response size: 401.\nResponse Body Length: 11,739."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus/93",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 155 [/actus/93/lintracting-des-collectivites-territoriales-retours-dexperience-sur-un-dispositif-de-financement-interne-pluriannuel-des-actions-climatairenergie].\nPredicted response size: 455.\nResponse Body Length: 11,793."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus/94",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 78 [/actus/94/la-metropole-de-grenoble-met-en-place-un-systeme-de-mobilite-durable].\nPredicted response size: 378.\nResponse Body Length: 11,716."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus/95",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 63 [/actus/95/forum-ouvert-remise-des-labels-retour-sur-la-jnc-2022].\nPredicted response size: 363.\nResponse Body Length: 11,701."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus/98",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 120 [/actus/98/la-10eme-journee-des-collectivites-citergie-sest-tenue-le-29-mai-a-rennes-et-a-rassemble-plus-de-150-personnes].\nPredicted response size: 420.\nResponse Body Length: 11,758."
+						}
+					],
+					"count": "5",
+					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
+					"otherinfo": "<p>Location header URI length: 101 [/actus/87/pcaet-et-demarche-territoire-engage-transition-ecologique-climat-air-energie-un-duo-gagnant].</p><p>Predicted response size: 401.</p><p>Response Body Length: 11,739.</p>",
+					"reference": "",
+					"cweid": "201",
+					"wascid": "13",
+					"sourceid": "124"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/accessibilite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/faq",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/outil-numerique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/programme",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/stats",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10037",
+					"alertRef": "10037",
+					"alert": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+					"name": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/accessibilite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/faq",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/outil-numerique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/programme",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/stats",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "x-powered-by: Next.js",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress \"X-Powered-By\" headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</p><p>http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/css/6c704f18f87c0894.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/accessibilite",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/faq",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/mentions",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/outil-numerique",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/programme",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/stats",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-YjZiYzY2M2MtNDA3Zi00NDlkLWJhM2MtZTE5YWNkYzljNmJi",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFD#f&3cc62\uFFFDC\\x0003vb\uFFFDCC\uFFFDB\uFFFD&\\x001362\uFFFDS\\x0013\uFFFD\\x00166F3\uFFFD3f&"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-NTczZjI2ZjgtZDNhMi00NzY4LWI1OGYtMDY5NTk3ZmE0MTFl",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFDSs6c#fc\uFFFD\uFFFDC6\\x0013\"\uFFFDCsc\uFFFD\uFFFD#S\uFFFDb\uFFFD\\x0003c\uFFFDS\uFFFDvf\\x0013C\\x0013\\x0016"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/accessibilite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-NGEwMDU5OWEtNDk2My00NjNmLWJiNDgtODU3ZWVlMzYwN2Q0",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFDF\\x0013\\x0003\\x0003S\uFFFD\uFFFD\\x0012\uFFFDC\uFFFDc2\uFFFDCc6b\uFFFD&#C\uFFFD\u04C3SvVVS3c\\x0003vC"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-MWNjYjEwOTAtNjVmNS00MzlkLWEyNTctNzNkZWNmYjlmYTVh",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFD\\x001666#\\x0013\\x0003\uFFFD\\x0002\uFFFDcVcR\uFFFDC3\uFFFDB\uFFFD\\x0013#Sr\uFFFDs6FV6f#\uFFFDf\\x0013V"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-ZDI0YjU1NDYtYmRkZS00ZDA3LThkYmItNWZmNTJkM2JjNGU2",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFDC#F#SSCb\uFFFD&FFR\uFFFDFC\\x0003r\u04C6F&\"\uFFFDVfcS&C6&3FS"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/faq",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-MmFiZTE3MzQtN2Y4ZC00OTcwLWJjOGUtZWM2ODYwOTU0NjE4",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFD&\\x0016&S\\x0013s3B\uFFFDvc\uFFFDB\uFFFDC\uFFFDs\\x0002\uFFFD&3\uFFFDR\uFFFDV3c\uFFFDc\\x0003\uFFFDSCc\\x0013"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/mentions",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-ODU3YjE5N2UtOTQ0Zi00ZTZjLWE2ZmQtYWY0NWI0Y2MxNzc5",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFDSv#\\x0013\uFFFDvR\u04D3CFb\uFFFDFSf2\uFFFD\\x0013ffB\uFFFD\\x0016cCV#F63\\x0013ss"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/outil-numerique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-MWJmYmIyNjItNjUwNi00ZjlkLWI0YWQtZDEyNmI0MDEzNmZj",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFD\\x0016&f&##c\"\uFFFDcS\\x0003b\uFFFDFc\uFFFDB\uFFFD#F\\x0016B\uFFFDC\\x0013#f#C\\x0003\\x00133ff"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/programme",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-Y2Q3YjM5OGYtMDIwNS00ODBiLTk5N2EtYTY5Mzc4NzkwNDky",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFD6Cv#3\uFFFD\uFFFDb\uFFFD\\x0003#\\x0003R\uFFFDC\uFFFD\\x0006\"\u04D3\uFFFDv\\x0012\uFFFD\\x0013c\uFFFD3s\uFFFDs\uFFFD\\x0003C\uFFFD"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-MzRmMDg4NGItZTI4OS00N2I1LWE2MDgtMWQ1YWZiZWVhOWZm",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFD3Fc\\x0003\uFFFD\uFFFDF\"\uFFFDS#\uFFFD\uFFFD\uFFFDCv#R\uFFFD\\x0013c\\x0003\uFFFD\uFFFD\\x0016CV\\x0016f&VV\\x0013\uFFFDf"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-ODZhYzg3ZTYtMTljNi00YzFmLWFmN2UtMWMyMDRkNDcxODcw",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFDf\\x00163\uFFFDvSb\uFFFD\\x0013\uFFFD3b\uFFFDF3\\x0016b\uFFFD\\x0016cvR\uFFFD\\x00163#\\x0003FCCs\\x0013\uFFFDs"
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/stats",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nonce-NGE0NmY1MzktMDY4Zi00MTdkLWFiYzEtNjRiYzQxNWRiNmY5",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD{\uFFFDF\\x0013CfcS3\uFFFD\uFFFD\\x0003c\uFFFDb\uFFFDC\\x0013vB\uFFFD\\x0016&3\\x0012\uFFFDcF&3C\\x0013VF#fc"
+						}
+					],
+					"count": "12",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\uFFFD\uFFFD{\uFFFD#f&3cc62\uFFFDC\\x0003vb\uFFFDCC\uFFFDB\uFFFD&\\x001362\uFFFDS\\x0013\uFFFD\\x00166F3\uFFFD3f&</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10024",
+					"alertRef": "10024",
+					"alert": "Information Disclosure - Sensitive Information in URL",
+					"name": "Information Disclosure - Sensitive Information in URL",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact?email=zaproxy%40example.com&message=Zaproxy+alias+impedit+expedita+quisquam+pariatur+exercitationem.+Nemo+rerum+eveniet+dolores+rem+quia+dignissimos.&nom=ZAP&objet=1&prenom=ZAP",
+							"method": "GET",
+							"param": "email",
+							"attack": "",
+							"evidence": "zaproxy@example.com",
+							"otherinfo": "The URL contains email address(es)."
+						}
+					],
+					"count": "1",
+					"solution": "<p>Do not pass sensitive information in URIs.</p>",
+					"otherinfo": "<p>The URL contains email address(es).</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "76"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs",
+							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected in the element starting with: \"<script nonce=\"NTczZjI2ZjgtZDNhMi00NzY4LWI1OGYtMDY5NTk3ZmE0MTFl\">self.__next_f.push([1,\"c:[[\\\"$\\\",\\\"section\\\",null,{\\\"id\\\":\\\"$un\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs",
+							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected in the element starting with: \"<script nonce=\"YjZiYzY2M2MtNDA3Zi00NDlkLWJhM2MtZTE5YWNkYzljNmJi\">self.__next_f.push([1,\"c:[[\\\"$\\\",\\\"section\\\",null,{\\\"id\\\":\\\"$un\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs",
+							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected in the element starting with: \"<script nonce=\"OTAxYTZhYmEtOTU2Mi00ODYyLWJiNjYtOGVjMTQ1NGRjODVk\">self.__next_f.push([1,\"c:[[\\\"$\\\",\\\"section\\\",null,{\\\"id\\\":\\\"$un\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/chunks/499-f1d1f6473dced6ee.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected in the element starting with: \" */var n=r(29832),a=r(55444),o={stream:!0},u=new Map;function x(e){var t=globalThis.__next_require__(e);return\"function\"!=typeof\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/chunks/499-f1d1f6473dced6ee.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[499],{85080:function(){\"trimStart\"in String.prototype||(String.prototyp\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/chunks/8593596e-2b0c42aaeb35edeb.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \" */var o,s=i(55444),m=i(24427),y={usingClientEntryPoint:!1,Events:null,Dispatcher:{current:null}};function t(n){for(var a=\"https\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"!function(){var t=\"undefined\"!=typeof globalThis?globalThis:\"undefined\"!=typeof window?window:\"undefined\"!=typeof global?global:\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/cgu",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<script nonce=\"YjYxN2E1YzItZTMzMC00MzM4LWFmNzYtYzZiZDhjMTgyNGRi\">self.__next_f.push([1,\"c:[\\\"$\\\",\\\"section\\\",null,{\\\"id\\\":\\\"$und\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/outil-numerique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs",
+							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected in the element starting with: \"<script nonce=\"MWJmYmIyNjItNjUwNi00ZjlkLWI0YWQtZDEyNmI0MDEzNmZj\">self.__next_f.push([1,\"d:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"g\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "9",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bBUGS\\b and was detected in the element starting with: \"<script nonce=\"NTczZjI2ZjgtZDNhMi00NzY4LWI1OGYtMDY5NTk3ZmE0MTFl\">self.__next_f.push([1,\"c:[[\\\"$\\\",\\\"section\\\",null,{\\\"id\\\":\\\"$un\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "37"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" aria-current=\"page\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" aria-current=\"page\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/accessibilite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/faq",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/outil-numerique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/programme",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/stats",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" aria-controls=\"modal-header__menu\" class=\"fr-nav__link\" href=\"/\">Accueil</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						}
+					],
+					"count": "11",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/accessibilite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/actus",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/faq",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/outil-numerique",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/programme",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/stats",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/chunks/499-f1d1f6473dced6ee.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 232974",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/chunks/8593596e-2b0c42aaeb35edeb.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 134345",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/css/6c704f18f87c0894.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 482",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/css/6e03d5fca0b042af.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 99164",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/_next/static/css/7d6b9e43f2b3f13f.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 149561",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						}
+					],
+					"count": "5",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "<p>The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use.</p>",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "60"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "40"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "40"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "40"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.territoiresentransitions.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "40"
+				},
+				{
+					"pluginid": "10031",
+					"alertRef": "10031",
+					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
+					"name": "User Controllable HTML Element Attribute (Potential XSS)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.territoiresentransitions.fr/contact?email=zaproxy%40example.com&message=Zaproxy+alias+impedit+expedita+quisquam+pariatur+exercitationem.+Nemo+rerum+eveniet+dolores+rem+quia+dignissimos.&nom=ZAP&objet=1&prenom=ZAP",
+							"method": "GET",
+							"param": "objet",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.territoiresentransitions.fr/contact?email=zaproxy%40example.com&message=Zaproxy+alias+impedit+expedita+quisquam+pariatur+exercitationem.+Nemo+rerum+eveniet+dolores+rem+quia+dignissimos.&nom=ZAP&objet=1&prenom=ZAP\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [content] attribute \r\n\r\nThe user input found was:\r\nobjet=1\r\n\r\nThe user-controlled value was:\r\nwidth=device-width, initial-scale=1"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.territoiresentransitions.fr/contact?email=zaproxy%40example.com&message=Zaproxy+alias+impedit+expedita+quisquam+pariatur+exercitationem.+Nemo+rerum+eveniet+dolores+rem+quia+dignissimos.&nom=ZAP&objet=1&prenom=ZAP</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [meta] tag [content] attribute </p><p></p><p>The user input found was:</p><p>objet=1</p><p></p><p>The user-controlled value was:</p><p>width=device-width, initial-scale=1</p>",
+					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
+					"cweid": "20",
+					"wascid": "20",
+					"sourceid": "76"
+				}
+			]
+		}
+	]
+}
