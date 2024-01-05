@@ -1,0 +1,473 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://via.batch.com/v3/bootstrap.min.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn-1.keia.io/www.gouvernement.fr/6a992d5529f459a44fee58c733255e86.json"
+    },
+    {
+      "type": "unknown",
+      "url": "https://via.batch.com/manifest.json"
+    },
+    {
+      "type": "unknown",
+      "url": "https://via.batch.com/3.5.0/sdk.min.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://via.batch.com/3.5.0/native.min.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://ws.batch.com/web/3.5.0/ev/9D27493CF8A0417AA75B0A1C341C0C3E"
+    },
+    {
+      "type": "unknown",
+      "url": "https://ws.batch.com/web/3.5.0/ev/9D27493CF8A0417AA75B0A1C341C0C3E"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "incap_ses_1607_208930",
+      "value": "xMJ2ekg8syNxz0t2oDZNFqzel2UAAAAAwbPPZ8V1X7Dc65Win5323A==",
+      "domain": ".gouvernement.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_1286_208930",
+      "value": "BbM1SsUpnhNtuAzYJsvYEazel2UAAAAAntU0wIxJjfkH+sqNIVNVOQ==",
+      "domain": ".gouvernement.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_1307_208930",
+      "value": "vbQlZR0YGwXym4zhh2YjEqvel2UAAAAAVKHlCJ5VR7fBKeBPZ1wQeQ==",
+      "domain": ".gouvernement.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "___utmvc",
+      "value": "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",
+      "domain": "www.gouvernement.fr",
+      "path": "/",
+      "expires": 1704451776,
+      "size": 3012,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "visid_incap_208930",
+      "value": "O7rEd5IfSyKud4JaWYcxWqvel2UAAAAAQUIPAAAAAADGYJ3wbblWwXlYE6HsbQLk",
+      "domain": ".gouvernement.fr",
+      "path": "/",
+      "expires": 1735920858.641698,
+      "size": 82,
+      "httpOnly": true,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_1542_208930",
+      "value": "Lw+0UKX54Hd5BnmiaUlmFavel2UAAAAAaNhaViQQruAw5FC7cmmPEw==",
+      "domain": ".gouvernement.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "nlbi_208930",
+      "value": "ql0VeBrpmF+L0xJrfC0FqAAAAADQ4sC9UOHXbmqAdiOVtVm3",
+      "domain": ".gouvernement.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 59,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_1538_208930",
+      "value": "UvWXCVyl53FMRODCbBNYFazel2UAAAAA5obvC34/hDaCzbCoAHGAxw==",
+      "domain": ".gouvernement.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "incap_ses_1350_208930",
+      "value": "4r6hGc2gxwLnJN41xCq8Eqzel2UAAAAAGf9ZznEN9vbHrD7PPM1cSg==",
+      "domain": ".gouvernement.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 77,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "age": "799",
+    "cache-control": "max-age=86400, public",
+    "cache-tags": "homepage,website",
+    "content-encoding": "gzip",
+    "content-length": "440549",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Fri, 05 Jan 2024 10:49:16 GMT",
+    "ec-policy-version": "V3.8.6V",
+    "last-modified": "Fri, 05 Jan 2024 10:35:57 GMT",
+    "server": "ECAcc (dce/26DE)",
+    "vary": "Accept-Encoding",
+    "x-cache": "HIT",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-iinfo": "10-186476835-186471014 pNNy RT(1704451006984 10) q(0 0 0 0) r(6 6) U24",
+    "x-varnish-cache": "HIT",
+    "x-xss-protection": "1; mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.gouvernement.fr",
+      "ip": "192.229.211.115",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "via.batch.com",
+      "ip": "104.152.113.110",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "cdn-1.keia.io",
+      "ip": "51.159.204.229",
+      "geoip": {
+        "city": {
+          "geoname_id": 2988507,
+          "names": {
+            "de": "Paris",
+            "en": "Paris",
+            "es": "París",
+            "fr": "Paris",
+            "ja": "パリ",
+            "pt-BR": "Paris",
+            "ru": "Париж",
+            "zh-CN": "巴黎"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8323,
+          "longitude": 2.4075,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "75001"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 2968815,
+            "iso_code": "75",
+            "names": {
+              "de": "Paris",
+              "en": "Paris",
+              "es": "Paris",
+              "fr": "Paris"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "ws.batch.com",
+      "ip": "147.135.182.14",
+      "geoip": {
+        "city": {
+          "geoname_id": 3017178,
+          "names": {
+            "en": "Fresnes",
+            "ru": "Френ"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.7529,
+          "longitude": 2.3224,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "94260"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 2971090,
+            "iso_code": "94",
+            "names": {
+              "de": "Val-de-Marne",
+              "en": "Val-de-Marne",
+              "es": "Valle de Marne",
+              "fr": "Val-de-Marne"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
