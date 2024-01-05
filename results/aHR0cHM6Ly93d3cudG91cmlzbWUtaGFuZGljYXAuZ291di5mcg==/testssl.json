@@ -1,0 +1,1138 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered + downgraded to weaker protocol"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
+          }
+,         {
+              "id"           : "cipher-tls1_2_xc030",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH 521   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipher-tls1_2_xc02f",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH 521   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "supportedciphers_TLSv1_2",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1 secp384r1 secp521r1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'extended master secret/#23'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 300 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "cert_compression",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "N/A"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA384 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "CD9533A3FC487CF7AE4758985A1E529F"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "16"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "8F119F2C00BE8BBFA48DFCB1B5D3B17EDB9B5BF0"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "666843C3A10127A027257C0A262AF6C0628A1E8CFD102B6B9DC88FE1BC4174E6"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIIUjCCBrqgAwIBAgIRAM2VM6P8SHz3rkdYmFoeUp8wDQYJKoZIhvcNAQEMBQAwVjELMAkGA1UEBhMCRlIxDjAMBgNVBAoTBUdhbmRpMTcwNQYDVQQDEy5HYW5kaSBSU0EgRG9tYWluIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBDQSAzMB4XDTIzMTEyOTAwMDAwMFoXDTI0MTIwMTIzNTk1OVowJzElMCMGA1UEAxMcd3d3LnF1YWxpdGUtdG91cmlzbWUuZ291di5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKDdVqNd+geIBdle/hFXNqBM8J0lA6cGzoimw/Ae/UXPSDrdOZMToE5jOHLN+2TphEDK+YclDKmPGcsT/jadzenPnUTLgQ68x/BCxO91EvcnjD75v8ZdqFdW7XpHiaWNSHhY3QQoWsZJYvFAxTAid3XKhiHZ6/cue2huqNztIpKhnkjhY4kctE8xgIUt3STvKhtxl6LX13GJPWbcfHDAU/ykHTEKhcszrLGL2/pTcR1elgtjkGO2eK57p2wrEDR/49WiuncmKMmOxnDKDTfcZGzgvpt3Ic+TCGA5izzH917/5AoOhM8rV5pUWMnfddnUOtDxOSpya2SfFymN7Eth/jkCAwEAAaOCBMgwggTEMB8GA1UdIwQYMBaAFIERkt5mMqWwWzM9ZUOF/NQELfGuMB0GA1UdDgQWBBRzqiDlVGOKJcA+mah8gKp2ItSaDTAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSQYDVR0gBEIwQDA0BgsrBgEEAbIxAQICGjAlMCMGCCsGAQUFBwIBFhdodHRwczovL3NlY3RpZ28uY29tL0NQUzAIBgZngQwBAgEwgYMGCCsGAQUFBwEBBHcwdTBOBggrBgEFBQcwAoZCaHR0cDovL2NydC5zZWN0aWdvLmNvbS9HYW5kaVJTQURvbWFpblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQTMuY3J0MCMGCCsGAQUFBzABhhdodHRwOi8vb2NzcC5zZWN0aWdvLmNvbTCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHUAdv+IPwq2+5VRwmHM9Ye6NLSkzbsp3GhCCp/mZ0xaOnQAAAGMG18QiQAABAMARjBEAiB3ydtFC3UoXFoonhsWwFknX46OYktC7htRqni7qApu7wIgSXZGAAzwZLwH4gSqm1FnCa0mBMXuPD2VbtN/DBUJl0YAdwA/F0tP1yJHWJQdZRyEvg0S7ZA3fx+FauvBvyiF7PhkbgAAAYwbXxFpAAAEAwBIMEYCIQCBJzm0pgBg7WuCLmZxVOKbjvwxHJrYKVyjk9/Yh0Y+8gIhAIFf2SnwIaDJg1VYiIWn6tjYTSpypv0arIZGIINXpt8nAHYA7s3QZNXbGs7FXLedtM0TojKHRny87N7DUUhZRnEftZsAAAGMG18QtgAABAMARzBFAiBII2ORr+q7BOJlTti9OSHJS6dJh7/6HLL8WTlmQIy4nAIhAKX93s+XaZMSu9seW5blm0A/WDHKnWBUeXNRCSLd9p0eMIIB8AYDVR0RBIIB5zCCAeOCHHd3dy5xdWFsaXRlLXRvdXJpc21lLmdvdXYuZnKCFWluZHVzdHJpZWxsZXMuZ291di5mcoIhaW50ZWxsaWdlbmNlLWFydGlmaWNpZWxsZS5nb3V2LmZyghFqb2JzaW5hdHRlbmR1cy5mcoIOam9pbnRoZWdhbWUuZnKCHm1ldHJvbG9naWUuZW50cmVwcmlzZXMuZ291di5mcoIYcXVhbGl0ZS10b3VyaXNtZS5nb3V2LmZygiVyZWMtYm8tZGdlLXByb2ZpbGUuYmVyY3kuYWN0aW1hZ2UubmV0ghlzZW1haW5lLWluZHVzdHJpZS5nb3V2LmZyghlzaXNzZS5lbnRyZXByaXNlcy5nb3V2LmZyghl0b3VyaXNtZS1oYW5kaWNhcC5nb3V2LmZyghl3d3cuaW5kdXN0cmllbGxlcy5nb3V2LmZygiV3d3cuaW50ZWxsaWdlbmNlLWFydGlmaWNpZWxsZS5nb3V2LmZyghV3d3cuam9ic2luYXR0ZW5kdXMuZnKCHXd3dy5zZW1haW5lLWluZHVzdHJpZS5nb3V2LmZygh13d3cuc2lzc2UuZW50cmVwcmlzZXMuZ291di5mcoIdd3d3LnRvdXJpc21lLWhhbmRpY2FwLmdvdXYuZnIwDQYJKoZIhvcNAQEMBQADggGBACXR74RmlzS19LPqGaUDDRI0Ve6PulFZ0oxBrZAzB/WGB8hdhh6RNoDS+RdvqB0bd49mnSNdgajhL4CEMFDr2K5CZyu7CtQi0UQE//x0ta3YDnpwtPGDbcCu/mvNuA5YyEHfrObR9ZsXXA/EG7WDVbGbuDIpYiC6dbRZz710D1mWGGLZG0gUq8GftT4EVnJBRYTlDEUc8yIlxhKWHZAohj4nHQvaf9U9YHEqobi0WdKH++bRhPHJrQ2gNB3PhtWSUWA7RGECg2CyejkDTtdt8YLFF2LC82oljzoogk6Hfu6yko2BR104+QwRWR38xYVWXJEjil+qitY4kSc6W7W5tqbMLBXdKRe0XmXQ3tXBFifCLLjWkXulYmTcl+lH/pibh/6hqLsV+oVV8gz91Y36WJ7IYBQNHaJiHP/a+SNQF3rcA4/hGxxmEv1w3T/LK7vdHPIwDDjEBGlVXcKe3Nknw/oLrvvr5x0MdynxkCUXO92tyDX5BUFSuNeChQ8O6wyVyA==\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "www.qualite-tourisme.gouv.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "bo-cnnumerique.bercy.actimage.net"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "www.qualite-tourisme.gouv.fr industrielles.gouv.fr intelligence-artificielle.gouv.fr jobsinattendus.fr jointhegame.fr metrologie.entreprises.gouv.fr qualite-tourisme.gouv.fr rec-bo-dge-profile.bercy.actimage.net semaine-industrie.gouv.fr sisse.entreprises.gouv.fr tourisme-handicap.gouv.fr www.industrielles.gouv.fr www.intelligence-artificielle.gouv.fr www.jobsinattendus.fr www.semaine-industrie.gouv.fr www.sisse.entreprises.gouv.fr www.tourisme-handicap.gouv.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN (SNI mandatory)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "331 >= 60 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-11-29 00:00"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-12-01 23:59"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://ocsp.sectigo.com"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Gandi RSA Domain Validation Secure Server CA 3 (Gandi from FR)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIGXDCCBESgAwIBAgIRAOkH5f+AdSJBCZB9ZyjKABAwDQYJKoZIhvcNAQEMBQAwgYgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpOZXcgSmVyc2V5MRQwEgYDVQQHEwtKZXJzZXkgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMS4wLAYDVQQDEyVVU0VSVHJ1c3QgUlNBIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTIzMDgwMjAwMDAwMFoXDTMzMDgwMTIzNTk1OVowVjELMAkGA1UEBhMCRlIxDjAMBgNVBAoTBUdhbmRpMTcwNQYDVQQDEy5HYW5kaSBSU0EgRG9tYWluIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBDQSAzMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAwrwuXKdKIiD9eu4fsNjLN0mS8HsTdDFyPPB5F5uUd6SJGutc7sqDd3T/p+gnVoAZERvzAz8+OEux1GN1UJ+Gd8s5btXJCbDV5DpvzJOhfztk5JmFKz2XBka+MvDAgiyiZKs3G6yoMk8lEOu6NOsK3X8D1w0E6/C/ROa6Ml0ROnKm7vHGNVTfXTP5IqiNh2JXmp4vD23gemf8nfuI2FngayMNsjm6SwpVYWfT3S8jn5el52FKzwo+uKVZAjNH1ulgWoyO8p+PCsP+CvaEGDId3leSUVhPBBPRsxL42jjqo9aOKREgmrGco39JGf4OImxM8vKxQ9AjDrRTRETB9V9jbRf3v3Tojt3vBBwa3xQelVp9xUWQxo/5dV73g/c7WWAvZ628XUw6k6vn6bY7qWuhehUO02plRLd5zP8nBORCbPmFCI97lZAnDYLprB4e9IgCPJp+0zQDLr9o+eNKtR0a2Txb6nzGahIPi3a7QCH6+Yq4iwYVEQm+e6KBJZOm+YiLAgMBAAGjggFwMIIBbDAfBgNVHSMEGDAWgBRTeb9aqitKz1SA4dibwJ3ysgNmyzAdBgNVHQ4EFgQUgRGS3mYypbBbMz1lQ4X81AQt8a4wDgYDVR0PAQH/BAQDAgGGMBIGA1UdEwEB/wQIMAYBAf8CAQAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMCIGA1UdIAQbMBkwDQYLKwYBBAGyMQECAhowCAYGZ4EMAQIBMFAGA1UdHwRJMEcwRaBDoEGGP2h0dHA6Ly9jcmwudXNlcnRydXN0LmNvbS9VU0VSVHJ1c3RSU0FDZXJ0aWZpY2F0aW9uQXV0aG9yaXR5LmNybDBxBggrBgEFBQcBAQRlMGMwOgYIKwYBBQUHMAKGLmh0dHA6Ly9jcnQudXNlcnRydXN0LmNvbS9VU0VSVHJ1c3RSU0FBQUFDQS5jcnQwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wDQYJKoZIhvcNAQEMBQADggIBADvVncOMStREyA00ZSRUmrkmR3KzAlHVz06X1ydG9EpZz+JTQMWO809buLbDnr6t9z9jVnsDTQnWcMG4qiIkwhJVLxOVXUO+LFSBMskOe1SPBtHwHS42DeZ8QTgbRlW9p/Ey9wIo+MS2tryQ9eaDTkc2FBed/82VjrdsQoeoTyuDdp4tqarixjM/iJMgyEAMCpTkx4EqXJ/z7qgXusacsxMzt6NLv7FYcaKGbwjKqzrRvEk/+ZYnZc5mxnautf0uwRCcOe0kCOh1fd+g6Tyd+cSj6oGcJY/f/Db0sxELpzGqjRkbXan+eMojQfsgIe1n7SVyI5Yxz2RnQQL5ZT5K1mBcucqsTqkk3C7L3hF4hkwC/Otm+badymHQcnbE1Pmz6ymqj2vtwT0mEQzetQdbvv3jc3ey4YcxirAM1ihxtXeINsEP1ndUV/0v+qqmk9iCoIjZQce8vAdziZqBYxO3NiZwTRAtqseiZWLJqQ077fy3ebdjmw6y5U+DhDW2kxF/e+FJnu53DuY5/bE+oUneY770A7BfCuH+6uhEOaMNsn21AHymLr1xlRPQYR0DMgHmsGTqdINcQfot1mlIXr05HQUK0b84CPgEU0zvVQL+j9dc/4rh2sR6rl//tjG01Q+zQKStnR2NlNNrElDUC9IDmvL9JcF20cvOlE4R0lfTXa1k\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "F0104FF17274608F1A18A1E1EABF8E68A51F500A87E2EFA22ECB622763FEF4CF"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-08-02 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2033-08-01 23:59"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Gandi RSA Domain Validation Secure Server CA 3 <-- USERTrust RSA Certification Authority"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "301 Moved Permanently ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1704443299"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "nginx"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:;"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1;mode=block"
+          }
+,         {
+              "id"           : "Access-Control-Allow-Origin",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "*"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control_multiple",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple Cache-Control headers. Using first header: max-age=600"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=600"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable, no RSA key transport cipher"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "no protocol below TLS 1.2 offered"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=666843C3A10127A027257C0A262AF6C0628A1E8CFD102B6B9DC88FE1BC4174E6"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "no DH key with <= TLS 1.2"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "not vulnerable, no SSL3 or TLS1"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "27"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "36"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "93"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "A+"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "www.tourisme-handicap.gouv.fr/80.87.236.14",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "56"
+          }
+]
