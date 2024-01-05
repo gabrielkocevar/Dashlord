@@ -1,0 +1,4409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ZAP Scanning Report</title>
+<style type="text/css">
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #000;
+	font-size: 13px;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 32px
+}
+
+h3 {
+	font-size: 16px;
+}
+
+table {
+	border: none;
+	font-size: 13px;
+}
+
+td, th {
+	padding: 3px 4px;
+	word-break: break-word;
+}
+
+th {
+	font-weight: bold;
+	background-color: #666666;
+}
+
+td {
+	background-color: #e8e8e8;
+}
+
+.spacer {
+	margin: 10px;
+}
+
+.spacer-lg {
+	margin: 40px;
+}
+
+.indent1 {
+	padding: 4px 20px;
+}
+
+.indent2 {
+	padding: 4px 40px;
+}
+
+.risk-3 {
+	background-color: red;
+	color: #FFF;
+}
+
+.risk-2 {
+	background-color: orange;
+	color: #FFF;
+}
+
+.risk-1 {
+	background-color: yellow;
+	color: #000;
+}
+
+.risk-0 {
+	background-color: blue;
+	color: #FFF;
+}
+
+.risk--1 {
+	background-color: green;
+	color: #FFF;
+}
+
+.summary {
+	width: 45%;
+}
+
+.summary th {
+	color: #FFF;
+}
+
+.alerts {
+	width: 75%;
+}
+
+.alerts th {
+	color: #FFF;
+}
+
+.results {
+	width: 100%;
+}
+
+.results th {
+	text-align: left;
+}
+
+.left-header {
+	display: inline-block;
+}
+</style>
+</head>
+<body>
+	<h1>
+		<!-- The ZAP Logo -->
+		<img
+			src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAABqbAAAamwHdbkbTAAAAB3RJTUUH4QsKDDQPKy6k8AAABxpJREFUWMO9l31sVWcdxz+/55xzbwt9QddJExClvIzNxTKJDZi22oJSbFZpmRb4g8sfhpEIwXQNTKh0NYgiMKIwo5AsdIxdQldGNBN5W2OTFRVcIZE1YwExcXOdc1DK+nLvOc/PP87tC9CWsj98bp6ck3Ofc57v7+37/T3wYGMucBR4F/gK/8exAugAdPXq1bpx40YFekZdHYuP+8PuGP+lAc8CmzIyMtLq6uqora3FcRwAzp49m/7Wv5O95tsNEfyEKvwH9B1V2hT7GnB+PABkhGePAvVA9dy5c6mvr2fp0qX3LOru7iYrK4toSQ1OXhGKohpOiyVQe0NVn9PGFb8iFofGFSMCMMPulwEXgbdXrlxZ3dHRQXt7+4ibA2RmZtLc3Ex/y/O4fg8RMUSMS8RxiRiPqPE+4xrnl07syA3Q+aN5wADlwO1oNPpqQ0NDfl9fH4cPH2bOnDn3dV9VVRWVlVV88vsteNF0XCO4xuA6Bs9xiBgPz/EmueKcIxavHyk/BPjnli1bpm3btu1TZ2hmxkTk8aeYMK8aay1WFVWwqgSqBDYgqQFJGxygccWa4e86IhJpbW39Zk5ODgUFBZ8KwOLFZeyr/wHZs0vw0jMxIqFpAuFt+EOYZ/OrAi41t96dhF8HThcWFnpnzpwhGo0+MIhnamvZs+8AM55uIhn4+Cnrkza8Wqv4NiBhfXwNCgxy3jauuKMKPOCPrpHSU2fOUlJS8sAg8qZP50bGY0xeuIFk4JO0SnIYiMAqSRuQDPyPgsbqh++ugqSsPXGC+WsoLS1lzZqnHxhA40svcfPvfyDNjRARwTOCJ+E0IjgiOGIwRnIkFl97NwBMX9dPvEfLSC+t5cCB/eTk5Ix78ylTplBcXMxDjy3EweIZISKSqoxwcyOCYwRXHETkuSEAsTjE4kVGTLrjpdP7p33U1NTQ2dk5bgCbN28Ow7BoA8YmcVOWR1KWuyKIgEEwYjBiJhN75Ushr15qRp747g9dcRZ4RtCuf3HhdBMlpQuZNm3auAAUFBRw+fJlWl/dy9SCaqwGIBIyJGBTUwemWqzy/mAIRPmaEUGsJeNbz+IVfJ+ioiI2bNgwbi80NTUxJWciV47/GM9Lwwg4CA6CSblbBqYYRPjqEACRR8JaVcRPkPHlJ5m66kX27W8kL2/6uMPR3t7Ox+++yQcXjmLEIEYQA8YIkuIHSYVDkBnDk3DSEDwAi5c5mUfWNtGVPovc3FwOHTp0XwDZ2dm0nTvH9Td+zSedVxDVkIQAEQ1BoIgKCpnmflqpQcAXyjYxo6KeVatWUVZWRiKRGPO1+fPns2vXLjoOr7uvFA8HcHMoQ8IHmkqOINnH1d81kJeXR0VFRcqKkUcQBLS0tHD79u2QXHq7UmkIqgKqoIKKAnQPNiSqXFG0QFVCXbcGK4pVIdnTBcDOnTupqqoa06q2tjZKS0uZ8LmZzKiox5nwWXzfx9qBfmGgCkDRa4MeUNE3repg2QSEiwMFk5nDF8vrWLZsGTNnzqS9vX1UAEVFRezYsYOeD68y8fNPEFifAL2rDAfBnJdhGv0NzzgtoYYbHGOICkSMIWKEqBE8x+X91v18cKGJyspKDh48SFZW1ohAlixZQstfLzM99iK9iQQJqySsxVfFDyz9Nolv/fw7gumsPtIbMZE0zxhcR3DFEDVCZIDTjeA5Drb3Jv84sYOu639j69atNDQ0jAgiN3cyPQ/NJXvhM/QnEwRW8dWSDAL6bbLTHlyee0cVWNWfBhpgVbEWfFUSqiSGqVoyCCCaxayndjKn+nm2736BzIyJHDt27B4AFy9eovvtU3R3nA5DkFJEXwNUtWHEptSsPtIXNW7UMy4mJSLeMA+4IrhCKC6A46XR+VYz772xj/z8fJqampg1a9bg906ePElZWRlZy3+DZuSGPUGQ/G/QuDznHjVMeaEyaS2+WqxVbMryxMDVKv0W+qzSr0pPoo/Mx8uZs/51rgdTmD17NrFYbJArFi9ezKZNm7h1dD1B4JO0PgG23KR6QxnlYLHXM846z7i4oX4P6vmA9Q6ENMsQZyiGxK1OPjr5M5Kd77B7925qamoAWLBgAX+59jFU7tmivy3fPvq5INXDSyx+3DXOd1xx8YzBiGBMKCIDwmKMDLEWEnoMUDdK37U2bp/6BQ9PSueV+BEWLVpEdnYW3be6f67wo7EOJoMgiMX3uuKs84zBEQcjghjBMCAmhF1niskGCMaiqFWs8ehrj+Off5nCwkK2b99OcXExwFTgvdEB3AmizIi85oqTNgDCSKrPFWV4DFRD/beqWLX4YUXdst0ffk+b168CVqZWpwN9YwO4Wzhi8c1GpM6ISTcYREJPMOSAQYZLHc1upY5meyjfBq/XAUwGbgL9Y4dgrBGLFwtSITAPkekCk1L73wS9qsoFxR6nceWfx/O5/wGLCSMJ+zJrfwAAAABJRU5ErkJggg=="
+			alt="" />
+		ZAP Scanning Report
+	</h1>
+	<p />
+	
+
+	<h2>
+		
+		Site: https://www.antai.gouv.fr
+		
+	</h2>
+
+	<h3>
+		Generated on Fri, 5 Jan 2024 05:13:56
+	</h3>
+
+	<h3>
+		ZAP Version: 2.14.0
+	</h3>
+
+	
+		<h3 class="left-header">Summary of Alerts</h3>
+		<table class="summary">
+			<tr>
+				<th width="45%"
+					height="24">Risk Level</th>
+				<th width="55%"
+					align="center">Number of Alerts</th>
+			</tr>
+			<tr>
+				<td class="risk-3">
+					<div>High</div>
+				</td>
+				<td align="center">
+					<div>0</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="risk-2">
+					<div>Medium</div>
+				</td>
+				<td align="center">
+					<div>4</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="risk-1">
+					<div>Low</div>
+				</td>
+				<td align="center">
+					<div>5</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="risk-0">
+					<div>Informational</div>
+				</td>
+				<td align="center">
+					<div>9</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="risk--1">
+					<div>				False Positives:</div>
+				</td>
+				<td align="center">
+					<div>0</div>
+				</td>
+			</tr>
+		</table>
+		<div class="spacer-lg"></div>
+	
+
+	
+		<h3>Alerts</h3>
+		<table class="alerts">
+			<tr>
+				<th width="60%" height="24">Name</th>
+				<th width="20%"
+					align="center">Risk Level</th>
+				<th width="20%"
+					align="center">Number of Instances</th>
+			</tr>
+			<tr>
+				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">4</td>
+			</tr>
+			<tr>
+				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">4</td>
+			</tr>
+			<tr>
+				<td><a href="#10099">Source Code Disclosure - PHP</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
+				<td><a href="#10003">Vulnerable JS Library</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
+				<td><a href="#10110">Dangerous JS Functions</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
+				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">5</td>
+			</tr>
+			<tr>
+				<td><a href="#10035">Strict-Transport-Security Header Not Set</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">12</td>
+			</tr>
+			<tr>
+				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">9</td>
+			</tr>
+			<tr>
+				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">12</td>
+			</tr>
+			<tr>
+				<td><a href="#10094">Base64 Disclosure</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">6</td>
+			</tr>
+			<tr>
+				<td><a href="#10027">Information Disclosure - Suspicious Comments</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">10</td>
+			</tr>
+			<tr>
+				<td><a href="#10109">Modern Web Application</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">4</td>
+			</tr>
+			<tr>
+				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">2</td>
+			</tr>
+			<tr>
+				<td><a href="#90005">Sec-Fetch-Dest Header is Missing</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#90005">Sec-Fetch-Mode Header is Missing</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#90005">Sec-Fetch-Site Header is Missing</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#90005">Sec-Fetch-User Header is Missing</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#10049">Storable and Cacheable Content</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">12</td>
+			</tr>
+		</table>
+		<div class="spacer-lg"></div>
+	
+
+	
+		<h3>Alert Detail</h3>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10202"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Absence of Anti-CSRF Tokens</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
+							<br />
+						
+							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
+							<br />
+						
+							<div>CSRF attacks are effective in a number of situations, including:</div>
+							<br />
+						
+							<div>    * The victim has an active session on the target site.</div>
+							<br />
+						
+							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
+							<br />
+						
+							<div>    * The victim is on the same local network as the target site.</div>
+							<br />
+						
+							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;lunr-search-block-form&quot; action=&quot;/recherche&quot; method=&quot;GET&quot; id=&quot;lunr-search-block-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search--2&quot; ].</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/">https://www.antai.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;lunr-search-block-form&quot; action=&quot;/recherche&quot; method=&quot;GET&quot; id=&quot;lunr-search-block-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search--2&quot; ].</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;lunr-search-block-form&quot; action=&quot;/recherche&quot; method=&quot;GET&quot; id=&quot;lunr-search-block-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search--2&quot; ].</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;lunr-search-block-form&quot; action=&quot;/recherche&quot; method=&quot;GET&quot; id=&quot;lunr-search-block-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search--2&quot; ].</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">4</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
+							<br />
+						
+							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
+							<br />
+						
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Use the ESAPI Session Management control.</div>
+							<br />
+						
+							<div>This control includes a component for CSRF.</div>
+							<br />
+						
+							<div>Do not use the GET method for any request that triggers a state change.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
+							<br />
+						
+							<a href="https://cwe.mitre.org/data/definitions/352.html">https://cwe.mitre.org/data/definitions/352.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10038"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Content Security Policy (CSP) Header Not Set</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/">https://www.antai.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">4</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
+							<br />
+						
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a>
+							<br />
+						
+							<a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10099"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Source Code Disclosure - PHP</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Application Source Code was disclosed by the web server - PHP</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;?=Z4giWäÛ- ÔîÐ¥-À¦ß¾îÐ¼¾Zé`ÝzþØ!9;O1;Ø^Ò7ÒÎt;ñjI7hÎÒjn7ñéÍiª½$éÍyCTÔùq&gt;Æ5ý&quot;fÁó±n³´(béèºAòÆÁ§Ú÷«-³4O ZºzîÐ¼ ¦µ&#39;^nÐ¥I xPéêUºCsÆ rñÒ7qîÐ¼f|µV®NÒ³ô0)}WéÍi8x7}áLwhNÒlpÜUËçC¾&amp;Ý¢y#0Ô¶ç§Gæ,í
+|»:Ó³´ØôÛwÓRÒ7Òr}|°n=ÿ@ìçÕjv°¼0¥;4o¤	évâÕnÐ¥Õ ÝnâÒ7Ò*T{HÒó¨¨óó|\wR¯·ÞùX7ÄÍYZ±tô
+Ý yãàSíûÕÏÏÍY&#39;-]½JwhÞHPÓÚ/I7hÎÒ$WpéêUºCsÆ rñÒ7qîÐ¼f|½V®NÒ³ô0¸Z+ßÄUºCóF%ÞM_8Ó4ÆwÕòÄù¯I·hÞH#õ-àùéÑ¢9K» ßn¥Îtæ,m6ýöÝ´tæ´\¬[Ï?;$gçé f;ÀSºCóFújeºxµ¤4gi5@·øtæ4
+ÕÞtæ¼!*ê¼¾ÂÆµwÕ;ëØ¡9K&quot;^¡$o|ª}¿úùÙÑ¢9Kó¢¡¥«WéÍéjZ{â%éÍYâz®^¥;4gi /}WéÍiÉ1KW&#39;éÍYzD\oþoâ*Ý¡y#MÀï¦/éÍIc»jyâ|È×¤[4o¤úÁðüôhÑ¥]Ao·RgºCs¶ ~ûnZJºCóFZ®Ö­ç³ót³à)Ý¡y#MàL·¯tæ,­èvp_îÐ¼FP¡Ú;@nÐ7De@çãêìÿ·óá¿|&gt;|/Ý¢9K&quot;^¡$o|ª}¿úË÷Ðùþ!tæ,Í®^¥;4o¤¨ií¤4giTºzîÐ¥1\¼ôM\¥;4o¤&amp;Ç,]¤4géa!Rú&amp;®Ò7Ò,qðnúÂîÐ¤1&amp;Øà¸«&#39;Î|MºEóFa¨lÏOÍYÚùv(u¦;4gi°é·ï¦¥¤;4o¤åúø`ÝzþØ!9;O1;Ø^Ò7ÒÎt;ñjI7hÎÒjn7ñéÍé«U¨ö¤4çQð½ª¯7§@ÿ·óa¿|&gt;l/Ý¢9K&quot;^¡$o|ª}¿úË÷Ð~ùþ!tæ,Í®^¥;4o¤¨ií¤4giTºzîÐ¥1\¼ôM\¥;4o¤&amp;Ç,]¤4géa!Rú&amp;®Ò7Ò,qðnúÂîÐ¤1&amp;Øà¸«&#39;Î|MºEóFa¨lÏOÍYújäÛ- ÔîÐ¥-À¦ß¾îÐ¼ëãuëùbäì&lt;Äì`xaJwhÞH8ÓíÄ«%Ý 9K«ºÜÄ¤;4o¤T¨ö¤4çQPççù¸~ÂuCìÐ¥Å@KG¯Ð7Î&gt;Õ¾_ýüìhÑ¥yÑÐÒÕ«tæô 5­=ñtæ,MÁJW¯Ò³4¾«tæ4Ãä¥«tæ,=&quot;DJßÄUºCóF%ÞM_8Ó4ÆwÕòÄù¯I·hÞH#õ-àùéÑ¢9K» ßn¥Îtæ,m6ýöÝ´tæ´\¬[Ï?;$gçé f;ÀSºCóFÀn&#39;^-éÍYZÐíà&amp;¾ Ý¡y# Bµw$Ý 9oÊ:?ÎÇõäXð|¬bæ,-X:zn¼qFð©öýêçgGæ,Í®^¥;4o¤¨ií¤4giTºzîÐ¥1\¼ôM\¥;4o¤&amp;Ç,]¤4géa!Rú&amp;®Ò7Ò,qðnúÂîÐ¤1&amp;Øà¸«&#39;Î|MºEóFa¨lÏOÍYÚùv(u¦;4gi°é·ï¦¥¤;4o¤åúø`ÝzþØ!9;O1;Ø^Ò7ÒÎt;ñjI7hÎÒjn7ñéÍiª½$éÍyCTÔùq&gt;®é~ýõÎÇº!vhÎÒb ¥£WèÉgjß¯~~v´hÎÒ&lt;hhéêUºCóFzÖxIºAs&amp;àA¥«WéÍYÈÅKßÄUºCóFarÌÒÕIºAs&quot;¥oâ*Ý¡y#MÀï¦/éÍIc»jyâ|È×¤[4o¤úÁðüôhÑ¥]Ao·RgºCs¶ ~ûnZJºCóFZ®Ö­ç³óÕ*f;ÀSºCóFÀn&#39;^-éÍYZÐíà&amp;¾ Ý¡y# Bµw$Ý 9oÊ:?Ï³iÁó±n³´(béèºAòÆÁ§Ú÷«-³4O ZºzîÐ¼ ¦µ&#39;^nÐ¥I xPéêUºCsÆ rñÒ7qîÐ¼f³tunÐ¥AHé¸JwhÞH°ÄÁ»égºCsÆ`ã®Z8ò5éÍi¡~°&lt;?=Z4giWäÛ- ÔîÐ¥-À¦ß¾îÐ¼ëãuëùbäì&lt;Äì`xaJwhÞH8ÓíÄ«%Ý 9K«ºÜÄ¤;4o¤T¨ö¤4çQPçÇù¸NÊü&#39;õu#;QtGÌÁûßØ«~Cc)¥À¸}ué°&gt;ÿgêÍÇ~!vhÎÒê0¢ÒÑ;tä3!¦ùïÕÏïÍYZ&amp;®Þ¥;4¤Ì­öÆKÒ³4+.]½KwhÎÒ´À¡Qú%îÒÒ)k®NÒ³ôp¬¥Zú%îÒÒÑuãÛôîÐ¤iMøuU­OÌ~&#39;Ý¢ù M7®ç·Gæ,%¹¼JÍtæ,í&gt;ãòÛ´tæ´~~¾qn=ÿ±Crvu¿q¼°¥;4¤!|¹ñjI7hÎÒV
+¿ñ_îÐ|&amp;rí I7hÎ¢	Èæÿù`õã±³³:¨róÎ\¿ø Liþsôók£Crv	æa£wçÉçs+½êsýäìÌ%+GïÎ³3-phT~»sä³`Ê£sýäì&lt;k©V~»sä3Ctýþ1úÂ&lt;7HNÎ´&amp;|ÈºÖ&#39;C¿sî|p&amp;ß?úß³säê£¿Ô&lt;7HÎÎ¾à3®&gt;FK97H&gt;8ëççßo«çÿ6(ÎÊ3 î¿ò¿°$!|µêj9×OÎÎæ ðßáÎÎS.ýÉë&#39;çkÐdóo8tBUýìÐ¥ÕaD¥£wèÉgBLóß«_-³´L0+]½Kwh&gt;H[í¤4giV,\ºzîÐ¥iC£ôKÜ¥;4¤SÖ,]¤4géáXKµôKÜ¥;4¤¢ëÆ·é3Ý¡9IÓð!ëªZýNºEóA0,n\ÏoÍY:JryéÍYÚ|Æå·i)éÍiýü|ãÜzþbäì&lt;ê~ãxaKwh&gt;H3BørãÕnÐ¥ÍAá7^âÒÒS®}$éÍùB4Ùü?nNçc¿;4giuQéèºAòÁÓü÷êçwGæ,-ÌÃJWïÒÒæV{ã%éÍYK®Þ¥;4giZàÐ(ýwéÍiÁ5KW&#39;éÍYz8ÖR-ýwéÍièºñmúÂLwhNÒ´&amp;|ÈºªÖ&#39;æC¿nÑ|&amp;WÀóÛ£Es\^¥fºCsöqùmZJºCóAZ??ß8·ÿØ!9;Ïºß¸^ØÒÒ¾Üxµ¤4gisPøøtæ4Ákß IºAs¾M@6ÿæCôù~*8ûØ¡9K«ÃJGïÐÎæ¿W?¿;Z4gi`VºzîÐ|0·Ú/I7hÎÒ¬X2¸tõ.Ý¡9KÓFé¸Kwh&gt;H¦¬Yº:I7hÎÒÃ±jé¸Kwh&gt;H3D×oÓfºCs¦5áCÖUµ&gt;1útæ4aXÜ¸ß-³täò
+(5Ó³´/øËoÓRÒÒúùùÆ¹õü?ÄÉÙyÔýÆðÂîÐ|fðåÆ«%Ý 9KÂo¼Ä¤;4¤	¦\ûHÒóh²ù7¼&gt;aÎó±_³´:¨tôÝ ùàLiþ{õó»£Es	æa¥«wéÍés«½ñtæ,Í%KWïÒ³4-ph~»tæ´`Ê¥«tæ,=k©~»tæ4CtÝø6}a¦;4&#39;iZ&gt;d]Uëó¡ßI·h&gt;HÅ+àùíÑ¢9KAI.¯R3Ý¡9KûÏ¸ü6-%Ý¡ù ­o[ÏÿCìg@ÝoÜ /léÍiF_n¼ZÒ³´9(üÆK|AºCóA`Êµo$Ý 9_&amp; ÿçCLRp&gt;ö±CsVÞ¡$	1Í¯~~w´hÎÒ2Á&lt;¬tõ.Ý¡ù =`nµ7^nÐ¥Y±dpéê]ºCs¦Ò/qîÐ|LY³tunÐ¥c-ÕÒ/qîÐ|f®ß¦/Ìtæ$MkÂ¬«j}b&gt;ô;éÍiÂ°¸q&lt;¿=Z4gé0(ÉåPj¦;4gi_ðß¦¥¤;4¤õóósëù³ó¨ûà-Ý¡ù ÍáËWKºAs6ßx/Hwh&gt;HL¹ö¤4çÑdóo&gt;(@&gt;©à|ìbæ,­#ú=úùî|p&amp;Ä4/] 4gi`VúîÒÒævcã½0Ó³4+Ú;oîÐ¥iC£ôKÜ¥;4¤SÖ,=IºAsµTKÏÇ.Ý¡ù Í]µw^nÐ¤iMøuU­OÌ~&#39;Ý¢ù M7®ç·Gæ,%¹¼JÍtæ,í&gt;KWïÒÒúù¹ö¹ ë&#39;gçP÷Ú7ÀÝ¡ù ÍáËWKºAs6ßx/Hwh&gt;HL¹ö¤4çÑdóÿ|0LFýBìÐ¥ÕaD¿G??ÒÎæ¥«tæ,-ÌÃJ¿Ã]ºCóAzÀÜnl¼fºCsfÅQ{çíÒ³4-ph~»tæ´`Ê¥ç#I7hÎÒÃ±jéùØ¥;4¤¢«öÎKÒ4­	²®ªõùÐï¤[4¤	ÃâÆðüöhÑ¥Ã $W@©îÐ¥}Ágpéê]ºCóAZ??×&gt;·týäì&lt;ê^ûØ¡;4¤!|¹ñjI7hÎÒæ ð/ñéÍi)×¾tæ|!lþÍÇ0{{&gt;þ  ÿÿ   ÿÿÔ×M¤Éñ}¢.ÐB_¡Ð1Ð`¼ñÂ÷ß8«`ÆãPÀ[Î7¥MÑ3ÙÝóðC¡I±Ðçøü5@ì_ÏßÿøøÛÇ¿?éûèØdS&gt;ñXËìó÷¿&gt;¾&gt;üþùøëëçÇOþúÛþòó÷ÇXüùïtòâû×ß¿ãëW|ÿö_ý;~ý÷¯úúüñÙÿ6ÿóãï[µ:èùèõÿE¯&#39;¢wèÉgÂæ¥«tæ,-ÌÃJ¿Ã]ºCóAzÀÜ^ØxoéÍY!£öÎÛ¥;4gi
+ðÒUú%îÒÒ)1KÏGnÐ¥#Bµô|ìÒÒÑ¨½ótæ$M1áCâªZïýtæ4aØzá
+¸{´hÎÒË $W@©îÐ¥=àsqéê]ºCóAZ×&gt;·týäì&lt;Ô½ö°Cwh&gt;H3ðåÆ«%Ý 9K¿ðß Ý¡ù M0åÚ7@nÐ/DÍïù °.8ûØ¡9K«Ã¾¤;$	k®NÐ³´L0+ýwéÍés{aã½a¦;4giVÚ;oîÐ¥)ÀKWé¸Kwh&gt;H¦Ä,=IºAsÕÒó±Kwh&gt;H3D£öÎKÒ4Å«j½c&gt;ôgÒ-Òaë+àþíÑ¢9K/\^¥fºCsöÏÅ¥«wéÍi}|\ûÜJÐõ³ó\P÷Ú7ÀÝ¡ù ÍXÂ¯tæ,mZþÂK|tæ4Ákß IºAs¾M@6¿Â`aÇc?$gguÑÓÍ÷Ïsâ2aMóÊÑ¹~rv	æaàîÜ ùà&lt;`nÏ¯º7ÌsäìÌQzÙíÎ³3xéªüwçÉgÁ#9×OÎÎÃ¡Zy8vçÉgh^vÉ¹~rr¦ð!q­wþÌ¹CòÁ0l=ÿ¥ÿþ½Ñ!9;/\}é/5Ï³³|.®½;7H&gt;8ëããÒ·Ub._çºþÊ¿37H&gt;83ðÕª«å\?9;?ÿßàÜ ùàL0åÒ_ùsýä|l~Ç
+ýìÐ¥ÕaDÏGß?ÑÎ5ÍKW&#39;èÍYZ&amp;~»tæô¹½°ñÞ0Ó³4+BFí·KwhÎÒà¥«ôKÜ¥;4¤Sb$Ý 9KGjéùØ¥;4¤¢Q{ç%éÍIbÂÄUµÞ1ú3éÍiÂ°õÂpÿöhÑ¥AI.¯R3Ý¡9K{ÀçâÒÕ»tæ´&gt;&gt;®}n%èúÉÙy.¨{í`îÐ|f,áËWKºAs6-á%¾AºCóA`Êµo$Ý 9_&amp; ßó¡¡Vp&gt;ö±CsV=}ÿHwH&gt;8Ö4/] 4gi`VúîÒÒæöÂÆ{ÃLwhÎÒ¬µwÞ.Ý¡9KS®Ò/qîÐ|LYz&gt;tæ,=ª¥çcîÐ|fFí¤4&#39;i	WÕzÇ|èÏ¤[4¤	ÃÖWÀýÛ£Es^%¹¼JÍtæ,íKWïÒÒúø¸ö¹ ë&#39;gç¹ îµoºCóA±/7^-éÍYÚ´üøéÍi)×¾tæ|!l~Í/L)8ûØ¡9K«Ã¾¤;$	k®NÐ³´L0+ýwéÍés{aã½a¦;4giVÚ;oîÐ¥)ÀKWé¸Kwh&gt;H¦Ä,=IºAsÕÒó±Kwh&gt;H3D£öÎKÒ4Å«j½c&gt;ôgÒ-Òaë+àþíÑ¢9K/\^¥fºCsöÏÅ¥«wéÍi}|\ûÜJÐõ³ó\P÷Ú7ÀÝ¡ù ÍXÂ¯tæ,mZþÂK|tæ4Ákß IºAs¾M@6¿çC0HÇ~ 6HÎÎê0¢§ïçÅeÂæ£sýäì,ÌÃ*?ÁÝ¹AòÁyÀÜ_uoçÉÙ!£ô²Û$gg
+ðÒUùîÎÎ)1+Gr®#BµòpìÎÎÑ(½ìsýääL1áCâ&quot;Zïýsä3aØzþKÿý{£Crv^%¹úÒ_j$ggø\\9zwn|pÖÇÇ¥o«Ä\¾8+Ïu/ýgn|pf,á«UWË¹~rv6-þ¾Á¹AòÁ`Ê¥¿ò&#39;çúÉù4ÙüéùøRZo:ös°CsV=}ÿDwH&gt;8Ö4/] 4gi`VúîÒÒæöÂÆ{ÃLwhÎÒ¬µwÞ.Ý¡9KS®Ò/qîÐ|LYz&gt;tæ,=ª¥çcîÐ|fFí¤4&#39;i	WÕzÇ|èÏ¤[4¤	ÃÖWÀýÛ£Es^%¹¼JÍtæ,íKWïÒÒúø¸ö¹ ë&#39;gç¹ îµoºCóA±/7^-éÍYÚ´üøéÍi)×¾tæ|!l~ÏÁY´à|ìbæ,­#z&gt;úþî|p&amp;¬i^º:A7hÎÒ2Á&lt;¬ô;Ü¥;4¤Ìí÷îÐ¥Y2jï¼]ºCs¦ /]¥_â.Ý¡ù -³ô|$éÍYz8&quot;TKÏÇ.Ý¡ù ÍÚ;/I7hNÒ&gt;$®ªõùÐI·h&gt;H­®û·Gæ,½JryéÍYÚ&gt;®Þ¥;4¤õñqís+A×OÎÎsAÝkß ;tæ4c	_n¼ZÒ³´9hù/ñÒÒS®}$éÍùB4Ùüþøÿy½ùØ/ÄÍYZFô|ôý#Ý!ùàLXÓ¼tunÐ¥eyXéw¸Kwh&gt;HÛï3Ý¡9K³&quot;dÔÞy»tæ,M^ºJ¿Ä]ºCóAZ0%féùHÒ³ôpD¨]ºCóA!µw^nÐ¤)&amp;|H\Uëó¡?nÑ|&amp;[/\÷oÍYzäò
+(5Ó³´|&gt;Z+WïÒÒúø¸ö¹ ë&#39;gç¹ îµoºCóA±/7^-éÍYÚ´üøéÍi)×¾tæ|!þúz×µ%©0§ØO`Ê·²ýH 	$æõéµÊ%õÒjÑmk4Áh£ÿ|¸¼ÛÊpô~ÏÇñ_`ó±^³´(âçÑ÷tä3OµÒÕ	ºAsæ	DCK¿ÃUºCóFz^ØxÌtæ,MÁ£öÎ[¥;4gi /ýWéÍiÉ1KÏGnÐ¥AHéùX¥;4o¤	X¢öÎKÒ4ÆgÕrÇ|È{Ò-7ÒCýÂpÿöhÑ¥]AO¯R3Ý¡9K[M§ÒÕ«tæ´?®}n%èúÉÙy:Yí`îÐ¼&amp;p¦ÓWKºAsVt»ðîÐ¼FP¡Ú7@nÐ/De@¯ùsçc½;4gi1PÄÏ£ïéÉgj¥«tæ,Í~«tæô 5½°ñéÍYGí·JwhÎÒ@.^ú%®Ò7Òc$Ý 9KÒó±JwhÞH°Dí¤4&#39;i	68Îªåù÷¤[4o¤ú+àþíÑ¢9K» ^¥fºCs¶ N¥«WéÍi9~\ûÜJÐõ³ót³Ú7À
+Ý¡y#MàL§¯tæ,­èvá%&gt; Ý¡y# Bµo$Ý ù?ÒG÷$eàãT¥¯` L&lt;$:þÓÿüóßýãûOðúëï?~õëß¯¿þëµã_:/îÇëõÔÿ¿=þóëç/_?ÿø·ãïß|ýáãëO_íþ\éÙ(béè¿ôKÞ8#øTû¼úþõÔ¢9Kó&lt;vÑÐÒÕ«tæô 5­½ñtæ,MÁJW¯Ò³4~«tæ4Ãä¥«tæ,=&quot;DJ¿ÄUºCóF%.|&gt;0Ó4ÆgÕrÇ|È{Ò-7ÒCýÂpÿöhÑ¥]AO¯R3Ý¡9K[M?ý6-%Ý¡y#-Ç/[÷ÿBì§]¸ØÒ7ÒÎtºñjI7hÎÒjn^âÒ7Ò*TûHÒó¨¨ó5óørª7ëØ¡9K&quot;^¡$o|ª}^}ÿîhÑ¥yÑÐÒÕ«tæô 5­½ñtæ,MÁJW¯Ò³4~«tæ4Ãä¥«tæ,=&quot;DJ¿ÄUºCóF%.|&gt;0Ó4ÆgÕrÇ|È{Ò-7ÒCýÂpÿöhÑ¥]AO¯R3Ý¡9K[M?ý6-%Ý¡y#-Ç/[÷ÿBì§]¸ØÒ7ÒÎtºñjI7hÎÒjn^âÒ7Ò*TûHÒó¨¨ó{&gt;ÎÇz!vhÎÒbG+^¡$o|ª}^}ÿîhÑ¥yÑÐÒÕ«tæô 5­½ñtæ,MÁJW¯Ò³4~«tæ4Ãä¥«tæ,=&quot;DJ¿ÄUºCóF%.|&gt;0Ó4ÆgÕrÇ|È{Ò-7ÒCýÂpÿöhÑ¥]AO¯R3Ý¡9K[M?ý6-%Ý¡y#-Ç/[÷ÿBì§]¸ØÒ7ÒÎtºñjI7hÎÒjn^âÒ7Ò*TûHÒó¨¨ó5dðzã±³³Ø1X¹ye®_¼QFð©öqôýk£Crvæ	DC+G¯Î7ÎÔ´ôªKÎõ³3	ª½:7HÎÎ@.^ù®Î7ÎcVNÎõ³ó0©üWçÉgøücôyn1&amp;Øà8;CÞsî¼qFêôß¿7:$ggWä³þRóÜ 9;[M?û-åÜ yã,Ç?¿­îÿ5Ø 8+O1ûüÿíÜ yãLàLg«®sýäì¬øj-½:7HÞ8#¨PéOþä\?9_Ê:¿èX{õ¦c=;4gi1PÄÒÑ+tä3OµÏ«ï_-³4Ï£uhéêUºCóFzÖÞxIºAs&amp;àA¥«WéÍYÈÅK¿ÄUºCóFarÌÒÕIºAs&quot;¥_â*Ý¡y#MÀ¾MéÍIc³j¹c&gt;ä=éÍi¡~á
+¸{´hÎÒ® È§W@©îÐ¥-À¦~îÐ¼ãÇÎ­û!vHÎÎÓAÌ.Ü léÍig:Ýxµ¤4gi5@·/ñéÍiª}$éÍùBTÔù ~¼Ézó±^³´(béèºAòÆÁ§ÚçÕ÷ïÍYç±ç®^¥;4o¤¨ií¤4giTºzîÐ¥1\¼ôK\¥;4o¤&amp;Ç,]¤4géa!Rú%®Ò7Ò,qáÛôîÐ¤1&amp;Øà8«;æCÞnÑ¼Fê®û·Gæ,í
+|zéÍYÚlúé·i)éÍi9~|áÜºÿbäì&lt;ÄìÂðÀîÐ¼&amp;p¦ÓWKºAsVt»ðîÐ¼FP¡Ú7@nÐ/De@ßó1 øzó±^³´(béèºAòÆÁ§ÚçÕ÷ïÍY&#39;-]½JwhÞHPÓÚ/I7hÎÒ$Gë ÒÕ«tæ,äâ¥_â*Ý¡y#Í09féê$Ý 9KÒ/qîÐ¼&amp;`ß¦Ìtæ$1ÁÇYµÜ1òtæ4ÂP¿pÜ¿=Z4giWäÓ+ ÔLwhÎÒ`ÓO¿MKIwhÞHËñãçÖý¿;$gçé fn¶tæ43n¼ZÒ³´ Ûøtæ4
+Õ¾tæ|!*ê|ÍÇP  ã±³³(båæùÿUüo   ÿÿ   ÿÿÔ×O%·Àáý¢/`Bü&#39;Ç|A6^øþ¼7N&amp;(£Þp¹iLO½îþá¤¢¾Æ×oßÈ¤¯_ Ù× ÖxC_~ýÏ7ïâàÏ~üÄ×ûüëÛ¯ßþñí/üþ=~!	Oµ¯_p(PÐ×o¿{?ûþõõþõçïûÿ?õ¿¿Äê?þï÷ßøþï]´Dÿ³_rvæ	DC+G¯Î7ÎÔ£ãç¢O6ar®I xPåèÕ¹ArvÆ rñÊpun¼qf³rtr®AHåM¸:7HÞ8°V^É¹~rrÆ`ã&quot;ZîXòsä3ÂP?úï?7:$ggWä«¡¿Ôzn-À¦_£¥$oåõøünuÿk°AqVbv&gt;ò?p:7HÞ88ÓÕQWË¹~rvVt;ß87HÞ8#¨Pé?9×OÎ·Ae@¯ÏGÀiÇzlÅ@+7¯Ìõ7Ê&gt;Õ£ï?5:$gg@4´rôêÜ yã&lt;@MKuÉ¹~rv&amp;àA£WçÉÙÈÅ+oÂÕ¹AòÆarÌÊÑÉ¹~rv&quot;7áêÜ yãLÀçÃèë¹ArrÆ`ã&quot;ZîXòsä3ÂP?úï?7:$ggWä«¡¿Ôzn-À¦_£¥$oåõøünuÿk°AqVbv&gt;ò?p:7HÞ88ÓÕQWË¹~rvVt;ß87HÞ8#¨Pé?9×OÎ·Ae@ïÅ!0jÁÅ±Þ$gg1PÄÊÍ+sýâ2OµãèûOÉÙ&#39;­½:7HÞ8PÓÒG]r®I xPåèÕ¹ArvÆ rñÊpun¼qf³rtr®AHåM¸:7HÞ8°Äù0úÀzn1&amp;Øà¸;|æÜ!yã0ÔÏþûÏÉÙÙùjè/µ$gg°éWÃh)çÉgy=&gt;¿[ÝÿlP§üÎ7ÎÎtuÔÕr®Õ ÝÎ7áÎ7Î*TzäOÎõómPPçëóî¯ßùú×âð^¾wîÅ@+7¯Ìõ7Ê&gt;Õ£?ÞþÓ[ð/ë&#39;gg@4´rôêÜ yã&lt;@MKuÉ¹~rv&amp;àA£WçÉÙÈÅ+oÂÕ¹AòÆarÌÊÑÉ¹~rv&quot;7áêÜ yãLÀçÃèë¹ArrÆ`ã&quot;ZîXòsä3ÂP?úï?7:$ggWä«¡¿Ôzn-À¦_£¥$oåõøünuÿk°AqVbv&gt;ò?p:7HÞ88ÓÕQWË¹~rvVt;ß87HÞ8#¨Pé?9×OÎ·Ae@ïÅA`8âo[öÓÃöÎ³³(båæ¹~ñFÁ§ÚqôÇ[Ð~zþ%sýäìÌV^$o¨ié£.9×OÎÎ$&lt;¨rôêÜ 9;c ¹xåM¸:7HÞ83LY9:9×OÎÎÃ B¤ò&amp;\$o	Xâ|}`=7HNÎlp\DËC&gt;sî¼qFêçCÿýçFäìì
+|5ôZÏ³³Øô«a´sä³¼ß­î6(ÎÊÓAÌÎGþNçÉggº:êj9×OÎÎjnçðçÉg*=ò&#39;çúÉù6¨¨óõy3S­àâXo³³(båæ¹~ñFÁß­§Ñ÷³3O Z9zun¼q ¦¥ºä\?9;@ð ÊÑ«säìäâ7áêÜ yãÌ09fåèä\?9;Êpun¼q&amp;`óaôõÜ 99cL°Áq-w,ùÌ¹CòÆa¨ý÷³³+òÕÐ_j=7HÎÎ`Ó¯ÑRÎ7Îòz|~·ºÿ5Ø 8+O1;ù8$o	éê¨«å\?9;«ºoÂ$oT¨ôÈë&#39;çÛ 2 Î÷â@z½&gt;ë-õ6Ø 9;&quot;Vn^ëoü½óN£ï?5:$gg@4´rôêÜ yã&lt;@MKuÉ¹~rv&amp;àA£WçÉÙÈÅ+oÂÕ¹AòÆarÌÊÑÉ¹~rv&quot;7áêÜ yãLÀçÃèë¹ArrÆ`ã&quot;ZîXòsä3ÂP?úï?7:$ggWä«¡¿Ôzn-À¦_£¥$oåõøünuÿk°AqVbv&gt;ò?p:7HÞ88ÓÕQWË¹~rvVt;ß87HÞ8#¨Pé?9×OÎ·Ae@¯ÏO3¥c½6HÎÎb WæúÅejÇÑ÷³3O Z9zun¼q ¦¥ºä\?9;@ð ÊÑ«säìäâ7áêÜ yãÌ09fåèä\?9;Êpun¼q&amp;`óaôõÜ 99cL°Áq-w,ùÌ¹CòÆa¨ý÷³³+òÕÐ_j=7HÎÎ`Ó¯ÑRÎ7Îòz|~·ºÿ5Ø 8+O1;ù8$o	éê¨«å\?9;«ºoÂ$oT¨ôÈë&#39;çÛ 2 Î÷âx.¢àâXo³³(båæ¹~ñFÁ§Úqôý§FäìÌV^$o¨ié£.9×OÎÎ$&lt;¨rôêÜ 9;c ¹xåM¸:7HÞ83LY9:9×OÎÎÃ B¤ò&amp;\$o	Xâ|}`=7HNÎlp\DËC&gt;sî¼qFêçCÿýçFäìì
+|5ôZÏ³³Øô«a´sä³¼ß­î6(ÎÊÓAÌÎGþNçÉggº:êj9×OÎÎjnçðçÉg*=ò&#39;çúÉù6¨¨óõyYpq¬·ÁÉÙY±róÊ\¿x£àSí8úþS£Crvæ	DC+G¯Î7ÎÔ´ôQë&#39;ggT9zun1\¼ò&amp;\$o&amp;Ç¬ë&#39;gça!Ry®Î7Î,q&gt;&gt;°$&#39;g	68.¢åÅ!9wHÞ8#õó¡ÿþs£CrvvA¾úK­çÉÙÙlúÕ0ZÊ¹AòÆY^ÏïV÷¿gåé fç#ÿ§sä33]uµë&#39;gg5@·óMøsä3
+ùsýä|TÔùú¼øk7þú:Èd¡(º¿dl0°ÿý¨©qudZªÇ¬¥ìÁÕ¦ÀáX¿$gg1Rfäæ¿x£ÌäSí8úù­Q!9;I½7E^$o©)ôªKÎøÉÙ¹Åh9zu.9¨»8ò#\$oÍ9:9ã&#39;gçf!üWçÉçNCâü}a$&#39;gIÖFÜDËÃ!9WHÞ835õó£ÿù½Q!9;»ð¸;ú¡æ¹@rv¶ ~wB9HÞ8Ëõóù·Õógåé$fç&#39;ÿÛ¹@òÆ¹_­ýnÕa9ã&#39;gg5b·óGøsä3J&gt;ù3~rþÔA¬óg8®0àp¬_³³)3róÊ_¼Qfò©výüÖ¨Ç¤Þ&quot;G¯Î7ÎÔzÕ%güäìÜb´½:HÎÎÔ]ù®Î7Îæñ³s3A~«säs§!q~¾0Ï3Ç$k#n¢åáÏ+$oúùÑÿüÞ¨]IxÜýPó\ 9;[M¿;F¡$oåúùüÛêù?³òt³óÿí\ yãÜÉG¿[uXÎøÉÙYØíü¾à\ yãÌ¤Ò¡Oþä¿õjÕyýÿaW}È=¾w®åjeFn^ñ7ÊL&gt;Õ£?~þõü?9;I½7E^$o©)ôªKÎøÉÙ¹Åh9zu.9¨»8ò#\$oÍ9:9ã&#39;gçf!üWçÉçNCâü}a$&#39;gIÖFÜDËÃ!9WHÞ835õó£ÿù½Q!9;»ð¸;ú¡æ¹@rv¶ ~wB9HÞ8Ëõóù·Õógåé$fç&#39;ÿÛ¹@òÆ¹~·ê°ñ³³±Ûù#|Á¹@òÆ¯Ö}ò&#39;güäü5¨XçÏp0EþgÃa_í+$gg¹f¹yeÆ/Þ(3ùT;þø	Ú×OðWfüäì&lt;&amp;õÞ9zu.¼qn¤¦Ð«.9ã&#39;gç.£uäèÕ¹@rvæ îâÈpu.¼q4GLäèäQò#\$o;ócôy.9&amp;Yq-O|æ\!yãÌÔÔÏþç÷FäììJÂãîèçÉÙÙlúÝ1
+å\ yã,×ÏçßVÏÿ,P§ü/lçÉçN&gt;úÝªÃrÆOÎÎjÄnçðçÉg&amp;}ò&#39;güäü5¨Xçõÿû¤®6þõpøÞ¹Brv#eFn^ñ7ÊL&gt;Õ£?~þõü?9;«µ7E^$o©)ôªKÎøÉÙ¹Åh9zu.9¨»8ò#\$oÍ9:9ã&#39;gçf!üWçÉçNCâü}a$&#39;gIÖFÜDËÃ!9WHÞ835õó£ÿù½Q!9;»ð¸;ú¡æ¹@rv¶ ~wB9HÞ8Ëõóù·Õógåé$fç&#39;ÿÛ¹@òÆ¹~·ê°ñ³³±Ûù#|Á¹@òÆI¥CüÉ?9ê Öù3&amp;û³á°¯ÃöÎ³³)3róÊ_¼Qfò©výñ´¯à¯ÌøÉÙy\®7E^$o©)ôªKÎøÉÙ¹Åh9zu.9¨»8ò#\$oÍ9:9ã&#39;gçf!üWçÉçNCâü}a$&#39;gIÖFÜDËÃ!9WHÞ835õó£ÿù½Q!9;»ð¸;ú¡æ¹@rv¶ ~wB9HÞ8Ëõóù·Õógåé$fç&#39;ÿÛ¹@òÆ¹~·ê°ñ³³±Ûù#|Á¹@òÆI¥CüÉ?9ê Öyýé8ë×`äì,FÊ|Üüü8(Þ(3ùTCNÌøÉÙyLê½)ò\$o©éùª{a$gç~µ½ìVçÉÙº#?ÂÕ¹@òÆyÐ1#9ã&#39;gçf!&lt;«säs§!½ì3~rrædmÄM´&lt;1òsä3SS??úß³³+	»£j$gg²é9zu.¼qëgèo«Ä_§Aü+säs&#39;ýnÕa9ã&#39;gg5b·óGøsä3J&gt;ù3~rþÔA¬óúÿA£þg³á_Ïïge1RæÓäÃ¿ßá7ÆL&gt;Õ2|qVzo
+üúVeüâr#5=Þq/Ì2~qVî×ßéÑ·Üª_9¨»8ðû[ñ7Êæ	&lt;I¾8+7£àÉXñ7ÊòKÊðÅIcµÿn&#39;&amp;C&gt;S.P¼QfjêÇ7þó£@qVv%áqsãCÍ2~qV¶ ÞWeüâ²\?#H%dôàl&lt;ÄùÂ_ñ7Ê|ô¥_ÕÝßßÊøÅe&amp;|á&#39;eøâüå§XçõÿM³ø³É°¯&#39;ÃöÊ³²)óiòÇa_ÆoÈðÁc&amp;jÀÍ	¾8+I½7~}«2~ñF¹ï¸f¿8+w¡yË­ÊøÅYº¿¿U¿x£|µÀá³r3U¿x£ÜiH o¹¤_9&amp;Yñïfyb2ä3åÅe¦¦~|ã?¿1
+geW77&gt;Ô,ãge²é¸yUÆ/Þ(Ëõ3òTBFÎÆÓIÌ/ü¿x£ÜÉG¿ÙqXÊðÅYYØíøý½ _¼QfRéÈ~R/Î_~:uÿbüÙ`ø×á{düàl,FÊ|XüñTø×Sñ1zïFÉ§nr&quot;FÎÆcRïMqÞj¼1n¤¦§Ëí9ÎÆ](F{n½ý  ÿÿ   ÿÿÔ×MneÇá¹V¡(þÉe^ ²ÿINË°K÷ç :÷»¶Ú·ÕzñÅ®$Êãë×ßþüÏxè_¿¿¾`Éãq|öÏ|üç¿~Ç,bT:¯¨fØçÿþøõÉ×¯~××ß5þïÇüï§¨çßÿÏ¦üý__ý__ýõã¿þøoãÙà}ü¾$s¤åÉäz.¹N$¯ÆðÁc¥©5qÇ¢£wãTe;«1|ðÆXH­×[3FnÆ\bhÝL¶+ÆÂ3ÆÞ3ÏÀ=zÍ=¸§±:îX¬ÆðÁÝ8b¦à&amp;¯ÆðÁc;&gt;VÜA1xoI|¡_á7ÆB©r{¹a£wcâ³GïÆðÁc&amp;7¾Ð7côàþÊs%ö©A% Çb}åÁwcræÅ×1|ïF)§nr#FîÆ:Id8îÁ[á7Æ&lt;üìr{ÁÃwc1*Àëm5îÆ\$i{ôVcøà±ÒÔ¸cÑÑ»ñª2ÃÕ&gt;xc,¤VÀë­£7c®I1´n&amp;ÛcaãoçÙ+ýõ»?¸§±Þ¾ÒCÍ1|p7¢)¸É«1|ðÆØ_M¼·Ï$ ¾Ð¯ÄðÁc¡T¹½Ü°Ñ»±qÆÙ£÷cøà1 _è1zpå¹ûÔOVú±¹§ç&quot;öÈoPÜ-ÈÏ&amp;?&lt;ñô`|¼1fÊéÜÜá»²N|úVeüâò ?½ã^0ËøÅ]YJò[ñ»2IZ¿U¿x£¬4µ&amp;ðd4eøâ®&lt;ªÌ&#39;cUÆ/Þ(©òkÊðÅMkR­ÛÍvÅdØcÊoP¼Qf§ïø×o7(îÊéd¬wîøP³_Ü£(f
+póª_¼Q¶ãcäTCFîÆ3É&quot;oø+2~ñFY(Uîì8,eøâ®ìAqúü½@¿x£Ìä&amp;È7ü¦_Ü_~®Ä&gt;ÉHªñëûá&amp;c}ùáweræ³É×2~ðÆ)§psC/îÊ:Id8ðé[ñ7Ê&lt;üô{Á,ãwe1*È[nUÆ/îÊ\$i	|þVeüâ²ÒÔÀÑá»òª2U¿x£,¤VÈ[®)Ã7e®I1´n7Ûa)¿AñFix¾ã_¿1Þ ¸+§±Þ¹ãCÍ2~qW¢)ÀÍ«2~ñFÙR=¸Ï$@¾á¯ÈøÅe¡T¹³ã°á»²qÆéó÷eüâ2 ßð2|qù¹ûÔO±£=íÇ&amp;#Ü+¿AqW¶ g&gt;üð`äÓñ2|ðÆ)§psC/îÊ:Id8ðé[ñ7Ê&lt;üô{Á,ãwå£µt o¹U¿¸+s¤%ðù[ñ7ÊJSkOFS/îÊ#¨Êx2Veüâ²Z!o¹¦_Ü¹&amp;ÅÐºÝlWL=¦üÅe¦áyúýÆxâ®NÆzç5ËøÅ]9b¦ 7¯ÊøÅe;&gt;F~H5dôàn&lt;,ù¿&quot;ãoRåÎÃR/îÊÄ§Ïßñ7Ê|´
+ò¿)Ã÷+±OýÔãÆMF&lt;=±W~â®lAÎ|6ùáÁ§ã;døà1SNàæ_ÜuÈpàÓ·*ãoyøé÷YÆ/îÊÇ¿Ó¥yË­ÊøÅ]$-Ïßª_¼QVZx22|qWAUfÀ±*ãoÔ
+yË5eøâ¦Ì5)Öíf»b2ì1å7(Þ(3ÏÓwüë7Æwåt2Ö;w|¨YÆ/îÊQ3¸yUÆ/Þ(Ûñ1òCª!£wãdÈ7ü¿x£,*wv2|qWö Î8}þ^ _¼Qfrä~S/î/?WbÇdøq³ &#39;c}ùáweræ³É×2~ðÆ)§psC/îÊ:Id8ðé[ñ7Ê&lt;üô{Á,ãwe1*È[nUÆ/îÊ\$i	|þVeüâ²ÒÔÀÑá»òª2U¿x£,¤VÈ[®)Ã7e®I1´n7Ûa)¿AñFix¾ã_¿1Þ ¸+§±Þ¹ãCÍ2~qW¢)ÀÍ«2~ñFÙR=¸Ï$@¾á¯ÈøÅe9ZåÎÃR/îÊÄ§Ïßñ7ÊLn|ÃoÊðÅýåçJìS?ÉÒp2Ö~qW¶ g&gt;|ý(ãorz 77døâ®¬D¾U¿x£&lt;ÈÃOï¸Ì2~qW£Ò¼åVeüâ®ÌEÀçoUÆ/Þ(+M­	&lt;M¾¸+ *3àÉXñ7ÊBj¼å2|qSæCëv³]1öòoçé;þõã»r:ë;&gt;Ô,ãwå(Ü¼*ãoíøù!ÕÑ»ñL²äþ_¼QJ;;K¾¸+{g&gt;/PÆ/Þ(3¹	ò¿)Ã÷+±Ïc2	rÀÉX_~øÅ]ùhuæ³É×2~ðÆ)§psC/îÊ:Id8ðé[ñ7Ê&lt;üô{Á,ãwe1*È[nUÆ/îÊ\$i	|þVeüâ²ÒÔÀÑá»òª2U¿x£,¤VÈ[®)Ã7e®I1´n7Ûa)¿AñFix¾ã_¿1Þ ¸+§±Þ¹ãCÍ2~qW¢)ÀÍ«2~ñFÙR=¸Ï$@¾á¯ÈøÅe¡T¹³ã°á»²­§Ïßñ7ÊLn|ÃoÊðÅýåçJìS?](ÂâÇ&amp;#Ü+¿AqW&gt;&amp;ÂÏ&amp;?&lt;ùô`|¼1fÊéÜÜá»²N|úVeüâò ?½ã^0ËøÅ]YJò[ñ»2IZ¿U¿x£¬4µ&amp;ðd4eøâ®&lt;ªÌ&#39;cUÆ/Þ(©òkÊðÅMkR­ÛÍvÅdØcÊoP¼Qf§ïø×o7(îÊéd¬wîøP³_Ü£(f
+póª_¼Q¶ãcäTCFîÆ3É&quot;oø+2~ñFY(Uîì8,eøâ®ìAqúü½@¿x£Ìä&amp;È7ü¦_Ü_~®Ä&gt;É8¶üØ\ÄÓs{cøÞ.lAÎ|.øá§Gâ;`ðÜ/SNØâÞÛuÈ©¯Inãû9E_À(&quot;y	¼Ê&quot; »| 	½ðõ]vE¹«G«þc m{÷7j{æfaôÞp#sÛ¼ÕnaôÞ*ÜRî½6£÷VaNê¡{êfaôÞ°Ð°3QÁ{«psÊTY½w!ÜI4qïµ&quot;Þ[9y|W¬WÌ~&amp;ß»fjüõ·|o#ey»ÁCÍ0zoö$ÑagaôÞ°ã&gt;
+0vnõG©;îþ&gt;£÷.;ô··0xo6&#39;ß&lt;u7£÷.L;îþ^Á{ÿ&#39;|4ánBr¬}Ía¯o¸1&gt;þ¦7¡~üÞßÿãË_^ÿýåGøù¯ÿ|ùÃ·n¯ýð«Öña¿ÌØPÀ©úùÏèÿ?Ãs¼~|q{}wüã¿_|ýõoíõ÷×Ã~ªrVº:3pò?¼0fa¾Û|ýôâª,ã¸7ÏÊøÅåFæ|ÇeøâªÜRZnñ«2&#39;õÐ &gt;³2~ñBYhHàæ¢_\S¦*ðùñÊDs{û¼añ2ç oïõÉÐÏP¼PfjÛ;þõ7Æ«r)ËÉ5ËøÅUÙ|ÄÉö	¥_¼PÖããíÔõ_~øÁÕx©ûöÃ­_¼PîÒOî8,eøâªlN¾}þnPÆ/^(3vä¿(Ã×	±y¥Ö8~·É¯X+? ¸*«1&#39;ÏÈðÁc¦æ»Í¾øêÓ÷ÈðÅUYõÞ¸yVÆ/^(727ä;®(ÃWå®Ò:pó¬_\9©ðùñÊBCr 7eøâªÜ2UÏß¬_¼Pî$ÛÛç³_\9y|ß¬WL~¦üâ2S³ØÞñ¯¿1P\ÃHYNv|¨YÆ/®Êä#N¶O(eüâ²o?¤®ÿòÃ®Æ#HÝ·7üneüâr§~rÇa)ÃWesâðíów2~ñBÉ´#oøE¾¸¾üLm4Ô·Áð¯_#ãWcu2fÜâ½w!ÌÃ|3ùãç_}ð~=¸Ë Þá&amp;ÏÆðÁãFæ|¹côàjÜRZÇMá«1&#39;õÐÀ=z³1|ðÂXhHÜäb\S¦*îÑáÆDswÝ¼aá1ç ooõ±ÐÏñÆLÍbw¥¿þ®À®Æa¤,ïWz¨9®Æä#Þ¯PÆðÁc=&gt;Þ}5]ÿß[Gºï.ô7ÜÆðÁãN!ýýåe\ÍÃwÞÆðÁc&amp;Ó¼ÐcôàúÊ3!¶!/7êÙ;à\ÌÏ&lt;üâª¬NÆ&lt;#Ã/bï6_]&lt; ¸*Ë Þ7ÏÊøÅåFæ|ÇeøâªÜRZnñ«2&#39;õÐ &gt;³2~ñBYhHàæ¢_\S¦*ðùñÊDs{û¼añ2ç oïõÉÐÏP¼PfjÛ;þõ7Æ«r)ËÉ5ËøÅUÙ|ÄÉö	¥_¼PÖããíÔõ_~øÁÕx©ûöÃ­_¼PîÒOî8,eøâªlN¾}þnPÆ/^(3vä¿(Ã×	±yE£7ÀÉ_~øÅUY8yF^3Å0ßm¾þ¾x@qUA½7nñÊÌù+ÊðÅU¹ëÑÚ:pó¬_\9©ðùñÊBCr 7eøâªÜ2UÏß¬_¼Pî$ÛÛç³_\9y|ß¬WL~¦üâ2S³ØÞñ¯¿1P\ÃHYNv|¨YÆ/®Êä#N¶O(eüâ²o?¤®ÿòÃ®Æ#HÝ·7üneüâr§~rÇa)ÃWesâðíów2~ñBÉ´#oøE¾¸¾üLm1Èâøñ&amp;c~ùáWeu2fàä&gt;xaÌÃ|·ùúûâÅUYõÞ¸yVÆ/^(727ä;®(ÃWå®Ç÷tëÀÍ³2~qUæ¤ÀçoVÆ/^(ÉÜ\á«rsÊT&gt;³2~ñB¹hno7Ì2~qQæäMò}³^1úòÊLÍb{Ç¿þÆx@qU#e9Ùñ¡f¿¸*{8Ù&gt;¡ñÊz|¼ýºþË?¸ ußÞðo¸ñÊBúÉ¥_\ÍÃ·ÏßÊøÅe&amp;Ó¼áeøâúò3!¶!¯ìÔ!c~øÁWcu2fÜâ½w!ÌÃ|3ùú«?¸Ë8Rá&amp;ÏÆðÁãFæ|¹côàjÜRZÇMá«1&#39;õÐÀ=z³1|ðÂXhHÜäb\S¦*îÑáÆDswÝ¼aá1ç ooõ±ÐÏñÆLÍbw¥¿þ®À®Æa¤,ïWz¨9®Æä#Þ¯PÆðÁc=&gt;Þ}5]ÿß[Gºï.ô7ÜÆðÁãN!ýýåe\ÍÃwÞÆðÁc&amp;Ó¼ÐcôàúÊ3!¶qÓ18ó3¿¸*«1&#39;ÏÈðÁc¦æ»Í×_(®Ê2«­pó¬_¼PndnÈw\Q/®Ê])¥uàæY¿¸*sRàó7+ã/ä n.ÊðÅU¹9eª¿Y¿x¡ÜI4··Ïf¿¸(sò&amp;ù¾Y¯ýLùÅe¦f±½ã_c&lt; ¸*²ìøP³_\=ÉGlPÊøÅe=&gt;Þ~H]ÿå\Gºooø7ÜÊøÅåN!ýäÃR/®ÊæÄG,pó¬_¼Pf2íÈ~Q/®/?bò:þ28óÓïÉÕYýheäæ¿x¡ÌÃ|;úúKã	ÉÕYõÞ9zv~@òÂ¹¹A_uÅ?¹:w¥Ö£gç$WgNê¡|gç$/ä@.ÎøÉÕ¹9eª&quot;ÂÙùÉçN¢¹¿Þ0ÏH.Î¼IDëÃ¡9£&amp;ÿ  ÿÿ   ÿÿÔ×QÎ\·á{¯ÂÈQ$EjE èM/ºÿÎï¢i+Ê83B} ?í¼x@i¨êö½½þùãÛß¾ýþí/ßþñ~ü;}&#39;¦nß©1||ÿãïß¾&gt;ûñóõ&#39;ýëgã×ÏÎô??ÿøÖÀ:ÿüo2úâÇ¯ü¯_ýÖþðã·ÿößÇoÿù«¾þ&#39;ÿþìÏ?ñã/ùk½äèì
+!Öh¹#ZÞt.mÂ÷ÌÑ«sä³¼&gt;æã3è5ûÿáÚÈ_CÌ&lt;óU·2HÞ8w8÷««.sþäè¬r;?8HÞ8T:e¾ìsþäàÜA:¾cû/ÿx8|ï\!9:½f27¯Ìù7ÊjÇÑoAÿøþ9rtæÞf^$oÔ4õUó&#39;Gç.ÜzæèÕ¹@rt¦îâáê\ yãÌ&lt;Gæèà?9:7Ã&quot;áê\ yãÜÁ2ÏÑæ¹@rp¦9`çE´Ü1òsä3¡©/ý÷ß£³+øjéO5Ï£³MØð«e4sä³¼&gt;&gt;[Ýÿ5X 8*¯üÜÎ7ÎÎýêªËå?9:«ÜÎáÎ7ÎzåÎùãkP¤ã5$ðözcåõ5X 9:A27¯Ìù7ÊjÇÑ÷ß£3ôÞ4sôê\ yãÜ ¦©¯ºà?9:wÁäÖ3G¯Î£3MtÏ|WçÉgÆà92GçüÉÑ¹æÉ|WçÉçy¾&gt;0Ï3Ík&lt;/¢åá÷+$o	Mý|é¿ÿÞ¨]!ÄWKªy.mÂ_-£©$oåõñùÛêþ¯ÁÅQy8Äì|åàv.¼qîpîWW].çüÉÑYäv~p.¼q&amp;¨ôÔ+pÎ_Ê üõÈ¨ð/ûx8lï\!9:A27¯Ìù7ÊjÇÑoAûøþ9rtæÞf^$oÔ4õUó&#39;Gç.ÜzæèÕ¹@rt¦îâáê\ yãÌ&lt;Gæèà?9:7Ã&quot;áê\ yãÜÁ2ÏÑæ¹@rp¦9`çE´Ü1òsä3¡©/ý÷ß£³+øjéO5Ï£³MØð«e4sä³¼&gt;&gt;[Ýÿ5X 8*¯üÜÎ7ÎÎýêªËå?9:«ÜÎáÎ7ÎzåÎùãkP¤ãk8Úã&lt;¾w®Å DWæüÅeµãè· |Ê?9:ó@ïM3G¯Î7ÎjúªÎù£sLn=sôê\ 9:ÓDwñÌpu.¼qf~µ&amp;Îù£s3Ì)ù®Î7Î,ó|}`$gÖx^DËÃ!ï9WHÞ8úùÒÿ½Q!9:»B¯þTó\ 9:Û¿ZFS9HÞ8Ëëãó·Õý_£òpÙùÊÿÀí\ yãÜáÜ¯®º\Îù£³Èíü&gt;à\ yãLPé©Wþà?9¾A:^ÃÁ¿l8ìãá°½säè,%ÊÜ¼2ç/Þ(|¨G¿}íã#øSæüÉÑzo9zu.¼qnPÓÔW]pÎ»`rë£WçÉÑ&amp;ºg&gt;«sä3cðkMó&#39;GçfS$ó!\$o;Xæù2úÀ&lt;HÎ4¬ñ¼;CÞs®¼q&amp;4õó¥ÿþ{£Brtv_-ý©æ¹@rt¶	~µ¦r.¼q×Çço«û¿Gåá³óÿÛ¹@òÆ¹Ã¹_]u¹ó&#39;Gg5Ûù!|À¹@òÆ ÒS¯üÁ9r|*t|g£Ã±¾$Gg1(Qææ9ñFàCí8úþ[£BrtæÞf^$oÔ4õUó&#39;Gç.ÜzæèÕ¹@rt¦îâáê\ yãÌ&lt;Gæèà?9:7Ã&quot;áê\ yãÜÁ2ÏÑæ¹@rp¦9`çE´Ü1òsä3¡©/ý÷ß£³+øjéO5Ï£³MØð«e4sä³¼&gt;&gt;[Ýÿ5X 8*¯üÜÎ7ÎÎýêªËå?9:«ÜÎáÎ7ÎzåÎùãkP¤ã5Âh¬p8Ö×`äè,%ÊÜ¼2ç/Þ(|¨GßkTHÎ&lt;Ð{ÓÌÑ«säs¦¾êsþäèÜ[Ï½:HÎ4Ñ]&lt;ó!\$oçÈó&#39;GçfS$ó!\$o;Xæù2úÀ&lt;HÎ4¬ñ¼;CÞs®¼q&amp;4õó¥ÿþ{£Brtv_-ý©æ¹@rt¶	~µ¦r.¼q×Çço«û¿Gåá³óÿÛ¹@òÆ¹Ã¹_]u¹ó&#39;Gg5Ûù!|À¹@òÆ ÒS¯üÁ9r|*t|cx³Ã±¾$Gg1(Qææ9ñFàCí8úþ[£BrtæÞf^$oÔ4õUó&#39;Gç.ÜzæèÕ¹@rt¦îâáê\ yãÌ&lt;Gæèà?9:7Ã&quot;áê\ yãÜÁ2ÏÑæ¹@rp¦9`çE´Ü1òsä3¡©/ý÷ß£³+øjéO5Ï£³MØð«e4sä³¼&gt;&gt;[Ýÿ5X 8*¯üÜÎ7ÎÎýêªËå?9:«ÜÎáÎ7ÎzåÎùãkP¤ã5*xÆùËÃ?ß;WHÎbP¢ÌÍ+sþâ2ÁÚqôÛGÐ?&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://www.wsj.com/articles/BL-CIOB-2999">https://www.wsj.com/articles/BL-CIOB-2999</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/540.html">540</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10099/">10099</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10003"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Vulnerable JS Library</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The identified library jquery-ui, version 1.12.1 is vulnerable.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">/*! jQuery UI - v1.12.1</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">CVE-2021-41184
+CVE-2021-41183
+CVE-2021-41182
+CVE-2022-31160
+</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Please upgrade to the latest version of jquery-ui.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://github.com/advisories/GHSA-h6gj-6jjq-h8g9">https://github.com/advisories/GHSA-h6gj-6jjq-h8g9</a>
+							<br />
+						
+							<a href="https://bugs.jqueryui.com/ticket/15284">https://bugs.jqueryui.com/ticket/15284</a>
+							<br />
+						
+							<a href="https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9">https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9</a>
+							<br />
+						
+							<a href="https://nvd.nist.gov/vuln/detail/CVE-2022-31160">https://nvd.nist.gov/vuln/detail/CVE-2022-31160</a>
+							<br />
+						
+							<a href="https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327">https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</a>
+							<br />
+						
+							<a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41184">https://nvd.nist.gov/vuln/detail/CVE-2021-41184</a>
+							<br />
+						
+							<a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41183">https://nvd.nist.gov/vuln/detail/CVE-2021-41183</a>
+							<br />
+						
+							<a href="https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc">https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</a>
+							<br />
+						
+							<a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41182">https://nvd.nist.gov/vuln/detail/CVE-2021-41182</a>
+							<br />
+						
+							<a href="https://github.com/jquery/jquery-ui/issues/2101">https://github.com/jquery/jquery-ui/issues/2101</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/829.html">829</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10003/">10003</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10110"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Dangerous JS Functions</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>A dangerous JS function seems to be in use that would leave the site vulnerable.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Eval</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>See the references for security advice on the use of these functions.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://angular.io/guide/security">https://angular.io/guide/security</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/749.html">749</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10110/">10110</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10063"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Permissions Policy Header Not Set</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/">https://www.antai.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">5</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</a>
+							<br />
+						
+							<a href="https://developer.chrome.com/blog/feature-policy/">https://developer.chrome.com/blog/feature-policy/</a>
+							<br />
+						
+							<a href="https://scotthelme.co.uk/a-new-security-header-feature-policy/">https://scotthelme.co.uk/a-new-security-header-feature-policy/</a>
+							<br />
+						
+							<a href="https://w3c.github.io/webappsec-feature-policy/">https://w3c.github.io/webappsec-feature-policy/</a>
+							<br />
+						
+							<a href="https://www.smashingmagazine.com/2018/12/feature-policy/">https://www.smashingmagazine.com/2018/12/feature-policy/</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10063/">10063</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10035"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Strict-Transport-Security Header Not Set</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/de">https://www.antai.gouv.fr/de</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/de/seite-nicht-gefunden">https://www.antai.gouv.fr/de/seite-nicht-gefunden</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/en">https://www.antai.gouv.fr/en</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/it">https://www.antai.gouv.fr/it</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/nl">https://www.antai.gouv.fr/nl</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/page-introuvable">https://www.antai.gouv.fr/page-introuvable</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/particulier/designation-ou-contestation">https://www.antai.gouv.fr/particulier/designation-ou-contestation</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/particulier/paiement">https://www.antai.gouv.fr/particulier/paiement</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/particulier/suivre-mon-dossier-infraction">https://www.antai.gouv.fr/particulier/suivre-mon-dossier-infraction</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">12</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</a>
+							<br />
+						
+							<a href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a>
+							<br />
+						
+							<a href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</a>
+							<br />
+						
+							<a href="http://caniuse.com/stricttransportsecurity">http://caniuse.com/stricttransportsecurity</a>
+							<br />
+						
+							<a href="http://tools.ietf.org/html/rfc6797">http://tools.ietf.org/html/rfc6797</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/319.html">319</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10035/">10035</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10096"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Timestamp Disclosure - Unix</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>A timestamp was disclosed by the application/web server - Unix</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1393632881</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1393632881, which evaluates to: 2014-03-01 00:14:41</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1689095167</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1689095167, which evaluates to: 2023-07-11 17:06:07</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1786008035</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1786008035, which evaluates to: 2026-08-06 09:20:35</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1813176631</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1813176631, which evaluates to: 2027-06-16 20:10:31</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1831629727</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1831629727, which evaluates to: 2028-01-16 10:02:07</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1831742065</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1831742065, which evaluates to: 2028-01-17 17:14:25</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1852606879</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1852606879, which evaluates to: 2028-09-15 05:01:19</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1940620270</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1940620270, which evaluates to: 2031-06-30 21:11:10</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1982551046</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1982551046, which evaluates to: 2032-10-28 04:37:26</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/w/page/13246936/Information%20Leakage">http://projects.webappsec.org/w/page/13246936/Information%20Leakage</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10096/">10096</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10021"></a>
+						<div>Low</div></th>
+					<th class="risk-1">X-Content-Type-Options Header Missing</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/">https://www.antai.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/css/css_URRFmxsOkeC4xRgOIU6jCWL--U1buJJtdHeRUWTmaxI.css">https://www.antai.gouv.fr/sites/default/files/css/css_URRFmxsOkeC4xRgOIU6jCWL--U1buJJtdHeRUWTmaxI.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/images/flags/de.png">https://www.antai.gouv.fr/sites/default/files/images/flags/de.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/images/flags/en.png">https://www.antai.gouv.fr/sites/default/files/images/flags/en.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/images/flags/es.png">https://www.antai.gouv.fr/sites/default/files/images/flags/es.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/images/flags/fr.png">https://www.antai.gouv.fr/sites/default/files/images/flags/fr.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/images/flags/it.png">https://www.antai.gouv.fr/sites/default/files/images/flags/it.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/images/flags/nl.png">https://www.antai.gouv.fr/sites/default/files/images/flags/nl.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/styles/pictogramme/public/2020-08/euro-icon-sm.png?itok=gC1YtYoW">https://www.antai.gouv.fr/sites/default/files/styles/pictogramme/public/2020-08/euro-icon-sm.png?itok=gC1YtYoW</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/styles/pictogramme/public/2021-06/ANTAI-picto-contravention-120x120-bleu.png?itok=Z_e_77GZ">https://www.antai.gouv.fr/sites/default/files/styles/pictogramme/public/2021-06/ANTAI-picto-contravention-120x120-bleu.png?itok=Z_e_77GZ</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/themes/open_antai_swa/favicon.ico">https://www.antai.gouv.fr/themes/open_antai_swa/favicon.ico</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">12</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</div>
+							<br />
+						
+							<div>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</a>
+							<br />
+						
+							<a href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10021/">10021</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10094"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Base64 Disclosure</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">/sites/default/files/css/css_nsDJuukCIq7H29XHzvo0tatrdO0-17_ahqJAucL18Ho</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�ȭz��y����ߊW���,��,�{&amp;���oW;��֭�Ӵ�^�j�����</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/">https://www.antai.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">/sites/default/files/css/css_nsDJuukCIq7H29XHzvo0tatrdO0-17_ahqJAucL18Ho</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�ȭz��y����ߊW���,��,�{&amp;���oW;��֭�Ӵ�^�j�����</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">/sites/default/files/css/css_URRFmxsOkeC4xRgOIU6jCWL--U1buJJtdHeRUWTmaxI</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�ȭz��y����ߊW���,��,�DQll:G��`8�:�%���5n�I���EE���H</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">/sites/default/files/css/css_URRFmxsOkeC4xRgOIU6jCWL--U1buJJtdHeRUWTmaxI</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�ȭz��y����ߊW���,��,�DQll:G��`8�:�%���5n�I���EE���H</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf">https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">233/Subtype/TrueType/ToUnicode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�}�J��ʗ�N��O*^�:�&#39;(u</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/css/css_223K_oDuKfV5hn_1h3tSwQmh_LkiGdHajtdMzIEdQVc.css">https://www.antai.gouv.fr/sites/default/files/css/css_223K_oDuKfV5hn_1h3tSwQmh_LkiGdHajtdMzIEdQVc.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI0VFMDAwMCIgIGQ9Ik0wLDcuNTYybDEuMTE0LTMuNDM4YzIuNTY1LDAuOTA2LDQuNDMsMS42ODgsNS41OSwyLjM1QzYuMzk4LDMuNTUzLDYuMjM3LDEuNTQ0LDYuMjIsMC40NDdoMy41MTEgYy0wLjA1LDEuNTk3LTAuMjM0LDMuNi0wLjU1OCw2LjAwM2MxLjY2NC0wLjgzOCwzLjU2Ni0xLjYxMyw1LjcxNC0yLjMyNUwxNiw3LjU2MmMtMi4wNSwwLjY3OC00LjA2LDEuMTMxLTYuMDI4LDEuMzU2IGMwLjk4NCwwLjg1NiwyLjM3MiwyLjM4MSw0LjE2Niw0LjU3NWwtMi45MDYsMi4wNTljLTAuOTM1LTEuMjc0LTIuMDQxLTMuMDA5LTMuMzE2LTUuMjA2Yy0xLjE5NCwyLjI3NS0yLjI0NCw0LjAxMy0zLjE0Nyw1LjIwNiBsLTIuODU2LTIuMDU5YzEuODcyLTIuMzA3LDMuMjExLTMuODMyLDQuMDE3LTQuNTc1QzMuODQ5LDguNTE2LDEuODcyLDguMDYyLDAsNy41NjIiLz48L3N2Zz4K</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;&lt;path fill=&quot;#EE0000&quot;  d=&quot;M0,7.562l1.114-3.438c2.565,0.906,4.43,1.688,5.59,2.35C6.398,3.553,6.237,1.544,6.22,0.447h3.511 c-0.05,1.597-0.234,3.6-0.558,6.003c1.664-0.838,3.566-1.613,5.714-2.325L16,7.562c-2.05,0.678-4.06,1.131-6.028,1.356 c0.984,0.856,2.372,2.381,4.166,4.575l-2.906,2.059c-0.935-1.274-2.041-3.009-3.316-5.206c-1.194,2.275-2.244,4.013-3.147,5.206 l-2.856-2.059c1.872-2.307,3.211-3.832,4.017-4.575C3.849,8.516,1.872,8.062,0,7.562&quot;/&gt;&lt;/svg&gt;
+</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">6</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://projects.webappsec.org/w/page/13246936/Information%20Leakage">https://projects.webappsec.org/w/page/13246936/Information%20Leakage</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10094/">10094</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10027"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Information Disclosure - Suspicious Comments</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/">https://www.antai.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">from</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bFROM\b and was detected 12 times, the first in the element starting with: &quot;      // detach from parent, fire event then clean up data&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">select</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bSELECT\b and was detected 11 times, the first in the element starting with: &quot;var n=&quot;1.13.2&quot;,r=&quot;object&quot;==typeof self&amp;&amp;self.self===self&amp;&amp;self||&quot;object&quot;==typeof global&amp;&amp;global.global===global&amp;&amp;global||Functio&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">TODO</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bTODO\b and was detected 4 times, the first in the element starting with: &quot;      if (that.$element) { // TODO: Check whether guarding this code with this `if` is really necessary.&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;window.drupalTranslations = {&quot;strings&quot;:{&quot;&quot;:{&quot;Add&quot;:&quot;Ajouter&quot;,&quot;item&quot;:&quot;\u00e9l\u00e9ment&quot;,&quot;Edit&quot;:&quot;Edit&quot;,&quot;Home&quot;:&quot;Accueil&quot;,&quot;Next&quot;:&quot;Su&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">username</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSERNAME\b and was detected in the element starting with: &quot;!function(e,t){&quot;use strict&quot;;&quot;object&quot;==typeof module&amp;&amp;&quot;object&quot;==typeof module.exports?module.exports=e.document?t(e,!0):function(&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js">https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">where</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bWHERE\b and was detected in the element starting with: &quot;   *   instance or a plain object where the key is the attribute name and the&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">10</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10027/">10027</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10109"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Modern Web Application</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a id=&quot;dropdown-profil-2&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+                            &lt;span&gt;Un particulier&lt;/span&gt;
+                            &lt;span class=&quot;caret caret-blue pull-right&quot;&gt;&lt;/span&gt;
+                        &lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/">https://www.antai.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a id=&quot;dropdown-profil-2&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+                            &lt;span&gt;Un particulier&lt;/span&gt;
+                            &lt;span class=&quot;caret caret-blue pull-right&quot;&gt;&lt;/span&gt;
+                        &lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a id=&quot;dropdown-profil-2&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+                            &lt;span&gt;Un particulier&lt;/span&gt;
+                            &lt;span class=&quot;caret caret-blue pull-right&quot;&gt;&lt;/span&gt;
+                        &lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a id=&quot;dropdown-profil-2&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+                            &lt;span&gt;Un particulier&lt;/span&gt;
+                            &lt;span class=&quot;caret caret-blue pull-right&quot;&gt;&lt;/span&gt;
+                        &lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">4</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>This is an informational alert and so no changes are required.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10109/">10109</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10015"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Re-examine Cache-control Directives</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">cache-control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/">https://www.antai.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">cache-control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">2</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>For secure content, ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							<br />
+						
+							<a href="https://grayduck.mn/2021/09/13/cache-control-recommendations/">https://grayduck.mn/2021/09/13/cache-control-recommendations/</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="90005"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Sec-Fetch-Dest Header is Missing</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/de/seite-nicht-gefunden">https://www.antai.gouv.fr/de/seite-nicht-gefunden</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">3</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that Sec-Fetch-Dest header is included in request headers.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90005/">90005</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="90005"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Sec-Fetch-Mode Header is Missing</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/de/seite-nicht-gefunden">https://www.antai.gouv.fr/de/seite-nicht-gefunden</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">3</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that Sec-Fetch-Mode header is included in request headers.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90005/">90005</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="90005"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Sec-Fetch-Site Header is Missing</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Specifies the relationship between request initiator&#39;s origin and target&#39;s origin.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/de/seite-nicht-gefunden">https://www.antai.gouv.fr/de/seite-nicht-gefunden</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">3</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that Sec-Fetch-Site header is included in request headers.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90005/">90005</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="90005"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Sec-Fetch-User Header is Missing</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Specifies if a navigation request was initiated by a user.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/de/seite-nicht-gefunden">https://www.antai.gouv.fr/de/seite-nicht-gefunden</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">3</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that Sec-Fetch-User header is included in user initiated requests.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90005/">90005</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10049"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Storable and Cacheable Content</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where &quot;shared&quot; caching servers such as &quot;proxy&quot; caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr">https://www.antai.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/de">https://www.antai.gouv.fr/de</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/de/seite-nicht-gefunden">https://www.antai.gouv.fr/de/seite-nicht-gefunden</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/en">https://www.antai.gouv.fr/en</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/it">https://www.antai.gouv.fr/it</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/nl">https://www.antai.gouv.fr/nl</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/page-introuvable">https://www.antai.gouv.fr/page-introuvable</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/particulier/designation-ou-contestation">https://www.antai.gouv.fr/particulier/designation-ou-contestation</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/particulier/paiement">https://www.antai.gouv.fr/particulier/paiement</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/particulier/suivre-mon-dossier-infraction">https://www.antai.gouv.fr/particulier/suivre-mon-dossier-infraction</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/robots.txt">https://www.antai.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.antai.gouv.fr/sitemap.xml">https://www.antai.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">12</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</div>
+							<br />
+						
+							<div>Cache-Control: no-cache, no-store, must-revalidate, private</div>
+							<br />
+						
+							<div>Pragma: no-cache</div>
+							<br />
+						
+							<div>Expires: 0</div>
+							<br />
+						
+							<div>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://datatracker.ietf.org/doc/html/rfc7234">https://datatracker.ietf.org/doc/html/rfc7234</a>
+							<br />
+						
+							<a href="https://datatracker.ietf.org/doc/html/rfc7231">https://datatracker.ietf.org/doc/html/rfc7231</a>
+							<br />
+						
+							<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/524.html">524</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10049/">10049</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+	
+</body>
+</html>
+

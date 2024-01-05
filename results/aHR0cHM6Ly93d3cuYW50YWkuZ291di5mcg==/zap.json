@@ -1,0 +1,1117 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Fri, 5 Jan 2024 05:13:56",
+	"site":[ 
+		{
+			"@name": "https://www.antai.gouv.fr",
+			"@host": "www.antai.gouv.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"lunr-search-block-form\" action=\"/recherche\" method=\"GET\" id=\"lunr-search-block-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search--2\" ]."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"lunr-search-block-form\" action=\"/recherche\" method=\"GET\" id=\"lunr-search-block-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search--2\" ]."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"lunr-search-block-form\" action=\"/recherche\" method=\"GET\" id=\"lunr-search-block-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search--2\" ]."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"lunr-search-block-form\" action=\"/recherche\" method=\"GET\" id=\"lunr-search-block-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search--2\" ]."
+						}
+					],
+					"count": "4",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search--2\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10099",
+					"alertRef": "10099",
+					"alert": "Source Code Disclosure - PHP",
+					"name": "Source Code Disclosure - PHP",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Application Source Code was disclosed by the web server - PHP</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<?=Z4giW\\x0010\u00E4\u00DB-\u00A0\u00D4\u0099\u00EE\u00D0\u009C\u00A5-\u00C0\u00A6\u00DF\u00BE\u009B\u0096\u0092\u00EE\u00D0\u00BC\u0091\u00BEZ\u00E9`\u00DDz\u00FE\u0081\u00D8!9;O\\x00071;\u00D8\\x0001^\u0098\u00D2\\x001d\u009A7\u00D2\\x0004\u00CEt;\u00F1jI7h\u00CE\u00D2j\u0080n\\x00077\u00F1\\x0005\u00E9\\x000e\u00CD\\x001bi\\x0004\\x0015\u00AA\u00BD\\x0003$\u00E9\\x0006\u00CDyCT\\x0006\u00D4\u00F9q>\u00C65\u00FD\"f\u00C1\u00F3\u00B1n\u0088\\x001d\u009A\u00B3\u00B4\\x0018(b\u00E9\u00E8\\x0015\u00BAA\u00F2\u00C6\\x0019\u00C1\u00A7\u00DA\u00F7\u00AB\u009F\u009F\\x001d-\u009A\u00B34O \\x001aZ\u00BAz\u0095\u00EE\u00D0\u00BC\u0091\\x001e\u00A0\u00A6\u00B5'^\u0092n\u00D0\u009C\u00A5I xP\u00E9\u00EAU\u00BACs\u0096\u00C6\\x0000r\u00F1\u00D27q\u0095\u00EE\u00D0\u00BC\u0091f\u0098|\u00B5V\u00AEN\u00D2\r\u009A\u00B3\u00F40\u0088\\x0010)}\\x0013W\u00E9\\x000e\u00CD\\x001bi\\x0002\u00968x7}\u00E1LwhN\u00D2\\x0018\\x0013lp\u00DCU\u00CB\\x0013\u00E7C\u00BE&\u00DD\u00A2y#\u008D0\u00D4\\x000f\u00B6\u0080\u00E7\u00A7G\u008B\u00E6,\u00ED\n\u0082|\u00BB\\x0005\u0094:\u00D3\\x001d\u009A\u00B3\u00B4\\x0005\u00D8\u00F4\u00DBw\u00D3R\u00D2\\x001d\u009A7\u00D2r}|\u00B0n=\u00FF@\u00EC\u0090\u009C\u009D\u00E7\u00D5jv\u00B0\\x0003\u00BC0\u00A5;4o\u00A4\t\u009C\u00E9v\u00E2\u00D5\u0092n\u00D0\u009C\u00A5\u00D5\\x0000\u00DD\\x000en\u00E2\\x000b\u00D2\\x001d\u009A7\u00D2\\x0008*T{\\x0007H\u00D2\r\u009A\u00F3\u0086\u00A8\\x000c\u00A8\u00F3\u00F3|\\wR\u00AF\r\u00B7\u00DE\u00F9X7\u00C4\\x000e\u00CDYZ\\x000c\\x0014\u00B1t\u00F4\n\u00DD y\u00E3\u008C\u00E0S\u00ED\u00FB\u00D5\u00CF\u00CF\u008E\\x0016\u00CDY\u009A'\\x0010\r-]\u00BDJwh\u00DEH\\x000fP\u00D3\u00DA\\x0013/I7h\u00CE\u00D2$\\x0010Wp\u00E9\u00EAU\u00BACs\u0096\u00C6\\x0000r\u00F1\u00D27q\u0095\u00EE\u00D0\u00BC\u0091f\u0098|\u00BD\u008FV\u00AEN\u00D2\r\u009A\u00B3\u00F40\u0088\u00B8Z+\u00DF\u00C4U\u00BAC\u00F3F\u009A\u0080%\\x000e\u00DEM_8\u00D3\\x001d\u009A\u00934\u00C6\\x0004\\x001b\\x001cw\u00D5\u00F2\u00C4\u00F9\u0090\u00AFI\u00B7h\u00DEH#\\x000c\u00F5\u0083-\u00E0\u00F9\u00E9\u00D1\u00A29K\u00BB\u0082 \u00DFn\\x0001\u00A5\u00CEt\u0087\u00E6,m\\x00016\u00FD\u00F6\u00DD\u00B4\u0094t\u0087\u00E6\u008D\u00B4\\\\x001f\\x001f\u00AC[\u00CF?\\x0010;$g\u00E7\u00E9 f\\x0007;\u00C0\\x000bS\u00BAC\u00F3F\u00FAje\u00BA\u009Dx\u00B5\u00A4\\x001b4gi5@\u00B7\u0083\u009B\u00F8\u0082t\u0087\u00E6\u008D4\u0082\n\u00D5\u00DE\\x0001\u0092t\u0083\u00E6\u00BC!*\\x0003\u00EA\u00BC\u00BE\u009F\u00C2\u0080\u00C6\u00B5w\u00D5;\\x001f\u00EB\u0086\u00D8\u00A19K\u008B\u0081\"\u0096\u008E^\u00A1\\x001b$o\u009C\\x0011|\u00AA}\u00BF\u00FA\u00F9\u00D9\u00D1\u00A29K\u00F3\\x0004\u00A2\u00A1\u00A5\u00ABW\u00E9\\x000e\u00CD\\x001b\u00E9\\x0001jZ{\u00E2%\u00E9\\x0006\u00CDY\u009A\\x0004\u00E2z\u0080\u0097\u00AE^\u00A5;4gi\\x000c \\x0017/}\\x0013W\u00E9\\x000e\u00CD\\x001bi\u0086\u00C91KW'\u00E9\\x0006\u00CDYz\\x0018D\\o\u00FE\u0095o\u00E2*\u00DD\u00A1y#M\u00C0\\x0012\\x0007\u00EF\u00A6/\u009C\u00E9\\x000e\u00CDI\\x001ac\u0082\r\u008E\u00BBjy\u00E2|\u00C8\u00D7\u00A4[4o\u00A4\\x0011\u0086\u00FA\u00C1\\x0016\u00F0\u00FC\u00F4h\u00D1\u009C\u00A5]A\u0090o\u00B7\u0080Rg\u00BACs\u0096\u00B6\\x0000\u009B~\u00FBnZJ\u00BAC\u00F3FZ\u00AE\u008F\\x000f\u00D6\u00AD\u00E7\\x001f\u0088\\x001d\u0092\u00B3\u00F3t\\x0010\u00B3\u0083\\x001d\u00E0\u0085)\u00DD\u00A1y#M\u00E0L\u00B7\\x0013\u00AF\u0096t\u0083\u00E6,\u00AD\\x0006\u00E8vp\\x0013_\u0090\u00EE\u00D0\u00BC\u0091FP\u00A1\u00DA;@\u0092n\u00D0\u009C7De@\u009D\u009F\u00E7\u00E3\u00EA\u009F\u00EC\u00FF\u00B7\u00F3\u00E1\u00BF|>|/\u00DD\u00A29K\u008B\u0081\"\u0096\u008E^\u00A1\\x001b$o\u009C\\x0011|\u00AA}\u00BF\u00FA\u00CB\u00F7\u00D0\u00F9\\x001e\u00FE!t\u0083\u00E6,\u00CD\\x0013\u0088\u0086\u0096\u00AE^\u00A5;4o\u00A4\\x0007\u00A8i\u00ED\u0089\u0097\u00A4\\x001b4gi\\x0012\\x0008\\x001eT\u00BAz\u0095\u00EE\u00D0\u009C\u00A51\u0080\\\u00BC\u00F4M\\\u00A5;4o\u00A4\\x0019&\u00C7,]\u009D\u00A4\\x001b4g\u00E9a\\x0010!R\u00FA&\u00AE\u00D2\\x001d\u009A7\u00D2\\x0004,q\u00F0n\u00FA\u00C2\u0099\u00EE\u00D0\u009C\u00A41&\u00D8\u00E0\u00B8\u00AB\u0096'\u00CE\u0087|M\u00BAE\u00F3F\\x001aa\u00A8\\x001fl\\x0001\u00CFO\u008F\\x0016\u00CDY\u00DA\\x0015\\x0004\u00F9v\\x000b(u\u00A6;4gi\\x000b\u00B0\u00E9\u00B7\u00EF\u00A6\u00A5\u00A4;4o\u00A4\u00E5\u00FA\u00F8`\u00DDz\u00FE\u0081\u00D8!9;O\\x00071;\u00D8\\x0001^\u0098\u00D2\\x001d\u009A7\u00D2\\x0004\u00CEt;\u00F1jI7h\u00CE\u00D2j\u0080n\\x00077\u00F1\\x0005\u00E9\\x000e\u00CD\\x001b\u00E9\u00ABU\u00A8\u00F6\\x000e\u0090\u00A4\\x001b4\u00E7\rQ\\x0019\u00F0\u008A\u00BD\u00AA\u00AF7\u00A7@\u009F\u00FF\u00B7\u00F3a\u00BF|>l/\u00DD\u00A29K\u008B\u0081\"\u0096\u008E^\u00A1\\x001b$o\u009C\\x0011|\u00AA}\u00BF\u00FA\u00CB\u00F7\u00D0~\u00F9\\x001e\u00FE!t\u0083\u00E6,\u00CD\\x0013\u0088\u0086\u0096\u00AE^\u00A5;4o\u00A4\\x0007\u00A8i\u00ED\u0089\u0097\u00A4\\x001b4gi\\x0012\\x0008\\x001eT\u00BAz\u0095\u00EE\u00D0\u009C\u00A51\u0080\\\u00BC\u00F4M\\\u00A5;4o\u00A4\\x0019&\u00C7,]\u009D\u00A4\\x001b4g\u00E9a\\x0010!R\u00FA&\u00AE\u00D2\\x001d\u009A7\u00D2\\x0004,q\u00F0n\u00FA\u00C2\u0099\u00EE\u00D0\u009C\u00A41&\u00D8\u00E0\u00B8\u00AB\u0096'\u00CE\u0087|M\u00BAE\u00F3F\\x001aa\u00A8\\x001fl\\x0001\u00CFO\u008F\\x0016\u00CDY\u00FAj\\x0015\u00E4\u00DB-\u00A0\u00D4\u0099\u00EE\u00D0\u009C\u00A5-\u00C0\u00A6\u00DF\u00BE\u009B\u0096\u0092\u00EE\u00D0\u00BC\u0091\u0096\u00EB\u00E3\u0083u\u00EB\u00F9\\x0007b\u0087\u00E4\u00EC<\\x001d\u00C4\u00EC`\\x0007xaJwh\u00DEH\\x00138\u00D3\u00ED\u00C4\u00AB%\u00DD\u00A09K\u00AB\\x0001\u00BA\\x001d\u00DC\u00C4\\x0017\u00A4;4o\u00A4\\x0011T\u00A8\u00F6\\x000e\u0090\u00A4\\x001b4\u00E7\rQ\\x0019P\u00E7\u00E7\u00F9\u00B8~\u00C2\u0098\\x000b\u009E\u008FuC\u00EC\u00D0\u009C\u00A5\u00C5@\\x0011KG\u00AF\u00D0\r\u00927\u00CE\\x0008>\u00D5\u00BE_\u00FD\u00FC\u00ECh\u00D1\u009C\u00A5y\\x0002\u00D1\u00D0\u00D2\u00D5\u00ABt\u0087\u00E6\u008D\u00F4\\x00005\u00AD=\u00F1\u0092t\u0083\u00E6,M\\x0002\u00C1\u0083JW\u00AF\u00D2\\x001d\u009A\u00B34\\x0006\u0090\u008B\u0097\u00BE\u0089\u00ABt\u0087\u00E6\u008D4\u00C3\u00E4\u0098\u00A5\u00AB\u0093t\u0083\u00E6,=\\x000c\"DJ\u00DF\u00C4U\u00BAC\u00F3F\u009A\u0080%\\x000e\u00DEM_8\u00D3\\x001d\u009A\u00934\u00C6\\x0004\\x001b\\x001cw\u00D5\u00F2\u00C4\u00F9\u0090\u00AFI\u00B7h\u00DEH#\\x000c\u00F5\u0083-\u00E0\u00F9\u00E9\u00D1\u00A29K\u00BB\u0082 \u00DFn\\x0001\u00A5\u00CEt\u0087\u00E6,m\\x00016\u00FD\u00F6\u00DD\u00B4\u0094t\u0087\u00E6\u008D\u00B4\\\\x001f\\x001f\u00AC[\u00CF?\\x0010;$g\u00E7\u00E9 f\\x0007;\u00C0\\x000bS\u00BAC\u00F3F\u009A\u00C0\u0099n'^-\u00E9\\x0006\u00CDYZ\r\u00D0\u00ED\u00E0&\u00BE \u00DD\u00A1y#\u008D\u00A0B\u00B5w\u0080$\u00DD\u00A09o\u0088\u00CA\u0080:?\u00CE\u00C7\u00F5\u0098\u0099\u00E4X\u00F0|\u00AC\\x001bb\u0087\u00E6,-\\x0006\u008AX:z\u0085n\u0090\u00BCqF\u00F0\u00A9\u00F6\u00FD\u00EA\u00E7gG\u008B\u00E6,\u00CD\\x0013\u0088\u0086\u0096\u00AE^\u00A5;4o\u00A4\\x0007\u00A8i\u00ED\u0089\u0097\u00A4\\x001b4gi\\x0012\\x0008\\x001eT\u00BAz\u0095\u00EE\u00D0\u009C\u00A51\u0080\\\u00BC\u00F4M\\\u00A5;4o\u00A4\\x0019&\u00C7,]\u009D\u00A4\\x001b4g\u00E9a\\x0010!R\u00FA&\u00AE\u00D2\\x001d\u009A7\u00D2\\x0004,q\u00F0n\u00FA\u00C2\u0099\u00EE\u00D0\u009C\u00A41&\u00D8\u00E0\u00B8\u00AB\u0096'\u00CE\u0087|M\u00BAE\u00F3F\\x001aa\u00A8\\x001fl\\x0001\u00CFO\u008F\\x0016\u00CDY\u00DA\\x0015\\x0004\u00F9v\\x000b(u\u00A6;4gi\\x000b\u00B0\u00E9\u00B7\u00EF\u00A6\u00A5\u00A4;4o\u00A4\u00E5\u00FA\u00F8`\u00DDz\u00FE\u0081\u00D8!9;O\\x00071;\u00D8\\x0001^\u0098\u00D2\\x001d\u009A7\u00D2\\x0004\u00CEt;\u00F1jI7h\u00CE\u00D2j\u0080n\\x00077\u00F1\\x0005\u00E9\\x000e\u00CD\\x001bi\\x0004\\x0015\u00AA\u00BD\\x0003$\u00E9\\x0006\u00CDyCT\\x0006\u00D4\u00F9q>\u00AE\u00E9\\x0017~\u00FD\u0097\u00F5\u00CE\u00C7\u00BA!vh\u00CE\u00D2b\u00A0\u0088\u00A5\u00A3W\u00E8\\x0006\u00C9\\x001bg\\x0004\u009Fj\u00DF\u00AF~~v\u00B4h\u00CE\u00D2<\u0081hh\u00E9\u00EAU\u00BAC\u00F3Fz\u0080\u009A\u00D6\u009ExI\u00BAAs\u0096&\u0081\u00E0A\u00A5\u00ABW\u00E9\\x000e\u00CDY\\x001a\\x0003\u00C8\u00C5K\u00DF\u00C4U\u00BAC\u00F3F\u009Aar\u00CC\u00D2\u00D5I\u00BAAs\u0096\\x001e\\x0006\\x0011\"\u00A5o\u00E2*\u00DD\u00A1y#M\u00C0\\x0012\\x0007\u00EF\u00A6/\u009C\u00E9\\x000e\u00CDI\\x001ac\u0082\r\u008E\u00BBjy\u00E2|\u00C8\u00D7\u00A4[4o\u00A4\\x0011\u0086\u00FA\u00C1\\x0016\u00F0\u00FC\u00F4h\u00D1\u009C\u00A5]A\u0090o\u00B7\u0080Rg\u00BACs\u0096\u00B6\\x0000\u009B~\u00FBnZJ\u00BAC\u00F3FZ\u00AE\u008F\\x000f\u00D6\u00AD\u00E7\\x001f\u0088\\x001d\u0092\u00B3\u00F3\u00D5*f\\x0007;\u00C0\\x000bS\u00BAC\u00F3F\u009A\u00C0\u0099n'^-\u00E9\\x0006\u00CDYZ\r\u00D0\u00ED\u00E0&\u00BE \u00DD\u00A1y#\u008D\u00A0B\u00B5w\u0080$\u00DD\u00A09o\u0088\u00CA\u0080:?\u00CF\\x0007\\x0003\u00B3i\u00C1\u00F3\u00B1n\u0088\\x001d\u009A\u00B3\u00B4\\x0018(b\u00E9\u00E8\\x0015\u00BAA\u00F2\u00C6\\x0019\u00C1\u00A7\u00DA\u00F7\u00AB\u009F\u009F\\x001d-\u009A\u00B34O \\x001aZ\u00BAz\u0095\u00EE\u00D0\u00BC\u0091\\x001e\u00A0\u00A6\u00B5'^\u0092n\u00D0\u009C\u00A5I xP\u00E9\u00EAU\u00BACs\u0096\u00C6\\x0000r\u00F1\u00D27q\u0095\u00EE\u00D0\u00BC\u0091f\u0098\\x001c\u00B3tu\u0092n\u00D0\u009C\u00A5\u0087A\u0084H\u00E9\u009B\u00B8Jwh\u00DEH\\x0013\u00B0\u00C4\u00C1\u00BB\u00E9\\x000bg\u00BACs\u0092\u00C6\u0098`\u0083\u00E3\u00AEZ\u009E8\\x001f\u00F25\u00E9\\x0016\u00CD\\x001bi\u0084\u00A1~\u00B0\\x0005<?=Z4giW\\x0010\u00E4\u00DB-\u00A0\u00D4\u0099\u00EE\u00D0\u009C\u00A5-\u00C0\u00A6\u00DF\u00BE\u009B\u0096\u0092\u00EE\u00D0\u00BC\u0091\u0096\u00EB\u00E3\u0083u\u00EB\u00F9\\x0007b\u0087\u00E4\u00EC<\\x001d\u00C4\u00EC`\\x0007xaJwh\u00DEH\\x00138\u00D3\u00ED\u00C4\u00AB%\u00DD\u00A09K\u00AB\\x0001\u00BA\\x001d\u00DC\u00C4\\x0017\u00A4;4o\u00A4\\x0011T\u00A8\u00F6\\x000e\u0090\u00A4\\x001b4\u00E7\rQ\\x0019P\u00E7\u00C7\u00F9\u00B8N\u00CA\u00FC'\u00F5u\u0093#;\\x000c\u0082QtG\u009F\u00CC\u009F\u00C1\u00FB\u00DF\u00D8\u00AB~Cc)\u00A5\u008A\u0094\u00C0\u00B8\\x0006}u\u0084\u00E9\u00B0>\u00FFg\u00EA\u00CD\u00C7~!vh\u00CE\u00D2\u00EA0\u00A2\u00D2\u00D1;t\u0083\u00E4\u00833!\u00A6\u00F9\u00EF\u00D5\u00CF\u00EF\u008E\\x0016\u00CDYZ&\u0098\u0087\u0095\u00AE\u00DE\u00A5;4\\x001f\u00A4\\x0007\u00CC\u00AD\u00F6\u00C6K\u00D2\r\u009A\u00B34+\u0096\\x000c.]\u00BDKwh\u00CE\u00D2\u00B4\u00C0\u00A1Q\u00FA%\u00EE\u00D2\\x001d\u009A\\x000f\u00D2\u0082)k\u0096\u00AEN\u00D2\r\u009A\u00B3\u00F4p\u00AC\u00A5Z\u00FA%\u00EE\u00D2\\x001d\u009A\\x000f\u00D2\\x000c\u00D1u\u00E3\u00DB\u00F4\u0085\u0099\u00EE\u00D0\u009C\u00A4iM\u00F8\u0090uU\u00ADO\u00CC\u0087~'\u00DD\u00A2\u00F9 M\\x0018\\x00167\u00AE\u0080\u00E7\u00B7G\u008B\u00E6,\\x001d\\x0006%\u00B9\u00BC\\x0002J\u00CDt\u0087\u00E6,\u00ED\\x000b>\u00E3\u00F2\u00DB\u00B4\u0094t\u0087\u00E6\u0083\u00B4~~\u00BEqn=\u00FF\\x000f\u00B1Crv\u009E\\x0001u\u00BFq\\x0003\u00BC\u00B0\u00A5;4\\x001f\u00A4\\x0019!|\u00B9\u00F1jI7h\u00CE\u00D2\u009FV\n\u00BF\u00F1\\x0012_\u0090\u00EE\u00D0|\u0090&\u0098r\u00ED\\x001b I7h\u00CE\\x0017\u00A2\t\u00C8\u00E6\u00FF\u00F9`\\x000c\u00F5\u0082\u00E3\u00B1\\x001f\u0088\r\u0092\u00B3\u00B3:\u008C\u00A8r\u00F3\u00CE\\\u00BF\u00F8\u00A0L\u0088i\u00FEs\u00F4\u00F3k\u00A3Crv\u0096\t\u00E6a\u0095\u00A3w\u00E7\\x0006\u00C9\\x0007\u00E7\\x0001s+\u00BD\u00EA\u0092s\u00FD\u00E4\u00EC\u00CC\u008A%\u0083+G\u00EF\u00CE\r\u0092\u00B33-phT~\u0084\u00BBs\u0083\u00E4\u0083\u00B3`\u00CA\u009A\u0095\u00A3\u0093s\u00FD\u00E4\u00EC<\\x001ck\u00A9V~\u0084\u00BBs\u0083\u00E4\u00833Ct\u00FD\u00FE1\u00FA\u00C2<7HN\u00CE\u00B4&|\u00C8\u00BA\u0088\u00D6'\u0086C\u00BFs\u00EE\u0090|p&\\x000c\u008B\u00DF?\u00FA\u009F\u00DF\\x001b\\x001d\u0092\u00B3s\\x0018\u0094\u00E4\u00EA\u00A3\u00BF\u00D4<7H\u00CE\u00CE\u00BE\u00E03\u00AE>FK97H>8\u00EB\u00E7\u00E7\u00DFo\u00AB\u00E7\u00FF\r6(\u00CE\u00CA3\u00A0\u00EE\u00BF\u00F2\u00BF\u00B0\u009D\\x001b$\\x001f\u009C\\x0019!|\u00B5\u00EAj9\u00D7O\u00CE\u00CE\u00E6\u00A0\u00F0\u00DF\\x001f\u00E1\\x000b\u00CE\r\u0092\\x000f\u00CE\\x0004S.\u00FD\u00C9\u009F\u009C\u00EB'\u00E7k\u00D0\\x0004d\u00F3o8tB\\x0007U\u009C\u008E\u00FD\\x001c\u00EC\u00D0\u009C\u00A5\u00D5aD\u00A5\u00A3w\u00E8\\x0006\u00C9\\x0007gBL\u00F3\u00DF\u00AB\u009F_\\x001d-\u009A\u00B3\u00B4L0\\x000f+]\u00BDKwh>H\\x000f\u0098[\u00ED\u008D\u0097\u00A4\\x001b4giV,\\x0019\\\u00BAz\u0097\u00EE\u00D0\u009C\u00A5i\u0081C\u00A3\u00F4K\u00DC\u00A5;4\\x001f\u00A4\\x0005S\u00D6,]\u009D\u00A4\\x001b4g\u00E9\u00E1XK\u00B5\u00F4K\u00DC\u00A5;4\\x001f\u00A4\\x0019\u00A2\u00EB\u00C6\u00B7\u00E9\\x000b3\u00DD\u00A19I\u00D3\u009A\u00F0!\u00EB\u00AAZ\u009F\u0098\\x000f\u00FDN\u00BAE\u00F3A\u009A0,n\\\\x0001\u00CFo\u008F\\x0016\u00CDY:\\x000cJry\\x0005\u0094\u009A\u00E9\\x000e\u00CDY\u00DA\\x0017|\u00C6\u00E5\u00B7i)\u00E9\\x000e\u00CD\\x0007i\u00FD\u00FC|\u00E3\u00DCz\u00FE\\x001fb\u0087\u00E4\u00EC<\\x0003\u00EA~\u00E3\\x0006xaKwh>H3B\u00F8r\u00E3\u00D5\u0092n\u00D0\u009C\u00A5\u00CDA\u00E17^\u00E2\\x000b\u00D2\\x001d\u009A\\x000f\u00D2\\x0004S\u00AE}\\x0003$\u00E9\\x0006\u00CD\u00F9B4\\x0001\u00D9\u00FC?\\x001f\\x0003nN\\x0005\u00E7c\u00BF\\x0010;4giu\\x0018Q\u00E9\u00E8\\x001d\u00BAA\u00F2\u00C1\u0099\\x0010\u00D3\u00FC\u00F7\u00EA\u00E7wG\u008B\u00E6,-\\x0013\u00CC\u00C3JW\u00EF\u00D2\\x001d\u009A\\x000f\u00D2\\x0003\u00E6V{\u00E3%\u00E9\\x0006\u00CDY\u009A\\x0015K\\x0006\u0097\u00AE\u00DE\u00A5;4giZ\u00E0\u00D0(\u00FD\\x0012w\u00E9\\x000e\u00CD\\x0007i\u00C1\u00945KW'\u00E9\\x0006\u00CDYz8\u00D6R-\u00FD\\x0012w\u00E9\\x000e\u00CD\\x0007i\u0086\u00E8\u00BA\u00F1m\u00FA\u00C2LwhN\u00D2\u00B4&|\u00C8\u00BA\u00AA\u00D6'\u00E6C\u00BF\u0093n\u00D1|\u0090&\\x000c\u008B\\x001bW\u00C0\u00F3\u00DB\u00A3Es\u0096\\x000e\u0083\u0092\\^\\x0001\u00A5f\u00BACs\u0096\u00F6\\x0005\u009Fq\u00F9mZJ\u00BAC\u00F3AZ??\u00DF8\u00B7\u009E\u00FF\u0087\u00D8!9;\u00CF\u0080\u00BA\u00DF\u00B8\\x0001^\u00D8\u00D2\\x001d\u009A\\x000f\u00D2\u008C\\x0010\u00BE\u00DCx\u00B5\u00A4\\x001b4gisP\u00F8\u008D\u0097\u00F8\u0082t\u0087\u00E6\u00834\u00C1\u0094k\u00DF\\x0000I\u00BAAs\u00BE\\x0010M@6\u00FF\u00E6C\\x000c\u00F4\u00F9~*8\\x001f\u00FB\u0085\u00D8\u00A19K\u00AB\u00C3\u0088JG\u00EF\u00D0\r\u0092\\x000f\u00CE\u0084\u0098\u00E6\u00BFW?\u00BF;Z4gi\u0099`\\x001eV\u00BAz\u0097\u00EE\u00D0|\u0090\\x001e0\u00B7\u00DA\\x001b/I7h\u00CE\u00D2\u00ACX2\u00B8t\u00F5.\u00DD\u00A19K\u00D3\\x0002\u0087F\u00E9\u0097\u00B8Kwh>H\\x000b\u00A6\u00ACY\u00BA:I7h\u00CE\u00D2\u00C3\u00B1\u0096j\u00E9\u0097\u00B8Kwh>H3D\u00D7\u008Do\u00D3\\x0017f\u00BACs\u0092\u00A65\u00E1C\u00D6U\u00B5>1\\x001f\u00FA\u009Dt\u008B\u00E6\u00834aX\u00DC\u00B8\\x0002\u009E\u00DF\\x001e-\u009A\u00B3t\\x0018\u0094\u00E4\u00F2\n(5\u00D3\\x001d\u009A\u00B3\u00B4/\u00F8\u008C\u00CBo\u00D3R\u00D2\\x001d\u009A\\x000f\u00D2\u00FA\u00F9\u00F9\u00C6\u00B9\u00F5\u00FC?\u00C4\\x000e\u00C9\u00D9y\\x0006\u00D4\u00FD\u00C6\r\u00F0\u00C2\u0096\u00EE\u00D0|\u0090f\u0084\u00F0\u00E5\u00C6\u00AB%\u00DD\u00A09K\u009B\u0083\u00C2o\u00BC\u00C4\\x0017\u00A4;4\\x001f\u00A4\t\u00A6\\\u00FB\\x0006H\u00D2\r\u009A\u00F3\u0085h\\x0002\u00B2\u00F97\\x001f\u00BC>a\u00CE\u0082\u00F3\u00B1_\u0088\\x001d\u009A\u00B3\u00B4:\u008C\u00A8t\u00F4\\x000e\u00DD \u00F9\u00E0L\u0088i\u00FE{\u00F5\u00F3\u00BB\u00A3Es\u0096\u0096\t\u00E6a\u00A5\u00ABw\u00E9\\x000e\u00CD\\x0007\u00E9\\x0001s\u00AB\u00BD\u00F1\u0092t\u0083\u00E6,\u00CD\u008A%\u0083KW\u00EF\u00D2\\x001d\u009A\u00B34-ph\u0094~\u0089\u00BBt\u0087\u00E6\u0083\u00B4`\u00CA\u009A\u00A5\u00AB\u0093t\u0083\u00E6,=\\x001ck\u00A9\u0096~\u0089\u00BBt\u0087\u00E6\u00834Ct\u00DD\u00F86}a\u00A6;4'iZ\\x0013>d]U\u00EB\\x0013\u00F3\u00A1\u00DFI\u00B7h>H\\x0013\u0086\u00C5\u008D+\u00E0\u00F9\u00ED\u00D1\u00A29K\u0087AI.\u00AF\u0080R3\u00DD\u00A19K\u00FB\u0082\u00CF\u00B8\u00FC6-%\u00DD\u00A1\u00F9 \u00AD\u009F\u009Fo\u009C[\u00CF\u00FFC\u00EC\u0090\u009C\u009Dg@\u00DDo\u00DC\\x0000/l\u00E9\\x000e\u00CD\\x0007iF\\x0008_n\u00BCZ\u00D2\r\u009A\u00B3\u00B49(\u00FC\u00C6K|A\u00BAC\u00F3A\u009A`\u00CA\u00B5o\u0080$\u00DD\u00A09_\u0088& \u009B\u00FF\u00E7C\\x0010LRp>\u00F6\\x000b\u00B1Cs\u0096V\u0087\\x0011\u0095\u008E\u00DE\u00A1\\x001b$\\x001f\u009C\t1\u00CD\u00AF~~w\u00B4h\u00CE\u00D22\u00C1<\u00ACt\u00F5.\u00DD\u00A1\u00F9 =`n\u00B57^\u0092n\u00D0\u009C\u00A5Y\u00B1dp\u00E9\u00EA]\u00BACs\u0096\u00A6\\x0005\\x000e\u008D\u00D2/q\u0097\u00EE\u00D0|\u0090\\x0016LY\u00B3tu\u0092n\u00D0\u009C\u00A5\u0087c-\u00D5\u00D2/q\u0097\u00EE\u00D0|\u0090f\u0088\u00AE\\x001b\u00DF\u00A6/\u00CCt\u0087\u00E6$Mk\u00C2\u0087\u00AC\u00ABj}b>\u00F4;\u00E9\\x0016\u00CD\\x0007i\u00C2\u00B0\u00B8q\\x0005<\u00BF=Z4g\u00E90(\u00C9\u00E5\\x0015Pj\u00A6;4gi_\u00F0\\x0019\u0097\u00DF\u00A6\u00A5\u00A4;4\\x001f\u00A4\u00F5\u00F3\u00F3\u008Ds\u00EB\u00F9\u0088\\x001d\u0092\u00B3\u00F3\\x000c\u00A8\u00FB\u008D\\x001b\u00E0\u0085-\u00DD\u00A1\u00F9 \u00CD\\x0008\u00E1\u00CB\u008DWK\u00BAAs\u00966\\x0007\u0085\u00DFx\u0089/Hwh>H\\x0013L\u00B9\u00F6\r\u0090\u00A4\\x001b4\u00E7\\x000b\u00D1\\x0004d\u00F3o>(@>\u00A9\u00E0|\u00EC\\x0017b\u0087\u00E6,\u00AD\\x000e#\u00FA=\u00FA\u00F9\u0091\u00EE\u0090|p&\u00C44/]\u009D\u00A0\\x001b4gi\u0099`\\x001eV\u00FA\\x001d\u00EE\u00D2\\x001d\u009A\\x000f\u00D2\\x0003\u00E6vc\u00E3\u00BD0\u00D3\\x001d\u009A\u00B34+\u0096\u008C\u00DA;o\u0097\u00EE\u00D0\u009C\u00A5i\u0081C\u00A3\u00F4K\u00DC\u00A5;4\\x001f\u00A4\\x0005S\u00D6,=\\x001fI\u00BAAs\u0096\\x001e\u008E\u00B5TK\u00CF\u00C7.\u00DD\u00A1\u00F9 \u00CD\\x0010]\u00B5w^\u0092n\u00D0\u009C\u00A4iM\u00F8\u0090uU\u00ADO\u00CC\u0087~'\u00DD\u00A2\u00F9 M\\x0018\\x00167\u00AE\u0080\u00E7\u00B7G\u008B\u00E6,\\x001d\\x0006%\u00B9\u00BC\\x0002J\u00CDt\u0087\u00E6,\u00ED\\x000b>\u0083KW\u00EF\u00D2\\x001d\u009A\\x000f\u00D2\u00FA\u00F9\u00B9\u00F6\u00B9\u0095\u00A0\u00EB'g\u00E7\\x0019P\u00F7\u00DA7\u00C0\\x000e\u00DD\u00A1\u00F9 \u00CD\\x0008\u00E1\u00CB\u008DWK\u00BAAs\u00966\\x0007\u0085\u00DFx\u0089/Hwh>H\\x0013L\u00B9\u00F6\r\u0090\u00A4\\x001b4\u00E7\\x000b\u00D1\\x0004d\u00F3\u00FF|0LF\\x0014\u009C\u008F\u00FDB\u00EC\u00D0\u009C\u00A5\u00D5aD\u00BFG??\u00D2\\x001d\u0092\\x000f\u00CE\u0084\u0098\u00E6\u00A5\u00AB\\x0013t\u0083\u00E6,-\\x0013\u00CC\u00C3J\u00BF\u00C3]\u00BAC\u00F3Az\u00C0\u00DCnl\u00BC\\x0017f\u00BACs\u0096f\u00C5\u0092Q{\u00E7\u00ED\u00D2\\x001d\u009A\u00B34-ph\u0094~\u0089\u00BBt\u0087\u00E6\u0083\u00B4`\u00CA\u009A\u00A5\u00E7#I7h\u00CE\u00D2\u00C3\u00B1\u0096j\u00E9\u00F9\u00D8\u00A5;4\\x001f\u00A4\\x0019\u00A2\u00AB\u00F6\u00CEK\u00D2\r\u009A\u00934\u00AD\t\\x001f\u00B2\u00AE\u00AA\u00F5\u0089\u00F9\u00D0\u00EF\u00A4[4\\x001f\u00A4\t\u00C3\u00E2\u00C6\\x0015\u00F0\u00FC\u00F6h\u00D1\u009C\u00A5\u00C3\u00A0$\u0097W@\u00A9\u0099\u00EE\u00D0\u009C\u00A5}\u00C1gp\u00E9\u00EA]\u00BAC\u00F3AZ??\u00D7>\u00B7\\x0012t\u00FD\u00E4\u00EC<\\x0003\u00EA^\u00FB\\x0006\u00D8\u00A1;4\\x001f\u00A4\\x0019!|\u00B9\u00F1jI7h\u00CE\u00D2\u00E6\u00A0\u00F0\\x001b/\u00F1\\x0005\u00E9\\x000e\u00CD\\x0007i\u0082)\u00D7\u00BE\\x0001\u0092t\u0083\u00E6|!\u009A\u0080l\u00FE\u00CD\u00C7\u0098\u00880{{>\u00FE\\x0001\\x0000\\x0000\u00FF\u00FF\\x0000\\x0000\\x0000\u00FF\u00FF\u00D4\u00D7M\u008A\u00A4\u00C9\r\u0087\u00F1}\u009D\u00A2.\u00D0B_\u00A1\u00D01\u008C\u008F\u00D0`\u00BC\u00F1\u00C2\u00F7\u00DF8\u00AB`\u00C6\u00E3P\u00C0[\u00CE\u00847\u00A5M\u00D13\u00D9\u00DD\u00F3\u00F0C\u00A1I\u00B1\u00D0\u00E7\u00F8\u00FC5@\u00EC\u008F_\u008C\u00CF\u00DF\\x001f\u00FF\u00F8\u00F8\u00DB\u00C7\u00BF?\u00E9\u00FB\u009F\u00E8\u0093\u00D8\\x0004dS>\u00F1\u0098X\u00CB\u00EC\u00F3\u00F7\u00BF>\u00BE>\u00FC\u00FE\u00F9\u00F8\u0083\u00EB\u00EB\u00E7\u0090\u00C7O\u00FE\u00FA\u00DB\u00FE\u00F2\u00F3\u00F7\u00C7\u0080X\u00FC\u00F9\u00EFt\u00F2\u009F\u00E2\u00FB\u00D7\u00DF\u00BF\u00E3\u00EBW\\x0014|\u00FF\u00F6_\u00FD;~\u00FD\u00F7\u00AF\u00FA\u00FA\u008F\u00FC\u00F1\u00D9\u00FF6\u00FF\u00F3\u00E3\u00EF[\u00B5:\u008C\u00E8\u00F9\u00E8\u00F5\u00FFE\u00AF'\u00A2w\u00E8\\x0006\u00C9\\x0007g\u00C2\u009A\u00E6\u00A5\u00AB\\x0013t\u0083\u00E6,-\\x0013\u00CC\u00C3J\u00BF\u00C3]\u00BAC\u00F3Az\u00C0\u00DC^\u00D8xo\u0098\u00E9\\x000e\u00CDY\u009A\\x0015!\u00A3\u00F6\u00CE\u00DB\u00A5;4gi\n\u00F0\u00D2U\u00FA%\u00EE\u00D2\\x001d\u009A\\x000f\u00D2\u0082)1K\u00CFG\u0092n\u00D0\u009C\u00A5\u0087#B\u00B5\u00F4|\u00EC\u00D2\\x001d\u009A\\x000f\u00D2\\x000c\u00D1\u00A8\u00BD\u00F3\u0092t\u0083\u00E6$M1\u00E1C\u00E2\u00AAZ\u00EF\u0098\\x000f\u00FD\u0099t\u008B\u00E6\u00834a\u00D8z\u00E1\n\u00B8{\u00B4h\u00CE\u00D2\u00CB\u00A0$\u0097W@\u00A9\u0099\u00EE\u00D0\u009C\u00A5=\u00E0sq\u00E9\u00EA]\u00BAC\u00F3AZ\\x001f\\x001f\u00D7>\u00B7\\x0012t\u00FD\u00E4\u00EC<\\x0017\u00D4\u00BD\u00F6\r\u00B0Cwh>H3\u0096\u00F0\u00E5\u00C6\u00AB%\u00DD\u00A09K\u009B\u0083\u0096\u00BF\u00F0\\x0012\u00DF \u00DD\u00A1\u00F9 M0\u00E5\u00DA7@\u0092n\u00D0\u009C/D\\x0013\u0090\u00CD\u00EF\u00F9 \u00B0\\x000e.8\\x001f\u00FB\u0085\u00D8\u00A19K\u00AB\u00C3\u0088\u009E\u008F\u00BE\u00A4;$\\x001f\u009C\tk\u009A\u0097\u00AEN\u00D0\r\u009A\u00B3\u00B4L0\\x000f+\u00FD\\x000ew\u00E9\\x000e\u00CD\\x0007\u00E9\\x0001s{a\u00E3\u00BDa\u00A6;4giV\u0084\u008C\u00DA;o\u0097\u00EE\u00D0\u009C\u00A5)\u00C0KW\u00E9\u0097\u00B8Kwh>H\\x000b\u00A6\u00C4,=\\x001fI\u00BAAs\u0096\\x001e\u008E\\x0008\u00D5\u00D2\u00F3\u00B1Kwh>H3D\u00A3\u00F6\u00CEK\u00D2\r\u009A\u00934\u00C5\u0084\\x000f\u0089\u00ABj\u00BDc>\u00F4g\u00D2-\u009A\\x000f\u00D2\u0084a\u00EB\u0085+\u00E0\u00FE\u00ED\u00D1\u00A29K/\u0083\u0092\\^\\x0001\u00A5f\u00BACs\u0096\u00F6\u0080\u00CF\u00C5\u00A5\u00ABw\u00E9\\x000e\u00CD\\x0007i}|\\\u00FB\u00DCJ\u00D0\u00F5\u0093\u00B3\u00F3\\P\u00F7\u00DA7\u00C0\\x000e\u00DD\u00A1\u00F9 \u00CDX\u00C2\u0097\\x001b\u00AF\u0096t\u0083\u00E6,m\\x000eZ\u00FE\u00C2K|\u0083t\u0087\u00E6\u00834\u00C1\u0094k\u00DF\\x0000I\u00BAAs\u00BE\\x0010M@6\\x001f\u00BF\u009F\u00C2`a\\x0005\u00C7c?\\x0010\\x001b$ggu\\x0018\u00D1\u00D3\u00CD\u00F7\u00CFs\u0083\u00E2\u00832aM\u00F3\u00CA\u00D1\u0089\u00B9~rv\u0096\t\u00E6a\u0095\u009F\u00E0\u00EE\u00DC \u00F9\u00E0<`n\u00CF\u00AF\u00BA7\u00CCs\u0083\u00E4\u00EC\u00CC\u008A\u0090Qz\u00D9\u00ED\u00CE\r\u0092\u00B33\\x0005x\u00E9\u00AA\u00FC\\x0008w\u00E7\\x0006\u00C9\\x0007g\u00C1\u0094\u0098\u0095\u0087#9\u00D7O\u00CE\u00CE\u00C3\\x0011\u00A1Zy8v\u00E7\\x0006\u00C9\\x0007g\u0086h\u0094^v\u00C9\u00B9~rr\u00A6\u0098\u00F0!q\\x0011\u00ADw\\x000c\u0087\u00FE\u00CC\u00B9C\u00F2\u00C1\u00990l=\u00FF\u00A5\u00FF\u00FE\u00BD\u00D1!9;/\u0083\u0092\\}\u00E9/5\u00CF\r\u0092\u00B3\u00B3\\x0007|.\u00AE\\x001c\u00BD;7H>8\u00EB\u00E3\u00E3\u00D2\u00B7Ub._\u009C\u0095\u00E7\u0082\u00BA\u0097\u00FE\u00CA\u00BF37H>83\u0096\u00F0\u00D5\u00AA\u00AB\u00E5\\?9;\u009B\u0083\u0096?\u00FF\\x0008\u00DF\u00E0\u00DC \u00F9\u00E0L0\u00E5\u00D2_\u00F9\u0093s\u00FD\u00E4|\r\u009A\u0080l~\r\u00C7\n\u0084\u0086\\x0017\u009C\u008E\u00FD\\x001c\u00EC\u00D0\u009C\u00A5\u00D5aD\u00CFG\u00DF?\u00D1\\x001d\u0092\\x000f\u00CE\u00845\u00CDKW'\u00E8\\x0006\u00CDYZ&\u0098\u0087\u0095~\u0087\u00BBt\u0087\u00E6\u0083\u00F4\u0080\u00B9\u00BD\u00B0\u00F1\u00DE0\u00D3\\x001d\u009A\u00B34+BF\u00ED\u009D\u00B7Kwh\u00CE\u00D2\\x0014\u00E0\u00A5\u00AB\u00F4K\u00DC\u00A5;4\\x001f\u00A4\\x0005Sb\u0096\u009E\u008F$\u00DD\u00A09K\\x000fG\u0084j\u00E9\u00F9\u00D8\u00A5;4\\x001f\u00A4\\x0019\u00A2Q{\u00E7%\u00E9\\x0006\u00CDI\u009Ab\u00C2\u0087\u00C4U\u00B5\u00DE1\\x001f\u00FA3\u00E9\\x0016\u00CD\\x0007i\u00C2\u00B0\u00F5\u00C2\\x0015p\u00FF\u00F6h\u00D1\u009C\u00A5\u0097AI.\u00AF\u0080R3\u00DD\u00A19K{\u00C0\u00E7\u00E2\u00D2\u00D5\u00BBt\u0087\u00E6\u0083\u00B4>>\u00AE}n%\u00E8\u00FA\u00C9\u00D9y.\u00A8{\u00ED\\x001b`\u0087\u00EE\u00D0|\u0090f,\u00E1\u00CB\u008DWK\u00BAAs\u00966\\x0007-\u00E1%\u00BEA\u00BAC\u00F3A\u009A`\u00CA\u00B5o\u0080$\u00DD\u00A09_\u0088& \u009B\u00DF\u00F3\u00A1\u0090\u00A1Vp>\u00F6\\x000b\u00B1Cs\u0096V\u0087\\x0011=\\x001f}\u00FFHwH>8\\x0013\u00D64/]\u009D\u00A0\\x001b4gi\u0099`\\x001eV\u00FA\\x001d\u00EE\u00D2\\x001d\u009A\\x000f\u00D2\\x0003\u00E6\u00F6\u00C2\u00C6{\u00C3Lwh\u00CE\u00D2\u00AC\\x0008\\x0019\u00B5w\u00DE.\u00DD\u00A19KS\u0080\u0097\u00AE\u00D2/q\u0097\u00EE\u00D0|\u0090\\x0016L\u0089Yz>\u0092t\u0083\u00E6,=\\x001c\\x0011\u00AA\u00A5\u00E7c\u0097\u00EE\u00D0|\u0090f\u0088F\u00ED\u009D\u0097\u00A4\\x001b4'i\u008A\t\\x001f\\x0012W\u00D5z\u00C7|\u00E8\u00CF\u00A4[4\\x001f\u00A4\t\u00C3\u00D6\\x000bW\u00C0\u00FD\u00DB\u00A3Es\u0096^\\x0006%\u00B9\u00BC\\x0002J\u00CDt\u0087\u00E6,\u00ED\\x0001\u009F\u008BKW\u00EF\u00D2\\x001d\u009A\\x000f\u00D2\u00FA\u00F8\u00B8\u00F6\u00B9\u0095\u00A0\u00EB'g\u00E7\u00B9\u00A0\u00EE\u00B5o\u0080\\x001d\u00BAC\u00F3A\u009A\u00B1\u0084/7^-\u00E9\\x0006\u00CDY\u00DA\\x001c\u00B4\u00FC\u0085\u0097\u00F8\\x0006\u00E9\\x000e\u00CD\\x0007i\u0082)\u00D7\u00BE\\x0001\u0092t\u0083\u00E6|!\u009A\u0080l~\u00CD\u0087/L\\x000b)8\\x001f\u00FB\u0085\u00D8\u00A19K\u00AB\u00C3\u0088\u009E\u008F\u00BE\u00A4;$\\x001f\u009C\tk\u009A\u0097\u00AEN\u00D0\r\u009A\u00B3\u00B4L0\\x000f+\u00FD\\x000ew\u00E9\\x000e\u00CD\\x0007\u00E9\\x0001s{a\u00E3\u00BDa\u00A6;4giV\u0084\u008C\u00DA;o\u0097\u00EE\u00D0\u009C\u00A5)\u00C0KW\u00E9\u0097\u00B8Kwh>H\\x000b\u00A6\u00C4,=\\x001fI\u00BAAs\u0096\\x001e\u008E\\x0008\u00D5\u00D2\u00F3\u00B1Kwh>H3D\u00A3\u00F6\u00CEK\u00D2\r\u009A\u00934\u00C5\u0084\\x000f\u0089\u00ABj\u00BDc>\u00F4g\u00D2-\u009A\\x000f\u00D2\u0084a\u00EB\u0085+\u00E0\u00FE\u00ED\u00D1\u00A29K/\u0083\u0092\\^\\x0001\u00A5f\u00BACs\u0096\u00F6\u0080\u00CF\u00C5\u00A5\u00ABw\u00E9\\x000e\u00CD\\x0007i}|\\\u00FB\u00DCJ\u00D0\u00F5\u0093\u00B3\u00F3\\P\u00F7\u00DA7\u00C0\\x000e\u00DD\u00A1\u00F9 \u00CDX\u00C2\u0097\\x001b\u00AF\u0096t\u0083\u00E6,m\\x000eZ\u00FE\u00C2K|\u0083t\u0087\u00E6\u00834\u00C1\u0094k\u00DF\\x0000I\u00BAAs\u00BE\\x0010M@6\u00BF\u00E7C0H\\x000b\u008E\u00C7~ 6H\u00CE\u00CE\u00EA0\u00A2\u00A7\u009B\u00EF\u009F\u00E7\\x0006\u00C5\\x0007e\u00C2\u009A\u00E6\u0095\u00A3\\x0013s\u00FD\u00E4\u00EC,\\x0013\u00CC\u00C3*?\u00C1\u00DD\u00B9A\u00F2\u00C1y\u00C0\u00DC\u009E_uo\u0098\u00E7\\x0006\u00C9\u00D9\u0099\\x0015!\u00A3\u00F4\u00B2\u00DB\u009D\\x001b$gg\n\u00F0\u00D2U\u00F9\\x0011\u00EE\u00CE\r\u0092\\x000f\u00CE\u0082)1+\\x000fGr\u00AE\u009F\u009C\u009D\u0087#B\u00B5\u00F2p\u00EC\u00CE\r\u0092\\x000f\u00CE\\x000c\u00D1(\u00BD\u00EC\u0092s\u00FD\u00E4\u00E4L1\u00E1C\u00E2\"Z\u00EF\\x0018\\x000e\u00FD\u0099s\u0087\u00E4\u00833a\u00D8z\u00FEK\u00FF\u00FD{\u00A3Crv^\\x0006%\u00B9\u00FA\u00D2_j\u009E\\x001b$gg\\x000f\u00F8\\\\9zwn\u0090|p\u00D6\u00C7\u00C7\u00A5o\u00AB\u00C4\\\u00BE8+\u00CF\\x0005u/\u00FD\u0095gn\u0090|pf,\u00E1\u00ABUW\u00CB\u00B9~rv6\\x0007-\u00FE\\x0011\u00BE\u00C1\u00B9A\u00F2\u00C1\u0099`\u00CA\u00A5\u00BF\u00F2'\u00E7\u00FA\u00C9\u00F9\\x001a4\\x0001\u00D9\u00FC\\x001a\u008E\u00E9\u0090\u00F9\u00F8RZo:\u00F6s\u00B0Cs\u0096V\u0087\\x0011=\\x001f}\u00FFDwH>8\\x0013\u00D64/]\u009D\u00A0\\x001b4gi\u0099`\\x001eV\u00FA\\x001d\u00EE\u00D2\\x001d\u009A\\x000f\u00D2\\x0003\u00E6\u00F6\u00C2\u00C6{\u00C3Lwh\u00CE\u00D2\u00AC\\x0008\\x0019\u00B5w\u00DE.\u00DD\u00A19KS\u0080\u0097\u00AE\u00D2/q\u0097\u00EE\u00D0|\u0090\\x0016L\u0089Yz>\u0092t\u0083\u00E6,=\\x001c\\x0011\u00AA\u00A5\u00E7c\u0097\u00EE\u00D0|\u0090f\u0088F\u00ED\u009D\u0097\u00A4\\x001b4'i\u008A\t\\x001f\\x0012W\u00D5z\u00C7|\u00E8\u00CF\u00A4[4\\x001f\u00A4\t\u00C3\u00D6\\x000bW\u00C0\u00FD\u00DB\u00A3Es\u0096^\\x0006%\u00B9\u00BC\\x0002J\u00CDt\u0087\u00E6,\u00ED\\x0001\u009F\u008BKW\u00EF\u00D2\\x001d\u009A\\x000f\u00D2\u00FA\u00F8\u00B8\u00F6\u00B9\u0095\u00A0\u00EB'g\u00E7\u00B9\u00A0\u00EE\u00B5o\u0080\\x001d\u00BAC\u00F3A\u009A\u00B1\u0084/7^-\u00E9\\x0006\u00CDY\u00DA\\x001c\u00B4\u00FC\u0085\u0097\u00F8\\x0006\u00E9\\x000e\u00CD\\x0007i\u0082)\u00D7\u00BE\\x0001\u0092t\u0083\u00E6|!\u009A\u0080l~\u00CF\\x0007\u00C1Y\u00B4\u00E0|\u00EC\\x0017b\u0087\u00E6,\u00AD\\x000e#z>\u00FA\u00FE\u0091\u00EE\u0090|p&\u00ACi^\u00BA:A7h\u00CE\u00D22\u00C1<\u00AC\u00F4;\u00DC\u00A5;4\\x001f\u00A4\\x0007\u00CC\u00ED\u0085\u008D\u00F7\u0086\u0099\u00EE\u00D0\u009C\u00A5Y\\x00112j\u00EF\u00BC]\u00BACs\u0096\u00A6\\x0000/]\u00A5_\u00E2.\u00DD\u00A1\u00F9 -\u0098\\x0012\u00B3\u00F4|$\u00E9\\x0006\u00CDYz8\"TK\u00CF\u00C7.\u00DD\u00A1\u00F9 \u00CD\\x0010\u008D\u00DA;/I7hN\u00D2\\x0014\\x0013>$\u00AE\u00AA\u00F5\u008E\u00F9\u00D0\u009FI\u00B7h>H\\x0013\u0086\u00AD\\x0017\u00AE\u0080\u00FB\u00B7G\u008B\u00E6,\u00BD\\x000cJry\\x0005\u0094\u009A\u00E9\\x000e\u00CDY\u00DA\\x0003>\\x0017\u0097\u00AE\u00DE\u00A5;4\\x001f\u00A4\u00F5\u00F1q\u00EDs+A\u00D7O\u00CE\u00CEsA\u00DDk\u00DF\\x0000;t\u0087\u00E6\u00834c\t_n\u00BCZ\u00D2\r\u009A\u00B3\u00B49h\u00F9\\x000b/\u00F1\r\u00D2\\x001d\u009A\\x000f\u00D2\\x0004S\u00AE}\\x0003$\u00E9\\x0006\u00CD\u00F9B4\\x0001\u00D9\u00FC\u009A\\x000f\u009B\\x0018\u00FE\u00F8\u00FFy\u00BD\u00F9\u00D8/\u00C4\\x000e\u00CDYZ\\x001dF\u00F4|\u00F4\u00FD#\u00DD!\u00F9\u00E0LX\u00D3\u00BCtu\u0082n\u00D0\u009C\u00A5e\u0082yX\u00E9w\u00B8Kwh>H\\x000f\u0098\u00DB\\x000b\\x001b\u00EF\r3\u00DD\u00A19K\u00B3\"d\u00D4\u00DEy\u00BBt\u0087\u00E6,M\\x0001^\u00BAJ\u00BF\u00C4]\u00BAC\u00F3AZ0%f\u00E9\u00F9H\u00D2\r\u009A\u00B3\u00F4pD\u00A8\u0096\u009E\u008F]\u00BAC\u00F3A\u009A!\\x001a\u00B5w^\u0092n\u00D0\u009C\u00A4)&|H\\U\u00EB\\x001d\u00F3\u00A1?\u0093n\u00D1|\u0090&\\x000c[/\\\\x0001\u00F7o\u008F\\x0016\u00CDYz\\x0019\u0094\u00E4\u00F2\n(5\u00D3\\x001d\u009A\u00B3\u00B4\\x0007|>Z+W\u00EF\u00D2\\x001d\u009A\\x000f\u00D2\u00FA\u00F8\u00B8\u00F6\u00B9\u0095\u00A0\u00EB'g\u00E7\u00B9\u00A0\u00EE\u00B5o\u0080\\x001d\u00BAC\u00F3A\u009A\u00B1\u0084/7^-\u00E9\\x0006\u00CDY\u00DA\\x001c\u00B4\u00FC\u0085\u0097\u00F8\\x0006\u00E9\\x000e\u00CD\\x0007i\u0082)\u00D7\u00BE\\x0001\u0092t\u0083\u00E6|!\u00FE\u0087\u00FAz\u00D7\u00B5%\u00A9\\x00010\u009C\u009F\u00A7\u00D8O`\u00CA\u00B7\u00B2\u00FD\\x0004H\u00A0\u0089\\x0008\\x0008\\x0010\\x0019\\x0017\t$\\x0002\\x0008\u00E6\u00F5\u00E9\u00B5\\x0019\\x0002\u00CA%\u00F5\u00D2j\u00D1mk4\u00C1h\u00A3\u0099\u00FF|\u00B8\u00BC\u00DB\u00CAp\u00F4~\u00CF\u00C7\u00F1_`\u008A\u0082\u00F3\u00B1^\u0088\\x001d\u009A\u00B3\u00B4\\x0018(\u00E2\u00E7\u00D1\u00F7\u008Ft\u0087\u00E4\u008D3\u0082O\u00B5\u00D2\u00D5\t\u00BAAs\u0096\u00E6\tDCK\u00BF\u00C3U\u00BAC\u00F3Fz\u0080\u009A^\u00D8x\\x000f\u00CCt\u0087\u00E6,M\\x0002\u00C1\u00A3\u00F6\u00CE[\u00A5;4gi\\x000c \\x0017/\u00FD\\x0012W\u00E9\\x000e\u00CD\\x001bi\u0086\u00C91K\u00CFG\u0092n\u00D0\u009C\u00A5\u0087A\u0084H\u00E9\u00F9X\u00A5;4o\u00A4\tX\u00A2\u00F6\u00CEK\u00D2\r\u009A\u00934\u00C6\\x0004\\x001b\\x001cg\u00D5r\u00C7|\u00C8{\u00D2-\u009A7\u00D2\\x0008C\u00FD\u00C2\\x0015p\u00FF\u00F6h\u00D1\u009C\u00A5]A\u0090O\u00AF\u0080R3\u00DD\u00A19K[\u0080M\u00A7\u00D2\u00D5\u00ABt\u0087\u00E6\u008D\u00B4\\x001c?\u00AE}n%\u00E8\u00FA\u00C9\u00D9y:\u0088Y\u00ED\\x001b`\u0085\u00EE\u00D0\u00BC\u0091&p\u00A6\u00D3\u008DWK\u00BAAs\u0096V\\x0003t\u00BB\u00F0\\x0012\\x001f\u0090\u00EE\u00D0\u00BC\u0091FP\u00A1\u00DA7@\u0092n\u00D0\u009C/De@\u009D\u00AF\u00F9\\x0010\\x0001s\u009B\\x0005\u00E7c\u00BD\\x0010;4gi1P\u00C4\u00CF\u00A3\u00EF\\x001f\u00E9\\x000e\u00C9\\x001bg\\x0004\u009Fj\u00A5\u00AB\\x0013t\u0083\u00E6,\u00CD\\x0013\u0088\u0086\u0096~\u0087\u00ABt\u0087\u00E6\u008D\u00F4\\x00005\u00BD\u00B0\u00F1\\x001e\u0098\u00E9\\x000e\u00CDY\u009A\\x0004\u0082G\u00ED\u009D\u00B7Jwh\u00CE\u00D2\\x0018@.^\u00FA%\u00AE\u00D2\\x001d\u009A7\u00D2\\x000c\u0093c\u0096\u009E\u008F$\u00DD\u00A09K\\x000f\u0083\\x0008\u0091\u00D2\u00F3\u00B1Jwh\u00DEH\\x0013\u00B0D\u00ED\u009D\u0097\u00A4\\x001b4'i\u008C\t68\u00CE\u00AA\u00E5\u008E\u00F9\u0090\u00F7\u00A4[4o\u00A4\\x0011\u0086\u00FA\u0085+\u00E0\u00FE\u00ED\u00D1\u00A29K\u00BB\u0082 \u009F^\\x0001\u00A5f\u00BACs\u0096\u00B6\\x0000\u009BN\u00A5\u00ABW\u00E9\\x000e\u00CD\\x001bi9~\\\u00FB\u00DCJ\u00D0\u00F5\u0093\u00B3\u00F3t\\x0010\u00B3\u00DA7\u00C0\n\u00DD\u00A1y#M\u00E0L\u00A7\\x001b\u00AF\u0096t\u0083\u00E6,\u00AD\\x0006\u00E8v\u00E1%> \u00DD\u00A1y#\u008D\u00A0B\u00B5o\u0080$\u00DD\u00A0\u00F9?\u00D2G\u00F7\\x000f$e\u00E0\u00E3\u0093T\u008F\u00A5\u0087\u00AF\\x001b` L<\u009E$\r\\x0006:\u00FE\u00D3\u00FF\u00FC\u00F3\u008F\u00DF\u00FD\u00E3\u00FBO\u00F0\u00FA\u00EB\u00EF?~\u00F5\u00EB\u00DF\u008D\u00AF\u00BF\u00FE\u00EB\u008E\u00B5\u00E3_\u0082:\\x0019/\\x001f\u00EE\\x0005\u00C7\u00EB\u00F5\u00D4\u00FF\\x0014\u00BF=\u00FE\u0097\u00F3\u00EB\u00E7/\\x001c_?\\x001d\u00FF\u00F8\u00B7\u00E3\u00EF\u00DF|\u00FD\u00E1\u008F\u00E3\u00EBO_\u00ED\u00FE\\\u00E9\u00D9\u0090\\x0018(b\u00E9\u00E8\u00BF\u00F4K\u00DE8#\u00F8T\u00FB\u00BC\u00FA\u00FE\u00F5\u00D4\u00A29K\u00F3<v\u00D1\u00D0\u00D2\u00D5\u00ABt\u0087\u00E6\u008D\u00F4\\x00005\u00AD\u00BD\u00F1\u0092t\u0083\u00E6,M\\x0002\u00C1\u0083JW\u00AF\u00D2\\x001d\u009A\u00B34\\x0006\u0090\u008B\u0097~\u0089\u00ABt\u0087\u00E6\u008D4\u00C3\u00E4\u0098\u00A5\u00AB\u0093t\u0083\u00E6,=\\x000c\"DJ\u00BF\u00C4U\u00BAC\u00F3F\u009A\u0080%.|\u009B>0\u00D3\\x001d\u009A\u00934\u00C6\\x0004\\x001b\\x001cg\u00D5r\u00C7|\u00C8{\u00D2-\u009A7\u00D2\\x0008C\u00FD\u00C2\\x0015p\u00FF\u00F6h\u00D1\u009C\u00A5]A\u0090O\u00AF\u0080R3\u00DD\u00A19K[\u0080M?\u00FD6-%\u00DD\u00A1y#-\u00C7\u008F/\u009C[\u00F7\u00FFB\u00EC\u0090\u009C\u009D\u00A7\u0083\u0098]\u00B8\\x0001\\x001e\u00D8\u00D2\\x001d\u009A7\u00D2\\x0004\u00CEt\u00BA\u00F1jI7h\u00CE\u00D2j\u0080n\\x0017^\u00E2\\x0003\u00D2\\x001d\u009A7\u00D2\\x0008*T\u00FB\\x0006H\u00D2\r\u009A\u00F3\u0085\u00A8\\x000c\u00A8\u00F35\\x001f\\x001c\u0080\u00F3\u00F8r\u00AA7\\x001f\u00EB\u0085\u00D8\u00A19K\u008B\u0081\"\u0096\u008E^\u00A1\\x001b$o\u009C\\x0011|\u00AA}^}\u00FF\u00EEh\u00D1\u009C\u00A5y\\x0002\u00D1\u00D0\u00D2\u00D5\u00ABt\u0087\u00E6\u008D\u00F4\\x00005\u00AD\u00BD\u00F1\u0092t\u0083\u00E6,M\\x0002\u00C1\u0083JW\u00AF\u00D2\\x001d\u009A\u00B34\\x0006\u0090\u008B\u0097~\u0089\u00ABt\u0087\u00E6\u008D4\u00C3\u00E4\u0098\u00A5\u00AB\u0093t\u0083\u00E6,=\\x000c\"DJ\u00BF\u00C4U\u00BAC\u00F3F\u009A\u0080%.|\u009B>0\u00D3\\x001d\u009A\u00934\u00C6\\x0004\\x001b\\x001cg\u00D5r\u00C7|\u00C8{\u00D2-\u009A7\u00D2\\x0008C\u00FD\u00C2\\x0015p\u00FF\u00F6h\u00D1\u009C\u00A5]A\u0090O\u00AF\u0080R3\u00DD\u00A19K[\u0080M?\u00FD6-%\u00DD\u00A1y#-\u00C7\u008F/\u009C[\u00F7\u00FFB\u00EC\u0090\u009C\u009D\u00A7\u0083\u0098]\u00B8\\x0001\\x001e\u00D8\u00D2\\x001d\u009A7\u00D2\\x0004\u00CEt\u00BA\u00F1jI7h\u00CE\u00D2j\u0080n\\x0017^\u00E2\\x0003\u00D2\\x001d\u009A7\u00D2\\x0008*T\u00FB\\x0006H\u00D2\r\u009A\u00F3\u0085\u00A8\\x000c\u00A8\u00F3{>\\x0018\\x0014\u009D\\x000b\u00CE\u00C7z!vh\u00CE\u00D2bG+\u0096\u008E^\u00A1\\x001b$o\u009C\\x0011|\u00AA}^}\u00FF\u00EEh\u00D1\u009C\u00A5y\\x0002\u00D1\u00D0\u00D2\u00D5\u00ABt\u0087\u00E6\u008D\u00F4\\x00005\u00AD\u00BD\u00F1\u0092t\u0083\u00E6,M\\x0002\u00C1\u0083JW\u00AF\u00D2\\x001d\u009A\u00B34\\x0006\u0090\u008B\u0097~\u0089\u00ABt\u0087\u00E6\u008D4\u00C3\u00E4\u0098\u00A5\u00AB\u0093t\u0083\u00E6,=\\x000c\"DJ\u00BF\u00C4U\u00BAC\u00F3F\u009A\u0080%.|\u009B>0\u00D3\\x001d\u009A\u00934\u00C6\\x0004\\x001b\\x001cg\u00D5r\u00C7|\u00C8{\u00D2-\u009A7\u00D2\\x0008C\u00FD\u00C2\\x0015p\u00FF\u00F6h\u00D1\u009C\u00A5]A\u0090O\u00AF\u0080R3\u00DD\u00A19K[\u0080M?\u00FD6-%\u00DD\u00A1y#-\u00C7\u008F/\u009C[\u00F7\u00FFB\u00EC\u0090\u009C\u009D\u00A7\u0083\u0098]\u00B8\\x0001\\x001e\u00D8\u00D2\\x001d\u009A7\u00D2\\x0004\u00CEt\u00BA\u00F1jI7h\u00CE\u00D2j\u0080n\\x0017^\u00E2\\x0003\u00D2\\x001d\u009A7\u00D2\\x0008*T\u00FB\\x0006H\u00D2\r\u009A\u00F3\u0085\u00A8\\x000c\u00A8\u00F35\\x001fd\u00F0\\x001a\u0094z\u00E3\u00B1\\x001e\u0088\r\u0092\u00B3\u00B3\u00D81\\x0013X\u00B9ye\u00AE_\u00BCQF\u00F0\u00A9\u00F6q\u00F4\u00FDk\u00A3Crv\u00E6\tDC+G\u00AF\u00CE\r\u00927\u00CE\\x0003\u00D4\u00B4\u00F4\u00AAK\u00CE\u00F5\u0093\u00B33\t\\x0004\\x000f\u00AA\\x001c\u00BD:7H\u00CE\u00CE\\x0018@.^\u00F9\\x0011\u00AE\u00CE\r\u00927\u00CE\\x000c\u0093cV\u008EN\u00CE\u00F5\u0093\u00B3\u00F30\u0088\\x0010\u00A9\u00FC\\x0008W\u00E7\\x0006\u00C9\\x001bg\\x0002\u0096\u00F8\u00FCc\u00F4\u0081yn\u0090\u009C\u009C1&\u00D8\u00E08\u0089\u0096;\u0086C\u00DEs\u00EE\u0090\u00BCqF\\x0018\u00EA\u009F\u00F4\u00DF\u00BF7:$ggW\\x0010\u00E4\u00B3\u008F\u00FER\u00F3\u00DC 9;[\u0080M?\u00FB\\x0018-\u00E5\u00DC y\u00E3,\u00C7\u008F?\u00BF\u00AD\u00EE\u00FF5\u00D8\u00A08+O\\x00071\u00FB\u00FC\u0093\u00FF\u0081\u00ED\u00DC y\u00E3L\u00E0Lg\u00AB\u00AE\u0096s\u00FD\u00E4\u00EC\u00AC\\x0006\u00F8j-\\x001c\u00BD:7H\u00DE8#\u00A8P\u00E9O\u00FE\u00E4\\?9_\u0083\u00CA\u0080:\u00BF\u0087\u0083\u0080\u00E8X{\u00F5\u00A6c=\\x0007;4gi1P\u00C4\u00D2\u00D1+t\u0083\u00E4\u008D3\u0082O\u00B5\u00CF\u00AB\u00EF_\\x001d-\u009A\u00B34\u00CF\u00A3uh\u00E9\u00EAU\u00BAC\u00F3Fz\u0080\u009A\u00D6\u00DExI\u00BAAs\u0096&\u0081\u00E0A\u00A5\u00ABW\u00E9\\x000e\u00CDY\\x001a\\x0003\u00C8\u00C5K\u00BF\u00C4U\u00BAC\u00F3F\u009Aar\u00CC\u00D2\u00D5I\u00BAAs\u0096\\x001e\\x0006\\x0011\"\u00A5_\u00E2*\u00DD\u00A1y#M\u00C0\\x0012\\x0017\u00BEM\\x001f\u0098\u00E9\\x000e\u00CDI\\x001ac\u0082\r\u008E\u00B3j\u00B9c>\u00E4=\u00E9\\x0016\u00CD\\x001bi\u0084\u00A1~\u00E1\n\u00B8{\u00B4h\u00CE\u00D2\u00AE \u00C8\u00A7W@\u00A9\u0099\u00EE\u00D0\u009C\u00A5-\u00C0\u00A6\u009F~\u009B\u0096\u0092\u00EE\u00D0\u00BC\u0091\u0096\u00E3\u00C7\\x0017\u00CE\u00AD\u00FB!vH\u00CE\u00CE\u00D3A\u00CC.\u00DC\\x0000\\x000fl\u00E9\\x000e\u00CD\\x001bi\\x0002g:\u00DDx\u00B5\u00A4\\x001b4gi5@\u00B7\\x000b/\u00F1\\x0001\u00E9\\x000e\u00CD\\x001bi\\x0004\\x0015\u00AA}\\x0003$\u00E9\\x0006\u00CD\u00F9BT\\x0006\u00D4\u00F9\u009A\\x000f\u009C\u00A0~\u00BC\u00C9z\u00F3\u00B1^\u0088\\x001d\u009A\u00B3\u00B4\\x0018(b\u00E9\u00E8\\x0015\u00BAA\u00F2\u00C6\\x0019\u00C1\u00A7\u00DA\u00E7\u00D5\u00F7\u00EF\u008E\\x0016\u00CDY\u009A\u00E7\u00B1\u00E7\u0086\u0096\u00AE^\u00A5;4o\u00A4\\x0007\u00A8i\u00ED\u008D\u0097\u00A4\\x001b4gi\\x0012\\x0008\\x001eT\u00BAz\u0095\u00EE\u00D0\u009C\u00A51\u0080\\\u00BC\u00F4K\\\u00A5;4o\u00A4\\x0019&\u00C7,]\u009D\u00A4\\x001b4g\u00E9a\\x0010!R\u00FA%\u00AE\u00D2\\x001d\u009A7\u00D2\\x0004,q\u00E1\u00DB\u00F4\u0081\u0099\u00EE\u00D0\u009C\u00A41&\u00D8\u00E08\u00AB\u0096;\u00E6C\u00DE\u0093n\u00D1\u00BC\u0091F\\x0018\u00EA\\x0017\u00AE\u0080\u00FB\u00B7G\u008B\u00E6,\u00ED\n\u0082|z\\x0005\u0094\u009A\u00E9\\x000e\u00CDY\u00DA\\x0002l\u00FA\u00E9\u00B7i)\u00E9\\x000e\u00CD\\x001bi9~|\u00E1\u00DC\u00BA\u00FF\\x0017b\u0087\u00E4\u00EC<\\x001d\u00C4\u00EC\u00C2\r\u00F0\u00C0\u0096\u00EE\u00D0\u00BC\u0091&p\u00A6\u00D3\u008DWK\u00BAAs\u0096V\\x0003t\u00BB\u00F0\\x0012\\x001f\u0090\u00EE\u00D0\u00BC\u0091FP\u00A1\u00DA7@\u0092n\u00D0\u009C/De@\u009D\u00DF\u00F31 \u00F8\u0098\u0094z\u00F3\u00B1^\u0088\\x001d\u009A\u00B3\u00B4\\x0018(b\u00E9\u00E8\\x0015\u00BAA\u00F2\u00C6\\x0019\u00C1\u00A7\u00DA\u00E7\u00D5\u00F7\u00EF\u008E\\x0016\u00CDY\u009A'\\x0010\r-]\u00BDJwh\u00DEH\\x000fP\u00D3\u00DA\\x001b/I7h\u00CE\u00D2$G\u00EB\u00A0\u00D2\u00D5\u00ABt\u0087\u00E6,\u008D\\x0001\u00E4\u00E2\u00A5_\u00E2*\u00DD\u00A1y#\u00CD09f\u00E9\u00EA$\u00DD\u00A09K\\x000f\u0083\\x0008\u0091\u00D2/q\u0095\u00EE\u00D0\u00BC\u0091&`\u0089\\x000b\u00DF\u00A6\\x000f\u00CCt\u0087\u00E6$\u008D1\u00C1\\x0006\u00C7Y\u00B5\u00DC1\\x001f\u00F2\u009Et\u008B\u00E6\u008D4\u00C2P\u00BFp\\x0005\u00DC\u00BF=Z4giW\\x0010\u00E4\u00D3+\u00A0\u00D4Lwh\u00CE\u00D2\\x0016`\u00D3O\u00BFMKIwh\u00DEH\u00CB\u00F1\u00E3\\x000b\u00E7\u00D6\u00FD\u00BF\\x0010;$g\u00E7\u00E9 f\\x0017n\u0080\\x0007\u00B6t\u0087\u00E6\u008D4\u00813\u009Dn\u00BCZ\u00D2\r\u009A\u00B3\u00B4\\x001a\u00A0\u00DB\u0085\u0097\u00F8\u0080t\u0087\u00E6\u008D4\u0082\n\u00D5\u00BE\\x0001\u0092t\u0083\u00E6|!*\\x0003\u00EA|\u00CD\u00C7P\u00A0\u00A0\u0082\u00E3\u00B1\\x001e\u0088\r\u0092\u00B3\u00B3\\x0018(b\u00E5\u00E6\u0095\u00F9\u00FFU\u00FCo\\x0000\\x0000\\x0000\u00FF\u00FF\\x0000\\x0000\\x0000\u00FF\u00FF\u00D4\u00D7O\u008E%\u00B7\r\u00C0\u00E1\u00FD\u009C\u00A2/`B\u00FC'\u0092\u00C7\\x0008|\\x0004\\x0003A6^\u00F8\u00FE\u009B\u00BC7N&\u0081(\u00A3\u00DE\\x0008p\\x0015\u00B9iLO\u00BD\u00EE\u00FE\u00E1\u0083\u00A4\u00A2\u00BE\u00C6\u00D7o\u00DF\\x0006\u00C8\u00A4\u00AF_\\x0006 \u00D9\u00D7\\x0000\u00D6xC\u008C_~\u00FD\u00CF7\u00EF\\x000f\u00E2\u00E0\\x001f\u00CF~\u00FC\u00C4\u00D7\u00FB\u0097\u00FC\u00EB\u00DB\u00AF\u00DF\u00FE\u00F1\u00ED\u008F/\u00FC\u00FE=~!\t\u0082O\u00B5\u00AF_p(P\u00D0\u00D7o\u00BF{?\u00FB\u00FE\u00F5\u00F5\u0093\u00FE\u00F5\u00E7\u00EF\u00FB\u00FF?\u00F5\u00BF\u00BF\u00C4\u00EA?\u00FE\u00EF\u009D\u00F7\u00DF\u009F\u00F8\u00FE\u00EF]\u00B4\\x001fD\u00FF\u00B3_rv\u00E6\tDC+G\u00AF\u00CE\r\u00927\u00CE\\x0003\u00D4\u0094\u008F\u00A3\u00E3\u00E7\u00A2O6ar\u00AE\u009F\u009C\u009DI xP\u00E5\u00E8\u00D5\u00B9Arv\u00C6\\x0000r\u00F1\u00CA\u009Bpun\u0090\u00BCqf\u0098\\x001c\u00B3rtr\u00AE\u009F\u009C\u009D\u0087A\u0084H\u00E5M\u00B8:7H\u00DE8\\x0013\u00B0\\x0004V^\\x001c\u00C9\u00B9~rr\u00C6\u0098`\u0083\u00E3\"Z\u00EEX\\x001c\u00F2\u0099s\u0087\u00E4\u008D3\u00C2P?\\x001f\u00FA\u00EF?7:$ggW\\x0010\u00E4\u00AB\u00A1\u00BF\u00D4zn\u0090\u009C\u009D-\u00C0\u00A6_\r\u00A3\u00A5\u009C\\x001b$o\u009C\u00E5\u00F5\u00F8\u00FCnu\u00FFk\u00B0AqV\u009E\\x000ebv>\u00F2?p:7H\u00DE8\\x00138\u00D3\u00D5QW\u00CB\u00B9~rvV\\x0003t;\u00DF\u0084\\x000f87H\u00DE8#\u00A8P\u00E9\u0091?9\u00D7O\u00CE\u00B7Ae@\u009D\u00AF\u00CFG\u00C0\u0094i\\x0005\\x0017\u00C7z\\x001bl\u0090\u009C\u009D\u00C5@\\x0011+7\u00AF\u00CC\u00F5\u008B7\u00CA\\x0008>\u00D5\u008E\u00A3\u00EF?5:$gg\u009E@4\u00B4r\u00F4\u00EA\u00DC y\u00E3<@MK\\x001fu\u00C9\u00B9~rv&\u0081\u00E0A\u0095\u00A3W\u00E7\\x0006\u00C9\u00D9\\x0019\\x0003\u00C8\u00C5+o\u00C2\u00D5\u00B9A\u00F2\u00C6\u0099ar\u00CC\u00CA\u00D1\u00C9\u00B9~rv\\x001e\\x0006\\x0011\"\u00957\u00E1\u00EA\u00DC y\u00E3L\u00C0\\x0012\u00E7\u00C3\u00E8\\x0003\u00EB\u00B9Arr\u00C6\u0098`\u0083\u00E3\"Z\u00EEX\\x001c\u00F2\u0099s\u0087\u00E4\u008D3\u00C2P?\\x001f\u00FA\u00EF?7:$ggW\\x0010\u00E4\u00AB\u00A1\u00BF\u00D4zn\u0090\u009C\u009D-\u00C0\u00A6_\r\u00A3\u00A5\u009C\\x001b$o\u009C\u00E5\u00F5\u00F8\u00FCnu\u00FFk\u00B0AqV\u009E\\x000ebv>\u00F2?p:7H\u00DE8\\x00138\u00D3\u00D5QW\u00CB\u00B9~rvV\\x0003t;\u00DF\u0084\\x000f87H\u00DE8#\u00A8P\u00E9\u0091?9\u00D7O\u00CE\u00B7Ae@\u009D\u00EF\u00C5!0\\x0006j\u00C1\u00C5\u00B1\u00DE\\x0006\\x001b$gg1P\u00C4\u00CA\u00CD+s\u00FD\u00E2\u008D2\u0082O\u00B5\u00E3\u00E8\u00FBO\u008D\\x000e\u00C9\u00D9\u0099'\\x0010\r\u00AD\\x001c\u00BD:7H\u00DE8\\x000fP\u00D3\u00D2G]r\u00AE\u009F\u009C\u009DI xP\u00E5\u00E8\u00D5\u00B9Arv\u00C6\\x0000r\u00F1\u00CA\u009Bpun\u0090\u00BCqf\u0098\\x001c\u00B3rtr\u00AE\u009F\u009C\u009D\u0087A\u0084H\u00E5M\u00B8:7H\u00DE8\\x0013\u00B0\u00C4\u00F90\u00FA\u00C0zn\u0090\u009C\u009C1&\u00D8\u00E0\u00B8\u0088\u0096;\\x0016\u0087|\u00E6\u00DC!y\u00E3\u008C0\u00D4\u00CF\u0087\u00FE\u00FB\u00CF\u008D\\x000e\u00C9\u00D9\u00D9\\x0015\\x0004\u00F9j\u00E8/\u00B5\u009E\\x001b$gg\\x000b\u00B0\u00E9W\u00C3h)\u00E7\\x0006\u00C9\\x001bgy=>\u00BF[\u00DD\u00FF\\x001alP\u009C\u0095\u00A7\u0083\u0098\u009D\u008F\u00FC\\x000f\u009C\u00CE\r\u00927\u00CE\\x0004\u00CEtu\u00D4\u00D5r\u00AE\u009F\u009C\u009D\u00D5\\x0000\u00DD\u00CE7\u00E1\\x0003\u00CE\r\u00927\u00CE\\x0008*Tz\u00E4O\u00CE\u00F5\u0093\u00F3mP\\x0019P\u00E7\u00EB\u00F3\u00EE\u00AF\u00DF\u00F9\u00FA\\x000b\u00D7\u00E2\u00F0\u009F^\\x001c\u00BEw\u00EE\u0090\u009C\u009D\u00C5@\\x0011+7\u00AF\u00CC\u00F5\u008B7\u00CA\\x0008>\u00D5\u008E\u00A3?\u00DE\u0082\u00FE\u00D3[\u00F0/\u0099\u00EB'gg\u009E@4\u00B4r\u00F4\u00EA\u00DC y\u00E3<@MK\\x001fu\u00C9\u00B9~rv&\u0081\u00E0A\u0095\u00A3W\u00E7\\x0006\u00C9\u00D9\\x0019\\x0003\u00C8\u00C5+o\u00C2\u00D5\u00B9A\u00F2\u00C6\u0099ar\u00CC\u00CA\u00D1\u00C9\u00B9~rv\\x001e\\x0006\\x0011\"\u00957\u00E1\u00EA\u00DC y\u00E3L\u00C0\\x0012\u00E7\u00C3\u00E8\\x0003\u00EB\u00B9Arr\u00C6\u0098`\u0083\u00E3\"Z\u00EEX\\x001c\u00F2\u0099s\u0087\u00E4\u008D3\u00C2P?\\x001f\u00FA\u00EF?7:$ggW\\x0010\u00E4\u00AB\u00A1\u00BF\u00D4zn\u0090\u009C\u009D-\u00C0\u00A6_\r\u00A3\u00A5\u009C\\x001b$o\u009C\u00E5\u00F5\u00F8\u00FCnu\u00FFk\u00B0AqV\u009E\\x000ebv>\u00F2?p:7H\u00DE8\\x00138\u00D3\u00D5QW\u00CB\u00B9~rvV\\x0003t;\u00DF\u0084\\x000f87H\u00DE8#\u00A8P\u00E9\u0091?9\u00D7O\u00CE\u00B7Ae@\u009D\u00EF\u00C5A`8\u00E2o[\\x001c\u00F6\u00D3\u008B\u00C3\u00F6\u00CE\\x001d\u0092\u00B3\u00B3\\x0018(b\u00E5\u00E6\u0095\u00B9~\u00F1F\\x0019\u00C1\u00A7\u00DAq\u00F4\u00C7[\u00D0~z\\x000b\u00FE%s\u00FD\u00E4\u00EC\u00CC\\x0013\u0088\u0086V\u008E^\u009D\\x001b$o\u009C\\x0007\u00A8i\u00E9\u00A3.9\u00D7O\u00CE\u00CE$\\x0010<\u00A8r\u00F4\u00EA\u00DC 9;c\\x0000\u00B9x\u00E5M\u00B8:7H\u00DE83L\u008EY9:9\u00D7O\u00CE\u00CE\u00C3 B\u00A4\u00F2&\\\u009D\\x001b$o\u009C\tX\u00E2|\\x0018}`=7HN\u00CE\\x0018\\x0013lp\\D\u00CB\\x001d\u008BC>s\u00EE\u0090\u00BCqF\\x0018\u00EA\u00E7C\u00FF\u00FD\u00E7F\u0087\u00E4\u00EC\u00EC\n\u0082|5\u00F4\u0097Z\u00CF\r\u0092\u00B3\u00B3\\x0005\u00D8\u00F4\u00ABa\u00B4\u0094s\u0083\u00E4\u008D\u00B3\u00BC\\x001e\u009F\u00DF\u00AD\u00EE\r6(\u00CE\u00CA\u00D3A\u00CC\u00CEG\u00FE\\x0007N\u00E7\\x0006\u00C9\\x001bg\\x0002g\u00BA:\u00EAj9\u00D7O\u00CE\u00CEj\u0080n\u00E7\u009B\u00F0\\x0001\u00E7\\x0006\u00C9\\x001bg\\x0004\\x0015*=\u00F2'\u00E7\u00FA\u00C9\u00F96\u00A8\\x000c\u00A8\u00F3\u00F5y3\\x0018S\u00AD\u00E0\u00E2Xo\u0083\r\u0092\u00B3\u00B3\\x0018(b\u00E5\u00E6\u0095\u00B9~\u00F1F\\x0019\u00C1\u00DF\u00AD\u00A7\u00D1\u00F7\u009F\\x001a\\x001d\u0092\u00B33O \\x001aZ9zun\u0090\u00BCq\\x001e\u00A0\u00A6\u00A5\u008F\u00BA\u00E4\\?9;\u0093@\u00F0\u00A0\u00CA\u00D1\u00ABs\u0083\u00E4\u00EC\u008C\\x0001\u00E4\u00E2\u00957\u00E1\u00EA\u00DC y\u00E3\u00CC09f\u00E5\u00E8\u00E4\\?9;\\x000f\u0083\\x0008\u0091\u00CA\u009Bpun\u0090\u00BCq&`\u0089\u00F3a\u00F4\u0081\u00F5\u00DC 99cL\u00B0\u00C1q\\x0011-w,\\x000e\u00F9\u00CC\u00B9C\u00F2\u00C6\\x0019a\u00A8\u009F\\x000f\u00FD\u00F7\u009F\\x001b\\x001d\u0092\u00B3\u00B3+\\x0008\u00F2\u00D5\u00D0_j=7H\u00CE\u00CE\\x0016`\u00D3\u00AF\u0086\u00D1R\u00CE\r\u00927\u00CE\u00F2z|~\u00B7\u00BA\u00FF5\u00D8\u00A08+O\\x00071;\\x001f\u00F9\\x001f8\u009D\\x001b$o\u009C\t\u009C\u00E9\u00EA\u00A8\u00AB\u00E5\\?9;\u00AB\\x0001\u00BA\u009Do\u00C2\\x0007\u009C\\x001b$o\u009C\\x0011T\u00A8\u00F4\u00C8\u009F\u009C\u00EB'\u00E7\u00DB\u00A02\u00A0\u00CE\u00F7\u00E2@\\x0010z\u00BD>\u00EB-\u008E\u00F56\u00D8 9;\u008B\u0081\"Vn^\u0099\u00EB\\x0017o\u0094\\x0011\u00FC\u00BD\u00F3N\u00A3\u00EF?5:$gg\u009E@4\u00B4r\u00F4\u00EA\u00DC y\u00E3<@MK\\x001fu\u00C9\u00B9~rv&\u0081\u00E0A\u0095\u00A3W\u00E7\\x0006\u00C9\u00D9\\x0019\\x0003\u00C8\u00C5+o\u00C2\u00D5\u00B9A\u00F2\u00C6\u0099ar\u00CC\u00CA\u00D1\u00C9\u00B9~rv\\x001e\\x0006\\x0011\"\u00957\u00E1\u00EA\u00DC y\u00E3L\u00C0\\x0012\u00E7\u00C3\u00E8\\x0003\u00EB\u00B9Arr\u00C6\u0098`\u0083\u00E3\"Z\u00EEX\\x001c\u00F2\u0099s\u0087\u00E4\u008D3\u00C2P?\\x001f\u00FA\u00EF?7:$ggW\\x0010\u00E4\u00AB\u00A1\u00BF\u00D4zn\u0090\u009C\u009D-\u00C0\u00A6_\r\u00A3\u00A5\u009C\\x001b$o\u009C\u00E5\u00F5\u00F8\u00FCnu\u00FFk\u00B0AqV\u009E\\x000ebv>\u00F2?p:7H\u00DE8\\x00138\u00D3\u00D5QW\u00CB\u00B9~rvV\\x0003t;\u00DF\u0084\\x000f87H\u00DE8#\u00A8P\u00E9\u0091?9\u00D7O\u00CE\u00B7Ae@\u009D\u00AF\u00CFO\\x00053\u00A5\u0082\u008Bc\u00BD\r6H\u00CE\u00CEb\u00A0\u0088\u0095\u009BW\u00E6\u00FA\u00C5\\x001be\\x0004\u009Fj\u00C7\u00D1\u00F7\u009F\\x001a\\x001d\u0092\u00B33O \\x001aZ9zun\u0090\u00BCq\\x001e\u00A0\u00A6\u00A5\u008F\u00BA\u00E4\\?9;\u0093@\u00F0\u00A0\u00CA\u00D1\u00ABs\u0083\u00E4\u00EC\u008C\\x0001\u00E4\u00E2\u00957\u00E1\u00EA\u00DC y\u00E3\u00CC09f\u00E5\u00E8\u00E4\\?9;\\x000f\u0083\\x0008\u0091\u00CA\u009Bpun\u0090\u00BCq&`\u0089\u00F3a\u00F4\u0081\u00F5\u00DC 99cL\u00B0\u00C1q\\x0011-w,\\x000e\u00F9\u00CC\u00B9C\u00F2\u00C6\\x0019a\u00A8\u009F\\x000f\u00FD\u00F7\u009F\\x001b\\x001d\u0092\u00B3\u00B3+\\x0008\u00F2\u00D5\u00D0_j=7H\u00CE\u00CE\\x0016`\u00D3\u00AF\u0086\u00D1R\u00CE\r\u00927\u00CE\u00F2z|~\u00B7\u00BA\u00FF5\u00D8\u00A08+O\\x00071;\\x001f\u00F9\\x001f8\u009D\\x001b$o\u009C\t\u009C\u00E9\u00EA\u00A8\u00AB\u00E5\\?9;\u00AB\\x0001\u00BA\u009Do\u00C2\\x0007\u009C\\x001b$o\u009C\\x0011T\u00A8\u00F4\u00C8\u009F\u009C\u00EB'\u00E7\u00DB\u00A02\u00A0\u00CE\u00F7\u00E2x.\u00A2\u00E0\u00E2Xo\u0083\r\u0092\u00B3\u00B3\\x0018(b\u00E5\u00E6\u0095\u00B9~\u00F1F\\x0019\u00C1\u00A7\u00DAq\u00F4\u00FD\u00A7F\u0087\u00E4\u00EC\u00CC\\x0013\u0088\u0086V\u008E^\u009D\\x001b$o\u009C\\x0007\u00A8i\u00E9\u00A3.9\u00D7O\u00CE\u00CE$\\x0010<\u00A8r\u00F4\u00EA\u00DC 9;c\\x0000\u00B9x\u00E5M\u00B8:7H\u00DE83L\u008EY9:9\u00D7O\u00CE\u00CE\u00C3 B\u00A4\u00F2&\\\u009D\\x001b$o\u009C\tX\u00E2|\\x0018}`=7HN\u00CE\\x0018\\x0013lp\\D\u00CB\\x001d\u008BC>s\u00EE\u0090\u00BCqF\\x0018\u00EA\u00E7C\u00FF\u00FD\u00E7F\u0087\u00E4\u00EC\u00EC\n\u0082|5\u00F4\u0097Z\u00CF\r\u0092\u00B3\u00B3\\x0005\u00D8\u00F4\u00ABa\u00B4\u0094s\u0083\u00E4\u008D\u00B3\u00BC\\x001e\u009F\u00DF\u00AD\u00EE\r6(\u00CE\u00CA\u00D3A\u00CC\u00CEG\u00FE\\x0007N\u00E7\\x0006\u00C9\\x001bg\\x0002g\u00BA:\u00EAj9\u00D7O\u00CE\u00CEj\u0080n\u00E7\u009B\u00F0\\x0001\u00E7\\x0006\u00C9\\x001bg\\x0004\\x0015*=\u00F2'\u00E7\u00FA\u00C9\u00F96\u00A8\\x000c\u00A8\u00F3\u00F5y\\x0015\\x0010\u0097Ypq\u00AC\u00B7\u00C1\\x0006\u00C9\u00D9Y\\x000c\\x0014\u00B1r\u00F3\u00CA\\\u00BFx\u00A3\u008C\u00E0S\u00ED8\u00FA\u00FES\u00A3Crv\u00E6\tDC+G\u00AF\u00CE\r\u00927\u00CE\\x0003\u00D4\u00B4\u00F4Q\u0097\u009C\u00EB'gg\\x0012\\x0008\\x001eT9zun\u0090\u009C\u009D1\u0080\\\u00BC\u00F2&\\\u009D\\x001b$o\u009C\\x0019&\u00C7\u00AC\\x001c\u009D\u009C\u00EB'g\u00E7a\\x0010!Ry\\x0013\u00AE\u00CE\r\u00927\u00CE\\x0004,q>\u008C>\u00B0\u009E\\x001b$'g\u008C\t68.\u00A2\u00E5\u008E\u00C5!\u009F9wH\u00DE8#\\x000c\u00F5\u00F3\u00A1\u00FF\u00FEs\u00A3Crvv\\x0005A\u00BE\\x001a\u00FAK\u00AD\u00E7\\x0006\u00C9\u00D9\u00D9\\x0002l\u00FA\u00D50Z\u00CA\u00B9A\u00F2\u00C6Y^\u008F\u00CF\u00EFV\u00F7\u00BF\\x0006\\x001b\\x0014g\u00E5\u00E9 f\u00E7#\u00FF\\x0003\u00A7s\u0083\u00E4\u008D3\u00813]\\x001du\u00B5\u009C\u00EB'gg5@\u00B7\u00F3M\u00F8\u0080s\u0083\u00E4\u008D3\u0082\n\u0095\\x001e\u00F9\u0093s\u00FD\u00E4|\\x001bT\\x0006\u00D4\u00F9\u00FA\u00BC\u00F8k7\u00FE\u009B\u00FA:\u00C8\u0091d\\x0007\u00A1(\u00BA\u0095\u00BF\\x0002dl0\u00B0\u00FF\u008D\u00FD\u00A8\u00A9qudZ\u00AA\u0088\u00C7\u00AC\u00A5\u00EC\u00C1\u00D5\\x0011\u00A6\u0088\\x0010\u00C0\u00E1X\u00BF\\x0006\\x000b$gg1Rf\u00E4\u00E6\u0095\\x0019\u00BFx\u00A3\u00CC\u00E4S\u00ED8\u00FA\u00F9\u00ADQ!9;\u008FI\u00BD7E\u008E^\u009D\\x000b$o\u009C\\x001b\u00A9)\u00F4\u00AAK\u00CE\u00F8\u00C9\u00D9\u00B9\\x000b\u00C5h\\x001d9zu.\u0090\u009C\u009D9\u00A8\u00BB8\u00F2#\\\u009D\\x000b$o\u009C\\x0007\u00CD\\x0011\\x00139:9\u00E3'g\u00E7f\\x0014!\u0082\u00FC\\x0008W\u00E7\\x0002\u00C9\\x001b\u00E7NC\u00E2\u00FC\\x0018}a\u009E\\x000b$'g\u008EI\u00D6F\u00DCD\u00CB\\x0013\u00C3!\u009F9WH\u00DE835\u00F5\u00F3\u00A3\u00FF\u00F9\u00BDQ!9;\u00BB\u0092\u00F0\u00B8;\u00FA\u00A1\u00E6\u00B9@rv\u00B6 \u009B~w\u008CB9\\x0017H\u00DE8\u00CB\u00F5\u00F3\u00F9\u00B7\u00D5\u00F3\\x0006\\x000b\\x0014g\u00E5\u00E9$f\u00E7'\u00FF\\x000b\u00DB\u00B9@\u00F2\u00C6\u00B9_\u00AD\u00FDn\u00D5a9\u00E3'gg5b\u00B7\u00F3G\u00F8\u0082s\u0081\u00E4\u008D3\u0093J\u0087>\u00F9\u00933~r\u00FE\\x001a\u00D4A\u00AC\u00F3g8\u00AE\u00840\u00E0p\u00AC_\u0083\\x0005\u0092\u00B3\u00B3\\x0018)3r\u00F3\u00CA\u008C_\u00BCQf\u00F2\u00A9v\\x001c\u00FD\u00FC\u00D6\u00A8\u0090\u009C\u009D\u00C7\u00A4\u00DE\u009B\"G\u00AF\u00CE\\x0005\u00927\u00CE\u008D\u00D4\\x0014z\u00D5%g\u00FC\u00E4\u00EC\u00DC\u0085b\u00B4\u008E\\x001c\u00BD:\\x0017H\u00CE\u00CE\\x001c\u00D4]\\x001c\u00F9\\x0011\u00AE\u00CE\\x0005\u00927\u00CE\u0083\u00E6\u0088\u0089\\x001c\u009D\u009C\u00F1\u0093\u00B3s3\u008A\\x0010A~\u0084\u00ABs\u0081\u00E4\u008Ds\u00A7!q~\u008C\u00BE0\u00CF\\x0005\u0092\u00933\u00C7$k#n\u00A2\u00E5\u0089\u00E1\u0090\u00CF\u009C+$o\u009C\u0099\u009A\u00FA\u00F9\u00D1\u00FF\u00FC\u00DE\u00A8\u0090\u009C\u009D]Ix\u00DC\\x001d\u00FDP\u00F3\\ 9;[\u0090M\u00BF;F\u00A1\u009C\\x000b$o\u009C\u00E5\u00FA\u00F9\u00FC\u00DB\u00EA\u00F9?\u0083\\x0005\u008A\u00B3\u00F2t\\x0012\u00B3\u00F3\u0093\u00FF\u0085\u00ED\\ y\u00E3\u00DC\u00C9G\u00BF[uX\u00CE\u00F8\u00C9\u00D9Y\u008D\u00D8\u00ED\u00FC\\x0011\u00BE\u00E0\\ y\u00E3\u00CC\u00A4\u00D2\u00A1O\u00FE\u00E4\u008C\u009F\u009C\u00BF\\x0006\u00F5j\u00D5y\u00FD\u00FFaW}\u00C8\u009F\r\u0087=\\x001c\u00BEw\u00AE\u0090\u009C\u009D\u00E5jeFn^\u0099\u00F1\u008B7\u00CAL>\u00D5\u008E\u00A3?~\u0082\u00FE\u00F5\\x0013\u00FC\u0095\\x0019?9;\u008FI\u00BD7E\u008E^\u009D\\x000b$o\u009C\\x001b\u00A9)\u00F4\u00AAK\u00CE\u00F8\u00C9\u00D9\u00B9\\x000b\u00C5h\\x001d9zu.\u0090\u009C\u009D9\u00A8\u00BB8\u00F2#\\\u009D\\x000b$o\u009C\\x0007\u00CD\\x0011\\x00139:9\u00E3'g\u00E7f\\x0014!\u0082\u00FC\\x0008W\u00E7\\x0002\u00C9\\x001b\u00E7NC\u00E2\u00FC\\x0018}a\u009E\\x000b$'g\u008EI\u00D6F\u00DCD\u00CB\\x0013\u00C3!\u009F9WH\u00DE835\u00F5\u00F3\u00A3\u00FF\u00F9\u00BDQ!9;\u00BB\u0092\u00F0\u00B8;\u00FA\u00A1\u00E6\u00B9@rv\u00B6 \u009B~w\u008CB9\\x0017H\u00DE8\u00CB\u00F5\u00F3\u00F9\u00B7\u00D5\u00F3\\x0006\\x000b\\x0014g\u00E5\u00E9$f\u00E7'\u00FF\\x000b\u00DB\u00B9@\u00F2\u00C6\u00B9\u0093\u008F~\u00B7\u00EA\u00B0\u009C\u00F1\u0093\u00B3\u00B3\\x001a\u00B1\u00DB\u00F9#|\u00C1\u00B9@\u00F2\u00C6\u0099\u00AF\u00D6\\x000e}\u00F2'g\u00FC\u00E4\u00FC5\u00A8\u0083X\u00E7\u00CFp0E\u0093\u00FEg\u00C3a_\\x000f\u0087\u00ED\u009D+$gg\u00B9f\u0082\\x0019\u00B9ye\u00C6/\u00DE(3\u00F9T;\u008E\u00FE\u00F8\t\u00DA\u00D7O\u00F0Wf\u00FC\u00E4\u00EC<&\u00F5\u00DE\\x00149zu.\u0090\u00BCqn\u00A4\u00A6\u00D0\u00AB.9\u00E3'g\u00E7.\\x0014\u00A3u\u00E4\u00E8\u00D5\u00B9@rv\u00E6\u00A0\u00EE\u00E2\u00C8\u008Fpu.\u0090\u00BCq\\x001e4GL\u00E4\u00E8\u00E4\u008C\u009F\u009C\u009D\u009BQ\u0084\\x0008\u00F2#\\\u009D\\x000b$o\u009C;\r\u0089\u00F3c\u00F4\u0085y.\u0090\u009C\u009C9&Y\\x001bq\\x0013-O\\x000c\u0087|\u00E6\\!y\u00E3\u00CC\u00D4\u00D4\u00CF\u008F\u00FE\u00E7\u00F7F\u0085\u00E4\u00EC\u00ECJ\u00C2\u00E3\u00EE\u00E8\u0087\u009A\u00E7\\x0002\u00C9\u00D9\u00D9\u0082l\u00FA\u00DD1\n\u00E5\\ y\u00E3,\u00D7\u00CF\u00E7\u00DFV\u00CF\u00FF\\x0019,P\u009C\u0095\u00A7\u0093\u0098\u009D\u009F\u00FC/l\u00E7\\x0002\u00C9\\x001b\u00E7N>\u00FA\u00DD\u00AA\u00C3r\u00C6O\u00CE\u00CEj\u00C4n\u00E7\u008F\u00F0\\x0005\u00E7\\x0002\u00C9\\x001bg&\u0095\\x000e}\u00F2'g\u00FC\u00E4\u00FC5\u00A8\u0083X\u00E7\u00F5\u00FF\u00FB\u00A4\u00AE\\x001e6\\x001c\u00FE\u00F5p\u00F8\u00DE\u00B9Brv\\x0016#eFn^\u0099\u00F1\u008B7\u00CAL>\u00D5\u008E\u00A3?~\u0082\u00FE\u00F5\\x0013\u00FC\u0095\\x0019?9;\u008F\u00AB\u00B57E\u008E^\u009D\\x000b$o\u009C\\x001b\u00A9)\u00F4\u00AAK\u00CE\u00F8\u00C9\u00D9\u00B9\\x000b\u00C5h\\x001d9zu.\u0090\u009C\u009D9\u00A8\u00BB8\u00F2#\\\u009D\\x000b$o\u009C\\x0007\u00CD\\x0011\\x00139:9\u00E3'g\u00E7f\\x0014!\u0082\u00FC\\x0008W\u00E7\\x0002\u00C9\\x001b\u00E7NC\u00E2\u00FC\\x0018}a\u009E\\x000b$'g\u008EI\u00D6F\u00DCD\u00CB\\x0013\u00C3!\u009F9WH\u00DE835\u00F5\u00F3\u00A3\u00FF\u00F9\u00BDQ!9;\u00BB\u0092\u00F0\u00B8;\u00FA\u00A1\u00E6\u00B9@rv\u00B6 \u009B~w\u008CB9\\x0017H\u00DE8\u00CB\u00F5\u00F3\u00F9\u00B7\u00D5\u00F3\\x0006\\x000b\\x0014g\u00E5\u00E9$f\u00E7'\u00FF\\x000b\u00DB\u00B9@\u00F2\u00C6\u00B9\u0093\u008F~\u00B7\u00EA\u00B0\u009C\u00F1\u0093\u00B3\u00B3\\x001a\u00B1\u00DB\u00F9#|\u00C1\u00B9@\u00F2\u00C6\u0099I\u00A5C\u009F\u00FC\u00C9\\x0019?9\r\u00EA \u00D6\u00F93\\x001c\u008D&\\x000f\u00FB\u00B3\u00E1\u00B0\u00AF\u0087\u00C3\u00F6\u00CE\\x0015\u0092\u00B3\u00B3\\x0018)3r\u00F3\u00CA\u008C_\u00BCQf\u00F2\u00A9v\\x001c\u00FD\u00F1\\x0013\u00B4\u00AF\u009F\u00E0\u00AF\u00CC\u00F8\u00C9\u00D9y\\\\x001b\u00AE7E\u008E^\u009D\\x000b$o\u009C\\x001b\u00A9)\u00F4\u00AAK\u00CE\u00F8\u00C9\u00D9\u00B9\\x000b\u00C5h\\x001d9zu.\u0090\u009C\u009D9\u00A8\u00BB8\u00F2#\\\u009D\\x000b$o\u009C\\x0007\u00CD\\x0011\\x00139:9\u00E3'g\u00E7f\\x0014!\u0082\u00FC\\x0008W\u00E7\\x0002\u00C9\\x001b\u00E7NC\u00E2\u00FC\\x0018}a\u009E\\x000b$'g\u008EI\u00D6F\u00DCD\u00CB\\x0013\u00C3!\u009F9WH\u00DE835\u00F5\u00F3\u00A3\u00FF\u00F9\u00BDQ!9;\u00BB\u0092\u00F0\u00B8;\u00FA\u00A1\u00E6\u00B9@rv\u00B6 \u009B~w\u008CB9\\x0017H\u00DE8\u00CB\u00F5\u00F3\u00F9\u00B7\u00D5\u00F3\\x0006\\x000b\\x0014g\u00E5\u00E9$f\u00E7'\u00FF\\x000b\u00DB\u00B9@\u00F2\u00C6\u00B9\u0093\u008F~\u00B7\u00EA\u00B0\u009C\u00F1\u0093\u00B3\u00B3\\x001a\u00B1\u00DB\u00F9#|\u00C1\u00B9@\u00F2\u00C6\u0099I\u00A5C\u009F\u00FC\u00C9\\x0019?9\r\u00EA \u00D6y\u00FD\\x0016\u008A\u00E9\\x00028\\x001c\u00EB\u00D7`\u0081\u00E4\u00EC,F\u00CA|\u00DC\u00FC\u00FC8\\x0017(\u00DE(3\u00F9TC\u008EN\u00CC\u00F8\u00C9\u00D9yL\u00EA\u00BD)\u00F2\\x0013\\\u009D\\x000b$o\u009C\\x001b\u00A9\u00E9\u00F9\u00AA{a\u009E\\x000b$g\u00E7~\u00B5\u008E\\x0006\u00BD\u00ECV\u00E7\\x0002\u00C9\u00D9\u0099\u0083\u00BA\u008B#?\u00C2\u00D5\u00B9@\u00F2\u00C6y\u00D0\\x001c1\u0091\u0087#9\u00E3'g\u00E7f\\x0014!\u0082<\\x001c\u00ABs\u0081\u00E4\u008Ds\u00A7!\\x0001\u00BD\u00EC\u00923~rr\u00E6\u0098dm\u00C4M\u00B4<1\\x001c\u00F2\u0099s\u0085\u00E4\u008D3SS??\u00FA\u009F\u00DF\\x001b\\x0015\u0092\u00B3\u00B3+\t\u008F\u00BB\u00A3\\x001fj\u009E\\x000b$gg\\x000b\u00B2\u00E9\\x001d9zu.\u0090\u00BCq\u0096\u00EBg\u00E8o\u00AB\u00C4\\x000c_\u009C\u0095\u00A7\u0093\u0098A\u009F\u00FC+s\u0081\u00E4\u008Ds'\\x001f\u00FDn\u00D5a9\u00E3'gg5b\u00B7\u00F3G\u00F8\u0082s\u0081\u00E4\u008D3\u0093J\u0087>\u00F9\u00933~r\u00FE\\x001a\u00D4A\u00AC\u00F3\u00FA\u00FFA\u00A3\u008F\u00FEg\u00B3\u00E1_\u00CF\u0086\u00EF\u0099\\x000b\\x0014ge1R\u00E6\u00D3\u00E4\u008F\\x0007\u00C3\u00BF\\x001e\u008C\u00DF\u0090\u00E1\u00837\u00C6L>\u00D5\u0080\u009B\\x00132|qV\\x001e\u0093zo\n\u00FC\u00FAVe\u00FC\u00E2\u008Dr#5=\u00DEq/\u00CC2~qV\u00EE\u00D7\u00DF\u00E9\u00D1\u0090\u00B7\u00DC\u00AA\u008C_\u009C\u00959\u00A8\u00BB8\u00F0\u00FB[\u0095\u00F1\u008B7\u00CA\u0083\u00E6\u0088\t<\\x0019I\\x0019\u00BE8+7\u00A3\\x0008\\x0011\u00E0\u00C9X\u0095\u00F1\u008B7\u00CA\u009D\u0086\\x0004\u00F2\u0096K\u00CA\u00F0\u00C5I\u0099c\u0092\u00B5\\x0011\u00FFn\u0096'&C>S.P\u00BCQfj\u00EA\u00C77\u00FE\u00F3\\x001b\u00A3@qVv%\u00E1qs\u00E3C\u00CD2~qV\u00B6 \u009B\u00DE\u0081\u009BWe\u00FC\u00E2\u008D\u00B2\\?#H%d\u00F4\u00E0l<\u009D\u00C4\\x000c\u00F9\u00C2_\u0091\u00F1\u008B7\u00CA\u009D|\u00F4\u009B\\x001d\u0087\u00A5\\x000c_\u009C\u0095\u00D5\u0088\u00DD\u008E\u00DF\u00DF\\x000b\u00CA\u00F8\u00C5\\x001be&\u0095\u008E|\u00E1'e\u00F8\u00E2\u00FC\u00E5\u00A7\u0083X\u00E7\u00F5\u00FF\\x0007M\u00B3\u00F8\u00B3\u00C9\u00B0\u00AF'\u00C3\u00F6\u00CA\\x0005\u008A\u00B3\u00B2\\x0018)\u00F3i\u00F2\u00C7\u0083a_\\x000f\u00C6o\u00C8\u00F0\u00C1\\x001bc&\u009Fj\u00C0\u00CD\t\\x0019\u00BE8+\u008FI\u00BD7\\x0005~}\u00AB2~\u00F1F\u00B9\u0091\u009A\\x001e\u00EF\u00B8\\x0017f\\x0019\u00BF8+w\u00A1\\x0018\ry\u00CB\u00AD\u00CA\u00F8\u00C5Y\u0099\u0083\u00BA\u008B\\x0003\u00BF\u00BFU\\x0019\u00BFx\u00A3|\u00B5\u008E\u0098\u00C0\u0093\u0091\u0094\u00E1\u008B\u00B3r3\u008A\\x0010\\x0001\u009E\u008CU\\x0019\u00BFx\u00A3\u00DCiH o\u00B9\u00A4\\x000c_\u009C\u00949&Y\\x001b\u00F1\u00EFfyb2\u00E43\u00E5\\x0002\u00C5\\x001be\u00A6\u00A6~|\u00E3?\u00BF1\n\\x0014geW\\x0012\\x001e77>\u00D4,\u00E3\\x0017ge\\x000b\u00B2\u00E9\\x001d\u00B8yU\u00C6/\u00DE(\u00CB\u00F53\u00F2\u0087TBF\\x000f\u00CE\u00C6\u00D3I\u00CC\u0090/\u00FC\\x0015\\x0019\u00BFx\u00A3\u00DC\u00C9G\u00BF\u00D9qX\u00CA\u00F0\u00C5YY\u008D\u00D8\u00ED\u00F8\u00FD\u00BD\u00A0\u008C_\u00BCQfR\u00E9\u00C8\\x0017~R\u0086/\u00CE_~:\u0088u\u008E\u00FF\u0098b\u009A\u00FC\u00D9`\u00F8\u00D7\u0083\u00E1{d\u00FC\u00E0l,F\u00CA|X\u00FC\u00F1T\u00F8\u00D7S\u00F1\\x001b1z\u00EFF\u0098\u00C9\u00A7\\x001anr\"F\\x000f\u00CE\u00C6cR\u00EFMq\\x001f\u00DEj\\x000c\\x001f\u00BC1n\u00A4\u00A6\u00A7\u00CB\u00ED\u00859\u0086\\x000f\u00CE\u00C6](F{n\u00BD\u00FD\\x000f\\x0000\\x0000\u00FF\u00FF\\x0000\\x0000\\x0000\u00FF\u00FF\u00D4\u00D7Mne\u00C7\r\u0086\u00E1\u00B9V\u00A1\r\u0098(\u00FE\\x0015\u00C9e\\x0004^\u0082\u0081 \u0093\\x000c\u00B2\u00FFIN\u00CB\u00B0\\x0013\\x0014K\u00F7\u00E7\\x0000:\u00F7\u00BB\u0093\u00B6\u00DA\u00B7\u00D5z\u00F1\u0080\u00C5\u00AE\\x001a$\u00CA\u009F\u00E3\u00EB\u00D7\u00DF\u00FE\u00FC\u00CF\\x001f\\x001f\u0083x\u00E8_\u00BF\\x001d\u00BF\u00BE`\u00C9\u00E3\u008Bq|\u00F6\u00CF\u008F|\u00FC\u00E7\u0093\u00BF~\u00C7\u009F,bT:\u008E\u00AF\u00A8f\u00D8\u00E7\\x001f\u00FF\u00FE\u00F8\u00F5\u00C9\u00D7\u00AF~\u00D7\u00D7\u00DF5\u00FE\u00EF\u00C7\u00FC\u00EF\u00A7\u00A8\u00E7\u00DF\u00FF\u00CF\u00A6\u00FC\u00FD\\x001d__\u00FD\u0089__\u00FD\u00F5\u00E3\u00BF\u00FE\u00F8o\u00E3\u00D9\u00E0}\u00FC\u00BE$s\u0091\u00A4\u00E5\u00C9\u00E4z.\u00B9N$\u00AF\u00C6\u00F0\u00C1\\x001bc\u00A5\u00A95q\u00C7\u00A2\\x0019\u00A3\\x0007w\u00E3\\x0011Te\u0086;\\x0016\u00AB1|\u00F0\u00C6XH\u00AD\u0080\u00D7[3F\\x000fn\u00C6\\\u0093bh\u00DDL\u00B6+\u00C6\u00C2\\x001e3\u00C6\\x000f\u00DE\\x00183\r\u00CF\u00C0=z\u00CD\\x0018=\u00B8\\x001b\u00A7\u0093\u00B1:\u00EEX\u00AC\u00C6\u00F0\u00C1\u00DD8\u008Ab\u00A6\u00E0&\u00AF\u00C6\u00F0\u00C1\\x001bc;>V\u00DCA\\x001a1xo\\x0017\u009EI\\x0016\\x0001|\u00A1_\u0089\u00E1\u00837\u00C6B\u00A9r{\u00B9a\\x0019\u00A3\\x0007wc\\x000f\u00E2\u008C\u00B3G\u00EF\\x0005\u00C6\u00F0\u00C1\\x001bc&7\\x0001\u00BE\u00D07c\u00F4\u00E0\u00FE\u00CAs%\u00F6\u00A9\u009FA\u0093%\\x0000\u00C7b}\u00E5\u00C1\\x0007wc\\x000br\u00E6\u0093\u00C5\u00D7\u008F1|\u00EFF\u0098)\u00A7\\x0007nr#F\\x000f\u00EE\u00C6:Id8\u00EE\u00C1[\u008D\u00E1\u00837\u00C6\u0083<\u00FC\u00ECr{\u00C1\\x001c\u00C3\\x0007wc1*\\x001d\u00C0\u00EBm5\u0086\\x000f\u00EE\u00C6\\$i\u0089{\u00F4Vc\u00F8\u00E0\u008D\u00B1\u00D2\u00D4\u009A\u00B8c\u00D1\u008C\u00D1\u0083\u00BB\u00F1\\x0008\u00AA2\u00C3\\x001d\u008B\u00D5\\x0018>xc,\u00A4V\u00C0\u00EB\u00AD\\x0019\u00A3\\x00077c\u00AEI1\u00B4n&\u00DB\\x0015ca\u008F\\x0019\u00E3\\x0007o\u008C\u0099\u0086\u00E7\u00D9+\u00FD\u00F5\u00BB\\x0002?\u00B8\\x001b\u00A7\u0093\u00B1\u00DE\u00BE\u00D2C\u00CD1|p7\u008E\u00A2\u0098)\u00B8\u00C9\u00AB1|\u00F0\u00C6\u00D8\u008E\u008F\u0081_M\u008D\\x0018\u00BC\u00B7\\x000b\u00CF$\u008B\\x0000\u00BE\u00D0\u00AF\u00C4\u00F0\u00C1\\x001bc\u00A1T\u00B9\u00BD\u00DC\u00B0\u008C\u00D1\u0083\u00BB\u00B1\\x0007q\u00C6\u00D9\u00A3\u00F7\\x0002c\u00F8\u00E0\u008D1\u0093\u009B\\x0000_\u00E8\u009B1zp\u00E5\u00B9\\x0012\u00FB\u00D4OV\\x0012\u008F\u00FA\u00B1\u00B9\u0088\u00A7\u00E7\"\u00F6\u00C8oP\u00DC\u0095-\u00C8\u0099\u00CF&?<\\x0018\u00F1\u00F4`|\u0087\\x000c\\x001f\u00BC1f\u00CA\u00E9\\x0001\u00DC\u00DC\u0090\u00E1\u008B\u00BB\u00B2N\\x0012\\x0019\\x000e|\u00FAVe\u00FC\u00E2\u008D\u00F2 \\x000f?\u00BD\u00E3^0\u00CB\u00F8\u00C5]Y\u008CJ\\x0007\u00F2\u0096[\u0095\u00F1\u008B\u00BB2\\x0017IZ\\x0002\u009F\u00BFU\\x0019\u00BFx\u00A3\u00AC4\u00B5&\u00F0d4e\u00F8\u00E2\u00AE<\u0082\u00AA\u00CC\u0080'cU\u00C6/\u00DE(\\x000b\u00A9\\x0015\u00F2\u0096k\u00CA\u00F0\u00C5M\u0099kR\\x000c\u00AD\u00DB\u00CDv\u00C5d\u00D8c\u00CAoP\u00BCQf\\x001a\u009E\u00A7\u00EF\u00F8\u00D7o\u008C7(\u00EE\u00CA\u00E9d\u00ACw\u00EE\u00F8P\u00B3\u008C_\u00DC\u0095\u00A3(f\np\u00F3\u00AA\u008C_\u00BCQ\u00B6\u00E3c\u00E4\u0087TCF\\x000f\u00EE\u00C63\u00C9\"\u0090o\u00F8+2~\u00F1FY(U\u00EE\u00EC8,e\u00F8\u00E2\u00AE\u00ECA\u009Cq\u00FA\u00FC\u00BD@\\x0019\u00BFx\u00A3\u00CC\u00E4&\u00C87\u00FC\u00A6\\x000c_\u00DC_~\u00AE\u00C4>\u008F\u00C9H\u00AA\u00F1\u00EB\u00FB\u00E1&c}\u00F9\u00E1\\x0017we\\x000br\u00E6\u00B3\u00C9\u00D7\u008F2~\u00F0\u00C6\u0098)\u00A7\\x0007psC\u0086/\u00EE\u00CA:Id8\u00F0\u00E9[\u0095\u00F1\u008B7\u00CA\u0083<\u00FC\u00F4\u008E{\u00C1,\u00E3\\x0017we1*\\x001d\u00C8[nU\u00C6/\u00EE\u00CA\\$i\t|\u00FEVe\u00FC\u00E2\u008D\u00B2\u00D2\u00D4\u009A\u00C0\u0093\u00D1\u0094\u00E1\u008B\u00BB\u00F2\\x0008\u00AA2\\x0003\u009E\u008CU\\x0019\u00BFx\u00A3,\u00A4V\u00C8[\u00AE)\u00C3\\x00177e\u00AEI1\u00B4n7\u00DB\\x0015\u0093a\u008F)\u00BFA\u00F1F\u0099ix\u009E\u00BE\u00E3_\u00BF1\u00DE\u00A0\u00B8+\u00A7\u0093\u00B1\u00DE\u00B9\u00E3C\u00CD2~qW\u008E\u00A2\u0098)\u00C0\u00CD\u00AB2~\u00F1F\u00D9\u008E\u008F\u0091\\x001fR\r\\x0019=\u00B8\\x001b\u00CF$\u008B@\u00BE\u00E1\u00AF\u00C8\u00F8\u00C5\\x001be\u00A1T\u00B9\u00B3\u00E3\u00B0\u0094\u00E1\u008B\u00BB\u00B2\\x0007q\u00C6\u00E9\u00F3\u00F7\\x0002e\u00FC\u00E2\u008D2\u0093\u009B \u00DF\u00F0\u009B2|q\u00F9\u00B9\\x0012\u00FB\u00D4O\u00B1\u00A3=\u00ED\u00C7&#\u009F\u009E\u008C\u00DC+\u00BFAqW\u00B6 g>\u009B\u00FC\u00F0`\u00E4\u00D3\u0083\u00F1\\x001d2|\u00F0\u00C6\u0098)\u00A7\\x0007psC\u0086/\u00EE\u00CA:Id8\u00F0\u00E9[\u0095\u00F1\u008B7\u00CA\u0083<\u00FC\u00F4\u008E{\u00C1,\u00E3\\x0017w\u00E5\u00A3\u00B5t o\u00B9U\\x0019\u00BF\u00B8+s\u0091\u00A4%\u00F0\u00F9[\u0095\u00F1\u008B7\u00CAJSk\\x0002OFS\u0086/\u00EE\u00CA#\u00A8\u00CA\\x000cx2Ve\u00FC\u00E2\u008D\u00B2\u0090Z!o\u00B9\u00A6\\x000c_\u00DC\u0094\u00B9&\u00C5\u00D0\u00BA\u00DDlWL\u0086=\u00A6\u00FC\\x0006\u00C5\\x001be\u00A6\u00E1y\u00FA\u008E\u00FD\u00C6x\u0083\u00E2\u00AE\u009CN\u00C6z\u00E7\u008E\\x000f5\u00CB\u00F8\u00C5]9\u008Ab\u00A6\\x00007\u00AF\u00CA\u00F8\u00C5\\x001be;>F~H5d\u00F4\u00E0n<\u0093,\\x0002\u00F9\u0086\u00BF\"\u00E3\\x0017o\u0094\u0085R\u00E5\u00CE\u008E\u00C3R\u0086/\u00EE\u00CA\\x001e\u00C4\\x0019\u00A7\u00CF\u00DF\\x000b\u0094\u00F1\u008B7\u00CA|\u00B4\n\u00F2\r\u00BF)\u00C3\\x0017\u00F7\u0097\u009F+\u00B1O\u00FD\u00D4\u00E3\u008F\u0095\u00C6\u008FMF<=\\x0019\u00B1W~\u0083\u00E2\u00AElA\u00CE|6\u00F9\u00E1\u00C1\u0088\u00A7\\x0007\u00E3;d\u00F8\u00E0\u008D1SN\\x000f\u00E0\u00E6\u0086\\x000c_\u00DC\u0095u\u0092\u00C8p\u00E0\u00D3\u00B7*\u00E3\\x0017o\u0094\\x0007y\u00F8\u00E9\\x001d\u00F7\u0082Y\u00C6/\u00EE\u00CA\u00C7\u00BF\u00D3\u00A5\\x0003y\u00CB\u00AD\u00CA\u00F8\u00C5]\u0099\u008B$-\u0081\u00CF\u00DF\u00AA\u008C_\u00BCQV\u009AZ\\x0013x2\u009A2|qW\\x001eAUf\u00C0\u0093\u00B1*\u00E3\\x0017o\u0094\u0085\u00D4\ny\u00CB5e\u00F8\u00E2\u00A6\u00CC5)\u0086\u00D6\u00EDf\u00BBb2\u00EC1\u00E57(\u00DE(3\r\u00CF\u00D3w\u00FC\u00EB7\u00C6\\x001b\\x0014w\u00E5t2\u00D6;w|\u00A8Y\u00C6/\u00EE\u00CAQ\\x00143\\x0005\u00B8yU\u00C6/\u00DE(\u00DB\u00F11\u00F2C\u00AA!\u00A3\\x0007w\u00E3\u0099d\\x0011\u00C87\u00FC\\x0015\\x0019\u00BFx\u00A3,\u0094*wv\\x001c\u00962|qW\u00F6 \u00CE8}\u00FE^\u00A0\u008C_\u00BCQfr\\x0013\u00E4\\x001b~S\u0086/\u00EE/?Wb\u009F\u00C7d\u00F8q\\x000e\u00B3\\x0000'c}\u00F9\u00E1\\x0017we\\x000br\u00E6\u00B3\u00C9\u00D7\u008F2~\u00F0\u00C6\u0098)\u00A7\\x0007psC\u0086/\u00EE\u00CA:Id8\u00F0\u00E9[\u0095\u00F1\u008B7\u00CA\u0083<\u00FC\u00F4\u008E{\u00C1,\u00E3\\x0017we1*\\x001d\u00C8[nU\u00C6/\u00EE\u00CA\\$i\t|\u00FEVe\u00FC\u00E2\u008D\u00B2\u00D2\u00D4\u009A\u00C0\u0093\u00D1\u0094\u00E1\u008B\u00BB\u00F2\\x0008\u00AA2\\x0003\u009E\u008CU\\x0019\u00BFx\u00A3,\u00A4V\u00C8[\u00AE)\u00C3\\x00177e\u00AEI1\u00B4n7\u00DB\\x0015\u0093a\u008F)\u00BFA\u00F1F\u0099ix\u009E\u00BE\u00E3_\u00BF1\u00DE\u00A0\u00B8+\u00A7\u0093\u00B1\u00DE\u00B9\u00E3C\u00CD2~qW\u008E\u00A2\u0098)\u00C0\u00CD\u00AB2~\u00F1F\u00D9\u008E\u008F\u0091\\x001fR\r\\x0019=\u00B8\\x001b\u00CF$\u008B@\u00BE\u00E1\u00AF\u00C8\u00F8\u00C5\\x001be9Z\u00E5\u00CE\u008E\u00C3R\u0086/\u00EE\u00CA\\x001e\u00C4\\x0019\u00A7\u00CF\u00DF\\x000b\u0094\u00F1\u008B7\u00CALn\u0082|\u00C3o\u00CA\u00F0\u00C5\u00FD\u00E5\u00E7J\u00ECS?\u008D\u00C9\u00D2\\x0004p2\u00D6\u0097\\x001f~qW\u00B6 g>\u009B|\u00FD(\u00E3\\x0007o\u008C\u0099rz\\x000077d\u00F8\u00E2\u00AE\u00AC\u0093D\u0086\\x0003\u009F\u00BEU\\x0019\u00BFx\u00A3<\u00C8\u00C3O\u00EF\u00B8\\x0017\u00CC2~qW\\x0016\u00A3\u00D2\u0081\u00BC\u00E5Ve\u00FC\u00E2\u00AE\u00CCE\u0092\u0096\u00C0\u00E7oU\u00C6/\u00DE(+M\u00AD\t<\\x0019M\\x0019\u00BE\u00B8+\u008F\u00A0*3\u00E0\u00C9X\u0095\u00F1\u008B7\u00CABj\u0085\u00BC\u00E5\u009A2|qS\u00E6\u009A\\x0014C\u00EBv\u00B3]1\\x0019\u00F6\u0098\u00F2\\x001b\\x0014o\u0094\u0099\u0086\u00E7\u00E9;\u00FE\u00F5\\x001b\u00E3\r\u008A\u00BBr:\\x0019\u00EB\u009D;>\u00D4,\u00E3\\x0017w\u00E5(\u008A\u0099\\x0002\u00DC\u00BC*\u00E3\\x0017o\u0094\u00ED\u00F8\\x0018\u00F9!\u00D5\u0090\u00D1\u0083\u00BB\u00F1L\u00B2\\x0008\u00E4\\x001b\u00FE\u008A\u008C_\u00BCQ\\x0016J\u0095;;\\x000eK\\x0019\u00BE\u00B8+{\\x0010g\u009C>/P\u00C6/\u00DE(3\u00B9\t\u00F2\r\u00BF)\u00C3\\x0017\u00F7\u0097\u009F+\u00B1\u00CFc2\u008E\t\u0091r\u00C0\u00C9X_~\u00F8\u00C5]\u00F9hu\u00E6\u00B3\u00C9\u00D7\u008F2~\u00F0\u00C6\u0098)\u00A7\\x0007psC\u0086/\u00EE\u00CA:Id8\u00F0\u00E9[\u0095\u00F1\u008B7\u00CA\u0083<\u00FC\u00F4\u008E{\u00C1,\u00E3\\x0017we1*\\x001d\u00C8[nU\u00C6/\u00EE\u00CA\\$i\t|\u00FEVe\u00FC\u00E2\u008D\u00B2\u00D2\u00D4\u009A\u00C0\u0093\u00D1\u0094\u00E1\u008B\u00BB\u00F2\\x0008\u00AA2\\x0003\u009E\u008CU\\x0019\u00BFx\u00A3,\u00A4V\u00C8[\u00AE)\u00C3\\x00177e\u00AEI1\u00B4n7\u00DB\\x0015\u0093a\u008F)\u00BFA\u00F1F\u0099ix\u009E\u00BE\u00E3_\u00BF1\u00DE\u00A0\u00B8+\u00A7\u0093\u00B1\u00DE\u00B9\u00E3C\u00CD2~qW\u008E\u00A2\u0098)\u00C0\u00CD\u00AB2~\u00F1F\u00D9\u008E\u008F\u0091\\x001fR\r\\x0019=\u00B8\\x001b\u00CF$\u008B@\u00BE\u00E1\u00AF\u00C8\u00F8\u00C5\\x001be\u00A1T\u00B9\u00B3\u00E3\u00B0\u0094\u00E1\u008B\u00BB\u00B2\\x001f\u00AD\\x0019\u00A7\u00CF\u00DF\\x000b\u0094\u00F1\u008B7\u00CALn\u0082|\u00C3o\u00CA\u00F0\u00C5\u00FD\u00E5\u00E7J\u00ECS?](\u00C2\u00E2\u00C7&#\u009F\u009E\u008C\u00DC+\u00BFAqW>&\u00C2\u0099\u00CF&?<\\x0018\u00F9\u00F4`|\u0087\\x000c\\x001f\u00BC1f\u00CA\u00E9\\x0001\u00DC\u00DC\u0090\u00E1\u008B\u00BB\u00B2N\\x0012\\x0019\\x000e|\u00FAVe\u00FC\u00E2\u008D\u00F2 \\x000f?\u00BD\u00E3^0\u00CB\u00F8\u00C5]Y\u008CJ\\x0007\u00F2\u0096[\u0095\u00F1\u008B\u00BB2\\x0017IZ\\x0002\u009F\u00BFU\\x0019\u00BFx\u00A3\u00AC4\u00B5&\u00F0d4e\u00F8\u00E2\u00AE<\u0082\u00AA\u00CC\u0080'cU\u00C6/\u00DE(\\x000b\u00A9\\x0015\u00F2\u0096k\u00CA\u00F0\u00C5M\u0099kR\\x000c\u00AD\u00DB\u00CDv\u00C5d\u00D8c\u00CAoP\u00BCQf\\x001a\u009E\u00A7\u00EF\u00F8\u00D7o\u008C7(\u00EE\u00CA\u00E9d\u00ACw\u00EE\u00F8P\u00B3\u008C_\u00DC\u0095\u00A3(f\np\u00F3\u00AA\u008C_\u00BCQ\u00B6\u00E3c\u00E4\u0087TCF\\x000f\u00EE\u00C63\u00C9\"\u0090o\u00F8+2~\u00F1FY(U\u00EE\u00EC8,e\u00F8\u00E2\u00AE\u00ECA\u009Cq\u00FA\u00FC\u00BD@\\x0019\u00BFx\u00A3\u00CC\u00E4&\u00C87\u00FC\u00A6\\x000c_\u00DC_~\u00AE\u00C4>\u008F\u00C98\u00B6\u009D\u00FC\u00D8\\\u00C4\u00D3s\\x0011{c\u00F8\u00DE.lA\u00CE|.\u00F8\u00E1\u0091\u0088\u00A7G\u00E2;`\u00F0\u00DC\u008D/SN\\x000f\u00D8\u00E2\\x0006\\x000c\u00DE\u00DB\u0085u\u0092\u00C8\u00A9\u00AF\u009B\u009CIn\\x001b\\x000e\u00E3\u00FB9E_\u00C0\u008C(\u0092\"y\\x0002\\x0003\t\u00BC\u00CA\"\u008B \u00BB|\\x0000\t\u0090\u0085\u00BD\u00F0\u00F5]v\u0090\u0085E\u00B9\u00ABG\u0080\u00AB\u00FE\\x0005c\\x0000\\x001bm{\u009E\u00F77\u0094\u009Aj\\x0006{\u00E6fa\u00F4\u00DE\u0085p#s\u00DB\u00BC\u00D5n\u0098a\u00F4\u00DE*\u00DC\u0095R\\x001a\u00EE\u00BD6\\x000b\u00A3\u00F7VaN\u00EA\u00A1\\x0001{\u00EAfa\u00F4\u00DE\u0085\u00B0\u00D0\u0090\\x001c\u00B03Q\u0084\u00C1{\u00ABps\u00CAT\u0085\u009D\u0089Y\\x0018\u00BDw!\u00DCI4q\u00EF\u00B5\"\\x000c\u00DE[\u00849\\x0007y\u0093|W\u00ACW\u00CC\u0084~&\\x000c\u00DF\u00BB\\x0010fj\\x0016\u009B\\x001b\u00FC\u00F5\u00B7\\x0004|o\\x0015\\x000e#ey\u00BB\u00C1C\u00CD0zo\\x0015\u00F6$\\x001f\u00D1a\u008Bga\u00F4\u00DE\u0085\u00B0\\x001e\\x001f\u00E3>\u0091\n0vn\u00F5\\x001dG\u00A9;\u00EE\u00FE>\\x0003\u00A3\u00F7.\u0084;\u0085\u00F4\u00B7\u00B7\\x001a\u00960xo\\x00156'\\x000e\u00DF<u7\\x0008\u00A3\u00F7.\u0084\u0099L;\u00EE\u00FE^\u0084\u00C1{\u00FF'|4\u00E1nBr\u00AC\u0095}\\x001c\u00CDa\u00AFo\u00B81\r>\u00FE\u00A67\u00A1~\u00FC\u00DE\u00DF\u00FF\u00E3\u00CB_^\u00FF\u00FD\u00E5G\u00F8\u00F9\u00AF\u00FF|\u00F9\u00C3\u00B7n\u00AF\u00FD\u00F0\u00AB\\x0017\u00D6\u00F1a\\x001b\u00BF\u00CC\u0094\u00D8P\u00C0\u00A9\u00FA\u00F9\u00CF\u00E8\u00FF?\u00C3\u009F\u008Es\u00BC~|q{}w\u00FC\u00E3\u00BF\u008F_|\u00FD\u00F5o\u00ED\u00F5\u00F7\u00D7\u00C3~\u00AArV\u00BA:\\x00193p\u00F2?\u009F\\x0016\u00BC0f\u008Aa\u00BE\u00DB|\u00FD\u008D\u00F4\u0080\u00E2\u00AA,\u00E3\u00B8\u009A\\x00017\u00CF\u00CA\u00F8\u00C5\\x000b\u00E5F\u00E6\u0086|\u00C7\\x0015e\u00F8\u00E2\u00AA\u00DC\u0095RZ\\x0007n\u009E\u0095\u00F1\u008B\u00AB2'\u00F5\u00D0\\x0000>\u00B32~\u00F1BYhH\\x000e\u00E0\u00E6\u00A2\\x000c_\\\u0095\u009BS\u00A6*\u00F0\u00F9\u009B\u0095\u00F1\u008B\\x0017\u00CA\u009DDs{\u00FB\u00BCa\u0096\u00F1\u008B\u008B2\u00E7 o\u0092\u00EF\u009B\u00F5\u008A\u00C9\u00D0\u00CF\u0094\\x001fP\u00BCPfj\\x0016\u00DB;\u00FE\u00F57\u00C6\\x0003\u008A\u00ABr\\x0018)\u00CB\u00C9\u008E\\x000f5\u00CB\u00F8\u00C5U\u00D9\u0093|\u00C4\u00C9\u00F6\t\u00A5\u008C_\u00BCP\u00D6\u00E3\u00E3\u00ED\u0087\u00D4\u00F5_~\u00F8\u00C1\u00D5x\\x0004\u00A9\u00FB\u00F6\u0086\u00C3\u00AD\u008C_\u00BCP\u00EE\\x0014\u00D2O\u00EE8,e\u00F8\u00E2\u00AAlN\\x001c\u00BE}\u00FEnP\u00C6/^(3\u0099v\u00E4\r\u00BF(\u00C3\\x0017\u00D7\u0097\u009F\t\u00B1\ry\r\u00A5\u00D68~\u00B7\u00C9\u0088\u00AF\u009E\u008CX+?\u00A0\u00B8*\u00AB\u00931\\x0003'\u00CF\u00C8\u00F0\u00C1\\x000bc\u00A6\\x0018\u00E6\u00BB\u00CD\\x001f\u009F\u00BE\u00F8\u00EA\u00D3\u00F7\u009B\u00C8\u00F0\u00C5UY\\x0006\u00F5\u00DE\\x000c\u00B8yV\u00C6/^(727\u00E4;\u00AE(\u00C3\\x0017W\u00E5\u00AE\u0094\u00D2:p\u00F3\u00AC\u008C_\\\u00959\u00A9\u0087\\x0006\u00F0\u00F9\u009B\u0095\u00F1\u008B\\x0017\u00CABCr\\x00007\\x0017e\u00F8\u00E2\u00AA\u00DC\u009C2U\u0081\u00CF\u00DF\u00AC\u008C_\u00BCP\u00EE$\u009A\u00DB\u00DB\u00E7\r\u00B3\u008C_\\\u00949\\x0007y\u0093|\u00DF\u00ACWL\u0086~\u00A6\u00FC\u0080\u00E2\u00852S\u00B3\u00D8\u00DE\u00F1\u00AF\u00BF1\\x001eP\\\u0095\u00C3HYNv|\u00A8Y\u00C6/\u00AE\u00CA\u009E\u00E4#N\u00B6O(e\u00FC\u00E2\u0085\u00B2\\x001e\\x001fo?\u00A4\u00AE\u00FF\u00F2\u00C3\\x000f\u00AE\u00C6#H\u00DD\u00B77\u00FC\\x001bne\u00FC\u00E2\u0085r\u00A7\u0090~r\u00C7a)\u00C3\\x0017Wes\u00E2\u00F0\u00ED\u00F3w\u00832~\u00F1B\u0099\u00C9\u00B4#o\u00F8E\\x0019\u00BE\u00B8\u00BE\u00FCL\u0088m\\x001c\u0093\u00914\u00D4\u00B7\u00C1\u00F0\u00AF\\x001e\\x000c_#\u00E3\\x0007Wcu2f\u00DC\u00E2\u0099\\x0018\u00BDw!\u00CC\\x0014\u00C3|3\u00F9\u00E3\u0083\u00E7_}\u00F0~\u0093\\x0018=\u00B8\\x001a\u00CB\u00A0\u00DE\u009B\u00E1&\u00CF\u00C6\u00F0\u00C1\\x000b\u00E3F\u00E6\\x0006|\u00B9\\x0015c\u00F4\u00E0j\u00DC\u0095RZ\u00C7M\u009E\u008D\u00E1\u0083\u00AB1'\u00F5\u00D0\u00C0=z\u00B31|\u00F0\u00C2XhH\\x000e\u00DC\u00E4b\u008C\\x001e\\\u008D\u009BS\u00A6*\u00EE\u00D1\u009B\u008D\u00E1\u0083\\x0017\u00C6\u009DDsw\u00DD\u00BCa\u008E\u00E1\u0083\u008B1\u00E7 o\u0092o\u0093\u00F5\u008A\u00B1\u00D0\u00CF\u008C\u00F1\u0083\\x0017\u00C6L\u00CDbw\u00A5\u00BF\u00FE\u00AE\u00C0\\x000f\u00AE\u00C6a\u00A4,\u00EFWz\u00A89\u0086\\x000f\u00AE\u00C6\u009E\u00E4#\u00DE\u00AF\u009BP\u00C6\u00F0\u00C1\\x000bc=>\u00DE}5]\u00FF\u0095\\x0007\u00DF[\u0085G\u0090\u00BA\u00EF.\u00F47\u00DC\u00C6\u00F0\u00C1\\x000b\u00E3N!\u00FD\u00FD\u00E5\u0086e\u008C\\x001e\\\u008D\u00CD\u0089\u00C3w\u008F\u00DE\r\u00C6\u00F0\u00C1\\x000bc&\u00D3\\x000e\u00BC\u00D0\\x0017c\u00F4\u00E0\u00FA\u00CA3!\u00B6!/7\u00EA\u00D9;\u00E0\\\u00CC\u00CF<\u00FC\u00E2\u00AA\u00ACN\u00C6\\x000c\u009C<#\u00C3\\x0007/\u008C\u0099b\u0098\u00EF6_]<\u00A0\u00B8*\u00CB\u00A0\u00DE\u009B\\x00017\u00CF\u00CA\u00F8\u00C5\\x000b\u00E5F\u00E6\u0086|\u00C7\\x0015e\u00F8\u00E2\u00AA\u00DC\u0095RZ\\x0007n\u009E\u0095\u00F1\u008B\u00AB2'\u00F5\u00D0\\x0000>\u00B32~\u00F1BYhH\\x000e\u00E0\u00E6\u00A2\\x000c_\\\u0095\u009BS\u00A6*\u00F0\u00F9\u009B\u0095\u00F1\u008B\\x0017\u00CA\u009DDs{\u00FB\u00BCa\u0096\u00F1\u008B\u008B2\u00E7 o\u0092\u00EF\u009B\u00F5\u008A\u00C9\u00D0\u00CF\u0094\\x001fP\u00BCPfj\\x0016\u00DB;\u00FE\u00F57\u00C6\\x0003\u008A\u00ABr\\x0018)\u00CB\u00C9\u008E\\x000f5\u00CB\u00F8\u00C5U\u00D9\u0093|\u00C4\u00C9\u00F6\t\u00A5\u008C_\u00BCP\u00D6\u00E3\u00E3\u00ED\u0087\u00D4\u00F5_~\u00F8\u00C1\u00D5x\\x0004\u00A9\u00FB\u00F6\u0086\u00C3\u00AD\u008C_\u00BCP\u00EE\\x0014\u00D2O\u00EE8,e\u00F8\u00E2\u00AAlN\\x001c\u00BE}\u00FEnP\u00C6/^(3\u0099v\u00E4\r\u00BF(\u00C3\\x0017\u00D7\u0097\u009F\t\u00B1\ryE\u00A3\\x00147\u00C0\u00C9\u0098_~\u00F8\u00C5UY\u009D\u008C\\x00198yF\u0086\\x000f^\\x00183\u00C50\u00DFm\u00BE\u00FE\u00BEx@qU\u0096A\u00BD7\\x0003n\u009E\u0095\u00F1\u008B\\x0017\u00CA\u008D\u00CC\r\u00F9\u008E+\u00CA\u00F0\u00C5U\u00B9\u00EB\u00D1\u00DA:p\u00F3\u00AC\u008C_\\\u00959\u00A9\u0087\\x0006\u00F0\u00F9\u009B\u0095\u00F1\u008B\\x0017\u00CABCr\\x00007\\x0017e\u00F8\u00E2\u00AA\u00DC\u009C2U\u0081\u00CF\u00DF\u00AC\u008C_\u00BCP\u00EE$\u009A\u00DB\u00DB\u00E7\r\u00B3\u008C_\\\u00949\\x0007y\u0093|\u00DF\u00ACWL\u0086~\u00A6\u00FC\u0080\u00E2\u00852S\u00B3\u00D8\u00DE\u00F1\u00AF\u00BF1\\x001eP\\\u0095\u00C3HYNv|\u00A8Y\u00C6/\u00AE\u00CA\u009E\u00E4#N\u00B6O(e\u00FC\u00E2\u0085\u00B2\\x001e\\x001fo?\u00A4\u00AE\u00FF\u00F2\u00C3\\x000f\u00AE\u00C6#H\u00DD\u00B77\u00FC\\x001bne\u00FC\u00E2\u0085r\u00A7\u0090~r\u00C7a)\u00C3\\x0017Wes\u00E2\u00F0\u00ED\u00F3w\u00832~\u00F1B\u0099\u00C9\u00B4#o\u00F8E\\x0019\u00BE\u00B8\u00BE\u00FCL\u0088m\\x001c\u00931\u00C8\u00E2\u00F8\r\u00F1&c~\u00F9\u00E1\\x0017Weu2f\u00E0\u00E4\\x0019\\x0019>xa\u00CC\\x0014\u00C3|\u00B7\u00F9\u00FA\u00FB\u00E2\\x0001\u00C5UY\\x0006\u00F5\u00DE\\x000c\u00B8yV\u00C6/^(727\u00E4;\u00AE(\u00C3\\x0017W\u00E5\u00AE\u00C7\u00F7t\u00EB\u00C0\u00CD\u00B32~qU\u00E6\u00A4\\x001e\\x001a\u00C0\u00E7oV\u00C6/^(\\x000b\r\u00C9\\x0001\u00DC\\\u0094\u00E1\u008B\u00ABrs\u00CAT\\x0005>\u00B32~\u00F1B\u00B9\u0093hno\u009F7\u00CC2~qQ\u00E6\\x001c\u00E4M\u00F2}\u00B3^1\\x0019\u00FA\u0099\u00F2\\x0003\u008A\\x0017\u00CAL\u00CDb{\u00C7\u00BF\u00FE\u00C6x@qU\\x000e#e9\u00D9\u00F1\u00A1f\\x0019\u00BF\u00B8*{\u0092\u008F8\u00D9>\u00A1\u0094\u00F1\u008B\\x0017\u00CAz|\u00BC\u00FD\u0090\u00BA\u00FE\u00CB\\x000f?\u00B8\\x001a\u008F u\u00DF\u00DE\u00F0o\u00B8\u0095\u00F1\u008B\\x0017\u00CA\u009DB\u00FA\u00C9\\x001d\u0087\u00A5\\x000c_\\\u0095\u00CD\u0089\u00C3\u00B7\u00CF\u00DF\r\u00CA\u00F8\u00C5\\x000be&\u00D3\u008E\u00BC\u00E1\\x0017e\u00F8\u00E2\u00FA\u00F23!\u00B6!\u00AF\u00EC\u00D4!\\x0007c~\u00F8\u00C1\\x0007Wcu2f\u00DC\u00E2\u0099\\x0018\u00BDw!\u00CC\\x0014\u00C3|3\u00F9\u00FA\u00AB\\x0002?\u00B8\\x001a\u00CB8R\u009B\u00E1&\u00CF\u00C6\u00F0\u00C1\\x000b\u00E3F\u00E6\\x0006|\u00B9\\x0015c\u00F4\u00E0j\u00DC\u0095RZ\u00C7M\u009E\u008D\u00E1\u0083\u00AB1'\u00F5\u00D0\u00C0=z\u00B31|\u00F0\u00C2XhH\\x000e\u00DC\u00E4b\u008C\\x001e\\\u008D\u009BS\u00A6*\u00EE\u00D1\u009B\u008D\u00E1\u0083\\x0017\u00C6\u009DDsw\u00DD\u00BCa\u008E\u00E1\u0083\u008B1\u00E7 o\u0092o\u0093\u00F5\u008A\u00B1\u00D0\u00CF\u008C\u00F1\u0083\\x0017\u00C6L\u00CDbw\u00A5\u00BF\u00FE\u00AE\u00C0\\x000f\u00AE\u00C6a\u00A4,\u00EFWz\u00A89\u0086\\x000f\u00AE\u00C6\u009E\u00E4#\u00DE\u00AF\u009BP\u00C6\u00F0\u00C1\\x000bc=>\u00DE}5]\u00FF\u0095\\x0007\u00DF[\u0085G\u0090\u00BA\u00EF.\u00F47\u00DC\u00C6\u00F0\u00C1\\x000b\u00E3N!\u00FD\u00FD\u00E5\u0086e\u008C\\x001e\\\u008D\u00CD\u0089\u00C3w\u008F\u00DE\r\u00C6\u00F0\u00C1\\x000bc&\u00D3\\x000e\u00BC\u00D0\\x0017c\u00F4\u00E0\u00FA\u00CA3!\u00B6q\u008C\u0085\u00D31\\x001d\\x00028\\x0017\u00F33\\x000f\u00BF\u00B8*\u00AB\u00931\\x0003'\u00CF\u00C8\u00F0\u00C1\\x000bc\u00A6\\x0018\u00E6\u00BB\u00CD\u00D7_\\x0017\\x000f(\u00AE\u00CA2\u008E\u00AB\u00AD\\x0019p\u00F3\u00AC\u008C_\u00BCPndn\u00C8w\\Q\u0086/\u00AE\u00CA])\u00A5u\u00E0\u00E6Y\\x0019\u00BF\u00B8*sR\\x000f\r\u00E0\u00F37+\u00E3\\x0017/\u0094\u0085\u0086\u00E4\\x0000n.\u00CA\u00F0\u00C5U\u00B99e\u00AA\\x0002\u009F\u00BFY\\x0019\u00BFx\u00A1\u00DCI4\u00B7\u00B7\u00CF\\x001bf\\x0019\u00BF\u00B8(s\\x000e\u00F2&\u00F9\u00BEY\u00AF\u0098\\x000c\u00FDL\u00F9\\x0001\u00C5\\x000be\u00A6f\u00B1\u00BD\u00E3_c<\u00A0\u00B8*\u0087\u0091\u00B2\u009C\u00EC\u00F8P\u00B3\u008C_\\\u0095=\u00C9G\u009Cl\u009FP\u00CA\u00F8\u00C5\\x000be=>\u00DE~H]\u00FF\u00E5\u0087\\x001f\\\u008DG\u0090\u00BAoo\u00F87\u00DC\u00CA\u00F8\u00C5\\x000b\u00E5N!\u00FD\u00E4\u008E\u00C3R\u0086/\u00AE\u00CA\u00E6\u00C4G,p\u00F3\u00AC\u008C_\u00BCPf2\u00ED\u00C8\\x001b~Q\u0086/\u00AE/?\\x0013b\\x001b\u00F2:\u00FE\\x001b2\u008E\\x00018\\x001a\u00F3\u00D3\u00EF\\x0001\u00C9\u00D5Y\u00FDhe\u00E4\u00E6\u0099\\x0019\u00BFx\u00A1\u00CC\\x0014\u00C3|;\u00FA\u00FAK\u00E3\t\u00C9\u00D5Y\\x0006\u00F5\u00DE\\x000c9zv~@\u00F2\u00C2\u00B9\u0091\u00B9A_u\u00C5\\x0019?\u00B9:w\u00A5\u0094\u00D6\u0091\u00A3g\u00E7\\x0007$WgN\u00EA\u00A1\u0081|\\x0008g\u00E7\\x0007$/\u009C\u0085\u0086\u00E4@\u008E.\u00CE\u00F8\u00C9\u00D5\u00B99e\u00AA\"\\x001f\u00C2\u00D9\u00F9\\x0001\u00C9\\x000b\u00E7N\u00A2\u00B9\u00BF\u008C\u00DE0\u00CF\\x000fH.\u00CE\u009C\u0083\u00BCI\u009ED\u00EB\\x0015\u00C3\u00A1\u009F9\u00A3&\u00FF\\x0004\\x0000\\x0000\u00FF\u00FF\\x0000\\x0000\\x0000\u00FF\u00FF\u00D4\u00D7Q\u00CE\\\u00B7\r\u0086\u00E1{\u00AF\u00C2\\x001b\u00C8\\x0007Q$Ej\\x0019E\u0096\\x0010\u00A0\u00E8M/\u00BA\u00FF\u009B\u00CE\u00EF\u00A2i+\u00CA83B}\\x000e\u0089\\x0000?\u009C\u008C\u00ED\u00BCx@i\u00A8\\x0006\u00EA\u00F6\u00BD\u00BD\u00FE\u00F9\u00E3\u00DB\u00DF\u00BE\u00FD\u00FE\u00ED/\u00DF\u00FE\u00F1\u009D~\u00FC;}'\u009A\u0084\u00A6n\u00DF\u00A91\u0094||\u00FF\u00E3\u00EF\u00DF\u00BE>\u00FB\u00F1\u00F3\u00F5'\u00FD\u00EBg\u00E3\u00D7\u00CF\u00CE\u00F4??\u00FF\u00F8\u00D6\u00C0:\u00FF\u00FCo2\u00FA\u009F\u00E2\u00C7\u00AF\u00FC\u008E\u00AF_\u00FD\u00D6\u00FE\u0095\u00F0\u00E3\u00B7\u00FF\u00F6\u00DF\u00C7o\u00FF\u00F9\u00AB\u00BE\u00FE'\u00FF\u00FE\u00EC\u00CF?\u00F1\u00E3/\u00F9k\u00BD\u00E4\u00E8\u00EC\n!\u00D6\u008Bh\u00B9#Z\u00DEt.\u0090\\x001c\u009Dm\u00C2\u0086\u00F7\u00CC\u00D1\u00ABs\u0081\u00E4\u008D\u00B3\u00BC>\u00E6\u00E33\u00E8\u009F5\u00FB\u00FF\u00E1\u00DA\u00C8_\\x001c\u0095\u0087C\u00CC<\u00F3U\u00B72\\x0017H\u00DE8w8\u00F7\u00AB\u00AB.\u0097s\u00FE\u00E4\u00E8\u00AC\\x0006r;?\u0084\\x000f8\\x0017H\u00DE8\\x0013T:e\u00BE\u00EC\u0082s\u00FE\u00E4\u00E0\u00DC\u0095A:\u00BE\u0086c\u0082\\x0006\u00FB/\\x001b\\x000e\u00FFx8|\u00EF\\!9:\u008B\u00BDf\u008227\u00AF\u00CC\u00F9\u008B7\u00CA\\x0004\\x001fj\u00C7\u00D1o\\x001fA\u00FF\u00F8\\x0008\u00FE\u00949rt\u00E6\u0081\u00DE\u009Bf\u008E^\u009D\\x000b$o\u009C\\x001b\u00D44\u00F5U\\x0017\u009C\u00F3'G\u00E7.\u0098\u00DCz\u00E6\u00E8\u00D5\u00B9@rt\u00A6\u0089\u00EE\u00E2\u0099\\x000f\u00E1\u00EA\\ y\u00E3\u00CC\\x0018<G\u00E6\u00E8\u00E0\u009C?9:7\u00C3\u009C\"\u0099\\x000f\u00E1\u00EA\\ y\u00E3\u00DC\u00C12\u00CF\u0097\u00D1\\x0007\u00E6\u00B9@rp\u00A69`\u008D\u00E7E\u00B4\u00DC1\\x001c\u00F2\u009Es\u0085\u00E4\u008D3\u00A1\u00A9\u009F/\u00FD\u00F7\u00DF\\x001b\\x0015\u0092\u00A3\u00B3+\u0084\u00F8j\u00E9O5\u00CF\\x0005\u0092\u00A3\u00B3M\u00D8\u00F0\u00ABe4\u0095s\u0081\u00E4\u008D\u00B3\u00BC>>[\u00DD\u00FF5X\u00A08*\\x000f\u0087\u0098\u009D\u00AF\u00FC\\x000f\u00DC\u00CE\\x0005\u00927\u00CE\\x001d\u00CE\u00FD\u00EA\u00AA\u00CB\u00E5\u009C?9:\u00AB\u0081\u00DC\u00CE\\x000f\u00E1\\x0003\u00CE\\x0005\u00927\u00CE\\x0004\u0095\u009Ez\u00E5\\x000f\u00CE\u00F9\u0093\u00E3kP\\x0019\u00A4\u00E35\\x001c$\u00F0\u00F6zc\u00E5\\x001b\u008E\u00F55X 9:\u008BA\u008927\u00AF\u00CC\u00F9\u008B7\u00CA\\x0004\\x001fj\u00C7\u00D1\u00F7\u00DF\\x001a\\x0015\u0092\u00A33\\x000f\u00F4\u00DE4s\u00F4\u00EA\\ y\u00E3\u00DC\u00A0\u00A6\u00A9\u00AF\u00BA\u00E0\u009C?9:w\u00C1\u00E4\u00D63G\u00AF\u00CE\\x0005\u0092\u00A33Mt\\x0017\u00CF|\\x0008W\u00E7\\x0002\u00C9\\x001bg\u00C6\u00E092G\\x0007\u00E7\u00FC\u00C9\u00D1\u00B9\\x0019\u00E6\\x0014\u00C9|\\x0008W\u00E7\\x0002\u00C9\\x001b\u00E7\\x000e\u0096y\u00BE\u008C>0\u00CF\\x0005\u0092\u00833\u00CD\\x0001k</\u00A2\u00E5\u008E\u00E1\u0090\u00F7\u009C+$o\u009C\tM\u00FD|\u00E9\u00BF\u00FF\u00DE\u00A8\u0090\\x001c\u009D]!\u00C4WK\u00AAy.\u0090\\x001c\u009Dm\u00C2\u0086_-\u00A3\u00A9\u009C\\x000b$o\u009C\u00E5\u00F5\u00F1\u00F9\u00DB\u00EA\u00FE\u00AF\u00C1\\x0002\u00C5Qy8\u00C4\u00EC|\u00E5\u00E0v.\u0090\u00BCq\u00EEp\u00EEWW].\u00E7\u00FC\u00C9\u00D1Y\r\u00E4v~\\x0008\\x001fp.\u0090\u00BCq&\u00A8\u00F4\u00D4+p\u00CE\u009F\\x001c_\u0083\u00CA \\x001d\u00FC\u00F5\u00C8\u0082\u00A8\u00F0/\\x001b\\x000e\u00FBx8l\u00EF\\!9:\u008BA\u008927\u00AF\u00CC\u00F9\u008B7\u00CA\\x0004\\x001fj\u00C7\u00D1o\\x001fA\u00FB\u00F8\\x0008\u00FE\u00949rt\u00E6\u0081\u00DE\u009Bf\u008E^\u009D\\x000b$o\u009C\\x001b\u00D44\u00F5U\\x0017\u009C\u00F3'G\u00E7.\u0098\u00DCz\u00E6\u00E8\u00D5\u00B9@rt\u00A6\u0089\u00EE\u00E2\u0099\\x000f\u00E1\u00EA\\ y\u00E3\u00CC\\x0018<G\u00E6\u00E8\u00E0\u009C?9:7\u00C3\u009C\"\u0099\\x000f\u00E1\u00EA\\ y\u00E3\u00DC\u00C12\u00CF\u0097\u00D1\\x0007\u00E6\u00B9@rp\u00A69`\u008D\u00E7E\u00B4\u00DC1\\x001c\u00F2\u009Es\u0085\u00E4\u008D3\u00A1\u00A9\u009F/\u00FD\u00F7\u00DF\\x001b\\x0015\u0092\u00A3\u00B3+\u0084\u00F8j\u00E9O5\u00CF\\x0005\u0092\u00A3\u00B3M\u00D8\u00F0\u00ABe4\u0095s\u0081\u00E4\u008D\u00B3\u00BC>>[\u00DD\u00FF5X\u00A08*\\x000f\u0087\u0098\u009D\u00AF\u00FC\\x000f\u00DC\u00CE\\x0005\u00927\u00CE\\x001d\u00CE\u00FD\u00EA\u00AA\u00CB\u00E5\u009C?9:\u00AB\u0081\u00DC\u00CE\\x000f\u00E1\\x0003\u00CE\\x0005\u00927\u00CE\\x0004\u0095\u009Ez\u00E5\\x000f\u00CE\u00F9\u0093\u00E3kP\\x0019\u00A4\u00E3k8\\x0006\u00DA\u009C\u00E3\u0097\r\u0087<\\x001c\u00BEw\u00AE\u0090\\x001c\u009D\u00C5\u00A0D\u0099\u009BW\u00E6\u00FC\u00C5\\x001be\u0082\\x000f\u00B5\u00E3\u00E8\u00B7\u008F\u00A0|\\x0004\u00CA\u009C?9:\u00F3@\u00EFM3G\u00AF\u00CE\\x0005\u00927\u00CE\rj\u009A\u00FA\u00AA\\x000b\u00CE\u00F9\u0093\u00A3s\\x0017Ln=s\u00F4\u00EA\\ 9:\u00D3Dw\u00F1\u00CC\u0087pu.\u0090\u00BCqf\\x000c~\u00B5&\u008E\\x000e\u00CE\u00F9\u0093\u00A3s3\u00CC)\u0092\u00F9\\x0010\u00AE\u00CE\\x0005\u00927\u00CE\\x001d,\u00F3|\\x0019}`\u009E\\x000b$\\x0007g\u009A\\x0003\u00D6x^D\u00CB\\x001d\u00C3!\u00EF9WH\u00DE8\\x0013\u009A\u00FA\u00F9\u00D2\u00FF\u00BDQ!9:\u00BBB\u0088\u00AF\u0096\u00FET\u00F3\\ 9:\u00DB\u0084\r\u00BFZFS9\\x0017H\u00DE8\u00CB\u00EB\u00E3\u00F3\u00B7\u00D5\u00FD_\u0083\\x0005\u008A\u00A3\u00F2p\u0088\u00D9\u00F9\u00CA\u00FF\u00C0\u00ED\\ y\u00E3\u00DC\u00E1\u00DC\u00AF\u00AE\u00BA\\\u00CE\u00F9\u0093\u00A3\u00B3\\x001a\u00C8\u00ED\u00FC\\x0010>\u00E0\\ y\u00E3LP\u00E9\u00A9W\u00FE\u00E0\u009C?9\u00BE\\x0006\u0095A:^\u00C3\u00C1\\x0004\\x0013\u0099\u00BFl8\u00EC\u00E3\u00E1\u00B0\u00BDs\u0085\u00E4\u00E8,\\x0006%\u00CA\u00DC\u00BC2\u00E7/\u00DE(\\x0013|\u00A8\\x001dG\u00BF}\\x0004\u00ED\u00E3#\u00F8S\u00E6\u00FC\u00C9\u00D1\u0099\\x0007zo\u009A9zu.\u0090\u00BCqnP\u00D3\u00D4W]p\u00CE\u009F\\x001c\u009D\u00BB`r\u00EB\u0099\u00A3W\u00E7\\x0002\u00C9\u00D1\u0099&\u00BA\u008Bg>\u0084\u00ABs\u0081\u00E4\u008D3c\u00F0k\\x0003M\\x001c\\x001d\u009C\u00F3'G\u00E7f\u0098S$\u00F3!\\\u009D\\x000b$o\u009C;X\u00E6\u00F92\u00FA\u00C0<\\x0017H\\x000e\u00CE4\\x0007\u00AC\u00F1\u00BC\u0088\u0096;\u0086C\u00DEs\u00AE\u0090\u00BCq&4\u00F5\u00F3\u00A5\u00FF\u00FE{\u00A3Brtv\u0085\\x0010_-\u00FD\u00A9\u00E6\u00B9@rt\u00B6\t\\x001b~\u00B5\u008C\u00A6r.\u0090\u00BCq\u0096\u00D7\u00C7\u00E7o\u00AB\u00FB\u00BF\\x0006\\x000b\\x0014G\u00E5\u00E1\\x0010\u00B3\u00F3\u0095\u00FF\u0081\u00DB\u00B9@\u00F2\u00C6\u00B9\u00C3\u00B9_]u\u00B9\u009C\u00F3'Gg5\u0090\u00DB\u00F9!|\u00C0\u00B9@\u00F2\u00C6\u0099\u00A0\u00D2S\u00AF\u00FC\u00C19r|\r*\u0083t|\r\u0087\u0081g\u00A3\u0084\u00C3\u00B1\u00BE\\x0006\\x000b$Gg1(Q\u00E6\u00E6\u00959\u00F1F\u0099\u00E0C\u00ED8\u00FA\u00FE[\u00A3Brt\u00E6\u0081\u00DE\u009Bf\u008E^\u009D\\x000b$o\u009C\\x001b\u00D44\u00F5U\\x0017\u009C\u00F3'G\u00E7.\u0098\u00DCz\u00E6\u00E8\u00D5\u00B9@rt\u00A6\u0089\u00EE\u00E2\u0099\\x000f\u00E1\u00EA\\ y\u00E3\u00CC\\x0018<G\u00E6\u00E8\u00E0\u009C?9:7\u00C3\u009C\"\u0099\\x000f\u00E1\u00EA\\ y\u00E3\u00DC\u00C12\u00CF\u0097\u00D1\\x0007\u00E6\u00B9@rp\u00A69`\u008D\u00E7E\u00B4\u00DC1\\x001c\u00F2\u009Es\u0085\u00E4\u008D3\u00A1\u00A9\u009F/\u00FD\u00F7\u00DF\\x001b\\x0015\u0092\u00A3\u00B3+\u0084\u00F8j\u00E9O5\u00CF\\x0005\u0092\u00A3\u00B3M\u00D8\u00F0\u00ABe4\u0095s\u0081\u00E4\u008D\u00B3\u00BC>>[\u00DD\u00FF5X\u00A08*\\x000f\u0087\u0098\u009D\u00AF\u00FC\\x000f\u00DC\u00CE\\x0005\u00927\u00CE\\x001d\u00CE\u00FD\u00EA\u00AA\u00CB\u00E5\u009C?9:\u00AB\u0081\u00DC\u00CE\\x000f\u00E1\\x0003\u00CE\\x0005\u00927\u00CE\\x0004\u0095\u009Ez\u00E5\\x000f\u00CE\u00F9\u0093\u00E3kP\\x0019\u00A4\u00E35\\x001c\u00C2h\u00AC\u009Ap8\u00D6\u00D7`\u0081\u00E4\u00E8,\\x0006%\u00CA\u00DC\u00BC2\u00E7/\u00DE(\\x0013|\u00A8\\x001dG\u00DFkTH\u008E\u00CE<\u00D0{\u00D3\u00CC\u00D1\u00ABs\u0081\u00E4\u008Ds\u0083\u009A\u00A6\u00BE\u00EA\u0082s\u00FE\u00E4\u00E8\u00DC\\x0005\u0093[\u00CF\\x001c\u00BD:\\x0017H\u008E\u00CE4\u00D1]<\u00F3!\\\u009D\\x000b$o\u009C\\x0019\u0083\u00E7\u00C8\\x001c\\x001d\u009C\u00F3'G\u00E7f\u0098S$\u00F3!\\\u009D\\x000b$o\u009C;X\u00E6\u00F92\u00FA\u00C0<\\x0017H\\x000e\u00CE4\\x0007\u00AC\u00F1\u00BC\u0088\u0096;\u0086C\u00DEs\u00AE\u0090\u00BCq&4\u00F5\u00F3\u00A5\u00FF\u00FE{\u00A3Brtv\u0085\\x0010_-\u00FD\u00A9\u00E6\u00B9@rt\u00B6\t\\x001b~\u00B5\u008C\u00A6r.\u0090\u00BCq\u0096\u00D7\u00C7\u00E7o\u00AB\u00FB\u00BF\\x0006\\x000b\\x0014G\u00E5\u00E1\\x0010\u00B3\u00F3\u0095\u00FF\u0081\u00DB\u00B9@\u00F2\u00C6\u00B9\u00C3\u00B9_]u\u00B9\u009C\u00F3'Gg5\u0090\u00DB\u00F9!|\u00C0\u00B9@\u00F2\u00C6\u0099\u00A0\u00D2S\u00AF\u00FC\u00C19r|\r*\u0083t|\r\u0087cx\u00B3\u0084\u00C3\u00B1\u00BE\\x0006\\x000b$Gg1(Q\u00E6\u00E6\u00959\u00F1F\u0099\u00E0C\u00ED8\u00FA\u00FE[\u00A3Brt\u00E6\u0081\u00DE\u009Bf\u008E^\u009D\\x000b$o\u009C\\x001b\u00D44\u00F5U\\x0017\u009C\u00F3'G\u00E7.\u0098\u00DCz\u00E6\u00E8\u00D5\u00B9@rt\u00A6\u0089\u00EE\u00E2\u0099\\x000f\u00E1\u00EA\\ y\u00E3\u00CC\\x0018<G\u00E6\u00E8\u00E0\u009C?9:7\u00C3\u009C\"\u0099\\x000f\u00E1\u00EA\\ y\u00E3\u00DC\u00C12\u00CF\u0097\u00D1\\x0007\u00E6\u00B9@rp\u00A69`\u008D\u00E7E\u00B4\u00DC1\\x001c\u00F2\u009Es\u0085\u00E4\u008D3\u00A1\u00A9\u009F/\u00FD\u00F7\u00DF\\x001b\\x0015\u0092\u00A3\u00B3+\u0084\u00F8j\u00E9O5\u00CF\\x0005\u0092\u00A3\u00B3M\u00D8\u00F0\u00ABe4\u0095s\u0081\u00E4\u008D\u00B3\u00BC>>[\u00DD\u00FF5X\u00A08*\\x000f\u0087\u0098\u009D\u00AF\u00FC\\x000f\u00DC\u00CE\\x0005\u00927\u00CE\\x001d\u00CE\u00FD\u00EA\u00AA\u00CB\u00E5\u009C?9:\u00AB\u0081\u00DC\u00CE\\x000f\u00E1\\x0003\u00CE\\x0005\u00927\u00CE\\x0004\u0095\u009Ez\u00E5\\x000f\u00CE\u00F9\u0093\u00E3kP\\x0019\u00A4\u00E35\\x001c*x\\x001d\u00C6\u00F9\u00CB\u0086\u00C3?\\x001e\\x000e\u00DF;WH\u008E\u00CEbP\u00A2\u00CC\u00CD+s\u00FE\u00E2\u008D2\u00C1\u0087\u00DAq\u00F4\u00DBG\u00D0?>",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://www.wsj.com/articles/BL-CIOB-2999</p>",
+					"cweid": "540",
+					"wascid": "13",
+					"sourceid": "229"
+				},
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library jquery-ui, version 1.12.1 is vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/*! jQuery UI - v1.12.1",
+							"otherinfo": "CVE-2021-41184\nCVE-2021-41183\nCVE-2021-41182\nCVE-2022-31160\n"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Please upgrade to the latest version of jquery-ui.</p>",
+					"otherinfo": "<p>CVE-2021-41184</p><p>CVE-2021-41183</p><p>CVE-2021-41182</p><p>CVE-2022-31160</p><p></p>",
+					"reference": "<p>https://github.com/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://bugs.jqueryui.com/ticket/15284</p><p>https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p>https://github.com/jquery/jquery-ui/issues/2101</p><p></p>",
+					"cweid": "829",
+					"wascid": "-1",
+					"sourceid": "182"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "182"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/de",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/de/seite-nicht-gefunden",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/en",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/it",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/nl",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/page-introuvable",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/particulier/designation-ou-contestation",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/particulier/paiement",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/particulier/suivre-mon-dossier-infraction",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1393632881",
+							"otherinfo": "1393632881, which evaluates to: 2014-03-01 00:14:41"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1689095167",
+							"otherinfo": "1689095167, which evaluates to: 2023-07-11 17:06:07"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1786008035",
+							"otherinfo": "1786008035, which evaluates to: 2026-08-06 09:20:35"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1813176631",
+							"otherinfo": "1813176631, which evaluates to: 2027-06-16 20:10:31"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1831629727",
+							"otherinfo": "1831629727, which evaluates to: 2028-01-16 10:02:07"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1831742065",
+							"otherinfo": "1831742065, which evaluates to: 2028-01-17 17:14:25"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1852606879",
+							"otherinfo": "1852606879, which evaluates to: 2028-09-15 05:01:19"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1940620270",
+							"otherinfo": "1940620270, which evaluates to: 2031-06-30 21:11:10"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1982551046",
+							"otherinfo": "1982551046, which evaluates to: 2032-10-28 04:37:26"
+						}
+					],
+					"count": "9",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1393632881, which evaluates to: 2014-03-01 00:14:41</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "229"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/css/css_URRFmxsOkeC4xRgOIU6jCWL--U1buJJtdHeRUWTmaxI.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/images/flags/de.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/images/flags/en.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/images/flags/es.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/images/flags/fr.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/images/flags/it.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/images/flags/nl.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/styles/pictogramme/public/2020-08/euro-icon-sm.png?itok=gC1YtYoW",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/styles/pictogramme/public/2021-06/ANTAI-picto-contravention-120x120-bleu.png?itok=Z_e_77GZ",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/themes/open_antai_swa/favicon.ico",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/default/files/css/css_nsDJuukCIq7H29XHzvo0tatrdO0-17_ahqJAucL18Ho",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD{\\x0003&\uFFFD\\x0008\uFFFD\uFFFD\\x001foW\\x001f;\uFFFD\uFFFD\u05AD\uFFFD\u04F4\uFFFD^\uFFFDj\\x001a\uFFFD\\x0002\uFFFD\\x000b\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/default/files/css/css_nsDJuukCIq7H29XHzvo0tatrdO0-17_ahqJAucL18Ho",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD{\\x0003&\uFFFD\\x0008\uFFFD\uFFFD\\x001foW\\x001f;\uFFFD\uFFFD\u05AD\uFFFD\u04F4\uFFFD^\uFFFDj\\x001a\uFFFD\\x0002\uFFFD\\x000b\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/default/files/css/css_URRFmxsOkeC4xRgOIU6jCWL--U1buJJtdHeRUWTmaxI",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFDDQ\\x0016ll:G\uFFFD\uFFFD\\x0014`8\uFFFD:\uFFFD%\uFFFD\uFFFD\uFFFD5n\uFFFDI\uFFFD\uFFFD\uFFFDEE\uFFFD\uFFFD\uFFFDH"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/default/files/css/css_URRFmxsOkeC4xRgOIU6jCWL--U1buJJtdHeRUWTmaxI",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFDDQ\\x0016ll:G\uFFFD\uFFFD\\x0014`8\uFFFD:\uFFFD%\uFFFD\uFFFD\uFFFD5n\uFFFDI\uFFFD\uFFFD\uFFFDEE\uFFFD\uFFFD\uFFFDH"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/2023-09/RapportActivite2022.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "233/Subtype/TrueType/ToUnicode",
+							"otherinfo": "\uFFFD}\uFFFDJ\uFFFD\uFFFD\u0297\uFFFDN\uFFFD\uFFFDO*^\uFFFD:\\x0014\uFFFD'(u"
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/css/css_223K_oDuKfV5hn_1h3tSwQmh_LkiGdHajtdMzIEdQVc.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iI0VFMDAwMCIgIGQ9Ik0wLDcuNTYybDEuMTE0LTMuNDM4YzIuNTY1LDAuOTA2LDQuNDMsMS42ODgsNS41OSwyLjM1QzYuMzk4LDMuNTUzLDYuMjM3LDEuNTQ0LDYuMjIsMC40NDdoMy41MTEgYy0wLjA1LDEuNTk3LTAuMjM0LDMuNi0wLjU1OCw2LjAwM2MxLjY2NC0wLjgzOCwzLjU2Ni0xLjYxMyw1LjcxNC0yLjMyNUwxNiw3LjU2MmMtMi4wNSwwLjY3OC00LjA2LDEuMTMxLTYuMDI4LDEuMzU2IGMwLjk4NCwwLjg1NiwyLjM3MiwyLjM4MSw0LjE2Niw0LjU3NWwtMi45MDYsMi4wNTljLTAuOTM1LTEuMjc0LTIuMDQxLTMuMDA5LTMuMzE2LTUuMjA2Yy0xLjE5NCwyLjI3NS0yLjI0NCw0LjAxMy0zLjE0Nyw1LjIwNiBsLTIuODU2LTIuMDU5YzEuODcyLTIuMzA3LDMuMjExLTMuODMyLDQuMDE3LTQuNTc1QzMuODQ5LDguNTE2LDEuODcyLDguMDYyLDAsNy41NjIiLz48L3N2Zz4K",
+							"otherinfo": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#EE0000\"  d=\"M0,7.562l1.114-3.438c2.565,0.906,4.43,1.688,5.59,2.35C6.398,3.553,6.237,1.544,6.22,0.447h3.511 c-0.05,1.597-0.234,3.6-0.558,6.003c1.664-0.838,3.566-1.613,5.714-2.325L16,7.562c-2.05,0.678-4.06,1.131-6.028,1.356 c0.984,0.856,2.372,2.381,4.166,4.575l-2.906,2.059c-0.935-1.274-2.041-3.009-3.316-5.206c-1.194,2.275-2.244,4.013-3.147,5.206 l-2.856-2.059c1.872-2.307,3.211-3.832,4.017-4.575C3.849,8.516,1.872,8.062,0,7.562\"/></svg>\n"
+						}
+					],
+					"count": "6",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD{\\x0003&\uFFFD\\x0008\uFFFD\uFFFD\\x001foW\\x001f;\uFFFD\uFFFD\u05AD\uFFFD\u04F4\uFFFD^\uFFFDj\\x001a\uFFFD\\x0002\uFFFD\\x000b\uFFFD\uFFFD\uFFFD</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 12 times, the first in the element starting with: \"      // detach from parent, fire event then clean up data\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 11 times, the first in the element starting with: \"var n=\"1.13.2\",r=\"object\"==typeof self&&self.self===self&&self||\"object\"==typeof global&&global.global===global&&global||Functio\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO",
+							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 4 times, the first in the element starting with: \"      if (that.$element) { // TODO: Check whether guarding this code with this `if` is really necessary.\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"window.drupalTranslations = {\"strings\":{\"\":{\"Add\":\"Ajouter\",\"item\":\"\\u00e9l\\u00e9ment\",\"Edit\":\"Edit\",\"Home\":\"Accueil\",\"Next\":\"Su\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "username",
+							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected in the element starting with: \"!function(e,t){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=e.document?t(e,!0):function(\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sites/default/files/js/js_d4AWM1Jz2KbEdbLcHmWuV-rM74PCXrdDiN2kFhJLUFE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "where",
+							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected in the element starting with: \"   *   instance or a plain object where the key is the attribute name and the\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "10",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a id=\"dropdown-profil-2\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n                            <span>Un particulier</span>\n                            <span class=\"caret caret-blue pull-right\"></span>\n                        </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a id=\"dropdown-profil-2\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n                            <span>Un particulier</span>\n                            <span class=\"caret caret-blue pull-right\"></span>\n                        </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a id=\"dropdown-profil-2\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n                            <span>Un particulier</span>\n                            <span class=\"caret caret-blue pull-right\"></span>\n                        </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a id=\"dropdown-profil-2\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\n                            <span>Un particulier</span>\n                            <span class=\"caret caret-blue pull-right\"></span>\n                        </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "4",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr/de/seite-nicht-gefunden",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "100"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr/de/seite-nicht-gefunden",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "100"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr/de/seite-nicht-gefunden",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "100"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr/de/seite-nicht-gefunden",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "100"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.antai.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/de",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/de/seite-nicht-gefunden",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/en",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/it",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/nl",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/page-introuvable",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/particulier/designation-ou-contestation",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/particulier/paiement",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/particulier/suivre-mon-dossier-infraction",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.antai.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				}
+			]
+		}
+	]
+}
