@@ -1,0 +1,803 @@
+[
+  [
+    {
+      "template": "dns/dns-saas-service-detection.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+      "template-id": "dns-saas-service-detection",
+      "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+      "info": {
+        "name": "DNS SaaS Service Detection",
+        "author": [
+          "noah @thesubtlety",
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "service"
+        ],
+        "description": "A CNAME DNS record was discovered",
+        "reference": [
+          "https://ns1.com/resources/cname",
+          "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+          "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "www.objectifco2.fr.",
+      "matched-at": "www.objectifco2.fr",
+      "extracted-results": [
+        "app772187.prod.cudawaas.com."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 17076\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.objectifco2.fr.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 17076\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.objectifco2.fr.\tIN\t CNAME\n\n;; ANSWER SECTION:\nwww.objectifco2.fr.\t10800\tIN\tCNAME\tapp772187.prod.cudawaas.com.\n",
+      "timestamp": "2024-01-05T01:59:31.976129451Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.objectifco2.fr.",
+      "matched-at": "www.objectifco2.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 39277\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.objectifco2.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 39277\n;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;www.objectifco2.fr.\tIN\t CAA\n\n;; ANSWER SECTION:\nwww.objectifco2.fr.\t10800\tIN\tCNAME\tapp772187.prod.cudawaas.com.\napp772187.prod.cudawaas.com.\t300\tIN\tCNAME\twaas-prod-app-cbdd75961b975922ba132fb2c952a83a.trafficmanager.net.\nwaas-prod-app-cbdd75961b975922ba132fb2c952a83a.trafficmanager.net.\t30\tIN\tCNAME\twaasprod-app-ba473cb7a9db511839a8d2dad8fecabc.francecentral.cloudapp.azure.com.\n\n;; AUTHORITY SECTION:\nfrancecentral.cloudapp.azure.com.\t60\tIN\tSOA\tns1-06.azure-dns.com. msnhst.microsoft.com. 1 900 300 604800 60\n",
+      "timestamp": "2024-01-05T01:59:32.899657715Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320530129Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-permitted-cross-domain-policies",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320568691Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "clear-site-data",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320586014Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320601603Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "strict-transport-security",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320614437Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "content-security-policy",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.32062649Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320639544Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-frame-options",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320654232Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-content-type-options",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320666475Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320683526Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "https://www.objectifco2.fr",
+      "matched-at": "https://www.objectifco2.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.objectifco2.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: no-store, no-cache, must-revalidate\r\nContent-Type: text/html\r\nSet-Cookie: BNIS_x-bni-jas=Ai2fPBVIxTA2dwJKd4AAVMcTVVIppoJVWgk0F3HETao=; Path=/\r\nSet-Cookie: x-bni-ci=vL7cwWepn3YttrEz0XkCiAtbw8bZeHrPjE5ye464Qmx9gfer34RaqQqFNEXTcdm4LHa-wbtYhpY=; Path=/\r\n\r\n\r\n<html><body style=\"font-family:times;color:white;font-size:15px;\" bgcolor=\"#405F8D\"><title>Validation request</title><h3 align=\"center\">User validation required to continue..</h3><hr>Please type the text you see in the image into the text box and submit<p><img src = \"/captcha.gif\"></p><form name=\"input\" action=\"/captcha_resp\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\"><input type=\"text\" name=\"captcha_resp_txt\" /><input type=\"submit\" value=\"Submit\" /></form></p></body></html><p>[ Refresh the page to generate a new image. ]</p><p>Note:<ul><li>If you get here while trying to submit a form, you may have to re-submit the form.</li><li>Access to this domain may need the browser to have javascript and cookie support enabled. </li></ul></p><hr>\r\n<br><em>Validation needed due to the detection of invalid input from this client IP address, error code : <b><font color=yellow>421</font></b></em><br><em>Number of attempts left : <b><font color=yellow>5</font></b></em>                                    ",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:00:20.320696811Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.objectifco2.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "network/jarm/c2/mac-c2-jarm.yaml",
+      "template-url": "https://templates.nuclei.sh/public/mac-c2-jarm",
+      "template-id": "mac-c2-jarm",
+      "template-path": "/home/runner/nuclei-templates/network/jarm/c2/mac-c2-jarm.yaml",
+      "info": {
+        "name": "MacC2 JARM - Detect",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "jarm",
+          "c2",
+          "ir",
+          "osint",
+          "cti",
+          "macc2"
+        ],
+        "description": "MacC2 is a macOS post exploitation tool written in python that uses Objective C calls or python libraries as opposed to command line executions. The client is written in python2, which though deprecated is still being shipped with base Big Sur installs. It is possible down the road that Apple will remove python2 (or python altogether) from base macOS installs but as of Nov 2020 this is not the case. Apple plans to eventually remove scripting runtimes from base macOS installs, but it is unknown when that will happen since Big Sur includes python.\n",
+        "reference": [
+          "https://github.com/cedowens/c2-jarm",
+          "https://github.com/cedowens/macc2"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "tcp",
+      "host": "www.objectifco2.fr:443",
+      "matched-at": "www.objectifco2.fr:443",
+      "request": "2E",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:30.567890856Z",
+      "matcher-status": true
+    },
+    {
+      "template": "network/jarm/c2/posh-c2-jarm.yaml",
+      "template-url": "https://templates.nuclei.sh/public/posh-c2-jarm",
+      "template-id": "posh-c2-jarm",
+      "template-path": "/home/runner/nuclei-templates/network/jarm/c2/posh-c2-jarm.yaml",
+      "info": {
+        "name": "Posh C2 JARM - Detect",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "jarm",
+          "c2",
+          "ir",
+          "osint",
+          "cti",
+          "posh"
+        ],
+        "description": "PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming, post-exploitation and lateral movement.\n",
+        "reference": [
+          "- - https://github.com/cedowens/c2-jarm\n- https://twitter.com/michalkoczwara/status/1551639708949692416\n- https://poshc2.readthedocs.io/en/latest/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "tcp",
+      "host": "www.objectifco2.fr:443",
+      "matched-at": "www.objectifco2.fr:443",
+      "request": "2E",
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:37.758989173Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.objectifco2.fr",
+      "matched-at": "www.objectifco2.fr:443",
+      "extracted-results": [
+        "Let's Encrypt"
+      ],
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:38.013200743Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.objectifco2.fr",
+      "matched-at": "www.objectifco2.fr:443",
+      "extracted-results": [
+        "www.objectifco2.fr"
+      ],
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:38.013302524Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/weak-cipher-suites.yaml",
+      "template-url": "https://templates.nuclei.sh/public/weak-cipher-suites",
+      "template-id": "weak-cipher-suites",
+      "template-path": "/home/runner/nuclei-templates/ssl/weak-cipher-suites.yaml",
+      "info": {
+        "name": "Weak Cipher Suites Detection",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls",
+          "misconfig"
+        ],
+        "description": "A weak cipher is defined as an encryption/decryption algorithm that uses a key of insufficient length. Using an insufficient length for a key in an encryption/decryption algorithm opens up the possibility (or probability) that the encryption scheme could be broken.",
+        "reference": [
+          "https://www.acunetix.com/vulnerabilities/web/tls-ssl-weak-cipher-suites/",
+          "http://ciphersuite.info"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "matcher-name": "tls-1.1",
+      "type": "ssl",
+      "host": "www.objectifco2.fr",
+      "matched-at": "www.objectifco2.fr:443",
+      "extracted-results": [
+        "[tls11 TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA]"
+      ],
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:38.769035737Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.objectifco2.fr",
+      "matched-at": "www.objectifco2.fr:443",
+      "extracted-results": [
+        "tls11"
+      ],
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:38.796769131Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/deprecated-tls.yaml",
+      "template-url": "https://templates.nuclei.sh/public/deprecated-tls",
+      "template-id": "deprecated-tls",
+      "template-path": "/home/runner/nuclei-templates/ssl/deprecated-tls.yaml",
+      "info": {
+        "name": "Deprecated TLS Detection (TLS 1.1 or SSLv3)",
+        "author": [
+          "righettod",
+          "forgedhallpass"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Both TLS 1.1 and SSLv3 are deprecated in favor of stronger encryption.\n",
+        "reference": [
+          "https://ssl-config.mozilla.org/#config=intermediate"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 3,
+          "shodan-query": "ssl.version:sslv2 ssl.version:sslv3 ssl.version:tlsv1 ssl.version:tlsv1.1"
+        },
+        "remediation": "Update the web server's TLS configuration to disable TLS 1.1 and SSLv3.\n"
+      },
+      "type": "ssl",
+      "host": "www.objectifco2.fr",
+      "matched-at": "www.objectifco2.fr:443",
+      "extracted-results": [
+        "tls11"
+      ],
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:39.057187344Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.objectifco2.fr",
+      "matched-at": "www.objectifco2.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:39.100447227Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.objectifco2.fr",
+      "matched-at": "www.objectifco2.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "51.138.217.250",
+      "timestamp": "2024-01-05T02:02:39.308795667Z",
+      "matcher-status": true
+    }
+  ]
+]
