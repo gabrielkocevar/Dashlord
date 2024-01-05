@@ -556,7 +556,7 @@
               "ip"           : "www.archives-nationales.culture.gouv.fr/143.126.211.246",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1704472100"
+              "finding"      : "1704473043"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1133,6 +1133,6 @@
               "ip"           : "www.archives-nationales.culture.gouv.fr/143.126.211.246",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "47"
+              "finding"      : "48"
           }
 ]
