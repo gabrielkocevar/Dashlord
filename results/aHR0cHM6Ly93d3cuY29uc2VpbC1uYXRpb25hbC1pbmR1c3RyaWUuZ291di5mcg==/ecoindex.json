@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.conseil-national-industrie.gouv.fr",
+        "size": 1502.588,
+        "nodes": 886,
+        "requests": 205,
+        "grade": "E",
+        "score": 28.0,
+        "ges": 2.44,
+        "water": 3.66,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 05:41:29.452446",
+        "page_type": null
+    }
+]
