@@ -1,0 +1,269 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://services.cracc.bwat.live/build/assets/styles.css?v=0.27"
+    },
+    {
+      "type": "unknown",
+      "url": "https://services.cracc.bwat.live/build/js/app.js?v=0.27"
+    },
+    {
+      "type": "unknown",
+      "url": "https://stats.cerema.fr/matomo.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://services.cracc.bwat.live/build/assets/bg-motif.png"
+    },
+    {
+      "type": "unknown",
+      "url": "https://services.cracc.bwat.live/build/assets/close.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://services.cracc.bwat.live/build/assets/chevron-btn.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://services.cracc.bwat.live/build/assets/bg-chevron.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://stats.cerema.fr/matomo.php?action_name=Centre%20de%20ressources%20pour%C2%A0l%E2%80%99adaptation%20au%20changement%C2%A0climatique%2C%20agissez%20et%20prenez%20l%27initiative%20pour%20votre%20territoire&idsite=8&rec=1&r=760566&h=3&m=34&s=41&url=https%3A%2F%2Fwww.adaptation-changement-climatique.gouv.fr%2F&_id=1c7d79c883990b5b&_idn=1&_refts=0&send_image=0&cookie=1&res=800x600&pv_id=hRExb3&pf_net=820&pf_srv=583&pf_tfr=2"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "profiling",
+      "value": "0",
+      "domain": "www.adaptation-changement-climatique.gouv.fr",
+      "path": "/",
+      "expires": 1704512083,
+      "size": 10,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "_pk_ses.8.5a80",
+      "value": "1",
+      "domain": "www.adaptation-changement-climatique.gouv.fr",
+      "path": "/",
+      "expires": 1704427481,
+      "size": 15,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "_pk_id.8.5a80",
+      "value": "1c7d79c883990b5b.1704425681.",
+      "domain": "www.adaptation-changement-climatique.gouv.fr",
+      "path": "/",
+      "expires": 1738380881,
+      "size": 41,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameSite": "Lax",
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "cache-control": "must-revalidate, no-cache, private",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-length": "21371",
+    "content-type": "text/html; charset=UTF-8",
+    "content-language": "fr",
+    "date": "Fri, 05 Jan 2024 03:34:39 GMT",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "server": "nginx",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff\nnosniff",
+    "x-drupal-dynamic-cache": "UNCACHEABLE",
+    "x-frame-options": "SAMEORIGIN",
+    "x-generator": "Drupal 9 (https://www.drupal.org)",
+    "x-ua-compatible": "IE=edge"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.adaptation-changement-climatique.gouv.fr",
+      "ip": "192.93.225.50",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "services.cracc.bwat.live",
+      "ip": "94.124.81.18",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "stats.cerema.fr",
+      "ip": "192.93.225.50",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}

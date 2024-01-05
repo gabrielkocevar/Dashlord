@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.adaptation-changement-climatique.gouv.fr",
+        "size": 6347.472,
+        "nodes": 1555,
+        "requests": 140,
+        "grade": "F",
+        "score": 16.0,
+        "ges": 2.68,
+        "water": 4.02,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 03:35:52.300201",
+        "page_type": null
+    }
+]

@@ -1,0 +1,1182 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "offered (deprecated)"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "offered (deprecated)"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered + downgraded to weaker protocol"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cwe"          : "CWE-310",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "cipher_order-tls1_1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'heartbeat/#15' 'next protocol/#13172'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 600 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "cert_compression",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "N/A"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA256 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "RSA 4096 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "043E64B00783299C2AC97A47302EF92D92C8"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "18"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "C2C15AF232E8A785B500911CEF9BBD7B64DE5F64"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1C8AD9ABE4FCEF87AABC28211F3F87DA17C7A4C5A1DF4846771699C234553B1D"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIGJDCCBQygAwIBAgISBD5ksAeDKZwqyXpHMC75LZLIMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzExMDYyMjMyMTdaFw0yNDAyMDQyMjMyMTZaMDcxNTAzBgNVBAMTLHd3dy5hZGFwdGF0aW9uLWNoYW5nZW1lbnQtY2xpbWF0aXF1ZS5nb3V2LmZyMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEArqP+p/Nl53Cg0V9vBsi3XZNzS3uzl46HuJA+V6zFc9YDIRspps2+eMmarE3Ss9VSfJoUDWXst6yjSEJVyPX4pd5QqcJqeOzEyruHQYEsgbDxywbLvIh5qtDb8TegOl9yQXBhb7fAGTNqPSgChpiB2a/y0OWNFWrSt237w2kT6bKGuD0WYXlzeh32EmfXk5TQdtojkHww+8J+NA/9s3OKtdfC3SXBPEZA6I7uYCZDXCYL9McDW++hmpT1EcBdo46N38vkjkuBbE0V1ctKij7IR/FlaQbGfPV3i6fFqfbwUl2rh/qLTj2rN5aOXu9aM9SgiWxQXekyZMG8phSKIz94C1KMVZkU8x25YcUYQzlcNt5Dp5/v9fjQRy8hySy3W1vNdeb66YhdfBQu7Cmr/vFd6AejKQ88ufrC14G1I/eU0uktB0iSjkN+2APXUPjpMNjpNwZhSUps0IAO8w93o//4C+cWTyu2Q5p9LpCOJZuXK1P1KM6GcPQoU02bGWDwoHTZ3nYFzzPJnm/JTKdCkvBmbQpjrYlIYXD8+HwRg9ejlh0Ku+zGGj5vLfeUmemlBqZNHmSYc6lSPFX+9gHSod4mB73b4h51Igh0jPCGfI8D9g2P6QGo48S8YAzoybAiybvFvLyZYXk4SoQ3NtUexCn8KJXpTWP0Sss/pIUo/n+bFl8CAwEAAaOCAi0wggIpMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU5CY4Ai25YOqa0beQevpOhfcLt4swHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wNwYDVR0RBDAwLoIsd3d3LmFkYXB0YXRpb24tY2hhbmdlbWVudC1jbGltYXRpcXVlLmdvdXYuZnIwEwYDVR0gBAwwCjAIBgZngQwBAgEwggEDBgorBgEEAdZ5AgQCBIH0BIHxAO8AdQA7U3d1Pi25gE6LMFsG/kA7Z9hPw/THvQANLXJv4frUFwAAAYum+tOfAAAEAwBGMEQCICaAJ594lIxfc2d6WZFf0YRROPd4bRz7HfnB8/ISo/EdAiBXmT+ud5XUmhwyS+dIqx5K+oOuekOH18GDfNHSPktaEQB2AEiw42vapkc0D+VqAvqdMOscUgHLVt0sgdm7v6s52IRzAAABi6b606EAAAQDAEcwRQIhAK6Zv8mm+Anxca8RhIhcwWvz3E8w3l98nQF7ujBcYC4PAiASrtnIRO3Xiw4NFtLfXXb4jlA8iqYqBPQRRz/B6b3+qTANBgkqhkiG9w0BAQsFAAOCAQEApMS4fxPpwjXc+eak3cZvfg0P/O41SCiCPa3Fq7N0Ssv6zVlQ7Mga2Yso5KFpV4vGcKfb9mkKucm/gcIBOnUM8nYuJA517/FX+bk9QQnAE0ZavAykDddLVIHZEJZ2KQWz0vi29XowWnDGoZB1mIRzmc/XgpLcAGGucfnJI6nRJKqVLNvPoyAcTtK/XxNUU29dk8TOAd6T7kt2ePqhKKk/Aztsb+z+k+zznQiGYW0YFucYhEBrH7a0PqNnKvCuFkAep7QXZkoUopb0IZkSzBcTJ0Bdj7vc5LNN1ppqXYzoTyi99Jwfwf5RZk/6m8P9e/Ftu5Xu7Gzva/fQG6ZWoeDllg==\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "www.adaptation-changement-climatique.gouv.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "janus.setra.cs"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "www.adaptation-changement-climatique.gouv.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN and CN (SNI mandatory)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "30 >= 30 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-11-06 22:32"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-02-04 22:32"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://r3.o.lencr.org"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "3"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "R3 (Let's Encrypt from US)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAwWhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cPR5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdxsxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8ZutmNHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxgZ3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG/kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMCAYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYBAf8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaAFHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcwAoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRwOi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQBgt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6WPTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wlikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQzCkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BImlJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4avAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2yJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1OyK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90IdshCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+HlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6ZvMldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqXnLRbwHOoq7hHwg==\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "67ADD1166B020AE61B8F5FC96813C04C2AA589960796865572A3C7E737613DFD"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2020-09-04 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2025-09-15 16:00"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "R3 <-- ISRG Root X1"
+          }
+,         {
+              "id"           : "intermediate_cert <#2>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMTDkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1owTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XCov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpLwYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+DLtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5bHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5ysR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZXmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4FQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBcSLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2qlPRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TNDTwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEBATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQub3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9EU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26ZtuMA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuGWCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9Ohe8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFCDfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#2>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "6D99FB265EB1C5B3744765FCBC648F3CD8E1BFFAFDC4C2F99B9D47CF7FF1C24F"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#2>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2021-01-20 19:14"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#2>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-09-30 18:14"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#2>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#2>",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ISRG Root X1 <-- DST Root CA X3"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1704426633"
+          }
+,         {
+              "id"           : "HSTS",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "nginx"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options_multiple",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple X-Content-Type-Options headers. Using first header: nosniff"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "must-revalidate, no-cache, private"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=1C8AD9ABE4FCEF87AABC28211F3F87DA17C7A4C5A1DF4846771699C234553B1D"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "no DH key with <= TLS 1.2"
+          }
+,         {
+              "id"           : "BEAST_CBC_TLS1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "ECDHE-RSA-AES256-SHA AES256-SHA ECDHE-RSA-AES128-SHA AES128-SHA"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "VULNERABLE -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.0 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "95"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "28"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "82"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "B"
+          }
+,         {
+              "id"           : "grade_cap_reason_1",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to B. TLS 1.1 offered"
+          }
+,         {
+              "id"           : "grade_cap_reason_2",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to B. TLS 1.0 offered"
+          }
+,         {
+              "id"           : "grade_cap_reason_3",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to A. HSTS is not offered"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "www.adaptation-changement-climatique.gouv.fr/192.93.225.50",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "152"
+          }
+]
