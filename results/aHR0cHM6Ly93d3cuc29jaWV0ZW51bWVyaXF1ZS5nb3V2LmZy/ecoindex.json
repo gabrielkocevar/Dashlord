@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.societenumerique.gouv.fr",
+        "size": 283.334,
+        "nodes": 150,
+        "requests": 12,
+        "grade": "A",
+        "score": 87.0,
+        "ges": 1.26,
+        "water": 1.89,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 08:06:48.440049",
+        "page_type": null
+    }
+]
