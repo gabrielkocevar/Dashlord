@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.transformation.gouv.fr",
+        "size": 2194.103,
+        "nodes": 511,
+        "requests": 33,
+        "grade": "C",
+        "score": 61.0,
+        "ges": 1.78,
+        "water": 2.67,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 08:23:53.500894",
+        "page_type": null
+    }
+]
