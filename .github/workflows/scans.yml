@@ -127,8 +127,8 @@ jobs:
         timeout-minutes: 10
         uses: "MTES-MCT/nmap-action@main"
         with:
-          #host: ${{ matrix.sites.url }}
-          host: "www.enseignementsup-recherche.gouv.fr"
+          host: ${{ matrix.sites.url2 }}
+          #host: "www.enseignementsup-recherche.gouv.fr"
           outputDir: "scans" 
           outputFile: "nmapvuln.json"
           withVulnerabilities: true
