@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.georisques.gouv.fr",
+        "size": 2941.564,
+        "nodes": 518,
+        "requests": 134,
+        "grade": "E",
+        "score": 40.0,
+        "ges": 2.2,
+        "water": 3.3,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 00:44:27.293871",
+        "page_type": "page"
+    }
+]
