@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.eve-transport-logistique.fr",
+        "size": 3466.699,
+        "nodes": 1463,
+        "requests": 136,
+        "grade": "F",
+        "score": 18.0,
+        "ges": 2.64,
+        "water": 3.96,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 00:01:41.447850",
+        "page_type": "website"
+    }
+]
