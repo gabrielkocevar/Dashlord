@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.innoverpourlatransitionecologique.fr/fr",
+        "size": 23094.252,
+        "nodes": 337,
+        "requests": 39,
+        "grade": "C",
+        "score": 62.0,
+        "ges": 1.76,
+        "water": 2.64,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 01:01:40.864518",
+        "page_type": "website"
+    }
+]
