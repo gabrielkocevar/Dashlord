@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.francenum.gouv.fr",
+        "size": 911.133,
+        "nodes": 660,
+        "requests": 58,
+        "grade": "D",
+        "score": 55.0,
+        "ges": 1.9,
+        "water": 2.85,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 06:29:40.998163",
+        "page_type": "Accueil"
+    }
+]
