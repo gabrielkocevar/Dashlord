@@ -21,6 +21,6 @@ tools:
   declaration-a11y: false
   ecoindex: false
 urls:
-  - url: https://www.enseignementsup-recherche.gouv.fr
+  - url: www.enseignementsup-recherche.gouv.fr
   #- url: https://www.archives-nationales.culture.gouv.fr
   #- url: https://www.gouvernement.fr
