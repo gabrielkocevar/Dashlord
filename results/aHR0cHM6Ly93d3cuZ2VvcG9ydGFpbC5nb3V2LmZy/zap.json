@@ -1,0 +1,2127 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Fri, 5 Jan 2024 00:42:18",
+	"site":[ 
+		{
+			"@name": "https://www.geoportail.gouv.fr",
+			"@host": "www.geoportail.gouv.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/2021/05",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/2022/06",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/2022/10",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/2022/11",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/adresse",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/ban",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/bdtopo",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/eco-tourisme",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/label",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/limites-administratives",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/tourisme-durable",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-register.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form role=\"search\" method=\"get\" class=\"search-form\" action=\"https://www.geoportail.gouv.fr/\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ]."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"s\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "327"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/admin/wp-admin/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/admin/wp-login.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/trackback/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-admin/admin-ajax.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/images/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/js/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/adresse",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/trackback/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-admin/admin-ajax.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/images/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/js/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-register.php",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/adresse",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"profile\" href=\"http://gmpg.org/xfn/11\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/adresse",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/trackback/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-admin/admin-ajax.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/images/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/js/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library ember, version 3.16.9 is vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/*!\n * @overview  Ember - JavaScript Application Framework\n * @copyright Copyright 2011-2019 Tilde Inc. and contributors\n *            Portions Copyright 2006-2011 Strobe Inc.\n *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.\n * @license   Licensed under MIT license\n *            See https://raw.github.com/emberjs/ember.js/master/LICENSE\n * @version   3.16.9",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Please upgrade to the latest version of ember.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://blog.emberjs.com/ember-4-8-1-released/</p><p></p>",
+					"cweid": "829",
+					"wascid": "-1",
+					"sourceid": "103"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=-0.7774867947909435,44.77246243396357&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&v1=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;s:toponymes)&z=10",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.5999711757376054,46.42556440876618&permalink=yes&v0=BDTOPO::GEOPORTAIL:GPP:TMS(1;s:bati_date)&z=17",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/donnees/limites-administratives-personnalisables",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/trackback/",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-admin/admin-ajax.php",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/images/",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/js/",
+							"method": "GET",
+							"param": "https://polyfill.io/v3/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://polyfill.io/v3/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "103"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/admin/wp-admin/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/admin/wp-login.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-extra-42d4fb4f1610eedf336a4e479389a9cb.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/trackback/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-admin/admin-ajax.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/images/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/js/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10040",
+					"alertRef": "10040",
+					"alert": "Secure Pages Include Mixed Content",
+					"name": "Secure Pages Include Mixed Content",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes mixed content, that is content accessed via HTTP instead of HTTPS.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/2016/01",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.geoportail.gouv.fr/depot//actus/2016/spot6/france-instantane-gpp4-carte.jpg",
+							"otherinfo": "tag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/spot6/france-instantane-gpp4-carte.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot/actus/2016/spot6/france-instantane-gpp4-1.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/spot6/france-instantane-gpp4-2.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/spot6/france-instantane-gpp4-3.jpg\n"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/2016/03",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.geoportail.gouv.fr/depot//actus/2016/service-itineraire/itineraire-gpp4-1.jpg",
+							"otherinfo": "tag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/service-itineraire/itineraire-gpp4-1.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/service-itineraire/itineraire-gpp4-2.jpg\n"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/2016/04",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.geoportail.gouv.fr/depot//actus/2016/service-isochrones/isochrones-gpp4-1.jpg",
+							"otherinfo": "tag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/service-isochrones/isochrones-gpp4-1.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot/actus/2016/service-isochrones/isochrones-gpp4-2.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot/actus/2016/OACI-2016/oaci-gpp4-1.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot/actus/2016/OACI-2016/oaci-gpp4-2.jpg\n"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/2016/12",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.geoportail.gouv.fr/depot/actus/2016/spot6-2016/grand-stade-lyon.jpg",
+							"otherinfo": "tag=img src=http://www.geoportail.gouv.fr/depot/actus/2016/spot6-2016/grand-stade-lyon.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot/actus/2016/spot6-2016/autoroute-a9-montpellier.jpg\ntag=img src=http://www.geoportail.gouv.fr/depot/actus/2016/spot6-2016/massif-mont-blanc.jpg\n"
+						}
+					],
+					"count": "4",
+					"solution": "<p>A page that is available over SSL/TLS must be comprised completely of content which is transmitted over SSL/TLS.</p><p>The page must not contain any content that is transmitted over unencrypted HTTP.</p><p> This includes content from third party sites.</p>",
+					"otherinfo": "<p>tag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/spot6/france-instantane-gpp4-carte.jpg</p><p>tag=img src=http://www.geoportail.gouv.fr/depot/actus/2016/spot6/france-instantane-gpp4-1.jpg</p><p>tag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/spot6/france-instantane-gpp4-2.jpg</p><p>tag=img src=http://www.geoportail.gouv.fr/depot//actus/2016/spot6/france-instantane-gpp4-3.jpg</p><p></p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
+					"cweid": "311",
+					"wascid": "4",
+					"sourceid": "717"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-16-0b02d2273a70314d039cfbe4b3831a03.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-32-3ed1ada13684127b4a69867dd67092fd.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-48-db6d8eb12f214596b8bba8fd2818b1d0.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-64-df3cd522e2f08830a121163646f9eeab.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/fonts/OpenSans-ExtraBold.woff",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/fonts/OpenSans-Light.woff",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/touch-icon-3aebf2c5a4669a76b01a15f6b2c9614f.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-6e31304df576cd85f9110d024adcfe12.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/depot/100km/librairies/extension-geoportail/GpPluginLeaflet.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1567415109",
+							"otherinfo": "1567415109, which evaluates to: 2019-09-02 09:05:09"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/depot/100km/librairies/extension-geoportail/GpPluginLeaflet.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1899457653",
+							"otherinfo": "1899457653, which evaluates to: 2030-03-11 11:07:33"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/depot/100km/librairies/extension-geoportail/GpPluginLeaflet.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1993716073",
+							"otherinfo": "1993716073, which evaluates to: 2033-03-06 10:01:13"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/depot/10km/librairies/extension-geoportail/GpPluginLeaflet.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1567415109",
+							"otherinfo": "1567415109, which evaluates to: 2019-09-02 09:05:09"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/depot/10km/librairies/extension-geoportail/GpPluginLeaflet.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1899457653",
+							"otherinfo": "1899457653, which evaluates to: 2030-03-11 11:07:33"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/depot/10km/librairies/extension-geoportail/GpPluginLeaflet.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1993716073",
+							"otherinfo": "1993716073, which evaluates to: 2033-03-06 10:01:13"
+						}
+					],
+					"count": "6",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1567415109, which evaluates to: 2019-09-02 09:05:09</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1676"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-16-0b02d2273a70314d039cfbe4b3831a03.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-32-3ed1ada13684127b4a69867dd67092fd.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-48-db6d8eb12f214596b8bba8fd2818b1d0.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-64-df3cd522e2f08830a121163646f9eeab.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/fonts/OpenSans-ExtraBold.woff",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/fonts/OpenSans-Light.woff",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/touch-icon-3aebf2c5a4669a76b01a15f6b2c9614f.png",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-6e31304df576cd85f9110d024adcfe12.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "alreadyAnsweredGeoportailSurvey1",
+							"otherinfo": "jZ\uFFFDi\u0700\uFFFD\uFFFD\\x001e\uFFFD\uFFFDFz\uFFFDh\uFFFD\u05A2\uFFFD+\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-visu/visu-carto-print.min-354275eb9194d2ccf7e6b0cc67b24aed.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "info/licences/Licence_CeCILL-B_V1-en",
+							"otherinfo": "\uFFFDw\uFFFD\uFFFDX\uFFFDzw\\x001e\uFFFD\uFFFD\uFFFDq\uFFFD\uFFFD{\uFFFD\\x0008\uFFFD\uFFFD\uFFFD\\x001f\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-visu/visu-carto.min-f40601aa766b95b77f0ebf9cd22abbf2.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "info/licences/Licence_CeCILL-B_V1-en",
+							"otherinfo": "\uFFFDw\uFFFD\uFFFDX\uFFFDzw\\x001e\uFFFD\uFFFD\uFFFDq\uFFFD\uFFFD{\uFFFD\\x0008\uFFFD\uFFFD\uFFFD\\x001f\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-6e31304df576cd85f9110d024adcfe12.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==",
+							"otherinfo": "\uFFFDPNG\r\n\\x001a\n\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x0000\\x0014\\x0000\\x0000\\x0000\\x001e\\x0008\\x0006\\x0000\\x0000\\x0000,\\x0012>k\\x0000\\x0000\\x0000RIDATx\uFFFD\uFFFD\uFFFD1\n\\x0000 \\x0010\\x0003A\uFFFD\\x000f\uFFFD?\uFFFD\\x000f\uFFFDF\uFFFD+N4\uFFFDv\uFFFDd$)\uFFFD\\x0007o\\x0000\\x000f\uFFFD\\x001b\uFFFD\\x000e$\\x0016\\x0001\\x0012\\x0013 1\\x0001\\x0012s 1\\x000f\\x0012\uFFFD\uFFFD*\\x0004\uFFFDz\uFFFD\uFFFD\\x0007\uFFFDz\uFFFD\uFFFD\\x0007\uFFFDz\uFFFDh\uFFFD=\uFFFD'\uFFFD4\uFFFD\\x0001\uFFFDh\\x0019\\x0001\uFFFD\uFFFD8\\x001b\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/adresse",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/depot/actus/2022/Geolocalisation/Capture_actu_geocod",
+							"otherinfo": "~\uFFFD\uFFFDz\uFFFD-\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFDm\uFFFD\\x0019\uFFFD%\uFFFD\u01A5\uFFFD\u01AD\uFFFD\uFFFD\uFFFD\t\uFFFDm\uFFFD\uFFFD\uFFFDi\uFFFDn\uFFFD\\x0007\uFFFDr\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/ban",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/depot/actus/2022/Geolocalisation/Capture_actu_geocod",
+							"otherinfo": "~\uFFFD\uFFFDz\uFFFD-\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFDm\uFFFD\\x0019\uFFFD%\uFFFD\u01A5\uFFFD\u01AD\uFFFD\uFFFD\uFFFD\t\uFFFDm\uFFFD\uFFFD\uFFFDi\uFFFDn\uFFFD\\x0007\uFFFDr\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/bdtopo",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/depot/actus/2022/couches_personnalisables/Capture_transparent",
+							"otherinfo": "~\uFFFD\uFFFDz\uFFFD-\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFDm\uFFFDr\uFFFD\uFFFD\uFFFD\uFFFD?\uFFFD\uFFFD\uFFFDy\u0696+\\x001anW\uFFFD\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u069E\uFFFDZ\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/eco-tourisme",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/depot/actus/2022/Tourisme_durable/Capture_villages_etapes",
+							"otherinfo": "~\uFFFD\uFFFDz\uFFFD-\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFDm\uFFFDN\uFFFD\uFFFD\uFFFD\u025E\uFFFD\u06EBi\uFFFD^\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/label",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/depot/actus/2022/Tourisme_durable/Capture_villages_etapes",
+							"otherinfo": "~\uFFFD\uFFFDz\uFFFD-\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFDm\uFFFDN\uFFFD\uFFFD\uFFFD\u025E\uFFFD\u06EBi\uFFFD^\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/limites-administratives",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/depot/actus/2022/couches_personnalisables/Capture_transparent",
+							"otherinfo": "~\uFFFD\uFFFDz\uFFFD-\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFDm\uFFFDr\uFFFD\uFFFD\uFFFD\uFFFD?\uFFFD\uFFFD\uFFFDy\u0696+\\x001anW\uFFFD\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u069E\uFFFDZ\uFFFD\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/tourisme-durable",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/depot/actus/2022/Tourisme_durable/Capture_villages_etapes",
+							"otherinfo": "~\uFFFD\uFFFDz\uFFFD-\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFDm\uFFFDN\uFFFD\uFFFD\uFFFD\u025E\uFFFD\u06EBi\uFFFD^\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-register.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "fr/depot/actus/2022/Geolocalisation/Capture_actu_geocod",
+							"otherinfo": "~\uFFFD\uFFFDz\uFFFD-\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFDm\uFFFD\\x0019\uFFFD%\uFFFD\u01A5\uFFFD\u01AD\uFFFD\uFFFD\uFFFD\t\uFFFDm\uFFFD\uFFFD\uFFFDi\uFFFDn\uFFFD\\x0007\uFFFDr\uFFFD"
+						}
+					],
+					"count": "12",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>jZ\uFFFDi\u0700\uFFFD\uFFFD\\x001e\uFFFD\uFFFDFz\uFFFDh\uFFFD\u05A2\uFFFD+\uFFFD\uFFFD\uFFFD</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "54"
+				},
+				{
+					"pluginid": "90011",
+					"alertRef": "90011",
+					"alert": "Charset Mismatch ",
+					"name": "Charset Mismatch ",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check identifies responses where the HTTP Content-Type header declares a charset different from the charset defined by the body of the HTML or XML. When there's a charset mismatch between the HTTP header and content body Web browsers can be forced into an undesirable content-sniffing mode to determine the content's correct character set.</p><p></p><p>An attacker could manipulate content on the page to be interpreted in an encoding of their choice. For example, if an attacker can control content at the beginning of the page, they could inject script using UTF-7 encoded text and manipulate some browsers into interpreting that text.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Fnon-classe%2Fdeconfinement-afficher-une-limite-de-100km",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Fnon-classe%2Freconfinement-afficher-une-limite-de-10km",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Ftutorials%2Fajoutez-vos-informations",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Ftutorials%2Fallez-plus-loin-avec-les-outils",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Ftutorials%2Fcomprendre-le-geoportail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Ftutorials%2Fcreez-votre-carte-personnalisee",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Ftutorials%2Fenregistrez-et-partagez-vos-cartes",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Ftutorials%2Frecherchez-une-parcelle-cadastrale-et-mesurez-sa-superficie",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-json/oembed/1.0/embed?format=xml&url=https%3A%2F%2Fwww.geoportail.gouv.fr%2Ftutorials%2Fvisualisez-vos-deplacements-sur-le-geoportail",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match."
+						}
+					],
+					"count": "9",
+					"solution": "<p>Force UTF-8 for all text content in both the HTTP header and meta tags in HTML or encoding declarations in XML.</p>",
+					"otherinfo": "<p>There was a charset mismatch between the HTTP Header and the XML encoding declaration: [UTF-8] and [null] do not match.</p>",
+					"reference": "<p>http://code.google.com/p/browsersec/wiki/Part2#Character_set_handling_and_detection</p>",
+					"cweid": "436",
+					"wascid": "15",
+					"sourceid": "1548"
+				},
+				{
+					"pluginid": "10024",
+					"alertRef": "10024",
+					"alert": "Information Disclosure - Sensitive Information in URL",
+					"name": "Information Disclosure - Sensitive Information in URL",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=-1.683643026538958,47.36456006011298&d1=1544684(1)&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=7",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "-1.683643026538958,47.36456006011298",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=1.4501953125000007,47.21956811231553&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS&z=6",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "1.4501953125000007,47.21956811231553",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=1.4501953125000007,47.21956811231553&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&l1=VILLAGESETAPE::GEOPORTAIL:OGC:WMS(1)&l2=Voiture$OGC:OPENLS;Itineraire-1594284590187(0.9)&permalink=yes&z=6",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "1.4501953125000007,47.21956811231553",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.2356288683693712,46.36632466845623&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGN::GEOPORTAIL:OGC:WMTS(1)&l1=n_vent_potentiel_eol_fixe_s(1)&permalink=yes&z=6",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "2.2356288683693712,46.36632466845623",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.341512629544421,48.85873471641844&l0=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN50.1950::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=13",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "2.341512629544421,48.85873471641844",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.3513621322021487,48.79018351257645&l0=ORTHOIMAGERY.ORTHO-SAT.SPOT.2018::GEOPORTAIL:OGC:WMTS(1)&l1=ORTHOIMAGERY.ORTHO-SAT.SPOT.2020::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=16",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "2.3513621322021487,48.79018351257645",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.373869333496095,48.85063061782478&l0=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.STANDARD::GEOPORTAIL:OGC:WMTS(1;g)&l1=INSEE.FILOSOFI.POPULATION::GEOPORTAIL:OGC:WMTS(0.8)&permalink=yes&z=12",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "2.373869333496095,48.85063061782478",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "2.8256,44.38077100000001",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=5.4437216131621025,43.33332295880601&l0=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.STANDARD::GEOPORTAIL:OGC:WMTS(1;g)&l1=INSEE.FILOSOFI.ENFANTS.0.17.ANS.SECRET::GEOPORTAIL:OGC:WMTS(0.94)&permalink=yes&z=16",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "5.4437216131621025,43.33332295880601",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=6.4874267578125,45.249754646487304&l0=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.NIVEAUXGRIS::GEOPORTAIL:OGC:WMTS(1)&l1=GEOGRAPHICALGRIDSYSTEMS.SLOPES.MOUNTAIN::GEOPORTAIL:OGC:WMTS(0.6)&permalink=yes&z=9",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "6.4874267578125,45.249754646487304",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/embed/visu.html?c=-1.5567846879150626,47.207060794232035&l0=ORTHOIMAGERY.ORTHO-SAT.SPOT.2021::GEOPORTAIL:OGC:WMTS(1;h)&l1=ORTHOIMAGERY.ORTHO-SAT.SPOT.2019::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=15",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "-1.5567846879150626,47.207060794232035",
+							"otherinfo": "The URL appears to contain credit card information."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/embed/visu.html?c=2.345645712530072,48.9213794500387&l0=ORTHOIMAGERY.ORTHO-SAT.SPOT.2021::GEOPORTAIL:OGC:WMTS(1)&l1=ORTHOIMAGERY.ORTHO-SAT.SPOT.2019::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=16",
+							"method": "GET",
+							"param": "c",
+							"attack": "",
+							"evidence": "2.345645712530072,48.9213794500387",
+							"otherinfo": "The URL appears to contain credit card information."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Do not pass sensitive information in URIs.</p>",
+					"otherinfo": "<p>The URL appears to contain credit card information.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "278"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "debug",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected 5 times, the first in the element starting with: \"define(\"portail-front/data-adapter\",[\"exports\",\"@ember-data/debug\"],(function(e,t){Object.defineProperty(e,\"__esModule\",{value:!\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "FIXME",
+							"otherinfo": "The following pattern was used: \\bFIXME\\b and was detected in the element starting with: \"e.default=Ember.HTMLBars.template({id:\"zlUuy/z0\",block:'{\"symbols\":[\"result\",\"result\",\"result\",\"result\",\"result\",\"poiType\"],\"sta\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 15 times, the first in the element starting with: \"Ember.RSVP.all(o).then(s,s)}))}})})),define(\"portail-front/components/abstract/newsletter\",[\"exports\",\"portail-front/utils/strin\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later",
+							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected 2 times, the first in the element starting with: \"Ember.run.later((function(){Ember.$.ajax(\"\".concat(t.default.wpApiUrl.hostname,\"/\").concat(t.default.wpApiUrl.namespace,\"/popup/\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"return this.set(\"loadCount\",this.get(\"loadCount\")+1),{stories:this.get(\"loadCount\")>1?t:e.findAll(\"story\",{reload:!0}),tutorials\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 6 times, the first in the element starting with: \"var r=document.getElementById(\"advanced-search-poi-input\").value,n=document.getElementById(\"advanced-search-poi-select\").value\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 36 times, the first in the element starting with: \"if(\"page\"===e||\"user\"===e){var t=Ember.String.camelize(e)\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/portail-front-c55632fb883a0272a7289a9fb68bb7ca.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "username",
+							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected 4 times, the first in the element starting with: \"return new Ember.RSVP.Promise((function(a,o){var s={grant_type:\"password\",username:e,password:t},l=r.get(\"serverTokenEndpoint\"),\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected 5 times, the first in the element starting with: \"i&&i.target===i.currentTarget&&r.apply(this,t)}}e.default=Ember.Helper.helper(r)})),define(\"ember-in-viewport/-private/observer-\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "BUG",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"return t.begin=function(){this.reset()},t.create=function(e,t){this.nodes.set(e,(0,r.assign)({},t,{bounds:null,refs:new Set})),t\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "debug",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected 74 times, the first in the element starting with: \"e.location=t?self.location:null,e.history=t?self.history:null,e.userAgent=t?self.navigator.userAgent:\"Lynx (textmode)\",e.isChrom\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 75 times, the first in the element starting with: \"return i||function(e,t){throw new Error(\"Could not find module `\"+e+\"` imported from `\"+t+\"`\")}(e,t),r&&\"pending\"!==i.state&&\"fi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later",
+							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected 9 times, the first in the element starting with: \"Object.defineProperty(e,\"__esModule\",{value:!0}),e.backburner=e._rsvpErrorQueue=e._globalsRun=void 0,e.begin=function(){u.begin(\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected 24 times, the first in the element starting with: \"var xe=H({id:\"giTNx+op\",block:'{\"symbols\":[\"&default\"],\"statements\":[[4,\"if\",[[25,1]],null,{\"statements\":[[14,1]],\"parameters\":[\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 31 times, the first in the element starting with: \"var j=v,M=a;(function(){var t,n,o,a,u,l,f,h,p,m,v=M,y=w.expando,g=0,b=0,_=ee(),E=ee(),O=ee(),k=ee(),C=function(e,t){return e===t\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 3 times, the first in the element starting with: \"return a.payload=e,a.status=o,a}return n(i,Ember.Error),i}(),o=e.InvalidError=function(e){function i(e){return t(this,i),r(this,\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-20b56b9469f4ecef3f509a46e0f02528.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "username",
+							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected 2 times, the first in the element starting with: \"if(s.open(t.type,t.url,t.async,t.username,t.password),t.xhrFields)for(a in t.xhrFields)s[a]=t.xhrFields[a]\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/adresse",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected 8 times, the first in the element starting with: \"<script type=\"text/javascript\">\n\t\t\twindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/11\\/72x72\\/\",\"e\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/ban",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected 8 times, the first in the element starting with: \"<script type=\"text/javascript\">\n\t\t\twindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/11\\/72x72\\/\",\"e\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/tag/bdtopo",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected 8 times, the first in the element starting with: \"<script type=\"text/javascript\">\n\t\t\twindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/11\\/72x72\\/\",\"e\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-register.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected 8 times, the first in the element starting with: \"<script type=\"text/javascript\">\n\t\t\twindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/11\\/72x72\\/\",\"e\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "21",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bDEBUG\\b and was detected 5 times, the first in the element starting with: \"define(\"portail-front/data-adapter\",[\"exports\",\"@ember-data/debug\"],(function(e,t){Object.defineProperty(e,\"__esModule\",{value:!\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "54"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=-0.7774867947909435,44.77246243396357&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&v1=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;s:toponymes)&z=10",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.5999711757376054,46.42556440876618&permalink=yes&v0=BDTOPO::GEOPORTAIL:GPP:TMS(1;s:bati_date)&z=17",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/trackback/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-admin/admin-ajax.php",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/images/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/js/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\">\n            (function(e,a){var i=e.length,y=5381,k='script',s=window,v=document,o=v.createElement(k);for(;i;){i-=1;y=(y*33)^e.charCodeAt(i)}y='_EA_'+(y>>>=0);(function(e,a,s,y){s[a]=s[a]||function(){(s[y]=s[y]||[]).push(arguments);s[y].eah=e;};}(e,a,s,y));i=new Date/1E7|0;o.ea=y;y=i%26;o.async=1;o.src='//'+e+'/'+String.fromCharCode(97+y,122-y,65+y)+(i%1E3)+'.js?2';s=v.getElementsByTagName(k)[0];s.parentNode.insertBefore(o,s);})('kabx.geoportail.gouv.fr','EA_push');\n            EA_push([\"etagid\", \"zoid\",\n            \"profile\", \"visitor\"]);\n        </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "11",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "private,must-revalidate,max-age=86400",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "private,must-revalidate,max-age=86400",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "private,must-revalidate,max-age=86400",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/trackback/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-admin/admin-ajax.php",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/images/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-includes/js/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/wp-register.php",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-64-df3cd522e2f08830a121163646f9eeab.png",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-64-df3cd522e2f08830a121163646f9eeab.png",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-64-df3cd522e2f08830a121163646f9eeab.png",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-64-df3cd522e2f08830a121163646f9eeab.png",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=86400",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-16-0b02d2273a70314d039cfbe4b3831a03.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-32-3ed1ada13684127b4a69867dd67092fd.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-48-db6d8eb12f214596b8bba8fd2818b1d0.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/favicon-64-df3cd522e2f08830a121163646f9eeab.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/fonts/OpenSans-ExtraBold.woff",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/fonts/OpenSans-Light.woff",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/touch-icon-3aebf2c5a4669a76b01a15f6b2c9614f.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/assets/vendor-6e31304df576cd85f9110d024adcfe12.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10031",
+					"alertRef": "10031",
+					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
+					"name": "User Controllable HTML Element Attribute (Potential XSS)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=-0.7774867947909435,44.77246243396357&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&v1=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;s:toponymes)&z=10",
+							"method": "GET",
+							"param": "permalink",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.geoportail.gouv.fr/carte?c=-0.7774867947909435,44.77246243396357&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&v1=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;s:toponymes)&z=10\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [content] attribute \r\n\r\nThe user input found was:\r\npermalink=yes\r\n\r\nThe user-controlled value was:\r\nyes"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=-0.7774867947909435,44.77246243396357&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&v1=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;s:transparent)&z=10",
+							"method": "GET",
+							"param": "permalink",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.geoportail.gouv.fr/carte?c=-0.7774867947909435,44.77246243396357&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&v1=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;s:transparent)&z=10\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [content] attribute \r\n\r\nThe user input found was:\r\npermalink=yes\r\n\r\nThe user-controlled value was:\r\nyes"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=-1.1556202569529568,46.12951909487475&l1=INSEE.FILOSOFI.NIVEAU.DE.VIE.SECRET::GEOPORTAIL:OGC:WMTS(0.98)&permalink=yes&v0=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;g;s:standard)&z=14",
+							"method": "GET",
+							"param": "permalink",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.geoportail.gouv.fr/carte?c=-1.1556202569529568,46.12951909487475&l1=INSEE.FILOSOFI.NIVEAU.DE.VIE.SECRET::GEOPORTAIL:OGC:WMTS(0.98)&permalink=yes&v0=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;g;s:standard)&z=14\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [content] attribute \r\n\r\nThe user input found was:\r\npermalink=yes\r\n\r\nThe user-controlled value was:\r\nyes"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.5999711757376054,46.42556440876618&permalink=yes&v0=BDTOPO::GEOPORTAIL:GPP:TMS(1;s:bati_date)&z=17",
+							"method": "GET",
+							"param": "permalink",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.geoportail.gouv.fr/carte?c=2.5999711757376054,46.42556440876618&permalink=yes&v0=BDTOPO::GEOPORTAIL:GPP:TMS(1;s:bati_date)&z=17\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [content] attribute \r\n\r\nThe user input found was:\r\npermalink=yes\r\n\r\nThe user-controlled value was:\r\nyes"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17",
+							"method": "GET",
+							"param": "permalink",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.geoportail.gouv.fr/carte?c=2.8256,44.38077100000001&l0=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=17\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [content] attribute \r\n\r\nThe user input found was:\r\npermalink=yes\r\n\r\nThe user-controlled value was:\r\nyes"
+						},
+						{
+							"uri": "https://www.geoportail.gouv.fr/carte?c=5.426676566162107,49.188091559337494&d1=1544703(1)&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=13",
+							"method": "GET",
+							"param": "permalink",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.geoportail.gouv.fr/carte?c=5.426676566162107,49.188091559337494&d1=1544703(1)&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&z=13\r\n\r\nappears to include user input in: \r\n\r\na(n) [meta] tag [content] attribute \r\n\r\nThe user input found was:\r\npermalink=yes\r\n\r\nThe user-controlled value was:\r\nyes"
+						}
+					],
+					"count": "6",
+					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.geoportail.gouv.fr/carte?c=-0.7774867947909435,44.77246243396357&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes&v1=PLAN.IGN::GEOPORTAIL:GPP:TMS(1;s:toponymes)&z=10</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [meta] tag [content] attribute </p><p></p><p>The user input found was:</p><p>permalink=yes</p><p></p><p>The user-controlled value was:</p><p>yes</p>",
+					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
+					"cweid": "20",
+					"wascid": "20",
+					"sourceid": "257"
+				}
+			]
+		}
+	]
+}
