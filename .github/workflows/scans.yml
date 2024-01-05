@@ -127,10 +127,10 @@ jobs:
         timeout-minutes: 10
         uses: "MTES-MCT/nmap-action@main"
         with:
-          host: ${{ steps.hostname.outputs.value }}
+          host: ${{ matrix.sites.url }}
           outputDir: "scans" 
           outputFile: "nmapvuln.json"
-          withVulnerabilities: ${{ steps.hostname.outputs.value }}
+          withVulnerabilities: true
           raw: false
           
       - name: Trivy
