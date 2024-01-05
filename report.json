@@ -2007,7 +2007,7 @@
         "ip": "www.archives-nationales.culture.gouv.fr/143.126.211.246",
         "port": "443",
         "severity": "INFO",
-        "finding": "off by -2 seconds from your localtime"
+        "finding": "off by -1 seconds from your localtime"
       },
       {
         "id": "cert_compression",
@@ -2336,14 +2336,14 @@
         "ip": "www.archives-nationales.culture.gouv.fr/143.126.211.246",
         "port": "443",
         "severity": "INFO",
-        "finding": "0 seconds from localtime"
+        "finding": "-1 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.archives-nationales.culture.gouv.fr/143.126.211.246",
         "port": "443",
         "severity": "INFO",
-        "finding": "1704452385"
+        "finding": "1704459824"
       },
       {
         "id": "HSTS_time",
@@ -2920,7 +2920,7 @@
         "ip": "www.archives-nationales.culture.gouv.fr/143.126.211.246",
         "port": "443",
         "severity": "INFO",
-        "finding": "65"
+        "finding": "64"
       }
     ],
     "thirdparties": {
@@ -2928,7 +2928,7 @@
       "cookies": [
         {
           "name": "JSESSIONID",
-          "value": "EC0F3D202D067E8DDF6E9FC3FF5AA220",
+          "value": "6D5695C5AAA29BF0D41109A075F52E98",
           "domain": "www.archives-nationales.culture.gouv.fr",
           "path": "/",
           "expires": -1,
@@ -2944,12 +2944,12 @@
       "headers": {
         "connection": "keep-alive",
         "content-encoding": "gzip",
-        "content-length": "11409",
+        "content-length": "11411",
         "content-type": "text/html;charset=UTF-8",
-        "date": "Fri, 05 Jan 2024 10:49:17 GMT",
-        "etag": "\"3d83a0d6\"",
+        "date": "Fri, 05 Jan 2024 12:54:16 GMT",
+        "etag": "\"73daf87d\"",
         "server": "nginx",
-        "set-cookie": "JSESSIONID=EC0F3D202D067E8DDF6E9FC3FF5AA220; Path=/; HttpOnly",
+        "set-cookie": "JSESSIONID=6D5695C5AAA29BF0D41109A075F52E98; Path=/; HttpOnly",
         "strict-transport-security": "max-age=63072000"
       },
       "endpoints": [
@@ -3296,7 +3296,7 @@
     "zap": {
       "@programName": "ZAP",
       "@version": "2.14.0",
-      "@generated": "Fri, 5 Jan 2024 10:58:53",
+      "@generated": "Fri, 5 Jan 2024 13:02:54",
       "site": [
         {
           "@name": "https://www.archives-nationales.culture.gouv.fr",
@@ -3445,6 +3445,13 @@
               "desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>"
             },
             {
+              "name": "Content-Type Header Missing",
+              "riskcode": "0",
+              "confidence": "2",
+              "riskdesc": "Informational (Medium)",
+              "desc": "<p>The Content-Type header was either missing or empty.</p>"
+            },
+            {
               "name": "Information Disclosure - Suspicious Comments",
               "riskcode": "0",
               "confidence": "1",
@@ -3558,7 +3565,7 @@
         "type": "dns",
         "host": "www.archives-nationales.culture.gouv.fr.",
         "matched-at": "www.archives-nationales.culture.gouv.fr",
-        "timestamp": "2024-01-05T11:00:42.872201307Z",
+        "timestamp": "2024-01-05T13:04:41.106565804Z",
         "matcher-status": true
       },
       {
@@ -3587,7 +3594,7 @@
           "GET, HEAD, POST, TRACE, OPTIONS"
         ],
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:00:53.637375527Z",
+        "timestamp": "2024-01-05T13:04:51.214379789Z",
         "curl-command": "curl -X 'OPTIONS' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -3626,7 +3633,7 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:01.587160408Z",
+        "timestamp": "2024-01-05T13:04:58.762070232Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -3661,10 +3668,10 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr",
         "extracted-results": [
-          "authToken = 'y3oPbW2J'"
+          "authToken = 't22Z15PH'"
         ],
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:41.128784002Z",
+        "timestamp": "2024-01-05T13:05:34.778189751Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -3691,118 +3698,7 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:41.459327944Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "content-security-policy",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865523705Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-content-type-options",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865561525Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-permitted-cross-domain-policies",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865579068Z",
+        "timestamp": "2024-01-05T13:05:35.109587839Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -3839,7 +3735,7 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865593885Z",
+        "timestamp": "2024-01-05T13:05:45.669899717Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -3871,86 +3767,12 @@
             "max-request": 1
           }
         },
-        "matcher-name": "cross-origin-resource-policy",
+        "matcher-name": "content-security-policy",
         "type": "http",
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865605256Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "permissions-policy",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865614153Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-frame-options",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865624081Z",
+        "timestamp": "2024-01-05T13:05:45.669945553Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -3987,7 +3809,7 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865638388Z",
+        "timestamp": "2024-01-05T13:05:45.669956053Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -4024,7 +3846,44 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865652725Z",
+        "timestamp": "2024-01-05T13:05:45.66997049Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "x-permitted-cross-domain-policies",
+        "type": "http",
+        "host": "https://www.archives-nationales.culture.gouv.fr",
+        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
+        "ip": "143.126.211.246",
+        "timestamp": "2024-01-05T13:05:45.669986971Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -4061,7 +3920,155 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:01:52.865666931Z",
+        "timestamp": "2024-01-05T13:05:45.669997881Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "cross-origin-resource-policy",
+        "type": "http",
+        "host": "https://www.archives-nationales.culture.gouv.fr",
+        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
+        "ip": "143.126.211.246",
+        "timestamp": "2024-01-05T13:05:45.670006447Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "permissions-policy",
+        "type": "http",
+        "host": "https://www.archives-nationales.culture.gouv.fr",
+        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
+        "ip": "143.126.211.246",
+        "timestamp": "2024-01-05T13:05:45.670019402Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "x-frame-options",
+        "type": "http",
+        "host": "https://www.archives-nationales.culture.gouv.fr",
+        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
+        "ip": "143.126.211.246",
+        "timestamp": "2024-01-05T13:05:45.670032847Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "x-content-type-options",
+        "type": "http",
+        "host": "https://www.archives-nationales.culture.gouv.fr",
+        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
+        "ip": "143.126.211.246",
+        "timestamp": "2024-01-05T13:05:45.670047134Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
         "matcher-status": true
       },
@@ -4095,22 +4102,22 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr/",
         "extracted-results": [
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery-ui.min.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/tarteaucitron/tarteaucitron.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery-1.9.1.min.js",
           "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jPagesCustom.min.js",
           "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.flexslider.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/filter.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/modernizr.custom.97074.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/main.js?browserId=other&minifierType=js&languageId=fr_FR&b=6101&t=1687423132000",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.cookie.js",
           "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.ui.datepicker-fr.js",
           "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.ui.datepicker-en.js",
           "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.ui.datepicker-es.js",
+          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/main.js?browserId=other&minifierType=js&languageId=fr_FR&b=6101&t=1687423132000",
+          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery-1.9.1.min.js",
+          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/filter.js",
+          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/modernizr.custom.97074.js",
+          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.cookie.js",
+          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery-ui.min.js",
+          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/tarteaucitron/tarteaucitron.js",
           "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/common.js"
         ],
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:02:17.528900494Z",
+        "timestamp": "2024-01-05T13:06:08.989479656Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Host: www.archives-nationales.culture.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr/'",
         "matcher-status": true
       },
@@ -4149,7 +4156,7 @@
           "path": "images/"
         },
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:02:24.912992287Z",
+        "timestamp": "2024-01-05T13:06:15.975336298Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr/favicon.ico'",
         "matcher-status": true
       },
@@ -4189,7 +4196,7 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr/",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:02:29.339165281Z",
+        "timestamp": "2024-01-05T13:06:20.426347186Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.archives-nationales.culture.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr/'",
         "matcher-status": true
       },
@@ -4229,7 +4236,7 @@
         "host": "https://www.archives-nationales.culture.gouv.fr",
         "matched-at": "https://www.archives-nationales.culture.gouv.fr/",
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:02:29.339206297Z",
+        "timestamp": "2024-01-05T13:06:20.426427436Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.archives-nationales.culture.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr/'",
         "matcher-status": true
       },
@@ -4260,7 +4267,7 @@
           "Let's Encrypt"
         ],
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:04:19.351636758Z",
+        "timestamp": "2024-01-05T13:08:08.818234839Z",
         "matcher-status": true
       },
       {
@@ -4290,7 +4297,7 @@
           "www.archives-nationales.culture.gouv.fr"
         ],
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:04:19.351755569Z",
+        "timestamp": "2024-01-05T13:08:08.818355214Z",
         "matcher-status": true
       },
       {
@@ -4321,7 +4328,7 @@
           "tls12"
         ],
         "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T11:04:23.013820821Z",
+        "timestamp": "2024-01-05T13:08:12.464334249Z",
         "matcher-status": true
       }
     ],
@@ -4329,7 +4336,7 @@
       {
         "requestedUrl": "https://www.archives-nationales.culture.gouv.fr/",
         "finalUrl": "https://www.archives-nationales.culture.gouv.fr/",
-        "fetchTime": "2024-01-05T10:59:07.902Z",
+        "fetchTime": "2024-01-05T13:03:08.592Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -4392,53 +4399,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 12945,
+            "numericValue": 12813,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3993,
-                  "firstMeaningfulPaint": 3993,
-                  "largestContentfulPaint": 6961,
-                  "interactive": 12945,
-                  "speedIndex": 7493,
-                  "totalBlockingTime": 9,
-                  "maxPotentialFID": 62,
+                  "firstContentfulPaint": 3907,
+                  "firstMeaningfulPaint": 3907,
+                  "largestContentfulPaint": 6546,
+                  "interactive": 12813,
+                  "speedIndex": 7211,
+                  "totalBlockingTime": 12,
+                  "maxPotentialFID": 64,
                   "cumulativeLayoutShift": 0.26806827542226513,
                   "cumulativeLayoutShiftMainFrame": 0.26806827542226513,
                   "totalCumulativeLayoutShift": 0.26806827542226513,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 661247318,
+                  "observedTimeOriginTs": 675579134,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 661247318,
-                  "observedFirstPaint": 1297,
-                  "observedFirstPaintTs": 662544763,
-                  "observedFirstContentfulPaint": 1297,
-                  "observedFirstContentfulPaintTs": 662544763,
-                  "observedFirstContentfulPaintAllFrames": 1297,
-                  "observedFirstContentfulPaintAllFramesTs": 662544763,
-                  "observedFirstMeaningfulPaint": 1297,
-                  "observedFirstMeaningfulPaintTs": 662544763,
-                  "observedLargestContentfulPaint": 1788,
-                  "observedLargestContentfulPaintTs": 663035430,
-                  "observedLargestContentfulPaintAllFrames": 1788,
-                  "observedLargestContentfulPaintAllFramesTs": 663035430,
-                  "observedTraceEnd": 5049,
-                  "observedTraceEndTs": 666296301,
-                  "observedLoad": 2638,
-                  "observedLoadTs": 663884891,
-                  "observedDomContentLoaded": 1385,
-                  "observedDomContentLoadedTs": 662631924,
+                  "observedNavigationStartTs": 675579134,
+                  "observedFirstPaint": 1251,
+                  "observedFirstPaintTs": 676830513,
+                  "observedFirstContentfulPaint": 1251,
+                  "observedFirstContentfulPaintTs": 676830513,
+                  "observedFirstContentfulPaintAllFrames": 1251,
+                  "observedFirstContentfulPaintAllFramesTs": 676830513,
+                  "observedFirstMeaningfulPaint": 1251,
+                  "observedFirstMeaningfulPaintTs": 676830513,
+                  "observedLargestContentfulPaint": 1639,
+                  "observedLargestContentfulPaintTs": 677218556,
+                  "observedLargestContentfulPaintAllFrames": 1639,
+                  "observedLargestContentfulPaintAllFramesTs": 677218556,
+                  "observedTraceEnd": 4976,
+                  "observedTraceEndTs": 680554691,
+                  "observedLoad": 2571,
+                  "observedLoadTs": 678150377,
+                  "observedDomContentLoaded": 1335,
+                  "observedDomContentLoadedTs": 676913949,
                   "observedCumulativeLayoutShift": 0.26806827542226513,
                   "observedCumulativeLayoutShiftMainFrame": 0.26806827542226513,
                   "observedTotalCumulativeLayoutShift": 0.26806827542226513,
-                  "observedFirstVisualChange": 1292,
-                  "observedFirstVisualChangeTs": 662539318,
-                  "observedLastVisualChange": 2476,
-                  "observedLastVisualChangeTs": 663723318,
-                  "observedSpeedIndex": 1734,
-                  "observedSpeedIndexTs": 662981313
+                  "observedFirstVisualChange": 1243,
+                  "observedFirstVisualChangeTs": 676822134,
+                  "observedLastVisualChange": 2293,
+                  "observedLastVisualChangeTs": 677872134,
+                  "observedSpeedIndex": 1635,
+                  "observedSpeedIndexTs": 677214077
                 },
                 {
                   "lcpInvalidated": false
@@ -4460,18 +4467,18 @@
                   "numScripts": 19,
                   "numStylesheets": 6,
                   "numFonts": 0,
-                  "numTasks": 935,
+                  "numTasks": 843,
                   "numTasksOver10ms": 7,
-                  "numTasksOver25ms": 1,
+                  "numTasksOver25ms": 0,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 97.243,
-                  "throughput": 13986880.147248022,
-                  "maxRtt": 97.243,
-                  "maxServerLatency": 3.841000000000008,
+                  "rtt": 93.332,
+                  "throughput": 14341698.923890745,
+                  "maxRtt": 93.332,
+                  "maxServerLatency": 1.3909999999999911,
                   "totalByteWeight": 3074140,
-                  "totalTaskTime": 243.11999999999952,
+                  "totalTaskTime": 209.73099999999977,
                   "mainDocumentTransferSize": 11730
                 }
               ]
@@ -4492,14 +4499,32 @@
       "mention": "Accessibilité : non conforme",
       "declarationUrl": "https://www.archives-nationales.culture.gouv.fr/accessibilite"
     },
-    "declaration-rgpd": null,
+    "declaration-rgpd": [
+      {
+        "slug": "ml",
+        "mention": "Mentions légales",
+        "maxScore": 4,
+        "score": 4,
+        "missingWords": [],
+        "missingTrackers": [],
+        "declarationUrl": "https://www.archives-nationales.culture.gouv.fr/mentions-legales"
+      },
+      {
+        "slug": "pc",
+        "mention": null,
+        "maxScore": 0,
+        "score": 0,
+        "missingWords": [],
+        "missingTrackers": []
+      }
+    ],
     "betagouv": null,
     "ecoindex": [
       {
         "width": 1920,
         "height": 1080,
         "url": "https://www.archives-nationales.culture.gouv.fr",
-        "size": 3224.314,
+        "size": 3224.401,
         "nodes": 616,
         "requests": 60,
         "grade": "D",
@@ -4507,7 +4532,7 @@
         "ges": 2.02,
         "water": 3.03,
         "ecoindex_version": "5.4.2",
-        "date": "2024-01-05 10:50:22.121652",
+        "date": "2024-01-05 12:55:17.435517",
         "page_type": null
       }
     ],
@@ -4534,6 +4559,8 @@
       "lighthouse_pwaGrade": "F",
       "statsGrade": "F",
       "declaration-a11y": "C",
+      "declaration-rgpd-ml": "A",
+      "declaration-rgpd-pc": "F",
       "ecoindexGrade": "D"
     }
   },
@@ -5335,21 +5362,21 @@
         "ip": "www.gouvernement.fr/192.229.211.115",
         "port": "443",
         "severity": "INFO",
-        "finding": "+1203 seconds from localtime"
+        "finding": "+2849 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.gouvernement.fr/192.229.211.115",
         "port": "443",
         "severity": "INFO",
-        "finding": "1704452160"
+        "finding": "1704459629"
       },
       {
         "id": "HTTP_headerAge",
         "ip": "www.gouvernement.fr/192.229.211.115",
         "port": "443",
         "severity": "INFO",
-        "finding": "1203 seconds"
+        "finding": "2849 seconds"
       },
       {
         "id": "HSTS",
@@ -5370,7 +5397,7 @@
         "ip": "www.gouvernement.fr/192.229.211.115",
         "port": "443",
         "severity": "INFO",
-        "finding": "ECAcc (dce/26DE)"
+        "finding": "ECAcc (sac/2533)"
       },
       {
         "id": "banner_application",
@@ -5933,7 +5960,7 @@
         "ip": "www.gouvernement.fr/192.229.211.115",
         "port": "443",
         "severity": "INFO",
-        "finding": "63"
+        "finding": "64"
       }
     ],
     "thirdparties": {
@@ -5969,12 +5996,12 @@
       ],
       "cookies": [
         {
-          "name": "incap_ses_1607_208930",
-          "value": "xMJ2ekg8syNxz0t2oDZNFqzel2UAAAAAwbPPZ8V1X7Dc65Win5323A==",
+          "name": "incap_ses_173_208930",
+          "value": "M7jMRbwuGwjK+wqkv55mAvr7l2UAAAAAbRVhmpPXA7K5v/neDtahnQ==",
           "domain": ".gouvernement.fr",
           "path": "/",
           "expires": -1,
-          "size": 77,
+          "size": 76,
           "httpOnly": false,
           "secure": false,
           "session": true,
@@ -5983,12 +6010,12 @@
           "sourcePort": 443
         },
         {
-          "name": "incap_ses_1286_208930",
-          "value": "BbM1SsUpnhNtuAzYJsvYEazel2UAAAAAntU0wIxJjfkH+sqNIVNVOQ==",
+          "name": "incap_ses_538_208930",
+          "value": "UkwNIzvJKkKieQMMR113B/r7l2UAAAAATT6XtLXE+YuA4fr4K5TYGg==",
           "domain": ".gouvernement.fr",
           "path": "/",
           "expires": -1,
-          "size": 77,
+          "size": 76,
           "httpOnly": false,
           "secure": false,
           "session": true,
@@ -5997,12 +6024,12 @@
           "sourcePort": 443
         },
         {
-          "name": "incap_ses_1307_208930",
-          "value": "vbQlZR0YGwXym4zhh2YjEqvel2UAAAAAVKHlCJ5VR7fBKeBPZ1wQeQ==",
+          "name": "incap_ses_882_208930",
+          "value": "dTwgYlLmZ1Un2ZqBX389DPr7l2UAAAAABQVe8VR+WOjYwwkxurPopw==",
           "domain": ".gouvernement.fr",
           "path": "/",
           "expires": -1,
-          "size": 77,
+          "size": 76,
           "httpOnly": false,
           "secure": false,
           "session": true,
@@ -6012,11 +6039,11 @@
         },
         {
           "name": "___utmvc",
-          "value": "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",
+          "value": "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",
           "domain": "www.gouvernement.fr",
           "path": "/",
-          "expires": 1704451776,
-          "size": 3012,
+          "expires": 1704459279,
+          "size": 3000,
           "httpOnly": false,
           "secure": false,
           "session": false,
@@ -6026,10 +6053,10 @@
         },
         {
           "name": "visid_incap_208930",
-          "value": "O7rEd5IfSyKud4JaWYcxWqvel2UAAAAAQUIPAAAAAADGYJ3wbblWwXlYE6HsbQLk",
+          "value": "zbewRZbPSJSSSVZdFlcFYfr7l2UAAAAAQUIPAAAAAAC9Dg9SiuKnd1d4jtuCTQco",
           "domain": ".gouvernement.fr",
           "path": "/",
-          "expires": 1735920858.641698,
+          "expires": 1735972093.514065,
           "size": 82,
           "httpOnly": true,
           "secure": false,
@@ -6039,12 +6066,12 @@
           "sourcePort": 443
         },
         {
-          "name": "incap_ses_1542_208930",
-          "value": "Lw+0UKX54Hd5BnmiaUlmFavel2UAAAAAaNhaViQQruAw5FC7cmmPEw==",
+          "name": "incap_ses_171_208930",
+          "value": "/p2qIIg3ozcxb8lB7INfAvv7l2UAAAAA/SfKVthRdFplvltOOR8GdQ==",
           "domain": ".gouvernement.fr",
           "path": "/",
           "expires": -1,
-          "size": 77,
+          "size": 76,
           "httpOnly": false,
           "secure": false,
           "session": true,
@@ -6054,7 +6081,7 @@
         },
         {
           "name": "nlbi_208930",
-          "value": "ql0VeBrpmF+L0xJrfC0FqAAAAADQ4sC9UOHXbmqAdiOVtVm3",
+          "value": "VAnRduXXsT2fAK2cfC0FqAAAAADiZUOSSVuymp1F2GlEl3mu",
           "domain": ".gouvernement.fr",
           "path": "/",
           "expires": -1,
@@ -6067,22 +6094,8 @@
           "sourcePort": 443
         },
         {
-          "name": "incap_ses_1538_208930",
-          "value": "UvWXCVyl53FMRODCbBNYFazel2UAAAAA5obvC34/hDaCzbCoAHGAxw==",
-          "domain": ".gouvernement.fr",
-          "path": "/",
-          "expires": -1,
-          "size": 77,
-          "httpOnly": false,
-          "secure": false,
-          "session": true,
-          "sameParty": false,
-          "sourceScheme": "Secure",
-          "sourcePort": 443
-        },
-        {
-          "name": "incap_ses_1350_208930",
-          "value": "4r6hGc2gxwLnJN41xCq8Eqzel2UAAAAAGf9ZznEN9vbHrD7PPM1cSg==",
+          "name": "incap_ses_1287_208930",
+          "value": "Qcn9B1gCMEBTuOGRp1jcEfr7l2UAAAAAR440AGKUs2WKeR+mEdrEIg==",
           "domain": ".gouvernement.fr",
           "path": "/",
           "expires": -1,
@@ -6096,22 +6109,22 @@
         }
       ],
       "headers": {
-        "age": "799",
+        "age": "2479",
         "cache-control": "max-age=86400, public",
         "cache-tags": "homepage,website",
         "content-encoding": "gzip",
         "content-length": "440549",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Fri, 05 Jan 2024 10:49:16 GMT",
+        "date": "Fri, 05 Jan 2024 12:54:19 GMT",
         "ec-policy-version": "V3.8.6V",
-        "last-modified": "Fri, 05 Jan 2024 10:35:57 GMT",
-        "server": "ECAcc (dce/26DE)",
+        "last-modified": "Fri, 05 Jan 2024 12:13:04 GMT",
+        "server": "ECAcc (sac/2533)",
         "vary": "Accept-Encoding",
         "x-cache": "HIT",
         "x-content-type-options": "nosniff",
         "x-frame-options": "SAMEORIGIN",
-        "x-iinfo": "10-186476835-186471014 pNNy RT(1704451006984 10) q(0 0 0 0) r(6 6) U24",
-        "x-varnish-cache": "HIT",
+        "x-iinfo": "47-73857729-73839108 pNNy RT(1704456779833 13) q(0 0 0 -1) r(44 44) U24",
+        "x-varnish-cache": "MISS",
         "x-xss-protection": "1; mode=block"
       },
       "endpoints": [
@@ -6171,7 +6184,7 @@
         },
         {
           "hostname": "via.batch.com",
-          "ip": "104.152.113.110",
+          "ip": "104.152.115.109",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -6697,7 +6710,7 @@
     "zap": {
       "@programName": "ZAP",
       "@version": "2.14.0",
-      "@generated": "Fri, 5 Jan 2024 10:54:27",
+      "@generated": "Fri, 5 Jan 2024 12:59:37",
       "site": [
         {
           "@name": "https://www.gouvernement.fr",
@@ -6711,27 +6724,6 @@
               "confidence": "1",
               "riskdesc": "Medium (Low)",
               "desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>"
-            },
-            {
-              "name": "CSP: Wildcard Directive",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
-            },
-            {
-              "name": "CSP: script-src unsafe-inline",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
-            },
-            {
-              "name": "CSP: style-src unsafe-inline",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
             },
             {
               "name": "Content Security Policy (CSP) Header Not Set",
@@ -6844,13 +6836,6 @@
               "confidence": "2",
               "riskdesc": "Informational (Medium)",
               "desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>"
-            },
-            {
-              "name": "Charset Mismatch (Header Versus Meta Content-Type Charset)",
-              "riskcode": "0",
-              "confidence": "1",
-              "riskdesc": "Informational (Low)",
-              "desc": "<p>This check identifies responses where the HTTP Content-Type header declares a charset different from the charset defined by the body of the HTML or XML. When there's a charset mismatch between the HTTP header and content body Web browsers can be forced into an undesirable content-sniffing mode to determine the content's correct character set.</p><p></p><p>An attacker could manipulate content on the page to be interpreted in an encoding of their choice. For example, if an attacker can control content at the beginning of the page, they could inject script using UTF-7 encoded text and manipulate some browsers into interpreting that text.</p>"
             },
             {
               "name": "Information Disclosure - Suspicious Comments",
@@ -6980,7 +6965,7 @@
         "extracted-results": [
           "cs698.wpc.upsiloncdn.net."
         ],
-        "timestamp": "2024-01-05T10:57:00.732301012Z",
+        "timestamp": "2024-01-05T13:01:29.904504702Z",
         "matcher-status": true
       },
       {
@@ -7015,7 +7000,7 @@
         "type": "dns",
         "host": "www.gouvernement.fr.",
         "matched-at": "www.gouvernement.fr",
-        "timestamp": "2024-01-05T10:57:00.814652022Z",
+        "timestamp": "2024-01-05T13:01:29.911631998Z",
         "matcher-status": true
       },
       {
@@ -7055,7 +7040,7 @@
           "1; mode=block"
         ],
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:17.188357289Z",
+        "timestamp": "2024-01-05T13:01:46.520799404Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
         "matcher-status": true
       },
@@ -7091,192 +7076,7 @@
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:27.716905191Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "strict-transport-security",
-        "type": "http",
-        "host": "https://www.gouvernement.fr",
-        "matched-at": "https://www.gouvernement.fr",
-        "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934528511Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "permissions-policy",
-        "type": "http",
-        "host": "https://www.gouvernement.fr",
-        "matched-at": "https://www.gouvernement.fr",
-        "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934572693Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-permitted-cross-domain-policies",
-        "type": "http",
-        "host": "https://www.gouvernement.fr",
-        "matched-at": "https://www.gouvernement.fr",
-        "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934586148Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "referrer-policy",
-        "type": "http",
-        "host": "https://www.gouvernement.fr",
-        "matched-at": "https://www.gouvernement.fr",
-        "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934625412Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "clear-site-data",
-        "type": "http",
-        "host": "https://www.gouvernement.fr",
-        "matched-at": "https://www.gouvernement.fr",
-        "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934649166Z",
+        "timestamp": "2024-01-05T13:01:56.926008863Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
         "matcher-status": true
       },
@@ -7313,7 +7113,7 @@
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934663493Z",
+        "timestamp": "2024-01-05T13:02:00.358280252Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
         "matcher-status": true
       },
@@ -7345,12 +7145,49 @@
             "max-request": 1
           }
         },
-        "matcher-name": "cross-origin-embedder-policy",
+        "matcher-name": "permissions-policy",
         "type": "http",
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934675776Z",
+        "timestamp": "2024-01-05T13:02:00.358323443Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "referrer-policy",
+        "type": "http",
+        "host": "https://www.gouvernement.fr",
+        "matched-at": "https://www.gouvernement.fr",
+        "ip": "192.229.211.115",
+        "timestamp": "2024-01-05T13:02:00.358336988Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
         "matcher-status": true
       },
@@ -7387,7 +7224,7 @@
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934687658Z",
+        "timestamp": "2024-01-05T13:02:00.35834886Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
         "matcher-status": true
       },
@@ -7424,7 +7261,155 @@
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:30.934700181Z",
+        "timestamp": "2024-01-05T13:02:00.358361123Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "strict-transport-security",
+        "type": "http",
+        "host": "https://www.gouvernement.fr",
+        "matched-at": "https://www.gouvernement.fr",
+        "ip": "192.229.211.115",
+        "timestamp": "2024-01-05T13:02:00.358375169Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "x-permitted-cross-domain-policies",
+        "type": "http",
+        "host": "https://www.gouvernement.fr",
+        "matched-at": "https://www.gouvernement.fr",
+        "ip": "192.229.211.115",
+        "timestamp": "2024-01-05T13:02:00.358387191Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "clear-site-data",
+        "type": "http",
+        "host": "https://www.gouvernement.fr",
+        "matched-at": "https://www.gouvernement.fr",
+        "ip": "192.229.211.115",
+        "timestamp": "2024-01-05T13:02:00.358398993Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "cross-origin-embedder-policy",
+        "type": "http",
+        "host": "https://www.gouvernement.fr",
+        "matched-at": "https://www.gouvernement.fr",
+        "ip": "192.229.211.115",
+        "timestamp": "2024-01-05T13:02:00.358410324Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
         "matcher-status": true
       },
@@ -7452,7 +7437,7 @@
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr/robots.txt",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:37.662706545Z",
+        "timestamp": "2024-01-05T13:02:06.915336233Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr/robots.txt'",
         "matcher-status": true
       },
@@ -7480,7 +7465,7 @@
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr/robots.txt",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:57:37.67087394Z",
+        "timestamp": "2024-01-05T13:02:06.916324339Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr/robots.txt'",
         "matcher-status": true
       },
@@ -7518,7 +7503,7 @@
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:58:39.879469038Z",
+        "timestamp": "2024-01-05T13:03:09.528182493Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
         "matcher-status": true
       },
@@ -7545,73 +7530,8 @@
         "host": "https://www.gouvernement.fr",
         "matched-at": "https://www.gouvernement.fr",
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:58:45.910640862Z",
+        "timestamp": "2024-01-05T13:03:15.563517071Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.gouvernement.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/detect-ssl-issuer.yaml",
-        "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
-        "template-id": "ssl-issuer",
-        "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
-        "info": {
-          "name": "Detect SSL Certificate Issuer",
-          "author": [
-            "lingtren"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "ssl",
-        "host": "www.gouvernement.fr",
-        "matched-at": "www.gouvernement.fr:443",
-        "extracted-results": [
-          "DHIMYOTIS"
-        ],
-        "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:59:22.11006733Z",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/ssl-dns-names.yaml",
-        "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
-        "template-id": "ssl-dns-names",
-        "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
-        "info": {
-          "name": "SSL DNS Names",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "ssl",
-        "host": "www.gouvernement.fr",
-        "matched-at": "www.gouvernement.fr:443",
-        "extracted-results": [
-          "www.recherche.gouvernement.fr",
-          "www.gouvernement.fr",
-          "gouvernement.fr",
-          "recherche.gouvernement.fr",
-          "gouvernement.gouv.fr",
-          "www.gouvernement.gouv.fr"
-        ],
-        "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:59:22.110208253Z",
         "matcher-status": true
       },
       {
@@ -7642,7 +7562,72 @@
           "tls12"
         ],
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:59:22.196209544Z",
+        "timestamp": "2024-01-05T13:03:54.170214584Z",
+        "matcher-status": true
+      },
+      {
+        "template": "ssl/detect-ssl-issuer.yaml",
+        "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+        "template-id": "ssl-issuer",
+        "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+        "info": {
+          "name": "Detect SSL Certificate Issuer",
+          "author": [
+            "lingtren"
+          ],
+          "tags": [
+            "ssl",
+            "tls"
+          ],
+          "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "type": "ssl",
+        "host": "www.gouvernement.fr",
+        "matched-at": "www.gouvernement.fr:443",
+        "extracted-results": [
+          "DHIMYOTIS"
+        ],
+        "ip": "192.229.211.115",
+        "timestamp": "2024-01-05T13:03:54.278281376Z",
+        "matcher-status": true
+      },
+      {
+        "template": "ssl/ssl-dns-names.yaml",
+        "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+        "template-id": "ssl-dns-names",
+        "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+        "info": {
+          "name": "SSL DNS Names",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl",
+            "tls"
+          ],
+          "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "type": "ssl",
+        "host": "www.gouvernement.fr",
+        "matched-at": "www.gouvernement.fr:443",
+        "extracted-results": [
+          "www.gouvernement.gouv.fr",
+          "www.recherche.gouvernement.fr",
+          "www.gouvernement.fr",
+          "gouvernement.fr",
+          "recherche.gouvernement.fr",
+          "gouvernement.gouv.fr"
+        ],
+        "ip": "192.229.211.115",
+        "timestamp": "2024-01-05T13:03:54.27839617Z",
         "matcher-status": true
       },
       {
@@ -7673,7 +7658,7 @@
           "tls13"
         ],
         "ip": "192.229.211.115",
-        "timestamp": "2024-01-05T10:59:22.929009796Z",
+        "timestamp": "2024-01-05T13:03:55.403274069Z",
         "matcher-status": true
       }
     ],
@@ -7681,7 +7666,7 @@
       {
         "requestedUrl": "https://www.gouvernement.fr/",
         "finalUrl": "https://www.gouvernement.fr/",
-        "fetchTime": "2024-01-05T10:54:40.662Z",
+        "fetchTime": "2024-01-05T12:59:52.195Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -7692,7 +7677,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.18860301971435547
+            "score": 0.18886775970458985
           },
           "accessibility": {
             "title": "Accessibility",
@@ -7744,53 +7729,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 13182,
+            "numericValue": 13467,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3760,
-                  "firstMeaningfulPaint": 3760,
-                  "largestContentfulPaint": 12791,
-                  "interactive": 13182,
-                  "speedIndex": 4164,
-                  "totalBlockingTime": 1056,
-                  "maxPotentialFID": 422,
+                  "firstContentfulPaint": 4206,
+                  "firstMeaningfulPaint": 4206,
+                  "largestContentfulPaint": 13119,
+                  "interactive": 13467,
+                  "speedIndex": 4525,
+                  "totalBlockingTime": 856,
+                  "maxPotentialFID": 421,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftMainFrame": 0,
                   "totalCumulativeLayoutShift": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 393828298,
+                  "observedTimeOriginTs": 575188125,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 393828298,
-                  "observedFirstPaint": 269,
-                  "observedFirstPaintTs": 394097558,
-                  "observedFirstContentfulPaint": 269,
-                  "observedFirstContentfulPaintTs": 394097558,
-                  "observedFirstContentfulPaintAllFrames": 269,
-                  "observedFirstContentfulPaintAllFramesTs": 394097558,
-                  "observedFirstMeaningfulPaint": 269,
-                  "observedFirstMeaningfulPaintTs": 394097558,
-                  "observedLargestContentfulPaint": 1226,
-                  "observedLargestContentfulPaintTs": 395053878,
-                  "observedLargestContentfulPaintAllFrames": 1226,
-                  "observedLargestContentfulPaintAllFramesTs": 395053878,
-                  "observedTraceEnd": 4094,
-                  "observedTraceEndTs": 397921885,
-                  "observedLoad": 954,
-                  "observedLoadTs": 394782239,
-                  "observedDomContentLoaded": 557,
-                  "observedDomContentLoadedTs": 394384871,
+                  "observedNavigationStartTs": 575188125,
+                  "observedFirstPaint": 396,
+                  "observedFirstPaintTs": 575584275,
+                  "observedFirstContentfulPaint": 396,
+                  "observedFirstContentfulPaintTs": 575584275,
+                  "observedFirstContentfulPaintAllFrames": 396,
+                  "observedFirstContentfulPaintAllFramesTs": 575584275,
+                  "observedFirstMeaningfulPaint": 396,
+                  "observedFirstMeaningfulPaintTs": 575584275,
+                  "observedLargestContentfulPaint": 1343,
+                  "observedLargestContentfulPaintTs": 576530926,
+                  "observedLargestContentfulPaintAllFrames": 1343,
+                  "observedLargestContentfulPaintAllFramesTs": 576530926,
+                  "observedTraceEnd": 4453,
+                  "observedTraceEndTs": 579641463,
+                  "observedLoad": 1180,
+                  "observedLoadTs": 576368492,
+                  "observedDomContentLoaded": 616,
+                  "observedDomContentLoadedTs": 575804569,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftMainFrame": 0,
                   "observedTotalCumulativeLayoutShift": 0,
-                  "observedFirstVisualChange": 272,
-                  "observedFirstVisualChangeTs": 394100298,
-                  "observedLastVisualChange": 1239,
-                  "observedLastVisualChangeTs": 395067298,
-                  "observedSpeedIndex": 785,
-                  "observedSpeedIndexTs": 394613215
+                  "observedFirstVisualChange": 388,
+                  "observedFirstVisualChangeTs": 575576125,
+                  "observedLastVisualChange": 1355,
+                  "observedLastVisualChangeTs": 576543125,
+                  "observedSpeedIndex": 901,
+                  "observedSpeedIndexTs": 576089289
                 },
                 {
                   "lcpInvalidated": false
@@ -7808,23 +7793,23 @@
               "type": "debugdata",
               "items": [
                 {
-                  "numRequests": 83,
+                  "numRequests": 80,
                   "numScripts": 30,
                   "numStylesheets": 4,
                   "numFonts": 4,
-                  "numTasks": 2368,
-                  "numTasksOver10ms": 18,
+                  "numTasks": 2347,
+                  "numTasksOver10ms": 21,
                   "numTasksOver25ms": 9,
-                  "numTasksOver50ms": 5,
+                  "numTasksOver50ms": 4,
                   "numTasksOver100ms": 1,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.4190000000000111,
-                  "throughput": 182205705.34818727,
-                  "maxRtt": 88.383,
-                  "maxServerLatency": 87.14999999999998,
-                  "totalByteWeight": 2681193,
-                  "totalTaskTime": 895.8550000000141,
-                  "mainDocumentTransferSize": 441143
+                  "rtt": 1.0600000000000023,
+                  "throughput": 237978415.34822634,
+                  "maxRtt": 149.637,
+                  "maxServerLatency": 146.81600000000006,
+                  "totalByteWeight": 2679805,
+                  "totalTaskTime": 887.4330000000124,
+                  "mainDocumentTransferSize": 441146
                 }
               ]
             }
@@ -7840,22 +7825,45 @@
       "mention": "Accessibilité : partiellement conforme",
       "declarationUrl": "https://www.gouvernement.fr/accessibilite"
     },
-    "declaration-rgpd": null,
+    "declaration-rgpd": [
+      {
+        "slug": "ml",
+        "mention": "Mentions légales",
+        "maxScore": 4,
+        "score": 3,
+        "missingWords": [
+          "éditeur (ou) édité par (ou) editeur (ou) edité par"
+        ],
+        "missingTrackers": [],
+        "declarationUrl": "https://www.gouvernement.fr/mentions-legales"
+      },
+      {
+        "slug": "pc",
+        "mention": "Données personnelles",
+        "maxScore": 4,
+        "score": 3,
+        "missingWords": [
+          "durée de conservation"
+        ],
+        "missingTrackers": [],
+        "declarationUrl": "https://www.gouvernement.fr/donnees-personnelles-et-cookies#notifications"
+      }
+    ],
     "betagouv": null,
     "ecoindex": [
       {
         "width": 1920,
         "height": 1080,
         "url": "https://www.gouvernement.fr",
-        "size": 6470.458,
+        "size": 6472.654,
         "nodes": 1062,
-        "requests": 77,
+        "requests": 78,
         "grade": "E",
         "score": 31,
         "ges": 2.38,
         "water": 3.57,
         "ecoindex_version": "5.4.2",
-        "date": "2024-01-05 10:50:18.528011",
+        "date": "2024-01-05 12:55:24.961056",
         "page_type": "website"
       }
     ],
@@ -7867,10 +7875,10 @@
       "testsslExpireDate": "2024-07-17T21:59:00.000Z",
       "testsslGrade": "T",
       "cookiesGrade": "E",
-      "cookiesCount": 9,
+      "cookiesCount": 8,
       "trackersGrade": "C",
       "trackersCount": 7,
-      "lighthouse_performance": 0.18860301971435547,
+      "lighthouse_performance": 0.18886775970458985,
       "lighthouse_performanceGrade": "E",
       "lighthouse_accessibility": 0.93,
       "lighthouse_accessibilityGrade": "A",
@@ -7881,6 +7889,8 @@
       "lighthouse_pwa": 0.3,
       "lighthouse_pwaGrade": "E",
       "declaration-a11y": "B",
+      "declaration-rgpd-ml": "D",
+      "declaration-rgpd-pc": "D",
       "ecoindexGrade": "E"
     }
   }
