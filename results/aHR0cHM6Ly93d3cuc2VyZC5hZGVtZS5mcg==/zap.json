@@ -1,0 +1,724 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Fri, 5 Jan 2024 02:56:52",
+	"site":[ 
+		{
+			"@name": "https://www.serd.ademe.fr",
+			"@host": "www.serd.ademe.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\"   type=\"font/woff2\" rel=\"preload\"  as=\"font\" href=\"https://serd.ademe.fr/wp-content/themes/ademe-serd/dist/fonts/Marianne/Marianne-Bold.woff2\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\"   type=\"font/woff2\" rel=\"preload\"  as=\"font\" href=\"https://serd.ademe.fr/wp-content/themes/ademe-serd/dist/fonts/Marianne/Marianne-Regular.woff2\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link data-minify=\"1\" rel='stylesheet' id='theme-style-css' href='https://serd.ademe.fr/wp-content/cache/min/1/wp-content/themes/ademe-serd/dist/theme/front.css?ver=1703260128' type='text/css' media='all' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link data-minify=\"1\" rel='stylesheet' id='wp_mailjet_form_builder_widget-widget-front-styles-css' href='https://serd.ademe.fr/wp-content/cache/min/1/wp-content/plugins/mailjet-for-wordpress/src/widgetformbuilder/css/front-widget.css?ver=1703260128' type='text/css' media='all' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/json\" href=\"https://serd.ademe.fr/wp-json/wp/v2/pages/2877\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"application/json+oembed\" href=\"https://serd.ademe.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fserd.ademe.fr%2F\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"alternate\" type=\"text/xml+oembed\" href=\"https://serd.ademe.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fserd.ademe.fr%2F&#038;format=xml\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"https://serd.ademe.fr/wp-content/themes/ademe-serd/dist/favicons/apple-touch-icon.png\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"https://api.w.org/\" href=\"https://serd.ademe.fr/wp-json/\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"https://serd.ademe.fr/wp-content/themes/ademe-serd/dist/favicons/favicon-16x16.png\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"https://serd.ademe.fr/wp-content/themes/ademe-serd/dist/favicons/favicon-32x32.png\">",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel='shortlink' href='https://serd.ademe.fr/' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel='stylesheet' id='wp-block-library-css' href='https://serd.ademe.fr/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script data-minify=\"1\" type=\"text/javascript\" src=\"https://serd.ademe.fr/wp-content/cache/min/1/wp-content/plugins/mailjet-for-wordpress/src/widgetformbuilder/js/front-widget.js?ver=1703260128\" id=\"wp_mailjet_form_builder_widget-front-script-js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script data-minify=\"1\" type=\"text/javascript\" src=\"https://serd.ademe.fr/wp-content/cache/min/1/wp-content/themes/ademe-serd/dist/theme/actions-form.js?ver=1703260128\" id=\"theme-actions-form-js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script data-minify=\"1\" type=\"text/javascript\" src=\"https://serd.ademe.fr/wp-content/cache/min/1/wp-content/themes/ademe-serd/dist/theme/front.js?ver=1703260128\" id=\"theme-scripts-js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script data-no-minify=\"1\" async src=\"https://serd.ademe.fr/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://serd.ademe.fr/wp-includes/js/jquery/jquery.min.js\" id=\"jquery-core-js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?locale=fr&iswordpress=true&domain=serd.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "19",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "https://serd.ademe.fr/wp-content/cache/min/1/wp-content/plugins/mailjet-for-wordpress/src/widgetformbuilder/js/front-widget.js?ver=1703260128",
+							"attack": "",
+							"evidence": "<script data-minify=\"1\" type=\"text/javascript\" src=\"https://serd.ademe.fr/wp-content/cache/min/1/wp-content/plugins/mailjet-for-wordpress/src/widgetformbuilder/js/front-widget.js?ver=1703260128\" id=\"wp_mailjet_form_builder_widget-front-script-js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "https://serd.ademe.fr/wp-content/cache/min/1/wp-content/themes/ademe-serd/dist/theme/actions-form.js?ver=1703260128",
+							"attack": "",
+							"evidence": "<script data-minify=\"1\" type=\"text/javascript\" src=\"https://serd.ademe.fr/wp-content/cache/min/1/wp-content/themes/ademe-serd/dist/theme/actions-form.js?ver=1703260128\" id=\"theme-actions-form-js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "https://serd.ademe.fr/wp-content/cache/min/1/wp-content/themes/ademe-serd/dist/theme/front.js?ver=1703260128",
+							"attack": "",
+							"evidence": "<script data-minify=\"1\" type=\"text/javascript\" src=\"https://serd.ademe.fr/wp-content/cache/min/1/wp-content/themes/ademe-serd/dist/theme/front.js?ver=1703260128\" id=\"theme-scripts-js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "https://serd.ademe.fr/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js",
+							"attack": "",
+							"evidence": "<script data-no-minify=\"1\" async src=\"https://serd.ademe.fr/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "https://serd.ademe.fr/wp-includes/js/jquery/jquery.min.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://serd.ademe.fr/wp-includes/js/jquery/jquery.min.js\" id=\"jquery-core-js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "https://tarteaucitron.io/load.js?locale=fr&iswordpress=true&domain=serd.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://tarteaucitron.io/load.js?locale=fr&iswordpress=true&domain=serd.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "6",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1703260128",
+							"otherinfo": "1703260128, which evaluates to: 2023-12-22 15:48:48"
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1704414446",
+							"otherinfo": "1704414446, which evaluates to: 2024-01-05 00:27:26"
+						}
+					],
+					"count": "2",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1703260128, which evaluates to: 2023-12-22 15:48:48</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "PHN2ZyB2aWV3Qm94PSIwIDAgMzQyIDMzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjEzLjU5NSA4LjgzNzQ4QzIxNC4wOTIgNC4xMTM5NyAyMTAuMzg4IDAgMjA1LjYzOSAwSDEzNi40NzlDMTMxLjczIDAgMTI4LjAyNiA0LjExMzk4IDEyOC41MjMgOC44Mzc0OUwxMzkuNjUxIDExNC41NTNDMTQwLjM3NyAxMjEuNDQzIDEzMi41OTYgMTI1LjkzNSAxMjYuOTkyIDEyMS44NjJMNDcuMjg1MyA2My45MzI1QzQzLjQ0MzIgNjEuMTQwMiAzOC4wMjg2IDYyLjI5MDcgMzUuNjUzOCA2Ni40MDM5TDEuMDc0MTMgMTI2LjI5OEMtMS4zMDA2OCAxMzAuNDExIDAuNDEwMjk4IDEzNS42NzUgNC43NDk1OSAxMzcuNjA3TDEwMy44MzkgMTgxLjcwNUMxMDkuMDIxIDE4NC4wMTIgMTEwLjIyNCAxOTAuODMgMTA2LjE0MiAxOTQuNzdMMjYuNzM0NiAyNzEuNDI5QzIzLjMxNzUgMjc0LjcyOCAyMy41MTAyIDI4MC4yNiAyNy4xNDg2IDI4My4zMTNMODAuMTI3OCAzMjcuNzY4QzgzLjc2NjIgMzMwLjgyMSA4OS4yNDc4IDMzMC4wNSA5MS45MDMxIDMyNi4xMTJMMTcwLjc1OCAyMDkuMTY1QzE3MC44ODUgMjA4Ljk3NyAxNzEuMDk3IDIwOC44NjQgMTcxLjMyNSAyMDguODY0QzE3MS41NTIgMjA4Ljg2NCAxNzEuNzY1IDIwOC45NzcgMTcxLjg5MiAyMDkuMTY1TDI1MC43NDcgMzI2LjExMkMyNTMuNDAyIDMzMC4wNSAyNTguODg0IDMzMC44MjEgMjYyLjUyMiAzMjcuNzY4TDMxNS41MDEgMjgzLjMxM0MzMTkuMTQgMjgwLjI2IDMxOS4zMzIgMjc0LjcyOCAzMTUuOTE1IDI3MS40MjlMMjM2LjIyNyAxOTQuNDk5QzIzMi4xNDYgMTkwLjU1OSAyMzMuMzQ4IDE4My43NDEgMjM4LjUzMSAxODEuNDM1TDMzNy4wMTIgMTM3LjYwN0MzNDEuMzUxIDEzNS42NzUgMzQzLjA2MiAxMzAuNDExIDM0MC42ODggMTI2LjI5OEwzMDYuMTA4IDY2LjQwMzlDMzAzLjczMyA2Mi4yOTA2IDI5OC4zMTggNjEuMTQwMiAyOTQuNDc2IDYzLjkzMjVMMjE1LjE1NiAxMjEuNTgxQzIwOS41NTEgMTI1LjY1NSAyMDEuNzcxIDEyMS4xNjMgMjAyLjQ5NiAxMTQuMjczTDIxMy41OTUgOC44Mzc0OFpNMTgxLjA3NyAxNTAuMTU2QzE4MS4wNzcgMTUwLjE1NiAxODEuMDc4IDE1MC4xNTYgMTgxLjA3OCAxNTAuMTU2QzE4MS4wNzcgMTUwLjE1NSAxODEuMDc3IDE1MC4xNTUgMTgxLjA3NyAxNTAuMTU1SDE2MC42ODVDMTYwLjY4NCAxNTAuMTU1IDE2MC42ODQgMTUwLjE1NSAxNjAuNjg0IDE1MC4xNTZDMTYwLjY4NCAxNTAuMTU2IDE2MC42ODQgMTUwLjE1NiAxNjAuNjg1IDE1MC4xNTZIMTgxLjA3N1oiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+",
+							"otherinfo": "<svg viewBox=\"0 0 342 330\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M213.595 8.83748C214.092 4.11397 210.388 0 205.639 0H136.479C131.73 0 128.026 4.11398 128.523 8.83749L139.651 114.553C140.377 121.443 132.596 125.935 126.992 121.862L47.2853 63.9325C43.4432 61.1402 38.0286 62.2907 35.6538 66.4039L1.07413 126.298C-1.30068 130.411 0.410298 135.675 4.74959 137.607L103.839 181.705C109.021 184.012 110.224 190.83 106.142 194.77L26.7346 271.429C23.3175 274.728 23.5102 280.26 27.1486 283.313L80.1278 327.768C83.7662 330.821 89.2478 330.05 91.9031 326.112L170.758 209.165C170.885 208.977 171.097 208.864 171.325 208.864C171.552 208.864 171.765 208.977 171.892 209.165L250.747 326.112C253.402 330.05 258.884 330.821 262.522 327.768L315.501 283.313C319.14 280.26 319.332 274.728 315.915 271.429L236.227 194.499C232.146 190.559 233.348 183.741 238.531 181.435L337.012 137.607C341.351 135.675 343.062 130.411 340.688 126.298L306.108 66.4039C303.733 62.2906 298.318 61.1402 294.476 63.9325L215.156 121.581C209.551 125.655 201.771 121.163 202.496 114.273L213.595 8.83748ZM181.077 150.156C181.077 150.156 181.078 150.156 181.078 150.156C181.077 150.155 181.077 150.155 181.077 150.155H160.685C160.684 150.155 160.684 150.155 160.684 150.156C160.684 150.156 160.684 150.156 160.685 150.156H181.077Z\" fill=\"white\" fill-opacity=\"0.05\"/>\n</svg>"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p><svg viewBox=\"0 0 342 330\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"></p><p>    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M213.595 8.83748C214.092 4.11397 210.388 0 205.639 0H136.479C131.73 0 128.026 4.11398 128.523 8.83749L139.651 114.553C140.377 121.443 132.596 125.935 126.992 121.862L47.2853 63.9325C43.4432 61.1402 38.0286 62.2907 35.6538 66.4039L1.07413 126.298C-1.30068 130.411 0.410298 135.675 4.74959 137.607L103.839 181.705C109.021 184.012 110.224 190.83 106.142 194.77L26.7346 271.429C23.3175 274.728 23.5102 280.26 27.1486 283.313L80.1278 327.768C83.7662 330.821 89.2478 330.05 91.9031 326.112L170.758 209.165C170.885 208.977 171.097 208.864 171.325 208.864C171.552 208.864 171.765 208.977 171.892 209.165L250.747 326.112C253.402 330.05 258.884 330.821 262.522 327.768L315.501 283.313C319.14 280.26 319.332 274.728 315.915 271.429L236.227 194.499C232.146 190.559 233.348 183.741 238.531 181.435L337.012 137.607C341.351 135.675 343.062 130.411 340.688 126.298L306.108 66.4039C303.733 62.2906 298.318 61.1402 294.476 63.9325L215.156 121.581C209.551 125.655 201.771 121.163 202.496 114.273L213.595 8.83748ZM181.077 150.156C181.077 150.156 181.078 150.156 181.078 150.156C181.077 150.155 181.077 150.155 181.077 150.155H160.685C160.684 150.155 160.684 150.155 160.684 150.156C160.684 150.156 160.684 150.156 160.685 150.156H181.077Z\" fill=\"white\" fill-opacity=\"0.05\"/></p><p></svg></p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<script type=\"text/javascript\" id=\"wp_mailjet_form_builder_widget-front-script-js-extra\">\n/* <![CDATA[ */\nvar mjWidget = {\"ajax_\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected 2 times, the first in the element starting with: \"<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Debug",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected in the element starting with: \"<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cach\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<script type=\"text/javascript\" id=\"wp_mailjet_form_builder_widget-front-script-js-extra\"></p><p>/* <![CDATA[ */</p><p>var mjWidget = {\"ajax_\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" id=\"back-to-top\" class=\"back-to-top\" title=\"Haut de page\">\u2191</a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "1",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.serd.ademe.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.serd.ademe.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "3",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "6"
+				}
+			]
+		}
+	]
+}
