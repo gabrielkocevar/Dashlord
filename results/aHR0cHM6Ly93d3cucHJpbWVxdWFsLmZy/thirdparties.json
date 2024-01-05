@@ -1,0 +1,565 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/"
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/load.js?domain=www.primequal.fr&uuid=2df1000bf385655312abede8e30421664e7d594e"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/css/css_rEI_5cK_B9hB4So2yZUtr5weuEV3heuAllCDE6XsIkI.css"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/css/css_8FAI09faHCfwqyhNTDWkSYDCVcjRXElAT3TckZPfyzs.css"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/css/css_v5uqAjyYQL5t-NedMO5WiVadxZBNegIrLK6Tw2vbVhw.css"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/css/css_e16gAgiSKohDDFwPTltqZQD3sfKb7utSlBTo586KjSI.css"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/css/css_r1aD_Ktjc5RFuNKWCnb7Jr5guL0YoiUH7ZraOatzOtw.css"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/js/js_F9R1vYgfA741j5MPvGf9tmcVM7_GIcnt4-8AciZ5fAA.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/js/js_s5koNMBdK4BqfHyHNPWCXIL2zD0jFcPyejDZsryApj0.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/js/js_-VrId4YEEjYUzPNOUC3LdzlIfW5IG4xXHwTlqTEagh0.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/js/js_cvPBktFORP6ETykK-76GObansOIhPYHUxOAvBc9oUaE.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/js/js_r0ICNXFcAjvzAUNZLpcihRDcEbQ7Cac1gpqOma0k_iQ.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/js/js_I18e9cEfNhidWRJXYgm7P6GKAzxKh8fj9vNOFPU_dwk.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/js/js_X7bebAxSM48D4hqvbWC1tlEOJDNzOyLy5aqHqsiuM1A.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/bnith__s2shgIc0lv1ZsvNHdCw0q3bouJxNfIneWeCs65PNQHT1-5t4PdrwtoDbRoOqyz8l"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/all/themes/custom/ademe_pad/assets/img/buttons/search.png"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/all/themes/custom/ademe_pad/logo_rf.png"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/all/themes/custom/ademe_pad/logo.png"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/default/files/styles/ademe_pad_logo/public/logo_primequal_04_0.jpg?itok=iS8TAshQ"
+    },
+    {
+      "type": "unknown",
+      "url": "https://primequal.fr/sites/all/themes/custom/ademe_pad/assets/img/sprites.png"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn.tarteaucitron.io/css/tarteaucitron.min.css?v=20230203"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn.tarteaucitron.io/lang/tarteaucitron.en.min.js?v=20230203"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn.tarteaucitron.io/tarteaucitron.services.min.js?v=20230203"
+    },
+    {
+      "type": "unknown",
+      "url": "https://agirpourlatransition.ademe.fr/sites/default/files/2023-03/gestion-cookies.jpg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/log/?account=2df1000bf385655312abede8e30421664e7d594e&domain=www.primequal.fr&status=!eulerian%3Dfalse&_time=1704422047903"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "x-bni-fpc",
+      "value": "e0c44adc03f535ec874837d3b28ccfa3",
+      "domain": "primequal.fr",
+      "path": "/",
+      "expires": 2114380800,
+      "size": 41,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "BNIS___utm_is3",
+      "value": "4GTFTLdw32gV/tzeIyaX6eQ/R6GrjuBz/Qr5LLWTY8JZNMdEzIoPlrrVbpoeR/2j4J6iXa617bV/+aKTlKVOINW9TwDfeThqgpfpTkUFWKnN5m7sSgMGgQ==",
+      "domain": "primequal.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 134,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "x-bni-rncf",
+      "value": "1704422045545",
+      "domain": "primequal.fr",
+      "path": "/",
+      "expires": 2114380800,
+      "size": 23,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "BNIS___utm_is2",
+      "value": "RBlWsP3vVWAQC89YxJYXWfYnbwAQnMSZA8RoRhqqwoUYsKIhFhPnpdP7KusJZN1ctXmm8i7sJ9o=",
+      "domain": "primequal.fr",
+      "path": "/",
+      "expires": 1704432846.459928,
+      "size": 90,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "BNIS___utm_is1",
+      "value": "POAYIDJ2mQ1SvS188lQ8gY4V58MkRO4iAZWRrbKraChZdj0GzNVsJrNJvvz2SiprJOQAiO3+YPEOQnyyjKs9nXc5ZrDCyBn5TZ+pu7i/2QAWLlwyxWYrSw==",
+      "domain": "primequal.fr",
+      "path": "/",
+      "expires": 1735958046.459893,
+      "size": 134,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    },
+    {
+      "name": "BNIS_vid",
+      "value": "nYhVnECH0hrwP5ixqUkhHOhH0bjB4dwKj9kZMzATz6YkYcrP4WLIgZ0qav2+SjCy55LY7engtYQI+mMDKhjKW6XN6Jb5IXgj4jH3qCARo91naIRONXGpw2F+9RXElAGnJyvtKWsZgbHEIAh3qzRv3jfze1vqKoxSVIs+C+RCxOntE7y9htuGkRG52U9nCPwBIhHyvqRJosg2yV6pLakcy4RRiRfIOqKD",
+      "domain": "primequal.fr",
+      "path": "/",
+      "expires": -1,
+      "size": 232,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "sameParty": false,
+      "sourceScheme": "Secure",
+      "sourcePort": 443
+    }
+  ],
+  "headers": {
+    "cache-control": "public, max-age=86400",
+    "content-language": "fr",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Fri, 05 Jan 2024 02:34:05 GMT",
+    "etag": "\"1704419054-1\"",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "last-modified": "Fri, 05 Jan 2024 01:44:14 GMT",
+    "link": "<https://primequal.fr/fr>; rel=\"canonical\",<https://primequal.fr/fr>; rel=\"shortlink\"",
+    "permissions-policy": "geolocation=(self), microphone=(), camera=(), fullscreen=*",
+    "set-cookie": "BNIS_vid=nYhVnECH0hrwP5ixqUkhHOhH0bjB4dwKj9kZMzATz6YkYcrP4WLIgZ0qav2+SjCy55LY7engtYQI+mMDKhjKW6XN6Jb5IXgj4jH3qCARo91naIRONXGpw2F+9RXElAGnJyvtKWsZgbHEIAh3qzRv3jfze1vqKoxSVIs+C+RCxOntE7y9htuGkRG52U9nCPwBIhHyvqRJosg2yV6pLakcy4RRiRfIOqKD; Path=/\nBNIS___utm_is1=fmAIk63YY/pGe+hSRKxlJYsYbqEc2O3d4GOWKhk05CF2y/7q2s74MRzLKLZ/fHlQmxFKofNyfPn+7Q2NVbEuaAXvQtjia8EgrxQ42fp1XYOdDGba59hfXQ==; Max-Age=31536000; Path=/\nBNIS___utm_is2=zx4FYciztmj0I/8S7YJLzzwH70DqS8MQTIXkipqYe/J30cFTv7QenOwL0GAIir5IqYLtGLm8iLE=; Max-Age=10800; Path=/\nBNIS___utm_is3=mIuasyaneFx5W7nLd6qGVBsC1Q40VCUU+jdlZ0w0lwtewq7CaN9iXqStLLIlVMt4WWc0M/GGwettnl/aYXc+vBtqDCJUeTRCbKhIVRN/niY=;  Path=/",
+    "strict-transport-security": "max-age=16070400; includeSubDomains; preload",
+    "vary": "Cookie,Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-drupal-cache": "HIT",
+    "x-frame-options": "SAMEORIGIN\nSAMEORIGIN",
+    "x-xss-protection": "1; mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.primequal.fr",
+      "ip": "217.70.184.56",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "primequal.fr",
+      "ip": "20.199.58.159",
+      "geoip": {
+        "city": {
+          "geoname_id": 2988507,
+          "names": {
+            "de": "Paris",
+            "en": "Paris",
+            "es": "París",
+            "fr": "Paris",
+            "ja": "パリ",
+            "pt-BR": "Paris",
+            "ru": "Париж",
+            "zh-CN": "巴黎"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 20,
+          "latitude": 48.8323,
+          "longitude": 2.4075,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "75001"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 2968815,
+            "iso_code": "75",
+            "names": {
+              "de": "Paris",
+              "en": "Paris",
+              "es": "Paris",
+              "fr": "Paris"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "tarteaucitron.io",
+      "ip": "51.68.111.231",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "cdn.tarteaucitron.io",
+      "ip": "51.68.111.234",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "agirpourlatransition.ademe.fr",
+      "ip": "185.86.179.42",
+      "geoip": {
+        "city": {
+          "geoname_id": 3035403,
+          "names": {
+            "de": "Bagnolet",
+            "en": "Bagnolet",
+            "fr": "Bagnolet",
+            "ja": "バニョレ",
+            "ru": "Баньоле",
+            "zh-CN": "巴尼奥雷"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 10,
+          "latitude": 48.8673,
+          "longitude": 2.421,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "93170"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 2975246,
+            "iso_code": "93",
+            "names": {
+              "de": "Seine-Saint-Denis",
+              "en": "Seine-Saint-Denis",
+              "es": "Sena Saint Denis",
+              "fr": "Seine-Saint-Denis"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

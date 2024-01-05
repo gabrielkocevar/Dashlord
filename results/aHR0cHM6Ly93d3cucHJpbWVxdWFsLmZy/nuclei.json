@@ -1,0 +1,246 @@
+[
+  [
+    {
+      "template": "dns/dns-saas-service-detection.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+      "template-id": "dns-saas-service-detection",
+      "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+      "info": {
+        "name": "DNS SaaS Service Detection",
+        "author": [
+          "noah @thesubtlety",
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "service"
+        ],
+        "description": "A CNAME DNS record was discovered",
+        "reference": [
+          "https://ns1.com/resources/cname",
+          "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+          "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "www.primequal.fr.",
+      "matched-at": "www.primequal.fr",
+      "extracted-results": [
+        "webredir.gandi.net."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 62084\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.primequal.fr.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 62084\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.primequal.fr.\tIN\t CNAME\n\n;; ANSWER SECTION:\nwww.primequal.fr.\t10800\tIN\tCNAME\twebredir.gandi.net.\n",
+      "timestamp": "2024-01-05T02:40:31.074865074Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.primequal.fr.",
+      "matched-at": "www.primequal.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 520\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.primequal.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 520\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.primequal.fr.\tIN\t CAA\n\n;; ANSWER SECTION:\nwww.primequal.fr.\t10800\tIN\tCNAME\twebredir.gandi.net.\n\n;; AUTHORITY SECTION:\ngandi.net.\t1200\tIN\tSOA\tdns0.gandi.net. hostmaster.gandi.net. 2023121400 900 900 1209600 1200\n",
+      "timestamp": "2024-01-05T02:40:31.23972145Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/missing-sri.yaml",
+      "template-url": "https://templates.nuclei.sh/public/missing-sri",
+      "template-id": "missing-sri",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/missing-sri.yaml",
+      "info": {
+        "name": "Missing Subresource Integrity",
+        "author": [
+          "lucky0x0d",
+          "pulsesecurity.co.nz"
+        ],
+        "tags": [
+          "compliance",
+          "js",
+          "sri",
+          "misconfig"
+        ],
+        "description": "Checks if script tags within the HTML response have Subresource Integrity implemented via the integrity attribute\n",
+        "reference": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/third_party_javascript_management_cheat_sheet.html#subresource-integrity"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://www.primequal.fr",
+      "matched-at": "https://primequal.fr/",
+      "extracted-results": [
+        "https://primequal.fr/sites/default/files/js/js_I18e9cEfNhidWRJXYgm7P6GKAzxKh8fj9vNOFPU_dwk.js",
+        "https://primequal.fr/sites/default/files/js/js_X7bebAxSM48D4hqvbWC1tlEOJDNzOyLy5aqHqsiuM1A.js",
+        "https://tarteaucitron.io/load.js?domain=www.primequal.fr&uuid=2df1000bf385655312abede8e30421664e7d594e",
+        "https://primequal.fr/sites/default/files/js/js_F9R1vYgfA741j5MPvGf9tmcVM7_GIcnt4-8AciZ5fAA.js",
+        "https://primequal.fr/sites/default/files/js/js_s5koNMBdK4BqfHyHNPWCXIL2zD0jFcPyejDZsryApj0.js",
+        "https://primequal.fr/sites/default/files/js/js_-VrId4YEEjYUzPNOUC3LdzlIfW5IG4xXHwTlqTEagh0.js",
+        "https://primequal.fr/sites/default/files/js/js_cvPBktFORP6ETykK-76GObansOIhPYHUxOAvBc9oUaE.js",
+        "https://primequal.fr/sites/default/files/js/js_r0ICNXFcAjvzAUNZLpcihRDcEbQ7Cac1gpqOma0k_iQ.js"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.primequal.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nCache-Control: public, max-age=86400\r\nContent-Language: fr\r\nContent-Type: text/html; charset=utf-8\r\nDate: Fri, 05 Jan 2024 02:41:28 GMT\r\nEtag: \"1704419054-1\"\r\nExpires: Sun, 19 Nov 1978 05:00:00 GMT\r\nLast-Modified: Fri, 05 Jan 2024 01:44:14 GMT\r\nLink: <https://primequal.fr/fr>; rel=\"canonical\",<https://primequal.fr/fr>; rel=\"shortlink\"\r\nPermissions-Policy: geolocation=(self), microphone=(), camera=(), fullscreen=*\r\nSet-Cookie: BNIS_vid=oi9Fqbh3YFnugxqZN4u26BxlEnAoBcWv3COQLi1a9/fcqXJLwHDyhHHLch927/EYk62tdfS0+YTISpP2WSvYhqKQvKLtn3LrLfOuMp5q6+gWxjbMpemeTQ/lW3iQkSqI6CNwmo6nNamz78Nkuwq68CAMmU6PpT1s; Path=/\r\nSet-Cookie: BNIS___utm_is1=iabXOxVDkOmCNJ2buIzshDapNFl6C/ttfeIbV4QaIoUjFj3GsPtuTrXKpfbuew6LzOZLXzJfqVNGhXy2/vjWgEImWqGhcUKXRNvLhx5A1bqpbis3kranEg==; Max-Age=31536000; Path=/\r\nSet-Cookie: BNIS___utm_is2=ZjsSEGq9nuoc8DfQ/yZrTP4pio0tENDLTkKyB5wlWx4ki/QcgEHlSaDXBIp6jr3jzPX9zS2qyio=; Max-Age=10800; Path=/\r\nSet-Cookie: BNIS___utm_is3=OYz+eTJS4bfNTikm9jCIDEUZXFEWe0L9UBIBZWovjXPcV/nZkGSl1YEURllnLQ3TohKo8NrKGr6df54CNV76C+TnAy3rMKfz8Iu3QxF0jFA=;  Path=/\r\nStrict-Transport-Security: max-age=16070400; includeSubDomains; preload\r\nVary: Cookie,Accept-Encoding\r\nX-Content-Type-Options: nosniff\r\nX-Drupal-Cache: HIT\r\nX-Frame-Options: SAMEORIGIN\r\nX-Frame-Options: SAMEORIGIN\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n\n<head>\n  <!-- tarte au citron (script)-->\r\n<script src=\"https://tarteaucitron.io/load.js?domain=www.primequal.fr&uuid=2df1000bf385655312abede8e30421664e7d594e\"></script> \r\n<!-- End tarte au citron (script)-->  <!--[if IE]><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><![endif]-->\n  <meta charset=\"utf-8\" />\n<link rel=\"shortcut icon\" href=\"https://primequal.fr/sites/all/themes/custom/ademe_pad/favicon.ico\" type=\"image/vnd.microsoft.icon\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<meta name=\"format-detection\" content=\"telephone=no\" />\n<link rel=\"canonical\" href=\"https://primequal.fr/fr\" />\n<link rel=\"shortlink\" href=\"https://primequal.fr/fr\" />\n\n  <title>PRIMEQUAL | Qualité de l’Air</title>\n\n  <link type=\"text/css\" rel=\"stylesheet\" href=\"https://primequal.fr/sites/default/files/css/css_rEI_5cK_B9hB4So2yZUtr5weuEV3heuAllCDE6XsIkI.css\" media=\"all\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://primequal.fr/sites/default/files/css/css_8FAI09faHCfwqyhNTDWkSYDCVcjRXElAT3TckZPfyzs.css\" media=\"all\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://primequal.fr/sites/default/files/css/css_v5uqAjyYQL5t-NedMO5WiVadxZBNegIrLK6Tw2vbVhw.css\" media=\"all\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://primequal.fr/sites/default/files/css/css_e16gAgiSKohDDFwPTltqZQD3sfKb7utSlBTo586KjSI.css\" media=\"all\" />\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://primequal.fr/sites/default/files/css/css_r1aD_Ktjc5RFuNKWCnb7Jr5guL0YoiUH7ZraOatzOtw.css\" media=\"all\" />\n\n  <script type=\"text/javascript\" src=\"https://primequal.fr/sites/default/files/js/js_F9R1vYgfA741j5MPvGf9tmcVM7_GIcnt4-8AciZ5fAA.js\"></script>\n<script type=\"text/javascript\" src=\"https://primequal.fr/sites/default/files/js/js_s5koNMBdK4BqfHyHNPWCXIL2zD0jFcPyejDZsryApj0.js\"></script>\n<script type=\"text/javascript\" src=\"https://primequal.fr/sites/default/files/js/js_-VrId4YEEjYUzPNOUC3LdzlIfW5IG4xXHwTlqTEagh0.js\"></script>\n<script type=\"text/javascript\" src=\"https://primequal.fr/sites/default/files/js/js_cvPBktFORP6ETykK-76GObansOIhPYHUxOAvBc9oUaE.js\"></script>\n<script type=\"text/javascript\">\n<!--//--><![CDATA[//><!--\njQuery(document).ready(function(){jQuery(\"#ademe-popin\").dialog({ modal: true, closeOnEscape: true, width: \"80%\", closeText: \"Fermer\"});});\n//--><!]]>\n</script>\n<script type=\"text/javascript\" src=\"https://primequal.fr/sites/default/files/js/js_r0ICNXFcAjvzAUNZLpcihRDcEbQ7Cac1gpqOma0k_iQ.js\"></script>\n<script type=\"text/javascript\">\n<!--//--><![CDATA[//><!--\njQuery.extend(Drupal.settings, { \"pathToTheme\": \"sites/all/themes/custom/ademe_pad\" });\n//--><!]]>\n</script>\n<script type=\"text/javascript\" src=\"https://primequal.fr/sites/default/files/js/js_I18e9cEfNhidWRJXYgm7P6GKAzxKh8fj9vNOFPU_dwk.js\"></script>\n<script type=\"text/javascript\">\n<!--//--><![CDATA[//><!--\njQuery.extend(Drupal.settings, {\"basePath\":\"\\/\",\"pathPrefix\":\"fr\\/\",\"setHasJsCookie\":0,\"ajaxPageState\":{\"theme\":\"ademe_pad\",\"theme_token\":\"NYMYYd1Xoixb9Jvk7dt94Phd-bMNJ_IOEEdICBTf0mc\",\"jquery_version\":\"1.10\",\"js\":{\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/contrib\\/jquery.colorbox-min.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.equalize.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.dropDownNav.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.popPanel.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.togglePanel.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.init.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.responsive.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.ui.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.ui.utils.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.domready.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/lib\\/modernizr.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/jquery\\/1.10\\/jquery.min.js\":1,\"misc\\/jquery-extend-3.4.0.js\":1,\"misc\\/jquery-html-prefilter-3.5.0-backport.js\":1,\"misc\\/jquery.once.js\":1,\"misc\\/drupal.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.core.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.widget.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/external\\/jquery.cookie.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/misc\\/jquery.form.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.button.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.mouse.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.draggable.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.position.min.js\":1,\"misc\\/ui\\/jquery.ui.position-1.13.0-backport.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.resizable.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.dialog.min.js\":1,\"misc\\/ui\\/jquery.ui.dialog-1.13.0-backport.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.slider.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.menu.min.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/replace\\/ui\\/ui\\/minified\\/jquery.ui.autocomplete.min.js\":1,\"misc\\/ajax.js\":1,\"sites\\/all\\/modules\\/contrib\\/jquery_update\\/js\\/jquery_update.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_login.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_register.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_password.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_contact.js\":1,\"public:\\/\\/languages\\/fr_hPBLkp8-XNZ4hu2loTE7Ja17WlzLKbUYxGq1pPRDFz4.js\":1,\"misc\\/progress.js\":1,\"0\":1,\"sites\\/all\\/modules\\/contrib\\/ctools\\/js\\/modal.js\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/js\\/modal_forms_popup.js\":1,\"1\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/lib\\/d3.v3.min.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/contrib\\/jquery.placeholder.min.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/contrib\\/jquery.flexslider-min.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/plugins\\/dev\\/jquery.fixed.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/app.ui.polls.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/pieChart.js\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/js\\/masonry.pkgd.js\":1},\"css\":{\"modules\\/system\\/system.base.css\":1,\"modules\\/system\\/system.messages.css\":1,\"misc\\/ui\\/jquery.ui.core.css\":1,\"misc\\/ui\\/jquery.ui.theme.css\":1,\"misc\\/ui\\/jquery.ui.button.css\":1,\"misc\\/ui\\/jquery.ui.resizable.css\":1,\"misc\\/ui\\/jquery.ui.dialog.css\":1,\"misc\\/ui\\/jquery.ui.slider.css\":1,\"misc\\/ui\\/jquery.ui.menu.css\":1,\"misc\\/ui\\/jquery.ui.autocomplete.css\":1,\"sites\\/all\\/modules\\/contrib\\/simplenews\\/simplenews.css\":1,\"modules\\/field\\/theme\\/field.css\":1,\"modules\\/node\\/node.css\":1,\"modules\\/poll\\/poll.css\":1,\"modules\\/user\\/user.css\":1,\"sites\\/all\\/modules\\/contrib\\/views\\/css\\/views.css\":1,\"sites\\/all\\/modules\\/contrib\\/ctools\\/css\\/ctools.css\":1,\"sites\\/all\\/modules\\/contrib\\/ctools\\/css\\/modal.css\":1,\"sites\\/all\\/modules\\/contrib\\/modal_forms\\/css\\/modal_forms_popup.css\":1,\"sites\\/all\\/modules\\/contrib\\/forward\\/forward.css\":1,\"sites\\/all\\/themes\\/custom\\/ademe_pad\\/assets\\/css\\/style.css\":1}},\"iframeScriptPath\":\"\\/sites\\/all\\/modules\\/custom\\/custom\\/ademe_popins\\/js\\/iframe.script.js\",\"mails\":{\"resource\":\"document\"},\"destination\":{\"destination\":\"node\\/1\"},\"CToolsModal\":{\"loadingText\":\"En cours de chargement...\",\"closeText\":\"Close Window\",\"closeImage\":\"\\u003Cimg src=\\u0022https:\\/\\/primequal.fr\\/sites\\/all\\/modules\\/contrib\\/ctools\\/images\\/icon-close-window.png\\u0022 alt=\\u0022Close window\\u0022 title=\\u0022Close window\\u0022 \\/\\u003E\",\"throbber\":\"\\u003Cimg src=\\u0022https:\\/\\/primequal.fr\\/sites\\/all\\/modules\\/contrib\\/ctools\\/images\\/throbber.gif\\u0022 alt=\\u0022En cours de chargement\\u0022 title=\\u0022En cours de chargement...\\u0022 \\/\\u003E\"},\"modal-popup-small\":{\"modalSize\":{\"type\":\"fixed\",\"width\":400,\"height\":350},\"modalOptions\":{\"opacity\":0.75,\"background\":\"#444\"},\"animation\":\"fadeIn\",\"modalTheme\":\"ModalFormsPopup\",\"throbber\":\"\\u003Cimg src=\\u0022https:\\/\\/primequal.fr\\/sites\\/all\\/modules\\/contrib\\/modal_forms\\/images\\/loading_animation.gif\\u0022 alt=\\u0022En cours de chargement...\\u0022 title=\\u0022En cours de chargement\\u0022 \\/\\u003E\",\"closeText\":\"Fermer\"},\"modal-popup-medium\":{\"modalSize\":{\"type\":\"fixed\",\"width\":550,\"height\":450},\"modalOptions\":{\"opacity\":0.75,\"background\":\"#444\"},\"animation\":\"fadeIn\",\"modalTheme\":\"ModalFormsPopup\",\"throbber\":\"\\u003Cimg src=\\u0022https:\\/\\/primequal.fr\\/sites\\/all\\/modules\\/contrib\\/modal_forms\\/images\\/loading_animation.gif\\u0022 alt=\\u0022En cours de chargement...\\u0022 title=\\u0022En cours de chargement\\u0022 \\/\\u003E\",\"closeText\":\"Fermer\"},\"modal-popup-large\":{\"modalSize\":{\"type\":\"scale\",\"width\":0.8,\"height\":0.8},\"modalOptions\":{\"opacity\":0.75,\"background\":\"#444\"},\"animation\":\"fadeIn\",\"modalTheme\":\"ModalFormsPopup\",\"throbber\":\"\\u003Cimg src=\\u0022https:\\/\\/primequal.fr\\/sites\\/all\\/modules\\/contrib\\/modal_forms\\/images\\/loading_animation.gif\\u0022 alt=\\u0022En cours de chargement...\\u0022 title=\\u0022En cours de chargement\\u0022 \\/\\u003E\",\"closeText\":\"Fermer\"},\"urlIsAjaxTrusted\":{\"\\/\":true}});\n//--><!]]>\n</script>\n</head>\n<body class=\"html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-hp i18n-fr\" >\n\n<div class=\"outer-wrap\">\n<div class=\"wrap\" id=\"top\">\n\n    \n  <!--Skip links-->\n<nav id=\"skip-links\" class=\"skip-links\">\n  <ul>\n    <li><a href=\"#a_nav\">Aller au menu</a></li>\n    <li><a href=\"#a_content\">Aller au contenu principal</a></li>\n    <li><a href=\"#a_search\">Aller à la recherche</a></li>\n  </ul>\n</nav>\n\n\n<header class=\"main-header\" role=\"banner\"\n        style=\"background:none;\">\n  <div class=\"main-header__inner\"\n       style=\"background: #ffffff no-repeat;\">\n\n          <h1 class=\"main-title visually-hidden\">Ademe</h1>\n          <div class=\"region region-header\">\n    <div id=\"block-search-form\" class=\"header__tools block block-search block-search-form\">\n      <ul>\n    <li>\n      <a href=\"#popin-search\" class=\"trigger--search\" id=\"a_search\" data-pop-panel-id=\"popin-search\"><img src=\"https://primequal.fr/sites/all/themes/custom/ademe_pad/assets/img/buttons/search.png\" title=\"Rechercher sur le site\" alt=\"Rechercher sur le site\"></a>\n      <div id=\"popin-search\" class=\"popin--search pop-panel\">\n        <form class=\"form--search_block_form\" action=\"/\" method=\"post\" id=\"search-block-form\" accept-charset=\"UTF-8\"><div><div class=\"container-inline\">\n      <h2 class=\"element-invisible\">Formulaire de recherche</h2>\n    <div class=\"form-item form-type-textfield form-item-search-block-form\">\n  <label class=\"element-invisible\" for=\"edit-search-block-form--2\">Rechercher </label>\n <input title=\"Indiquer les termes à rechercher\" type=\"text\" id=\"edit-search-block-form--2\" name=\"search_block_form\" value=\"\" size=\"15\" maxlength=\"128\" class=\"form-text\" />\n</div>\n<div class=\"form-actions form-wrapper\" id=\"edit-actions\"><input type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"Rechercher\" class=\"form-submit\" /></div><input type=\"hidden\" name=\"form_build_id\" value=\"form-czlFN5sOeDcgH6w6sAeSMreOkdMd3Cj520HHnzI7tfs\" />\n<input type=\"hidden\" name=\"form_id\" value=\"search_block_form\" />\n</div>\n</div></form>      </div>\n    </li>\n  </ul>\n\n</div> <!-- /.block -->\n  </div>\n          <div class=\"header__logo-wrapper\">\n        <a class=\"logo_rf\" href=\"https://www.ecologie.gouv.fr/\">\n          <img src=\"/sites/all/themes/custom/ademe_pad/logo_rf.png\" alt=\"République Française - Ministère de la Transition écologique et solidaire\" title=\"République Française - Ministère de la Transition écologique et solidaire\">\n        </a>\n        <a class= \"logo_ademe\" href=\"https://www.ademe.fr/\" title=\"Agence de la transition écologique\">\n          <img src=\"/sites/all/themes/custom/ademe_pad/logo.png\" alt=\"Agence de la transition écologique\"/>\n        </a>\n        <a class= \"logo_primequal\" href=\"/fr\" title=\"Primequal - retour à la page d'accueil\">\n          <img src=\"https://primequal.fr/sites/default/files/styles/ademe_pad_logo/public/logo_primequal_04_0.jpg?itok=iS8TAshQ\" alt=\"Primequal - retour à la page d'accueil\"/>\n        </a>\n      </div>\n    \n    <div class=\"header__lang\">\n          </div><!--/header__lang-->\n\n    <button type=\"button\" class=\"nav__burger\"><span class=\"burger__icon\"></span>\n      <span class=\"burger__text\">Menu</span></button>\n\n\n\n  </div><!--/main-header__inner-->\n</header>\n  <div class=\"main-menu-wrap\">\n\n      <div class=\"header-small__logo-wrapper\">\n      <a class=\"logo_rf\" href=\"https://www.ecologie.gouv.fr/\">\n        <img src=\"/sites/all/themes/custom/ademe_pad/logo_rf.png\" alt=\"République Française - Ministère de la Transition écologique et solidaire\" title=\"République Française - Ministère de la Transition écologique et solidaire\">\n      </a>\n      <a class=\"logo_ademe\" href=\"/fr\">\n        <img src=\"/sites/all/themes/custom/ademe_pad/logo.png\"  alt=\"Agence de la transition écologique - retour à la page d'accueil\" title=\"Agence de la transition écologique - retour à la page d'accueil\">\n      </a>\n    </div>\n  \n  <div class=\"header-small__tools\">\n      <div class=\"region region-header\">\n    <div id=\"block-search-form--2\" class=\"header__tools block block-search block-search-form--2\">\n      <ul>\n    <li>\n      <a href=\"#popin-search\" class=\"trigger--search\" id=\"a_search\" data-pop-panel-id=\"popin-search\"><img src=\"https://primequal.fr/sites/all/themes/custom/ademe_pad/assets/img/buttons/search.png\" title=\"Rechercher sur le site\" alt=\"Rechercher sur le site\"></a>\n      <div id=\"popin-search\" class=\"popin--search pop-panel\">\n        <form class=\"form--search_block_form\" action=\"/\" method=\"post\" id=\"search-block-form\" accept-charset=\"UTF-8\"><div><div class=\"container-inline\">\n      <h2 class=\"element-invisible\">Formulaire de recherche</h2>\n    <div class=\"form-item form-type-textfield form-item-search-block-form\">\n  <label class=\"element-invisible\" for=\"edit-search-block-form--2\">Rechercher </label>\n <input title=\"Indiquer les termes à rechercher\" type=\"text\" id=\"edit-search-block-form--2\" name=\"search_block_form\" value=\"\" size=\"15\" maxlength=\"128\" class=\"form-text\" />\n</div>\n<div class=\"form-actions form-wrapper\" id=\"edit-actions\"><input type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"Rechercher\" class=\"form-submit\" /></div><input type=\"hidden\" name=\"form_build_id\" value=\"form-czlFN5sOeDcgH6w6sAeSMreOkdMd3Cj520HHnzI7tfs\" />\n<input type=\"hidden\" name=\"form_id\" value=\"search_block_form\" />\n</div>\n</div></form>      </div>\n    </li>\n  </ul>\n\n</div> <!-- /.block -->\n  </div>\n  </div><!--/header-small__tools-->\n\n      <div id=\"navigation\" role=\"navigation\">\n        <div class=\"region region-navigation\">\n        <nav id=\"a_nav\" class=\"main-menu\">\n    <ul class=\"menu\"><li class=\"first leaf\"><a href=\"/fr/dossier/presentation\" title=\"Organisation et fonctionnement du programme PRIMEQUAL\"><span>Présentation</span></a></li>\n<li class=\"leaf\"><a href=\"/fr/actualites\" title=\"\"><span>Actualités</span></a></li>\n<li class=\"leaf\"><a href=\"/fr/events/2018\" title=\"\"><span>Evénements</span></a></li>\n<li class=\"leaf\"><a href=\"/fr/APR\"><span>Appels à propositions</span></a></li>\n<li class=\"leaf\"><a href=\"/fr/projets\"><span>Projets</span></a></li>\n<li class=\"last leaf\"><a href=\"/fr/primequal/publications\"><span>Publications</span></a></li>\n</ul>  </nav>\n  </div>\n    </div>\n  \n</div><!--/main-menu-wrap-->\n\n  <div class=\"page\">\n\n    <main id=\"a_content\" role=\"main\">\n\n          <div id=\"page-top\">\n              </div>\n    \n    \n    <div class=\"tabs\"></div>    \n      <div id=\"content-wrapper\">\n\n        <div id=\"main-content\">\n                            <div class=\"region region-content\">\n    <div id=\"block-system-main\" class=\"block block-system block-system-main\">\n\n      \n    <div id=\"node-1\" class=\"node node-hp viewmode-full\">\n\n  \n    <section class=\"highlight\">\n\n        \n          \n          <div class=\"highlight__bottom\">\n        <div class=\"highlight__inner\">\n          <div class=\"field field-name-field-text-editorial field-type-text-long field-label-hidden\">\n    <div class=\"field-items\">\n          <div class=\"field-item even\"> <h3><strong>Bienvenue sur le site de PRIMEQUAL !</strong></h3>\n<p class=\"common\" style=\"margin-top: 5px; margin-bottom: 5px;\">Lancé en 1995, <strong>PRIMEQUAL,  </strong><strong>PR</strong>ogramme de <strong>R</strong>echerche <strong>I</strong>nterorganisme pour une <strong>ME</strong>illeure <strong>QUAL</strong>ité de l'air, est mis en œuvre par le Ministère chargé de l’Environnement et par l’Agence de l’Environnement et de la Maîtrise de l’Energie (ADEME).</p>\n<p class=\"common\" style=\"margin-top: 5px; margin-bottom: 5px;\">Il vise à fournir les bases scientifiques et les outils nécessaires aux décideurs et aux gestionnaires de territoires et d’espaces de vie  pour définir, mettre en œuvre et évaluer des solutions d’amélioration de la qualité de l’air intérieur et extérieur afin de réduire les risques pour la santé et l’environnement.</p>\n </div>\n      </div>\n</div>\n        </div>\n      </div><!--/highlight__inner-->\n    \n  </section>\n  \n  \n    <div class=\"share\">\n          </div>\n  \n</div>\n\n</div> <!-- /.block -->\n  </div>\n                    </div>\n\n                <div id=\"sidebar-right\">\n                  </div>\n        \n      </div>\n\n            <div id=\"page-bottom\">\n              </div>\n      \n      \n<!--Back to top button-->\n<div id=\"back-to-top\" class=\"back-to-top\">\n  <a href=\"#top\">Haut de page</a>\n</div>\n\n    </main>\n\n  </div><!--/page-->\n\n  <footer class=\"main-footer\" role=\"contentinfo\">\n    <div id=\"footer\"><div class=\"section\">\n        <div class=\"region region-footer\">\n    <div id=\"block-menu-menu-menu-footer-texte\" class=\"block block-menu block-menu-menu-menu-footer-texte\">\n      <ul class=\"footer__links\"><li class=\"first leaf\"><a href=\"/fr/mentions-legales\" title=\"\">Mentions légales</a></li>\n<li class=\"leaf\"><a href=\"/fr/declaration-daccessibilite\" title=\"\">Accessibilité : non conforme</a></li>\n<li class=\"leaf\"><a href=\"/fr/sitemap\" title=\"\">Plan du site</a></li>\n<li class=\"leaf\"><a href=\"/fr/rss.xml\" title=\"\">RSS</a></li>\n<li class=\"leaf\"><a href=\"/fr/cookies\" title=\"\">Cookies</a></li>\n<li class=\"last leaf\"><a href=\"/fr/protection-des-donnees-personnelles\" title=\"\">Protection des données personnelles</a></li>\n</ul></div> <!-- /.block -->\n<div id=\"block-block-1\" title=\"prod-1.3.4\" class=\"footer__copyright block block-block block-block-1\">\n       <p>© 2023, ADEME — Changement climatique - transition écologique, énergétique</p>\n </div> <!-- /.block -->\n  </div>\n    </div>\n  </div> <!-- /.section, /#footer -->\n</footer>\n  <script type=\"text/javascript\" src=\"https://primequal.fr/sites/default/files/js/js_X7bebAxSM48D4hqvbWC1tlEOJDNzOyLy5aqHqsiuM1A.js\"></script>\n\n</div><!--/wrapper-->\n</div><!--/outer-wrap-->\n\n<script type=\"text/javascript\" src=\"/bnith__uxagvbpIQIxgtrCd7nFuW9giJHaGqLjblHFIETJHig0uMD14XU3dXNPkzlw7sVM2\"></script> <script language=\"JavaScript\" type=\"text/javascript\">const _0x35e8=['visitorId','18127kSXadA','356575NPKVMA','7306axxsAH','get','657833TzFjkt','717302TQdBjl','34lMHocq','x-bni-rncf=1704422488221;expires=Thu, 01 Jan 2037 00:00:00 UTC;path=/;','61XMWbpU','cookie',';expires=Thu, 01 Jan 2037 00:00:00 UTC;path=/;','then','651866OSUgMa','811155xdatvf','x-bni-fpc='];function _0x258e(_0x5954fe,_0x43567d){return _0x258e=function(_0x35e81f,_0x258e26){_0x35e81f=_0x35e81f-0x179;let _0x1280dc=_0x35e8[_0x35e81f];return _0x1280dc;},_0x258e(_0x5954fe,_0x43567d);}(function(_0x5674de,_0xdcf1af){const _0x512a29=_0x258e;while(!![]){try{const _0x55f636=parseInt(_0x512a29(0x17b))+-parseInt(_0x512a29(0x179))*parseInt(_0x512a29(0x17f))+-parseInt(_0x512a29(0x183))+-parseInt(_0x512a29(0x184))+parseInt(_0x512a29(0x187))*parseInt(_0x512a29(0x17d))+parseInt(_0x512a29(0x188))+parseInt(_0x512a29(0x17c));if(_0x55f636===_0xdcf1af)break;else _0x5674de['push'](_0x5674de['shift']());}catch(_0xd3a1ce){_0x5674de['push'](_0x5674de['shift']());}}}(_0x35e8,0x6b42d));function getClientIdentity(){const _0x47e86b=_0x258e,_0x448fbc=FingerprintJS['load']();_0x448fbc[_0x47e86b(0x182)](_0x4bb924=>_0x4bb924[_0x47e86b(0x17a)]())[_0x47e86b(0x182)](_0x2f8ca1=>{const _0x44872c=_0x47e86b,_0xa48f50=_0x2f8ca1[_0x44872c(0x186)];document[_0x44872c(0x180)]=_0x44872c(0x185)+_0xa48f50+_0x44872c(0x181),document[_0x44872c(0x180)]=_0x44872c(0x17e);});}getClientIdentity();</script></body>\n\n</html>\n",
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:41:28.394912835Z",
+      "curl-command": "curl -X 'GET' -d '' -H 'Host: www.primequal.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.primequal.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.primequal.fr",
+      "matched-at": "www.primequal.fr:443",
+      "extracted-results": [
+        "Gandi"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:43:34.689918728Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.primequal.fr",
+      "matched-at": "www.primequal.fr:443",
+      "extracted-results": [
+        "www.primequal.fr"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:43:34.690092362Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.primequal.fr",
+      "matched-at": "www.primequal.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:44:03.587344547Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.primequal.fr",
+      "matched-at": "www.primequal.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "217.70.184.56",
+      "timestamp": "2024-01-05T02:44:04.804590633Z",
+      "matcher-status": true
+    }
+  ]
+]
