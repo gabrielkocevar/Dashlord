@@ -1,0 +1,94 @@
+{
+  "trackers": [],
+  "cookies": [],
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-headers": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range",
+    "access-control-allow-methods": "GET, POST, OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Content-Length,Content-Range",
+    "allow": "GET, POST, HEAD",
+    "cache-control": "max-age=600, public",
+    "content-encoding": "br",
+    "content-language": "fr",
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:;",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Fri, 05 Jan 2024 05:03:30 GMT",
+    "etag": "W/\"1704431009\"",
+    "expires": "Fri, 05 Jan 2024 05:13:30 GMT",
+    "last-modified": "Fri, 05 Jan 2024 05:03:29 GMT",
+    "referrer-policy": "same-origin",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "upgrade-insecure-requests": "1",
+    "vary": "Cookie,Accept-Encoding",
+    "x-cacheable": "Cacheable",
+    "x-cdn-pop": "bhs",
+    "x-cdn-pop-ip": "137.74.122.0/26",
+    "x-content-type-options": "nosniff",
+    "x-drupal-cache": "MISS",
+    "x-drupal-dynamic-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-proxy-cache": "EXPIRED",
+    "x-request-id": "379715683",
+    "x-ua-compatible": "IE=edge",
+    "x-xss-protection": "1;mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.budget.gouv.fr",
+      "ip": "46.105.199.81",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
