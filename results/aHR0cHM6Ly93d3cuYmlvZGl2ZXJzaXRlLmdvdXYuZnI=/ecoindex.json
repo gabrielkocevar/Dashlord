@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.biodiversite.gouv.fr",
+        "size": 1345.385,
+        "nodes": 380,
+        "requests": 43,
+        "grade": "C",
+        "score": 68.0,
+        "ges": 1.64,
+        "water": 2.46,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 03:50:11.390413",
+        "page_type": null
+    }
+]
