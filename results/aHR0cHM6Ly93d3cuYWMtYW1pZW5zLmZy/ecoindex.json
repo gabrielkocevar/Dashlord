@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.ac-amiens.fr",
+        "size": 3885.914,
+        "nodes": 1325,
+        "requests": 48,
+        "grade": "E",
+        "score": 35.0,
+        "ges": 2.3,
+        "water": 3.45,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 08:40:50.419874",
+        "page_type": null
+    }
+]
