@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.inao.gouv.fr",
+        "size": 2640.767,
+        "nodes": 713,
+        "requests": 32,
+        "grade": "D",
+        "score": 53.0,
+        "ges": 1.94,
+        "water": 2.91,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 04:30:19.069684",
+        "page_type": null
+    }
+]
