@@ -1,4 +1,20 @@
-# Nmap 7.92 scan initiated Fri Jan  5 17:01:18 2024 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln https://www.enseignementsup-recherche.gouv.fr
-Unable to split netmask from target expression: "https://www.enseignementsup-recherche.gouv.fr"
-WARNING: No targets were specified, so 0 hosts scanned.
-# Nmap done at Fri Jan  5 17:01:18 2024 -- 0 IP addresses (0 hosts up) scanned in 0.31 seconds
+# Nmap 7.92 scan initiated Fri Jan  5 17:08:08 2024 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.enseignementsup-recherche.gouv.fr
+Nmap scan report for www.enseignementsup-recherche.gouv.fr (185.75.143.93)
+Host is up (0.014s latency).
+rDNS record for 185.75.143.93: men-tandem-lb-vip.dedie.ate.info
+Not shown: 985 filtered tcp ports (no-response), 9 filtered tcp ports (host-prohibited)
+PORT     STATE  SERVICE        VERSION
+22/tcp   open   ssh            OpenSSH 8.0 (protocol 2.0)
+| vulners: 
+|   OpenSSH 8.0: 
+|_    	PRION:CVE-2016-20012	5.0	https://vulners.com/prion/PRION:CVE-2016-20012
+80/tcp   open   tcpwrapped
+|_http-server-header: nginx
+113/tcp  closed ident
+443/tcp  open   ssl/tcpwrapped
+|_http-server-header: nginx
+2000/tcp open   tcpwrapped
+5060/tcp open   tcpwrapped
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan  5 17:08:45 2024 -- 1 IP address (1 host up) scanned in 36.72 seconds
