@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.peren.gouv.fr",
+        "size": 1644.752,
+        "nodes": 185,
+        "requests": 15,
+        "grade": "B",
+        "score": 79.0,
+        "ges": 1.42,
+        "water": 2.13,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 07:06:48.370114",
+        "page_type": "website"
+    }
+]
