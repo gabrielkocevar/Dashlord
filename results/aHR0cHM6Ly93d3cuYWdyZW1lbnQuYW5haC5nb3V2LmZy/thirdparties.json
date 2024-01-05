@@ -1,0 +1,113 @@
+{
+  "trackers": [],
+  "cookies": [],
+  "headers": {
+    "accept-ranges": "bytes",
+    "cache-control": "no-cache, no-store, must-revalidate",
+    "content-encoding": "gzip",
+    "content-length": "8243",
+    "content-type": "text/html",
+    "date": "Fri, 05 Jan 2024 03:36:58 GMT",
+    "etag": "\"e407-60c4bb69bac80-gzip\"",
+    "expires": "Fri, 05 Jan 2024 03:36:58 GMT",
+    "last-modified": "Tue, 12 Dec 2023 08:19:46 GMT",
+    "referrer-policy": "no-referrer-when-downgrade",
+    "server": "nginx/1.25.3",
+    "strict-transport-security": "max-age=16000000;includeSubDomains;",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1 ;mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.agrement.anah.gouv.fr",
+      "ip": "31.193.53.253",
+      "geoip": {
+        "city": {
+          "geoname_id": 3019854,
+          "names": {
+            "en": "Esbly",
+            "zh-CN": "埃斯布利"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 48.9118,
+          "longitude": 2.8136,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "77450"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 2975249,
+            "iso_code": "77",
+            "names": {
+              "de": "Seine-et-Marne",
+              "en": "Seine-et-Marne",
+              "es": "Sena y Marne",
+              "fr": "Seine-et-Marne"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
