@@ -1,0 +1,442 @@
+{
+  "links": [
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/front",
+        "path": "/verifavis2-api/front",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/front"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/front",
+      "line": "--2024-01-05 06:45:32--  https://www.impots.gouv.fr/verifavis2-api/front",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/robots.txt",
+        "path": "/robots.txt",
+        "href": "https://www.impots.gouv.fr/robots.txt"
+      },
+      "link": "https://www.impots.gouv.fr/robots.txt",
+      "line": "--2024-01-05 06:45:33--  https://www.impots.gouv.fr/robots.txt",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/favicon.ico",
+        "path": "/verifavis2-api/favicon.ico",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/favicon.ico"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/favicon.ico",
+      "line": "--2024-01-05 06:45:33--  https://www.impots.gouv.fr/verifavis2-api/favicon.ico",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/inea-vue/bootstrap.min.css",
+        "path": "/verifavis2-api/inea-vue/bootstrap.min.css",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/inea-vue/bootstrap.min.css"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/inea-vue/bootstrap.min.css",
+      "line": "--2024-01-05 06:45:33--  https://www.impots.gouv.fr/verifavis2-api/inea-vue/bootstrap.min.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/inea-vue/bootstrap.bundle.min.js",
+        "path": "/verifavis2-api/inea-vue/bootstrap.bundle.min.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/inea-vue/bootstrap.bundle.min.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/inea-vue/bootstrap.bundle.min.js",
+      "line": "--2024-01-05 06:45:34--  https://www.impots.gouv.fr/verifavis2-api/inea-vue/bootstrap.bundle.min.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/css/chunk-2192eb7c.45d437cc.css",
+        "path": "/verifavis2-api/css/chunk-2192eb7c.45d437cc.css",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-2192eb7c.45d437cc.css"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-2192eb7c.45d437cc.css",
+      "line": "--2024-01-05 06:45:35--  https://www.impots.gouv.fr/verifavis2-api/css/chunk-2192eb7c.45d437cc.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/css/chunk-4644a2f9.055d7c07.css",
+        "path": "/verifavis2-api/css/chunk-4644a2f9.055d7c07.css",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-4644a2f9.055d7c07.css"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-4644a2f9.055d7c07.css",
+      "line": "--2024-01-05 06:45:35--  https://www.impots.gouv.fr/verifavis2-api/css/chunk-4644a2f9.055d7c07.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/css/chunk-59e6e940.57af8647.css",
+        "path": "/verifavis2-api/css/chunk-59e6e940.57af8647.css",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-59e6e940.57af8647.css"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-59e6e940.57af8647.css",
+      "line": "--2024-01-05 06:45:35--  https://www.impots.gouv.fr/verifavis2-api/css/chunk-59e6e940.57af8647.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/css/chunk-5d7f3ea3.3ad50fa9.css",
+        "path": "/verifavis2-api/css/chunk-5d7f3ea3.3ad50fa9.css",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-5d7f3ea3.3ad50fa9.css"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-5d7f3ea3.3ad50fa9.css",
+      "line": "--2024-01-05 06:45:35--  https://www.impots.gouv.fr/verifavis2-api/css/chunk-5d7f3ea3.3ad50fa9.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/css/chunk-73fe5fe0.23545661.css",
+        "path": "/verifavis2-api/css/chunk-73fe5fe0.23545661.css",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-73fe5fe0.23545661.css"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-73fe5fe0.23545661.css",
+      "line": "--2024-01-05 06:45:36--  https://www.impots.gouv.fr/verifavis2-api/css/chunk-73fe5fe0.23545661.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/css/chunk-c05fef2a.f2cce33f.css",
+        "path": "/verifavis2-api/css/chunk-c05fef2a.f2cce33f.css",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-c05fef2a.f2cce33f.css"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/css/chunk-c05fef2a.f2cce33f.css",
+      "line": "--2024-01-05 06:45:36--  https://www.impots.gouv.fr/verifavis2-api/css/chunk-c05fef2a.f2cce33f.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-2192eb7c.27042f54.js",
+        "path": "/verifavis2-api/js/chunk-2192eb7c.27042f54.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-2192eb7c.27042f54.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-2192eb7c.27042f54.js",
+      "line": "--2024-01-05 06:45:36--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-2192eb7c.27042f54.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-2d0bd168.ce9e26c0.js",
+        "path": "/verifavis2-api/js/chunk-2d0bd168.ce9e26c0.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d0bd168.ce9e26c0.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d0bd168.ce9e26c0.js",
+      "line": "--2024-01-05 06:45:37--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d0bd168.ce9e26c0.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-2d0c0303.7c93a45e.js",
+        "path": "/verifavis2-api/js/chunk-2d0c0303.7c93a45e.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d0c0303.7c93a45e.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d0c0303.7c93a45e.js",
+      "line": "--2024-01-05 06:45:37--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d0c0303.7c93a45e.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-2d21403b.7835ceb1.js",
+        "path": "/verifavis2-api/js/chunk-2d21403b.7835ceb1.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d21403b.7835ceb1.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d21403b.7835ceb1.js",
+      "line": "--2024-01-05 06:45:37--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-2d21403b.7835ceb1.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-4644a2f9.eba8c89b.js",
+        "path": "/verifavis2-api/js/chunk-4644a2f9.eba8c89b.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-4644a2f9.eba8c89b.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-4644a2f9.eba8c89b.js",
+      "line": "--2024-01-05 06:45:37--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-4644a2f9.eba8c89b.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-59e6e940.5e460d9f.js",
+        "path": "/verifavis2-api/js/chunk-59e6e940.5e460d9f.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-59e6e940.5e460d9f.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-59e6e940.5e460d9f.js",
+      "line": "--2024-01-05 06:45:37--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-59e6e940.5e460d9f.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-5d7f3ea3.21e3ac14.js",
+        "path": "/verifavis2-api/js/chunk-5d7f3ea3.21e3ac14.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-5d7f3ea3.21e3ac14.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-5d7f3ea3.21e3ac14.js",
+      "line": "--2024-01-05 06:45:37--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-5d7f3ea3.21e3ac14.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-73fe5fe0.fdb75a09.js",
+        "path": "/verifavis2-api/js/chunk-73fe5fe0.fdb75a09.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-73fe5fe0.fdb75a09.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-73fe5fe0.fdb75a09.js",
+      "line": "--2024-01-05 06:45:37--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-73fe5fe0.fdb75a09.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-c05fef2a.45e1ca9c.js",
+        "path": "/verifavis2-api/js/chunk-c05fef2a.45e1ca9c.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-c05fef2a.45e1ca9c.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-c05fef2a.45e1ca9c.js",
+      "line": "--2024-01-05 06:45:38--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-c05fef2a.45e1ca9c.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/css/app.f86b2554.css",
+        "path": "/verifavis2-api/css/app.f86b2554.css",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/css/app.f86b2554.css"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/css/app.f86b2554.css",
+      "line": "--2024-01-05 06:45:38--  https://www.impots.gouv.fr/verifavis2-api/css/app.f86b2554.css",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/app.2c429aed.js",
+        "path": "/verifavis2-api/js/app.2c429aed.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/app.2c429aed.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/app.2c429aed.js",
+      "line": "--2024-01-05 06:45:38--  https://www.impots.gouv.fr/verifavis2-api/js/app.2c429aed.js",
+      "broken": false
+    },
+    {
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "www.impots.gouv.fr",
+        "port": null,
+        "hostname": "www.impots.gouv.fr",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/verifavis2-api/js/chunk-vendors.895175a5.js",
+        "path": "/verifavis2-api/js/chunk-vendors.895175a5.js",
+        "href": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-vendors.895175a5.js"
+      },
+      "link": "https://www.impots.gouv.fr/verifavis2-api/js/chunk-vendors.895175a5.js",
+      "line": "--2024-01-05 06:45:38--  https://www.impots.gouv.fr/verifavis2-api/js/chunk-vendors.895175a5.js",
+      "broken": false
+    }
+  ],
+  "broken": []
+}
