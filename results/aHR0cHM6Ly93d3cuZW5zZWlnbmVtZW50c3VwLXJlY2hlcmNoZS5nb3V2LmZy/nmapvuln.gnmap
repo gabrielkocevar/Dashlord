@@ -1,2 +1,2 @@
-# Nmap 7.92 scan initiated Fri Jan  5 15:52:59 2024 as: nmap -sT -oA /data/nmapvuln true
-# Nmap done at Fri Jan  5 15:52:59 2024 -- 0 IP addresses (0 hosts up) scanned in 0.06 seconds
+# Nmap 7.92 scan initiated Fri Jan  5 16:34:47 2024 as: nmap -sT -oA /data/nmapvuln 
+# Nmap done at Fri Jan  5 16:34:47 2024 -- 0 IP addresses (0 hosts up) scanned in 0.04 seconds
