@@ -812,7 +812,7 @@
         "ip": "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
         "port": "443",
         "severity": "INFO",
-        "finding": "1704472545"
+        "finding": "1704473468"
       },
       {
         "id": "HSTS_time",
@@ -904,7 +904,7 @@
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-200",
-        "finding": "X-Cacheable: YESX-Cache-TTL: 120.000X-Cache: HITX-Cache-Age: 113X-Cache-Hits: 12"
+        "finding": "X-Cacheable: YESX-Cache-TTL: 120.000X-Cache: HITX-Cache-Age: 0X-Cache-Hits: 1"
       },
       {
         "id": "heartbleed",
@@ -1403,7 +1403,7 @@
         "ip": "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
         "port": "443",
         "severity": "INFO",
-        "finding": "50"
+        "finding": "47"
       }
     ],
     "thirdparties": {
@@ -1459,7 +1459,7 @@
         "content-language": "fr",
         "content-length": "16086",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Fri, 05 Jan 2024 16:33:51 GMT",
+        "date": "Fri, 05 Jan 2024 16:49:17 GMT",
         "etag": "W/\"1704468517\"",
         "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
         "last-modified": "Fri, 05 Jan 2024 15:28:37 GMT",
@@ -1467,8 +1467,8 @@
         "server": "nginx",
         "strict-transport-security": "max-age=31536000; includeSubdomains",
         "x-cache": "HIT",
-        "x-cache-age": "150",
-        "x-cache-hits": "15",
+        "x-cache-age": "174",
+        "x-cache-hits": "9",
         "x-cache-ttl": "900.000",
         "x-cacheable": "YES",
         "x-content-type-options": "nosniff",
@@ -1621,7 +1621,7 @@
         },
         {
           "hostname": "cdnjs.cloudflare.com",
-          "ip": "104.17.25.14",
+          "ip": "104.17.24.14",
           "geoip": {
             "registered_country": {
               "geoname_id": 6252001,
@@ -1941,7 +1941,7 @@
       {
         "requestedUrl": "https://www.enseignementsup-recherche.gouv.fr/",
         "finalUrl": "https://www.enseignementsup-recherche.gouv.fr/fr",
-        "fetchTime": "2024-01-05T16:35:13.228Z",
+        "fetchTime": "2024-01-05T16:50:37.221Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://www.enseignementsup-recherche.gouv.fr/) was redirected to https://www.enseignementsup-recherche.gouv.fr/fr. Try testing the second URL directly."
         ],
@@ -1954,7 +1954,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.6400779724121094
+            "score": 0.6400794982910156
           },
           "accessibility": {
             "title": "Accessibility",
@@ -2006,53 +2006,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 10560,
+            "numericValue": 10364,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2859,
-                  "firstMeaningfulPaint": 2859,
-                  "largestContentfulPaint": 12451,
-                  "interactive": 10560,
-                  "speedIndex": 4581,
-                  "totalBlockingTime": 85,
-                  "maxPotentialFID": 154,
+                  "firstContentfulPaint": 2794,
+                  "firstMeaningfulPaint": 2794,
+                  "largestContentfulPaint": 12944,
+                  "interactive": 10364,
+                  "speedIndex": 4651,
+                  "totalBlockingTime": 79,
+                  "maxPotentialFID": 142,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftMainFrame": 0,
                   "totalCumulativeLayoutShift": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 8984399120,
+                  "observedTimeOriginTs": 9908389341,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 8984399120,
-                  "observedFirstPaint": 408,
-                  "observedFirstPaintTs": 8984806628,
-                  "observedFirstContentfulPaint": 408,
-                  "observedFirstContentfulPaintTs": 8984806628,
-                  "observedFirstContentfulPaintAllFrames": 408,
-                  "observedFirstContentfulPaintAllFramesTs": 8984806628,
-                  "observedFirstMeaningfulPaint": 408,
-                  "observedFirstMeaningfulPaintTs": 8984806628,
-                  "observedLargestContentfulPaint": 831,
-                  "observedLargestContentfulPaintTs": 8985229779,
-                  "observedLargestContentfulPaintAllFrames": 831,
-                  "observedLargestContentfulPaintAllFramesTs": 8985229779,
-                  "observedTraceEnd": 2864,
-                  "observedTraceEndTs": 8987263464,
-                  "observedLoad": 542,
-                  "observedLoadTs": 8984941362,
-                  "observedDomContentLoaded": 528,
-                  "observedDomContentLoadedTs": 8984926646,
+                  "observedNavigationStartTs": 9908389341,
+                  "observedFirstPaint": 372,
+                  "observedFirstPaintTs": 9908760998,
+                  "observedFirstContentfulPaint": 372,
+                  "observedFirstContentfulPaintTs": 9908760998,
+                  "observedFirstContentfulPaintAllFrames": 372,
+                  "observedFirstContentfulPaintAllFramesTs": 9908760998,
+                  "observedFirstMeaningfulPaint": 372,
+                  "observedFirstMeaningfulPaintTs": 9908760998,
+                  "observedLargestContentfulPaint": 788,
+                  "observedLargestContentfulPaintTs": 9909177033,
+                  "observedLargestContentfulPaintAllFrames": 788,
+                  "observedLargestContentfulPaintAllFramesTs": 9909177033,
+                  "observedTraceEnd": 2823,
+                  "observedTraceEndTs": 9911212525,
+                  "observedLoad": 500,
+                  "observedLoadTs": 9908889473,
+                  "observedDomContentLoaded": 485,
+                  "observedDomContentLoadedTs": 9908874236,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftMainFrame": 0,
                   "observedTotalCumulativeLayoutShift": 0,
-                  "observedFirstVisualChange": 408,
-                  "observedFirstVisualChangeTs": 8984807120,
-                  "observedLastVisualChange": 841,
-                  "observedLastVisualChangeTs": 8985240120,
-                  "observedSpeedIndex": 685,
-                  "observedSpeedIndexTs": 8985084582
+                  "observedFirstVisualChange": 380,
+                  "observedFirstVisualChangeTs": 9908769341,
+                  "observedLastVisualChange": 797,
+                  "observedLastVisualChangeTs": 9909186341,
+                  "observedSpeedIndex": 647,
+                  "observedSpeedIndexTs": 9909036623
                 },
                 {
                   "lcpInvalidated": false
@@ -2074,18 +2074,18 @@
                   "numScripts": 12,
                   "numStylesheets": 4,
                   "numFonts": 4,
-                  "numTasks": 600,
-                  "numTasksOver10ms": 9,
+                  "numTasks": 587,
+                  "numTasksOver10ms": 8,
                   "numTasksOver25ms": 4,
                   "numTasksOver50ms": 2,
                   "numTasksOver100ms": 1,
                   "numTasksOver500ms": 0,
-                  "rtt": 8.794,
-                  "throughput": 207077826.66430965,
-                  "maxRtt": 17.090999999999994,
-                  "maxServerLatency": 14.966000000000012,
-                  "totalByteWeight": 2935604,
-                  "totalTaskTime": 460.09499999999963,
+                  "rtt": 9.204,
+                  "throughput": 227613966.3842301,
+                  "maxRtt": 22.559999999999995,
+                  "maxServerLatency": 11.966000000000005,
+                  "totalByteWeight": 2935596,
+                  "totalTaskTime": 443.51499999999913,
                   "mainDocumentTransferSize": 16627
                 }
               ]
@@ -2141,7 +2141,7 @@
       "cookiesCount": 0,
       "trackersGrade": "C",
       "trackersCount": 5,
-      "lighthouse_performance": 0.6400779724121094,
+      "lighthouse_performance": 0.6400794982910156,
       "lighthouse_performanceGrade": "C",
       "lighthouse_accessibility": 0.93,
       "lighthouse_accessibilityGrade": "A",
@@ -2158,236 +2158,7 @@
     }
   },
   {
-    "404": [
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/es/web/guest/archives_nationales_footer_fichiers/api.js",
-          "path": "/es/web/guest/archives_nationales_footer_fichiers/api.js",
-          "href": "https://www.archives-nationales.culture.gouv.fr/es/web/guest/archives_nationales_footer_fichiers/api.js"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/es/web/guest/archives_nationales_footer_fichiers/api.js",
-        "line": "https://www.archives-nationales.culture.gouv.fr/es/web/guest/archives_nationales_footer_fichiers/api.js",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/build/aui-skin-classic/images/common/state_default_bg.png",
-          "path": "/build/aui-skin-classic/images/common/state_default_bg.png",
-          "href": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/common/state_default_bg.png"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/common/state_default_bg.png",
-        "line": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/common/state_default_bg.png",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/build/aui-skin-classic/images/panel/header_bg.png",
-          "path": "/build/aui-skin-classic/images/panel/header_bg.png",
-          "href": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/panel/header_bg.png"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/panel/header_bg.png",
-        "line": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/panel/header_bg.png",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/fr/web/guest/archives_nationales_footer_fichiers/api.js",
-          "path": "/fr/web/guest/archives_nationales_footer_fichiers/api.js",
-          "href": "https://www.archives-nationales.culture.gouv.fr/fr/web/guest/archives_nationales_footer_fichiers/api.js"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/fr/web/guest/archives_nationales_footer_fichiers/api.js",
-        "line": "https://www.archives-nationales.culture.gouv.fr/fr/web/guest/archives_nationales_footer_fichiers/api.js",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/portailInternetTheme-theme/css/images/animated-overlay.gif",
-          "path": "/portailInternetTheme-theme/css/images/animated-overlay.gif",
-          "href": "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/css/images/animated-overlay.gif"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/css/images/animated-overlay.gif",
-        "line": "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/css/images/animated-overlay.gif",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/build/aui-skin-classic/images/menu/bg.png",
-          "path": "/build/aui-skin-classic/images/menu/bg.png",
-          "href": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/menu/bg.png"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/menu/bg.png",
-        "line": "https://www.archives-nationales.culture.gouv.fr/build/aui-skin-classic/images/menu/bg.png",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/archives_nationales_footer_fichiers/api.js",
-          "path": "/archives_nationales_footer_fichiers/api.js",
-          "href": "https://www.archives-nationales.culture.gouv.fr/archives_nationales_footer_fichiers/api.js"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/archives_nationales_footer_fichiers/api.js",
-        "line": "https://www.archives-nationales.culture.gouv.fr/archives_nationales_footer_fichiers/api.js",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/es_ES/web/guest/archives_nationales_footer_fichiers/api.js",
-          "path": "/es_ES/web/guest/archives_nationales_footer_fichiers/api.js",
-          "href": "https://www.archives-nationales.culture.gouv.fr/es_ES/web/guest/archives_nationales_footer_fichiers/api.js"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/es_ES/web/guest/archives_nationales_footer_fichiers/api.js",
-        "line": "https://www.archives-nationales.culture.gouv.fr/es_ES/web/guest/archives_nationales_footer_fichiers/api.js",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/fr_FR/web/guest/archives_nationales_footer_fichiers/api.js",
-          "path": "/fr_FR/web/guest/archives_nationales_footer_fichiers/api.js",
-          "href": "https://www.archives-nationales.culture.gouv.fr/fr_FR/web/guest/archives_nationales_footer_fichiers/api.js"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/fr_FR/web/guest/archives_nationales_footer_fichiers/api.js",
-        "line": "https://www.archives-nationales.culture.gouv.fr/fr_FR/web/guest/archives_nationales_footer_fichiers/api.js",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/en/web/guest/archives_nationales_footer_fichiers/api.js",
-          "path": "/en/web/guest/archives_nationales_footer_fichiers/api.js",
-          "href": "https://www.archives-nationales.culture.gouv.fr/en/web/guest/archives_nationales_footer_fichiers/api.js"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/en/web/guest/archives_nationales_footer_fichiers/api.js",
-        "line": "https://www.archives-nationales.culture.gouv.fr/en/web/guest/archives_nationales_footer_fichiers/api.js",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/en_GB/web/guest/archives_nationales_footer_fichiers/api.js",
-          "path": "/en_GB/web/guest/archives_nationales_footer_fichiers/api.js",
-          "href": "https://www.archives-nationales.culture.gouv.fr/en_GB/web/guest/archives_nationales_footer_fichiers/api.js"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/en_GB/web/guest/archives_nationales_footer_fichiers/api.js",
-        "line": "https://www.archives-nationales.culture.gouv.fr/en_GB/web/guest/archives_nationales_footer_fichiers/api.js",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.archives-nationales.culture.gouv.fr",
-          "port": null,
-          "hostname": "www.archives-nationales.culture.gouv.fr",
-          "hash": null,
-          "search": null,
-          "query": null,
-          "pathname": "/html/css/images/forms/button.png",
-          "path": "/html/css/images/forms/button.png",
-          "href": "https://www.archives-nationales.culture.gouv.fr/html/css/images/forms/button.png"
-        },
-        "link": "https://www.archives-nationales.culture.gouv.fr/html/css/images/forms/button.png",
-        "line": "https://www.archives-nationales.culture.gouv.fr/html/css/images/forms/button.png",
-        "broken": true
-      }
-    ],
+    "404": null,
     "url": "https://www.archives-nationales.culture.gouv.fr",
     "http": {
       "url": "https://www.archives-nationales.culture.gouv.fr",
@@ -3148,7 +2919,7 @@
         "ip": "www.archives-nationales.culture.gouv.fr/143.126.211.246",
         "port": "443",
         "severity": "INFO",
-        "finding": "1704472100"
+        "finding": "1704473043"
       },
       {
         "id": "HSTS_time",
@@ -3725,7 +3496,7 @@
         "ip": "www.archives-nationales.culture.gouv.fr/143.126.211.246",
         "port": "443",
         "severity": "INFO",
-        "finding": "47"
+        "finding": "48"
       }
     ],
     "thirdparties": {
@@ -3733,7 +3504,7 @@
       "cookies": [
         {
           "name": "JSESSIONID",
-          "value": "CC2C49FBB3DD4116726752441A95F4C6",
+          "value": "3A52CFE5A11D971F3A189B8E60828707",
           "domain": "www.archives-nationales.culture.gouv.fr",
           "path": "/",
           "expires": -1,
@@ -3749,12 +3520,12 @@
       "headers": {
         "connection": "keep-alive",
         "content-encoding": "gzip",
-        "content-length": "11410",
+        "content-length": "11411",
         "content-type": "text/html;charset=UTF-8",
-        "date": "Fri, 05 Jan 2024 16:26:50 GMT",
-        "etag": "\"6199969c\"",
+        "date": "Fri, 05 Jan 2024 16:42:31 GMT",
+        "etag": "\"c1d04de0\"",
         "server": "nginx",
-        "set-cookie": "JSESSIONID=CC2C49FBB3DD4116726752441A95F4C6; Path=/; HttpOnly",
+        "set-cookie": "JSESSIONID=3A52CFE5A11D971F3A189B8E60828707; Path=/; HttpOnly",
         "strict-transport-security": "max-age=63072000"
       },
       "endpoints": [
@@ -4098,1050 +3869,13 @@
         }
       ]
     },
-    "zap": {
-      "@programName": "ZAP",
-      "@version": "2.14.0",
-      "@generated": "Fri, 5 Jan 2024 13:02:54",
-      "site": [
-        {
-          "@name": "https://www.archives-nationales.culture.gouv.fr",
-          "@host": "www.archives-nationales.culture.gouv.fr",
-          "@port": "443",
-          "@ssl": "true",
-          "alerts": [
-            {
-              "name": "Absence of Anti-CSRF Tokens",
-              "riskcode": "2",
-              "confidence": "1",
-              "riskdesc": "Medium (Low)",
-              "desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>"
-            },
-            {
-              "name": "Content Security Policy (CSP) Header Not Set",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
-            },
-            {
-              "name": "HTTPS to HTTP Insecure Transition in Form Post",
-              "riskcode": "2",
-              "confidence": "2",
-              "riskdesc": "Medium (Medium)",
-              "desc": "<p>This check identifies secure HTTPS pages that host insecure HTTP forms. The issue is that a secure page is transitioning to an insecure page when data is uploaded through a form. The user may think they're submitting data to a secure page when in fact they are not.</p>"
-            },
-            {
-              "name": "Missing Anti-clickjacking Header",
-              "riskcode": "2",
-              "confidence": "2",
-              "riskdesc": "Medium (Medium)",
-              "desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>"
-            },
-            {
-              "name": "Referer Exposes Session ID",
-              "riskcode": "2",
-              "confidence": "2",
-              "riskdesc": "Medium (Medium)",
-              "desc": "<p>A hyperlink pointing to another host name was found. As session ID URL rewrite is used, it may be disclosed in referer header to external hosts.</p>"
-            },
-            {
-              "name": "Session ID in URL Rewrite",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>URL rewrite is used to track user session ID. The session ID may be disclosed via cross-site referer header. In addition, the session ID might be stored in browser history or server logs.</p>"
-            },
-            {
-              "name": "Source Code Disclosure - PHP",
-              "riskcode": "2",
-              "confidence": "2",
-              "riskdesc": "Medium (Medium)",
-              "desc": "<p>Application Source Code was disclosed by the web server - PHP</p>"
-            },
-            {
-              "name": "Source Code Disclosure - Perl",
-              "riskcode": "2",
-              "confidence": "2",
-              "riskdesc": "Medium (Medium)",
-              "desc": "<p>Application Source Code was disclosed by the web server - Perl</p>"
-            },
-            {
-              "name": "Sub Resource Integrity Attribute Missing",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>"
-            },
-            {
-              "name": "Vulnerable JS Library",
-              "riskcode": "2",
-              "confidence": "2",
-              "riskdesc": "Medium (Medium)",
-              "desc": "<p>The identified library jquery, version 1.9.1 is vulnerable.</p>"
-            },
-            {
-              "name": "Application Error Disclosure",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p>"
-            },
-            {
-              "name": "Cookie Without Secure Flag",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</p>"
-            },
-            {
-              "name": "Cookie without SameSite Attribute",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>"
-            },
-            {
-              "name": "Cross-Domain JavaScript Source File Inclusion",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>The page includes one or more script files from a third-party domain.</p>"
-            },
-            {
-              "name": "Dangerous JS Functions",
-              "riskcode": "1",
-              "confidence": "1",
-              "riskdesc": "Low (Low)",
-              "desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>"
-            },
-            {
-              "name": "Permissions Policy Header Not Set",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>"
-            },
-            {
-              "name": "Secure Pages Include Mixed Content",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>The page includes mixed content, that is content accessed via HTTP instead of HTTPS.</p>"
-            },
-            {
-              "name": "Timestamp Disclosure - Unix",
-              "riskcode": "1",
-              "confidence": "1",
-              "riskdesc": "Low (Low)",
-              "desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>"
-            },
-            {
-              "name": "X-Content-Type-Options Header Missing",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>"
-            },
-            {
-              "name": "Base64 Disclosure",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>"
-            },
-            {
-              "name": "Content-Type Header Missing",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The Content-Type header was either missing or empty.</p>"
-            },
-            {
-              "name": "Information Disclosure - Suspicious Comments",
-              "riskcode": "0",
-              "confidence": "1",
-              "riskdesc": "Informational (Low)",
-              "desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>"
-            },
-            {
-              "name": "Modern Web Application",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>"
-            },
-            {
-              "name": "Non-Storable Content",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>"
-            },
-            {
-              "name": "Re-examine Cache-control Directives",
-              "riskcode": "0",
-              "confidence": "1",
-              "riskdesc": "Informational (Low)",
-              "desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>"
-            },
-            {
-              "name": "Sec-Fetch-Dest Header is Missing",
-              "riskcode": "0",
-              "confidence": "3",
-              "riskdesc": "Informational (High)",
-              "desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>"
-            },
-            {
-              "name": "Sec-Fetch-Mode Header is Missing",
-              "riskcode": "0",
-              "confidence": "3",
-              "riskdesc": "Informational (High)",
-              "desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>"
-            },
-            {
-              "name": "Sec-Fetch-Site Header is Missing",
-              "riskcode": "0",
-              "confidence": "3",
-              "riskdesc": "Informational (High)",
-              "desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>"
-            },
-            {
-              "name": "Sec-Fetch-User Header is Missing",
-              "riskcode": "0",
-              "confidence": "3",
-              "riskdesc": "Informational (High)",
-              "desc": "<p>Specifies if a navigation request was initiated by a user.</p>"
-            },
-            {
-              "name": "Session Management Response Identified",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>"
-            },
-            {
-              "name": "Storable and Cacheable Content",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>"
-            },
-            {
-              "name": "User Controllable HTML Element Attribute (Potential XSS)",
-              "riskcode": "0",
-              "confidence": "1",
-              "riskdesc": "Informational (Low)",
-              "desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>"
-            }
-          ]
-        }
-      ]
-    },
-    "nuclei": [
-      {
-        "template": "dns/caa-fingerprint.yaml",
-        "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
-        "template-id": "caa-fingerprint",
-        "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
-        "info": {
-          "name": "CAA Record",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "caa"
-          ],
-          "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
-          "reference": [
-            "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "type": "dns",
-        "host": "www.archives-nationales.culture.gouv.fr.",
-        "matched-at": "www.archives-nationales.culture.gouv.fr",
-        "timestamp": "2024-01-05T13:04:41.106565804Z",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/options-method.yaml",
-        "template-url": "https://templates.nuclei.sh/public/options-method",
-        "template-id": "options-method",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/options-method.yaml",
-        "info": {
-          "name": "Allowed Options Method",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "misc",
-            "generic"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "extracted-results": [
-          "GET, HEAD, POST, TRACE, OPTIONS"
-        ],
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:04:51.214379789Z",
-        "curl-command": "curl -X 'OPTIONS' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/httponly-cookie-detect.yaml",
-        "template-url": "https://templates.nuclei.sh/public/httponly-cookie-detect",
-        "template-id": "httponly-cookie-detect",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/httponly-cookie-detect.yaml",
-        "info": {
-          "name": "HttpOnly Cookie - Detect",
-          "author": [
-            "mr. bobo hp"
-          ],
-          "tags": [
-            "misconfig",
-            "http",
-            "cookie",
-            "generic"
-          ],
-          "description": "Checks whether cookies in the HTTP response contain the HttpOnly attribute. If the HttpOnly flag is set, it means that the cookie is HTTP-only\n",
-          "reference": [
-            "https://stackoverflow.com/questions/4316539/how-do-i-test-httponly-cookie-flag"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": null,
-            "cvss-metrics": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:04:58.762070232Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/exposures/tokens/generic/credentials-disclosure.yaml",
-        "template-url": "https://templates.nuclei.sh/public/credentials-disclosure",
-        "template-id": "credentials-disclosure",
-        "template-path": "/home/runner/nuclei-templates/http/exposures/tokens/generic/credentials-disclosure.yaml",
-        "info": {
-          "name": "Credentials Disclosure Check",
-          "author": [
-            "sy3omda",
-            "forgedhallpass",
-            "geeknik"
-          ],
-          "tags": [
-            "exposure",
-            "token",
-            "key",
-            "api",
-            "secret",
-            "password",
-            "generic"
-          ],
-          "description": "Look for keys/tokens/passwords in HTTP responses, exposed keys/tokens/secrets requires manual verification for impact evaluation.",
-          "severity": "unknown",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "extracted-results": [
-          "authToken = 't22Z15PH'"
-        ],
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:34.778189751Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/technologies/tech-detect.yaml",
-        "template-url": "https://templates.nuclei.sh/public/tech-detect",
-        "template-id": "tech-detect",
-        "template-path": "/home/runner/nuclei-templates/http/technologies/tech-detect.yaml",
-        "info": {
-          "name": "Wappalyzer Technology Detection",
-          "author": [
-            "hakluke"
-          ],
-          "tags": [
-            "tech"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "nginx",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:35.109587839Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-opener-policy",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.669899717Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "content-security-policy",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.669945553Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "referrer-policy",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.669956053Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "clear-site-data",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.66997049Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-permitted-cross-domain-policies",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.669986971Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-embedder-policy",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.669997881Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-resource-policy",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.670006447Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "permissions-policy",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.670019402Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-frame-options",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.670032847Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-content-type-options",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:05:45.670047134Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/missing-sri.yaml",
-        "template-url": "https://templates.nuclei.sh/public/missing-sri",
-        "template-id": "missing-sri",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/missing-sri.yaml",
-        "info": {
-          "name": "Missing Subresource Integrity",
-          "author": [
-            "lucky0x0d",
-            "pulsesecurity.co.nz"
-          ],
-          "tags": [
-            "compliance",
-            "js",
-            "sri",
-            "misconfig"
-          ],
-          "description": "Checks if script tags within the HTML response have Subresource Integrity implemented via the integrity attribute\n",
-          "reference": [
-            "https://cheatsheetseries.owasp.org/cheatsheets/third_party_javascript_management_cheat_sheet.html#subresource-integrity"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr/",
-        "extracted-results": [
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jPagesCustom.min.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.flexslider.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.ui.datepicker-fr.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.ui.datepicker-en.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.ui.datepicker-es.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/main.js?browserId=other&minifierType=js&languageId=fr_FR&b=6101&t=1687423132000",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery-1.9.1.min.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/filter.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/modernizr.custom.97074.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery.cookie.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/jquery-ui.min.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/tarteaucitron/tarteaucitron.js",
-          "https://www.archives-nationales.culture.gouv.fr/portailInternetTheme-theme/js/common.js"
-        ],
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:06:08.989479656Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Host: www.archives-nationales.culture.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr/'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/technologies/favicon-detect.yaml",
-        "template-url": "https://templates.nuclei.sh/public/favicon-detect",
-        "template-id": "favicon-detect",
-        "template-path": "/home/runner/nuclei-templates/http/technologies/favicon-detect.yaml",
-        "info": {
-          "name": "favicon-detection",
-          "author": [
-            "un-fmunozs",
-            "dhiyaneshdk"
-          ],
-          "tags": [
-            "tech",
-            "favicon"
-          ],
-          "reference": [
-            "https://twitter.com/brsn76945860/status/1171233054951501824",
-            "https://gist.github.com/yehgdotnet/b9dfc618108d2f05845c4d8e28c5fc6a",
-            "https://medium.com/@asm0d3us/weaponizing-favicon-ico-for-bugbounties-osint-and-what-not-ace3c214e139",
-            "https://github.com/devanshbatham/favfreak",
-            "https://github.com/sansatart/scrapts/blob/master/shodan-favicon-hashes.csv"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 2
-          }
-        },
-        "matcher-name": "liferay-portal",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr/favicon.ico",
-        "meta": {
-          "path": "images/"
-        },
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:06:15.975336298Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr/favicon.ico'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/technologies/waf-detect.yaml",
-        "template-url": "https://templates.nuclei.sh/public/waf-detect",
-        "template-id": "waf-detect",
-        "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
-        "info": {
-          "name": "WAF Detection",
-          "author": [
-            "dwisiswant0",
-            "lu4nx"
-          ],
-          "tags": [
-            "waf",
-            "tech",
-            "misc"
-          ],
-          "description": "A web application firewall was detected.",
-          "reference": [
-            "https://github.com/ekultek/whatwaf"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "matcher-name": "ats",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr/",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:06:20.426347186Z",
-        "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.archives-nationales.culture.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr/'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/technologies/waf-detect.yaml",
-        "template-url": "https://templates.nuclei.sh/public/waf-detect",
-        "template-id": "waf-detect",
-        "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
-        "info": {
-          "name": "WAF Detection",
-          "author": [
-            "dwisiswant0",
-            "lu4nx"
-          ],
-          "tags": [
-            "waf",
-            "tech",
-            "misc"
-          ],
-          "description": "A web application firewall was detected.",
-          "reference": [
-            "https://github.com/ekultek/whatwaf"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "matcher-name": "nginxgeneric",
-        "type": "http",
-        "host": "https://www.archives-nationales.culture.gouv.fr",
-        "matched-at": "https://www.archives-nationales.culture.gouv.fr/",
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:06:20.426427436Z",
-        "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.archives-nationales.culture.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.archives-nationales.culture.gouv.fr/'",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/detect-ssl-issuer.yaml",
-        "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
-        "template-id": "ssl-issuer",
-        "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
-        "info": {
-          "name": "Detect SSL Certificate Issuer",
-          "author": [
-            "lingtren"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "ssl",
-        "host": "www.archives-nationales.culture.gouv.fr",
-        "matched-at": "www.archives-nationales.culture.gouv.fr:443",
-        "extracted-results": [
-          "Let's Encrypt"
-        ],
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:08:08.818234839Z",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/ssl-dns-names.yaml",
-        "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
-        "template-id": "ssl-dns-names",
-        "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
-        "info": {
-          "name": "SSL DNS Names",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "ssl",
-        "host": "www.archives-nationales.culture.gouv.fr",
-        "matched-at": "www.archives-nationales.culture.gouv.fr:443",
-        "extracted-results": [
-          "www.archives-nationales.culture.gouv.fr"
-        ],
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:08:08.818355214Z",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/tls-version.yaml",
-        "template-url": "https://templates.nuclei.sh/public/tls-version",
-        "template-id": "tls-version",
-        "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
-        "info": {
-          "name": "TLS Version - Detect",
-          "author": [
-            "pdteam",
-            "pussycat0x"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 4
-          }
-        },
-        "type": "ssl",
-        "host": "www.archives-nationales.culture.gouv.fr",
-        "matched-at": "www.archives-nationales.culture.gouv.fr:443",
-        "extracted-results": [
-          "tls12"
-        ],
-        "ip": "143.126.211.246",
-        "timestamp": "2024-01-05T13:08:12.464334249Z",
-        "matcher-status": true
-      }
-    ],
+    "zap": null,
+    "nuclei": [],
     "lhr": [
       {
         "requestedUrl": "https://www.archives-nationales.culture.gouv.fr/",
         "finalUrl": "https://www.archives-nationales.culture.gouv.fr/",
-        "fetchTime": "2024-01-05T16:27:57.200Z",
+        "fetchTime": "2024-01-05T16:43:39.791Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -5204,53 +3938,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 12905,
+            "numericValue": 12781,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3899,
-                  "firstMeaningfulPaint": 3899,
-                  "largestContentfulPaint": 7126,
-                  "interactive": 12905,
-                  "speedIndex": 5533,
-                  "totalBlockingTime": 19,
-                  "maxPotentialFID": 77,
-                  "cumulativeLayoutShift": 0.26806827542226513,
-                  "cumulativeLayoutShiftMainFrame": 0.26806827542226513,
-                  "totalCumulativeLayoutShift": 0.26806827542226513,
+                  "firstContentfulPaint": 3847,
+                  "firstMeaningfulPaint": 3847,
+                  "largestContentfulPaint": 5930,
+                  "interactive": 12781,
+                  "speedIndex": 5422,
+                  "totalBlockingTime": 18,
+                  "maxPotentialFID": 75,
+                  "cumulativeLayoutShift": 0.2749128044174456,
+                  "cumulativeLayoutShiftMainFrame": 0.2749128044174456,
+                  "totalCumulativeLayoutShift": 0.2749128044174456,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 8548364800,
+                  "observedTimeOriginTs": 9490958936,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 8548364800,
-                  "observedFirstPaint": 363,
-                  "observedFirstPaintTs": 8548727666,
-                  "observedFirstContentfulPaint": 363,
-                  "observedFirstContentfulPaintTs": 8548727666,
-                  "observedFirstContentfulPaintAllFrames": 363,
-                  "observedFirstContentfulPaintAllFramesTs": 8548727666,
-                  "observedFirstMeaningfulPaint": 363,
-                  "observedFirstMeaningfulPaintTs": 8548727666,
-                  "observedLargestContentfulPaint": 399,
-                  "observedLargestContentfulPaintTs": 8548763359,
-                  "observedLargestContentfulPaintAllFrames": 399,
-                  "observedLargestContentfulPaintAllFramesTs": 8548763359,
-                  "observedTraceEnd": 2888,
-                  "observedTraceEndTs": 8551252436,
-                  "observedLoad": 568,
-                  "observedLoadTs": 8548932922,
-                  "observedDomContentLoaded": 377,
-                  "observedDomContentLoadedTs": 8548741775,
-                  "observedCumulativeLayoutShift": 0.26806827542226513,
-                  "observedCumulativeLayoutShiftMainFrame": 0.26806827542226513,
-                  "observedTotalCumulativeLayoutShift": 0.26806827542226513,
-                  "observedFirstVisualChange": 376,
-                  "observedFirstVisualChangeTs": 8548740800,
-                  "observedLastVisualChange": 576,
-                  "observedLastVisualChangeTs": 8548940800,
-                  "observedSpeedIndex": 438,
-                  "observedSpeedIndexTs": 8548802368
+                  "observedNavigationStartTs": 9490958936,
+                  "observedFirstPaint": 380,
+                  "observedFirstPaintTs": 9491338445,
+                  "observedFirstContentfulPaint": 380,
+                  "observedFirstContentfulPaintTs": 9491338445,
+                  "observedFirstContentfulPaintAllFrames": 380,
+                  "observedFirstContentfulPaintAllFramesTs": 9491338445,
+                  "observedFirstMeaningfulPaint": 380,
+                  "observedFirstMeaningfulPaintTs": 9491338445,
+                  "observedLargestContentfulPaint": 415,
+                  "observedLargestContentfulPaintTs": 9491373667,
+                  "observedLargestContentfulPaintAllFrames": 415,
+                  "observedLargestContentfulPaintAllFramesTs": 9491373667,
+                  "observedTraceEnd": 2927,
+                  "observedTraceEndTs": 9493885862,
+                  "observedLoad": 606,
+                  "observedLoadTs": 9491564844,
+                  "observedDomContentLoaded": 392,
+                  "observedDomContentLoadedTs": 9491350460,
+                  "observedCumulativeLayoutShift": 0.2749128044174456,
+                  "observedCumulativeLayoutShiftMainFrame": 0.2749128044174456,
+                  "observedTotalCumulativeLayoutShift": 0.2749128044174456,
+                  "observedFirstVisualChange": 378,
+                  "observedFirstVisualChangeTs": 9491336936,
+                  "observedLastVisualChange": 628,
+                  "observedLastVisualChangeTs": 9491586936,
+                  "observedSpeedIndex": 459,
+                  "observedSpeedIndexTs": 9491417495
                 },
                 {
                   "lcpInvalidated": false
@@ -5272,18 +4006,18 @@
                   "numScripts": 19,
                   "numStylesheets": 6,
                   "numFonts": 0,
-                  "numTasks": 713,
-                  "numTasksOver10ms": 5,
+                  "numTasks": 745,
+                  "numTasksOver10ms": 6,
                   "numTasksOver25ms": 1,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 11.198,
-                  "throughput": 81809295.99639101,
-                  "maxRtt": 11.198,
-                  "maxServerLatency": 0.09100000000000108,
+                  "rtt": 10.372,
+                  "throughput": 72075175.2765082,
+                  "maxRtt": 10.372,
+                  "maxServerLatency": 0.32500000000000284,
                   "totalByteWeight": 3074140,
-                  "totalTaskTime": 217.3739999999994,
+                  "totalTaskTime": 216.77699999999948,
                   "mainDocumentTransferSize": 11730
                 }
               ]
@@ -5292,7 +4026,7 @@
         }
       }
     ],
-    "screenshot": true,
+    "screenshot": false,
     "stats": {
       "grade": "F",
       "url": "https://www.archives-nationales.culture.gouv.fr",
@@ -5324,26 +4058,9 @@
       }
     ],
     "betagouv": null,
-    "ecoindex": [
-      {
-        "width": 1920,
-        "height": 1080,
-        "url": "https://www.archives-nationales.culture.gouv.fr",
-        "size": 3224.401,
-        "nodes": 616,
-        "requests": 60,
-        "grade": "D",
-        "score": 49,
-        "ges": 2.02,
-        "water": 3.03,
-        "ecoindex_version": "5.4.2",
-        "date": "2024-01-05 12:55:17.435517",
-        "page_type": null
-      }
-    ],
+    "ecoindex": null,
     "sonarcloud": null,
     "summary": {
-      "404": 12,
       "httpGrade": "D",
       "testsslExpireSoon": false,
       "testsslExpireDate": "2024-03-13T15:27:00.000Z",
@@ -5365,12 +4082,11 @@
       "statsGrade": "F",
       "declaration-a11y": "C",
       "declaration-rgpd-ml": "A",
-      "declaration-rgpd-pc": "F",
-      "ecoindexGrade": "D"
+      "declaration-rgpd-pc": "F"
     }
   },
   {
-    "404": [],
+    "404": null,
     "url": "https://www.gouvernement.fr",
     "http": {
       "url": "https://www.gouvernement.fr",
@@ -6167,21 +4883,21 @@
         "ip": "www.gouvernement.fr/192.229.221.103",
         "port": "443",
         "severity": "INFO",
-        "finding": "+252 seconds from localtime"
+        "finding": "+1596 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.gouvernement.fr/192.229.221.103",
         "port": "443",
         "severity": "INFO",
-        "finding": "1704471907"
+        "finding": "1704473251"
       },
       {
         "id": "HTTP_headerAge",
         "ip": "www.gouvernement.fr/192.229.221.103",
         "port": "443",
         "severity": "INFO",
-        "finding": "252 seconds"
+        "finding": "1596 seconds"
       },
       {
         "id": "HSTS",
@@ -6765,7 +5481,7 @@
         "ip": "www.gouvernement.fr/192.229.221.103",
         "port": "443",
         "severity": "INFO",
-        "finding": "68"
+        "finding": "67"
       }
     ],
     "thirdparties": {
@@ -6802,10 +5518,10 @@
       "cookies": [
         {
           "name": "___utmvc",
-          "value": "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",
+          "value": "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",
           "domain": "www.gouvernement.fr",
           "path": "/",
-          "expires": 1704471811,
+          "expires": 1704473155,
           "size": 2964,
           "httpOnly": false,
           "secure": false,
@@ -6816,7 +5532,7 @@
         },
         {
           "name": "incap_ses_1607_208930",
-          "value": "WP+CAQ2tdCsVVDF5oDZNFu4smGUAAAAAmzmlV1GkZ1R5qYi3huHVDA==",
+          "value": "udTtUqHxPl/7NGp5oDZNFi8ymGUAAAAATVYHy3VPoHruD+BKIikitA==",
           "domain": ".gouvernement.fr",
           "path": "/",
           "expires": -1,
@@ -6830,10 +5546,10 @@
         },
         {
           "name": "visid_incap_208930",
-          "value": "63G7ETsCRweosuZ6m4WcZO4smGUAAAAAQUIPAAAAAABoPmDiEDihw25a47W8g5fb",
+          "value": "JM0/TDscTeGi2rsqNz+HaC8ymGUAAAAAQUIPAAAAAACuzPh5G7t7bG3ASFfpAl1e",
           "domain": ".gouvernement.fr",
           "path": "/",
-          "expires": 1735975098.886357,
+          "expires": 1735975098.63167,
           "size": 82,
           "httpOnly": true,
           "secure": false,
@@ -6845,13 +5561,13 @@
       ],
       "headers": {
         "accept-ranges": "bytes",
-        "age": "135",
+        "age": "1480",
         "cache-control": "max-age=86400, public",
         "cache-tags": "homepage,website",
         "content-encoding": "gzip",
         "content-length": "447203",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Fri, 05 Jan 2024 16:23:10 GMT",
+        "date": "Fri, 05 Jan 2024 16:45:35 GMT",
         "ec-policy-version": "V3.8.6V",
         "last-modified": "Fri, 05 Jan 2024 16:20:55 GMT",
         "server": "ECAcc (mra/4699)",
@@ -6920,7 +5636,7 @@
         },
         {
           "hostname": "via.batch.com",
-          "ip": "209.126.44.247",
+          "ip": "209.126.44.241",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -7069,8 +5785,15 @@
         },
         {
           "hostname": "ws.batch.com",
-          "ip": "54.36.246.133",
+          "ip": "147.135.182.14",
           "geoip": {
+            "city": {
+              "geoname_id": 3017178,
+              "names": {
+                "en": "Fresnes",
+                "ru": "Френ"
+              }
+            },
             "continent": {
               "code": "EU",
               "geoname_id": 6255148,
@@ -7101,10 +5824,13 @@
               }
             },
             "location": {
-              "accuracy_radius": 500,
-              "latitude": 48.8582,
-              "longitude": 2.3387,
+              "accuracy_radius": 1000,
+              "latitude": 48.7529,
+              "longitude": 2.3224,
               "time_zone": "Europe/Paris"
+            },
+            "postal": {
+              "code": "94260"
             },
             "registered_country": {
               "geoname_id": 3017382,
@@ -7120,7 +5846,30 @@
                 "ru": "Франция",
                 "zh-CN": "法国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 3012874,
+                "iso_code": "IDF",
+                "names": {
+                  "de": "Île-de-France",
+                  "en": "Île-de-France",
+                  "es": "Isla de Francia",
+                  "fr": "Île-de-France",
+                  "pt-BR": "Ilha de França"
+                }
+              },
+              {
+                "geoname_id": 2971090,
+                "iso_code": "94",
+                "names": {
+                  "de": "Val-de-Marne",
+                  "en": "Val-de-Marne",
+                  "es": "Valle de Marne",
+                  "fr": "Val-de-Marne"
+                }
+              }
+            ]
           }
         }
       ]
@@ -7410,265 +6159,13 @@
         }
       ]
     },
-    "zap": {
-      "@programName": "ZAP",
-      "@version": "2.14.0",
-      "@generated": "Fri, 5 Jan 2024 14:40:43",
-      "site": [
-        {
-          "@name": "https://www.gouvernement.fr",
-          "@host": "www.gouvernement.fr",
-          "@port": "443",
-          "@ssl": "true",
-          "alerts": [
-            {
-              "name": "Absence of Anti-CSRF Tokens",
-              "riskcode": "2",
-              "confidence": "1",
-              "riskdesc": "Medium (Low)",
-              "desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>"
-            },
-            {
-              "name": "CSP: Wildcard Directive",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
-            },
-            {
-              "name": "CSP: script-src unsafe-inline",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
-            },
-            {
-              "name": "CSP: style-src unsafe-inline",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
-            },
-            {
-              "name": "Content Security Policy (CSP) Header Not Set",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
-            },
-            {
-              "name": "Sub Resource Integrity Attribute Missing",
-              "riskcode": "2",
-              "confidence": "3",
-              "riskdesc": "Medium (High)",
-              "desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>"
-            },
-            {
-              "name": "Vulnerable JS Library",
-              "riskcode": "2",
-              "confidence": "2",
-              "riskdesc": "Medium (Medium)",
-              "desc": "<p>The identified library jquery, version 1.7 is vulnerable.</p>"
-            },
-            {
-              "name": "Big Redirect Detected (Potential Sensitive Information Leak)",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>The server has responded with a redirect that seems to provide a large response. This may indicate that although the server sent a redirect it also responded with body content (which may include sensitive details, PII, etc.).</p>"
-            },
-            {
-              "name": "Cookie No HttpOnly Flag",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>"
-            },
-            {
-              "name": "Cookie Without Secure Flag",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</p>"
-            },
-            {
-              "name": "Cookie without SameSite Attribute",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>"
-            },
-            {
-              "name": "Cross-Domain JavaScript Source File Inclusion",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>The page includes one or more script files from a third-party domain.</p>"
-            },
-            {
-              "name": "Dangerous JS Functions",
-              "riskcode": "1",
-              "confidence": "1",
-              "riskdesc": "Low (Low)",
-              "desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>"
-            },
-            {
-              "name": "Permissions Policy Header Not Set",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>"
-            },
-            {
-              "name": "Private IP Disclosure",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>A private IP (such as 10.x.x.x, 172.x.x.x, 192.168.x.x) or an Amazon EC2 private hostname (for example, ip-10-0-56-78) has been found in the HTTP response body. This information might be helpful for further attacks targeting internal systems.</p>"
-            },
-            {
-              "name": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
-              "riskcode": "1",
-              "confidence": "3",
-              "riskdesc": "Low (High)",
-              "desc": "<p>The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>"
-            },
-            {
-              "name": "Strict-Transport-Security Header Not Set",
-              "riskcode": "1",
-              "confidence": "3",
-              "riskdesc": "Low (High)",
-              "desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>"
-            },
-            {
-              "name": "Timestamp Disclosure - Unix",
-              "riskcode": "1",
-              "confidence": "1",
-              "riskdesc": "Low (Low)",
-              "desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>"
-            },
-            {
-              "name": "X-Content-Type-Options Header Missing",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>"
-            },
-            {
-              "name": "Base64 Disclosure",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>"
-            },
-            {
-              "name": "Charset Mismatch (Header Versus Meta Content-Type Charset)",
-              "riskcode": "0",
-              "confidence": "1",
-              "riskdesc": "Informational (Low)",
-              "desc": "<p>This check identifies responses where the HTTP Content-Type header declares a charset different from the charset defined by the body of the HTML or XML. When there's a charset mismatch between the HTTP header and content body Web browsers can be forced into an undesirable content-sniffing mode to determine the content's correct character set.</p><p></p><p>An attacker could manipulate content on the page to be interpreted in an encoding of their choice. For example, if an attacker can control content at the beginning of the page, they could inject script using UTF-7 encoded text and manipulate some browsers into interpreting that text.</p>"
-            },
-            {
-              "name": "Information Disclosure - Suspicious Comments",
-              "riskcode": "0",
-              "confidence": "1",
-              "riskdesc": "Informational (Low)",
-              "desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>"
-            },
-            {
-              "name": "Loosely Scoped Cookie",
-              "riskcode": "0",
-              "confidence": "1",
-              "riskdesc": "Informational (Low)",
-              "desc": "<p>Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.</p>"
-            },
-            {
-              "name": "Modern Web Application",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>"
-            },
-            {
-              "name": "Non-Storable Content",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>"
-            },
-            {
-              "name": "Re-examine Cache-control Directives",
-              "riskcode": "0",
-              "confidence": "1",
-              "riskdesc": "Informational (Low)",
-              "desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>"
-            },
-            {
-              "name": "Retrieved from Cache",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p>"
-            },
-            {
-              "name": "Sec-Fetch-Dest Header is Missing",
-              "riskcode": "0",
-              "confidence": "3",
-              "riskdesc": "Informational (High)",
-              "desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>"
-            },
-            {
-              "name": "Sec-Fetch-Mode Header is Missing",
-              "riskcode": "0",
-              "confidence": "3",
-              "riskdesc": "Informational (High)",
-              "desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>"
-            },
-            {
-              "name": "Sec-Fetch-Site Header is Missing",
-              "riskcode": "0",
-              "confidence": "3",
-              "riskdesc": "Informational (High)",
-              "desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>"
-            },
-            {
-              "name": "Sec-Fetch-User Header is Missing",
-              "riskcode": "0",
-              "confidence": "3",
-              "riskdesc": "Informational (High)",
-              "desc": "<p>Specifies if a navigation request was initiated by a user.</p>"
-            },
-            {
-              "name": "Session Management Response Identified",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>"
-            },
-            {
-              "name": "Storable and Cacheable Content",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>"
-            },
-            {
-              "name": "Storable but Non-Cacheable Content",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>"
-            }
-          ]
-        }
-      ]
-    },
+    "zap": null,
     "nuclei": [],
     "lhr": [
       {
         "requestedUrl": "https://www.gouvernement.fr/",
         "finalUrl": "https://www.gouvernement.fr/",
-        "fetchTime": "2024-01-05T16:24:32.409Z",
+        "fetchTime": "2024-01-05T16:46:56.146Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -7679,7 +6176,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.16174964904785155
+            "score": 0.16175155639648436
           },
           "accessibility": {
             "title": "Accessibility",
@@ -7731,53 +6228,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 13983,
+            "numericValue": 13668,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3810,
-                  "firstMeaningfulPaint": 3810,
-                  "largestContentfulPaint": 12958,
-                  "interactive": 13983,
-                  "speedIndex": 4251,
-                  "totalBlockingTime": 1071,
-                  "maxPotentialFID": 504,
+                  "firstContentfulPaint": 3717,
+                  "firstMeaningfulPaint": 3717,
+                  "largestContentfulPaint": 12814,
+                  "interactive": 13668,
+                  "speedIndex": 3937,
+                  "totalBlockingTime": 1078,
+                  "maxPotentialFID": 487,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftMainFrame": 0,
                   "totalCumulativeLayoutShift": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 8343564815,
+                  "observedTimeOriginTs": 9687311113,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 8343564815,
-                  "observedFirstPaint": 278,
-                  "observedFirstPaintTs": 8343843233,
-                  "observedFirstContentfulPaint": 278,
-                  "observedFirstContentfulPaintTs": 8343843233,
-                  "observedFirstContentfulPaintAllFrames": 278,
-                  "observedFirstContentfulPaintAllFramesTs": 8343843233,
-                  "observedFirstMeaningfulPaint": 278,
-                  "observedFirstMeaningfulPaintTs": 8343843233,
-                  "observedLargestContentfulPaint": 1272,
-                  "observedLargestContentfulPaintTs": 8344836690,
-                  "observedLargestContentfulPaintAllFrames": 1272,
-                  "observedLargestContentfulPaintAllFramesTs": 8344836690,
-                  "observedTraceEnd": 4466,
-                  "observedTraceEndTs": 8348030717,
-                  "observedLoad": 1096,
-                  "observedLoadTs": 8344660967,
-                  "observedDomContentLoaded": 695,
-                  "observedDomContentLoadedTs": 8344259662,
+                  "observedNavigationStartTs": 9687311113,
+                  "observedFirstPaint": 317,
+                  "observedFirstPaintTs": 9687628254,
+                  "observedFirstContentfulPaint": 317,
+                  "observedFirstContentfulPaintTs": 9687628254,
+                  "observedFirstContentfulPaintAllFrames": 317,
+                  "observedFirstContentfulPaintAllFramesTs": 9687628254,
+                  "observedFirstMeaningfulPaint": 317,
+                  "observedFirstMeaningfulPaintTs": 9687628254,
+                  "observedLargestContentfulPaint": 1105,
+                  "observedLargestContentfulPaintTs": 9688415756,
+                  "observedLargestContentfulPaintAllFrames": 1105,
+                  "observedLargestContentfulPaintAllFramesTs": 9688415756,
+                  "observedTraceEnd": 4326,
+                  "observedTraceEndTs": 9691636621,
+                  "observedLoad": 940,
+                  "observedLoadTs": 9688251456,
+                  "observedDomContentLoaded": 555,
+                  "observedDomContentLoadedTs": 9687865833,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftMainFrame": 0,
                   "observedTotalCumulativeLayoutShift": 0,
-                  "observedFirstVisualChange": 284,
-                  "observedFirstVisualChangeTs": 8343848815,
-                  "observedLastVisualChange": 1284,
-                  "observedLastVisualChangeTs": 8344848815,
-                  "observedSpeedIndex": 815,
-                  "observedSpeedIndexTs": 8344379545
+                  "observedFirstVisualChange": 318,
+                  "observedFirstVisualChangeTs": 9687629113,
+                  "observedLastVisualChange": 1118,
+                  "observedLastVisualChangeTs": 9688429113,
+                  "observedSpeedIndex": 742,
+                  "observedSpeedIndexTs": 9688053129
                 },
                 {
                   "lcpInvalidated": false
@@ -7799,19 +6296,19 @@
                   "numScripts": 30,
                   "numStylesheets": 4,
                   "numFonts": 4,
-                  "numTasks": 1798,
+                  "numTasks": 1826,
                   "numTasksOver10ms": 18,
-                  "numTasksOver25ms": 11,
-                  "numTasksOver50ms": 4,
-                  "numTasksOver100ms": 1,
+                  "numTasksOver25ms": 9,
+                  "numTasksOver50ms": 5,
+                  "numTasksOver100ms": 2,
                   "numTasksOver500ms": 0,
-                  "rtt": 9.241,
-                  "throughput": 48979542.94362332,
-                  "maxRtt": 108.255,
-                  "maxServerLatency": 99.57600000000001,
-                  "totalByteWeight": 2821982,
-                  "totalTaskTime": 1042.4869999999942,
-                  "mainDocumentTransferSize": 447812
+                  "rtt": 9.09,
+                  "throughput": 65737830.68304573,
+                  "maxRtt": 104.595,
+                  "maxServerLatency": 123.69899999999998,
+                  "totalByteWeight": 2821972,
+                  "totalTaskTime": 1032.6559999999943,
+                  "mainDocumentTransferSize": 447813
                 }
               ]
             }
@@ -7819,7 +6316,7 @@
         }
       }
     ],
-    "screenshot": true,
+    "screenshot": false,
     "stats": {
       "grade": "F",
       "url": "https://www.gouvernement.fr",
@@ -7859,7 +6356,6 @@
     "ecoindex": null,
     "sonarcloud": null,
     "summary": {
-      "404": "A+",
       "httpGrade": "D",
       "testsslExpireSoon": false,
       "testsslExpireDate": "2024-07-17T21:59:00.000Z",
@@ -7868,7 +6364,7 @@
       "cookiesCount": 3,
       "trackersGrade": "C",
       "trackersCount": 7,
-      "lighthouse_performance": 0.16174964904785155,
+      "lighthouse_performance": 0.16175155639648436,
       "lighthouse_performanceGrade": "F",
       "lighthouse_accessibility": 0.93,
       "lighthouse_accessibilityGrade": "A",
