@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.librairie.ademe.fr",
+        "size": 9995.964,
+        "nodes": 1945,
+        "requests": 139,
+        "grade": "F",
+        "score": 13.0,
+        "ges": 2.74,
+        "water": 4.11,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 01:12:00.753636",
+        "page_type": null
+    }
+]
