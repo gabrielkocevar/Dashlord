@@ -1,0 +1,1124 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered + downgraded to weaker protocol"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cwe"          : "CWE-310",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA DHE-RSA-CAMELLIA128-SHA DHE-RSA-CAMELLIA256-SHA ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1 secp384r1 secp521r1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'encrypt-then-mac/#22' 'extended master secret/#23'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 300 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "cert_compression",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "N/A"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA384 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "C99CFA50090764FE7D8B5FDE7271BB68"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "16"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "E2DD3381B9A382737E3B27533875A63CC3FD7E3A"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "F0E85306939EC6B119DEC1CBA3E81AECA3F14100CF2413C6DBB9CAA23F22BEB5"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "www.participation-citoyenne.gouv.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "www.plus.transformation.gouv.fr"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "www.participation-citoyenne.gouv.fr participation-citoyenne.gouv.fr preprod.participation-citoyenne.gouv.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN and CN (SNI mandatory)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "307 >= 60 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-11-07 00:00"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-11-07 23:59"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://ocsp.sectigo.com"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "issue=certigna.com, issue=sectigo.com"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Gandi RSA Domain Validation Secure Server CA 3 (Gandi from FR)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "F0104FF17274608F1A18A1E1EABF8E68A51F500A87E2EFA22ECB622763FEF4CF"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-08-02 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2033-08-01 23:59"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Gandi RSA Domain Validation Secure Server CA 3 <-- USERTrust RSA Certification Authority"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-1268050 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1703170521"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Permissions-Policy_multiple",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple Permissions-Policy headers. Using first header: interest-cohort=()"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "interest-cohort=()"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1; mode=block"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "strict-origin"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=84600, public"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "x-varnish: 1787357via: 1.1 varnish (Varnish/6.6)"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable, no RSA key transport cipher"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "no protocol below TLS 1.2 offered"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=F0E85306939EC6B119DEC1CBA3E81AECA3F14100CF2413C6DBB9CAA23F22BEB5"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "RFC3526/Oakley Group 14"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "not vulnerable, no SSL3 or TLS1"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "27"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "81"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "A+"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "www.participation-citoyenne.gouv.fr/51.68.27.186",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "94"
+          }
+]

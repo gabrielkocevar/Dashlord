@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.participation-citoyenne.gouv.fr",
+        "size": 6780.908,
+        "nodes": 559,
+        "requests": 65,
+        "grade": "D",
+        "score": 47.0,
+        "ges": 2.06,
+        "water": 3.09,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 07:00:38.236685",
+        "page_type": null
+    }
+]

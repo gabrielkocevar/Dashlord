@@ -1,0 +1,251 @@
+{
+  "trackers": [
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/load.js?domain=participation-citoyenne.gouv.fr&uuid=f62f757cd630977b68d37de99c619c83b5c46644"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn.tarteaucitron.io/lang/tarteaucitron.en.min.js?v=20230203"
+    },
+    {
+      "type": "unknown",
+      "url": "https://cdn.tarteaucitron.io/tarteaucitron.services.min.js?v=20230203"
+    },
+    {
+      "type": "unknown",
+      "url": "https://tarteaucitron.io/log/?account=f62f757cd630977b68d37de99c619c83b5c46644&domain=participation-citoyenne.gouv.fr&status=!matomocloud%3Dfalse&_time=1704437974613"
+    }
+  ],
+  "cookies": [],
+  "headers": {
+    "connection": "Keep-Alive",
+    "date": "Thu, 21 Dec 2023 14:55:21 GMT",
+    "keep-alive": "timeout=5, max=300",
+    "accept-ranges": "bytes",
+    "age": "0",
+    "cache-control": "max-age=84600, public",
+    "content-language": "fr",
+    "content-length": "38519",
+    "content-type": "text/html; charset=UTF-8",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "permissions-policy": "interest-cohort=()\ninterest-cohort=()\naccelerometer=(), autoplay=(), camera=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(self), usb=()",
+    "referrer-policy": "strict-origin",
+    "strict-transport-security": "max-age=63072000; includeSubDomains; preload;",
+    "via": "1.1 varnish (Varnish/6.6)",
+    "x-content-type-options": "nosniff",
+    "x-drupal-dynamic-cache": "MISS",
+    "x-frame-options": "SAMEORIGIN",
+    "x-ua-compatible": "IE=edge",
+    "x-varnish": "1600975",
+    "x-xss-protection": "1; mode=block"
+  },
+  "endpoints": [
+    {
+      "hostname": "www.participation-citoyenne.gouv.fr",
+      "ip": "51.68.27.186",
+      "geoip": {
+        "city": {
+          "geoname_id": 3022530,
+          "names": {
+            "de": "Créteil",
+            "en": "Créteil",
+            "fr": "Créteil",
+            "ja": "クレテイユ",
+            "pt-BR": "Créteil",
+            "ru": "Кретей",
+            "zh-CN": "克雷泰伊"
+          }
+        },
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.7926,
+          "longitude": 2.4716,
+          "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "94000"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 3012874,
+            "iso_code": "IDF",
+            "names": {
+              "de": "Île-de-France",
+              "en": "Île-de-France",
+              "es": "Isla de Francia",
+              "fr": "Île-de-France",
+              "pt-BR": "Ilha de França"
+            }
+          },
+          {
+            "geoname_id": 2971090,
+            "iso_code": "94",
+            "names": {
+              "de": "Val-de-Marne",
+              "en": "Val-de-Marne",
+              "es": "Valle de Marne",
+              "fr": "Val-de-Marne"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "tarteaucitron.io",
+      "ip": "51.68.111.231",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    },
+    {
+      "hostname": "cdn.tarteaucitron.io",
+      "ip": "51.68.111.234",
+      "geoip": {
+        "continent": {
+          "code": "EU",
+          "geoname_id": 6255148,
+          "names": {
+            "de": "Europa",
+            "en": "Europe",
+            "es": "Europa",
+            "fr": "Europe",
+            "ja": "ヨーロッパ",
+            "pt-BR": "Europa",
+            "ru": "Европа",
+            "zh-CN": "欧洲"
+          }
+        },
+        "country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
+          "time_zone": "Europe/Paris"
+        },
+        "registered_country": {
+          "geoname_id": 3017382,
+          "is_in_european_union": true,
+          "iso_code": "FR",
+          "names": {
+            "de": "Frankreich",
+            "en": "France",
+            "es": "Francia",
+            "fr": "France",
+            "ja": "フランス共和国",
+            "pt-BR": "França",
+            "ru": "Франция",
+            "zh-CN": "法国"
+          }
+        }
+      }
+    }
+  ]
+}
