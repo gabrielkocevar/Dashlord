@@ -1,0 +1,641 @@
+[
+  [
+    {
+      "template": "dns/mx-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/mx-fingerprint",
+      "template-id": "mx-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/mx-fingerprint.yaml",
+      "info": {
+        "name": "MX Record Detection",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "mx"
+        ],
+        "description": "An MX record was detected. MX records direct emails to a mail exchange server.",
+        "reference": [
+          "https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/",
+          "https://mxtoolbox.com/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.amendes.gouv.fr.",
+      "matched-at": "www.amendes.gouv.fr",
+      "extracted-results": [
+        "10 smtp-in.as8677.net."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 45222\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t MX\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 45222\n;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t MX\n\n;; ANSWER SECTION:\nwww.amendes.gouv.fr.\t9020\tIN\tCNAME\tamendes.gouv.fr.\namendes.gouv.fr.\t10800\tIN\tMX\t10 smtp-in.as8677.net.\n",
+      "timestamp": "2024-01-05T05:02:53.877427305Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/dns-saas-service-detection.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+      "template-id": "dns-saas-service-detection",
+      "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+      "info": {
+        "name": "DNS SaaS Service Detection",
+        "author": [
+          "noah @thesubtlety",
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "service"
+        ],
+        "description": "A CNAME DNS record was discovered",
+        "reference": [
+          "https://ns1.com/resources/cname",
+          "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+          "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "www.amendes.gouv.fr.",
+      "matched-at": "www.amendes.gouv.fr",
+      "extracted-results": [
+        "amendes.gouv.fr."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 32910\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 32910\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t CNAME\n\n;; ANSWER SECTION:\nwww.amendes.gouv.fr.\t9020\tIN\tCNAME\tamendes.gouv.fr.\n",
+      "timestamp": "2024-01-05T05:02:53.877704672Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.amendes.gouv.fr.",
+      "matched-at": "www.amendes.gouv.fr",
+      "extracted-results": [
+        "certigna.fr"
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 2024\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 2024\n;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t CAA\n\n;; ANSWER SECTION:\nwww.amendes.gouv.fr.\t9020\tIN\tCNAME\tamendes.gouv.fr.\namendes.gouv.fr.\t10800\tIN\tCAA\t0 issue \"certigna.fr\"\n",
+      "timestamp": "2024-01-05T05:02:53.877780904Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/nameserver-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/nameserver-fingerprint",
+      "template-id": "nameserver-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/nameserver-fingerprint.yaml",
+      "info": {
+        "name": "NS Record Detection",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "ns"
+        ],
+        "description": "An NS record was detected. An NS record delegates a subdomain to a set of name servers.",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.amendes.gouv.fr.",
+      "matched-at": "www.amendes.gouv.fr",
+      "extracted-results": [
+        "ns-138-b.gandi.net.",
+        "ns-6-c.gandi.net.",
+        "ns-20-a.gandi.net."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 11629\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t NS\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 11629\n;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t NS\n\n;; ANSWER SECTION:\nwww.amendes.gouv.fr.\t10800\tIN\tCNAME\tamendes.gouv.fr.\namendes.gouv.fr.\t10800\tIN\tNS\tns-138-b.gandi.net.\namendes.gouv.fr.\t10800\tIN\tNS\tns-6-c.gandi.net.\namendes.gouv.fr.\t10800\tIN\tNS\tns-20-a.gandi.net.\n",
+      "timestamp": "2024-01-05T05:02:54.032315291Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/txt-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/txt-fingerprint",
+      "template-id": "txt-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/txt-fingerprint.yaml",
+      "info": {
+        "name": "DNS TXT Record Detected",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "txt"
+        ],
+        "description": "A DNS TXT record was detected. The TXT record lets a domain admin leave notes on a DNS server.",
+        "reference": [
+          "https://www.netspi.com/blog/technical/network-penetration-testing/analyzing-dns-txt-records-to-fingerprint-service-providers/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.amendes.gouv.fr.",
+      "matched-at": "www.amendes.gouv.fr",
+      "extracted-results": [
+        "\"v=spf1 include:_spf.mail.as8677.net -all\"",
+        "\"google-site-verification=Wvinw-aDUtccL3v-Sx_FhBcIh_52d6cHIDmfDSrLSmA\""
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 13371\n;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t TXT\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 13371\n;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;www.amendes.gouv.fr.\tIN\t TXT\n\n;; ANSWER SECTION:\nwww.amendes.gouv.fr.\t10800\tIN\tCNAME\tamendes.gouv.fr.\namendes.gouv.fr.\t10800\tIN\tTXT\t\"v=spf1 include:_spf.mail.as8677.net -all\"\namendes.gouv.fr.\t10800\tIN\tTXT\t\"google-site-verification=Wvinw-aDUtccL3v-Sx_FhBcIh_52d6cHIDmfDSrLSmA\"\n",
+      "timestamp": "2024-01-05T05:02:54.18076357Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/xss-deprecated-header.yaml",
+      "template-url": "https://templates.nuclei.sh/public/xss-deprecated-header",
+      "template-id": "xss-deprecated-header",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/xss-deprecated-header.yaml",
+      "info": {
+        "name": "XSS-Protection Header - Cross-Site Scripting",
+        "author": [
+          "joshlarsen"
+        ],
+        "tags": [
+          "xss",
+          "misconfig",
+          "generic"
+        ],
+        "description": "Setting the XSS-Protection header is deprecated. Setting the header to anything other than `0` can actually introduce an XSS vulnerability.",
+        "reference": [
+          "https://developer.mozilla.org/en-us/docs/web/http/headers/x-xss-protection",
+          "https://owasp.org/www-project-secure-headers/#x-xss-protection"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": null,
+          "cvss-metrics": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "type": "http",
+      "host": "https://www.amendes.gouv.fr",
+      "matched-at": "https://www.amendes.gouv.fr",
+      "extracted-results": [
+        "1; mode=block"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.amendes.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 4064\r\nCache-Control: no-cache\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Blocked: yes\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\r\n           <title>\r\n                  Security Error\r\n            </title>\r\n    <style type=\"text/css\">\r\n\t  .content {\r\n        background-color:#0066a1;\r\n        width:900px;\r\n        margin:0px auto;\r\n        margin-top:40px;\r\n        margin-bottom:10px;\r\n        border:2px solid #DDDDDD;\r\n        height: 250px;\r\n        font-family:Tahoma;\r\n\t\tcolor:white;\r\n      }    \r\n      *{\r\n        padding:0;\r\n        margin:0;\r\n      }\r\n    </style>\r\n    <script type=\"text/javascript\" language=\"JavaScript\" charset=utf-8>\r\n   \r\n  // data messages for each ISO code\r\n  var all_messages = new Array(5);\r\n  all_messages[0]=new Array(\"en\",\"The server detected an error\",\"For safety reason, your request was interrupted. Please correct your request if necessary and submit it again.\",\"Please mention the following reference of blocking :\");\r\n  all_messages[1]=new Array(\"fr\",\"Le serveur a d&eacute;tect&eacute; une erreur.\",\"Par s&eacute;curit&eacute;, votre demande a &eacute;t&eacute; interrompue. Veuillez &eacute;ventuellement corriger votre requ&ecirc;te et la soumettre &agrave; nouveau.\",\"Merci de mentionner la r&eacute;f&eacute;rence de blocage suivante :\");\r\n  all_messages[2]=new Array(\"de\",\"Der Server hat einen Fehler festgestellt.\",\"Aus Sicherheitsgr³nden unterbrochen wurde Ihre Anfrage Bitte korrigieren Sie Ihre Anfrage bei Bedarf und senden Sie es erneut.\",\"Bitte erwõhnen Sie den folgenden Verweis zu blockieren :\");\r\n  all_messages[3]=new Array(\"es\",\"El servidor ha detectado un error.\",\"Por medida de seguridad, su demanda ha sido interrumpida. Por favor, corrija eventualmente su demanda y somu tala de nuevo.\",\"Le agradecemos por mencionar la referencia de bloqueo siguiente :\");\r\n  all_messages[4]=new Array(\"it\",\"Il server ha rilevato un errore.\",\"Per sicurezza la sua richiesta &eagrave; stata interrotta. La ringrazio di corregere la richiesta e di riinviarla.\",\"La prego di indicare la seguente referenza d'errore :\");\r\n  all_messages[5]=new Array(\"nl\",\"De server heeft een fout ontdekt.\",\"Om veiligheidsredenen werd uw aanvraag onderbroken. Gelieve uw aanvraag eventueel te wijzigen vooraleer deze opnieuw in te dienen.\",\"Bedankt voor volgende blokerende referentie te melden :\");\r\n\r\n    \r\n  // return browser ISO code \r\n  function getBrowserISOCode() {\r\n    var lct=\"en\";\r\n    if (navigator.language) {\r\n      browserIsoCode=navigator.language.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userLanguage) {\r\n      browserIsoCode=navigator.userLanguage.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userAgent.indexOf(\"[\")!=-1) {\r\n      var begin=navigator.userAgent.indexOf(\"[\");\r\n      var end=navigator.userAgent.indexOf(\"]\");\r\n      browserIsoCode=navigator.userAgent.substring(begin+1, end).toLowerCase();\r\n    }\r\n    return browserIsoCode;\r\n  }\r\n  \r\n  // return message 1 from a ISO code \r\n  function getMessageFromIsoCode(isoCode, messageIndex) {\r\n    var nbMessages = all_messages.length;\r\n    // If not found, default language is EN (first item of all_messages array)\r\n    var defaultIsoCode = 0;\r\n    var message = all_messages[0][messageIndex];\r\n    for (i=0 ; i < nbMessages ; i++){\r\n      if (isoCode == all_messages[i][0] ) {\r\n        message = all_messages[i][messageIndex];\r\n      }\r\n    }\r\n    return message;\r\n  }\r\n  </script>\r\n\r\n  </head>\r\n  <body>\r\n    <div class=\"content\">\r\n    <center>\r\n      <br/><br/><br/>\r\n      <h2><script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),1))</script></h2>\r\n      <br/><br/>\r\n        <p>\r\n          <label>\r\n           <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),2))</script>\r\n            <br>\r\n            <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),3))</script> [4328044646361100532]\r\n          </label>\r\n        </p>\r\n      </center>\r\n    </div>\r\n  \r\n</body></html>\r\n",
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:03:13.33470175Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.amendes.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-permitted-cross-domain-policies",
+      "type": "http",
+      "host": "https://www.amendes.gouv.fr",
+      "matched-at": "https://www.amendes.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.amendes.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 4064\r\nCache-Control: no-cache\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Blocked: yes\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\r\n           <title>\r\n                  Security Error\r\n            </title>\r\n    <style type=\"text/css\">\r\n\t  .content {\r\n        background-color:#0066a1;\r\n        width:900px;\r\n        margin:0px auto;\r\n        margin-top:40px;\r\n        margin-bottom:10px;\r\n        border:2px solid #DDDDDD;\r\n        height: 250px;\r\n        font-family:Tahoma;\r\n\t\tcolor:white;\r\n      }    \r\n      *{\r\n        padding:0;\r\n        margin:0;\r\n      }\r\n    </style>\r\n    <script type=\"text/javascript\" language=\"JavaScript\" charset=utf-8>\r\n   \r\n  // data messages for each ISO code\r\n  var all_messages = new Array(5);\r\n  all_messages[0]=new Array(\"en\",\"The server detected an error\",\"For safety reason, your request was interrupted. Please correct your request if necessary and submit it again.\",\"Please mention the following reference of blocking :\");\r\n  all_messages[1]=new Array(\"fr\",\"Le serveur a d&eacute;tect&eacute; une erreur.\",\"Par s&eacute;curit&eacute;, votre demande a &eacute;t&eacute; interrompue. Veuillez &eacute;ventuellement corriger votre requ&ecirc;te et la soumettre &agrave; nouveau.\",\"Merci de mentionner la r&eacute;f&eacute;rence de blocage suivante :\");\r\n  all_messages[2]=new Array(\"de\",\"Der Server hat einen Fehler festgestellt.\",\"Aus Sicherheitsgr³nden unterbrochen wurde Ihre Anfrage Bitte korrigieren Sie Ihre Anfrage bei Bedarf und senden Sie es erneut.\",\"Bitte erwõhnen Sie den folgenden Verweis zu blockieren :\");\r\n  all_messages[3]=new Array(\"es\",\"El servidor ha detectado un error.\",\"Por medida de seguridad, su demanda ha sido interrumpida. Por favor, corrija eventualmente su demanda y somu tala de nuevo.\",\"Le agradecemos por mencionar la referencia de bloqueo siguiente :\");\r\n  all_messages[4]=new Array(\"it\",\"Il server ha rilevato un errore.\",\"Per sicurezza la sua richiesta &eagrave; stata interrotta. La ringrazio di corregere la richiesta e di riinviarla.\",\"La prego di indicare la seguente referenza d'errore :\");\r\n  all_messages[5]=new Array(\"nl\",\"De server heeft een fout ontdekt.\",\"Om veiligheidsredenen werd uw aanvraag onderbroken. Gelieve uw aanvraag eventueel te wijzigen vooraleer deze opnieuw in te dienen.\",\"Bedankt voor volgende blokerende referentie te melden :\");\r\n\r\n    \r\n  // return browser ISO code \r\n  function getBrowserISOCode() {\r\n    var lct=\"en\";\r\n    if (navigator.language) {\r\n      browserIsoCode=navigator.language.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userLanguage) {\r\n      browserIsoCode=navigator.userLanguage.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userAgent.indexOf(\"[\")!=-1) {\r\n      var begin=navigator.userAgent.indexOf(\"[\");\r\n      var end=navigator.userAgent.indexOf(\"]\");\r\n      browserIsoCode=navigator.userAgent.substring(begin+1, end).toLowerCase();\r\n    }\r\n    return browserIsoCode;\r\n  }\r\n  \r\n  // return message 1 from a ISO code \r\n  function getMessageFromIsoCode(isoCode, messageIndex) {\r\n    var nbMessages = all_messages.length;\r\n    // If not found, default language is EN (first item of all_messages array)\r\n    var defaultIsoCode = 0;\r\n    var message = all_messages[0][messageIndex];\r\n    for (i=0 ; i < nbMessages ; i++){\r\n      if (isoCode == all_messages[i][0] ) {\r\n        message = all_messages[i][messageIndex];\r\n      }\r\n    }\r\n    return message;\r\n  }\r\n  </script>\r\n\r\n  </head>\r\n  <body>\r\n    <div class=\"content\">\r\n    <center>\r\n      <br/><br/><br/>\r\n      <h2><script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),1))</script></h2>\r\n      <br/><br/>\r\n        <p>\r\n          <label>\r\n           <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),2))</script>\r\n            <br>\r\n            <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),3))</script> [4328044646348920658]\r\n          </label>\r\n        </p>\r\n      </center>\r\n    </div>\r\n  \r\n</body></html>\r\n",
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:04:05.671129248Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.amendes.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "https://www.amendes.gouv.fr",
+      "matched-at": "https://www.amendes.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.amendes.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 4064\r\nCache-Control: no-cache\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Blocked: yes\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\r\n           <title>\r\n                  Security Error\r\n            </title>\r\n    <style type=\"text/css\">\r\n\t  .content {\r\n        background-color:#0066a1;\r\n        width:900px;\r\n        margin:0px auto;\r\n        margin-top:40px;\r\n        margin-bottom:10px;\r\n        border:2px solid #DDDDDD;\r\n        height: 250px;\r\n        font-family:Tahoma;\r\n\t\tcolor:white;\r\n      }    \r\n      *{\r\n        padding:0;\r\n        margin:0;\r\n      }\r\n    </style>\r\n    <script type=\"text/javascript\" language=\"JavaScript\" charset=utf-8>\r\n   \r\n  // data messages for each ISO code\r\n  var all_messages = new Array(5);\r\n  all_messages[0]=new Array(\"en\",\"The server detected an error\",\"For safety reason, your request was interrupted. Please correct your request if necessary and submit it again.\",\"Please mention the following reference of blocking :\");\r\n  all_messages[1]=new Array(\"fr\",\"Le serveur a d&eacute;tect&eacute; une erreur.\",\"Par s&eacute;curit&eacute;, votre demande a &eacute;t&eacute; interrompue. Veuillez &eacute;ventuellement corriger votre requ&ecirc;te et la soumettre &agrave; nouveau.\",\"Merci de mentionner la r&eacute;f&eacute;rence de blocage suivante :\");\r\n  all_messages[2]=new Array(\"de\",\"Der Server hat einen Fehler festgestellt.\",\"Aus Sicherheitsgr³nden unterbrochen wurde Ihre Anfrage Bitte korrigieren Sie Ihre Anfrage bei Bedarf und senden Sie es erneut.\",\"Bitte erwõhnen Sie den folgenden Verweis zu blockieren :\");\r\n  all_messages[3]=new Array(\"es\",\"El servidor ha detectado un error.\",\"Por medida de seguridad, su demanda ha sido interrumpida. Por favor, corrija eventualmente su demanda y somu tala de nuevo.\",\"Le agradecemos por mencionar la referencia de bloqueo siguiente :\");\r\n  all_messages[4]=new Array(\"it\",\"Il server ha rilevato un errore.\",\"Per sicurezza la sua richiesta &eagrave; stata interrotta. La ringrazio di corregere la richiesta e di riinviarla.\",\"La prego di indicare la seguente referenza d'errore :\");\r\n  all_messages[5]=new Array(\"nl\",\"De server heeft een fout ontdekt.\",\"Om veiligheidsredenen werd uw aanvraag onderbroken. Gelieve uw aanvraag eventueel te wijzigen vooraleer deze opnieuw in te dienen.\",\"Bedankt voor volgende blokerende referentie te melden :\");\r\n\r\n    \r\n  // return browser ISO code \r\n  function getBrowserISOCode() {\r\n    var lct=\"en\";\r\n    if (navigator.language) {\r\n      browserIsoCode=navigator.language.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userLanguage) {\r\n      browserIsoCode=navigator.userLanguage.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userAgent.indexOf(\"[\")!=-1) {\r\n      var begin=navigator.userAgent.indexOf(\"[\");\r\n      var end=navigator.userAgent.indexOf(\"]\");\r\n      browserIsoCode=navigator.userAgent.substring(begin+1, end).toLowerCase();\r\n    }\r\n    return browserIsoCode;\r\n  }\r\n  \r\n  // return message 1 from a ISO code \r\n  function getMessageFromIsoCode(isoCode, messageIndex) {\r\n    var nbMessages = all_messages.length;\r\n    // If not found, default language is EN (first item of all_messages array)\r\n    var defaultIsoCode = 0;\r\n    var message = all_messages[0][messageIndex];\r\n    for (i=0 ; i < nbMessages ; i++){\r\n      if (isoCode == all_messages[i][0] ) {\r\n        message = all_messages[i][messageIndex];\r\n      }\r\n    }\r\n    return message;\r\n  }\r\n  </script>\r\n\r\n  </head>\r\n  <body>\r\n    <div class=\"content\">\r\n    <center>\r\n      <br/><br/><br/>\r\n      <h2><script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),1))</script></h2>\r\n      <br/><br/>\r\n        <p>\r\n          <label>\r\n           <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),2))</script>\r\n            <br>\r\n            <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),3))</script> [4328044646348920658]\r\n          </label>\r\n        </p>\r\n      </center>\r\n    </div>\r\n  \r\n</body></html>\r\n",
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:04:05.671187546Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.amendes.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "clear-site-data",
+      "type": "http",
+      "host": "https://www.amendes.gouv.fr",
+      "matched-at": "https://www.amendes.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.amendes.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 4064\r\nCache-Control: no-cache\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Blocked: yes\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\r\n           <title>\r\n                  Security Error\r\n            </title>\r\n    <style type=\"text/css\">\r\n\t  .content {\r\n        background-color:#0066a1;\r\n        width:900px;\r\n        margin:0px auto;\r\n        margin-top:40px;\r\n        margin-bottom:10px;\r\n        border:2px solid #DDDDDD;\r\n        height: 250px;\r\n        font-family:Tahoma;\r\n\t\tcolor:white;\r\n      }    \r\n      *{\r\n        padding:0;\r\n        margin:0;\r\n      }\r\n    </style>\r\n    <script type=\"text/javascript\" language=\"JavaScript\" charset=utf-8>\r\n   \r\n  // data messages for each ISO code\r\n  var all_messages = new Array(5);\r\n  all_messages[0]=new Array(\"en\",\"The server detected an error\",\"For safety reason, your request was interrupted. Please correct your request if necessary and submit it again.\",\"Please mention the following reference of blocking :\");\r\n  all_messages[1]=new Array(\"fr\",\"Le serveur a d&eacute;tect&eacute; une erreur.\",\"Par s&eacute;curit&eacute;, votre demande a &eacute;t&eacute; interrompue. Veuillez &eacute;ventuellement corriger votre requ&ecirc;te et la soumettre &agrave; nouveau.\",\"Merci de mentionner la r&eacute;f&eacute;rence de blocage suivante :\");\r\n  all_messages[2]=new Array(\"de\",\"Der Server hat einen Fehler festgestellt.\",\"Aus Sicherheitsgr³nden unterbrochen wurde Ihre Anfrage Bitte korrigieren Sie Ihre Anfrage bei Bedarf und senden Sie es erneut.\",\"Bitte erwõhnen Sie den folgenden Verweis zu blockieren :\");\r\n  all_messages[3]=new Array(\"es\",\"El servidor ha detectado un error.\",\"Por medida de seguridad, su demanda ha sido interrumpida. Por favor, corrija eventualmente su demanda y somu tala de nuevo.\",\"Le agradecemos por mencionar la referencia de bloqueo siguiente :\");\r\n  all_messages[4]=new Array(\"it\",\"Il server ha rilevato un errore.\",\"Per sicurezza la sua richiesta &eagrave; stata interrotta. La ringrazio di corregere la richiesta e di riinviarla.\",\"La prego di indicare la seguente referenza d'errore :\");\r\n  all_messages[5]=new Array(\"nl\",\"De server heeft een fout ontdekt.\",\"Om veiligheidsredenen werd uw aanvraag onderbroken. Gelieve uw aanvraag eventueel te wijzigen vooraleer deze opnieuw in te dienen.\",\"Bedankt voor volgende blokerende referentie te melden :\");\r\n\r\n    \r\n  // return browser ISO code \r\n  function getBrowserISOCode() {\r\n    var lct=\"en\";\r\n    if (navigator.language) {\r\n      browserIsoCode=navigator.language.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userLanguage) {\r\n      browserIsoCode=navigator.userLanguage.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userAgent.indexOf(\"[\")!=-1) {\r\n      var begin=navigator.userAgent.indexOf(\"[\");\r\n      var end=navigator.userAgent.indexOf(\"]\");\r\n      browserIsoCode=navigator.userAgent.substring(begin+1, end).toLowerCase();\r\n    }\r\n    return browserIsoCode;\r\n  }\r\n  \r\n  // return message 1 from a ISO code \r\n  function getMessageFromIsoCode(isoCode, messageIndex) {\r\n    var nbMessages = all_messages.length;\r\n    // If not found, default language is EN (first item of all_messages array)\r\n    var defaultIsoCode = 0;\r\n    var message = all_messages[0][messageIndex];\r\n    for (i=0 ; i < nbMessages ; i++){\r\n      if (isoCode == all_messages[i][0] ) {\r\n        message = all_messages[i][messageIndex];\r\n      }\r\n    }\r\n    return message;\r\n  }\r\n  </script>\r\n\r\n  </head>\r\n  <body>\r\n    <div class=\"content\">\r\n    <center>\r\n      <br/><br/><br/>\r\n      <h2><script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),1))</script></h2>\r\n      <br/><br/>\r\n        <p>\r\n          <label>\r\n           <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),2))</script>\r\n            <br>\r\n            <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),3))</script> [4328044646348920658]\r\n          </label>\r\n        </p>\r\n      </center>\r\n    </div>\r\n  \r\n</body></html>\r\n",
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:04:05.671198747Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.amendes.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "https://www.amendes.gouv.fr",
+      "matched-at": "https://www.amendes.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.amendes.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 4064\r\nCache-Control: no-cache\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Blocked: yes\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\r\n           <title>\r\n                  Security Error\r\n            </title>\r\n    <style type=\"text/css\">\r\n\t  .content {\r\n        background-color:#0066a1;\r\n        width:900px;\r\n        margin:0px auto;\r\n        margin-top:40px;\r\n        margin-bottom:10px;\r\n        border:2px solid #DDDDDD;\r\n        height: 250px;\r\n        font-family:Tahoma;\r\n\t\tcolor:white;\r\n      }    \r\n      *{\r\n        padding:0;\r\n        margin:0;\r\n      }\r\n    </style>\r\n    <script type=\"text/javascript\" language=\"JavaScript\" charset=utf-8>\r\n   \r\n  // data messages for each ISO code\r\n  var all_messages = new Array(5);\r\n  all_messages[0]=new Array(\"en\",\"The server detected an error\",\"For safety reason, your request was interrupted. Please correct your request if necessary and submit it again.\",\"Please mention the following reference of blocking :\");\r\n  all_messages[1]=new Array(\"fr\",\"Le serveur a d&eacute;tect&eacute; une erreur.\",\"Par s&eacute;curit&eacute;, votre demande a &eacute;t&eacute; interrompue. Veuillez &eacute;ventuellement corriger votre requ&ecirc;te et la soumettre &agrave; nouveau.\",\"Merci de mentionner la r&eacute;f&eacute;rence de blocage suivante :\");\r\n  all_messages[2]=new Array(\"de\",\"Der Server hat einen Fehler festgestellt.\",\"Aus Sicherheitsgr³nden unterbrochen wurde Ihre Anfrage Bitte korrigieren Sie Ihre Anfrage bei Bedarf und senden Sie es erneut.\",\"Bitte erwõhnen Sie den folgenden Verweis zu blockieren :\");\r\n  all_messages[3]=new Array(\"es\",\"El servidor ha detectado un error.\",\"Por medida de seguridad, su demanda ha sido interrumpida. Por favor, corrija eventualmente su demanda y somu tala de nuevo.\",\"Le agradecemos por mencionar la referencia de bloqueo siguiente :\");\r\n  all_messages[4]=new Array(\"it\",\"Il server ha rilevato un errore.\",\"Per sicurezza la sua richiesta &eagrave; stata interrotta. La ringrazio di corregere la richiesta e di riinviarla.\",\"La prego di indicare la seguente referenza d'errore :\");\r\n  all_messages[5]=new Array(\"nl\",\"De server heeft een fout ontdekt.\",\"Om veiligheidsredenen werd uw aanvraag onderbroken. Gelieve uw aanvraag eventueel te wijzigen vooraleer deze opnieuw in te dienen.\",\"Bedankt voor volgende blokerende referentie te melden :\");\r\n\r\n    \r\n  // return browser ISO code \r\n  function getBrowserISOCode() {\r\n    var lct=\"en\";\r\n    if (navigator.language) {\r\n      browserIsoCode=navigator.language.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userLanguage) {\r\n      browserIsoCode=navigator.userLanguage.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userAgent.indexOf(\"[\")!=-1) {\r\n      var begin=navigator.userAgent.indexOf(\"[\");\r\n      var end=navigator.userAgent.indexOf(\"]\");\r\n      browserIsoCode=navigator.userAgent.substring(begin+1, end).toLowerCase();\r\n    }\r\n    return browserIsoCode;\r\n  }\r\n  \r\n  // return message 1 from a ISO code \r\n  function getMessageFromIsoCode(isoCode, messageIndex) {\r\n    var nbMessages = all_messages.length;\r\n    // If not found, default language is EN (first item of all_messages array)\r\n    var defaultIsoCode = 0;\r\n    var message = all_messages[0][messageIndex];\r\n    for (i=0 ; i < nbMessages ; i++){\r\n      if (isoCode == all_messages[i][0] ) {\r\n        message = all_messages[i][messageIndex];\r\n      }\r\n    }\r\n    return message;\r\n  }\r\n  </script>\r\n\r\n  </head>\r\n  <body>\r\n    <div class=\"content\">\r\n    <center>\r\n      <br/><br/><br/>\r\n      <h2><script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),1))</script></h2>\r\n      <br/><br/>\r\n        <p>\r\n          <label>\r\n           <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),2))</script>\r\n            <br>\r\n            <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),3))</script> [4328044646348920658]\r\n          </label>\r\n        </p>\r\n      </center>\r\n    </div>\r\n  \r\n</body></html>\r\n",
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:04:05.671214446Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.amendes.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "https://www.amendes.gouv.fr",
+      "matched-at": "https://www.amendes.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.amendes.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 4064\r\nCache-Control: no-cache\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Blocked: yes\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\r\n           <title>\r\n                  Security Error\r\n            </title>\r\n    <style type=\"text/css\">\r\n\t  .content {\r\n        background-color:#0066a1;\r\n        width:900px;\r\n        margin:0px auto;\r\n        margin-top:40px;\r\n        margin-bottom:10px;\r\n        border:2px solid #DDDDDD;\r\n        height: 250px;\r\n        font-family:Tahoma;\r\n\t\tcolor:white;\r\n      }    \r\n      *{\r\n        padding:0;\r\n        margin:0;\r\n      }\r\n    </style>\r\n    <script type=\"text/javascript\" language=\"JavaScript\" charset=utf-8>\r\n   \r\n  // data messages for each ISO code\r\n  var all_messages = new Array(5);\r\n  all_messages[0]=new Array(\"en\",\"The server detected an error\",\"For safety reason, your request was interrupted. Please correct your request if necessary and submit it again.\",\"Please mention the following reference of blocking :\");\r\n  all_messages[1]=new Array(\"fr\",\"Le serveur a d&eacute;tect&eacute; une erreur.\",\"Par s&eacute;curit&eacute;, votre demande a &eacute;t&eacute; interrompue. Veuillez &eacute;ventuellement corriger votre requ&ecirc;te et la soumettre &agrave; nouveau.\",\"Merci de mentionner la r&eacute;f&eacute;rence de blocage suivante :\");\r\n  all_messages[2]=new Array(\"de\",\"Der Server hat einen Fehler festgestellt.\",\"Aus Sicherheitsgr³nden unterbrochen wurde Ihre Anfrage Bitte korrigieren Sie Ihre Anfrage bei Bedarf und senden Sie es erneut.\",\"Bitte erwõhnen Sie den folgenden Verweis zu blockieren :\");\r\n  all_messages[3]=new Array(\"es\",\"El servidor ha detectado un error.\",\"Por medida de seguridad, su demanda ha sido interrumpida. Por favor, corrija eventualmente su demanda y somu tala de nuevo.\",\"Le agradecemos por mencionar la referencia de bloqueo siguiente :\");\r\n  all_messages[4]=new Array(\"it\",\"Il server ha rilevato un errore.\",\"Per sicurezza la sua richiesta &eagrave; stata interrotta. La ringrazio di corregere la richiesta e di riinviarla.\",\"La prego di indicare la seguente referenza d'errore :\");\r\n  all_messages[5]=new Array(\"nl\",\"De server heeft een fout ontdekt.\",\"Om veiligheidsredenen werd uw aanvraag onderbroken. Gelieve uw aanvraag eventueel te wijzigen vooraleer deze opnieuw in te dienen.\",\"Bedankt voor volgende blokerende referentie te melden :\");\r\n\r\n    \r\n  // return browser ISO code \r\n  function getBrowserISOCode() {\r\n    var lct=\"en\";\r\n    if (navigator.language) {\r\n      browserIsoCode=navigator.language.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userLanguage) {\r\n      browserIsoCode=navigator.userLanguage.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userAgent.indexOf(\"[\")!=-1) {\r\n      var begin=navigator.userAgent.indexOf(\"[\");\r\n      var end=navigator.userAgent.indexOf(\"]\");\r\n      browserIsoCode=navigator.userAgent.substring(begin+1, end).toLowerCase();\r\n    }\r\n    return browserIsoCode;\r\n  }\r\n  \r\n  // return message 1 from a ISO code \r\n  function getMessageFromIsoCode(isoCode, messageIndex) {\r\n    var nbMessages = all_messages.length;\r\n    // If not found, default language is EN (first item of all_messages array)\r\n    var defaultIsoCode = 0;\r\n    var message = all_messages[0][messageIndex];\r\n    for (i=0 ; i < nbMessages ; i++){\r\n      if (isoCode == all_messages[i][0] ) {\r\n        message = all_messages[i][messageIndex];\r\n      }\r\n    }\r\n    return message;\r\n  }\r\n  </script>\r\n\r\n  </head>\r\n  <body>\r\n    <div class=\"content\">\r\n    <center>\r\n      <br/><br/><br/>\r\n      <h2><script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),1))</script></h2>\r\n      <br/><br/>\r\n        <p>\r\n          <label>\r\n           <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),2))</script>\r\n            <br>\r\n            <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),3))</script> [4328044646348920658]\r\n          </label>\r\n        </p>\r\n      </center>\r\n    </div>\r\n  \r\n</body></html>\r\n",
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:04:05.671228473Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.amendes.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "https://www.amendes.gouv.fr",
+      "matched-at": "https://www.amendes.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.amendes.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 4064\r\nCache-Control: no-cache\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Blocked: yes\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\r\n           <title>\r\n                  Security Error\r\n            </title>\r\n    <style type=\"text/css\">\r\n\t  .content {\r\n        background-color:#0066a1;\r\n        width:900px;\r\n        margin:0px auto;\r\n        margin-top:40px;\r\n        margin-bottom:10px;\r\n        border:2px solid #DDDDDD;\r\n        height: 250px;\r\n        font-family:Tahoma;\r\n\t\tcolor:white;\r\n      }    \r\n      *{\r\n        padding:0;\r\n        margin:0;\r\n      }\r\n    </style>\r\n    <script type=\"text/javascript\" language=\"JavaScript\" charset=utf-8>\r\n   \r\n  // data messages for each ISO code\r\n  var all_messages = new Array(5);\r\n  all_messages[0]=new Array(\"en\",\"The server detected an error\",\"For safety reason, your request was interrupted. Please correct your request if necessary and submit it again.\",\"Please mention the following reference of blocking :\");\r\n  all_messages[1]=new Array(\"fr\",\"Le serveur a d&eacute;tect&eacute; une erreur.\",\"Par s&eacute;curit&eacute;, votre demande a &eacute;t&eacute; interrompue. Veuillez &eacute;ventuellement corriger votre requ&ecirc;te et la soumettre &agrave; nouveau.\",\"Merci de mentionner la r&eacute;f&eacute;rence de blocage suivante :\");\r\n  all_messages[2]=new Array(\"de\",\"Der Server hat einen Fehler festgestellt.\",\"Aus Sicherheitsgr³nden unterbrochen wurde Ihre Anfrage Bitte korrigieren Sie Ihre Anfrage bei Bedarf und senden Sie es erneut.\",\"Bitte erwõhnen Sie den folgenden Verweis zu blockieren :\");\r\n  all_messages[3]=new Array(\"es\",\"El servidor ha detectado un error.\",\"Por medida de seguridad, su demanda ha sido interrumpida. Por favor, corrija eventualmente su demanda y somu tala de nuevo.\",\"Le agradecemos por mencionar la referencia de bloqueo siguiente :\");\r\n  all_messages[4]=new Array(\"it\",\"Il server ha rilevato un errore.\",\"Per sicurezza la sua richiesta &eagrave; stata interrotta. La ringrazio di corregere la richiesta e di riinviarla.\",\"La prego di indicare la seguente referenza d'errore :\");\r\n  all_messages[5]=new Array(\"nl\",\"De server heeft een fout ontdekt.\",\"Om veiligheidsredenen werd uw aanvraag onderbroken. Gelieve uw aanvraag eventueel te wijzigen vooraleer deze opnieuw in te dienen.\",\"Bedankt voor volgende blokerende referentie te melden :\");\r\n\r\n    \r\n  // return browser ISO code \r\n  function getBrowserISOCode() {\r\n    var lct=\"en\";\r\n    if (navigator.language) {\r\n      browserIsoCode=navigator.language.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userLanguage) {\r\n      browserIsoCode=navigator.userLanguage.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userAgent.indexOf(\"[\")!=-1) {\r\n      var begin=navigator.userAgent.indexOf(\"[\");\r\n      var end=navigator.userAgent.indexOf(\"]\");\r\n      browserIsoCode=navigator.userAgent.substring(begin+1, end).toLowerCase();\r\n    }\r\n    return browserIsoCode;\r\n  }\r\n  \r\n  // return message 1 from a ISO code \r\n  function getMessageFromIsoCode(isoCode, messageIndex) {\r\n    var nbMessages = all_messages.length;\r\n    // If not found, default language is EN (first item of all_messages array)\r\n    var defaultIsoCode = 0;\r\n    var message = all_messages[0][messageIndex];\r\n    for (i=0 ; i < nbMessages ; i++){\r\n      if (isoCode == all_messages[i][0] ) {\r\n        message = all_messages[i][messageIndex];\r\n      }\r\n    }\r\n    return message;\r\n  }\r\n  </script>\r\n\r\n  </head>\r\n  <body>\r\n    <div class=\"content\">\r\n    <center>\r\n      <br/><br/><br/>\r\n      <h2><script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),1))</script></h2>\r\n      <br/><br/>\r\n        <p>\r\n          <label>\r\n           <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),2))</script>\r\n            <br>\r\n            <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),3))</script> [4328044646348920658]\r\n          </label>\r\n        </p>\r\n      </center>\r\n    </div>\r\n  \r\n</body></html>\r\n",
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:04:05.671242679Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.amendes.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "https://www.amendes.gouv.fr",
+      "matched-at": "https://www.amendes.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.amendes.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 403 Forbidden\r\nConnection: close\r\nContent-Length: 4064\r\nCache-Control: no-cache\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Blocked: yes\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<!DOCTYPE html>\r\n<html><head>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\r\n           <title>\r\n                  Security Error\r\n            </title>\r\n    <style type=\"text/css\">\r\n\t  .content {\r\n        background-color:#0066a1;\r\n        width:900px;\r\n        margin:0px auto;\r\n        margin-top:40px;\r\n        margin-bottom:10px;\r\n        border:2px solid #DDDDDD;\r\n        height: 250px;\r\n        font-family:Tahoma;\r\n\t\tcolor:white;\r\n      }    \r\n      *{\r\n        padding:0;\r\n        margin:0;\r\n      }\r\n    </style>\r\n    <script type=\"text/javascript\" language=\"JavaScript\" charset=utf-8>\r\n   \r\n  // data messages for each ISO code\r\n  var all_messages = new Array(5);\r\n  all_messages[0]=new Array(\"en\",\"The server detected an error\",\"For safety reason, your request was interrupted. Please correct your request if necessary and submit it again.\",\"Please mention the following reference of blocking :\");\r\n  all_messages[1]=new Array(\"fr\",\"Le serveur a d&eacute;tect&eacute; une erreur.\",\"Par s&eacute;curit&eacute;, votre demande a &eacute;t&eacute; interrompue. Veuillez &eacute;ventuellement corriger votre requ&ecirc;te et la soumettre &agrave; nouveau.\",\"Merci de mentionner la r&eacute;f&eacute;rence de blocage suivante :\");\r\n  all_messages[2]=new Array(\"de\",\"Der Server hat einen Fehler festgestellt.\",\"Aus Sicherheitsgr³nden unterbrochen wurde Ihre Anfrage Bitte korrigieren Sie Ihre Anfrage bei Bedarf und senden Sie es erneut.\",\"Bitte erwõhnen Sie den folgenden Verweis zu blockieren :\");\r\n  all_messages[3]=new Array(\"es\",\"El servidor ha detectado un error.\",\"Por medida de seguridad, su demanda ha sido interrumpida. Por favor, corrija eventualmente su demanda y somu tala de nuevo.\",\"Le agradecemos por mencionar la referencia de bloqueo siguiente :\");\r\n  all_messages[4]=new Array(\"it\",\"Il server ha rilevato un errore.\",\"Per sicurezza la sua richiesta &eagrave; stata interrotta. La ringrazio di corregere la richiesta e di riinviarla.\",\"La prego di indicare la seguente referenza d'errore :\");\r\n  all_messages[5]=new Array(\"nl\",\"De server heeft een fout ontdekt.\",\"Om veiligheidsredenen werd uw aanvraag onderbroken. Gelieve uw aanvraag eventueel te wijzigen vooraleer deze opnieuw in te dienen.\",\"Bedankt voor volgende blokerende referentie te melden :\");\r\n\r\n    \r\n  // return browser ISO code \r\n  function getBrowserISOCode() {\r\n    var lct=\"en\";\r\n    if (navigator.language) {\r\n      browserIsoCode=navigator.language.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userLanguage) {\r\n      browserIsoCode=navigator.userLanguage.toLowerCase().substring(0, 2);\r\n    } else if (navigator.userAgent.indexOf(\"[\")!=-1) {\r\n      var begin=navigator.userAgent.indexOf(\"[\");\r\n      var end=navigator.userAgent.indexOf(\"]\");\r\n      browserIsoCode=navigator.userAgent.substring(begin+1, end).toLowerCase();\r\n    }\r\n    return browserIsoCode;\r\n  }\r\n  \r\n  // return message 1 from a ISO code \r\n  function getMessageFromIsoCode(isoCode, messageIndex) {\r\n    var nbMessages = all_messages.length;\r\n    // If not found, default language is EN (first item of all_messages array)\r\n    var defaultIsoCode = 0;\r\n    var message = all_messages[0][messageIndex];\r\n    for (i=0 ; i < nbMessages ; i++){\r\n      if (isoCode == all_messages[i][0] ) {\r\n        message = all_messages[i][messageIndex];\r\n      }\r\n    }\r\n    return message;\r\n  }\r\n  </script>\r\n\r\n  </head>\r\n  <body>\r\n    <div class=\"content\">\r\n    <center>\r\n      <br/><br/><br/>\r\n      <h2><script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),1))</script></h2>\r\n      <br/><br/>\r\n        <p>\r\n          <label>\r\n           <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),2))</script>\r\n            <br>\r\n            <script type=\"text/javascript\" language=\"JavaScript\">document.write(getMessageFromIsoCode(getBrowserISOCode(),3))</script> [4328044646348920658]\r\n          </label>\r\n        </p>\r\n      </center>\r\n    </div>\r\n  \r\n</body></html>\r\n",
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:04:05.671256505Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.amendes.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.amendes.gouv.fr",
+      "matched-at": "www.amendes.gouv.fr:443",
+      "extracted-results": [
+        "DHIMYOTIS"
+      ],
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:07:39.789361632Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.amendes.gouv.fr",
+      "matched-at": "www.amendes.gouv.fr:443",
+      "extracted-results": [
+        "amendes.gouv.fr",
+        "www.amendes.gouv.fr"
+      ],
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:07:39.789498166Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.amendes.gouv.fr",
+      "matched-at": "www.amendes.gouv.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:07:41.140901867Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.amendes.gouv.fr",
+      "matched-at": "www.amendes.gouv.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "160.92.148.108",
+      "timestamp": "2024-01-05T05:07:42.690509926Z",
+      "matcher-status": true
+    }
+  ]
+]
