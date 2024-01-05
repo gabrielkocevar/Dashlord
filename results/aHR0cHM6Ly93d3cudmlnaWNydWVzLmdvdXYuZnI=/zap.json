@@ -1,0 +1,2100 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Fri, 5 Jan 2024 03:34:56",
+	"site":[ 
+		{
+			"@name": "https://www.vigicrues.gouv.fr",
+			"@host": "www.vigicrues.gouv.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J061161001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J062661001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J100452001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J110301001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J110581001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J111401001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J131301001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J132401001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J151301001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J172172001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J180301001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv3-station.php?CdEntVigiCru=8&CdStationHydro=J181301001",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"\" action=\".\" method=\"post\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ]."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"boutonDebit\" \"boutonHauteur\" \"input-station-search\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "5049"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10098",
+					"alertRef": "10098",
+					"alert": "Cross-Domain Misconfiguration",
+					"name": "Cross-Domain Misconfiguration",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=AD1",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT1",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT13",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT14",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT15",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT4",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT5",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=BT7",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=MP3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/rss/?CdEntVigiCru=TL1",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+					"otherinfo": "<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>",
+					"reference": "<p>https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</p>",
+					"cweid": "264",
+					"wascid": "14",
+					"sourceid": "5138"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=3",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=4",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css\" rel=\"stylesheet\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css\" rel=\"stylesheet\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css\" rel=\"stylesheet\" />",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "6",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library bootstrap, version 3.3.7 is vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr/assets/js/bootstrap.js?v=202310251020",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "* Bootstrap v3.3.7",
+							"otherinfo": "CVE-2018-14041\nCVE-2019-8331\nCVE-2018-20677\nCVE-2018-20676\nCVE-2018-14042\nCVE-2016-10735\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/assets/js/jquery.js?v=202310251020",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/*! jQuery v2.2.4",
+							"otherinfo": "CVE-2020-11023\nCVE-2020-11022\nCVE-2015-9251\nCVE-2019-11358\n"
+						}
+					],
+					"count": "2",
+					"solution": "<p>Please upgrade to the latest version of bootstrap.</p>",
+					"otherinfo": "<p>CVE-2018-14041</p><p>CVE-2019-8331</p><p>CVE-2018-20677</p><p>CVE-2018-20676</p><p>CVE-2018-14042</p><p>CVE-2016-10735</p><p></p>",
+					"reference": "<p>https://github.com/twbs/bootstrap/issues/28236</p><p>https://github.com/advisories/GHSA-pj7m-g53m-7638</p><p>https://github.com/twbs/bootstrap/issues/20184</p><p>https://github.com/advisories/GHSA-ph58-4vrj-w6hr</p><p>https://github.com/twbs/bootstrap/issues/20631</p><p>https://github.com/advisories/GHSA-4p24-vmcr-4gqj</p><p>https://github.com/advisories/GHSA-9v3m-8fp8-mj99</p><p>https://nvd.nist.gov/vuln/detail/CVE-2018-20676</p><p></p>",
+					"cweid": "829",
+					"wascid": "-1",
+					"sourceid": "5006"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "https://cdn.polyfill.io/v2/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.polyfill.io/v2/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "https://cdn.polyfill.io/v2/polyfill.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.polyfill.io/v2/polyfill.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "8",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=29",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=4",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=6",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=7",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "12",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "2432"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10040",
+					"alertRef": "10040",
+					"alert": "Secure Pages Include Mixed Content",
+					"name": "Secure Pages Include Mixed Content",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes mixed content, that is content accessed via HTTP instead of HTTPS.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=100&p=NationalTerritoire&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=100&p=NationalTerritoire&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=100&p=NationalTerritoire&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=100&p=NationalTerritoire&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=2&p=Territoire_2&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=2&p=Territoire_2&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=25&p=Territoire_25&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=25&p=Territoire_25&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=3&p=Territoire_3&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=3&p=Territoire_3&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=30&p=Territoire_30&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=30&p=Territoire_30&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=31&p=Territoire_31&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=31&p=Territoire_31&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=32&p=Territoire_32&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=32&p=Territoire_32&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=4",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=4&p=Territoire_4&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=4&p=Territoire_4&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=8&p=Territoire_8&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=8&p=Territoire_8&di=&at=&ac=\n"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logc187.xiti.com/hit.xiti?s=&s2=9&p=Territoire_9&di=&at=&ac=",
+							"otherinfo": "tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=9&p=Territoire_9&di=&at=&ac=\n"
+						}
+					],
+					"count": "11",
+					"solution": "<p>A page that is available over SSL/TLS must be comprised completely of content which is transmitted over SSL/TLS.</p><p>The page must not contain any content that is transmitted over unencrypted HTTP.</p><p> This includes content from third party sites.</p>",
+					"otherinfo": "<p>tag=img src=http://logc187.xiti.com/hit.xiti?s=&s2=100&p=NationalTerritoire&di=&at=&ac=</p><p></p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
+					"cweid": "311",
+					"wascid": "4",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=3",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=4",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=18",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC18",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b_"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=19",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC19",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b_"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC2",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=20",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC20",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000bm"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=21",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC21",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000bm"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC25",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000bn"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC3",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=4",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC4",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=6",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC6",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=7",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC7",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC8",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/ftp/plaquettes/plaquette_SPC9",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b"
+						}
+					],
+					"count": "12",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\uFFFDi\uFFFD\uFFFDZ\uFFFD\u7B75\uFFFD?\uFFFDV\uFFFD\uFFFD\uFFFDm{\uFFFD\\x000b_</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "3446"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"text/javascript\">\n    <!--\n    xtnv = document;        //parent.document or top.document or document         \n    \", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"text/javascript\">\n    <!--\n    xtnv = document;        //parent.document or top.document or document         \n    \", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<!-- Custom SB Admin CSS (ACAI 3.0.8) -->\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO",
+							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 5 times, the first in the element starting with: \"<!-- @TODO Un SVG carr\u00E9 et N/B, etc <link rel=\"mask-icon\" href=\"/safari-pinned-tab.svg?v=20170929\" color=\"#003366\"> -->\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<!-- Custom SB Admin CSS (ACAI 3.0.8) -->\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO",
+							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 5 times, the first in the element starting with: \"<!-- @TODO Un SVG carr\u00E9 et N/B, etc <link rel=\"mask-icon\" href=\"/safari-pinned-tab.svg?v=20170929\" color=\"#003366\"> -->\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<!-- Custom SB Admin CSS (ACAI 3.0.8) -->\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO",
+							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 3 times, the first in the element starting with: \"<!-- @TODO Un SVG carr\u00E9 et N/B, etc <link rel=\"mask-icon\" href=\"/safari-pinned-tab.svg?v=20170929\" color=\"#003366\"> -->\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"<!-- Custom SB Admin CSS (ACAI 3.0.8) -->\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO",
+							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 3 times, the first in the element starting with: \"<!-- @TODO Un SVG carr\u00E9 et N/B, etc <link rel=\"mask-icon\" href=\"/safari-pinned-tab.svg?v=20170929\" color=\"#003366\"> -->\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "10",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"text/javascript\"></p><p>    <!--</p><p>    xtnv = document;        //parent.document or top.document or document         </p><p>    \", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"#\" class=\"dropdown-toggle navbar-link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  <span class=\"navbar-link-logo garonne-adour\" aria-hidden=\"true\"><i class=\"icon icon-path1\"></i><i class=\"icon icon-path2\"></i><i class=\"icon icon-path3\"></i></span>                  <!-- &#8203; (zero-width space) permet aux items 2, 3 et 5 de passer sur 2 lignes en r\u00E9solutions medium. 1 et 4 le font d\u00E9j\u00E0 sans ce caract\u00E8res mais pas 2, 3 et 5 alors que la place manque d\u00E9j\u00E0 -->\n                  <span class=\"navbar-link-txt\">Adour&ndash;&#8203;Garonne</span>\n                  <i class=\"icon icon-arrow\" aria-hidden=\"true\"></i><!-- no whitespace\n                  --><i class=\"icon icon-dash\" aria-hidden=\"true\"></i>\n                </a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "11",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=3",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=4",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=300",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=2",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=30",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=31",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=8",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=9",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=120",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10031",
+					"alertRef": "10031",
+					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
+					"name": "User Controllable HTML Element Attribute (Potential XSS)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=25\r\n\r\nThe user-controlled value was:\r\n25,461,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=25\r\n\r\nThe user-controlled value was:\r\n252,479,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=25\r\n\r\nThe user-controlled value was:\r\n255,483,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=25\r\n\r\nThe user-controlled value was:\r\n255,536,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=25\r\n\r\nThe user-controlled value was:\r\n256,117,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=25\r\n\r\nThe user-controlled value was:\r\n257,386,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=25\r\n\r\nThe user-controlled value was:\r\n25"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=32\r\n\r\nThe user-controlled value was:\r\n321,485,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=32\r\n\r\nThe user-controlled value was:\r\n321,670,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=32\r\n\r\nThe user-controlled value was:\r\n322,455 323,446 324,445 326,444 333,446 342,442 341,440 342,438 352,423 350,416 350,415 351,414 359,407 357,400 354,398 353,397 354,395 357,390 358,389 360,389 361,390 360,392 358,396 360,398 361,399 363,408 362,410 355,415 361,422 362,422 369,440 369,441 364,455 367,460 367,461 365,476 366,481 366,482 375,493 376,494 375,508 374,509 373,510 371,509 371,507 372,495 367,489 369,500 369,501 365,513 370,534 370,535 368,544 371,548 371,549 369,570 371,584 371,585 360,619 359,620 357,621 356,620 356,618 366,584 365,570 367,550 364,546 364,545 366,535 361,513 361,512 365,500 361,477 361,476 363,461 360,456 360,454 365,441 358,424 356,421 356,423 356,425 353,428 357,433 358,434 359,447 359,448 354,482 352,484 350,484 352,497 355,500 356,502 355,518 354,519 353,520 351,519 351,518 351,502 348,499 348,498 345,483 346,482 347,481 350,480 355,448 354,435 351,432 346,439 347,442 346,444 345,445 334,450 333,450 327,449 326,456 325,458 316,461 315,461 314,460 314,458 315,457 322,455"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=32\r\n\r\nThe user-controlled value was:\r\n323,267,5"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32\r\n\r\nappears to include user input in: \r\n\r\na(n) [area] tag [coords] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=32\r\n\r\nThe user-controlled value was:\r\n326,83 324,89 323,90 321,90 315,85 311,90 310,91 308,90 308,89 306,82 297,77 296,76 296,73 279,73 278,73 267,65 262,70 260,71 250,69 249,68 248,67 249,65 251,65 260,66 266,60 267,60 268,60 280,69 297,69 299,69 299,70 300,74 309,79 310,81 311,84 314,81 315,80 316,81 321,85 323,81 324,80 333,78 335,78 336,79 335,81 334,82 326,83"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32\r\n\r\nappears to include user input in: \r\n\r\na(n) [link] tag [sizes] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=32\r\n\r\nThe user-controlled value was:\r\n32x32"
+						},
+						{
+							"uri": "https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32",
+							"method": "GET",
+							"param": "CdEntVigiCru",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=32\r\n\r\nappears to include user input in: \r\n\r\na(n) [option] tag [value] attribute \r\n\r\nThe user input found was:\r\nCdEntVigiCru=32\r\n\r\nThe user-controlled value was:\r\n32"
+						}
+					],
+					"count": "14",
+					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.vigicrues.gouv.fr/niv2-bassin.php?CdEntVigiCru=25</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [area] tag [coords] attribute </p><p></p><p>The user input found was:</p><p>CdEntVigiCru=25</p><p></p><p>The user-controlled value was:</p><p>25,461,5</p>",
+					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
+					"cweid": "20",
+					"wascid": "20",
+					"sourceid": "145"
+				}
+			]
+		}
+	]
+}
