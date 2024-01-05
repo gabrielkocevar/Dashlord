@@ -1,0 +1,1117 @@
+[
+         {
+              "id"           : "service",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered with final"
+          }
+,         {
+              "id"           : "ALPN_HTTP2",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "h2"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cwe"          : "CWE-310",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA DHE-RSA-CAMELLIA128-SHA DHE-RSA-CAMELLIA256-SHA DHE-RSA-SEED-SHA ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'status request/#5' 'next protocol/#13172' 'supported versions/#43' 'key share/#51' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'encrypt-then-mac/#22' 'extended master secret/#23'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 7200 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "certificate_compression",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA384 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "85D45A6B0D14D59C282B2A348298695D"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "16"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "253679AFB63051E21BD90EF239948531BA7BD1AB"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2025125472560EE1B0FD79E2ACAE19DC979BF9DF03084DA96765C5340E89F7C9"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "www.ac-guadeloupe.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "www.ac-guadeloupe.fr"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "www.ac-guadeloupe.fr ac-guadeloupe.fr back.ac-guadeloupe.fr back.tandem.ac-guadeloupe.fr isoprod.ac-guadeloupe.fr isoprod.back.ac-guadeloupe.fr isoprod.back.tandem.ac-guadeloupe.fr isoprod.tandem.ac-guadeloupe.fr tandem.ac-guadeloupe.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN and CN (same w/o SNI)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "HIGH",
+              "finding"      : "expires < 30 days (22)"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2023-01-27 00:00"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "HIGH",
+              "finding"      : "2024-01-27 23:59"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://GEANT.crl.sectigo.com/GEANTOVRSACA4.crl"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://GEANT.ocsp.sectigo.com"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "GEANT OV RSA CA 4 (GEANT Vereniging from NL)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "37834FA5EA40FBF7B61196955962E1CA0558872435E4206653D3F620DD8E988E"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2020-02-18 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2033-05-01 23:59"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "GEANT OV RSA CA 4 <-- USERTrust RSA Certification Authority"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "+8 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1704448779"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "8 seconds"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECAcc (dce/26DE)"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "interest-cohort=()"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=900, public"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "X-Cache: HITX-Cache-Age: 229X-Cache-Hits: 2X-Cache-TTL: 900.000X-Cacheable: YES"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip deflate HTTP compression detected  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "no protocol below TLS 1.2 offered"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=2025125472560EE1B0FD79E2ACAE19DC979BF9DF03084DA96765C5340E89F7C9"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "not vulnerable, no SSL3 or TLS1"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_11",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_12",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1703",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_283",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_303",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "27"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "81"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "A+"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "www.ac-guadeloupe.fr/152.199.4.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+]
