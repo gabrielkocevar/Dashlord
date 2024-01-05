@@ -120,7 +120,18 @@ jobs:
           thirdparties: ${{ steps.thirdparties.outputs.json }}
           url: ${{ matrix.sites.url }}
           output: scans/declaration-rgpd.json
-
+          
+      - name: nmap vulnerabilities scan
+          continue-on-error: true
+          timeout-minutes: 10
+          uses: "MTES-MCT/nmap-action@main"
+          with:
+            host: ${{ steps.hostname.outputs.value }}
+            outputDir: "scans" 
+            outputFile: "nmapvuln.json"
+            withVulnerabilities: true
+            raw: false
+          
       - name: Trivy
         continue-on-error: true
         timeout-minutes: 20
