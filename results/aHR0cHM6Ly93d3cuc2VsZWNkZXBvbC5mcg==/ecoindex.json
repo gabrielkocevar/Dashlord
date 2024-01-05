@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.selecdepol.fr",
+        "size": 1936.653,
+        "nodes": 405,
+        "requests": 59,
+        "grade": "C",
+        "score": 60.0,
+        "ges": 1.8,
+        "water": 2.7,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 02:48:51.235271",
+        "page_type": null
+    }
+]
