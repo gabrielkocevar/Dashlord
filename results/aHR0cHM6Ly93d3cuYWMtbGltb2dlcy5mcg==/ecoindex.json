@@ -1,0 +1,17 @@
+[
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://www.ac-limoges.fr",
+        "size": 3146.997,
+        "nodes": 1873,
+        "requests": 56,
+        "grade": "E",
+        "score": 30.0,
+        "ges": 2.4,
+        "water": 3.6,
+        "ecoindex_version": "5.4.2",
+        "date": "2024-01-05 10:03:15.097857",
+        "page_type": null
+    }
+]

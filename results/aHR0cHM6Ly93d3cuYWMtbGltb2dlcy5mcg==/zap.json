@@ -1,0 +1,1774 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.14.0",
+	"@generated": "Fri, 5 Jan 2024 10:15:53",
+	"site":[ 
+		{
+			"@name": "https://www.ac-limoges.fr",
+			"@host": "www.ac-limoges.fr",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10202",
+					"alertRef": "10202",
+					"alert": "Absence of Anti-CSRF Tokens",
+					"name": "Absence of Anti-CSRF Tokens",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"edugouv-search-autocomplete\" role=\"search\" data-drupal-selector=\"edugouv-search-autocomplete\" action=\"/\" method=\"post\" id=\"edugouv-search-autocomplete\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-text\" \"form_build_id\" \"form_id\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"webacademy-search-autocomplete-footer-form\" role=\"search\" data-drupal-selector=\"webacademy-search-autocomplete-footer-form\" action=\"/\" method=\"post\" id=\"webacademy-search-autocomplete-footer-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"form_build_id\" \"form_id\" \"search_footer\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"edugouv-search-autocomplete\" role=\"search\" data-drupal-selector=\"edugouv-search-autocomplete\" action=\"/\" method=\"post\" id=\"edugouv-search-autocomplete\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-text\" \"form_build_id\" \"form_id\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"webacademy-search-autocomplete-footer-form\" role=\"search\" data-drupal-selector=\"webacademy-search-autocomplete-footer-form\" action=\"/\" method=\"post\" id=\"webacademy-search-autocomplete-footer-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 2: \"form_build_id\" \"form_id\" \"search_footer\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"webacademy-search-autocomplete-footer-form\" role=\"search\" data-drupal-selector=\"webacademy-search-autocomplete-footer-form\" action=\"/achats-de-l-etat-123517\" method=\"post\" id=\"webacademy-search-autocomplete-footer-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"form_build_id\" \"form_id\" \"search_footer\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"webacademy-search-autocomplete-footer-form\" role=\"search\" data-drupal-selector=\"webacademy-search-autocomplete-footer-form\" action=\"/enseignement-superieur-123499\" method=\"post\" id=\"webacademy-search-autocomplete-footer-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"form_build_id\" \"form_id\" \"search_footer\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"webacademy-search-autocomplete-footer-form\" role=\"search\" data-drupal-selector=\"webacademy-search-autocomplete-footer-form\" action=\"/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508\" method=\"post\" id=\"webacademy-search-autocomplete-footer-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"form_build_id\" \"form_id\" \"search_footer\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"webacademy-search-autocomplete-footer-form\" role=\"search\" data-drupal-selector=\"webacademy-search-autocomplete-footer-form\" action=\"/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502\" method=\"post\" id=\"webacademy-search-autocomplete-footer-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"form_build_id\" \"form_id\" \"search_footer\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"webacademy-search-autocomplete-footer-form\" role=\"search\" data-drupal-selector=\"webacademy-search-autocomplete-footer-form\" action=\"/numerique-educatif-123505\" method=\"post\" id=\"webacademy-search-autocomplete-footer-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"form_build_id\" \"form_id\" \"search_footer\" ]."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"webacademy-search-autocomplete-footer-form\" role=\"search\" data-drupal-selector=\"webacademy-search-autocomplete-footer-form\" action=\"/rana\" method=\"post\" id=\"webacademy-search-autocomplete-footer-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"form_build_id\" \"form_id\" \"search_footer\" ]."
+						}
+					],
+					"count": "10",
+					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-text\" \"form_build_id\" \"form_id\" ].</p>",
+					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/jeunesse-engagement-et-sports-123177",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/politique-immobiliere-de-l-etat-123514",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/relations-europeennes-internationales-et-de-la-cooperation-123511",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr/bienvenue-dans-l-academie-de-limoges-122083",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://www.paperturn-view.com/script/embed?v=1\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/presentation-de-l-academie-121461",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://www.paperturn-view.com/script/embed?v=1\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "4014"
+				},
+				{
+					"pluginid": "10044",
+					"alertRef": "10044",
+					"alert": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"name": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The server has responded with a redirect that seems to provide a large response. This may indicate that although the server sent a redirect it also responded with body content (which may include sensitive details, PII, etc.).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr/associations-aggreees-121507",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 53 [https://www.ac-limoges.fr/associations-agreees-121507].\nPredicted response size: 353.\nResponse Body Length: 458."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/choc-des-savoirs-une-mobilisation-generale-pour-elever-le-niveau-de-notre-ecole-124458",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 116 [https://www.education.gouv.fr/choc-des-savoirs-une-mobilisation-generale-pour-elever-le-niveau-de-notre-ecole-380226].\nPredicted response size: 416.\nResponse Body Length: 710."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/dsden-de-la-correze-121444",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 109 [https://www.ac-limoges.fr/direction-des-services-departementaux-de-l-education-nationale-de-la-correze-121444].\nPredicted response size: 409.\nResponse Body Length: 682."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/dsden-de-la-creuse-121447",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 108 [https://www.ac-limoges.fr/direction-des-services-departementaux-de-l-education-nationale-de-la-creuse-121447].\nPredicted response size: 408.\nResponse Body Length: 678."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/dsden-de-la-haute-vienne-121448",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 114 [https://www.ac-limoges.fr/direction-des-services-departementaux-de-l-education-nationale-de-la-haute-vienne-121448].\nPredicted response size: 414.\nResponse Body Length: 702."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/forfait-mobilite-durable-123772",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 65 [https://www.ac-limoges.fr/remuneration-paye-121475#summary-item-0].\nPredicted response size: 365.\nResponse Body Length: 506."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/laicite-et-valeurs-de-la-republique-121986",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 56 [https://www.ac-limoges.fr/laicite-faits-religieux-121986].\nPredicted response size: 356.\nResponse Body Length: 470."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/ne-minimisons-pas-ce-que-vivent-les-enfants-124371",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 48 [https://www.education.gouv.fr/non-au-harcelement].\nPredicted response size: 348.\nResponse Body Length: 438."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/pole-moyens-et-performance-121476",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 93 [https://www.ac-limoges.fr/gip-formation-continue-et-insertion-professionnelle-gip-fcip-121476].\nPredicted response size: 393.\nResponse Body Length: 618."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/pole-ressources-humaines-121469",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 65 [https://www.ac-limoges.fr/relations-et-ressources-humaines-121469].\nPredicted response size: 365.\nResponse Body Length: 506."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/portail-des-territoires-122083",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 69 [https://www.ac-limoges.fr/bienvenue-dans-l-academie-de-limoges-122083].\nPredicted response size: 369.\nResponse Body Length: 522."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/projet-academique-2020-2024-121449",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 41 [https://www.ac-limoges.fr/reussirensemble].\nPredicted response size: 341.\nResponse Body Length: 410."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/service-national-universel-snu-124377",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 68 [https://www.education.gouv.fr/le-service-national-universel-snu-5381].\nPredicted response size: 368.\nResponse Body Length: 518."
+						}
+					],
+					"count": "13",
+					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
+					"otherinfo": "<p>Location header URI length: 53 [https://www.ac-limoges.fr/associations-agreees-121507].</p><p>Predicted response size: 353.</p><p>Response Body Length: 458.</p>",
+					"reference": "",
+					"cweid": "201",
+					"wascid": "13",
+					"sourceid": "1314"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr/110-bis-limoges-le-lab-de-l-academie-121490",
+							"method": "GET",
+							"param": "//openagenda.com/js/embed/cibulBodyWidget.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"//openagenda.com/js/embed/cibulBodyWidget.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/bienvenue-dans-l-academie-de-limoges-122083",
+							"method": "GET",
+							"param": "https://www.paperturn-view.com/script/embed?v=1",
+							"attack": "",
+							"evidence": "<script src=\"https://www.paperturn-view.com/script/embed?v=1\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/presentation-de-l-academie-121461",
+							"method": "GET",
+							"param": "https://www.paperturn-view.com/script/embed?v=1",
+							"attack": "",
+							"evidence": "<script src=\"https://www.paperturn-view.com/script/embed?v=1\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "1624"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_1FLcCAW2pUE5Exr3mlpPeOC6qJCSxlTbEOWxTmoDnc4.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_LEQ3PgOl0bjlJnkYTTaKbwsRHghHFJjmSyWucJs2LCE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_O269uOS3hbU-_09UrD5NJsBLmDi9EORo1fJ2O2qdUwU.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_TngHh7-16MI7k64jc2XYzf0XvaPGVXOI4aHQh6py4fQ.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_weHeafpm86jCAh2qToeP0oQ6m7x2qol5nAAPk5-_e8g.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "2687"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr/core/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/misc/modernizr-additional-tests.js?v=3.11.7",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/profiles/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_1FLcCAW2pUE5Exr3mlpPeOC6qJCSxlTbEOWxTmoDnc4.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_LEQ3PgOl0bjlJnkYTTaKbwsRHghHFJjmSyWucJs2LCE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_O269uOS3hbU-_09UrD5NJsBLmDi9EORo1fJ2O2qdUwU.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_TngHh7-16MI7k64jc2XYzf0XvaPGVXOI4aHQh6py4fQ.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_weHeafpm86jCAh2qToeP0oQ6m7x2qol5nAAPk5-_e8g.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/web.config",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "10",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "1997"
+				},
+				{
+					"pluginid": "10040",
+					"alertRef": "10040",
+					"alert": "Secure Pages Include Mixed Content",
+					"name": "Secure Pages Include Mixed Content",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes mixed content, that is content accessed via HTTP instead of HTTPS.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr/circonscription-haute-vienne-1-121712",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif",
+							"otherinfo": "tag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\n"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/circonscription-haute-vienne-2-121715",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif",
+							"otherinfo": "tag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\n"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/circonscription-haute-vienne-3-121719",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif",
+							"otherinfo": "tag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\n"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/circonscription-haute-vienne-4-121720",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif",
+							"otherinfo": "tag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\ntag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif\n"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/fsu-federation-syndicale-unitaire-122309",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://cache.media.education.gouv.fr/image/FSU/34/1/picto_contact_751341.jpg",
+							"otherinfo": "tag=img src=http://cache.media.education.gouv.fr/image/FSU/34/1/picto_contact_751341.jpg\ntag=img src=http://cache.media.education.gouv.fr/image/FSU/34/1/picto_contact_751341.jpg\ntag=img src=http://cache.media.education.gouv.fr/image/FSU/34/1/picto_contact_751341.jpg\n"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/langues-vivantes-121457",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://cache.media.education.gouv.fr/image/Apprentissage/86/5/icone_Calque_Street_map_1042865.jpg",
+							"otherinfo": "tag=img src=http://cache.media.education.gouv.fr/image/Apprentissage/86/5/icone_Calque_Street_map_1042865.jpg\ntag=img src=http://cache.media.education.gouv.fr/image/Apprentissage/86/5/icone_Calque_Street_map_1042865.jpg\n"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/presentation-de-l-academie-121461",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.ac-limoges.fr/sites/ac_limoges/files/2020-11/carte-region-acad-mique-14268.jpg",
+							"otherinfo": "tag=img src=http://www.ac-limoges.fr/sites/ac_limoges/files/2020-11/carte-region-acad-mique-14268.jpg\n"
+						}
+					],
+					"count": "7",
+					"solution": "<p>A page that is available over SSL/TLS must be comprised completely of content which is transmitted over SSL/TLS.</p><p>The page must not contain any content that is transmitted over unencrypted HTTP.</p><p> This includes content from third party sites.</p>",
+					"otherinfo": "<p>tag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif</p><p>tag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif</p><p>tag=img src=http://ia87.ac-limoges.fr/accueil/squelettes/puce.gif</p><p></p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
+					"cweid": "311",
+					"wascid": "4",
+					"sourceid": "3137"
+				},
+				{
+					"pluginid": "10036",
+					"alertRef": "10036",
+					"alert": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+					"name": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16D0)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16D0)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16A0)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16EA)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/1698)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16D3)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/jeunesse-engagement-et-sports-123177",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16DD)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16F0)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/politique-immobiliere-de-l-etat-123514",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16B0)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16C7)",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "ECAcc (chf/16B9)",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the \"Server\" header or provide generic details.</p>",
+					"otherinfo": "",
+					"reference": "<p>http://httpd.apache.org/docs/current/mod/core.html#servertokens</p><p>http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007</p><p>http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</p><p>http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr/core/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/*.css$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/*.gif",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/*.jpeg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/*.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/*.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/core/*.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/profiles/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/profiles/*.gif",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/profiles/*.jpg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/profiles/*.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "12",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "755"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr/continuite-pedagogique-ressources-pour-les-enseignants-121693",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1605203076",
+							"otherinfo": "1605203076, which evaluates to: 2020-11-12 17:44:36"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/continuite-pedagogique-ressources-pour-les-enseignants-121693",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1689544860",
+							"otherinfo": "1689544860, which evaluates to: 2023-07-16 22:01:00"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/continuite-pedagogique-ressources-pour-les-enseignants-121693",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1969525733",
+							"otherinfo": "1969525733, which evaluates to: 2032-05-30 10:28:53"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_1FLcCAW2pUE5Exr3mlpPeOC6qJCSxlTbEOWxTmoDnc4.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1544617177",
+							"otherinfo": "1544617177, which evaluates to: 2018-12-12 12:19:37"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_LEQ3PgOl0bjlJnkYTTaKbwsRHghHFJjmSyWucJs2LCE.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1544617177",
+							"otherinfo": "1544617177, which evaluates to: 2018-12-12 12:19:37"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_O269uOS3hbU-_09UrD5NJsBLmDi9EORo1fJ2O2qdUwU.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1544617177",
+							"otherinfo": "1544617177, which evaluates to: 2018-12-12 12:19:37"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_TngHh7-16MI7k64jc2XYzf0XvaPGVXOI4aHQh6py4fQ.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1544617177",
+							"otherinfo": "1544617177, which evaluates to: 2018-12-12 12:19:37"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sites/ac_limoges/files/js/js_weHeafpm86jCAh2qToeP0oQ6m7x2qol5nAAPk5-_e8g.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1544617177",
+							"otherinfo": "1544617177, which evaluates to: 2018-12-12 12:19:37"
+						}
+					],
+					"count": "8",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1605203076, which evaluates to: 2020-11-12 17:44:36</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "3155"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_ZW-30L328CEEqn9f1cYZGUlZvJlUxU5OKmy_gMurP20",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?eo\uFFFD\u043D\uFFFD\uFFFD!\\x0004\uFFFD_\uFFFD\uFFFD\\x0019\\x0019IY\uFFFD\uFFFDT\uFFFDNN*l\uFFFD\uFFFD\u02EB?m"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_ZW-30L328CEEqn9f1cYZGUlZvJlUxU5OKmy_gMurP20",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?eo\uFFFD\u043D\uFFFD\uFFFD!\\x0004\uFFFD_\uFFFD\uFFFD\\x0019\\x0019IY\uFFFD\uFFFDT\uFFFDNN*l\uFFFD\uFFFD\u02EB?m"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/jeunesse-engagement-et-sports-123177",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/politique-immobiliere-de-l-etat-123514",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/relations-europeennes-internationales-et-de-la-cooperation-123511",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/ac_limoges/files/css/css_q7B_3t3-YEQb_LpU9xoIlhpst4fxPFbe5d6m2egwHeY",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`D\\x001b\uFFFD\uFFFDT\uFFFD\\x001a\\x0008\uFFFD\\x001al\uFFFD\uFFFD\uFFFD<V\uFFFD\uFFFD\u07A6\uFFFD\uFFFD0\\x001d\uFFFD"
+						}
+					],
+					"count": "11",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\u022Dz\uFFFD\uFFFDs\uFFFDb\uFFFD\uFFFD\\x001e\uFFFD\uFFFD\uFFFD\uFFFD?r\uFFFD?r\uFFFD?eo\uFFFD\u043D\uFFFD\uFFFD!\\x0004\uFFFD_\uFFFD\uFFFD\\x0019\\x0019IY\uFFFD\uFFFDT\uFFFDNN*l\uFFFD\uFFFD\u02EB?m</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/jeunesse-engagement-et-sports-123177",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/politique-immobiliere-de-l-etat-123514",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/relations-europeennes-internationales-et-de-la-cooperation-123511",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/jeunesse-engagement-et-sports-123177",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/politique-immobiliere-de-l-etat-123514",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\" class=\"is-active\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/relations-europeennes-internationales-et-de-la-cooperation-123511",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a href=\"/rana\" target=\"_self\" data-drupal-link-system-path=\"node/123174\">Pr\u00E9sentation de la r\u00E9gion acad\u00E9mique</a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						}
+					],
+					"count": "11",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/jeunesse-engagement-et-sports-123177",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/robots.txt",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=900, public",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/sitemap.xml",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "must-revalidate, no-cache, private",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/jeunesse-engagement-et-sports-123177",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/politique-immobiliere-de-l-etat-123514",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "6"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.ac-limoges.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/achats-de-l-etat-123517",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/enseignement-superieur-123499",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/formation-professionnelle-initiale-et-continue-a-l-apprentissage-123508",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/information-orientation-et-lutte-contre-le-decrochage-scolaire-123502",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/jeunesse-engagement-et-sports-123177",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/numerique-educatif-123505",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/politique-immobiliere-de-l-etat-123514",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/rana",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.ac-limoges.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=900",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "6"
+				}
+			]
+		}
+	]
+}
