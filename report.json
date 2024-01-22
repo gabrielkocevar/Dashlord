@@ -2215,6 +2215,7 @@
     "betagouv": null,
     "ecoindex": null,
     "sonarcloud": null,
+    "dsfr": null,
     "summary": {
       "httpGrade": "F",
       "nmapGrade": "C",
