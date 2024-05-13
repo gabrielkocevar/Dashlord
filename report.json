@@ -2037,7 +2037,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.6400794982910156
+            "score": 0.6
           },
           "accessibility": {
             "title": "Accessibility",
@@ -2228,7 +2228,7 @@
       "cookiesCount": 0,
       "trackersGrade": "C",
       "trackersCount": 5,
-      "lighthouse_performance": 0.6400794982910156,
+      "lighthouse_performance": 0.6,
       "lighthouse_performanceGrade": "C",
       "lighthouse_accessibility": 0.93,
       "lighthouse_accessibilityGrade": "A",
